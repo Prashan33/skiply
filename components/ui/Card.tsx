@@ -5,6 +5,7 @@ import { Badge } from "./Badge";
 
 export function CourseCard({
   icon,
+  iconClassName,
   title,
   description,
   level,
@@ -13,6 +14,7 @@ export function CourseCard({
   className,
 }: {
   icon: ReactNode;
+  iconClassName?: string;
   title: string;
   description: string;
   level: string;
@@ -27,7 +29,12 @@ export function CourseCard({
         className,
       )}
     >
-      <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-[var(--radius-sm)] bg-neutral-900 text-white">
+      <div
+        className={cn(
+          "mb-4 flex h-10 w-10 items-center justify-center rounded-[var(--radius-sm)] bg-neutral-900 text-white",
+          iconClassName,
+        )}
+      >
         {icon}
       </div>
       <h3 className="mb-1 text-heading-3 font-medium text-neutral-900">
