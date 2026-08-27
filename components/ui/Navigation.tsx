@@ -1,22 +1,46 @@
-import { ChevronRight } from "lucide-react";
+import { Bell, ChevronRight } from "lucide-react";
 import { cn } from "@/lib/cn";
+import { Container } from "./Container";
 import { Logo } from "./Logo";
 
-export function TopNav({ links = ["Courses", "My Learning"] }: { links?: string[] }) {
+export function TopNav({
+  links = ["Courses", "My Learning"],
+  showActions = false,
+}: {
+  links?: string[];
+  showActions?: boolean;
+}) {
   return (
-    <nav className="flex items-center justify-between border-b border-neutral-200 bg-white px-6 py-4">
-      <Logo />
-      <div className="flex items-center gap-6">
-        {links.map((link) => (
-          <a
-            key={link}
-            href="#"
-            className="text-body font-medium text-neutral-700 hover:text-neutral-900"
-          >
-            {link}
-          </a>
-        ))}
-      </div>
+    <nav className="border-b border-neutral-200 bg-white">
+      <Container className="flex items-center justify-between py-4">
+        <div className="flex items-center gap-10">
+          <Logo />
+          <div className="flex items-center gap-6">
+            {links.map((link) => (
+              <a
+                key={link}
+                href="#"
+                className="text-body font-medium text-neutral-700 hover:text-neutral-900"
+              >
+                {link}
+              </a>
+            ))}
+          </div>
+        </div>
+        {showActions && (
+          <div className="flex items-center gap-4">
+            <button
+              aria-label="Notifications"
+              className="flex h-9 w-9 items-center justify-center rounded-full text-neutral-700 hover:bg-neutral-100"
+            >
+              <Bell className="h-5 w-5" strokeWidth={2} />
+            </button>
+            <span className="flex h-9 w-9 items-center justify-center rounded-full bg-primary-100 text-small font-semibold text-primary-500">
+              SK
+            </span>
+          </div>
+        )}
+      </Container>
     </nav>
   );
 }
