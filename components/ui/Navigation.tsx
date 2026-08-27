@@ -1,5 +1,7 @@
+import { SignInButton, SignUpButton, Show, UserButton } from "@clerk/nextjs";
 import { Bell, ChevronRight } from "lucide-react";
 import { cn } from "@/lib/cn";
+import { Button } from "./Button";
 import { Container } from "./Container";
 import { Logo } from "./Logo";
 
@@ -29,15 +31,27 @@ export function TopNav({
         </div>
         {showActions && (
           <div className="flex items-center gap-4">
-            <button
-              aria-label="Notifications"
-              className="flex h-9 w-9 items-center justify-center rounded-full text-neutral-700 hover:bg-neutral-100"
-            >
-              <Bell className="h-5 w-5" strokeWidth={2} />
-            </button>
-            <span className="flex h-9 w-9 items-center justify-center rounded-full bg-primary-100 text-small font-semibold text-primary-500">
-              SK
-            </span>
+            <Show when="signed-in">
+              <button
+                aria-label="Notifications"
+                className="flex h-9 w-9 items-center justify-center rounded-full text-neutral-700 hover:bg-neutral-100"
+              >
+                <Bell className="h-5 w-5" strokeWidth={2} />
+              </button>
+              <UserButton />
+            </Show>
+            <Show when="signed-out">
+              <SignInButton mode="modal">
+                <button className="text-body font-medium text-neutral-700 hover:text-neutral-900">
+                  Sign in
+                </button>
+              </SignInButton>
+              <SignUpButton mode="modal">
+                <Button variant="primary" className="h-9 px-4 text-small">
+                  Sign up
+                </Button>
+              </SignUpButton>
+            </Show>
           </div>
         )}
       </Container>
