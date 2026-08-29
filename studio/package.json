@@ -1,0 +1,27 @@
+{
+  "name": "skiply-studio",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "sanity dev",
+    "start": "sanity start",
+    "build": "sanity build",
+    "deploy": "sanity deploy",
+    "deploy-graphql": "sanity graphql deploy",
+    "extract": "sanity schemas extract",
+    "typegen": "sanity schemas extract && sanity typegen generate"
+  },
+  "dependencies": {
+    "@sanity/icons": "^3.7.0",
+    "@sanity/vision": "^5.31.2",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "sanity": "^5.31.2",
+    "styled-components": "^6.1.15"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.0",
+    "typescript": "^5.7.2"
+  }
+}
