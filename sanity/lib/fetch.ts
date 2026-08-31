@@ -1,7 +1,7 @@
 import 'server-only'
 
 import { client } from './client'
-import { CATALOG_COURSES_QUERY } from './queries'
+import { CATALOG_COURSES_QUERY, SEARCH_INDEX_QUERY } from './queries'
 import { requireToken } from './token'
 
 export { sanityFetch, SanityLive } from './live'
@@ -24,5 +24,17 @@ export function getCatalogCourses() {
     CATALOG_COURSES_QUERY,
     {},
     { next: { revalidate: 60, tags: ['course'] } }
+  )
+}
+
+/**
+ * Course -> module -> lesson index that the search results page joins against to
+ * ground every card (labels, key points, poster). See `SEARCH_INDEX_QUERY`.
+ */
+export function getSearchIndex() {
+  return getReadClient().fetch(
+    SEARCH_INDEX_QUERY,
+    {},
+    { next: { revalidate: 300, tags: ['course', 'lesson'] } }
   )
 }

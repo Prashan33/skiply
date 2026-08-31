@@ -86,6 +86,32 @@ export const COURSE_BY_SLUG_QUERY = defineQuery(`
   }
 `)
 
+/* ------------------------------------------------------------------- search */
+
+/**
+ * Compact course -> modules -> lessons index for the search results page. The
+ * results API returns only a lesson `slug`; the page joins against this to
+ * derive the course, the "Module N" / "Lesson N.M" labels (from authored
+ * order), key points, duration, and poster. Nothing on a result card comes from
+ * the model.
+ */
+export const SEARCH_INDEX_QUERY = defineQuery(`
+  *[_type == "course" && defined(slug.current)] | order(title asc) {
+    "courseTitle": title,
+    "courseSlug": slug.current,
+    modules[]{
+      title,
+      "lessons": lessons[]->{
+        "lessonSlug": slug.current,
+        "lessonTitle": title,
+        duration,
+        keyPoints,
+        "poster": coalesce(poster, thumbnail){ ${IMAGE_FRAGMENT} }
+      }
+    }
+  }
+`)
+
 /* ------------------------------------------------------------------- lesson */
 
 export const LESSON_SLUGS_QUERY = defineQuery(`
@@ -103,7 +129,11 @@ export const LESSON_BY_SLUG_QUERY = defineQuery(`
     studentCount,
     keyPoints,
     proTip,
-    "poster": poster{ ${IMAGE_FRAGMENT} },
+    // The seed stores the lesson image as \`thumbnail\`; \`poster\` is the schema
+    // field. Coalesce so either authoring path renders.
+    "poster": coalesce(poster, thumbnail){ ${IMAGE_FRAGMENT} },
+    // First notes paragraph doubles as the one-line description / metadata.
+    "summary": pt::text(notes[0]),
     notes[]{
       ...,
       _type == "image" => { ${IMAGE_FRAGMENT} }
@@ -113,11 +143,18 @@ export const LESSON_BY_SLUG_QUERY = defineQuery(`
       _id,
       title,
       "slug": slug.current,
+      level,
       instructor->{ name, "slug": slug.current },
-      "modules": modules[]{
+      modules[]{
         _key,
         title,
-        "lessonIds": lessons[]._ref
+        "lessons": lessons[]->{
+          _id,
+          title,
+          "slug": slug.current,
+          duration,
+          freePreview
+        }
       }
     }
   }

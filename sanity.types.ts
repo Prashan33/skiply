@@ -473,6 +473,29 @@ export type COURSE_BY_SLUG_QUERY_RESULT = {
 } | null;
 
 // Source: ../sanity/lib/queries.ts
+// Variable: SEARCH_INDEX_QUERY
+// Query: *[_type == "course" && defined(slug.current)] | order(title asc) {    "courseTitle": title,    "courseSlug": slug.current,    modules[]{      title,      "lessons": lessons[]->{        "lessonSlug": slug.current,        "lessonTitle": title,        duration,        keyPoints,        "poster": coalesce(poster, thumbnail){   asset,  hotspot,  crop,  "alt": coalesce(alt, "") }      }    }  }
+export type SEARCH_INDEX_QUERY_RESULT = Array<{
+  courseTitle: string | null;
+  courseSlug: string | null;
+  modules: Array<{
+    title: string | null;
+    lessons: Array<{
+      lessonSlug: string | null;
+      lessonTitle: string | null;
+      duration: number | null;
+      keyPoints: Array<string> | null;
+      poster: {
+        asset: SanityImageAssetReference | null;
+        hotspot: SanityImageHotspot | null;
+        crop: SanityImageCrop | null;
+        alt: string | "";
+      } | null;
+    }> | null;
+  }> | null;
+}>;
+
+// Source: ../sanity/lib/queries.ts
 // Variable: LESSON_SLUGS_QUERY
 // Query: *[_type == "lesson" && defined(slug.current)]{ "slug": slug.current }
 export type LESSON_SLUGS_QUERY_RESULT = Array<{
@@ -481,7 +504,7 @@ export type LESSON_SLUGS_QUERY_RESULT = Array<{
 
 // Source: ../sanity/lib/queries.ts
 // Variable: LESSON_BY_SLUG_QUERY
-// Query: *[_type == "lesson" && slug.current == $slug][0]{    _id,    title,    "slug": slug.current,    videoUrl,    duration,    freePreview,    studentCount,    keyPoints,    proTip,    "poster": poster{   asset,  hotspot,  crop,  "alt": coalesce(alt, "") },    notes[]{      ...,      _type == "image" => {   asset,  hotspot,  crop,  "alt": coalesce(alt, "") }    },    resources[]{ _key, type, title, description, url },    "course": *[_type == "course" && references(^._id)][0]{      _id,      title,      "slug": slug.current,      instructor->{ name, "slug": slug.current },      "modules": modules[]{        _key,        title,        "lessonIds": lessons[]._ref      }    }  }
+// Query: *[_type == "lesson" && slug.current == $slug][0]{    _id,    title,    "slug": slug.current,    videoUrl,    duration,    freePreview,    studentCount,    keyPoints,    proTip,    // The seed stores the lesson image as `thumbnail`; `poster` is the schema    // field. Coalesce so either authoring path renders.    "poster": coalesce(poster, thumbnail){   asset,  hotspot,  crop,  "alt": coalesce(alt, "") },    // First notes paragraph doubles as the one-line description / metadata.    "summary": pt::text(notes[0]),    notes[]{      ...,      _type == "image" => {   asset,  hotspot,  crop,  "alt": coalesce(alt, "") }    },    resources[]{ _key, type, title, description, url },    "course": *[_type == "course" && references(^._id)][0]{      _id,      title,      "slug": slug.current,      level,      instructor->{ name, "slug": slug.current },      modules[]{        _key,        title,        "lessons": lessons[]->{          _id,          title,          "slug": slug.current,          duration,          freePreview        }      }    }  }
 export type LESSON_BY_SLUG_QUERY_RESULT = {
   _id: string;
   title: string | null;
@@ -498,6 +521,7 @@ export type LESSON_BY_SLUG_QUERY_RESULT = {
     crop: SanityImageCrop | null;
     alt: string | "";
   } | null;
+  summary: string;
   notes: Array<
     | {
         children?: Array<{
@@ -539,6 +563,7 @@ export type LESSON_BY_SLUG_QUERY_RESULT = {
     _id: string;
     title: string | null;
     slug: string | null;
+    level: "advanced" | "beginner" | "intermediate" | null;
     instructor: {
       name: string | null;
       slug: string | null;
@@ -546,7 +571,13 @@ export type LESSON_BY_SLUG_QUERY_RESULT = {
     modules: Array<{
       _key: string;
       title: string | null;
-      lessonIds: Array<string> | null;
+      lessons: Array<{
+        _id: string;
+        title: string | null;
+        slug: string | null;
+        duration: number | null;
+        freePreview: boolean | null;
+      }> | null;
     }> | null;
   } | null;
 } | null;
@@ -680,8 +711,9 @@ declare module "@sanity/client" {
     '\n  *[_type == "course" && defined(slug.current)] | order(popular desc, title asc) {\n    _id,\n    title,\n    "slug": slug.current,\n    summary,\n    level,\n    price,\n    popular,\n    studentCount,\n    "coverImage": coverImage{ \n  asset,\n  hotspot,\n  crop,\n  "alt": coalesce(alt, "")\n },\n    instructor->{ name, "slug": slug.current },\n    category->{ title, "slug": slug.current },\n    "moduleCount": count(modules),\n    "lessonCount": count(modules[].lessons[]),\n    "durationSeconds": math::sum(modules[].lessons[]->duration)\n  }\n': CATALOG_COURSES_QUERY_RESULT;
     '\n  *[_type == "course" && defined(slug.current)]{ "slug": slug.current }\n': COURSE_SLUGS_QUERY_RESULT;
     '\n  *[_type == "course" && slug.current == $slug][0]{\n    _id,\n    title,\n    "slug": slug.current,\n    summary,\n    level,\n    price,\n    popular,\n    studentCount,\n    "coverImage": coverImage{ \n  asset,\n  hotspot,\n  crop,\n  "alt": coalesce(alt, "")\n },\n    learningOutcomes[]{ _key, icon, title, description },\n    instructor->{\n      _id,\n      name,\n      "slug": slug.current,\n      "photo": photo{ \n  asset,\n  hotspot,\n  crop,\n  "alt": coalesce(alt, "")\n },\n      expertise,\n      bio\n    },\n    category->{ _id, title, "slug": slug.current, description },\n    modules[]{\n      _key,\n      title,\n      summary,\n      lessons[]->{\n        _id,\n        title,\n        "slug": slug.current,\n        duration,\n        freePreview,\n        studentCount,\n        "poster": poster{ \n  asset,\n  hotspot,\n  crop,\n  "alt": coalesce(alt, "")\n }\n      }\n    }\n  }\n': COURSE_BY_SLUG_QUERY_RESULT;
+    '\n  *[_type == "course" && defined(slug.current)] | order(title asc) {\n    "courseTitle": title,\n    "courseSlug": slug.current,\n    modules[]{\n      title,\n      "lessons": lessons[]->{\n        "lessonSlug": slug.current,\n        "lessonTitle": title,\n        duration,\n        keyPoints,\n        "poster": coalesce(poster, thumbnail){ \n  asset,\n  hotspot,\n  crop,\n  "alt": coalesce(alt, "")\n }\n      }\n    }\n  }\n': SEARCH_INDEX_QUERY_RESULT;
     '\n  *[_type == "lesson" && defined(slug.current)]{ "slug": slug.current }\n': LESSON_SLUGS_QUERY_RESULT;
-    '\n  *[_type == "lesson" && slug.current == $slug][0]{\n    _id,\n    title,\n    "slug": slug.current,\n    videoUrl,\n    duration,\n    freePreview,\n    studentCount,\n    keyPoints,\n    proTip,\n    "poster": poster{ \n  asset,\n  hotspot,\n  crop,\n  "alt": coalesce(alt, "")\n },\n    notes[]{\n      ...,\n      _type == "image" => { \n  asset,\n  hotspot,\n  crop,\n  "alt": coalesce(alt, "")\n }\n    },\n    resources[]{ _key, type, title, description, url },\n    "course": *[_type == "course" && references(^._id)][0]{\n      _id,\n      title,\n      "slug": slug.current,\n      instructor->{ name, "slug": slug.current },\n      "modules": modules[]{\n        _key,\n        title,\n        "lessonIds": lessons[]._ref\n      }\n    }\n  }\n': LESSON_BY_SLUG_QUERY_RESULT;
+    '\n  *[_type == "lesson" && slug.current == $slug][0]{\n    _id,\n    title,\n    "slug": slug.current,\n    videoUrl,\n    duration,\n    freePreview,\n    studentCount,\n    keyPoints,\n    proTip,\n    // The seed stores the lesson image as `thumbnail`; `poster` is the schema\n    // field. Coalesce so either authoring path renders.\n    "poster": coalesce(poster, thumbnail){ \n  asset,\n  hotspot,\n  crop,\n  "alt": coalesce(alt, "")\n },\n    // First notes paragraph doubles as the one-line description / metadata.\n    "summary": pt::text(notes[0]),\n    notes[]{\n      ...,\n      _type == "image" => { \n  asset,\n  hotspot,\n  crop,\n  "alt": coalesce(alt, "")\n }\n    },\n    resources[]{ _key, type, title, description, url },\n    "course": *[_type == "course" && references(^._id)][0]{\n      _id,\n      title,\n      "slug": slug.current,\n      level,\n      instructor->{ name, "slug": slug.current },\n      modules[]{\n        _key,\n        title,\n        "lessons": lessons[]->{\n          _id,\n          title,\n          "slug": slug.current,\n          duration,\n          freePreview\n        }\n      }\n    }\n  }\n': LESSON_BY_SLUG_QUERY_RESULT;
     '\n  *[_type == "instructor" && defined(slug.current)] | order(name asc) {\n    _id,\n    name,\n    "slug": slug.current,\n    expertise,\n    "photo": photo{ \n  asset,\n  hotspot,\n  crop,\n  "alt": coalesce(alt, "")\n },\n    "courseCount": count(*[_type == "course" && references(^._id)])\n  }\n': INSTRUCTORS_QUERY_RESULT;
     '\n  *[_type == "instructor" && defined(slug.current)]{ "slug": slug.current }\n': INSTRUCTOR_SLUGS_QUERY_RESULT;
     '\n  *[_type == "instructor" && slug.current == $slug][0]{\n    _id,\n    name,\n    "slug": slug.current,\n    expertise,\n    bio,\n    "photo": photo{ \n  asset,\n  hotspot,\n  crop,\n  "alt": coalesce(alt, "")\n },\n    "courses": *[_type == "course" && references(^._id)] | order(title asc) {\n      _id,\n      title,\n      "slug": slug.current,\n      summary,\n      level,\n      "coverImage": coverImage{ \n  asset,\n  hotspot,\n  crop,\n  "alt": coalesce(alt, "")\n },\n      category->{ title, "slug": slug.current }\n    }\n  }\n': INSTRUCTOR_BY_SLUG_QUERY_RESULT;
