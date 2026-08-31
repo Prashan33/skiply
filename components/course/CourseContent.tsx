@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { ChevronDown } from "lucide-react";
+import posthog from "posthog-js";
 import { cn } from "@/lib/cn";
 import { Badge } from "@/components/ui/Badge";
 
@@ -59,12 +60,19 @@ export function CourseContent({
             >
               <button
                 type="button"
-                onClick={() =>
+                onClick={() => {
+                  const opening = !expanded[module.key];
                   setExpanded((prev) => ({
                     ...prev,
                     [module.key]: !prev[module.key],
-                  }))
-                }
+                  }));
+                  if (opening) {
+                    posthog.capture("module_expanded", {
+                      module_title: module.title,
+                      lesson_count: module.lessons.length,
+                    });
+                  }
+                }}
                 aria-expanded={isOpen}
                 className="flex w-full items-center gap-4 px-5 py-4 text-left hover:bg-neutral-50"
               >
@@ -121,6 +129,13 @@ export function CourseContent({
                           <Link
                             href={`/lessons/${lesson.slug}`}
                             className="block rounded-[var(--radius-xs)] hover:text-neutral-900"
+                            onClick={() =>
+                              posthog.capture("lesson_clicked", {
+                                lesson_title: lesson.title,
+                                lesson_label: lesson.label,
+                                module_title: module.title,
+                              })
+                            }
                           >
                             {row}
                           </Link>
