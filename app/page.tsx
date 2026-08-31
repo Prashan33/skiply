@@ -1,8 +1,8 @@
 import Link from "next/link";
 import { ArrowRight, Star } from "lucide-react";
 import { Button } from "@/components/ui/Button";
-import { Input } from "@/components/ui/Input";
 import { Container } from "@/components/ui/Container";
+import { SearchLauncher } from "@/components/search/SearchLauncher";
 import { TopNav } from "@/components/ui/Navigation";
 import { CourseGrid } from "@/components/course/CourseGrid";
 import { getCatalogCourses } from "@/sanity/lib/fetch";
@@ -45,12 +45,7 @@ export default async function Home() {
             Explore Courses
             <ArrowRight className="h-4 w-4" strokeWidth={2} />
           </Button>
-          <Input
-            icon
-            shortcut="⌘K"
-            placeholder="Ask anything about your learning..."
-            className="h-14 rounded-[var(--radius-lg)] text-body-lg shadow-[var(--shadow-sm)]"
-          />
+          <SearchLauncher className="h-14 rounded-[var(--radius-lg)] text-body-lg shadow-[var(--shadow-sm)]" />
         </div>
       </Container>
 
