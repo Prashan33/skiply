@@ -1,5 +1,8 @@
+"use client";
+
 import { SignInButton, SignUpButton, Show, UserButton } from "@clerk/nextjs";
 import { Bell, ChevronRight } from "lucide-react";
+import posthog from "posthog-js";
 import { cn } from "@/lib/cn";
 import { Button } from "./Button";
 import { Container } from "./Container";
@@ -42,12 +45,19 @@ export function TopNav({
             </Show>
             <Show when="signed-out">
               <SignInButton mode="modal">
-                <button className="text-body font-medium text-neutral-700 hover:text-neutral-900">
+                <button
+                  className="text-body font-medium text-neutral-700 hover:text-neutral-900"
+                  onClick={() => posthog.capture("sign_in_clicked")}
+                >
                   Sign in
                 </button>
               </SignInButton>
               <SignUpButton mode="modal">
-                <Button variant="primary" className="h-9 px-4 text-small">
+                <Button
+                  variant="primary"
+                  className="h-9 px-4 text-small"
+                  onClick={() => posthog.capture("sign_up_clicked")}
+                >
                   Sign up
                 </Button>
               </SignUpButton>

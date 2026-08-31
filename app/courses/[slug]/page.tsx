@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { auth } from "@clerk/nextjs/server";
 import {
-  ArrowRight,
   BarChart3,
-  Bookmark,
   ChevronRight,
   Clock,
   FileText,
@@ -12,18 +11,19 @@ import {
 } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { TopNav } from "@/components/ui/Navigation";
-import { Button } from "@/components/ui/Button";
 import {
   CourseContent,
   type CourseContentModule,
 } from "@/components/course/CourseContent";
 import { CourseProgressBar } from "@/components/course/CourseProgressBar";
+import { CourseActions } from "@/components/course/CourseActions";
 import { LearnGrid, type LearningOutcome } from "@/components/course/LearnGrid";
 import {
   COURSE_BY_SLUG_QUERY,
   COURSE_SLUGS_QUERY,
 } from "@/sanity/lib/queries";
 import { getReadClient } from "@/sanity/lib/fetch";
+import { getPostHogClient } from "@/lib/posthog-server";
 import {
   capitalize,
   formatClock,
@@ -75,7 +75,10 @@ export default async function CoursePage({
   params,
 }: PageProps<"/courses/[slug]">) {
   const { slug } = await params;
-  const course = await getCourseBySlug(slug);
+  const [course, { userId }] = await Promise.all([
+    getCourseBySlug(slug),
+    auth(),
+  ]);
 
   if (!course) notFound();
 
@@ -111,6 +114,22 @@ export default async function CoursePage({
 
   const outcomes: LearningOutcome[] = course.learningOutcomes ?? [];
   const monogram = (course.title ?? "?").trim().charAt(0).toUpperCase();
+
+  // Track course view server-side
+  const posthog = getPostHogClient();
+  if (posthog) {
+    posthog.capture({
+      distinctId: userId ?? "anonymous",
+      event: "course_viewed",
+      properties: {
+        course_slug: slug,
+        course_title: course.title ?? undefined,
+        course_level: course.level ?? undefined,
+        module_count: moduleCount,
+      },
+    });
+    await posthog.flush();
+  }
 
   return (
     <div className="flex flex-1 flex-col bg-neutral-50">
@@ -175,19 +194,11 @@ export default async function CoursePage({
               )}
             </div>
 
-            <div className="flex flex-wrap items-center gap-3">
-              <Link
-                href={continueHref}
-                className="inline-flex h-11 items-center justify-center gap-1.5 rounded-[var(--radius-md)] bg-primary-500 px-4 text-body font-medium text-white transition-colors hover:bg-primary-400"
-              >
-                Continue Learning
-                <ArrowRight className="h-4 w-4" strokeWidth={2} />
-              </Link>
-              <Button variant="tertiary" type="button">
-                <Bookmark className="h-4 w-4" strokeWidth={2} />
-                Bookmark
-              </Button>
-            </div>
+            <CourseActions
+              continueHref={continueHref}
+              courseSlug={slug}
+              courseTitle={course.title ?? ""}
+            />
           </div>
         </div>
 
