@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { ArrowRight, Star } from "lucide-react";
-import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { SearchLauncher } from "@/components/search/SearchLauncher";
 import { TopNav } from "@/components/ui/Navigation";
@@ -41,10 +40,13 @@ export default async function Home() {
             Skiply understands what you want to learn and finds the exact
             lessons across all your courses.
           </p>
-          <Button variant="primary" className="mb-10">
+          <Link
+            href="/courses"
+            className="mb-10 inline-flex h-11 items-center justify-center gap-1.5 rounded-[var(--radius-md)] bg-primary-500 px-4 text-body font-medium text-white transition-colors hover:bg-primary-400"
+          >
             Explore Courses
             <ArrowRight className="h-4 w-4" strokeWidth={2} />
-          </Button>
+          </Link>
           <SearchLauncher className="h-14 rounded-[var(--radius-lg)] text-body-lg shadow-[var(--shadow-sm)]" />
         </div>
       </Container>
