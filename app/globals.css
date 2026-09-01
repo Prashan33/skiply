@@ -8,6 +8,10 @@
   --color-primary-200: #fed7aa;
   --color-primary-100: #ffeee5;
 
+  /* Accent — search "Lesson" tag (not in the base palette; matched to the design) */
+  --color-accent-600: #7c3aed;
+  --color-accent-100: #ede9fe;
+
   /* Neutral */
   --color-neutral-900: #0f172a;
   --color-neutral-700: #33415f;
@@ -31,6 +35,9 @@
   --color-primary-300: var(--color-primary-300);
   --color-primary-200: var(--color-primary-200);
   --color-primary-100: var(--color-primary-100);
+
+  --color-accent-600: var(--color-accent-600);
+  --color-accent-100: var(--color-accent-100);
 
   --color-neutral-900: var(--color-neutral-900);
   --color-neutral-700: var(--color-neutral-700);

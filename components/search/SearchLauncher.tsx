@@ -23,7 +23,7 @@ export function SearchLauncher({ className }: { className?: string }) {
     >
       <Input
         icon
-        shortcut="⌘K"
+        shortcut="⌘ K"
         value={value}
         onChange={(e) => setValue(e.target.value)}
         placeholder="Ask anything about your learning..."

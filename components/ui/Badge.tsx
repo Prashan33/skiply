@@ -1,13 +1,22 @@
 import { type ReactNode } from "react";
 import { cn } from "@/lib/cn";
 
-type BadgeVariant = "video" | "lesson" | "popular" | "neutral";
+type BadgeVariant =
+  | "video"
+  | "lesson"
+  | "popular"
+  | "neutral"
+  | "videoTag"
+  | "lessonTag";
 
 const variantClasses: Record<BadgeVariant, string> = {
   video: "bg-neutral-900 text-white",
   lesson: "bg-primary-100 text-primary-500",
   popular: "bg-primary-500 text-white",
   neutral: "bg-neutral-100 text-neutral-700",
+  // Search result kinds (design/search.png).
+  videoTag: "bg-primary-100 text-primary-500",
+  lessonTag: "bg-accent-100 text-accent-600",
 };
 
 export function Badge({

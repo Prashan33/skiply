@@ -11,9 +11,12 @@ import { Logo } from "./Logo";
 export function TopNav({
   links = ["Courses", "My Learning"],
   showActions = false,
+  activeLink,
 }: {
   links?: string[];
   showActions?: boolean;
+  /** Renders the matching link in the primary colour (design shows the current section active). */
+  activeLink?: string;
 }) {
   return (
     <nav className="border-b border-neutral-200 bg-white">
@@ -25,7 +28,12 @@ export function TopNav({
               <a
                 key={link}
                 href="#"
-                className="text-body font-medium text-neutral-700 hover:text-neutral-900"
+                className={cn(
+                  "text-body font-medium hover:text-neutral-900",
+                  link === activeLink
+                    ? "text-primary-500"
+                    : "text-neutral-700",
+                )}
               >
                 {link}
               </a>

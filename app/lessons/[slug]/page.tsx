@@ -154,11 +154,12 @@ export default async function LessonPage({
       ? lesson.studentCount.toLocaleString("en-US")
       : null;
 
-  // Server-side engagement event (mirrors the course page).
+  // Server-side engagement events (mirror the course page).
   const posthog = getPostHogClient();
   if (posthog) {
+    const distinctId = userId ?? "anonymous";
     posthog.capture({
-      distinctId: userId ?? "anonymous",
+      distinctId,
       event: "lesson_viewed",
       properties: {
         lesson_slug: slug,
@@ -169,6 +170,20 @@ export default async function LessonPage({
         is_free_preview: Boolean(lesson.freePreview),
       },
     });
+    // Arrived at a specific second — a search "watch from" jump or a shared deep link.
+    if (startSeconds > 0) {
+      const ref = Array.isArray(sp.ref) ? sp.ref[0] : sp.ref;
+      posthog.capture({
+        distinctId,
+        event: "lesson_resumed",
+        properties: {
+          lesson_slug: slug,
+          course_slug: course?.slug ?? undefined,
+          start_seconds: startSeconds,
+          source: ref === "search" ? "search" : "deep_link",
+        },
+      });
+    }
     await posthog.flush();
   }
 
@@ -287,6 +302,7 @@ export default async function LessonPage({
                     keyPoints={lesson.keyPoints}
                     proTip={lesson.proTip}
                     resources={lesson.resources}
+                    lessonSlug={slug}
                   />
                 }
                 notes={
