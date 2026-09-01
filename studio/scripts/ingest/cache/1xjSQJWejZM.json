@@ -1,8 +1,1289 @@
 {
   "id": "1xjSQJWejZM",
   "url": "https://www.youtube.com/watch?v=1xjSQJWejZM",
-  "fetchedAt": "2026-08-31T05:15:02.853Z",
-  "captionKind": "empty",
+  "fetchedAt": "2026-09-01T04:05:31.129Z",
+  "captionKind": "asr",
   "chapters": [],
-  "cues": []
+  "cues": [
+    {
+      "startSeconds": 0,
+      "text": "what's up guys Terrace cousin here"
+    },
+    {
+      "startSeconds": 1.86,
+      "text": "welcome to the last used transition"
+    },
+    {
+      "startSeconds": 3.899,
+      "text": "tutorial video you're ever going to have"
+    },
+    {
+      "startSeconds": 5.759,
+      "text": "to watch I promise you if you watch this"
+    },
+    {
+      "startSeconds": 7.74,
+      "text": "video and you watch it until the end"
+    },
+    {
+      "startSeconds": 9.48,
+      "text": "you're never going to have to watch"
+    },
+    {
+      "startSeconds": 10.92,
+      "text": "another video on this ever again alright"
+    },
+    {
+      "startSeconds": 13.2,
+      "text": "cool let's begin and let's talk about"
+    },
+    {
+      "startSeconds": 15.12,
+      "text": "use transition so here in front of us we"
+    },
+    {
+      "startSeconds": 17.4,
+      "text": "have a very simple application as usual"
+    },
+    {
+      "startSeconds": 19.44,
+      "text": "right you have an application with three"
+    },
+    {
+      "startSeconds": 21.24,
+      "text": "tabs You have about posts and contact"
+    },
+    {
+      "startSeconds": 23.58,
+      "text": "and in here there is a problem that is"
+    },
+    {
+      "startSeconds": 26.22,
+      "text": "going to be very apparent soon that we"
+    },
+    {
+      "startSeconds": 28.08,
+      "text": "can solve with use transition and that"
+    },
+    {
+      "startSeconds": 29.939,
+      "text": "problem is going to be in the posts tab"
+    },
+    {
+      "startSeconds": 31.8,
+      "text": "first let's go to the contact Tab and"
+    },
+    {
+      "startSeconds": 33.84,
+      "text": "tap this and if we do you're going to"
+    },
+    {
+      "startSeconds": 35.34,
+      "text": "see that we see some contact information"
+    },
+    {
+      "startSeconds": 36.84,
+      "text": "here there was no problem we can go back"
+    },
+    {
+      "startSeconds": 39.059,
+      "text": "to the about tab everything works super"
+    },
+    {
+      "startSeconds": 40.68,
+      "text": "smoothly but as soon as we tap the post"
+    },
+    {
+      "startSeconds": 43.14,
+      "text": "tab nothing happens at least for a while"
+    },
+    {
+      "startSeconds": 45.899,
+      "text": "right it takes a little bit of time and"
+    },
+    {
+      "startSeconds": 48,
+      "text": "then we have all of the posts and if you"
+    },
+    {
+      "startSeconds": 49.98,
+      "text": "can see here we have a lot of posts"
+    },
+    {
+      "startSeconds": 52.02,
+      "text": "actually if I just scroll down to the"
+    },
+    {
+      "startSeconds": 53.46,
+      "text": "very bottom we have 2500 posts that's a"
+    },
+    {
+      "startSeconds": 56.399,
+      "text": "lot of posts to render on a single page"
+    },
+    {
+      "startSeconds": 58.32,
+      "text": "now usually in a real application if I"
+    },
+    {
+      "startSeconds": 61.14,
+      "text": "can just scroll back up here you're"
+    },
+    {
+      "startSeconds": 62.64,
+      "text": "going to see that man this is a lot of"
+    },
+    {
+      "startSeconds": 64.14,
+      "text": "posts right you're not often going to"
+    },
+    {
+      "startSeconds": 66.479,
+      "text": "run into this kind of situation like how"
+    },
+    {
+      "startSeconds": 68.76,
+      "text": "often do you build an application where"
+    },
+    {
+      "startSeconds": 70.5,
+      "text": "you have to show 2500 posts initially on"
+    },
+    {
+      "startSeconds": 73.38,
+      "text": "the first render usually it doesn't"
+    },
+    {
+      "startSeconds": 75.24,
+      "text": "always happen like this what you usually"
+    },
+    {
+      "startSeconds": 76.979,
+      "text": "do is you use pagination you factor"
+    },
+    {
+      "startSeconds": 79.02,
+      "text": "maybe the first 20 posts and then as the"
+    },
+    {
+      "startSeconds": 81.299,
+      "text": "user Scrolls down you fetch more and"
+    },
+    {
+      "startSeconds": 82.92,
+      "text": "more posts right that's going to make"
+    },
+    {
+      "startSeconds": 84.24,
+      "text": "rendering this entire page a lot faster"
+    },
+    {
+      "startSeconds": 86.46,
+      "text": "because you're only showing the first 20"
+    },
+    {
+      "startSeconds": 88.38,
+      "text": "posts but there are some situations"
+    },
+    {
+      "startSeconds": 90.9,
+      "text": "where you actually can't do this and you"
+    },
+    {
+      "startSeconds": 93.18,
+      "text": "have to render an insane amount of data"
+    },
+    {
+      "startSeconds": 95.34,
+      "text": "on the first render and in those"
+    },
+    {
+      "startSeconds": 97.259,
+      "text": "situations is where you would use"
+    },
+    {
+      "startSeconds": 98.82,
+      "text": "something like use transition so now"
+    },
+    {
+      "startSeconds": 100.86,
+      "text": "let's look at the code for this so this"
+    },
+    {
+      "startSeconds": 102.6,
+      "text": "is the code that's running this entire"
+    },
+    {
+      "startSeconds": 104.04,
+      "text": "application this is the main component"
+    },
+    {
+      "startSeconds": 105.78,
+      "text": "here we have here our three tab buttons"
+    },
+    {
+      "startSeconds": 108.299,
+      "text": "right we have about posts and contact"
+    },
+    {
+      "startSeconds": 110.34,
+      "text": "each of them will set the selected tab"
+    },
+    {
+      "startSeconds": 113.04,
+      "text": "which is a state variable that is held"
+    },
+    {
+      "startSeconds": 114.78,
+      "text": "here at the top level through this"
+    },
+    {
+      "startSeconds": 116.7,
+      "text": "function here select tab which literally"
+    },
+    {
+      "startSeconds": 118.38,
+      "text": "just sets the tab to the current tab and"
+    },
+    {
+      "startSeconds": 120.6,
+      "text": "then at the bottom here based on the"
+    },
+    {
+      "startSeconds": 122.759,
+      "text": "selected tab we render either the about"
+    },
+    {
+      "startSeconds": 124.619,
+      "text": "tab the post tab or the contact top the"
+    },
+    {
+      "startSeconds": 127.2,
+      "text": "top button component is a very simple"
+    },
+    {
+      "startSeconds": 128.94,
+      "text": "component it just renders out the main"
+    },
+    {
+      "startSeconds": 131.34,
+      "text": "button component from component slash UI"
+    },
+    {
+      "startSeconds": 133.379,
+      "text": "we're going to revisit this later the"
+    },
+    {
+      "startSeconds": 135.599,
+      "text": "other components for example the abouts"
+    },
+    {
+      "startSeconds": 137.58,
+      "text": "tab literally it just renders out a"
+    },
+    {
+      "startSeconds": 139.5,
+      "text": "paragraph so there's nothing there and"
+    },
+    {
+      "startSeconds": 141.06,
+      "text": "then we have this post tab component"
+    },
+    {
+      "startSeconds": 142.92,
+      "text": "which does our artificial slowing down"
+    },
+    {
+      "startSeconds": 145.2,
+      "text": "if you look here we have this Loop that"
+    },
+    {
+      "startSeconds": 147.18,
+      "text": "runs 2500 times for each time it will"
+    },
+    {
+      "startSeconds": 149.819,
+      "text": "render out the slow post component the"
+    },
+    {
+      "startSeconds": 151.86,
+      "text": "slow post component is right here it'll"
+    },
+    {
+      "startSeconds": 153.72,
+      "text": "just do nothing for one millisecond and"
+    },
+    {
+      "startSeconds": 155.94,
+      "text": "this is what results to our post tab"
+    },
+    {
+      "startSeconds": 157.68,
+      "text": "being so slow now here's the actual"
+    },
+    {
+      "startSeconds": 159.54,
+      "text": "problem because like I said rendering"
+    },
+    {
+      "startSeconds": 161.459,
+      "text": "out all of these posts sometimes is"
+    },
+    {
+      "startSeconds": 163.319,
+      "text": "inevitable and that's not the problem in"
+    },
+    {
+      "startSeconds": 164.94,
+      "text": "this video the problem was not really"
+    },
+    {
+      "startSeconds": 166.62,
+      "text": "obvious and it happens when I go to"
+    },
+    {
+      "startSeconds": 168.3,
+      "text": "click about and then I try to click"
+    },
+    {
+      "startSeconds": 170.64,
+      "text": "posts again but before posts get"
+    },
+    {
+      "startSeconds": 172.8,
+      "text": "successfully rendered with all of the"
+    },
+    {
+      "startSeconds": 174.42,
+      "text": "posts I try to click contact you're"
+    },
+    {
+      "startSeconds": 176.519,
+      "text": "going to see that I'm not able to click"
+    },
+    {
+      "startSeconds": 178.5,
+      "text": "contact until posts has finish rendering"
+    },
+    {
+      "startSeconds": 181.08,
+      "text": "so I'm here now in about I'll click"
+    },
+    {
+      "startSeconds": 183.239,
+      "text": "posts and then click contact before I"
+    },
+    {
+      "startSeconds": 185.459,
+      "text": "did and nothing happened only after"
+    },
+    {
+      "startSeconds": 187.98,
+      "text": "posts has finished rendering do we then"
+    },
+    {
+      "startSeconds": 190.26,
+      "text": "immediately skip to contact if I do this"
+    },
+    {
+      "startSeconds": 192.9,
+      "text": "now again I'll click post and I'll click"
+    },
+    {
+      "startSeconds": 194.819,
+      "text": "about I clicked about nothing happens"
+    },
+    {
+      "startSeconds": 196.68,
+      "text": "until post has finished rendering and"
+    },
+    {
+      "startSeconds": 198.659,
+      "text": "then my UI is going to show me some"
+    },
+    {
+      "startSeconds": 200.04,
+      "text": "stuff and then we completely skip over"
+    },
+    {
+      "startSeconds": 202.379,
+      "text": "posts and we go directly to about one"
+    },
+    {
+      "startSeconds": 204.78,
+      "text": "more time click posts click contact and"
+    },
+    {
+      "startSeconds": 207.18,
+      "text": "then nothing happens until posts renders"
+    },
+    {
+      "startSeconds": 209.22,
+      "text": "and then we immediately go into contact"
+    },
+    {
+      "startSeconds": 211.319,
+      "text": "this obviously is a bad user experience"
+    },
+    {
+      "startSeconds": 213.659,
+      "text": "what essentially is happening here is"
+    },
+    {
+      "startSeconds": 215.58,
+      "text": "that this post rendering is freezing the"
+    },
+    {
+      "startSeconds": 217.8,
+      "text": "entire UI until it's finished rendering"
+    },
+    {
+      "startSeconds": 219.78,
+      "text": "and then the UI will catch up with the"
+    },
+    {
+      "startSeconds": 222.06,
+      "text": "most up-to-date status in this case it's"
+    },
+    {
+      "startSeconds": 224.099,
+      "text": "the about page I do it again in this"
+    },
+    {
+      "startSeconds": 226.319,
+      "text": "case is the contact page right it's"
+    },
+    {
+      "startSeconds": 228.299,
+      "text": "delaying the entire rendering of the UI"
+    },
+    {
+      "startSeconds": 230.28,
+      "text": "until it can finish rendering this is"
+    },
+    {
+      "startSeconds": 232.44,
+      "text": "obviously bad and you want to avoid this"
+    },
+    {
+      "startSeconds": 234.12,
+      "text": "and the way that you avoid this is you"
+    },
+    {
+      "startSeconds": 236.04,
+      "text": "use the hook called use transition if I"
+    },
+    {
+      "startSeconds": 238.319,
+      "text": "go back to the code here use transition"
+    },
+    {
+      "startSeconds": 240,
+      "text": "is a hook that is going to tell react"
+    },
+    {
+      "startSeconds": 242.819,
+      "text": "that some transitions some updates in"
+    },
+    {
+      "startSeconds": 245.459,
+      "text": "the UI are non-priority which means that"
+    },
+    {
+      "startSeconds": 248.22,
+      "text": "they're not as important as some others"
+    },
+    {
+      "startSeconds": 250.08,
+      "text": "and that if the situation needs them to"
+    },
+    {
+      "startSeconds": 252.42,
+      "text": "be they can be interrupted to prioritize"
+    },
+    {
+      "startSeconds": 254.939,
+      "text": "the updates that actually have priority"
+    },
+    {
+      "startSeconds": 257.04,
+      "text": "so in our case if I go back now to the"
+    },
+    {
+      "startSeconds": 259.32,
+      "text": "app what should have priority when I"
+    },
+    {
+      "startSeconds": 261.239,
+      "text": "click posts and then click about the"
+    },
+    {
+      "startSeconds": 263.22,
+      "text": "clicking of about should have priority"
+    },
+    {
+      "startSeconds": 264.9,
+      "text": "because that is my most up-to-date"
+    },
+    {
+      "startSeconds": 266.639,
+      "text": "intent the last click that I did was on"
+    },
+    {
+      "startSeconds": 268.68,
+      "text": "about which means that the page that I"
+    },
+    {
+      "startSeconds": 270.72,
+      "text": "want to see is about and I no longer"
+    },
+    {
+      "startSeconds": 272.52,
+      "text": "care about posts but because of the way"
+    },
+    {
+      "startSeconds": 274.5,
+      "text": "that we currently set up our app posts"
+    },
+    {
+      "startSeconds": 276.54,
+      "text": "will block the entire UI and not allow"
+    },
+    {
+      "startSeconds": 278.94,
+      "text": "me to go to contact in this case until"
+    },
+    {
+      "startSeconds": 281.04,
+      "text": "it finish rendering which is bad I want"
+    },
+    {
+      "startSeconds": 283.32,
+      "text": "as a user to go directly to contact or"
+    },
+    {
+      "startSeconds": 285.54,
+      "text": "about or whatever is my latest update"
+    },
+    {
+      "startSeconds": 287.4,
+      "text": "and not care about posts because that is"
+    },
+    {
+      "startSeconds": 289.8,
+      "text": "my up-to-date priority so that's where"
+    },
+    {
+      "startSeconds": 291.6,
+      "text": "the use transition hook comes into play"
+    },
+    {
+      "startSeconds": 293.34,
+      "text": "we're going to use it to interrupt the"
+    },
+    {
+      "startSeconds": 295.56,
+      "text": "rendering of the post so that we can go"
+    },
+    {
+      "startSeconds": 297.3,
+      "text": "to about our contact or any other update"
+    },
+    {
+      "startSeconds": 299.4,
+      "text": "and skip rendering post if we no longer"
+    },
+    {
+      "startSeconds": 301.8,
+      "text": "care about it and you're going to see"
+    },
+    {
+      "startSeconds": 303.12,
+      "text": "the way that we do this is really really"
+    },
+    {
+      "startSeconds": 304.979,
+      "text": "simple so first we're going to come up"
+    },
+    {
+      "startSeconds": 306.72,
+      "text": "here and import to use transition from"
+    },
+    {
+      "startSeconds": 308.4,
+      "text": "react so use transition"
+    },
+    {
+      "startSeconds": 310.62,
+      "text": "from react and then we're going to"
+    },
+    {
+      "startSeconds": 312.24,
+      "text": "create here our use transition hook so"
+    },
+    {
+      "startSeconds": 314.16,
+      "text": "we'll do const is pending and then start"
+    },
+    {
+      "startSeconds": 317.34,
+      "text": "transition I'm going to let copilot"
+    },
+    {
+      "startSeconds": 319.259,
+      "text": "complete almost everything for me this"
+    },
+    {
+      "startSeconds": 321.6,
+      "text": "is the syntax of you use transition it's"
+    },
+    {
+      "startSeconds": 323.88,
+      "text": "always going to return to two things is"
+    },
+    {
+      "startSeconds": 326.039,
+      "text": "pending and start transition which is"
+    },
+    {
+      "startSeconds": 327.78,
+      "text": "very similar to as you can see here you"
+    },
+    {
+      "startSeconds": 329.58,
+      "text": "state then all we have to do is where we"
+    },
+    {
+      "startSeconds": 331.8,
+      "text": "are making the update in this case set"
+    },
+    {
+      "startSeconds": 333.78,
+      "text": "tab here we just have to wrap this in"
+    },
+    {
+      "startSeconds": 336.12,
+      "text": "start transition and that is going to do"
+    },
+    {
+      "startSeconds": 338.1,
+      "text": "everything for us so come here and do"
+    },
+    {
+      "startSeconds": 340.139,
+      "text": "start transition"
+    },
+    {
+      "startSeconds": 342.419,
+      "text": "and then come here set Tab and let"
+    },
+    {
+      "startSeconds": 344.52,
+      "text": "copilot do its thing and then just"
+    },
+    {
+      "startSeconds": 345.96,
+      "text": "remove this one and then I just have to"
+    },
+    {
+      "startSeconds": 347.94,
+      "text": "close this parenthesis here and then"
+    },
+    {
+      "startSeconds": 349.5,
+      "text": "save and now if I go back to the code"
+    },
+    {
+      "startSeconds": 351.9,
+      "text": "and refresh just so we have a clean"
+    },
+    {
+      "startSeconds": 353.639,
+      "text": "slate I can click post I can go to"
+    },
+    {
+      "startSeconds": 356.1,
+      "text": "contact and I immediately see contact"
+    },
+    {
+      "startSeconds": 358.08,
+      "text": "and post has been abandoned I can do the"
+    },
+    {
+      "startSeconds": 360.6,
+      "text": "reverse I can click post I can go to"
+    },
+    {
+      "startSeconds": 362.46,
+      "text": "about and about is rendered instantly"
+    },
+    {
+      "startSeconds": 364.44,
+      "text": "and post is discarded now this doesn't"
+    },
+    {
+      "startSeconds": 367.08,
+      "text": "mean that post is never rendered if I"
+    },
+    {
+      "startSeconds": 369,
+      "text": "click posts and just do nothing and wait"
+    },
+    {
+      "startSeconds": 370.8,
+      "text": "for all the posts to render all of the"
+    },
+    {
+      "startSeconds": 372.78,
+      "text": "posts you're gonna see are fully"
+    },
+    {
+      "startSeconds": 374.16,
+      "text": "rendered that's not what use transition"
+    },
+    {
+      "startSeconds": 375.78,
+      "text": "does use transition just interrupts if"
+    },
+    {
+      "startSeconds": 378.18,
+      "text": "there's something else that should be"
+    },
+    {
+      "startSeconds": 379.44,
+      "text": "important for example I click contact I"
+    },
+    {
+      "startSeconds": 381.66,
+      "text": "click post I click about it's going to"
+    },
+    {
+      "startSeconds": 383.639,
+      "text": "discard post and then render the about"
+    },
+    {
+      "startSeconds": 385.56,
+      "text": "right so you can see the benefits of"
+    },
+    {
+      "startSeconds": 387.66,
+      "text": "using use transition all we had to do is"
+    },
+    {
+      "startSeconds": 389.819,
+      "text": "wrap our state update in start"
+    },
+    {
+      "startSeconds": 391.38,
+      "text": "transition and react does everything"
+    },
+    {
+      "startSeconds": 393.36,
+      "text": "automatically now this will work with"
+    },
+    {
+      "startSeconds": 395.58,
+      "text": "any state update right the reason why"
+    },
+    {
+      "startSeconds": 397.319,
+      "text": "this works here is because we're using"
+    },
+    {
+      "startSeconds": 398.819,
+      "text": "set tab which comes from you state right"
+    },
+    {
+      "startSeconds": 400.979,
+      "text": "this will not work with some other"
+    },
+    {
+      "startSeconds": 402.36,
+      "text": "function that doesn't update State this"
+    },
+    {
+      "startSeconds": 404.28,
+      "text": "is a specific State update optimization"
+    },
+    {
+      "startSeconds": 406.38,
+      "text": "because react as you've seen does"
+    },
+    {
+      "startSeconds": 408.419,
+      "text": "everything automatically it will only do"
+    },
+    {
+      "startSeconds": 410.34,
+      "text": "it for state but that doesn't mean that"
+    },
+    {
+      "startSeconds": 412.319,
+      "text": "we can't do it through props for example"
+    },
+    {
+      "startSeconds": 414.36,
+      "text": "if I were to come here to tab button and"
+    },
+    {
+      "startSeconds": 416.819,
+      "text": "then just copy this piece of State here"
+    },
+    {
+      "startSeconds": 418.56,
+      "text": "this use transition put it here come"
+    },
+    {
+      "startSeconds": 420.9,
+      "text": "here paste this here and then just"
+    },
+    {
+      "startSeconds": 422.4,
+      "text": "import it here from react at the top"
+    },
+    {
+      "startSeconds": 424.08,
+      "text": "then copy the select top function here"
+    },
+    {
+      "startSeconds": 426.36,
+      "text": "and comment paste it here in this"
+    },
+    {
+      "startSeconds": 428.16,
+      "text": "component we are going to make some"
+    },
+    {
+      "startSeconds": 429.96,
+      "text": "space here and rename this to handle"
+    },
+    {
+      "startSeconds": 431.88,
+      "text": "click"
+    },
+    {
+      "startSeconds": 433.08,
+      "text": "and then I'm going to remove this"
+    },
+    {
+      "startSeconds": 434.699,
+      "text": "because the parameter is now going to"
+    },
+    {
+      "startSeconds": 436.259,
+      "text": "come from the parent I'm still going to"
+    },
+    {
+      "startSeconds": 438.12,
+      "text": "leave start transition but now I'm just"
+    },
+    {
+      "startSeconds": 439.979,
+      "text": "going to make some updates to my props"
+    },
+    {
+      "startSeconds": 441.66,
+      "text": "here so I'll do some destructuring I'm"
+    },
+    {
+      "startSeconds": 443.52,
+      "text": "going to do on click and then dot dot"
+    },
+    {
+      "startSeconds": 445.979,
+      "text": "rest instead here we're going to pass"
+    },
+    {
+      "startSeconds": 448.74,
+      "text": "rest to the button and then inside of"
+    },
+    {
+      "startSeconds": 451.62,
+      "text": "this handle click function I'm just"
+    },
+    {
+      "startSeconds": 453.12,
+      "text": "going to do on click question mark Dot"
+    },
+    {
+      "startSeconds": 456.3,
+      "text": "and then remove tab and basically what"
+    },
+    {
+      "startSeconds": 458.88,
+      "text": "this means is that I've just accessed"
+    },
+    {
+      "startSeconds": 461.039,
+      "text": "this on click property from the button"
+    },
+    {
+      "startSeconds": 463.259,
+      "text": "which actually if I go to the button"
+    },
+    {
+      "startSeconds": 464.94,
+      "text": "props here you're going to see that"
+    },
+    {
+      "startSeconds": 466.139,
+      "text": "there is a function called on click"
+    },
+    {
+      "startSeconds": 467.759,
+      "text": "which is optional right so that's why I"
+    },
+    {
+      "startSeconds": 469.979,
+      "text": "have the question mark I'm accessing"
+    },
+    {
+      "startSeconds": 471.9,
+      "text": "this function here so that I can wrap it"
+    },
+    {
+      "startSeconds": 473.819,
+      "text": "in start transition then I have to put"
+    },
+    {
+      "startSeconds": 475.919,
+      "text": "the question mark because again this is"
+    },
+    {
+      "startSeconds": 477.72,
+      "text": "optional so it's not always going to be"
+    },
+    {
+      "startSeconds": 479.4,
+      "text": "there and then I'm just going to pass"
+    },
+    {
+      "startSeconds": 481.199,
+      "text": "the rest of the props as we had before"
+    },
+    {
+      "startSeconds": 483.06,
+      "text": "to button and then here all we have to"
+    },
+    {
+      "startSeconds": 485.099,
+      "text": "do is on click and then just pass handle"
+    },
+    {
+      "startSeconds": 487.5,
+      "text": "click"
+    },
+    {
+      "startSeconds": 489.36,
+      "text": "what I've essentially done here is the"
+    },
+    {
+      "startSeconds": 491.639,
+      "text": "same thing that I had before with the"
+    },
+    {
+      "startSeconds": 493.319,
+      "text": "only difference that I now moved the use"
+    },
+    {
+      "startSeconds": 495.24,
+      "text": "transition hook inside of this tab"
+    },
+    {
+      "startSeconds": 497.22,
+      "text": "button then if I go back to the parent"
+    },
+    {
+      "startSeconds": 498.96,
+      "text": "here I can get rid of this huge"
+    },
+    {
+      "startSeconds": 500.639,
+      "text": "transition here I can get rid of this"
+    },
+    {
+      "startSeconds": 502.44,
+      "text": "start transition here get rid of this"
+    },
+    {
+      "startSeconds": 504.18,
+      "text": "and then save this as so this is"
+    },
+    {
+      "startSeconds": 505.979,
+      "text": "initially as we had it before and now"
+    },
+    {
+      "startSeconds": 508.259,
+      "text": "the transition is going to happen inside"
+    },
+    {
+      "startSeconds": 510.24,
+      "text": "of the top button and you're going to"
+    },
+    {
+      "startSeconds": 512.039,
+      "text": "see that now our app works exactly in"
+    },
+    {
+      "startSeconds": 514.08,
+      "text": "the same way I can go to contact I can"
+    },
+    {
+      "startSeconds": 516,
+      "text": "go to about I can go to post it's going"
+    },
+    {
+      "startSeconds": 518.099,
+      "text": "to wait a bit to render the post just"
+    },
+    {
+      "startSeconds": 519.779,
+      "text": "like before or I can go to contact I can"
+    },
+    {
+      "startSeconds": 522.479,
+      "text": "click post and then go to about and it's"
+    },
+    {
+      "startSeconds": 524.459,
+      "text": "still going to interrupt the render"
+    },
+    {
+      "startSeconds": 526.08,
+      "text": "right so start transition will work with"
+    },
+    {
+      "startSeconds": 528.54,
+      "text": "any function that updates the state even"
+    },
+    {
+      "startSeconds": 530.7,
+      "text": "if it comes from the parent even if it's"
+    },
+    {
+      "startSeconds": 532.56,
+      "text": "updating the state of a parent the only"
+    },
+    {
+      "startSeconds": 534.54,
+      "text": "requirement is that you have a function"
+    },
+    {
+      "startSeconds": 536.339,
+      "text": "that updates the state so that then"
+    },
+    {
+      "startSeconds": 538.56,
+      "text": "react can do all of its magic behind the"
+    },
+    {
+      "startSeconds": 540.54,
+      "text": "scenes and do everything for you"
+    },
+    {
+      "startSeconds": 542.04,
+      "text": "automatically now one more benefit of"
+    },
+    {
+      "startSeconds": 544.44,
+      "text": "doing it this way is that now we can use"
+    },
+    {
+      "startSeconds": 546.66,
+      "text": "this is pending Boolean value if you've"
+    },
+    {
+      "startSeconds": 548.76,
+      "text": "seen here we have and used is spending"
+    },
+    {
+      "startSeconds": 550.62,
+      "text": "at all use spending is a value that will"
+    },
+    {
+      "startSeconds": 553.08,
+      "text": "tell you when there's a transition in"
+    },
+    {
+      "startSeconds": 554.94,
+      "text": "progress so we can use this now in this"
+    },
+    {
+      "startSeconds": 556.74,
+      "text": "tab button to render something else if"
+    },
+    {
+      "startSeconds": 559.14,
+      "text": "the transition is currently loading so"
+    },
+    {
+      "startSeconds": 560.94,
+      "text": "what I can do is I can come here and I"
+    },
+    {
+      "startSeconds": 562.56,
+      "text": "can say if is pending"
+    },
+    {
+      "startSeconds": 565.14,
+      "text": "I can just return maybe just a paragraph"
+    },
+    {
+      "startSeconds": 567.6,
+      "text": "that says loading"
+    },
+    {
+      "startSeconds": 570.24,
+      "text": "then I have to add here because I forgot"
+    },
+    {
+      "startSeconds": 572.16,
+      "text": "to return"
+    },
+    {
+      "startSeconds": 573.72,
+      "text": "and now if I go back to my application"
+    },
+    {
+      "startSeconds": 575.82,
+      "text": "and I refresh just so I have a fresh"
+    },
+    {
+      "startSeconds": 577.62,
+      "text": "start whenever I click post it's going"
+    },
+    {
+      "startSeconds": 579.899,
+      "text": "to say loading because there's a"
+    },
+    {
+      "startSeconds": 581.279,
+      "text": "transition happening and then it's going"
+    },
+    {
+      "startSeconds": 583.32,
+      "text": "to render all of the posts this is great"
+    },
+    {
+      "startSeconds": 585.36,
+      "text": "if you want to show something to the"
+    },
+    {
+      "startSeconds": 586.8,
+      "text": "user as a transition is happening it's"
+    },
+    {
+      "startSeconds": 589.019,
+      "text": "always a better user experience to show"
+    },
+    {
+      "startSeconds": 590.58,
+      "text": "that something is happening instead of"
+    },
+    {
+      "startSeconds": 592.5,
+      "text": "having the user wait for a couple of"
+    },
+    {
+      "startSeconds": 593.94,
+      "text": "seconds with nothing they'll think that"
+    },
+    {
+      "startSeconds": 595.92,
+      "text": "the app is broken this is the power of"
+    },
+    {
+      "startSeconds": 597.839,
+      "text": "use transition it's not a hook that"
+    },
+    {
+      "startSeconds": 599.64,
+      "text": "you're going to use all of the time in"
+    },
+    {
+      "startSeconds": 601.14,
+      "text": "every single component but when you do"
+    },
+    {
+      "startSeconds": 603.12,
+      "text": "have to use it it makes it really useful"
+    },
+    {
+      "startSeconds": 605.399,
+      "text": "so that you can defer some updates and"
+    },
+    {
+      "startSeconds": 607.44,
+      "text": "prioritize others to provide your users"
+    },
+    {
+      "startSeconds": 609.6,
+      "text": "with a much better user experience when"
+    },
+    {
+      "startSeconds": 611.519,
+      "text": "for example you have no other choice but"
+    },
+    {
+      "startSeconds": 613.5,
+      "text": "to render 2500 posts in a single page"
+    },
+    {
+      "startSeconds": 616.68,
+      "text": "cool so there you go that was the"
+    },
+    {
+      "startSeconds": 618.72,
+      "text": "tutorial on use transition I told you"
+    },
+    {
+      "startSeconds": 620.76,
+      "text": "after this you're not gonna have to"
+    },
+    {
+      "startSeconds": 622.2,
+      "text": "watch another video on use transition"
+    },
+    {
+      "startSeconds": 623.88,
+      "text": "ever again if you've enjoyed this video"
+    },
+    {
+      "startSeconds": 625.86,
+      "text": "make sure to click subscribe right here"
+    },
+    {
+      "startSeconds": 627.6,
+      "text": "it would really help me out a lot"
+    },
+    {
+      "startSeconds": 628.92,
+      "text": "there's a video here that you can watch"
+    },
+    {
+      "startSeconds": 630.3,
+      "text": "I'm sure it's super awesome because it's"
+    },
+    {
+      "startSeconds": 632.04,
+      "text": "made for me and with that being said my"
+    },
+    {
+      "startSeconds": 634.2,
+      "text": "name has been nurse cousin this is"
+    },
+    {
+      "startSeconds": 635.88,
+      "text": "cousin Solutions thank you so much for"
+    },
+    {
+      "startSeconds": 637.62,
+      "text": "watching and I will see you in the next"
+    },
+    {
+      "startSeconds": 639.3,
+      "text": "video ciao"
+    }
+  ]
 }

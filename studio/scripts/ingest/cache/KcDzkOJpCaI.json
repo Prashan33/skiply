@@ -1,8 +1,1546 @@
 {
   "id": "KcDzkOJpCaI",
   "url": "https://www.youtube.com/watch?v=KcDzkOJpCaI",
-  "fetchedAt": "2026-08-31T05:15:20.438Z",
-  "captionKind": "empty",
-  "chapters": [],
-  "cues": []
+  "fetchedAt": "2026-09-01T04:06:05.650Z",
+  "captionKind": "asr",
+  "chapters": [
+    {
+      "startSeconds": 0,
+      "label": "What problem conditional types solve"
+    },
+    {
+      "startSeconds": 45,
+      "label": "The basic extends syntax"
+    },
+    {
+      "startSeconds": 100,
+      "label": "Reading the resolved result"
+    },
+    {
+      "startSeconds": 150,
+      "label": "A practical first example"
+    },
+    {
+      "startSeconds": 205,
+      "label": "Nesting conditional types"
+    },
+    {
+      "startSeconds": 265,
+      "label": "Distributive conditional types"
+    },
+    {
+      "startSeconds": 330,
+      "label": "Stopping distribution"
+    },
+    {
+      "startSeconds": 385,
+      "label": "The never edge case"
+    },
+    {
+      "startSeconds": 440,
+      "label": "Introducing the infer keyword"
+    },
+    {
+      "startSeconds": 500,
+      "label": "How infer pattern matching works"
+    },
+    {
+      "startSeconds": 555,
+      "label": "Inferring function return types"
+    },
+    {
+      "startSeconds": 615,
+      "label": "Inferring function parameters"
+    },
+    {
+      "startSeconds": 665,
+      "label": "Unwrapping Promises with infer"
+    },
+    {
+      "startSeconds": 725,
+      "label": "Inferring from tuples — head and tail"
+    },
+    {
+      "startSeconds": 785,
+      "label": "Multiple infer in one pattern"
+    },
+    {
+      "startSeconds": 840,
+      "label": "Rebuilding NonNullable"
+    }
+  ],
+  "cues": [
+    {
+      "startSeconds": 4.12,
+      "text": "TypeScript has a hidden if statement."
+    },
+    {
+      "startSeconds": 7.24,
+      "text": "And it doesn't run over at run time."
+    },
+    {
+      "startSeconds": 9.72,
+      "text": "It runs entirely on your types while you"
+    },
+    {
+      "startSeconds": 12.36,
+      "text": "code before anything executes."
+    },
+    {
+      "startSeconds": 15.36,
+      "text": "This is how libraries magically know"
+    },
+    {
+      "startSeconds": 18.04,
+      "text": "that this function returns a string"
+    },
+    {
+      "startSeconds": 20.76,
+      "text": "and that one returns a promise without"
+    },
+    {
+      "startSeconds": 23.8,
+      "text": "you ever annotating it."
+    },
+    {
+      "startSeconds": 26,
+      "text": "The feature behind this magic is called"
+    },
+    {
+      "startSeconds": 28.08,
+      "text": "conditional types."
+    },
+    {
+      "startSeconds": 29.72,
+      "text": "And its most powerful partner is a"
+    },
+    {
+      "startSeconds": 32.04,
+      "text": "keyword called infer."
+    },
+    {
+      "startSeconds": 34.96,
+      "text": "Master these two and you stop fighting"
+    },
+    {
+      "startSeconds": 37.52,
+      "text": "the type system."
+    },
+    {
+      "startSeconds": 39.28,
+      "text": "You start programming it. Let's start"
+    },
+    {
+      "startSeconds": 41.64,
+      "text": "with why these exist."
+    },
+    {
+      "startSeconds": 43.88,
+      "text": "Normally, a type is fixed. A user is a"
+    },
+    {
+      "startSeconds": 47.64,
+      "text": "user. A string is a string."
+    },
+    {
+      "startSeconds": 50.64,
+      "text": "But sometimes you want a type that"
+    },
+    {
+      "startSeconds": 52.44,
+      "text": "changes depending on another type."
+    },
+    {
+      "startSeconds": 55.28,
+      "text": "Think of a function that returns an"
+    },
+    {
+      "startSeconds": 57.4,
+      "text": "array if you pass it an array and a"
+    },
+    {
+      "startSeconds": 59.72,
+      "text": "single value if you pass it a single"
+    },
+    {
+      "startSeconds": 62,
+      "text": "value."
+    },
+    {
+      "startSeconds": 63.12,
+      "text": "To express logic like that, you need a"
+    },
+    {
+      "startSeconds": 65.08,
+      "text": "type that can make a decision."
+    },
+    {
+      "startSeconds": 67.48,
+      "text": "That decision-making type is a"
+    },
+    {
+      "startSeconds": 69.32,
+      "text": "conditional type. Here's the core syntax"
+    },
+    {
+      "startSeconds": 72.2,
+      "text": "and it reads almost like an English"
+    },
+    {
+      "startSeconds": 73.68,
+      "text": "sentence."
+    },
+    {
+      "startSeconds": 74.96,
+      "text": "T extends U question mark X colon Y."
+    },
+    {
+      "startSeconds": 80.2,
+      "text": "It means if the type T is assignable to"
+    },
+    {
+      "startSeconds": 83.48,
+      "text": "U, then the result is X. Otherwise, the"
+    },
+    {
+      "startSeconds": 86.12,
+      "text": "result is Y."
+    },
+    {
+      "startSeconds": 87.88,
+      "text": "It's a ternary operator but for types"
+    },
+    {
+      "startSeconds": 90.48,
+      "text": "instead of values."
+    },
+    {
+      "startSeconds": 92.24,
+      "text": "Notice the keyword extends here doesn't"
+    },
+    {
+      "startSeconds": 94.92,
+      "text": "mean inheritance like in a class."
+    },
+    {
+      "startSeconds": 97.44,
+      "text": "It means is assignable to or fits into."
+    },
+    {
+      "startSeconds": 102.52,
+      "text": "That distinction trips up a lot of"
+    },
+    {
+      "startSeconds": 104.32,
+      "text": "people, so keep it in mind. Let's see"
+    },
+    {
+      "startSeconds": 106.36,
+      "text": "this actually resolve."
+    },
+    {
+      "startSeconds": 108.32,
+      "text": "When you hover over type A in your"
+    },
+    {
+      "startSeconds": 109.84,
+      "text": "editor, TypeScript shows true."
+    },
+    {
+      "startSeconds": 112.56,
+      "text": "That's not a value."
+    },
+    {
+      "startSeconds": 114.44,
+      "text": "It's the literal type true."
+    },
+    {
+      "startSeconds": 116.72,
+      "text": "The compiler checked whether the string"
+    },
+    {
+      "startSeconds": 118.8,
+      "text": "literal hello is assignable to string,"
+    },
+    {
+      "startSeconds": 121.84,
+      "text": "decided yes, and gave back the true"
+    },
+    {
+      "startSeconds": 124.479,
+      "text": "branch."
+    },
+    {
+      "startSeconds": 125.6,
+      "text": "For type B, the number 42 is not a"
+    },
+    {
+      "startSeconds": 128.039,
+      "text": "string, so it falls into the false"
+    },
+    {
+      "startSeconds": 130.24,
+      "text": "branch."
+    },
+    {
+      "startSeconds": 131.44,
+      "text": "This all happens at compile time,"
+    },
+    {
+      "startSeconds": 133.76,
+      "text": "completely erased before your code ever"
+    },
+    {
+      "startSeconds": 136,
+      "text": "runs. Now, let's make it useful."
+    },
+    {
+      "startSeconds": 138.76,
+      "text": "Imagine you have a function that returns"
+    },
+    {
+      "startSeconds": 140.72,
+      "text": "different shapes based on a flag."
+    },
+    {
+      "startSeconds": 143.4,
+      "text": "We can write a conditional type that"
+    },
+    {
+      "startSeconds": 145.44,
+      "text": "picks the right return type."
+    },
+    {
+      "startSeconds": 147.52,
+      "text": "Here, if the generic T is the literal"
+    },
+    {
+      "startSeconds": 150.72,
+      "text": "true,"
+    },
+    {
+      "startSeconds": 151.84,
+      "text": "we return a success response,"
+    },
+    {
+      "startSeconds": 154.88,
+      "text": "otherwise, an error response."
+    },
+    {
+      "startSeconds": 157.959,
+      "text": "This is the first taste of how"
+    },
+    {
+      "startSeconds": 159.68,
+      "text": "conditional types"
+    },
+    {
+      "startSeconds": 161.52,
+      "text": "let your function signatures be smart."
+    },
+    {
+      "startSeconds": 165.28,
+      "text": "The return type follows the input"
+    },
+    {
+      "startSeconds": 167.56,
+      "text": "automatically with no manual overloads."
+    },
+    {
+      "startSeconds": 170.56,
+      "text": "One condition is rarely enough."
+    },
+    {
+      "startSeconds": 173.04,
+      "text": "Just like nested ternaries in regular"
+    },
+    {
+      "startSeconds": 175.4,
+      "text": "JavaScript, you can chain conditional"
+    },
+    {
+      "startSeconds": 177.68,
+      "text": "types to handle multiple cases."
+    },
+    {
+      "startSeconds": 180.36,
+      "text": "Here, we build a type that names the"
+    },
+    {
+      "startSeconds": 182.72,
+      "text": "category of a value."
+    },
+    {
+      "startSeconds": 184.959,
+      "text": "If T extends string, we return string."
+    },
+    {
+      "startSeconds": 188.48,
+      "text": "Else, if it extends number, we return"
+    },
+    {
+      "startSeconds": 191.32,
+      "text": "number."
+    },
+    {
+      "startSeconds": 192.44,
+      "text": "Else if boolean, else other."
+    },
+    {
+      "startSeconds": 195.72,
+      "text": "Each colon leads into the next"
+    },
+    {
+      "startSeconds": 197.68,
+      "text": "condition."
+    },
+    {
+      "startSeconds": 199,
+      "text": "It can get hard to read, so format it"
+    },
+    {
+      "startSeconds": 201.519,
+      "text": "with one branch per line."
+    },
+    {
+      "startSeconds": 204.08,
+      "text": "Your future self will thank you. Here's"
+    },
+    {
+      "startSeconds": 206.4,
+      "text": "where it gets surprising."
+    },
+    {
+      "startSeconds": 208.239,
+      "text": "When the type you check is a naked"
+    },
+    {
+      "startSeconds": 210.28,
+      "text": "generic type parameter, and you pass it"
+    },
+    {
+      "startSeconds": 212.68,
+      "text": "a union,"
+    },
+    {
+      "startSeconds": 213.88,
+      "text": "the conditional distributes over each"
+    },
+    {
+      "startSeconds": 215.959,
+      "text": "member of that union separately."
+    },
+    {
+      "startSeconds": 218.72,
+      "text": "Watch this."
+    },
+    {
+      "startSeconds": 220.28,
+      "text": "We pass a union of string and number to"
+    },
+    {
+      "startSeconds": 223.32,
+      "text": "to array."
+    },
+    {
+      "startSeconds": 224.72,
+      "text": "Instead of treating the whole union at"
+    },
+    {
+      "startSeconds": 226.56,
+      "text": "once,"
+    },
+    {
+      "startSeconds": 227.519,
+      "text": "TypeScript runs the conditional on"
+    },
+    {
+      "startSeconds": 229.519,
+      "text": "string,"
+    },
+    {
+      "startSeconds": 230.64,
+      "text": "then on number,"
+    },
+    {
+      "startSeconds": 232.2,
+      "text": "and combines results."
+    },
+    {
+      "startSeconds": 234.32,
+      "text": "So, you get a string array or a number"
+    },
+    {
+      "startSeconds": 236.84,
+      "text": "array,"
+    },
+    {
+      "startSeconds": 238.12,
+      "text": "a union of arrays, not an array of the"
+    },
+    {
+      "startSeconds": 241.24,
+      "text": "union."
+    },
+    {
+      "startSeconds": 242.4,
+      "text": "This is called distribution,"
+    },
+    {
+      "startSeconds": 244.56,
+      "text": "and it's one of the most important"
+    },
+    {
+      "startSeconds": 246.16,
+      "text": "behaviors to understand. Sometimes"
+    },
+    {
+      "startSeconds": 248.44,
+      "text": "distribution is exactly what you want,"
+    },
+    {
+      "startSeconds": 251.32,
+      "text": "and sometimes it breaks things."
+    },
+    {
+      "startSeconds": 253.84,
+      "text": "To turn it off, wrap both sides in"
+    },
+    {
+      "startSeconds": 256.239,
+      "text": "square brackets, making them tuples."
+    },
+    {
+      "startSeconds": 259.32,
+      "text": "Now, T is no longer a naked type"
+    },
+    {
+      "startSeconds": 262.04,
+      "text": "parameter, so the whole union is checked"
+    },
+    {
+      "startSeconds": 264.44,
+      "text": "at once."
+    },
+    {
+      "startSeconds": 265.68,
+      "text": "Compare the two results. Without"
+    },
+    {
+      "startSeconds": 267.56,
+      "text": "brackets, you get a union of arrays."
+    },
+    {
+      "startSeconds": 270.32,
+      "text": "With brackets, the full union string or"
+    },
+    {
+      "startSeconds": 273.44,
+      "text": "number"
+    },
+    {
+      "startSeconds": 274.6,
+      "text": "is treated as one unit."
+    },
+    {
+      "startSeconds": 277.2,
+      "text": "This trick is essential when writing"
+    },
+    {
+      "startSeconds": 279.68,
+      "text": "utility types that must not split unions"
+    },
+    {
+      "startSeconds": 282.04,
+      "text": "apart. There's a sneaky edge case with"
+    },
+    {
+      "startSeconds": 285,
+      "text": "distribution and the never type,"
+    },
+    {
+      "startSeconds": 287.919,
+      "text": "because never is treated as an empty"
+    },
+    {
+      "startSeconds": 290.24,
+      "text": "union. A distributive conditional over"
+    },
+    {
+      "startSeconds": 293.36,
+      "text": "never distributes over zero members"
+    },
+    {
+      "startSeconds": 296.48,
+      "text": "and returns never without ever running"
+    },
+    {
+      "startSeconds": 299.16,
+      "text": "your branches."
+    },
+    {
+      "startSeconds": 300.76,
+      "text": "This catches almost everyone the first"
+    },
+    {
+      "startSeconds": 302.96,
+      "text": "time."
+    },
+    {
+      "startSeconds": 303.88,
+      "text": "If you actually want to test whether a"
+    },
+    {
+      "startSeconds": 306.08,
+      "text": "type is never,"
+    },
+    {
+      "startSeconds": 307.84,
+      "text": "you must disable distribution with the"
+    },
+    {
+      "startSeconds": 309.64,
+      "text": "tuple bracket trick."
+    },
+    {
+      "startSeconds": 311.56,
+      "text": "Here's the correct way to write an is"
+    },
+    {
+      "startSeconds": 313.36,
+      "text": "never check. Now for the real magic,"
+    },
+    {
+      "startSeconds": 316.44,
+      "text": "the infer keyword."
+    },
+    {
+      "startSeconds": 319.04,
+      "text": "Infer lets you capture a piece of a type"
+    },
+    {
+      "startSeconds": 321.96,
+      "text": "and give it a name"
+    },
+    {
+      "startSeconds": 323.56,
+      "text": "right inside the extends clause of a"
+    },
+    {
+      "startSeconds": 325.72,
+      "text": "conditional type."
+    },
+    {
+      "startSeconds": 327.56,
+      "text": "Think of it like pattern matching."
+    },
+    {
+      "startSeconds": 329.76,
+      "text": "You describe the shape you expect, and"
+    },
+    {
+      "startSeconds": 332.12,
+      "text": "you put infer where you want TypeScript"
+    },
+    {
+      "startSeconds": 334.32,
+      "text": "to fill in the blank."
+    },
+    {
+      "startSeconds": 335.88,
+      "text": "Here we say,"
+    },
+    {
+      "startSeconds": 337.2,
+      "text": "\"If T looks like an array of some"
+    },
+    {
+      "startSeconds": 339.12,
+      "text": "element type, capture that element type"
+    },
+    {
+      "startSeconds": 341.52,
+      "text": "as U and return it.\""
+    },
+    {
+      "startSeconds": 343.72,
+      "text": "So, passing a number array gives us back"
+    },
+    {
+      "startSeconds": 345.96,
+      "text": "number. Let's slow this down because"
+    },
+    {
+      "startSeconds": 348.16,
+      "text": "it's the key idea."
+    },
+    {
+      "startSeconds": 350.16,
+      "text": "The pattern infer you inside parentheses"
+    },
+    {
+      "startSeconds": 353.48,
+      "text": "square brackets means an array of"
+    },
+    {
+      "startSeconds": 355.96,
+      "text": "something."
+    },
+    {
+      "startSeconds": 357.56,
+      "text": "And I'm naming that something you."
+    },
+    {
+      "startSeconds": 360.68,
+      "text": "TypeScript tries to match the incoming"
+    },
+    {
+      "startSeconds": 362.68,
+      "text": "type T against this shape."
+    },
+    {
+      "startSeconds": 364.88,
+      "text": "If it matches, you is bound to whatever"
+    },
+    {
+      "startSeconds": 367.52,
+      "text": "filled the slot, and you can use you in"
+    },
+    {
+      "startSeconds": 370.44,
+      "text": "the true branch."
+    },
+    {
+      "startSeconds": 372.08,
+      "text": "If it doesn't match the array shape at"
+    },
+    {
+      "startSeconds": 373.92,
+      "text": "all, the conditional falls to the false"
+    },
+    {
+      "startSeconds": 376.56,
+      "text": "branch."
+    },
+    {
+      "startSeconds": 377.76,
+      "text": "It's exactly like destructuring, but for"
+    },
+    {
+      "startSeconds": 381.28,
+      "text": "types. Here's one of the most useful"
+    },
+    {
+      "startSeconds": 383.72,
+      "text": "applications. Extracting a function's"
+    },
+    {
+      "startSeconds": 386.36,
+      "text": "return type."
+    },
+    {
+      "startSeconds": 387.68,
+      "text": "We match T against the shape of any"
+    },
+    {
+      "startSeconds": 389.72,
+      "text": "function"
+    },
+    {
+      "startSeconds": 391.04,
+      "text": "taking any arguments,"
+    },
+    {
+      "startSeconds": 393,
+      "text": "and we put infer R in the return"
+    },
+    {
+      "startSeconds": 395.56,
+      "text": "position."
+    },
+    {
+      "startSeconds": 396.84,
+      "text": "If T is a function,"
+    },
+    {
+      "startSeconds": 398.6,
+      "text": "R becomes whatever it returns."
+    },
+    {
+      "startSeconds": 401.52,
+      "text": "This is exactly how the built-in return"
+    },
+    {
+      "startSeconds": 403.72,
+      "text": "type utility works under the hood."
+    },
+    {
+      "startSeconds": 406.6,
+      "text": "You just rebuilt a standard library type"
+    },
+    {
+      "startSeconds": 409.08,
+      "text": "in two lines. That's the power infer"
+    },
+    {
+      "startSeconds": 411.64,
+      "text": "gives you. We can flip it around and"
+    },
+    {
+      "startSeconds": 414.04,
+      "text": "infer the parameters instead."
+    },
+    {
+      "startSeconds": 416.28,
+      "text": "Put infer P in the argument position,"
+    },
+    {
+      "startSeconds": 419.24,
+      "text": "and P captures the entire tuple of"
+    },
+    {
+      "startSeconds": 422.04,
+      "text": "parameter types."
+    },
+    {
+      "startSeconds": 423.64,
+      "text": "This is the built-in parameters utility."
+    },
+    {
+      "startSeconds": 426.44,
+      "text": "Notice P comes back as a tuple,"
+    },
+    {
+      "startSeconds": 429.28,
+      "text": "string then number,"
+    },
+    {
+      "startSeconds": 431.52,
+      "text": "which you can then index into or spread."
+    },
+    {
+      "startSeconds": 434.88,
+      "text": "Inferring the input side is incredibly"
+    },
+    {
+      "startSeconds": 437.04,
+      "text": "handy when you're wrapping or proxying"
+    },
+    {
+      "startSeconds": 439.76,
+      "text": "existing functions. Async code is"
+    },
+    {
+      "startSeconds": 442,
+      "text": "everywhere, and infer shines here, too."
+    },
+    {
+      "startSeconds": 445.04,
+      "text": "To get the value inside a promise, we"
+    },
+    {
+      "startSeconds": 447.32,
+      "text": "match T against promise of infer you,"
+    },
+    {
+      "startSeconds": 450.2,
+      "text": "and pull out you."
+    },
+    {
+      "startSeconds": 452.44,
+      "text": "But what if the value is itself a"
+    },
+    {
+      "startSeconds": 454.24,
+      "text": "promise of a promise?"
+    },
+    {
+      "startSeconds": 456.04,
+      "text": "We handle nesting by recursing."
+    },
+    {
+      "startSeconds": 458.919,
+      "text": "If you is is a promise, unwrap again."
+    },
+    {
+      "startSeconds": 462.92,
+      "text": "This recursive version is essentially"
+    },
+    {
+      "startSeconds": 465.4,
+      "text": "the built-in awaited type added in"
+    },
+    {
+      "startSeconds": 467.96,
+      "text": "TypeScript 4.5."
+    },
+    {
+      "startSeconds": 470.12,
+      "text": "It keeps peeling layers until it hits a"
+    },
+    {
+      "startSeconds": 472.44,
+      "text": "plain value. Infer also works"
+    },
+    {
+      "startSeconds": 475.08,
+      "text": "beautifully with tuples,"
+    },
+    {
+      "startSeconds": 477,
+      "text": "which unlocks recursive list processing"
+    },
+    {
+      "startSeconds": 480.12,
+      "text": "at the type level."
+    },
+    {
+      "startSeconds": 482.08,
+      "text": "Here, we grab the first element of a"
+    },
+    {
+      "startSeconds": 484.16,
+      "text": "tuple by matching the head"
+    },
+    {
+      "startSeconds": 486.4,
+      "text": "and ignoring the rest with a spread."
+    },
+    {
+      "startSeconds": 489.2,
+      "text": "Then we do the opposite."
+    },
+    {
+      "startSeconds": 491.24,
+      "text": "Capture the tail."
+    },
+    {
+      "startSeconds": 492.84,
+      "text": "Everything except the first."
+    },
+    {
+      "startSeconds": 495.36,
+      "text": "With head and tail,"
+    },
+    {
+      "startSeconds": 497.56,
+      "text": "you can recursively walk a tuple,"
+    },
+    {
+      "startSeconds": 500.44,
+      "text": "which is how advanced libraries build"
+    },
+    {
+      "startSeconds": 502.84,
+      "text": "typed routers"
+    },
+    {
+      "startSeconds": 504.4,
+      "text": "and carried functions."
+    },
+    {
+      "startSeconds": 506.6,
+      "text": "Indian developers prepping for product"
+    },
+    {
+      "startSeconds": 508.8,
+      "text": "company interviews."
+    },
+    {
+      "startSeconds": 510.8,
+      "text": "This pattern shows up in real code"
+    },
+    {
+      "startSeconds": 512.84,
+      "text": "bases. You can use more than one infer"
+    },
+    {
+      "startSeconds": 515.56,
+      "text": "in a single conditional."
+    },
+    {
+      "startSeconds": 517.52,
+      "text": "Here, we match a two-element tuple and"
+    },
+    {
+      "startSeconds": 519.8,
+      "text": "capture both elements as A and B at"
+    },
+    {
+      "startSeconds": 522.8,
+      "text": "once, then swap them."
+    },
+    {
+      "startSeconds": 525.4,
+      "text": "This shows that infer is just pattern"
+    },
+    {
+      "startSeconds": 527.839,
+      "text": "binding."
+    },
+    {
+      "startSeconds": 529.28,
+      "text": "You can name as many slots as the shape"
+    },
+    {
+      "startSeconds": 531.52,
+      "text": "allows."
+    },
+    {
+      "startSeconds": 532.839,
+      "text": "The compiler fills each named slot with"
+    },
+    {
+      "startSeconds": 535.12,
+      "text": "the matching part of the input type."
+    },
+    {
+      "startSeconds": 538.32,
+      "text": "Clean, declarative, and no runtime cost"
+    },
+    {
+      "startSeconds": 542.12,
+      "text": "whatsoever. Let's rebuild another"
+    },
+    {
+      "startSeconds": 544.36,
+      "text": "standard utility to cement the"
+    },
+    {
+      "startSeconds": 546.44,
+      "text": "distribution concept."
+    },
+    {
+      "startSeconds": 548.44,
+      "text": "Non-nullable strips null and undefined"
+    },
+    {
+      "startSeconds": 551.4,
+      "text": "out of a type."
+    },
+    {
+      "startSeconds": 553.08,
+      "text": "Because the conditional distributes over"
+    },
+    {
+      "startSeconds": 555,
+      "text": "the union,"
+    },
+    {
+      "startSeconds": 556.16,
+      "text": "each member is tested individually."
+    },
+    {
+      "startSeconds": 559.44,
+      "text": "Null and undefined fall into the never"
+    },
+    {
+      "startSeconds": 563.24,
+      "text": "branch and vanish, while everything else"
+    },
+    {
+      "startSeconds": 565.92,
+      "text": "survives."
+    },
+    {
+      "startSeconds": 567.12,
+      "text": "Never inside a union simply disappears."
+    },
+    {
+      "startSeconds": 570.92,
+      "text": "That's why this two-line type cleanly"
+    },
+    {
+      "startSeconds": 573.8,
+      "text": "removes the nullable parts. Two more"
+    },
+    {
+      "startSeconds": 576.28,
+      "text": "built-ins fall right out of"
+    },
+    {
+      "startSeconds": 577.76,
+      "text": "distribution, exclude and extract."
+    },
+    {
+      "startSeconds": 581.44,
+      "text": "Exclude removes from a union any members"
+    },
+    {
+      "startSeconds": 584.28,
+      "text": "assignable to"
+    },
+    {
+      "startSeconds": 585.64,
+      "text": "U."
+    },
+    {
+      "startSeconds": 587.2,
+      "text": "Each member that matches U becomes never"
+    },
+    {
+      "startSeconds": 590.16,
+      "text": "and drops out."
+    },
+    {
+      "startSeconds": 591.76,
+      "text": "Extract is the mirror image, keeping"
+    },
+    {
+      "startSeconds": 594.44,
+      "text": "only the matching members."
+    },
+    {
+      "startSeconds": 596.72,
+      "text": "These power countless real-world types,"
+    },
+    {
+      "startSeconds": 599.72,
+      "text": "like filtering event names or narrowing"
+    },
+    {
+      "startSeconds": 602.52,
+      "text": "a discriminated union."
+    },
+    {
+      "startSeconds": 604.76,
+      "text": "Once you see distribution, these feel"
+    },
+    {
+      "startSeconds": 607,
+      "text": "almost obvious."
+    },
+    {
+      "startSeconds": 608.72,
+      "text": "Let's tie it all together with something"
+    },
+    {
+      "startSeconds": 611,
+      "text": "you'd actually ship."
+    },
+    {
+      "startSeconds": 612.72,
+      "text": "Say you have an API client and you want"
+    },
+    {
+      "startSeconds": 615.52,
+      "text": "a helper that, given an endpoint key,"
+    },
+    {
+      "startSeconds": 619,
+      "text": "gives you back the unwrapped response"
+    },
+    {
+      "startSeconds": 620.64,
+      "text": "type."
+    },
+    {
+      "startSeconds": 621.76,
+      "text": "No promise wrapper, no manual"
+    },
+    {
+      "startSeconds": 624.12,
+      "text": "annotation."
+    },
+    {
+      "startSeconds": 625.48,
+      "text": "We combine infer to extract the function"
+    },
+    {
+      "startSeconds": 628.44,
+      "text": "return type style logic and awaited to"
+    },
+    {
+      "startSeconds": 631.48,
+      "text": "peel the promise."
+    },
+    {
+      "startSeconds": 633.28,
+      "text": "The result is a fully typed lookup that"
+    },
+    {
+      "startSeconds": 635.64,
+      "text": "updates automatically when your API"
+    },
+    {
+      "startSeconds": 638,
+      "text": "changes."
+    },
+    {
+      "startSeconds": 639.36,
+      "text": "This is the kind of inference that makes"
+    },
+    {
+      "startSeconds": 641.36,
+      "text": "tRPC and modern SDKs feel like magic."
+    },
+    {
+      "startSeconds": 645.16,
+      "text": "Infer even works with template literal"
+    },
+    {
+      "startSeconds": 647.4,
+      "text": "types, which is wildly powerful for"
+    },
+    {
+      "startSeconds": 649.72,
+      "text": "parsing strings at the type level."
+    },
+    {
+      "startSeconds": 652.44,
+      "text": "Here, we extract the parameter name from"
+    },
+    {
+      "startSeconds": 655.36,
+      "text": "a route string, like {slash} users"
+    },
+    {
+      "startSeconds": 658,
+      "text": "{slash} {colon} ID."
+    },
+    {
+      "startSeconds": 660.12,
+      "text": "We match the prefix, then infer the part"
+    },
+    {
+      "startSeconds": 663.64,
+      "text": "after the colon."
+    },
+    {
+      "startSeconds": 665.52,
+      "text": "Combine this with recursion and you can"
+    },
+    {
+      "startSeconds": 667.92,
+      "text": "type check entire route patterns."
+    },
+    {
+      "startSeconds": 670.56,
+      "text": "This is exactly how modern frameworks"
+    },
+    {
+      "startSeconds": 673.8,
+      "text": "validate URL params without you writing"
+    },
+    {
+      "startSeconds": 676.88,
+      "text": "a single runtime check. Type-level code"
+    },
+    {
+      "startSeconds": 679.68,
+      "text": "deserves tests, too."
+    },
+    {
+      "startSeconds": 681.28,
+      "text": "Let's run the TypeScript compiler in no"
+    },
+    {
+      "startSeconds": 684.32,
+      "text": "emit mode to make sure all our"
+    },
+    {
+      "startSeconds": 686.2,
+      "text": "conditional types resolve as expected."
+    },
+    {
+      "startSeconds": 689.04,
+      "text": "We use a tiny expect helper that errors"
+    },
+    {
+      "startSeconds": 692.12,
+      "text": "at compile time if two types don't"
+    },
+    {
+      "startSeconds": 694.56,
+      "text": "match."
+    },
+    {
+      "startSeconds": 695.84,
+      "text": "Run TSC and a clean exit means every"
+    },
+    {
+      "startSeconds": 699.4,
+      "text": "assertion passed."
+    },
+    {
+      "startSeconds": 701.2,
+      "text": "No green test runner needed."
+    },
+    {
+      "startSeconds": 703.64,
+      "text": "The compiler itself is your test suite."
+    },
+    {
+      "startSeconds": 706.08,
+      "text": "A word of caution."
+    },
+    {
+      "startSeconds": 707.96,
+      "text": "Conditional types are powerful, but"
+    },
+    {
+      "startSeconds": 710.24,
+      "text": "they're also where TypeScript gets slow"
+    },
+    {
+      "startSeconds": 713.32,
+      "text": "and error messages get cryptic."
+    },
+    {
+      "startSeconds": 716.48,
+      "text": "If a simple function overload or a plain"
+    },
+    {
+      "startSeconds": 719.16,
+      "text": "union does the job,"
+    },
+    {
+      "startSeconds": 720.76,
+      "text": "prefer that."
+    },
+    {
+      "startSeconds": 722.52,
+      "text": "Deeply recursive conditional types can"
+    },
+    {
+      "startSeconds": 724.84,
+      "text": "blow up compile times and even hit the"
+    },
+    {
+      "startSeconds": 727.04,
+      "text": "recursion limit."
+    },
+    {
+      "startSeconds": 728.6,
+      "text": "Reach for conditional types when the"
+    },
+    {
+      "startSeconds": 730.56,
+      "text": "type genuinely depends on another type,"
+    },
+    {
+      "startSeconds": 733.44,
+      "text": "not just to look clever."
+    },
+    {
+      "startSeconds": 735.64,
+      "text": "Readability beats wizardry in a shared"
+    },
+    {
+      "startSeconds": 738.2,
+      "text": "code base. Let's lock in the mental"
+    },
+    {
+      "startSeconds": 740.4,
+      "text": "model."
+    },
+    {
+      "startSeconds": 741.52,
+      "text": "A conditional type is an if statement"
+    },
+    {
+      "startSeconds": 743.96,
+      "text": "for types."
+    },
+    {
+      "startSeconds": 745.6,
+      "text": "T extends U,"
+    },
+    {
+      "startSeconds": 747.88,
+      "text": "then this, else that."
+    },
+    {
+      "startSeconds": 750.72,
+      "text": "Distribution means it automatically"
+    },
+    {
+      "startSeconds": 752.68,
+      "text": "loops over each member of a union."
+    },
+    {
+      "startSeconds": 755.6,
+      "text": "And infer is pattern matching that"
+    },
+    {
+      "startSeconds": 758.44,
+      "text": "captures a piece of a type into a named"
+    },
+    {
+      "startSeconds": 761.04,
+      "text": "variable you can reuse."
+    },
+    {
+      "startSeconds": 763.6,
+      "text": "Three ideas,"
+    },
+    {
+      "startSeconds": 765.04,
+      "text": "endless combinations."
+    },
+    {
+      "startSeconds": 766.92,
+      "text": "Almost every advanced TypeScript utility"
+    },
+    {
+      "startSeconds": 770,
+      "text": "you'll ever read is built from exactly"
+    },
+    {
+      "startSeconds": 772.76,
+      "text": "these primitives. Before you go, here's"
+    },
+    {
+      "startSeconds": 775.48,
+      "text": "a challenge to make this stick."
+    },
+    {
+      "startSeconds": 777.8,
+      "text": "Try recreating the built-in flatten"
+    },
+    {
+      "startSeconds": 780,
+      "text": "type."
+    },
+    {
+      "startSeconds": 781.48,
+      "text": "Given a nested array, produce the deeply"
+    },
+    {
+      "startSeconds": 784.24,
+      "text": "flattened element type using recursive"
+    },
+    {
+      "startSeconds": 786.56,
+      "text": "infer."
+    },
+    {
+      "startSeconds": 787.8,
+      "text": "The skeleton is on screen."
+    },
+    {
+      "startSeconds": 790,
+      "text": "Pause, attempt it, and check your answer"
+    },
+    {
+      "startSeconds": 793.2,
+      "text": "against the comment. If you can write"
+    },
+    {
+      "startSeconds": 795.4,
+      "text": "this without help, you genuinely"
+    },
+    {
+      "startSeconds": 797.36,
+      "text": "understand conditional types and infer."
+    },
+    {
+      "startSeconds": 800.68,
+      "text": "Drop your solution in the comments and"
+    },
+    {
+      "startSeconds": 802.64,
+      "text": "we'll review the best ones. So, here are"
+    },
+    {
+      "startSeconds": 804.68,
+      "text": "the three things you now own."
+    },
+    {
+      "startSeconds": 806.96,
+      "text": "One, conditional types are if statements"
+    },
+    {
+      "startSeconds": 810.2,
+      "text": "for the type system using extends,"
+    },
+    {
+      "startSeconds": 813.48,
+      "text": "question mark,"
+    },
+    {
+      "startSeconds": 814.8,
+      "text": "colon."
+    },
+    {
+      "startSeconds": 816.28,
+      "text": "Two,"
+    },
+    {
+      "startSeconds": 817.32,
+      "text": "distribution automatically applies your"
+    },
+    {
+      "startSeconds": 819.56,
+      "text": "condition to every member of a union."
+    },
+    {
+      "startSeconds": 822.8,
+      "text": "And the bracket trick or never edge case"
+    },
+    {
+      "startSeconds": 825.16,
+      "text": "can trip you if you forget it."
+    },
+    {
+      "startSeconds": 827.88,
+      "text": "Three,"
+    },
+    {
+      "startSeconds": 828.96,
+      "text": "the infer keyword is pattern matching"
+    },
+    {
+      "startSeconds": 831.44,
+      "text": "that pulls types out of other types."
+    },
+    {
+      "startSeconds": 834.64,
+      "text": "Powering return type, awaited, and root"
+    },
+    {
+      "startSeconds": 838.16,
+      "text": "passes alike."
+    },
+    {
+      "startSeconds": 840.2,
+      "text": "Next up in the TypeScript track, we go"
+    },
+    {
+      "startSeconds": 842.52,
+      "text": "even deeper into recursive types and"
+    },
+    {
+      "startSeconds": 845.28,
+      "text": "template literal type parsing."
+    },
+    {
+      "startSeconds": 848.24,
+      "text": "The foundation"
+    },
+    {
+      "startSeconds": 849.56,
+      "text": "of fully typed APIs."
+    },
+    {
+      "startSeconds": 852.44,
+      "text": "If this finally made the type system"
+    },
+    {
+      "startSeconds": 854.4,
+      "text": "click, smash subscribe,"
+    },
+    {
+      "startSeconds": 857.04,
+      "text": "and comment the trickiest type you've"
+    },
+    {
+      "startSeconds": 858.96,
+      "text": "ever had to write."
+    },
+    {
+      "startSeconds": 860.64,
+      "text": "We read every single one."
+    }
+  ]
 }

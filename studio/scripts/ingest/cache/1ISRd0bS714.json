@@ -1,0 +1,3270 @@
+{
+  "id": "1ISRd0bS714",
+  "url": "https://www.youtube.com/watch?v=1ISRd0bS714",
+  "fetchedAt": "2026-09-01T04:08:14.755Z",
+  "captionKind": "asr",
+  "chapters": [
+    {
+      "startSeconds": 0,
+      "label": "Intro"
+    },
+    {
+      "startSeconds": 48,
+      "label": "Motivating example"
+    },
+    {
+      "startSeconds": 257,
+      "label": "What is a message queue?"
+    },
+    {
+      "startSeconds": 767,
+      "label": "When to use a message queue?"
+    },
+    {
+      "startSeconds": 906,
+      "label": "Common deep dives"
+    },
+    {
+      "startSeconds": 1411,
+      "label": "Example technologies: Kafka, SQS, RabbitMQ"
+    },
+    {
+      "startSeconds": 1542,
+      "label": "Conclusion"
+    }
+  ],
+  "cues": [
+    {
+      "startSeconds": 0.08,
+      "text": "Hey everyone, welcome back to the"
+    },
+    {
+      "startSeconds": 1.52,
+      "text": "channel. Uh, for those of you who may be"
+    },
+    {
+      "startSeconds": 3.28,
+      "text": "new here, I'm Evan. I'm a former"
+    },
+    {
+      "startSeconds": 4.88,
+      "text": "metastaf engineer and I'm the current"
+    },
+    {
+      "startSeconds": 6.4,
+      "text": "co-founder of hello.com."
+    },
+    {
+      "startSeconds": 8.88,
+      "text": "If you're currently preparing for"
+    },
+    {
+      "startSeconds": 10,
+      "text": "software interviews, and you probably"
+    },
+    {
+      "startSeconds": 11.04,
+      "text": "are if you landed here, then head over"
+    },
+    {
+      "startSeconds": 12.639,
+      "text": "to Hello Interview. We have just about"
+    },
+    {
+      "startSeconds": 14.48,
+      "text": "everything that you could possibly need,"
+    },
+    {
+      "startSeconds": 15.92,
+      "text": "the overwhelming majority of which is"
+    },
+    {
+      "startSeconds": 17.6,
+      "text": "totally free. Uh, in this video though,"
+    },
+    {
+      "startSeconds": 20.16,
+      "text": "we're going to be covering message cues"
+    },
+    {
+      "startSeconds": 21.439,
+      "text": "and specifically, as always, in the"
+    },
+    {
+      "startSeconds": 22.96,
+      "text": "context of system design interviews. And"
+    },
+    {
+      "startSeconds": 25.039,
+      "text": "so, we're going to start with a"
+    },
+    {
+      "startSeconds": 25.76,
+      "text": "motivating example that'll show you why"
+    },
+    {
+      "startSeconds": 27.279,
+      "text": "QES exist in the first place. And then"
+    },
+    {
+      "startSeconds": 29.359,
+      "text": "we'll talk all about what a message cube"
+    },
+    {
+      "startSeconds": 31.359,
+      "text": "actually is, how it works under the"
+    },
+    {
+      "startSeconds": 33.12,
+      "text": "hood, when you should use one, and then"
+    },
+    {
+      "startSeconds": 35.28,
+      "text": "finally, we'll get into those deep dives"
+    },
+    {
+      "startSeconds": 36.88,
+      "text": "that interviewers love to probe into"
+    },
+    {
+      "startSeconds": 38.399,
+      "text": "things like scaling, back pressure,"
+    },
+    {
+      "startSeconds": 40.559,
+      "text": "ordering, durability, all of that good"
+    },
+    {
+      "startSeconds": 42.8,
+      "text": "stuff. So, without further ado, let's"
+    },
+    {
+      "startSeconds": 45.2,
+      "text": "get after it. Let's start things off"
+    },
+    {
+      "startSeconds": 46.64,
+      "text": "with a little motivating example. I want"
+    },
+    {
+      "startSeconds": 48.8,
+      "text": "you to imagine that you're building a"
+    },
+    {
+      "startSeconds": 50.079,
+      "text": "photo sharing app like Instagram. So,"
+    },
+    {
+      "startSeconds": 52.079,
+      "text": "the user uploads a photo to your server"
+    },
+    {
+      "startSeconds": 54,
+      "text": "and then it needs to do a bunch of stuff"
+    },
+    {
+      "startSeconds": 56.32,
+      "text": "with that photo. And so, for example,"
+    },
+    {
+      "startSeconds": 58.399,
+      "text": "you may need to resize it into multiple"
+    },
+    {
+      "startSeconds": 60.16,
+      "text": "different resolutions. You may need to"
+    },
+    {
+      "startSeconds": 62,
+      "text": "apply filters, maybe run some kind of"
+    },
+    {
+      "startSeconds": 64.239,
+      "text": "content moderation checks in the"
+    },
+    {
+      "startSeconds": 66.159,
+      "text": "background to make sure that it's"
+    },
+    {
+      "startSeconds": 67.28,
+      "text": "appropriate, it's not nudity, those"
+    },
+    {
+      "startSeconds": 68.64,
+      "text": "sorts of things. And each of those"
+    },
+    {
+      "startSeconds": 70.72,
+      "text": "operations takes a couple of seconds"
+    },
+    {
+      "startSeconds": 72.88,
+      "text": "each. In the simplest possible"
+    },
+    {
+      "startSeconds": 74.799,
+      "text": "architecture that you could design, what"
+    },
+    {
+      "startSeconds": 77.04,
+      "text": "might happen here is that the client"
+    },
+    {
+      "startSeconds": 78.72,
+      "text": "uploads the photo to your server and"
+    },
+    {
+      "startSeconds": 80.64,
+      "text": "then your server does all of that work"
+    },
+    {
+      "startSeconds": 82.4,
+      "text": "synchronously. That single server"
+    },
+    {
+      "startSeconds": 84.479,
+      "text": "handles all of that work. Resizing the"
+    },
+    {
+      "startSeconds": 86.159,
+      "text": "images, applying the filters, running"
+    },
+    {
+      "startSeconds": 87.92,
+      "text": "the moderation checks, and then once all"
+    },
+    {
+      "startSeconds": 89.759,
+      "text": "of that's done, and only once all of"
+    },
+    {
+      "startSeconds": 91.04,
+      "text": "that's done, it returns the response"
+    },
+    {
+      "startSeconds": 92.72,
+      "text": "back to the client with the success"
+    },
+    {
+      "startSeconds": 94.56,
+      "text": "message."
+    },
+    {
+      "startSeconds": 96.079,
+      "text": "This this works kind of uh but it has"
+    },
+    {
+      "startSeconds": 99.04,
+      "text": "some real limitations. The the first is"
+    },
+    {
+      "startSeconds": 101.6,
+      "text": "latency. The user hits upload and then"
+    },
+    {
+      "startSeconds": 103.84,
+      "text": "they just stare at a spinner or whatever"
+    },
+    {
+      "startSeconds": 105.759,
+      "text": "you put on the client while all of that"
+    },
+    {
+      "startSeconds": 107.52,
+      "text": "processing is happening and they're just"
+    },
+    {
+      "startSeconds": 109.28,
+      "text": "waiting. Nobody wants to have to wait"
+    },
+    {
+      "startSeconds": 110.88,
+      "text": "six seconds just to get that"
+    },
+    {
+      "startSeconds": 112.079,
+      "text": "confirmation that they're they're they"
+    },
+    {
+      "startSeconds": 113.759,
+      "text": "uploaded their photo, right? The second"
+    },
+    {
+      "startSeconds": 116.399,
+      "text": "problem is around how fragile this is."
+    },
+    {
+      "startSeconds": 118.96,
+      "text": "What happens if the filter service maybe"
+    },
+    {
+      "startSeconds": 121.36,
+      "text": "crashes halfway through all of that"
+    },
+    {
+      "startSeconds": 123.04,
+      "text": "processing? Well, the whole upload now"
+    },
+    {
+      "startSeconds": 125.68,
+      "text": "fails. Now the user ends up getting an"
+    },
+    {
+      "startSeconds": 127.84,
+      "text": "error with a message maybe to retry and"
+    },
+    {
+      "startSeconds": 130.239,
+      "text": "that resizing work that we already did"
+    },
+    {
+      "startSeconds": 132.16,
+      "text": "is now totally lost too and we have to"
+    },
+    {
+      "startSeconds": 134.239,
+      "text": "start from scratch. And then the third"
+    },
+    {
+      "startSeconds": 136.08,
+      "text": "one is is a big one. How do you manage"
+    },
+    {
+      "startSeconds": 138.239,
+      "text": "really bursty traffic? So, imagine that,"
+    },
+    {
+      "startSeconds": 140.8,
+      "text": "for example, your app gets featured in"
+    },
+    {
+      "startSeconds": 142.879,
+      "text": "the app store. Super cool. Um, but now"
+    },
+    {
+      "startSeconds": 145.04,
+      "text": "your uploads spike from what was maybe"
+    },
+    {
+      "startSeconds": 147.44,
+      "text": "50 a second to 5,000 or 50,000 or"
+    },
+    {
+      "startSeconds": 150.4,
+      "text": "500,000 a second. And your servers, they"
+    },
+    {
+      "startSeconds": 153.519,
+      "text": "can't handle more than maybe 200 per"
+    },
+    {
+      "startSeconds": 155.76,
+      "text": "second. And so those other 4,800,"
+    },
+    {
+      "startSeconds": 159.84,
+      "text": "right, they're just timing out or"
+    },
+    {
+      "startSeconds": 161.599,
+      "text": "they're failing or the user gets an"
+    },
+    {
+      "startSeconds": 163.36,
+      "text": "error. your system is basically falling"
+    },
+    {
+      "startSeconds": 165.44,
+      "text": "over under the load because it can't"
+    },
+    {
+      "startSeconds": 167.519,
+      "text": "handle this new huge throughput."
+    },
+    {
+      "startSeconds": 171.12,
+      "text": "So with all of that in mind, let me show"
+    },
+    {
+      "startSeconds": 173.12,
+      "text": "you how we can solve each of these"
+    },
+    {
+      "startSeconds": 174.959,
+      "text": "problems by introducing a message cue."
+    },
+    {
+      "startSeconds": 178.08,
+      "text": "Instead of processing that photo"
+    },
+    {
+      "startSeconds": 179.68,
+      "text": "immediately, what if when that upload"
+    },
+    {
+      "startSeconds": 181.84,
+      "text": "comes in, your server just saves the"
+    },
+    {
+      "startSeconds": 183.44,
+      "text": "file and writes a message to a queue."
+    },
+    {
+      "startSeconds": 185.519,
+      "text": "The message is something simple like,"
+    },
+    {
+      "startSeconds": 187.599,
+      "text": "\"Hey, photo 456 needs processing.\" And"
+    },
+    {
+      "startSeconds": 191.36,
+      "text": "then our server can immediately respond"
+    },
+    {
+      "startSeconds": 193.12,
+      "text": "back to the client saying that it's"
+    },
+    {
+      "startSeconds": 194.56,
+      "text": "done. The upload's complete from the"
+    },
+    {
+      "startSeconds": 196.319,
+      "text": "client's perspective. And we can show"
+    },
+    {
+      "startSeconds": 197.599,
+      "text": "them maybe the single resolution photo"
+    },
+    {
+      "startSeconds": 199.76,
+      "text": "just to them while the rest is"
+    },
+    {
+      "startSeconds": 201.04,
+      "text": "processing in the background. Because at"
+    },
+    {
+      "startSeconds": 203.04,
+      "text": "the other end of the queue, you have a"
+    },
+    {
+      "startSeconds": 204.64,
+      "text": "pool of workers, maybe a worker servers,"
+    },
+    {
+      "startSeconds": 207.68,
+      "text": "right? Where each worker is pulling one"
+    },
+    {
+      "startSeconds": 209.76,
+      "text": "of those messages at a time off of the"
+    },
+    {
+      "startSeconds": 211.599,
+      "text": "queue and processing it. So if three"
+    },
+    {
+      "startSeconds": 213.84,
+      "text": "photos get uploaded around the same"
+    },
+    {
+      "startSeconds": 215.28,
+      "text": "time, each one gets picked up maybe by a"
+    },
+    {
+      "startSeconds": 217.36,
+      "text": "different worker on the other end of"
+    },
+    {
+      "startSeconds": 218.56,
+      "text": "that queue called consumers. And they'll"
+    },
+    {
+      "startSeconds": 221.28,
+      "text": "all be able to process in parallel. So"
+    },
+    {
+      "startSeconds": 224.48,
+      "text": "we can look at what happens in this case"
+    },
+    {
+      "startSeconds": 226,
+      "text": "to our three problems. Now uploads are"
+    },
+    {
+      "startSeconds": 227.84,
+      "text": "fast because your server is just saving"
+    },
+    {
+      "startSeconds": 229.36,
+      "text": "the file and dropping it onto a message"
+    },
+    {
+      "startSeconds": 230.799,
+      "text": "queue. It's not doing the expensive"
+    },
+    {
+      "startSeconds": 232.319,
+      "text": "processing. Failures are isolated"
+    },
+    {
+      "startSeconds": 234.56,
+      "text": "because if a worker crashes while"
+    },
+    {
+      "startSeconds": 236.159,
+      "text": "processing a single photo, that message"
+    },
+    {
+      "startSeconds": 238.48,
+      "text": "just gets redelivered to another worker"
+    },
+    {
+      "startSeconds": 240.159,
+      "text": "and it picks up where the other one left"
+    },
+    {
+      "startSeconds": 241.599,
+      "text": "off. And then on those big traffic"
+    },
+    {
+      "startSeconds": 243.92,
+      "text": "spikes, it just means that the queue"
+    },
+    {
+      "startSeconds": 245.68,
+      "text": "gets a little bit deeper, right? There's"
+    },
+    {
+      "startSeconds": 247.439,
+      "text": "more items in the queue. And so the"
+    },
+    {
+      "startSeconds": 249.28,
+      "text": "messages sit there potentially waiting"
+    },
+    {
+      "startSeconds": 250.799,
+      "text": "to be processed. So at worst, there's a"
+    },
+    {
+      "startSeconds": 252.959,
+      "text": "delay, but none are dropped or aired"
+    },
+    {
+      "startSeconds": 255.519,
+      "text": "out. All right, now let's formalize what"
+    },
+    {
+      "startSeconds": 257.04,
+      "text": "we just saw. What actually is a message"
+    },
+    {
+      "startSeconds": 259.68,
+      "text": "Q? Well, it's pretty much exactly what"
+    },
+    {
+      "startSeconds": 261.44,
+      "text": "it sounds like. A message Q is just a"
+    },
+    {
+      "startSeconds": 263.28,
+      "text": "buffer, a queue that sits between a"
+    },
+    {
+      "startSeconds": 265.28,
+      "text": "producer and a consumer. The producer is"
+    },
+    {
+      "startSeconds": 268.479,
+      "text": "the thing or the server, the service"
+    },
+    {
+      "startSeconds": 270.24,
+      "text": "that creates the work. In our example,"
+    },
+    {
+      "startSeconds": 272.4,
+      "text": "this was that server handling the upload"
+    },
+    {
+      "startSeconds": 274.16,
+      "text": "from the client. And the consumer is the"
+    },
+    {
+      "startSeconds": 276.4,
+      "text": "thing that actually does the work. In"
+    },
+    {
+      "startSeconds": 278.56,
+      "text": "our case, this was that pool of workers"
+    },
+    {
+      "startSeconds": 280.24,
+      "text": "that process the photos. The way it"
+    },
+    {
+      "startSeconds": 282.96,
+      "text": "works is really straightforward. The"
+    },
+    {
+      "startSeconds": 284.56,
+      "text": "producer sends a message to the queue"
+    },
+    {
+      "startSeconds": 286.16,
+      "text": "and then totally forgets about it. It"
+    },
+    {
+      "startSeconds": 288,
+      "text": "doesn't care when or even if the message"
+    },
+    {
+      "startSeconds": 290.4,
+      "text": "gets press processed at all. That's not"
+    },
+    {
+      "startSeconds": 291.84,
+      "text": "its responsibility. It just fires and"
+    },
+    {
+      "startSeconds": 294.32,
+      "text": "moves on. On the other end, the consumer"
+    },
+    {
+      "startSeconds": 296.4,
+      "text": "pulls messages off the queue and"
+    },
+    {
+      "startSeconds": 297.759,
+      "text": "processes them at its own pace. So the"
+    },
+    {
+      "startSeconds": 299.84,
+      "text": "Q's whole job is just to hold on to"
+    },
+    {
+      "startSeconds": 301.84,
+      "text": "these messages until somebody is ready"
+    },
+    {
+      "startSeconds": 303.919,
+      "text": "to deal with them. It's just a buffer in"
+    },
+    {
+      "startSeconds": 305.84,
+      "text": "between the two services. The key"
+    },
+    {
+      "startSeconds": 307.6,
+      "text": "property here is called decoupling. The"
+    },
+    {
+      "startSeconds": 309.6,
+      "text": "producer and the consumer don't know"
+    },
+    {
+      "startSeconds": 310.88,
+      "text": "about each other. They don't need to."
+    },
+    {
+      "startSeconds": 312.479,
+      "text": "And so this allows you to scale them"
+    },
+    {
+      "startSeconds": 314.08,
+      "text": "independently and swap one or the other"
+    },
+    {
+      "startSeconds": 316.8,
+      "text": "without affecting each other directly."
+    },
+    {
+      "startSeconds": 318.96,
+      "text": "You need more consumers, fine. You can"
+    },
+    {
+      "startSeconds": 320.88,
+      "text": "add more servers there while leaving the"
+    },
+    {
+      "startSeconds": 322.4,
+      "text": "producers where they were. you need more"
+    },
+    {
+      "startSeconds": 323.6,
+      "text": "producers, you can scale those up while"
+    },
+    {
+      "startSeconds": 325.36,
+      "text": "leaving, you know, the one or two"
+    },
+    {
+      "startSeconds": 326.8,
+      "text": "consumers that you had. Um, to wrap up"
+    },
+    {
+      "startSeconds": 330.56,
+      "text": "this this kind of intro on what is a"
+    },
+    {
+      "startSeconds": 332.08,
+      "text": "message cue, uh, and I'll al albe it"
+    },
+    {
+      "startSeconds": 335.28,
+      "text": "kind of silly analogy that I remember"
+    },
+    {
+      "startSeconds": 336.8,
+      "text": "from school, which may help you, and"
+    },
+    {
+      "startSeconds": 338.4,
+      "text": "I've seen this click for candidates, is"
+    },
+    {
+      "startSeconds": 340.16,
+      "text": "to think of it like a kitchen. The"
+    },
+    {
+      "startSeconds": 341.919,
+      "text": "waiter takes your order and then puts it"
+    },
+    {
+      "startSeconds": 343.84,
+      "text": "on the ticket rail. The cook grabs the"
+    },
+    {
+      "startSeconds": 346,
+      "text": "ticket off of the rail when they're"
+    },
+    {
+      "startSeconds": 347.199,
+      "text": "ready, and the waiter doesn't just stand"
+    },
+    {
+      "startSeconds": 349.039,
+      "text": "there waiting the waiting for the cook"
+    },
+    {
+      "startSeconds": 350.96,
+      "text": "to make your food. instead they go and"
+    },
+    {
+      "startSeconds": 352.56,
+      "text": "they serve other tables, right? And so"
+    },
+    {
+      "startSeconds": 354.32,
+      "text": "the ticket rail decouples the front of"
+    },
+    {
+      "startSeconds": 356,
+      "text": "the house from the back of the house"
+    },
+    {
+      "startSeconds": 357.44,
+      "text": "exactly the same way a message Q does"
+    },
+    {
+      "startSeconds": 359.039,
+      "text": "for our producers and our consumers,"
+    },
+    {
+      "startSeconds": 360.639,
+      "text": "right? Pretty straightforward example."
+    },
+    {
+      "startSeconds": 363.12,
+      "text": "Okay, now that we know what a message Q"
+    },
+    {
+      "startSeconds": 364.72,
+      "text": "is, let's talk a little bit about how it"
+    },
+    {
+      "startSeconds": 366.4,
+      "text": "actually works under the hood. Uh"
+    },
+    {
+      "startSeconds": 368.24,
+      "text": "there's a few mechanisms that you need"
+    },
+    {
+      "startSeconds": 371.36,
+      "text": "to understand and each one solves real"
+    },
+    {
+      "startSeconds": 373.44,
+      "text": "problems. So let's start off with with"
+    },
+    {
+      "startSeconds": 375.36,
+      "text": "acknowledgements. Let me give you a"
+    },
+    {
+      "startSeconds": 376.88,
+      "text": "scenario. A worker pulls a message off"
+    },
+    {
+      "startSeconds": 379.039,
+      "text": "of the queue and it starts processing"
+    },
+    {
+      "startSeconds": 380.56,
+      "text": "the photo. Halfway through the worker"
+    },
+    {
+      "startSeconds": 382.639,
+      "text": "crashes for whatever reason. It runs out"
+    },
+    {
+      "startSeconds": 384.16,
+      "text": "of memory. Anything can happen here. And"
+    },
+    {
+      "startSeconds": 386.319,
+      "text": "so what would happen to that message?"
+    },
+    {
+      "startSeconds": 388.479,
+      "text": "Well, if the queue just deleted the"
+    },
+    {
+      "startSeconds": 390.08,
+      "text": "message the moment the worker grabbed"
+    },
+    {
+      "startSeconds": 391.68,
+      "text": "it, then that photo is now gone and it"
+    },
+    {
+      "startSeconds": 393.6,
+      "text": "will never get processed. That user that"
+    },
+    {
+      "startSeconds": 395.759,
+      "text": "user's upload is basically just lost"
+    },
+    {
+      "startSeconds": 397.199,
+      "text": "forever. Uh which would clearly be be"
+    },
+    {
+      "startSeconds": 399.52,
+      "text": "really bad. This is what"
+    },
+    {
+      "startSeconds": 401.44,
+      "text": "acknowledgements solve. When a consumer"
+    },
+    {
+      "startSeconds": 403.68,
+      "text": "pulls the message off of the queue, the"
+    },
+    {
+      "startSeconds": 405.919,
+      "text": "queue doesn't delete it right away."
+    },
+    {
+      "startSeconds": 407.52,
+      "text": "Instead, the consumer has to explicitly"
+    },
+    {
+      "startSeconds": 409.6,
+      "text": "send an acknowledgement or an act back"
+    },
+    {
+      "startSeconds": 411.759,
+      "text": "to the queue saying, \"Hey, I'm done with"
+    },
+    {
+      "startSeconds": 413.759,
+      "text": "this one. You can go ahead and actually"
+    },
+    {
+      "startSeconds": 415.28,
+      "text": "delete it now.\" So, if a consumer"
+    },
+    {
+      "startSeconds": 417.28,
+      "text": "crashes before sending that act, the que"
+    },
+    {
+      "startSeconds": 419.52,
+      "text": "assumes it wasn't processed and it ends"
+    },
+    {
+      "startSeconds": 421.599,
+      "text": "up just being redelivered. That message"
+    },
+    {
+      "startSeconds": 423.28,
+      "text": "ends up being redelivered to another"
+    },
+    {
+      "startSeconds": 424.8,
+      "text": "consumer so that nothing was actually"
+    },
+    {
+      "startSeconds": 426.479,
+      "text": "lost. Great. So, the the Q holds on to"
+    },
+    {
+      "startSeconds": 428.96,
+      "text": "messages until consumers act them,"
+    },
+    {
+      "startSeconds": 431.599,
+      "text": "right? acknowledge them. Um, but think"
+    },
+    {
+      "startSeconds": 434.08,
+      "text": "about what this actually means, and you"
+    },
+    {
+      "startSeconds": 435.68,
+      "text": "may have already thought this or"
+    },
+    {
+      "startSeconds": 437.36,
+      "text": "recognized this. While worker A is busy"
+    },
+    {
+      "startSeconds": 439.84,
+      "text": "processing a message and it hasn't acted"
+    },
+    {
+      "startSeconds": 442.16,
+      "text": "yet because it's in its 4 seconds of"
+    },
+    {
+      "startSeconds": 443.84,
+      "text": "doing all of that processing, then that"
+    },
+    {
+      "startSeconds": 445.84,
+      "text": "message is technically still in the"
+    },
+    {
+      "startSeconds": 447.36,
+      "text": "queue. So, what's stopping worker B from"
+    },
+    {
+      "startSeconds": 450.56,
+      "text": "grabbing it, too? And then you'd have"
+    },
+    {
+      "startSeconds": 452.319,
+      "text": "two workers doing the exact same work,"
+    },
+    {
+      "startSeconds": 454.08,
+      "text": "which is wasteful at best, and in some"
+    },
+    {
+      "startSeconds": 455.919,
+      "text": "cases maybe even even dangerous or hurts"
+    },
+    {
+      "startSeconds": 458.08,
+      "text": "the state of your system. Now, different"
+    },
+    {
+      "startSeconds": 460.479,
+      "text": "queuing systems solve this exact problem"
+    },
+    {
+      "startSeconds": 462.639,
+      "text": "different ways. In SQS, which is"
+    },
+    {
+      "startSeconds": 465.12,
+      "text": "Amazon's native message queue, when a"
+    },
+    {
+      "startSeconds": 467.039,
+      "text": "consumer picks up a message, it becomes"
+    },
+    {
+      "startSeconds": 469.28,
+      "text": "invisible to all other consumers for a"
+    },
+    {
+      "startSeconds": 472.08,
+      "text": "configurable window, like say 30"
+    },
+    {
+      "startSeconds": 473.84,
+      "text": "seconds. And so, if the consumer"
+    },
+    {
+      "startSeconds": 475.599,
+      "text": "finishes and it acts within that window,"
+    },
+    {
+      "startSeconds": 477.84,
+      "text": "then all good, the message was removed."
+    },
+    {
+      "startSeconds": 479.919,
+      "text": "If it doesn't, the message becomes"
+    },
+    {
+      "startSeconds": 481.84,
+      "text": "visible again automatically and another"
+    },
+    {
+      "startSeconds": 484.16,
+      "text": "consumer can retry. So, it's basically"
+    },
+    {
+      "startSeconds": 485.759,
+      "text": "like a 30-se secondond window or a"
+    },
+    {
+      "startSeconds": 487.199,
+      "text": "configurable time period. um where we we"
+    },
+    {
+      "startSeconds": 489.919,
+      "text": "don't let consumers um double process a"
+    },
+    {
+      "startSeconds": 492.56,
+      "text": "message. CFKA on the other hand, they"
+    },
+    {
+      "startSeconds": 494.96,
+      "text": "take a pretty different approach though."
+    },
+    {
+      "startSeconds": 496.4,
+      "text": "They just assign each partition, we'll"
+    },
+    {
+      "startSeconds": 498.479,
+      "text": "talk about what those are in a second,"
+    },
+    {
+      "startSeconds": 499.84,
+      "text": "to exactly one consumer in a group, so"
+    },
+    {
+      "startSeconds": 502.16,
+      "text": "that there's no even competition in the"
+    },
+    {
+      "startSeconds": 504.72,
+      "text": "first place. There's only one consumer"
+    },
+    {
+      "startSeconds": 506.4,
+      "text": "ever reading from any given logical"
+    },
+    {
+      "startSeconds": 508.72,
+      "text": "queue, if you will. And then Rabbit MQ,"
+    },
+    {
+      "startSeconds": 511.12,
+      "text": "another popular message Q that we'll"
+    },
+    {
+      "startSeconds": 512.479,
+      "text": "talk about at the end, they use channel"
+    },
+    {
+      "startSeconds": 514.399,
+      "text": "level prefetch limits and act timeouts"
+    },
+    {
+      "startSeconds": 517.039,
+      "text": "to manage this. So, we won't get into"
+    },
+    {
+      "startSeconds": 518.32,
+      "text": "all those details, but what's good for"
+    },
+    {
+      "startSeconds": 520.08,
+      "text": "you to know is just that um all of these"
+    },
+    {
+      "startSeconds": 522.479,
+      "text": "cues have a way to prevent duplicate"
+    },
+    {
+      "startSeconds": 524.48,
+      "text": "processing. And whatever your queue of"
+    },
+    {
+      "startSeconds": 526.16,
+      "text": "choice is, it might be worth looking up"
+    },
+    {
+      "startSeconds": 528,
+      "text": "how exactly they do that. So, while the"
+    },
+    {
+      "startSeconds": 529.839,
+      "text": "implementations differ, the concept is"
+    },
+    {
+      "startSeconds": 531.839,
+      "text": "always the same. Every queuing system"
+    },
+    {
+      "startSeconds": 533.92,
+      "text": "just needs a way to make sure that a"
+    },
+    {
+      "startSeconds": 535.92,
+      "text": "message is only being actively processed"
+    },
+    {
+      "startSeconds": 538.16,
+      "text": "by one consumer at a time. Okay. But"
+    },
+    {
+      "startSeconds": 541.36,
+      "text": "even with axe and that duplicate uh"
+    },
+    {
+      "startSeconds": 544.16,
+      "text": "message prevention, there's still a"
+    },
+    {
+      "startSeconds": 546.16,
+      "text": "tricky edge case that I want to make you"
+    },
+    {
+      "startSeconds": 547.92,
+      "text": "guys aware of. So what if the worker"
+    },
+    {
+      "startSeconds": 550,
+      "text": "processes the message successfully, but"
+    },
+    {
+      "startSeconds": 552.64,
+      "text": "then crashes right before that moment,"
+    },
+    {
+      "startSeconds": 554.399,
+      "text": "it sends the acknowledgement. It sends"
+    },
+    {
+      "startSeconds": 555.839,
+      "text": "the act. Now the queue thinks that it"
+    },
+    {
+      "startSeconds": 558.48,
+      "text": "was never processed, so it redelivers it"
+    },
+    {
+      "startSeconds": 560.399,
+      "text": "to another consumer. And that same photo"
+    },
+    {
+      "startSeconds": 562.56,
+      "text": "gets processed twice. And maybe in our"
+    },
+    {
+      "startSeconds": 564.88,
+      "text": "case, when you're just resizing photos"
+    },
+    {
+      "startSeconds": 566.32,
+      "text": "and running content moderation, that"
+    },
+    {
+      "startSeconds": 567.839,
+      "text": "doesn't matter at all. Doing that twice"
+    },
+    {
+      "startSeconds": 569.44,
+      "text": "has has no bad effect. But what if the"
+    },
+    {
+      "startSeconds": 571.76,
+      "text": "message was something like, \"Charge Evan"
+    },
+    {
+      "startSeconds": 574.48,
+      "text": "$50 for a banking application or"
+    },
+    {
+      "startSeconds": 576.64,
+      "text": "something.\" Um, that duplicate message"
+    },
+    {
+      "startSeconds": 578.8,
+      "text": "now just resulted in me being charged"
+    },
+    {
+      "startSeconds": 580.72,
+      "text": "$100. And and that's obviously not cool."
+    },
+    {
+      "startSeconds": 583.36,
+      "text": "Um, this is the problem that's referred"
+    },
+    {
+      "startSeconds": 586.08,
+      "text": "to as we talk about message cues as"
+    },
+    {
+      "startSeconds": 588,
+      "text": "delivery guarantees. And there are three"
+    },
+    {
+      "startSeconds": 590.8,
+      "text": "that you should know about and that your"
+    },
+    {
+      "startSeconds": 592.16,
+      "text": "interviewer might ask about. The first"
+    },
+    {
+      "startSeconds": 594.48,
+      "text": "and by far the most common delivery"
+    },
+    {
+      "startSeconds": 596.64,
+      "text": "guarantee is called at least once"
+    },
+    {
+      "startSeconds": 598.959,
+      "text": "delivery. This just means that the Q"
+    },
+    {
+      "startSeconds": 601.68,
+      "text": "guarantees that every single message"
+    },
+    {
+      "startSeconds": 604,
+      "text": "will be delivered at least one time, but"
+    },
+    {
+      "startSeconds": 607.04,
+      "text": "it might be delivered more than once."
+    },
+    {
+      "startSeconds": 610.48,
+      "text": "The implication of this is that your"
+    },
+    {
+      "startSeconds": 612.24,
+      "text": "consumers now need to be what's called"
+    },
+    {
+      "startSeconds": 615.519,
+      "text": "item potent. Item potent just means that"
+    },
+    {
+      "startSeconds": 618,
+      "text": "processing the same message twice will"
+    },
+    {
+      "startSeconds": 620,
+      "text": "produce the exact same result. Let me"
+    },
+    {
+      "startSeconds": 622,
+      "text": "give you an example. If your message"
+    },
+    {
+      "startSeconds": 623.839,
+      "text": "says set user 123's profile photo to"
+    },
+    {
+      "startSeconds": 627.36,
+      "text": "photo 5, then running that twice is"
+    },
+    {
+      "startSeconds": 630.16,
+      "text": "fine. You get the exact same result. The"
+    },
+    {
+      "startSeconds": 631.92,
+      "text": "first time you ran it, it set it to"
+    },
+    {
+      "startSeconds": 633.04,
+      "text": "photo five. The second time you run it,"
+    },
+    {
+      "startSeconds": 634.48,
+      "text": "it just set it to photo five again,"
+    },
+    {
+      "startSeconds": 635.76,
+      "text": "which it already was, so no big deal."
+    },
+    {
+      "startSeconds": 638.16,
+      "text": "But like we saw with that earlier"
+    },
+    {
+      "startSeconds": 639.6,
+      "text": "message or with the banking example, if"
+    },
+    {
+      "startSeconds": 641.76,
+      "text": "your message is something like increment"
+    },
+    {
+      "startSeconds": 643.76,
+      "text": "user 123's post count by one, then"
+    },
+    {
+      "startSeconds": 646.8,
+      "text": "running that twice is a problem. You've"
+    },
+    {
+      "startSeconds": 648.48,
+      "text": "now obviously incremented their post"
+    },
+    {
+      "startSeconds": 650,
+      "text": "count by two. And so in practice, you"
+    },
+    {
+      "startSeconds": 652.48,
+      "text": "design your operations to be naturally"
+    },
+    {
+      "startSeconds": 654.48,
+      "text": "item potent like in a photo example or"
+    },
+    {
+      "startSeconds": 657.36,
+      "text": "you check whether the action has already"
+    },
+    {
+      "startSeconds": 659.2,
+      "text": "be been completed before doing it again."
+    },
+    {
+      "startSeconds": 661.92,
+      "text": "And so if we if we take that example of"
+    },
+    {
+      "startSeconds": 663.92,
+      "text": "increment user 123's post count by one,"
+    },
+    {
+      "startSeconds": 666.32,
+      "text": "the message or the work would actually"
+    },
+    {
+      "startSeconds": 668.079,
+      "text": "be uh update user 123's post count to 54"
+    },
+    {
+      "startSeconds": 673.519,
+      "text": "where 54 was what it was before plus"
+    },
+    {
+      "startSeconds": 675.92,
+      "text": "one. Right? That way running it twice"
+    },
+    {
+      "startSeconds": 678.079,
+      "text": "the outcome is always still 54. Um, now"
+    },
+    {
+      "startSeconds": 681.6,
+      "text": "this at least once delivery with item"
+    },
+    {
+      "startSeconds": 683.92,
+      "text": "potent consumers. This is almost always"
+    },
+    {
+      "startSeconds": 686.399,
+      "text": "the right answer both in production and"
+    },
+    {
+      "startSeconds": 688.16,
+      "text": "in your interview. So if your"
+    },
+    {
+      "startSeconds": 689.279,
+      "text": "interviewer asks what you're going to"
+    },
+    {
+      "startSeconds": 690.24,
+      "text": "use, it's almost always the right answer"
+    },
+    {
+      "startSeconds": 691.839,
+      "text": "to say I'm going to have at least once"
+    },
+    {
+      "startSeconds": 693.76,
+      "text": "uh delivery guarantees and I'm going to"
+    },
+    {
+      "startSeconds": 695.92,
+      "text": "make sure that my consumers are item and"
+    },
+    {
+      "startSeconds": 697.6,
+      "text": "potent. The second delivery guarantee is"
+    },
+    {
+      "startSeconds": 699.44,
+      "text": "what's called at most once. And this is"
+    },
+    {
+      "startSeconds": 701.44,
+      "text": "basically just fire and forget. So a"
+    },
+    {
+      "startSeconds": 703.279,
+      "text": "consumer takes a message off of the"
+    },
+    {
+      "startSeconds": 704.48,
+      "text": "queue, we immediately delete it off the"
+    },
+    {
+      "startSeconds": 705.92,
+      "text": "queue at that moment. if something goes"
+    },
+    {
+      "startSeconds": 708,
+      "text": "wrong, you know, at most one guy"
+    },
+    {
+      "startSeconds": 710.24,
+      "text": "processed it. Uh, at worst, nobody"
+    },
+    {
+      "startSeconds": 712.8,
+      "text": "processed it. And so, you really only"
+    },
+    {
+      "startSeconds": 715.04,
+      "text": "want to use this for things like"
+    },
+    {
+      "startSeconds": 716.16,
+      "text": "analytics events or metrics where losing"
+    },
+    {
+      "startSeconds": 718.079,
+      "text": "a few data points is totally acceptable."
+    },
+    {
+      "startSeconds": 720.32,
+      "text": "You have to be able to accept the loss"
+    },
+    {
+      "startSeconds": 721.76,
+      "text": "if you use at most once. And then the"
+    },
+    {
+      "startSeconds": 724.24,
+      "text": "third one is the holy grail. It's"
+    },
+    {
+      "startSeconds": 726,
+      "text": "exactly once. Uh, this is that every"
+    },
+    {
+      "startSeconds": 728.399,
+      "text": "message is processed exactly one time as"
+    },
+    {
+      "startSeconds": 731.44,
+      "text": "it says, right? Uh the reality is that"
+    },
+    {
+      "startSeconds": 734.079,
+      "text": "true exactly once delivery is extremely"
+    },
+    {
+      "startSeconds": 737.12,
+      "text": "hard to achieve in distributed systems."
+    },
+    {
+      "startSeconds": 739.36,
+      "text": "CFKA supports a form of it for specific"
+    },
+    {
+      "startSeconds": 742.8,
+      "text": "patterns within its own ecosystem. But"
+    },
+    {
+      "startSeconds": 744.88,
+      "text": "it comes with real trade-offs and"
+    },
+    {
+      "startSeconds": 746.32,
+      "text": "limitations. And so my honest advice to"
+    },
+    {
+      "startSeconds": 749.36,
+      "text": "you is don't promise exactly once in"
+    },
+    {
+      "startSeconds": 751.76,
+      "text": "your interview unless you can explain"
+    },
+    {
+      "startSeconds": 753.12,
+      "text": "the mechanism and defend it. At least"
+    },
+    {
+      "startSeconds": 755.2,
+      "text": "once with those item potent consumers is"
+    },
+    {
+      "startSeconds": 756.8,
+      "text": "the safer and frankly the more practical"
+    },
+    {
+      "startSeconds": 758.399,
+      "text": "answer and what is almost always used in"
+    },
+    {
+      "startSeconds": 760.24,
+      "text": "production. Now that we understand a"
+    },
+    {
+      "startSeconds": 761.92,
+      "text": "little bit about how Q's work and what"
+    },
+    {
+      "startSeconds": 763.279,
+      "text": "goes on under the hood, the next"
+    },
+    {
+      "startSeconds": 764.959,
+      "text": "question is when should you actually"
+    },
+    {
+      "startSeconds": 766.72,
+      "text": "reach for one? Well, there's four"
+    },
+    {
+      "startSeconds": 768.56,
+      "text": "signals that you should end up looking"
+    },
+    {
+      "startSeconds": 770.639,
+      "text": "for that may lead you to introduce a"
+    },
+    {
+      "startSeconds": 772.56,
+      "text": "queue in your interview. And these are"
+    },
+    {
+      "startSeconds": 774.16,
+      "text": "very similar to the motivating example"
+    },
+    {
+      "startSeconds": 775.6,
+      "text": "that we started with. The first one is"
+    },
+    {
+      "startSeconds": 777.36,
+      "text": "that async work. And so this is when a"
+    },
+    {
+      "startSeconds": 779.6,
+      "text": "user doesn't need an immediate result"
+    },
+    {
+      "startSeconds": 781.36,
+      "text": "like sending an email, generating a"
+    },
+    {
+      "startSeconds": 783.12,
+      "text": "report, processing uploads, all those"
+    },
+    {
+      "startSeconds": 785.279,
+      "text": "things that we talked about. Um the"
+    },
+    {
+      "startSeconds": 787.519,
+      "text": "litmus test is really simple. Ask"
+    },
+    {
+      "startSeconds": 790.399,
+      "text": "yourself, does the user need the result"
+    },
+    {
+      "startSeconds": 792.56,
+      "text": "of this operation right now or can they"
+    },
+    {
+      "startSeconds": 794.56,
+      "text": "wait a little bit? If the answer is no,"
+    },
+    {
+      "startSeconds": 796.88,
+      "text": "then it's a great candidate to put it in"
+    },
+    {
+      "startSeconds": 798.48,
+      "text": "a queue and have a worker process it"
+    },
+    {
+      "startSeconds": 800.079,
+      "text": "asynchronously. The second is the bursty"
+    },
+    {
+      "startSeconds": 802.399,
+      "text": "traffic. Like we saw in our example, you"
+    },
+    {
+      "startSeconds": 804.079,
+      "text": "need to absorb spikes in traffic without"
+    },
+    {
+      "startSeconds": 806.56,
+      "text": "dropping any requests. And so the queue"
+    },
+    {
+      "startSeconds": 808.48,
+      "text": "is there to kind of smooth out the load"
+    },
+    {
+      "startSeconds": 810.56,
+      "text": "by acting as a buffer and just"
+    },
+    {
+      "startSeconds": 812.079,
+      "text": "accumulating a backlog of work that the"
+    },
+    {
+      "startSeconds": 814.16,
+      "text": "consumers can get to, you know, when"
+    },
+    {
+      "startSeconds": 815.76,
+      "text": "they have time or they have resources."
+    },
+    {
+      "startSeconds": 818.88,
+      "text": "Third is decoupling. This is your"
+    },
+    {
+      "startSeconds": 821.04,
+      "text": "producer and consumer might have"
+    },
+    {
+      "startSeconds": 822.56,
+      "text": "completely different scaling or hardware"
+    },
+    {
+      "startSeconds": 824.399,
+      "text": "needs. Going back to our image"
+    },
+    {
+      "startSeconds": 826.32,
+      "text": "processing example, the upload services"
+    },
+    {
+      "startSeconds": 828.079,
+      "text": "are super lightweight. They just accept"
+    },
+    {
+      "startSeconds": 829.92,
+      "text": "the file, drop it into a message queue,"
+    },
+    {
+      "startSeconds": 831.839,
+      "text": "but the workers doing the actual"
+    },
+    {
+      "startSeconds": 833.36,
+      "text": "processing might need GPUs or beefy"
+    },
+    {
+      "startSeconds": 836.16,
+      "text": "machines with lots of memory. And so"
+    },
+    {
+      "startSeconds": 837.92,
+      "text": "with a queue between them, you can scale"
+    },
+    {
+      "startSeconds": 840,
+      "text": "and provision each side independently."
+    },
+    {
+      "startSeconds": 842.079,
+      "text": "You're not forced to run expensive GPU"
+    },
+    {
+      "startSeconds": 844.48,
+      "text": "instances just to handle uploads. This"
+    },
+    {
+      "startSeconds": 847.279,
+      "text": "can make it more costefficient."
+    },
+    {
+      "startSeconds": 849.44,
+      "text": "And then the fourth one is reliability."
+    },
+    {
+      "startSeconds": 851.44,
+      "text": "When you just can't afford to lose work."
+    },
+    {
+      "startSeconds": 854.24,
+      "text": "So if a downstream service is"
+    },
+    {
+      "startSeconds": 855.68,
+      "text": "temporarily unavailable, the queue holds"
+    },
+    {
+      "startSeconds": 858,
+      "text": "on to that message until it comes back"
+    },
+    {
+      "startSeconds": 860,
+      "text": "online. And you make sure that you never"
+    },
+    {
+      "startSeconds": 861.839,
+      "text": "lost anything."
+    },
+    {
+      "startSeconds": 864.079,
+      "text": "One thing that I do want to call out"
+    },
+    {
+      "startSeconds": 865.36,
+      "text": "just really quickly because I see it in"
+    },
+    {
+      "startSeconds": 867.04,
+      "text": "quite a few interviews, especially with"
+    },
+    {
+      "startSeconds": 868.399,
+      "text": "junior and mid-level candidates, and"
+    },
+    {
+      "startSeconds": 870.16,
+      "text": "it's be careful introducing a queue into"
+    },
+    {
+      "startSeconds": 871.92,
+      "text": "a synchronous workload. It just doesn't"
+    },
+    {
+      "startSeconds": 873.6,
+      "text": "belong there. So, if you have strong"
+    },
+    {
+      "startSeconds": 875.36,
+      "text": "latency requirements in your"
+    },
+    {
+      "startSeconds": 876.639,
+      "text": "non-functional requirements, like sub"
+    },
+    {
+      "startSeconds": 878.56,
+      "text": "500 millisecond response times to get an"
+    },
+    {
+      "startSeconds": 880.639,
+      "text": "answer, by adding a queue, you've nearly"
+    },
+    {
+      "startSeconds": 883.199,
+      "text": "guaranteed that you're going to break"
+    },
+    {
+      "startSeconds": 884.399,
+      "text": "that constraint. Not only do you have a"
+    },
+    {
+      "startSeconds": 886.24,
+      "text": "bunch of complexity on figuring out how"
+    },
+    {
+      "startSeconds": 887.839,
+      "text": "to get that message back to the clients"
+    },
+    {
+      "startSeconds": 889.44,
+      "text": "in the first place, but you've broken"
+    },
+    {
+      "startSeconds": 891.519,
+      "text": "that latency constraint almost entirely"
+    },
+    {
+      "startSeconds": 893.519,
+      "text": "by the nature of the way that these"
+    },
+    {
+      "startSeconds": 894.72,
+      "text": "systems work. So again, cues are for"
+    },
+    {
+      "startSeconds": 896.72,
+      "text": "that work that you can afford to do"
+    },
+    {
+      "startSeconds": 898.079,
+      "text": "later, even if later is a few seconds"
+    },
+    {
+      "startSeconds": 900.639,
+      "text": "from now."
+    },
+    {
+      "startSeconds": 902.24,
+      "text": "Okay, now let's get into some of those"
+    },
+    {
+      "startSeconds": 903.6,
+      "text": "deep dives. This is everybody's favorite"
+    },
+    {
+      "startSeconds": 904.88,
+      "text": "part, right? The things that the"
+    },
+    {
+      "startSeconds": 906.24,
+      "text": "interviewers really love to dig into"
+    },
+    {
+      "startSeconds": 908.48,
+      "text": "once you introduce a queue into your"
+    },
+    {
+      "startSeconds": 910.079,
+      "text": "system. So, it's really important that"
+    },
+    {
+      "startSeconds": 911.6,
+      "text": "you're prepared for these questions,"
+    },
+    {
+      "startSeconds": 913.04,
+      "text": "right? You just drew a message queue on"
+    },
+    {
+      "startSeconds": 914.32,
+      "text": "the whiteboard. Here's what the"
+    },
+    {
+      "startSeconds": 915.68,
+      "text": "interviewer might come at you with."
+    },
+    {
+      "startSeconds": 917.04,
+      "text": "Okay, so the first one's about scaling."
+    },
+    {
+      "startSeconds": 919.519,
+      "text": "They might say, \"How does your queue"
+    },
+    {
+      "startSeconds": 921.12,
+      "text": "handle the increased throughput or"
+    },
+    {
+      "startSeconds": 923.279,
+      "text": "handle increasing throughput?\" And what"
+    },
+    {
+      "startSeconds": 926.16,
+      "text": "you need to recognize here is that a"
+    },
+    {
+      "startSeconds": 927.44,
+      "text": "single queue can only handle so much."
+    },
+    {
+      "startSeconds": 929.92,
+      "text": "When you need more, you do what's called"
+    },
+    {
+      "startSeconds": 931.92,
+      "text": "partition. And partitioning just means"
+    },
+    {
+      "startSeconds": 934.16,
+      "text": "splitting the queue into multiple"
+    },
+    {
+      "startSeconds": 935.839,
+      "text": "independent sequences or like kind of"
+    },
+    {
+      "startSeconds": 938,
+      "text": "sub cues of messages. Different workers"
+    },
+    {
+      "startSeconds": 941.12,
+      "text": "can then process different partitions in"
+    },
+    {
+      "startSeconds": 943.519,
+      "text": "parallel so that your throughput scales"
+    },
+    {
+      "startSeconds": 945.76,
+      "text": "horizontally with the number of"
+    },
+    {
+      "startSeconds": 947.68,
+      "text": "partitions. So by splitting into"
+    },
+    {
+      "startSeconds": 950.16,
+      "text": "multiple cues, I'm putting that in"
+    },
+    {
+      "startSeconds": 952.24,
+      "text": "quotes just because we're kind of uh"
+    },
+    {
+      "startSeconds": 953.6,
+      "text": "conflating terminology here, but"
+    },
+    {
+      "startSeconds": 955.279,
+      "text": "multiple partitions, thus multiple"
+    },
+    {
+      "startSeconds": 957.12,
+      "text": "logical cues, you can have multiple"
+    },
+    {
+      "startSeconds": 958.8,
+      "text": "consumers consuming from the same time"
+    },
+    {
+      "startSeconds": 960.639,
+      "text": "and thus increased the throughput. Um on"
+    },
+    {
+      "startSeconds": 963.839,
+      "text": "the consumer side, you have what are"
+    },
+    {
+      "startSeconds": 965.839,
+      "text": "called consumer groups. And a consumer"
+    },
+    {
+      "startSeconds": 968.399,
+      "text": "group is just a pool of workers that"
+    },
+    {
+      "startSeconds": 970.079,
+      "text": "divide those partitions amongst"
+    },
+    {
+      "startSeconds": 971.759,
+      "text": "themselves. So if you have six"
+    },
+    {
+      "startSeconds": 973.519,
+      "text": "partitions and three consumers in a"
+    },
+    {
+      "startSeconds": 975.839,
+      "text": "group then each consumer can handle two"
+    },
+    {
+      "startSeconds": 978.32,
+      "text": "partitions. You need to go faster. Well"
+    },
+    {
+      "startSeconds": 980.639,
+      "text": "then you can add more consumers. Now the"
+    },
+    {
+      "startSeconds": 982.959,
+      "text": "um importantly there is a ceiling here."
+    },
+    {
+      "startSeconds": 985.279,
+      "text": "You can't have more consumers than you"
+    },
+    {
+      "startSeconds": 987.04,
+      "text": "have partitions. If you have six"
+    },
+    {
+      "startSeconds": 988.8,
+      "text": "partitions and six consumers adding a"
+    },
+    {
+      "startSeconds": 991.04,
+      "text": "seventh doesn't help you here because"
+    },
+    {
+      "startSeconds": 992.8,
+      "text": "there's no partition left for that new"
+    },
+    {
+      "startSeconds": 994.639,
+      "text": "consumer to consume from. And hopefully"
+    },
+    {
+      "startSeconds": 997.199,
+      "text": "that makes sense."
+    },
+    {
+      "startSeconds": 999.199,
+      "text": "Now, really importantly, the partition"
+    },
+    {
+      "startSeconds": 1000.959,
+      "text": "key, which is how you decide which"
+    },
+    {
+      "startSeconds": 1003.04,
+      "text": "message goes into which of these"
+    },
+    {
+      "startSeconds": 1004.959,
+      "text": "partitions, is really, really important."
+    },
+    {
+      "startSeconds": 1007.04,
+      "text": "It's analogous to choosing a shard key"
+    },
+    {
+      "startSeconds": 1008.8,
+      "text": "or partition key in a database. And it"
+    },
+    {
+      "startSeconds": 1011.04,
+      "text": "matters for two main reasons. The first"
+    },
+    {
+      "startSeconds": 1013.199,
+      "text": "is ordering. Messages with the same"
+    },
+    {
+      "startSeconds": 1016,
+      "text": "partition key always go to the same"
+    },
+    {
+      "startSeconds": 1018.16,
+      "text": "partition. And within a partition,"
+    },
+    {
+      "startSeconds": 1020.88,
+      "text": "ordering is guaranteed because they're"
+    },
+    {
+      "startSeconds": 1022.72,
+      "text": "sitting in that same subq. So imagine"
+    },
+    {
+      "startSeconds": 1025.439,
+      "text": "again that you're you're processing that"
+    },
+    {
+      "startSeconds": 1027.199,
+      "text": "bank transaction example we brought up."
+    },
+    {
+      "startSeconds": 1029.439,
+      "text": "A user maybe deposits $100 and then"
+    },
+    {
+      "startSeconds": 1032.48,
+      "text": "withdraws $50. Clearly they should be"
+    },
+    {
+      "startSeconds": 1034.4,
+      "text": "able to do this. They put $100 into the"
+    },
+    {
+      "startSeconds": 1036,
+      "text": "bank. Now they want to take 50 out. If"
+    },
+    {
+      "startSeconds": 1038.48,
+      "text": "those two messages though ended up on"
+    },
+    {
+      "startSeconds": 1040.72,
+      "text": "different partitions,"
+    },
+    {
+      "startSeconds": 1042.64,
+      "text": "then the withdrawal could get processed"
+    },
+    {
+      "startSeconds": 1044.959,
+      "text": "first and now it's rejected because at"
+    },
+    {
+      "startSeconds": 1047.52,
+      "text": "that moment maybe the account is empty,"
+    },
+    {
+      "startSeconds": 1049.76,
+      "text": "right? And so by using account ID as the"
+    },
+    {
+      "startSeconds": 1052.799,
+      "text": "partition key now both that both of"
+    },
+    {
+      "startSeconds": 1055.2,
+      "text": "those messages will land on the same"
+    },
+    {
+      "startSeconds": 1056.64,
+      "text": "partition because they're pertain to the"
+    },
+    {
+      "startSeconds": 1058.4,
+      "text": "same account. They'll be in the right"
+    },
+    {
+      "startSeconds": 1059.919,
+      "text": "order and they'll get processed in that"
+    },
+    {
+      "startSeconds": 1061.52,
+      "text": "right order where we add the 100 before"
+    },
+    {
+      "startSeconds": 1063.28,
+      "text": "we take away the 50. Right? And then the"
+    },
+    {
+      "startSeconds": 1066.72,
+      "text": "second one that's important about"
+    },
+    {
+      "startSeconds": 1067.76,
+      "text": "choosing your partition key is the even"
+    },
+    {
+      "startSeconds": 1070.24,
+      "text": "distribution. You want your partition"
+    },
+    {
+      "startSeconds": 1072.48,
+      "text": "keys to spread work ac across these"
+    },
+    {
+      "startSeconds": 1074.799,
+      "text": "partitions pretty evenly. You can"
+    },
+    {
+      "startSeconds": 1076.88,
+      "text": "imagine that if you're building like a"
+    },
+    {
+      "startSeconds": 1078.4,
+      "text": "ride sharing application and your"
+    },
+    {
+      "startSeconds": 1080.48,
+      "text": "partition by city then now New York City"
+    },
+    {
+      "startSeconds": 1083.52,
+      "text": "is going to be excuse me New York City"
+    },
+    {
+      "startSeconds": 1085.76,
+      "text": "is going to be absolutely slammed while"
+    },
+    {
+      "startSeconds": 1087.76,
+      "text": "Boise sits there maybe getting nothing"
+    },
+    {
+      "startSeconds": 1090.24,
+      "text": "right and so that's what we call of"
+    },
+    {
+      "startSeconds": 1092.64,
+      "text": "course a hot partition and you'd"
+    },
+    {
+      "startSeconds": 1094.799,
+      "text": "probably want to partition by something"
+    },
+    {
+      "startSeconds": 1096.24,
+      "text": "more evenly distributed like a right ID"
+    },
+    {
+      "startSeconds": 1098.559,
+      "text": "so that you don't have that hot"
+    },
+    {
+      "startSeconds": 1100.24,
+      "text": "partition where you have one consumer"
+    },
+    {
+      "startSeconds": 1101.52,
+      "text": "doing all the work where another"
+    },
+    {
+      "startSeconds": 1102.559,
+      "text": "consumer is just sitting there waiting"
+    },
+    {
+      "startSeconds": 1104.4,
+      "text": "because it's just watching Boise and"
+    },
+    {
+      "startSeconds": 1105.76,
+      "text": "there's nearly as many Uber rats, right?"
+    },
+    {
+      "startSeconds": 1108.4,
+      "text": "Um, there's of course a real trade-off"
+    },
+    {
+      "startSeconds": 1110.16,
+      "text": "here, though, and it's one that you"
+    },
+    {
+      "startSeconds": 1111.2,
+      "text": "might discuss in your interview, and"
+    },
+    {
+      "startSeconds": 1112.96,
+      "text": "it's that the key that gives you"
+    },
+    {
+      "startSeconds": 1114.64,
+      "text": "ordering might not always be the key"
+    },
+    {
+      "startSeconds": 1117.2,
+      "text": "that gives you the best distribution."
+    },
+    {
+      "startSeconds": 1119.2,
+      "text": "And so, choosing the right partition key"
+    },
+    {
+      "startSeconds": 1120.96,
+      "text": "here is one of those decisions that's"
+    },
+    {
+      "startSeconds": 1122.32,
+      "text": "worth really spending some time in your"
+    },
+    {
+      "startSeconds": 1123.919,
+      "text": "interview thinking through the"
+    },
+    {
+      "startSeconds": 1125.28,
+      "text": "consequences on those two factors,"
+    },
+    {
+      "startSeconds": 1127.28,
+      "text": "ordering and distribution."
+    },
+    {
+      "startSeconds": 1130.32,
+      "text": "The the next deep dive that interviewers"
+    },
+    {
+      "startSeconds": 1131.84,
+      "text": "love to ask is what happens if your"
+    },
+    {
+      "startSeconds": 1134,
+      "text": "producers outpace your consumers. So if"
+    },
+    {
+      "startSeconds": 1136.559,
+      "text": "your producers are creating messages"
+    },
+    {
+      "startSeconds": 1138.16,
+      "text": "faster than your consumers can process"
+    },
+    {
+      "startSeconds": 1139.76,
+      "text": "them, the crew the the the queue just"
+    },
+    {
+      "startSeconds": 1142.16,
+      "text": "grows and grows and grows and grows and"
+    },
+    {
+      "startSeconds": 1143.6,
+      "text": "grows, right? And the queue doesn't"
+    },
+    {
+      "startSeconds": 1146.559,
+      "text": "solve a capacity problem. It just delays"
+    },
+    {
+      "startSeconds": 1149.12,
+      "text": "it. It's just buying you time. If you"
+    },
+    {
+      "startSeconds": 1151.12,
+      "text": "receive 300 messages per second, but"
+    },
+    {
+      "startSeconds": 1153.2,
+      "text": "your consumers can only handle 200, that"
+    },
+    {
+      "startSeconds": 1156.16,
+      "text": "queue is growing at a 100 messages every"
+    },
+    {
+      "startSeconds": 1158.24,
+      "text": "single second and you'll never be able"
+    },
+    {
+      "startSeconds": 1160.16,
+      "text": "to catch up. Eventually, you'll run out"
+    },
+    {
+      "startSeconds": 1162.08,
+      "text": "of memory on that queue and things are"
+    },
+    {
+      "startSeconds": 1163.84,
+      "text": "going to go wrong. So, what do you do or"
+    },
+    {
+      "startSeconds": 1166.08,
+      "text": "what can you do? There's a couple"
+    },
+    {
+      "startSeconds": 1167.679,
+      "text": "things. The first of course is scaling."
+    },
+    {
+      "startSeconds": 1169.44,
+      "text": "You can you can add autoscaling and a"
+    },
+    {
+      "startSeconds": 1171.28,
+      "text": "lot of the uh cloud providers provide"
+    },
+    {
+      "startSeconds": 1173.52,
+      "text": "autoscaling where you monitor the queue"
+    },
+    {
+      "startSeconds": 1175.52,
+      "text": "depth and when it starts to grow too"
+    },
+    {
+      "startSeconds": 1177.2,
+      "text": "much you spin up more consumers so that"
+    },
+    {
+      "startSeconds": 1179.52,
+      "text": "you can consume quicker or you can even"
+    },
+    {
+      "startSeconds": 1181.52,
+      "text": "add additional partitions to the queue."
+    },
+    {
+      "startSeconds": 1184.4,
+      "text": "But the second one and the one that"
+    },
+    {
+      "startSeconds": 1185.6,
+      "text": "interviewers are oftent times looking"
+    },
+    {
+      "startSeconds": 1187.28,
+      "text": "for is to apply what's called back"
+    },
+    {
+      "startSeconds": 1189.6,
+      "text": "pressure to the producers themselves."
+    },
+    {
+      "startSeconds": 1192,
+      "text": "And so slow the producers down."
+    },
+    {
+      "startSeconds": 1194.16,
+      "text": "Basically start either rejecting"
+    },
+    {
+      "startSeconds": 1195.679,
+      "text": "messages or maybe returning an error to"
+    },
+    {
+      "startSeconds": 1197.44,
+      "text": "the client saying, \"Hey, we're a little"
+    },
+    {
+      "startSeconds": 1198.96,
+      "text": "overloaded right now. Please try again"
+    },
+    {
+      "startSeconds": 1201.12,
+      "text": "in a minute.\" And then the third and"
+    },
+    {
+      "startSeconds": 1203.12,
+      "text": "maybe the bare minimum is that you"
+    },
+    {
+      "startSeconds": 1204.72,
+      "text": "should just be setting alerts of course"
+    },
+    {
+      "startSeconds": 1205.919,
+      "text": "on your QEP so that you know when"
+    },
+    {
+      "startSeconds": 1207.52,
+      "text": "something like this is happening. It's"
+    },
+    {
+      "startSeconds": 1208.799,
+      "text": "good to have the monitoring and the"
+    },
+    {
+      "startSeconds": 1210,
+      "text": "alerting here. Um"
+    },
+    {
+      "startSeconds": 1212.799,
+      "text": "be ready be ready to discuss this one."
+    },
+    {
+      "startSeconds": 1214.72,
+      "text": "Interviewers want to know that you"
+    },
+    {
+      "startSeconds": 1216.32,
+      "text": "understand that a Q isn't just magic,"
+    },
+    {
+      "startSeconds": 1218.48,
+      "text": "right? It's a buffer, not a solution to"
+    },
+    {
+      "startSeconds": 1220.799,
+      "text": "insufficient capacity."
+    },
+    {
+      "startSeconds": 1223.44,
+      "text": "Moving on. Uh, sometimes a message just"
+    },
+    {
+      "startSeconds": 1226.4,
+      "text": "fails to process. And so your"
+    },
+    {
+      "startSeconds": 1228,
+      "text": "interviewer might ask you, what happens"
+    },
+    {
+      "startSeconds": 1229.36,
+      "text": "when a message fails to process? Maybe"
+    },
+    {
+      "startSeconds": 1231.36,
+      "text": "the image file is corrupted or the"
+    },
+    {
+      "startSeconds": 1233.6,
+      "text": "downstream service is temporarily"
+    },
+    {
+      "startSeconds": 1235.28,
+      "text": "unavailable. That's fine. It happens,"
+    },
+    {
+      "startSeconds": 1238,
+      "text": "right? So, think about our photo upload"
+    },
+    {
+      "startSeconds": 1239.6,
+      "text": "example. What if I just uploaded a"
+    },
+    {
+      "startSeconds": 1240.88,
+      "text": "corrupted photo? It will never succeed."
+    },
+    {
+      "startSeconds": 1243.52,
+      "text": "No matter how many times you try, it"
+    },
+    {
+      "startSeconds": 1245.679,
+      "text": "will continue to fail. And this is a"
+    },
+    {
+      "startSeconds": 1248,
+      "text": "really common problem and it's what's"
+    },
+    {
+      "startSeconds": 1249.28,
+      "text": "called with message cues a poisoned"
+    },
+    {
+      "startSeconds": 1251.2,
+      "text": "message. Sounds maybe scarier than it"
+    },
+    {
+      "startSeconds": 1253.12,
+      "text": "is, but it's just a malformed or"
+    },
+    {
+      "startSeconds": 1254.799,
+      "text": "problematic message that crashes the"
+    },
+    {
+      "startSeconds": 1256.72,
+      "text": "consumer every single time and there's"
+    },
+    {
+      "startSeconds": 1258.08,
+      "text": "no recovering from it. So without guard"
+    },
+    {
+      "startSeconds": 1260.559,
+      "text": "rails, it's going to retry forever. And"
+    },
+    {
+      "startSeconds": 1263.28,
+      "text": "meanwhile, everyone else is just stuck"
+    },
+    {
+      "startSeconds": 1265.039,
+      "text": "behind it waiting. It's just consuming"
+    },
+    {
+      "startSeconds": 1267.2,
+      "text": "all the resources of the given consumer"
+    },
+    {
+      "startSeconds": 1269.6,
+      "text": "indefinitely."
+    },
+    {
+      "startSeconds": 1271.44,
+      "text": "To solve this, most queuing systems,"
+    },
+    {
+      "startSeconds": 1272.96,
+      "text": "they let you configure a max retry"
+    },
+    {
+      "startSeconds": 1274.799,
+      "text": "count. The message gets tried, tried,"
+    },
+    {
+      "startSeconds": 1277.6,
+      "text": "tried again, maybe five, six times. And"
+    },
+    {
+      "startSeconds": 1279.84,
+      "text": "if it still hasn't succeeded after five"
+    },
+    {
+      "startSeconds": 1281.76,
+      "text": "tries, instead of retrying forever, you"
+    },
+    {
+      "startSeconds": 1284.72,
+      "text": "shunt it and you put it to a dead letter"
+    },
+    {
+      "startSeconds": 1286.799,
+      "text": "Q or a DLQ. And a DLQ is just a separate"
+    },
+    {
+      "startSeconds": 1290.32,
+      "text": "Q or sometimes even just a separate"
+    },
+    {
+      "startSeconds": 1291.84,
+      "text": "partition where failed messages go so"
+    },
+    {
+      "startSeconds": 1294.32,
+      "text": "that somebody can inspect them later and"
+    },
+    {
+      "startSeconds": 1295.919,
+      "text": "figure out what went wrong. Meanwhile,"
+    },
+    {
+      "startSeconds": 1297.76,
+      "text": "the main queue keeps moving. So if this"
+    },
+    {
+      "startSeconds": 1300.32,
+      "text": "is failing, don't put it back into the"
+    },
+    {
+      "startSeconds": 1301.84,
+      "text": "main queue. put it somewhere else where"
+    },
+    {
+      "startSeconds": 1303.36,
+      "text": "we can just wait and maybe an admin"
+    },
+    {
+      "startSeconds": 1304.799,
+      "text": "comes in later to see what's going on"
+    },
+    {
+      "startSeconds": 1306.24,
+      "text": "there and try to fix those, right? Or"
+    },
+    {
+      "startSeconds": 1307.6,
+      "text": "nowadays an AI model. Um, mentioning"
+    },
+    {
+      "startSeconds": 1310.24,
+      "text": "this proactively in your interview is"
+    },
+    {
+      "startSeconds": 1311.919,
+      "text": "great. It shows that you have a bunch of"
+    },
+    {
+      "startSeconds": 1313.12,
+      "text": "seniority. It shows that, hey, I'm going"
+    },
+    {
+      "startSeconds": 1314.4,
+      "text": "to have a limit on retries. I'm going to"
+    },
+    {
+      "startSeconds": 1315.679,
+      "text": "add a dead letter Q here. Um, this shows"
+    },
+    {
+      "startSeconds": 1318,
+      "text": "that you can understand those those"
+    },
+    {
+      "startSeconds": 1319.28,
+      "text": "failure scenarios."
+    },
+    {
+      "startSeconds": 1321.28,
+      "text": "Now, speaking about failure scenarios,"
+    },
+    {
+      "startSeconds": 1322.72,
+      "text": "what about the ultimate failure"
+    },
+    {
+      "startSeconds": 1323.679,
+      "text": "scenario? What happens if the Q goes"
+    },
+    {
+      "startSeconds": 1325.76,
+      "text": "down? Um, and this is a question about"
+    },
+    {
+      "startSeconds": 1328.32,
+      "text": "durability and fault tolerance,"
+    },
+    {
+      "startSeconds": 1329.919,
+      "text": "especially if that was in your"
+    },
+    {
+      "startSeconds": 1330.72,
+      "text": "non-functional requirements. It's"
+    },
+    {
+      "startSeconds": 1332,
+      "text": "something that you're going to want to"
+    },
+    {
+      "startSeconds": 1332.799,
+      "text": "talk about. And it's good to know that"
+    },
+    {
+      "startSeconds": 1334.64,
+      "text": "modern message cues, at least some of"
+    },
+    {
+      "startSeconds": 1336.559,
+      "text": "them like CFKA, they persist messages to"
+    },
+    {
+      "startSeconds": 1338.96,
+      "text": "disk and they can replicate them across"
+    },
+    {
+      "startSeconds": 1341.679,
+      "text": "multiple brokers. It's what it's called"
+    },
+    {
+      "startSeconds": 1343.2,
+      "text": "in the CFKA ecosystem, but these are"
+    },
+    {
+      "startSeconds": 1344.88,
+      "text": "just different servers. So if one broker"
+    },
+    {
+      "startSeconds": 1347.12,
+      "text": "goes down, another replica has that data"
+    },
+    {
+      "startSeconds": 1349.52,
+      "text": "just like with read replicas with"
+    },
+    {
+      "startSeconds": 1350.88,
+      "text": "databases. Same concept. So in this way,"
+    },
+    {
+      "startSeconds": 1352.96,
+      "text": "no messages are lost. Uh, CFKA in"
+    },
+    {
+      "startSeconds": 1355.44,
+      "text": "particular is interesting here because"
+    },
+    {
+      "startSeconds": 1357.2,
+      "text": "it stores messages on disks with a"
+    },
+    {
+      "startSeconds": 1359.76,
+      "text": "configurable retention window. So you"
+    },
+    {
+      "startSeconds": 1361.919,
+      "text": "could keep messages around for say a"
+    },
+    {
+      "startSeconds": 1363.28,
+      "text": "day, a week, even forever if you wanted"
+    },
+    {
+      "startSeconds": 1365.44,
+      "text": "to and you had the capacity. And what"
+    },
+    {
+      "startSeconds": 1367.679,
+      "text": "this means is that you actually can"
+    },
+    {
+      "startSeconds": 1369.679,
+      "text": "replay messages from the past too, which"
+    },
+    {
+      "startSeconds": 1372.08,
+      "text": "is a really powerful recovery scenario."
+    },
+    {
+      "startSeconds": 1374.48,
+      "text": "Uh, if you need to reprocess data after"
+    },
+    {
+      "startSeconds": 1377.2,
+      "text": "kind of something went down, you have a"
+    },
+    {
+      "startSeconds": 1378.48,
+      "text": "new new version of a consumer. And so"
+    },
+    {
+      "startSeconds": 1380.24,
+      "text": "you can imagine that your consumers go"
+    },
+    {
+      "startSeconds": 1381.679,
+      "text": "down for a while, they're offline for an"
+    },
+    {
+      "startSeconds": 1383.2,
+      "text": "hour, your queue, your CFKA queue is"
+    },
+    {
+      "startSeconds": 1384.96,
+      "text": "just backing up. No big deal. Because"
+    },
+    {
+      "startSeconds": 1386.72,
+      "text": "when your consumer comes back on, it can"
+    },
+    {
+      "startSeconds": 1388.72,
+      "text": "start to just take all of those things"
+    },
+    {
+      "startSeconds": 1390,
+      "text": "again. Even more so, if that consumer"
+    },
+    {
+      "startSeconds": 1392.24,
+      "text": "was broken and it processed things"
+    },
+    {
+      "startSeconds": 1394.159,
+      "text": "incorrectly, well, we can just put a new"
+    },
+    {
+      "startSeconds": 1396.32,
+      "text": "consumer in, tell that consumer, hey,"
+    },
+    {
+      "startSeconds": 1398.4,
+      "text": "reprocess back from an hour ago, even"
+    },
+    {
+      "startSeconds": 1400.72,
+      "text": "though the messages were consumed. Um,"
+    },
+    {
+      "startSeconds": 1402.799,
+      "text": "and we can kind of fix what we broke."
+    },
+    {
+      "startSeconds": 1406.96,
+      "text": "Speaking of CFKA, let's maybe quickly go"
+    },
+    {
+      "startSeconds": 1408.799,
+      "text": "through what are the most common message"
+    },
+    {
+      "startSeconds": 1410.799,
+      "text": "Q technologies. You certainly don't need"
+    },
+    {
+      "startSeconds": 1412.559,
+      "text": "to know all of these for your interview."
+    },
+    {
+      "startSeconds": 1414.08,
+      "text": "Um, but you should have at least one"
+    },
+    {
+      "startSeconds": 1415.2,
+      "text": "that you're comfortable talking about."
+    },
+    {
+      "startSeconds": 1416.96,
+      "text": "If you don't have a default already,"
+    },
+    {
+      "startSeconds": 1418.64,
+      "text": "choose CFKA. It's kind of like the"
+    },
+    {
+      "startSeconds": 1420.72,
+      "text": "interviewing industry standard. Um, but"
+    },
+    {
+      "startSeconds": 1424.48,
+      "text": "let me walk you through a couple of"
+    },
+    {
+      "startSeconds": 1425.6,
+      "text": "them. Of course, starting with CFKA."
+    },
+    {
+      "startSeconds": 1427.36,
+      "text": "CFKA is probably the most widely used"
+    },
+    {
+      "startSeconds": 1429.12,
+      "text": "and it's the one that I said I'd"
+    },
+    {
+      "startSeconds": 1430.48,
+      "text": "recommend. Um, it's a distributed"
+    },
+    {
+      "startSeconds": 1432.799,
+      "text": "streaming platform that can act as both"
+    },
+    {
+      "startSeconds": 1434.32,
+      "text": "a message cue and a stream processing"
+    },
+    {
+      "startSeconds": 1436.24,
+      "text": "system. So, it's built for really high"
+    },
+    {
+      "startSeconds": 1438.4,
+      "text": "throughput. It's durable because of what"
+    },
+    {
+      "startSeconds": 1440.4,
+      "text": "we talked about. It writes messages to"
+    },
+    {
+      "startSeconds": 1442,
+      "text": "disks. And then it scales via"
+    },
+    {
+      "startSeconds": 1444.08,
+      "text": "partitions. Right? When we're talking"
+    },
+    {
+      "startSeconds": 1445.44,
+      "text": "about partitions, that's how CFKA works."
+    },
+    {
+      "startSeconds": 1447.36,
+      "text": "It also supports those consumer groups."
+    },
+    {
+      "startSeconds": 1449.919,
+      "text": "But one thing that makes CFKA a little"
+    },
+    {
+      "startSeconds": 1451.36,
+      "text": "different from a traditional queue is"
+    },
+    {
+      "startSeconds": 1453.6,
+      "text": "that messages aren't removed directly"
+    },
+    {
+      "startSeconds": 1455.76,
+      "text": "after they're consumed. So this was that"
+    },
+    {
+      "startSeconds": 1457.84,
+      "text": "example where you want to replay"
+    },
+    {
+      "startSeconds": 1459.12,
+      "text": "messages in case something some code in"
+    },
+    {
+      "startSeconds": 1461.44,
+      "text": "the consumer changed, right? In CFKA,"
+    },
+    {
+      "startSeconds": 1463.679,
+      "text": "they stick around for those retention"
+    },
+    {
+      "startSeconds": 1464.88,
+      "text": "periods. So multiple consumer groups can"
+    },
+    {
+      "startSeconds": 1467.44,
+      "text": "read from the same data independently"
+    },
+    {
+      "startSeconds": 1469.52,
+      "text": "and you can replay messages if you need"
+    },
+    {
+      "startSeconds": 1471.12,
+      "text": "to. Like I said, um"
+    },
+    {
+      "startSeconds": 1474.08,
+      "text": "the second one I'm going to call out,"
+    },
+    {
+      "startSeconds": 1475.279,
+      "text": "and we have this in our written"
+    },
+    {
+      "startSeconds": 1476.48,
+      "text": "breakdowns quite a few times, is SQS."
+    },
+    {
+      "startSeconds": 1478.64,
+      "text": "This is Amazon simple Q service. It's"
+    },
+    {
+      "startSeconds": 1481.44,
+      "text": "the AWS hosted ecosystem version of a"
+    },
+    {
+      "startSeconds": 1484.4,
+      "text": "message Q. Um it's simple, it's fully"
+    },
+    {
+      "startSeconds": 1487.039,
+      "text": "managed, there's no infrastructure you"
+    },
+    {
+      "startSeconds": 1488.64,
+      "text": "need to worry about. It comes basically"
+    },
+    {
+      "startSeconds": 1490.32,
+      "text": "in two flavors. A standard Q which gives"
+    },
+    {
+      "startSeconds": 1492.159,
+      "text": "you the best effort ordering and really"
+    },
+    {
+      "startSeconds": 1494.4,
+      "text": "high throughput or FIFO cues which give"
+    },
+    {
+      "startSeconds": 1496.72,
+      "text": "you strict ordering but at a lower"
+    },
+    {
+      "startSeconds": 1498.32,
+      "text": "throughput. So SQS is a great choice"
+    },
+    {
+      "startSeconds": 1500.48,
+      "text": "when you want something really"
+    },
+    {
+      "startSeconds": 1501.36,
+      "text": "straightforward, you don't need more"
+    },
+    {
+      "startSeconds": 1502.88,
+      "text": "advanced features and your interviewer"
+    },
+    {
+      "startSeconds": 1504.08,
+      "text": "is cool with you pulling uh hosted"
+    },
+    {
+      "startSeconds": 1506.08,
+      "text": "solutions from cloud providers."
+    },
+    {
+      "startSeconds": 1509.12,
+      "text": "The last one that that I'll mention is"
+    },
+    {
+      "startSeconds": 1510.96,
+      "text": "Rabbit MQ. And RabbitMQ is a more"
+    },
+    {
+      "startSeconds": 1513.76,
+      "text": "traditional message broker and it"
+    },
+    {
+      "startSeconds": 1515.2,
+      "text": "supports complex routing patterns"
+    },
+    {
+      "startSeconds": 1517.12,
+      "text": "through what it calls exchanges and"
+    },
+    {
+      "startSeconds": 1518.72,
+      "text": "bindings. Obviously, I'm not going to"
+    },
+    {
+      "startSeconds": 1520,
+      "text": "have time to get into that here, but"
+    },
+    {
+      "startSeconds": 1521.36,
+      "text": "it's all the same underlying con uh"
+    },
+    {
+      "startSeconds": 1522.96,
+      "text": "concepts. It's maybe less common in"
+    },
+    {
+      "startSeconds": 1525.279,
+      "text": "system design interviews if I'm going to"
+    },
+    {
+      "startSeconds": 1526.559,
+      "text": "be honest with you. I hear it less, but"
+    },
+    {
+      "startSeconds": 1528.559,
+      "text": "it might be worth knowing that it exists"
+    },
+    {
+      "startSeconds": 1530.88,
+      "text": "uh especially in cases where you need"
+    },
+    {
+      "startSeconds": 1532.32,
+      "text": "some sophisticated message routing"
+    },
+    {
+      "startSeconds": 1534.72,
+      "text": "logic. So, to wrap things up in this"
+    },
+    {
+      "startSeconds": 1536.64,
+      "text": "section, if you don't already have a"
+    },
+    {
+      "startSeconds": 1537.84,
+      "text": "go-to, pick CFKA. It's the most"
+    },
+    {
+      "startSeconds": 1539.52,
+      "text": "versatile. If you want just hyper"
+    },
+    {
+      "startSeconds": 1541.12,
+      "text": "simplicity in the AWS ecosystems around,"
+    },
+    {
+      "startSeconds": 1543.279,
+      "text": "SQS is great. It has that visibility"
+    },
+    {
+      "startSeconds": 1545.44,
+      "text": "timeout thing that we had mentioned"
+    },
+    {
+      "startSeconds": 1546.799,
+      "text": "earlier. Uh it has the option for"
+    },
+    {
+      "startSeconds": 1548.48,
+      "text": "ordering guarantees or looser guarantees"
+    },
+    {
+      "startSeconds": 1550.48,
+      "text": "but higher latency."
+    },
+    {
+      "startSeconds": 1552.72,
+      "text": "All right, there you have it folks. Um"
+    },
+    {
+      "startSeconds": 1555.12,
+      "text": "hopefully you found this useful. Just a"
+    },
+    {
+      "startSeconds": 1556.64,
+      "text": "really quick recap. Message cues"
+    },
+    {
+      "startSeconds": 1558.559,
+      "text": "decouple your producers from your"
+    },
+    {
+      "startSeconds": 1560.08,
+      "text": "consumer. They buffer bursty traffic so"
+    },
+    {
+      "startSeconds": 1562.64,
+      "text": "nothing gets dropped. They distribute"
+    },
+    {
+      "startSeconds": 1564.799,
+      "text": "work across pools of workers. Um, you"
+    },
+    {
+      "startSeconds": 1567.84,
+      "text": "should know when to use them, know the"
+    },
+    {
+      "startSeconds": 1569.36,
+      "text": "pitfalls, be specific and detailed when"
+    },
+    {
+      "startSeconds": 1572.08,
+      "text": "you bring things up. Um, any questions,"
+    },
+    {
+      "startSeconds": 1574.72,
+      "text": "anything that you think I got wrong, go"
+    },
+    {
+      "startSeconds": 1576.32,
+      "text": "ahead and please drop those in the"
+    },
+    {
+      "startSeconds": 1577.52,
+      "text": "comments. I respond to as many of those"
+    },
+    {
+      "startSeconds": 1579.2,
+      "text": "as I can. Uh, you'll have the Excal"
+    },
+    {
+      "startSeconds": 1581.52,
+      "text": "drawings that I use in this video down"
+    },
+    {
+      "startSeconds": 1582.88,
+      "text": "in the description as well. So, go ahead"
+    },
+    {
+      "startSeconds": 1584.32,
+      "text": "and check that out. You'll also have my"
+    },
+    {
+      "startSeconds": 1585.84,
+      "text": "LinkedIn. Connect with me, send me a"
+    },
+    {
+      "startSeconds": 1587.84,
+      "text": "message. Again, I respond to as many of"
+    },
+    {
+      "startSeconds": 1589.44,
+      "text": "those as I can get to as well. I love"
+    },
+    {
+      "startSeconds": 1590.96,
+      "text": "hearing from you all, especially if you"
+    },
+    {
+      "startSeconds": 1593.2,
+      "text": "have a success story to share from your"
+    },
+    {
+      "startSeconds": 1595.039,
+      "text": "interviews. I'd love to celebrate with"
+    },
+    {
+      "startSeconds": 1596.799,
+      "text": "you. Uh most importantly, good luck with"
+    },
+    {
+      "startSeconds": 1599.12,
+      "text": "the upcoming interviews. You guys are"
+    },
+    {
+      "startSeconds": 1600.32,
+      "text": "going to do great. You're going to nail"
+    },
+    {
+      "startSeconds": 1601.36,
+      "text": "it. You're putting in the work. Uh and"
+    },
+    {
+      "startSeconds": 1603.52,
+      "text": "I'll see you soon."
+    }
+  ]
+}

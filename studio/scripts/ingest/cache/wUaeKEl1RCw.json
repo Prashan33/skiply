@@ -1,0 +1,2134 @@
+{
+  "id": "wUaeKEl1RCw",
+  "url": "https://www.youtube.com/watch?v=wUaeKEl1RCw",
+  "fetchedAt": "2026-09-01T04:09:57.596Z",
+  "captionKind": "asr",
+  "chapters": [
+    {
+      "startSeconds": 0,
+      "label": "Introduction"
+    },
+    {
+      "startSeconds": 64,
+      "label": "Top 10 Web Application Security Risks"
+    },
+    {
+      "startSeconds": 111,
+      "label": "Injection"
+    },
+    {
+      "startSeconds": 244,
+      "label": "User"
+    },
+    {
+      "startSeconds": 375,
+      "label": "Sensitive Data"
+    },
+    {
+      "startSeconds": 442,
+      "label": "XML External Entities"
+    },
+    {
+      "startSeconds": 520,
+      "label": "Broken Access Control"
+    },
+    {
+      "startSeconds": 558,
+      "label": "Roles"
+    },
+    {
+      "startSeconds": 589,
+      "label": "Configuration"
+    },
+    {
+      "startSeconds": 632,
+      "label": "Crosssite scripting"
+    },
+    {
+      "startSeconds": 704,
+      "label": "Insecured digitalization"
+    },
+    {
+      "startSeconds": 802,
+      "label": "Using components with known vulnerabilities"
+    },
+    {
+      "startSeconds": 844,
+      "label": "Insufficient logging and auditing"
+    }
+  ],
+  "cues": [
+    {
+      "startSeconds": 0.08,
+      "text": "welcome back aliens my name is davin"
+    },
+    {
+      "startSeconds": 1.68,
+      "text": "reddy in the last video we have talked"
+    },
+    {
+      "startSeconds": 3.52,
+      "text": "about secure code right and then we"
+    },
+    {
+      "startSeconds": 5.359,
+      "text": "understood whenever you"
+    },
+    {
+      "startSeconds": 6.56,
+      "text": "can make an application don't just focus"
+    },
+    {
+      "startSeconds": 8.16,
+      "text": "on the performance don't just focus on"
+    },
+    {
+      "startSeconds": 9.679,
+      "text": "the stability of the application but"
+    },
+    {
+      "startSeconds": 11.44,
+      "text": "security the problem is as a developer"
+    },
+    {
+      "startSeconds": 13.36,
+      "text": "we focus more"
+    },
+    {
+      "startSeconds": 14.559,
+      "text": "on the application right we just want to"
+    },
+    {
+      "startSeconds": 17.039,
+      "text": "complete the work"
+    },
+    {
+      "startSeconds": 18.24,
+      "text": "and we feel that security is not our"
+    },
+    {
+      "startSeconds": 20.48,
+      "text": "concern of course it's important but not"
+    },
+    {
+      "startSeconds": 22.48,
+      "text": "our concern but then if you want to"
+    },
+    {
+      "startSeconds": 24,
+      "text": "provide security from start to end"
+    },
+    {
+      "startSeconds": 25.92,
+      "text": "you have to make sure that your code is"
+    },
+    {
+      "startSeconds": 27.439,
+      "text": "also secure or basically you're writing"
+    },
+    {
+      "startSeconds": 29.439,
+      "text": "secure code"
+    },
+    {
+      "startSeconds": 30.56,
+      "text": "okay uh now if you want to understand"
+    },
+    {
+      "startSeconds": 33.28,
+      "text": "how do we"
+    },
+    {
+      "startSeconds": 33.84,
+      "text": "write secure code first you have to"
+    },
+    {
+      "startSeconds": 35.28,
+      "text": "understand what are the risks we have to"
+    },
+    {
+      "startSeconds": 36.8,
+      "text": "solve so if you"
+    },
+    {
+      "startSeconds": 37.84,
+      "text": "mitigate those risk of course you are"
+    },
+    {
+      "startSeconds": 40.32,
+      "text": "writing a secure code right"
+    },
+    {
+      "startSeconds": 42.32,
+      "text": "but how will you get this list so thanks"
+    },
+    {
+      "startSeconds": 44.16,
+      "text": "to owasp who provides your list in every"
+    },
+    {
+      "startSeconds": 46.719,
+      "text": "few years"
+    },
+    {
+      "startSeconds": 47.76,
+      "text": "uh so they do a lot of research they"
+    },
+    {
+      "startSeconds": 49.36,
+      "text": "understand the uh security risk"
+    },
+    {
+      "startSeconds": 51.68,
+      "text": "by looking at the application and they"
+    },
+    {
+      "startSeconds": 53.36,
+      "text": "find out top ten security risks which"
+    },
+    {
+      "startSeconds": 55.199,
+      "text": "you can mitigate"
+    },
+    {
+      "startSeconds": 56.32,
+      "text": "of course it's not just 10 there are"
+    },
+    {
+      "startSeconds": 58.879,
+      "text": "hundreds of"
+    },
+    {
+      "startSeconds": 59.76,
+      "text": "secured risk but this is top 10 at least"
+    },
+    {
+      "startSeconds": 61.76,
+      "text": "try to solve this first"
+    },
+    {
+      "startSeconds": 63.76,
+      "text": "and to get that you have just have to go"
+    },
+    {
+      "startSeconds": 65.6,
+      "text": "to google and search for"
+    },
+    {
+      "startSeconds": 67.2,
+      "text": "oh wasp top 10 and this is a website"
+    },
+    {
+      "startSeconds": 70.56,
+      "text": "you will get at the first one and if you"
+    },
+    {
+      "startSeconds": 72.799,
+      "text": "go there you will"
+    },
+    {
+      "startSeconds": 73.92,
+      "text": "find a top 10 list so this is not the"
+    },
+    {
+      "startSeconds": 77.04,
+      "text": "only thing they do there are other"
+    },
+    {
+      "startSeconds": 78.4,
+      "text": "things as well you can just explore the"
+    },
+    {
+      "startSeconds": 80.08,
+      "text": "entire website but if you want to find"
+    },
+    {
+      "startSeconds": 82.64,
+      "text": "what owasp stands for so it is open web"
+    },
+    {
+      "startSeconds": 86,
+      "text": "application security project"
+    },
+    {
+      "startSeconds": 88,
+      "text": "that's good and we have to understand"
+    },
+    {
+      "startSeconds": 89.92,
+      "text": "this top 10"
+    },
+    {
+      "startSeconds": 91.439,
+      "text": "security risk now the thing is each risk"
+    },
+    {
+      "startSeconds": 94.24,
+      "text": "here"
+    },
+    {
+      "startSeconds": 94.799,
+      "text": "you can see we have top 10 each risk"
+    },
+    {
+      "startSeconds": 97.119,
+      "text": "here will take"
+    },
+    {
+      "startSeconds": 98.079,
+      "text": "another six hours of content so even"
+    },
+    {
+      "startSeconds": 100.4,
+      "text": "injection itself if i want to talk about"
+    },
+    {
+      "startSeconds": 102,
+      "text": "that"
+    },
+    {
+      "startSeconds": 102.399,
+      "text": "we can talk about it for six hours right"
+    },
+    {
+      "startSeconds": 104.88,
+      "text": "but so let's get the overview"
+    },
+    {
+      "startSeconds": 106.64,
+      "text": "of all this risk in this video so the"
+    },
+    {
+      "startSeconds": 108.88,
+      "text": "first one is"
+    },
+    {
+      "startSeconds": 109.92,
+      "text": "injection see the thing is when you make"
+    },
+    {
+      "startSeconds": 112.32,
+      "text": "an application of course you provide"
+    },
+    {
+      "startSeconds": 114,
+      "text": "external security to the application"
+    },
+    {
+      "startSeconds": 116,
+      "text": "but hackers or the attackers somehow"
+    },
+    {
+      "startSeconds": 118.799,
+      "text": "wants to get"
+    },
+    {
+      "startSeconds": 119.68,
+      "text": "hold on the application how will they do"
+    },
+    {
+      "startSeconds": 121.68,
+      "text": "it so one of the ways they can"
+    },
+    {
+      "startSeconds": 123.2,
+      "text": "use injection attacks now what are"
+    },
+    {
+      "startSeconds": 125.2,
+      "text": "injection attacks"
+    },
+    {
+      "startSeconds": 126.32,
+      "text": "so injection has multiple attacks"
+    },
+    {
+      "startSeconds": 127.84,
+      "text": "basically we have sql injection we have"
+    },
+    {
+      "startSeconds": 129.599,
+      "text": "ldap injection"
+    },
+    {
+      "startSeconds": 131.039,
+      "text": "uh and many more so let's talk about sql"
+    },
+    {
+      "startSeconds": 133.36,
+      "text": "injection here just to understand what"
+    },
+    {
+      "startSeconds": 134.64,
+      "text": "it means"
+    },
+    {
+      "startSeconds": 135.36,
+      "text": "so let's say a user want to log into an"
+    },
+    {
+      "startSeconds": 137.68,
+      "text": "application"
+    },
+    {
+      "startSeconds": 138.48,
+      "text": "of course to log in the application you"
+    },
+    {
+      "startSeconds": 140,
+      "text": "need to have something you need to have"
+    },
+    {
+      "startSeconds": 141.36,
+      "text": "a face id"
+    },
+    {
+      "startSeconds": 142.319,
+      "text": "you need to have a fingerprint or a"
+    },
+    {
+      "startSeconds": 144,
+      "text": "username password"
+    },
+    {
+      "startSeconds": 145.36,
+      "text": "in most of the web application we still"
+    },
+    {
+      "startSeconds": 147.04,
+      "text": "go for username passwords"
+    },
+    {
+      "startSeconds": 148.64,
+      "text": "and the way you do that is by entering"
+    },
+    {
+      "startSeconds": 150.64,
+      "text": "username and password on the back inside"
+    },
+    {
+      "startSeconds": 153.04,
+      "text": "if your developer what you will do how"
+    },
+    {
+      "startSeconds": 154.64,
+      "text": "will you verify if the user and password"
+    },
+    {
+      "startSeconds": 156.72,
+      "text": "is actually correct"
+    },
+    {
+      "startSeconds": 158.08,
+      "text": "so of course you have to verify that"
+    },
+    {
+      "startSeconds": 159.44,
+      "text": "with the help of database right so there"
+    },
+    {
+      "startSeconds": 160.72,
+      "text": "will be a database"
+    },
+    {
+      "startSeconds": 161.84,
+      "text": "and you will send this data to the"
+    },
+    {
+      "startSeconds": 163.2,
+      "text": "database by saying hey i want to check"
+    },
+    {
+      "startSeconds": 165.36,
+      "text": "if this data is available in the"
+    },
+    {
+      "startSeconds": 166.64,
+      "text": "database"
+    },
+    {
+      "startSeconds": 167.36,
+      "text": "if the data is available of course you"
+    },
+    {
+      "startSeconds": 168.959,
+      "text": "can say it is"
+    },
+    {
+      "startSeconds": 170.48,
+      "text": "the user is valid or authenticated what"
+    },
+    {
+      "startSeconds": 172.959,
+      "text": "if the data"
+    },
+    {
+      "startSeconds": 174.16,
+      "text": "is not available for a legit user of"
+    },
+    {
+      "startSeconds": 176.4,
+      "text": "course the data will be there what about"
+    },
+    {
+      "startSeconds": 178,
+      "text": "attackers they don't have their"
+    },
+    {
+      "startSeconds": 179.76,
+      "text": "username password saved right but then"
+    },
+    {
+      "startSeconds": 181.84,
+      "text": "how you verify"
+    },
+    {
+      "startSeconds": 183.12,
+      "text": "with the database so we have a very"
+    },
+    {
+      "startSeconds": 184.8,
+      "text": "special language right so specifically"
+    },
+    {
+      "startSeconds": 186.8,
+      "text": "we're talking about rdbms database here"
+    },
+    {
+      "startSeconds": 189.2,
+      "text": "uh so the language which we use is sql"
+    },
+    {
+      "startSeconds": 192.4,
+      "text": "and the query we say is select star from"
+    },
+    {
+      "startSeconds": 194.56,
+      "text": "a table where"
+    },
+    {
+      "startSeconds": 195.519,
+      "text": "username is this and password is this"
+    },
+    {
+      "startSeconds": 197.28,
+      "text": "but the thing is if you"
+    },
+    {
+      "startSeconds": 199.44,
+      "text": "think in any programming language terms"
+    },
+    {
+      "startSeconds": 201.2,
+      "text": "maybe java or"
+    },
+    {
+      "startSeconds": 202.56,
+      "text": "php because you have to write some"
+    },
+    {
+      "startSeconds": 204,
+      "text": "programming language for the backend"
+    },
+    {
+      "startSeconds": 205.519,
+      "text": "right so we normally put a statement and"
+    },
+    {
+      "startSeconds": 207.68,
+      "text": "then you"
+    },
+    {
+      "startSeconds": 208.48,
+      "text": "use double quote single quote because"
+    },
+    {
+      "startSeconds": 210.159,
+      "text": "this value is actually coming from the"
+    },
+    {
+      "startSeconds": 211.599,
+      "text": "user"
+    },
+    {
+      "startSeconds": 212,
+      "text": "right but what if a user says the"
+    },
+    {
+      "startSeconds": 214.08,
+      "text": "username is naveen"
+    },
+    {
+      "startSeconds": 215.519,
+      "text": "or one is equal to one because"
+    },
+    {
+      "startSeconds": 218.08,
+      "text": "ultimately the query is verifying"
+    },
+    {
+      "startSeconds": 220.159,
+      "text": "right a query has to return true that's"
+    },
+    {
+      "startSeconds": 222.239,
+      "text": "it okay that's how we do programming"
+    },
+    {
+      "startSeconds": 224.799,
+      "text": "right"
+    },
+    {
+      "startSeconds": 225.36,
+      "text": "so you even if the query is if you say"
+    },
+    {
+      "startSeconds": 227.84,
+      "text": "one equal to one which is true"
+    },
+    {
+      "startSeconds": 229.599,
+      "text": "a user will get the access that is"
+    },
+    {
+      "startSeconds": 231.92,
+      "text": "injection"
+    },
+    {
+      "startSeconds": 232.64,
+      "text": "okay so just you're injecting uh"
+    },
+    {
+      "startSeconds": 234.48,
+      "text": "something in the code uh so it can be a"
+    },
+    {
+      "startSeconds": 236.799,
+      "text": "simple query it can also be a command"
+    },
+    {
+      "startSeconds": 239.12,
+      "text": "right which you're injecting in the code"
+    },
+    {
+      "startSeconds": 240.959,
+      "text": "the second one is"
+    },
+    {
+      "startSeconds": 242.159,
+      "text": "broken authentication now what does it"
+    },
+    {
+      "startSeconds": 243.92,
+      "text": "mean see we"
+    },
+    {
+      "startSeconds": 245.28,
+      "text": "as a user okay so let's not focus on"
+    },
+    {
+      "startSeconds": 247.599,
+      "text": "developers"
+    },
+    {
+      "startSeconds": 248.319,
+      "text": "let's say as a user as a user whenever"
+    },
+    {
+      "startSeconds": 250.4,
+      "text": "you make an account on any website we"
+    },
+    {
+      "startSeconds": 252.64,
+      "text": "have this tendency of using the same"
+    },
+    {
+      "startSeconds": 254.56,
+      "text": "username and passwords"
+    },
+    {
+      "startSeconds": 255.68,
+      "text": "right i used to do that not anymore but"
+    },
+    {
+      "startSeconds": 258.32,
+      "text": "uh"
+    },
+    {
+      "startSeconds": 258.959,
+      "text": "one username and one password on all the"
+    },
+    {
+      "startSeconds": 261.359,
+      "text": "websites"
+    },
+    {
+      "startSeconds": 262.079,
+      "text": "the good thing is you don't have to buy"
+    },
+    {
+      "startSeconds": 263.919,
+      "text": "heart multiple username passwords"
+    },
+    {
+      "startSeconds": 266.16,
+      "text": "the drawback is if one of the"
+    },
+    {
+      "startSeconds": 268.16,
+      "text": "application is getting hacked"
+    },
+    {
+      "startSeconds": 270.24,
+      "text": "if a attacker is able to get a hold on"
+    },
+    {
+      "startSeconds": 272.56,
+      "text": "your username password"
+    },
+    {
+      "startSeconds": 274,
+      "text": "not just one account you will be losing"
+    },
+    {
+      "startSeconds": 276.16,
+      "text": "all your accounts"
+    },
+    {
+      "startSeconds": 277.199,
+      "text": "and most of the user does that okay so"
+    },
+    {
+      "startSeconds": 279.36,
+      "text": "they have this tendency of"
+    },
+    {
+      "startSeconds": 280.639,
+      "text": "using the same username password that's"
+    },
+    {
+      "startSeconds": 282.56,
+      "text": "one of the issue we have the second one"
+    },
+    {
+      "startSeconds": 284.08,
+      "text": "is default passwords most of us are"
+    },
+    {
+      "startSeconds": 286.16,
+      "text": "still using default passwords now you"
+    },
+    {
+      "startSeconds": 288,
+      "text": "might be thinking hey as a developer"
+    },
+    {
+      "startSeconds": 289.6,
+      "text": "how can you make sure that user is not"
+    },
+    {
+      "startSeconds": 292.16,
+      "text": "entering the"
+    },
+    {
+      "startSeconds": 292.88,
+      "text": "different username password or difficult"
+    },
+    {
+      "startSeconds": 294.8,
+      "text": "password you can actually you know if"
+    },
+    {
+      "startSeconds": 296.88,
+      "text": "you go to most of the websites now they"
+    },
+    {
+      "startSeconds": 298.639,
+      "text": "force you"
+    },
+    {
+      "startSeconds": 299.199,
+      "text": "to use a complex password right another"
+    },
+    {
+      "startSeconds": 302.4,
+      "text": "thing you can do here of course we will"
+    },
+    {
+      "startSeconds": 303.919,
+      "text": "talk about best practices there should"
+    },
+    {
+      "startSeconds": 305.36,
+      "text": "be a separate video on best practice of"
+    },
+    {
+      "startSeconds": 306.96,
+      "text": "secure"
+    },
+    {
+      "startSeconds": 307.44,
+      "text": "coding but just to give you a hint how"
+    },
+    {
+      "startSeconds": 310.08,
+      "text": "can we solve that is by using a complex"
+    },
+    {
+      "startSeconds": 312,
+      "text": "password you can recommend user to do"
+    },
+    {
+      "startSeconds": 313.6,
+      "text": "that"
+    },
+    {
+      "startSeconds": 314,
+      "text": "and second one is you can provide uh"
+    },
+    {
+      "startSeconds": 317.28,
+      "text": "what if you can change the username for"
+    },
+    {
+      "startSeconds": 319.12,
+      "text": "the back end so even if a user says"
+    },
+    {
+      "startSeconds": 320.72,
+      "text": "naveenready as a username"
+    },
+    {
+      "startSeconds": 322.4,
+      "text": "uh while you are storing that username"
+    },
+    {
+      "startSeconds": 324.24,
+      "text": "in the database you will say 9123. so"
+    },
+    {
+      "startSeconds": 326.4,
+      "text": "you're making sure that"
+    },
+    {
+      "startSeconds": 327.6,
+      "text": "in your database the username is"
+    },
+    {
+      "startSeconds": 329.12,
+      "text": "different that's something you can do"
+    },
+    {
+      "startSeconds": 330.56,
+      "text": "the second one it can also be"
+    },
+    {
+      "startSeconds": 332.639,
+      "text": "what if a user is using a system let's"
+    },
+    {
+      "startSeconds": 335.039,
+      "text": "say i've logged into facebook now after"
+    },
+    {
+      "startSeconds": 336.8,
+      "text": "using facebook i just"
+    },
+    {
+      "startSeconds": 337.84,
+      "text": "closed the tab and then i just went away"
+    },
+    {
+      "startSeconds": 340.72,
+      "text": "now some attacker"
+    },
+    {
+      "startSeconds": 341.919,
+      "text": "just using the same machine was able to"
+    },
+    {
+      "startSeconds": 344.4,
+      "text": "open that tab"
+    },
+    {
+      "startSeconds": 345.36,
+      "text": "and was able to access the account one"
+    },
+    {
+      "startSeconds": 347.68,
+      "text": "of the way you can do that is by the"
+    },
+    {
+      "startSeconds": 349.039,
+      "text": "moment you close"
+    },
+    {
+      "startSeconds": 350.08,
+      "text": "a tab it should be logged out this"
+    },
+    {
+      "startSeconds": 352.24,
+      "text": "happens most of the time when you use"
+    },
+    {
+      "startSeconds": 353.68,
+      "text": "banking applications right so they don't"
+    },
+    {
+      "startSeconds": 355.36,
+      "text": "allow you to"
+    },
+    {
+      "startSeconds": 356.319,
+      "text": "access the account if you reopen the tab"
+    },
+    {
+      "startSeconds": 358.639,
+      "text": "they will ask you to log in again that's"
+    },
+    {
+      "startSeconds": 360.16,
+      "text": "the second one"
+    },
+    {
+      "startSeconds": 360.88,
+      "text": "in fact for the first one that we have a"
+    },
+    {
+      "startSeconds": 362.56,
+      "text": "solution which is instead of using"
+    },
+    {
+      "startSeconds": 364.16,
+      "text": "statement so specific to java"
+    },
+    {
+      "startSeconds": 366.319,
+      "text": "in java we have statement and prepared"
+    },
+    {
+      "startSeconds": 368.16,
+      "text": "statement so instead of using statement"
+    },
+    {
+      "startSeconds": 370,
+      "text": "let's use prepare statement to solve"
+    },
+    {
+      "startSeconds": 371.68,
+      "text": "injection"
+    },
+    {
+      "startSeconds": 372.24,
+      "text": "issues specifically sql injection the"
+    },
+    {
+      "startSeconds": 374.479,
+      "text": "third one is"
+    },
+    {
+      "startSeconds": 375.84,
+      "text": "sensitive data exposure the thing is on"
+    },
+    {
+      "startSeconds": 378.8,
+      "text": "the internet"
+    },
+    {
+      "startSeconds": 379.52,
+      "text": "you know there are millions of bytes of"
+    },
+    {
+      "startSeconds": 382.24,
+      "text": "data"
+    },
+    {
+      "startSeconds": 382.8,
+      "text": "is getting transferred every"
+    },
+    {
+      "startSeconds": 384.08,
+      "text": "milliseconds right now this data is not"
+    },
+    {
+      "startSeconds": 386,
+      "text": "just normal data"
+    },
+    {
+      "startSeconds": 386.96,
+      "text": "it can be a sensitive data your whatsapp"
+    },
+    {
+      "startSeconds": 388.96,
+      "text": "message you might be feeling your"
+    },
+    {
+      "startSeconds": 390.8,
+      "text": "whatsapp messages into an encryption"
+    },
+    {
+      "startSeconds": 392.8,
+      "text": "ah they're not okay so you are basically"
+    },
+    {
+      "startSeconds": 395.44,
+      "text": "sending"
+    },
+    {
+      "startSeconds": 396,
+      "text": "all the sensitive information it can be"
+    },
+    {
+      "startSeconds": 397.68,
+      "text": "great card details it can be"
+    },
+    {
+      "startSeconds": 399.6,
+      "text": "maybe credit card details so if you go"
+    },
+    {
+      "startSeconds": 401.039,
+      "text": "to our website and if you let's say on"
+    },
+    {
+      "startSeconds": 402.56,
+      "text": "amazon if you buy something we have this"
+    },
+    {
+      "startSeconds": 404.319,
+      "text": "tendency of"
+    },
+    {
+      "startSeconds": 405.6,
+      "text": "uh storing the credit card information"
+    },
+    {
+      "startSeconds": 407.36,
+      "text": "on amazon so that next time you just"
+    },
+    {
+      "startSeconds": 409.039,
+      "text": "have to"
+    },
+    {
+      "startSeconds": 409.599,
+      "text": "enter this cvv code and you're done you"
+    },
+    {
+      "startSeconds": 411.84,
+      "text": "don't have to enter"
+    },
+    {
+      "startSeconds": 412.639,
+      "text": "all the details so that means the data"
+    },
+    {
+      "startSeconds": 414.24,
+      "text": "is available on the amazon website right"
+    },
+    {
+      "startSeconds": 416.4,
+      "text": "if it is not encrypted and attacker was"
+    },
+    {
+      "startSeconds": 418.639,
+      "text": "able to hold that"
+    },
+    {
+      "startSeconds": 419.759,
+      "text": "credit card you can't right i don't what"
+    },
+    {
+      "startSeconds": 422.56,
+      "text": "you can still block the card there but"
+    },
+    {
+      "startSeconds": 424.16,
+      "text": "then"
+    },
+    {
+      "startSeconds": 424.56,
+      "text": "uh you have to make sure that whatever"
+    },
+    {
+      "startSeconds": 426.16,
+      "text": "communication is happening on the server"
+    },
+    {
+      "startSeconds": 427.84,
+      "text": "between client and server or maybe two"
+    },
+    {
+      "startSeconds": 429.44,
+      "text": "different servers it has to be encrypted"
+    },
+    {
+      "startSeconds": 431.759,
+      "text": "because most of the applications don't"
+    },
+    {
+      "startSeconds": 433.12,
+      "text": "do encryption for other type of data yes"
+    },
+    {
+      "startSeconds": 435.44,
+      "text": "they focus more on username password but"
+    },
+    {
+      "startSeconds": 437.28,
+      "text": "not all the information"
+    },
+    {
+      "startSeconds": 438.639,
+      "text": "even the personal information is"
+    },
+    {
+      "startSeconds": 440.08,
+      "text": "important and you have to secure it the"
+    },
+    {
+      "startSeconds": 441.68,
+      "text": "next one is"
+    },
+    {
+      "startSeconds": 442.56,
+      "text": "xml external entities which in short is"
+    },
+    {
+      "startSeconds": 445.199,
+      "text": "called xxe that's weird i know but then"
+    },
+    {
+      "startSeconds": 447.599,
+      "text": "what it means is you know in the earlier"
+    },
+    {
+      "startSeconds": 449.28,
+      "text": "days now we are using"
+    },
+    {
+      "startSeconds": 450.56,
+      "text": "a json a lot but earlier time for the"
+    },
+    {
+      "startSeconds": 452.88,
+      "text": "configuration for data transfer we used"
+    },
+    {
+      "startSeconds": 455.039,
+      "text": "to use"
+    },
+    {
+      "startSeconds": 455.52,
+      "text": "xml but the problem with xml is it's a"
+    },
+    {
+      "startSeconds": 457.44,
+      "text": "good thing actually the good thing was"
+    },
+    {
+      "startSeconds": 458.72,
+      "text": "in xml was this there was a concept of"
+    },
+    {
+      "startSeconds": 460.56,
+      "text": "dtd which is document type"
+    },
+    {
+      "startSeconds": 462.72,
+      "text": "definition in that you can actually"
+    },
+    {
+      "startSeconds": 464.56,
+      "text": "mention the entities"
+    },
+    {
+      "startSeconds": 466.4,
+      "text": "okay now what is entity so let's say in"
+    },
+    {
+      "startSeconds": 468.4,
+      "text": "one xml you want to transfer multiple"
+    },
+    {
+      "startSeconds": 470.08,
+      "text": "data"
+    },
+    {
+      "startSeconds": 470.72,
+      "text": "user data maybe you have five users and"
+    },
+    {
+      "startSeconds": 473.36,
+      "text": "then you want to send it about five"
+    },
+    {
+      "startSeconds": 474.879,
+      "text": "users"
+    },
+    {
+      "startSeconds": 475.52,
+      "text": "now maybe some name and some information"
+    },
+    {
+      "startSeconds": 478.479,
+      "text": "might be repeated so what you can do is"
+    },
+    {
+      "startSeconds": 480,
+      "text": "you can take it common and you can save"
+    },
+    {
+      "startSeconds": 481.36,
+      "text": "in the entities"
+    },
+    {
+      "startSeconds": 482.16,
+      "text": "good thing right but the problem is this"
+    },
+    {
+      "startSeconds": 483.919,
+      "text": "entity can also hold"
+    },
+    {
+      "startSeconds": 485.36,
+      "text": "external entities external files"
+    },
+    {
+      "startSeconds": 487.919,
+      "text": "external commands"
+    },
+    {
+      "startSeconds": 489.199,
+      "text": "now the problem with external command is"
+    },
+    {
+      "startSeconds": 491.199,
+      "text": "as an attacker if attacker is playing"
+    },
+    {
+      "startSeconds": 493.759,
+      "text": "with the xml file"
+    },
+    {
+      "startSeconds": 495.039,
+      "text": "because see on the server side you will"
+    },
+    {
+      "startSeconds": 496.319,
+      "text": "be having xml password right xml"
+    },
+    {
+      "startSeconds": 498,
+      "text": "password"
+    },
+    {
+      "startSeconds": 498.639,
+      "text": "simply try to open the xml and read all"
+    },
+    {
+      "startSeconds": 501.199,
+      "text": "the information"
+    },
+    {
+      "startSeconds": 502.08,
+      "text": "what if attacker is embedding a file"
+    },
+    {
+      "startSeconds": 505.28,
+      "text": "which will have some commands as an"
+    },
+    {
+      "startSeconds": 507.36,
+      "text": "external entity which will be executed"
+    },
+    {
+      "startSeconds": 509.12,
+      "text": "by the xml parser on the server side"
+    },
+    {
+      "startSeconds": 511.28,
+      "text": "basically you are running a command on"
+    },
+    {
+      "startSeconds": 513.599,
+      "text": "the server side"
+    },
+    {
+      "startSeconds": 514.479,
+      "text": "it can be any command so that one issue"
+    },
+    {
+      "startSeconds": 516.8,
+      "text": "one thing you can do is you can block"
+    },
+    {
+      "startSeconds": 518.32,
+      "text": "external entities in the xml"
+    },
+    {
+      "startSeconds": 520.08,
+      "text": "the fourth one is broken access control"
+    },
+    {
+      "startSeconds": 522.88,
+      "text": "now this is where so you know in every"
+    },
+    {
+      "startSeconds": 524.959,
+      "text": "website"
+    },
+    {
+      "startSeconds": 526,
+      "text": "you have different controls maybe for"
+    },
+    {
+      "startSeconds": 529.279,
+      "text": "users we have admins we have auditors"
+    },
+    {
+      "startSeconds": 532.8,
+      "text": "then we have guest users so what we do"
+    },
+    {
+      "startSeconds": 535.36,
+      "text": "is every user will have a different"
+    },
+    {
+      "startSeconds": 536.959,
+      "text": "permission every user will have a"
+    },
+    {
+      "startSeconds": 538.24,
+      "text": "different control on the application"
+    },
+    {
+      "startSeconds": 539.839,
+      "text": "like admin can do"
+    },
+    {
+      "startSeconds": 541.04,
+      "text": "anything a user can do anything right"
+    },
+    {
+      "startSeconds": 543.279,
+      "text": "but only with that particular account"
+    },
+    {
+      "startSeconds": 545.44,
+      "text": "so if i have an account on facebook i"
+    },
+    {
+      "startSeconds": 547.279,
+      "text": "can do anything with my account but not"
+    },
+    {
+      "startSeconds": 549.04,
+      "text": "with others account but"
+    },
+    {
+      "startSeconds": 550.24,
+      "text": "what if you messed up as a developer you"
+    },
+    {
+      "startSeconds": 553.12,
+      "text": "are not able to assign proper access to"
+    },
+    {
+      "startSeconds": 555.36,
+      "text": "each"
+    },
+    {
+      "startSeconds": 556,
+      "text": "account or each role right so whenever"
+    },
+    {
+      "startSeconds": 558.399,
+      "text": "you learn about security rules those"
+    },
+    {
+      "startSeconds": 560.24,
+      "text": "roles are very important right every"
+    },
+    {
+      "startSeconds": 561.76,
+      "text": "time you"
+    },
+    {
+      "startSeconds": 562.48,
+      "text": "provide a feature you should know who"
+    },
+    {
+      "startSeconds": 564.24,
+      "text": "will be able to use this feature who"
+    },
+    {
+      "startSeconds": 565.92,
+      "text": "will be able to edit this feature"
+    },
+    {
+      "startSeconds": 567.44,
+      "text": "and also if i say as a user i can"
+    },
+    {
+      "startSeconds": 569.44,
+      "text": "actually control the user accounts or"
+    },
+    {
+      "startSeconds": 571.76,
+      "text": "get the information about the user"
+    },
+    {
+      "startSeconds": 572.959,
+      "text": "account but that should be only my"
+    },
+    {
+      "startSeconds": 574.64,
+      "text": "account"
+    },
+    {
+      "startSeconds": 575.36,
+      "text": "not someone's else account example most"
+    },
+    {
+      "startSeconds": 577.6,
+      "text": "of the time we fire the query on the url"
+    },
+    {
+      "startSeconds": 580.16,
+      "text": "uh the username and the user id what if"
+    },
+    {
+      "startSeconds": 582.32,
+      "text": "my id is one two three"
+    },
+    {
+      "startSeconds": 583.68,
+      "text": "and i'm able to access someone's sales"
+    },
+    {
+      "startSeconds": 586.08,
+      "text": "id by saying"
+    },
+    {
+      "startSeconds": 587.12,
+      "text": "one two three four so you have to"
+    },
+    {
+      "startSeconds": 588.24,
+      "text": "control that the next one is security"
+    },
+    {
+      "startSeconds": 590.16,
+      "text": "miss configuration"
+    },
+    {
+      "startSeconds": 591.6,
+      "text": "now example let's say if you have a web"
+    },
+    {
+      "startSeconds": 594.48,
+      "text": "server and of course in the web server"
+    },
+    {
+      "startSeconds": 596.08,
+      "text": "you will be having multiple softwares"
+    },
+    {
+      "startSeconds": 597.44,
+      "text": "right a web server itself"
+    },
+    {
+      "startSeconds": 599.04,
+      "text": "you will be having database servers or"
+    },
+    {
+      "startSeconds": 600.56,
+      "text": "maybe you are using some"
+    },
+    {
+      "startSeconds": 602.079,
+      "text": "external servers as well now the thing"
+    },
+    {
+      "startSeconds": 604.48,
+      "text": "is every time you use some server"
+    },
+    {
+      "startSeconds": 606.16,
+      "text": "they'll be having some default"
+    },
+    {
+      "startSeconds": 607.279,
+      "text": "configuration"
+    },
+    {
+      "startSeconds": 608.24,
+      "text": "and sometime you forgot to change the"
+    },
+    {
+      "startSeconds": 611.36,
+      "text": "configuration"
+    },
+    {
+      "startSeconds": 612.48,
+      "text": "sometimes we misconfigure it and if"
+    },
+    {
+      "startSeconds": 615.519,
+      "text": "attacker was able to get the hold on one"
+    },
+    {
+      "startSeconds": 617.76,
+      "text": "of the server they might attack the"
+    },
+    {
+      "startSeconds": 619.44,
+      "text": "other server"
+    },
+    {
+      "startSeconds": 620.32,
+      "text": "so maybe they're able to get hold on db"
+    },
+    {
+      "startSeconds": 622.72,
+      "text": "server"
+    },
+    {
+      "startSeconds": 623.6,
+      "text": "they might get a hold on uh web server"
+    },
+    {
+      "startSeconds": 625.92,
+      "text": "as well so best thing is whenever you"
+    },
+    {
+      "startSeconds": 627.92,
+      "text": "use any external web server try to"
+    },
+    {
+      "startSeconds": 629.839,
+      "text": "change the configuration"
+    },
+    {
+      "startSeconds": 631.12,
+      "text": "uh the next one is cross site scripting"
+    },
+    {
+      "startSeconds": 633.839,
+      "text": "okay so"
+    },
+    {
+      "startSeconds": 634.48,
+      "text": "this word is cross site scripting is"
+    },
+    {
+      "startSeconds": 636.959,
+      "text": "simply"
+    },
+    {
+      "startSeconds": 637.76,
+      "text": "you are sending a script okay so you"
+    },
+    {
+      "startSeconds": 640.64,
+      "text": "might be saying hey that's very normal"
+    },
+    {
+      "startSeconds": 642,
+      "text": "right on the server side you have some"
+    },
+    {
+      "startSeconds": 643.68,
+      "text": "script"
+    },
+    {
+      "startSeconds": 644.32,
+      "text": "which a server will send on the client"
+    },
+    {
+      "startSeconds": 645.92,
+      "text": "side to run that makes sense right"
+    },
+    {
+      "startSeconds": 647.68,
+      "text": "because whatever you use on the"
+    },
+    {
+      "startSeconds": 649.12,
+      "text": "application nowadays it's happening"
+    },
+    {
+      "startSeconds": 650.56,
+      "text": "because of javascript on the browser"
+    },
+    {
+      "startSeconds": 652.32,
+      "text": "because your browser will read the"
+    },
+    {
+      "startSeconds": 653.44,
+      "text": "javascript it will show you the content"
+    },
+    {
+      "startSeconds": 655.839,
+      "text": "it will fill the html elements with the"
+    },
+    {
+      "startSeconds": 657.68,
+      "text": "help of"
+    },
+    {
+      "startSeconds": 658.32,
+      "text": "javascript right see that makes sense"
+    },
+    {
+      "startSeconds": 660.56,
+      "text": "when the server is sending the"
+    },
+    {
+      "startSeconds": 662.48,
+      "text": "javascript"
+    },
+    {
+      "startSeconds": 663.279,
+      "text": "but what if a attacker is sending a"
+    },
+    {
+      "startSeconds": 666.399,
+      "text": "javascript into"
+    },
+    {
+      "startSeconds": 667.68,
+      "text": "a victim's machine example let's say i"
+    },
+    {
+      "startSeconds": 669.68,
+      "text": "want to attack your"
+    },
+    {
+      "startSeconds": 670.72,
+      "text": "machine so what i will do is i will"
+    },
+    {
+      "startSeconds": 673.6,
+      "text": "maybe you are using facebook"
+    },
+    {
+      "startSeconds": 675.12,
+      "text": "so there is a photo uploaded on a"
+    },
+    {
+      "startSeconds": 676.8,
+      "text": "facebook on your profile"
+    },
+    {
+      "startSeconds": 678.64,
+      "text": "and most of your friends are commenting"
+    },
+    {
+      "startSeconds": 680.64,
+      "text": "on it so even i will comment but i will"
+    },
+    {
+      "startSeconds": 682.8,
+      "text": "not be commenting"
+    },
+    {
+      "startSeconds": 683.839,
+      "text": "a normal text what if i comment a script"
+    },
+    {
+      "startSeconds": 687.76,
+      "text": "so next time when you open that photo"
+    },
+    {
+      "startSeconds": 689.839,
+      "text": "you will be saying some comments there"
+    },
+    {
+      "startSeconds": 691.279,
+      "text": "right"
+    },
+    {
+      "startSeconds": 691.839,
+      "text": "in one of the comments there will be a"
+    },
+    {
+      "startSeconds": 693.2,
+      "text": "script which will be done by your"
+    },
+    {
+      "startSeconds": 694.88,
+      "text": "browser"
+    },
+    {
+      "startSeconds": 695.6,
+      "text": "okay that is the script which i have"
+    },
+    {
+      "startSeconds": 697.2,
+      "text": "sent to you through the server of course"
+    },
+    {
+      "startSeconds": 698.72,
+      "text": "or maybe i can directly send you or"
+    },
+    {
+      "startSeconds": 700,
+      "text": "through the server that's my choice uh"
+    },
+    {
+      "startSeconds": 702.079,
+      "text": "that is cross-site scripting the next"
+    },
+    {
+      "startSeconds": 704.079,
+      "text": "one is"
+    },
+    {
+      "startSeconds": 704.72,
+      "text": "insecured decentralization let's see"
+    },
+    {
+      "startSeconds": 706.88,
+      "text": "what happens is so let's talk about json"
+    },
+    {
+      "startSeconds": 708.64,
+      "text": "here so json is a commonly used"
+    },
+    {
+      "startSeconds": 710.8,
+      "text": "format to send data from a client to"
+    },
+    {
+      "startSeconds": 712.72,
+      "text": "server home server to client or maybe to"
+    },
+    {
+      "startSeconds": 714.48,
+      "text": "store it on the machine itself so let's"
+    },
+    {
+      "startSeconds": 716.32,
+      "text": "say"
+    },
+    {
+      "startSeconds": 716.88,
+      "text": "you have an object now in the real world"
+    },
+    {
+      "startSeconds": 718.88,
+      "text": "when you talk about an object let's say"
+    },
+    {
+      "startSeconds": 721.2,
+      "text": "let's say about this phone this is an"
+    },
+    {
+      "startSeconds": 722.8,
+      "text": "object right now this object will have"
+    },
+    {
+      "startSeconds": 725.04,
+      "text": "some information so this is a real"
+    },
+    {
+      "startSeconds": 726.72,
+      "text": "object but if you want to store this"
+    },
+    {
+      "startSeconds": 728,
+      "text": "object in machine"
+    },
+    {
+      "startSeconds": 729.2,
+      "text": "what you will do is you will fetch the"
+    },
+    {
+      "startSeconds": 730.399,
+      "text": "properties of it right this is a black"
+    },
+    {
+      "startSeconds": 732,
+      "text": "color phone"
+    },
+    {
+      "startSeconds": 733.04,
+      "text": "uh it has a height of let's say seven"
+    },
+    {
+      "startSeconds": 735.279,
+      "text": "inch it has three cameras it has a"
+    },
+    {
+      "startSeconds": 737.76,
+      "text": "screen and company samsung so let's see"
+    },
+    {
+      "startSeconds": 740.079,
+      "text": "all the details you are storing on"
+    },
+    {
+      "startSeconds": 741.76,
+      "text": "in a format right adjacent format but"
+    },
+    {
+      "startSeconds": 744.079,
+      "text": "then if you actually want to store this"
+    },
+    {
+      "startSeconds": 745.92,
+      "text": "in a machine"
+    },
+    {
+      "startSeconds": 746.88,
+      "text": "in a hard drive you have to use a"
+    },
+    {
+      "startSeconds": 749.44,
+      "text": "concept of serialization which you"
+    },
+    {
+      "startSeconds": 751.12,
+      "text": "convert"
+    },
+    {
+      "startSeconds": 752.079,
+      "text": "the json data into a byte code or the"
+    },
+    {
+      "startSeconds": 754.72,
+      "text": "byte format"
+    },
+    {
+      "startSeconds": 755.6,
+      "text": "basically once and zeros that is"
+    },
+    {
+      "startSeconds": 757.6,
+      "text": "realization"
+    },
+    {
+      "startSeconds": 758.8,
+      "text": "so let's say now you are sending this"
+    },
+    {
+      "startSeconds": 760.72,
+      "text": "file to the server"
+    },
+    {
+      "startSeconds": 762.079,
+      "text": "of serial data which is zeros and once"
+    },
+    {
+      "startSeconds": 764.8,
+      "text": "on the server side"
+    },
+    {
+      "startSeconds": 766,
+      "text": "server will try to convert that so we'll"
+    },
+    {
+      "startSeconds": 768.32,
+      "text": "try to get the json format which is"
+    },
+    {
+      "startSeconds": 770.839,
+      "text": "decilization and then with the json"
+    },
+    {
+      "startSeconds": 773.04,
+      "text": "server can get the phone of course"
+    },
+    {
+      "startSeconds": 774.8,
+      "text": "that makes sense right but then how it"
+    },
+    {
+      "startSeconds": 776.72,
+      "text": "can be insecure okay"
+    },
+    {
+      "startSeconds": 778.16,
+      "text": "what if i'm sending you so let's say i'm"
+    },
+    {
+      "startSeconds": 780.72,
+      "text": "a malicious attacker"
+    },
+    {
+      "startSeconds": 782.48,
+      "text": "and i'm sending a byte string let's say"
+    },
+    {
+      "startSeconds": 785.279,
+      "text": "ones and zeroes to the server"
+    },
+    {
+      "startSeconds": 787.2,
+      "text": "and servo is decelising it after doing"
+    },
+    {
+      "startSeconds": 789.68,
+      "text": "decilization what if a json format has a"
+    },
+    {
+      "startSeconds": 792,
+      "text": "command which will get executed right so"
+    },
+    {
+      "startSeconds": 794,
+      "text": "that is insecure decilization yeah it"
+    },
+    {
+      "startSeconds": 796.16,
+      "text": "sounds like"
+    },
+    {
+      "startSeconds": 797.12,
+      "text": "injection but this is different because"
+    },
+    {
+      "startSeconds": 798.8,
+      "text": "here we are doing digitalization on the"
+    },
+    {
+      "startSeconds": 801.12,
+      "text": "server the next one is using components"
+    },
+    {
+      "startSeconds": 803.2,
+      "text": "with"
+    },
+    {
+      "startSeconds": 803.6,
+      "text": "known vulnerabilities the thing is"
+    },
+    {
+      "startSeconds": 805.92,
+      "text": "whatever server we are using on the"
+    },
+    {
+      "startSeconds": 807.36,
+      "text": "server it can be"
+    },
+    {
+      "startSeconds": 808.399,
+      "text": "a purchase server it can be database"
+    },
+    {
+      "startSeconds": 810.399,
+      "text": "server it can be"
+    },
+    {
+      "startSeconds": 811.68,
+      "text": "any any other server most of it have"
+    },
+    {
+      "startSeconds": 814.88,
+      "text": "some issues some bugs right and if you"
+    },
+    {
+      "startSeconds": 817.44,
+      "text": "are still using a server with"
+    },
+    {
+      "startSeconds": 819.279,
+      "text": "no vulnerabilities the attackers will"
+    },
+    {
+      "startSeconds": 821.44,
+      "text": "know that hey you're using this"
+    },
+    {
+      "startSeconds": 822.639,
+      "text": "particular server this particular"
+    },
+    {
+      "startSeconds": 823.68,
+      "text": "version i'm going to attack it"
+    },
+    {
+      "startSeconds": 825.279,
+      "text": "if you're thinking how they will know"
+    },
+    {
+      "startSeconds": 826.72,
+      "text": "the version sometimes you know in the"
+    },
+    {
+      "startSeconds": 828.32,
+      "text": "application you"
+    },
+    {
+      "startSeconds": 829.68,
+      "text": "will face some errors and then in the"
+    },
+    {
+      "startSeconds": 832,
+      "text": "error page"
+    },
+    {
+      "startSeconds": 832.959,
+      "text": "if you are not handling it properly it"
+    },
+    {
+      "startSeconds": 835.199,
+      "text": "reveals everything"
+    },
+    {
+      "startSeconds": 836.32,
+      "text": "whatsoever we are using what version it"
+    },
+    {
+      "startSeconds": 838.959,
+      "text": "is so make sure that you"
+    },
+    {
+      "startSeconds": 840.56,
+      "text": "hide all the information and that also"
+    },
+    {
+      "startSeconds": 842.399,
+      "text": "comes in a sensitive information right"
+    },
+    {
+      "startSeconds": 843.92,
+      "text": "and the last one"
+    },
+    {
+      "startSeconds": 844.72,
+      "text": "is insufficient logging and auditing so"
+    },
+    {
+      "startSeconds": 847.6,
+      "text": "the problem is"
+    },
+    {
+      "startSeconds": 848.56,
+      "text": "most of the servers are getting attacked"
+    },
+    {
+      "startSeconds": 850.959,
+      "text": "every second"
+    },
+    {
+      "startSeconds": 851.92,
+      "text": "google server is getting attacked every"
+    },
+    {
+      "startSeconds": 853.68,
+      "text": "second facebook server even my my"
+    },
+    {
+      "startSeconds": 855.92,
+      "text": "website might be getting attacked"
+    },
+    {
+      "startSeconds": 857.6,
+      "text": "one attack per day i'm not sure but the"
+    },
+    {
+      "startSeconds": 859.279,
+      "text": "thing is how would we know that there's"
+    },
+    {
+      "startSeconds": 860.959,
+      "text": "a data breach"
+    },
+    {
+      "startSeconds": 862,
+      "text": "how do we know it is because with the"
+    },
+    {
+      "startSeconds": 863.6,
+      "text": "help of log files so in the log files"
+    },
+    {
+      "startSeconds": 865.279,
+      "text": "you have to make sure that you do all"
+    },
+    {
+      "startSeconds": 866.399,
+      "text": "the entries"
+    },
+    {
+      "startSeconds": 867.199,
+      "text": "is there any attacker trying to attack"
+    },
+    {
+      "startSeconds": 869.12,
+      "text": "the website of course if there's a"
+    },
+    {
+      "startSeconds": 870.72,
+      "text": "attack going on you have to make sure"
+    },
+    {
+      "startSeconds": 872.399,
+      "text": "that you check the logs but if you want"
+    },
+    {
+      "startSeconds": 874.079,
+      "text": "to check the logs you have to make sure"
+    },
+    {
+      "startSeconds": 875.199,
+      "text": "that you"
+    },
+    {
+      "startSeconds": 875.68,
+      "text": "first provide the logs so make sure that"
+    },
+    {
+      "startSeconds": 877.76,
+      "text": "you provide proper logs"
+    },
+    {
+      "startSeconds": 879.6,
+      "text": "and for everything for attacks for"
+    },
+    {
+      "startSeconds": 881.68,
+      "text": "logins"
+    },
+    {
+      "startSeconds": 882.72,
+      "text": "for incorrect logins everything yeah so"
+    },
+    {
+      "startSeconds": 885.199,
+      "text": "that's about"
+    },
+    {
+      "startSeconds": 885.92,
+      "text": "the top ten how do we solve this issue"
+    },
+    {
+      "startSeconds": 888.32,
+      "text": "so i will try to make a video for the"
+    },
+    {
+      "startSeconds": 890,
+      "text": "best practices that should make sense"
+    },
+    {
+      "startSeconds": 891.92,
+      "text": "right so that's it from this video i"
+    },
+    {
+      "startSeconds": 893.36,
+      "text": "hope you enjoyed let me in the comment"
+    },
+    {
+      "startSeconds": 894.56,
+      "text": "section"
+    },
+    {
+      "startSeconds": 895.44,
+      "text": "and do subscribe for the videos bye"
+    }
+  ]
+}

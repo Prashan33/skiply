@@ -1,0 +1,873 @@
+{
+  "id": "aJpzr8648XE",
+  "url": "https://www.youtube.com/watch?v=aJpzr8648XE",
+  "fetchedAt": "2026-09-01T04:08:34.295Z",
+  "captionKind": "asr",
+  "chapters": [],
+  "cues": [
+    {
+      "startSeconds": 2.08,
+      "text": "hello and welcome to another lightboard"
+    },
+    {
+      "startSeconds": 4.4,
+      "text": "session"
+    },
+    {
+      "startSeconds": 5.44,
+      "text": "in this lesson i am going to talk about"
+    },
+    {
+      "startSeconds": 8.08,
+      "text": "what are the things that you would want"
+    },
+    {
+      "startSeconds": 9.599,
+      "text": "to observe"
+    },
+    {
+      "startSeconds": 11.2,
+      "text": "what are the observability systems that"
+    },
+    {
+      "startSeconds": 12.88,
+      "text": "you need"
+    },
+    {
+      "startSeconds": 14.16,
+      "text": "and why and how would you go about"
+    },
+    {
+      "startSeconds": 17.44,
+      "text": "observing it that possibly might be a"
+    },
+    {
+      "startSeconds": 19.199,
+      "text": "next one but let's talk about"
+    },
+    {
+      "startSeconds": 21.359,
+      "text": "observability and the three types of"
+    },
+    {
+      "startSeconds": 23.6,
+      "text": "things that you would want to observe"
+    },
+    {
+      "startSeconds": 26.72,
+      "text": "the first one includes the metrics"
+    },
+    {
+      "startSeconds": 32,
+      "text": "and the metrics are the charts and the"
+    },
+    {
+      "startSeconds": 33.84,
+      "text": "graphs that you would plot to observe"
+    },
+    {
+      "startSeconds": 36.48,
+      "text": "the system's"
+    },
+    {
+      "startSeconds": 38.079,
+      "text": "health the network health"
+    },
+    {
+      "startSeconds": 40.399,
+      "text": "maybe the application health and so on"
+    },
+    {
+      "startSeconds": 42.719,
+      "text": "and so forth so you may want to monitor"
+    },
+    {
+      "startSeconds": 44.399,
+      "text": "all the parameters possible in your"
+    },
+    {
+      "startSeconds": 46.879,
+      "text": "system and you know you can map it to"
+    },
+    {
+      "startSeconds": 49.36,
+      "text": "your business school the application of"
+    },
+    {
+      "startSeconds": 51.12,
+      "text": "time and so on and the things that would"
+    },
+    {
+      "startSeconds": 53.52,
+      "text": "matter you would have to start plotting"
+    },
+    {
+      "startSeconds": 55.36,
+      "text": "them and generally you would use a time"
+    },
+    {
+      "startSeconds": 58.16,
+      "text": "series database to plot and to store the"
+    },
+    {
+      "startSeconds": 62.399,
+      "text": "data monitoring data from your systems"
+    },
+    {
+      "startSeconds": 65.6,
+      "text": "so the first thing that you would"
+    },
+    {
+      "startSeconds": 66.72,
+      "text": "monitor is the metrics the type of data"
+    },
+    {
+      "startSeconds": 69.2,
+      "text": "that you would want to"
+    },
+    {
+      "startSeconds": 70.72,
+      "text": "monitor would be metrics and this is"
+    },
+    {
+      "startSeconds": 72.799,
+      "text": "where you may have what tools such as"
+    },
+    {
+      "startSeconds": 76.72,
+      "text": "prometheus"
+    },
+    {
+      "startSeconds": 81.28,
+      "text": "which is a very popular tool today to"
+    },
+    {
+      "startSeconds": 83.36,
+      "text": "monitor and to set up an observability"
+    },
+    {
+      "startSeconds": 85.52,
+      "text": "system along with a visualizer such as"
+    },
+    {
+      "startSeconds": 88.64,
+      "text": "graffana"
+    },
+    {
+      "startSeconds": 91.04,
+      "text": "very popular duo that you would use and"
+    },
+    {
+      "startSeconds": 93.119,
+      "text": "then there are you know you know feeders"
+    },
+    {
+      "startSeconds": 95.04,
+      "text": "which will send the data to prometheus"
+    },
+    {
+      "startSeconds": 97.439,
+      "text": "and grafana and so on so the first type"
+    },
+    {
+      "startSeconds": 99.84,
+      "text": "of"
+    },
+    {
+      "startSeconds": 101.119,
+      "text": "observability system that you need is"
+    },
+    {
+      "startSeconds": 103.6,
+      "text": "the one which provides you with all"
+    },
+    {
+      "startSeconds": 105.68,
+      "text": "these metrics"
+    },
+    {
+      "startSeconds": 107.28,
+      "text": "the second type"
+    },
+    {
+      "startSeconds": 110,
+      "text": "of very important from a devops and sre"
+    },
+    {
+      "startSeconds": 113.439,
+      "text": "point of view is going to be the logs"
+    },
+    {
+      "startSeconds": 118.56,
+      "text": "logs are the treasure trove"
+    },
+    {
+      "startSeconds": 122.079,
+      "text": "of information for a debugger"
+    },
+    {
+      "startSeconds": 125.2,
+      "text": "so when applications go down or if"
+    },
+    {
+      "startSeconds": 127.36,
+      "text": "they're not behaving as expected or the"
+    },
+    {
+      "startSeconds": 130,
+      "text": "systems have a problem typically one of"
+    },
+    {
+      "startSeconds": 132.4,
+      "text": "the things that i first look at is"
+    },
+    {
+      "startSeconds": 134.239,
+      "text": "always the log files"
+    },
+    {
+      "startSeconds": 136,
+      "text": "now when you talk about the"
+    },
+    {
+      "startSeconds": 138.319,
+      "text": "building and managing infrastructure at"
+    },
+    {
+      "startSeconds": 140.16,
+      "text": "scale"
+    },
+    {
+      "startSeconds": 141.2,
+      "text": "it is not always possible to go and go"
+    },
+    {
+      "startSeconds": 145.28,
+      "text": "to each and every server and check the"
+    },
+    {
+      "startSeconds": 147.28,
+      "text": "locks for it"
+    },
+    {
+      "startSeconds": 148.48,
+      "text": "uh or when we talk about specially you"
+    },
+    {
+      "startSeconds": 150.879,
+      "text": "know"
+    },
+    {
+      "startSeconds": 151.68,
+      "text": "infrastructures with containers today"
+    },
+    {
+      "startSeconds": 153.519,
+      "text": "with container orchestration engines"
+    },
+    {
+      "startSeconds": 154.959,
+      "text": "where you'll have you know thousands and"
+    },
+    {
+      "startSeconds": 156.8,
+      "text": "thousands of containers which will get"
+    },
+    {
+      "startSeconds": 158.4,
+      "text": "deployed day in and day out and you're"
+    },
+    {
+      "startSeconds": 160.4,
+      "text": "not going to have the same containers"
+    },
+    {
+      "startSeconds": 162.48,
+      "text": "running persistently for months and"
+    },
+    {
+      "startSeconds": 165.04,
+      "text": "years so that you can go and log in and"
+    },
+    {
+      "startSeconds": 167.12,
+      "text": "check the logs there"
+    },
+    {
+      "startSeconds": 169.12,
+      "text": "so in cert such cases it's important to"
+    },
+    {
+      "startSeconds": 172.48,
+      "text": "collect the log centrally from each of"
+    },
+    {
+      "startSeconds": 174.72,
+      "text": "your server each of your container and"
+    },
+    {
+      "startSeconds": 177.36,
+      "text": "store it centrally somewhere and then"
+    },
+    {
+      "startSeconds": 179.92,
+      "text": "plot it you know and visualize the logs"
+    },
+    {
+      "startSeconds": 182.8,
+      "text": "as well and visualizing logs can also be"
+    },
+    {
+      "startSeconds": 186.64,
+      "text": "very very useful to actually analyze"
+    },
+    {
+      "startSeconds": 190,
+      "text": "your systems live what's happening with"
+    },
+    {
+      "startSeconds": 192.08,
+      "text": "the systems also go back in time and"
+    },
+    {
+      "startSeconds": 194.4,
+      "text": "when you have to debug or troubleshoot"
+    },
+    {
+      "startSeconds": 196.4,
+      "text": "you can actually replay and go and check"
+    },
+    {
+      "startSeconds": 199.2,
+      "text": "the events back in the history on that"
+    },
+    {
+      "startSeconds": 201.84,
+      "text": "timeline"
+    },
+    {
+      "startSeconds": 203.04,
+      "text": "just amazing feature to have now the"
+    },
+    {
+      "startSeconds": 205.28,
+      "text": "tools that you use typically i'm going"
+    },
+    {
+      "startSeconds": 207.519,
+      "text": "to talk about the open source tools here"
+    },
+    {
+      "startSeconds": 209.36,
+      "text": "and a very popular"
+    },
+    {
+      "startSeconds": 211.12,
+      "text": "stack that you use in open source world"
+    },
+    {
+      "startSeconds": 213.92,
+      "text": "is the elk stack where you have the"
+    },
+    {
+      "startSeconds": 216.319,
+      "text": "feeder so you have elastic search"
+    },
+    {
+      "startSeconds": 220.56,
+      "text": "which stores all this information which"
+    },
+    {
+      "startSeconds": 222.959,
+      "text": "is basically indexing all the"
+    },
+    {
+      "startSeconds": 224.48,
+      "text": "information that's your elastic search"
+    },
+    {
+      "startSeconds": 226.72,
+      "text": "and you have feeders like you know"
+    },
+    {
+      "startSeconds": 229.28,
+      "text": "logstash or kibana and that's where the"
+    },
+    {
+      "startSeconds": 231.92,
+      "text": "l of elk stacks comes from e for"
+    },
+    {
+      "startSeconds": 235.04,
+      "text": "elasticsearch l for logstash k for"
+    },
+    {
+      "startSeconds": 238.799,
+      "text": "kibana just like how prometheus and"
+    },
+    {
+      "startSeconds": 241.519,
+      "text": "grafana are you know work together most"
+    },
+    {
+      "startSeconds": 244.4,
+      "text": "of the time you will find elasticsearch"
+    },
+    {
+      "startSeconds": 246.879,
+      "text": "and kibana working in tandem"
+    },
+    {
+      "startSeconds": 249.519,
+      "text": "because kibana is a specialized"
+    },
+    {
+      "startSeconds": 251.2,
+      "text": "visualizer for elasticsearch it also"
+    },
+    {
+      "startSeconds": 253.84,
+      "text": "works with few other things similarly"
+    },
+    {
+      "startSeconds": 255.76,
+      "text": "grafana works with three other backends"
+    },
+    {
+      "startSeconds": 257.68,
+      "text": "many of the backends actually and then"
+    },
+    {
+      "startSeconds": 260.079,
+      "text": "it helps you visualize the data i am"
+    },
+    {
+      "startSeconds": 262.24,
+      "text": "going to show you the demonstration of"
+    },
+    {
+      "startSeconds": 264.16,
+      "text": "both grafana and kibana and that would"
+    },
+    {
+      "startSeconds": 267.199,
+      "text": "help you understand how this really"
+    },
+    {
+      "startSeconds": 268.88,
+      "text": "works so the second type of information"
+    },
+    {
+      "startSeconds": 271.68,
+      "text": "and the things that you observe is the"
+    },
+    {
+      "startSeconds": 273.759,
+      "text": "logs and the third part"
+    },
+    {
+      "startSeconds": 277.04,
+      "text": "of your observability"
+    },
+    {
+      "startSeconds": 278.96,
+      "text": "helps you or would help you understand"
+    },
+    {
+      "startSeconds": 281.28,
+      "text": "where the problem is especially with"
+    },
+    {
+      "startSeconds": 283.44,
+      "text": "microservices environment when things go"
+    },
+    {
+      "startSeconds": 285.68,
+      "text": "wrong"
+    },
+    {
+      "startSeconds": 286.479,
+      "text": "where is the problem you should be able"
+    },
+    {
+      "startSeconds": 287.919,
+      "text": "to point to that place or that"
+    },
+    {
+      "startSeconds": 289.759,
+      "text": "application and"
+    },
+    {
+      "startSeconds": 291.6,
+      "text": "these"
+    },
+    {
+      "startSeconds": 292.88,
+      "text": "traces"
+    },
+    {
+      "startSeconds": 295.36,
+      "text": "will help you do that so traces give you"
+    },
+    {
+      "startSeconds": 298.639,
+      "text": "basically the span information"
+    },
+    {
+      "startSeconds": 300.8,
+      "text": "how your packet or the application is"
+    },
+    {
+      "startSeconds": 302.96,
+      "text": "traveling how long it is taking in let's"
+    },
+    {
+      "startSeconds": 304.639,
+      "text": "say you have five services and uh you"
+    },
+    {
+      "startSeconds": 307.44,
+      "text": "know"
+    },
+    {
+      "startSeconds": 309.199,
+      "text": "they are working together"
+    },
+    {
+      "startSeconds": 310.88,
+      "text": "and you have a workflow where this"
+    },
+    {
+      "startSeconds": 312.56,
+      "text": "service talks to this this one through"
+    },
+    {
+      "startSeconds": 314.24,
+      "text": "this and this one talks to this this"
+    },
+    {
+      "startSeconds": 316.08,
+      "text": "also talks to this and this also talks"
+    },
+    {
+      "startSeconds": 318,
+      "text": "to this one now you have multiple spans"
+    },
+    {
+      "startSeconds": 320.16,
+      "text": "here so when your application the packet"
+    },
+    {
+      "startSeconds": 321.919,
+      "text": "is traveling it might go from here to"
+    },
+    {
+      "startSeconds": 324.32,
+      "text": "here to here to here and so on and so"
+    },
+    {
+      "startSeconds": 327.12,
+      "text": "forth or it can take another path here"
+    },
+    {
+      "startSeconds": 329.199,
+      "text": "now how long it's taking so when let's"
+    },
+    {
+      "startSeconds": 330.88,
+      "text": "say you have a problem like oh your"
+    },
+    {
+      "startSeconds": 332.8,
+      "text": "application is slowing down"
+    },
+    {
+      "startSeconds": 334.639,
+      "text": "how do you find out where the problem is"
+    },
+    {
+      "startSeconds": 336.8,
+      "text": "because you know if you just look at"
+    },
+    {
+      "startSeconds": 339.039,
+      "text": "this and find out that you know it's"
+    },
+    {
+      "startSeconds": 341.199,
+      "text": "taking 10 milliseconds and i don't know"
+    },
+    {
+      "startSeconds": 343.68,
+      "text": "where the problem is then because you"
+    },
+    {
+      "startSeconds": 345.6,
+      "text": "know you're just looking at the interval"
+    },
+    {
+      "startSeconds": 347.52,
+      "text": "uh that it hit here and then it"
+    },
+    {
+      "startSeconds": 350.32,
+      "text": "traversed and possibly took this path or"
+    },
+    {
+      "startSeconds": 352.4,
+      "text": "this path and went back you know and out"
+    },
+    {
+      "startSeconds": 355.199,
+      "text": "so that's the latency you're looking at"
+    },
+    {
+      "startSeconds": 357.039,
+      "text": "but where the problem is"
+    },
+    {
+      "startSeconds": 358.88,
+      "text": "you'll have to go and check this band"
+    },
+    {
+      "startSeconds": 360.88,
+      "text": "first let's say this is taking two"
+    },
+    {
+      "startSeconds": 362.24,
+      "text": "milliseconds"
+    },
+    {
+      "startSeconds": 363.6,
+      "text": "uh this is taking"
+    },
+    {
+      "startSeconds": 365.68,
+      "text": "you know again one milliseconds but this"
+    },
+    {
+      "startSeconds": 369.039,
+      "text": "one this particular span here"
+    },
+    {
+      "startSeconds": 371.759,
+      "text": "has a problem and it's taking about"
+    },
+    {
+      "startSeconds": 373.68,
+      "text": "seven milliseconds"
+    },
+    {
+      "startSeconds": 375.44,
+      "text": "now you know where it is taking longer"
+    },
+    {
+      "startSeconds": 378.08,
+      "text": "uh where you would have to go and"
+    },
+    {
+      "startSeconds": 379.759,
+      "text": "optimize"
+    },
+    {
+      "startSeconds": 380.8,
+      "text": "where the problem is so once you look at"
+    },
+    {
+      "startSeconds": 382.639,
+      "text": "let's say a trace you can actually go"
+    },
+    {
+      "startSeconds": 384.88,
+      "text": "and check the logs for that application"
+    },
+    {
+      "startSeconds": 388.96,
+      "text": "or you can go and look at the metrics"
+    },
+    {
+      "startSeconds": 390.96,
+      "text": "you have collected for that application"
+    },
+    {
+      "startSeconds": 393.12,
+      "text": "either with kibana or with prometheus it"
+    },
+    {
+      "startSeconds": 396.4,
+      "text": "is possible to add the metrics here you"
+    },
+    {
+      "startSeconds": 398.4,
+      "text": "know both places as well"
+    },
+    {
+      "startSeconds": 400.16,
+      "text": "now from the observability point of view"
+    },
+    {
+      "startSeconds": 403.039,
+      "text": "these are the three major things and the"
+    },
+    {
+      "startSeconds": 405.28,
+      "text": "type of data that you would observe and"
+    },
+    {
+      "startSeconds": 407.36,
+      "text": "monitor first is the metrics"
+    },
+    {
+      "startSeconds": 409.919,
+      "text": "system network application"
+    },
+    {
+      "startSeconds": 412.88,
+      "text": "everything you can generate the metrics"
+    },
+    {
+      "startSeconds": 414.479,
+      "text": "for each"
+    },
+    {
+      "startSeconds": 415.759,
+      "text": "logs"
+    },
+    {
+      "startSeconds": 417.599,
+      "text": "application"
+    },
+    {
+      "startSeconds": 418.8,
+      "text": "system"
+    },
+    {
+      "startSeconds": 419.759,
+      "text": "logs here"
+    },
+    {
+      "startSeconds": 421.759,
+      "text": "you know anything that you run inside"
+    },
+    {
+      "startSeconds": 423.36,
+      "text": "your infrastructure which generates the"
+    },
+    {
+      "startSeconds": 425.12,
+      "text": "logs you may want to just index it"
+    },
+    {
+      "startSeconds": 427.199,
+      "text": "centrally and visualize it traces"
+    },
+    {
+      "startSeconds": 430.479,
+      "text": "mainly is part of the application"
+    },
+    {
+      "startSeconds": 432.479,
+      "text": "performance monitoring"
+    },
+    {
+      "startSeconds": 434.319,
+      "text": "and you may have to modify your"
+    },
+    {
+      "startSeconds": 435.759,
+      "text": "application a little bit to send the"
+    },
+    {
+      "startSeconds": 437.36,
+      "text": "traces out to certain system there are"
+    },
+    {
+      "startSeconds": 439.84,
+      "text": "many there are the open system open"
+    },
+    {
+      "startSeconds": 441.68,
+      "text": "tracing infrastructure there are tools"
+    },
+    {
+      "startSeconds": 443.599,
+      "text": "like jagger"
+    },
+    {
+      "startSeconds": 447.039,
+      "text": "which help you visualize your traces as"
+    },
+    {
+      "startSeconds": 449.68,
+      "text": "well so"
+    },
+    {
+      "startSeconds": 451.039,
+      "text": "next thing that i do"
+    },
+    {
+      "startSeconds": 452.72,
+      "text": "after talking about the theory is when i"
+    },
+    {
+      "startSeconds": 454.96,
+      "text": "show you the demos i'm going to"
+    },
+    {
+      "startSeconds": 456.319,
+      "text": "demonstrate"
+    },
+    {
+      "startSeconds": 457.759,
+      "text": "this"
+    },
+    {
+      "startSeconds": 458.56,
+      "text": "with prometheus and grafana"
+    },
+    {
+      "startSeconds": 460.88,
+      "text": "elasticsearch elk stack"
+    },
+    {
+      "startSeconds": 463.28,
+      "text": "and the open tracing system one tool"
+    },
+    {
+      "startSeconds": 466.319,
+      "text": "with one tool that is"
+    },
+    {
+      "startSeconds": 467.919,
+      "text": "jagger"
+    },
+    {
+      "startSeconds": 469.44,
+      "text": "right so i hope this helped you"
+    },
+    {
+      "startSeconds": 471.28,
+      "text": "understand"
+    },
+    {
+      "startSeconds": 472.479,
+      "text": "what all would you want to observe"
+    },
+    {
+      "startSeconds": 475.28,
+      "text": "why what is it going to give you the"
+    },
+    {
+      "startSeconds": 477.68,
+      "text": "application tracing the logs you know"
+    },
+    {
+      "startSeconds": 480.879,
+      "text": "and the metrics right and hope this was"
+    },
+    {
+      "startSeconds": 484.24,
+      "text": "useful"
+    }
+  ]
+}

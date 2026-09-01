@@ -1,0 +1,330 @@
+{
+  "id": "iTL3Edxzgug",
+  "url": "https://www.youtube.com/watch?v=iTL3Edxzgug",
+  "fetchedAt": "2026-09-01T04:09:30.127Z",
+  "captionKind": "asr",
+  "chapters": [
+    {
+      "startSeconds": 0,
+      "label": "Running Multi-Container Apps"
+    },
+    {
+      "startSeconds": 12,
+      "label": "What is Docker Compose?"
+    },
+    {
+      "startSeconds": 29,
+      "label": "Docker Compose File Structure"
+    },
+    {
+      "startSeconds": 55,
+      "label": "Basic docker-compose up Command"
+    },
+    {
+      "startSeconds": 68,
+      "label": "Command Variations"
+    },
+    {
+      "startSeconds": 93,
+      "label": "Multi-Container Example"
+    },
+    {
+      "startSeconds": 123,
+      "label": "What Happens When You Run docker-compose up"
+    },
+    {
+      "startSeconds": 150,
+      "label": "Key Benefits"
+    },
+    {
+      "startSeconds": 178,
+      "label": "Outro"
+    }
+  ],
+  "cues": [
+    {
+      "startSeconds": 0.16,
+      "text": "Let's explore how to run multicontainer"
+    },
+    {
+      "startSeconds": 2.399,
+      "text": "applications."
+    },
+    {
+      "startSeconds": 4,
+      "text": "Docker compose in action. Orchestrating"
+    },
+    {
+      "startSeconds": 7.04,
+      "text": "multiple Docker containers with a single"
+    },
+    {
+      "startSeconds": 9.2,
+      "text": "command using Docker Compose."
+    },
+    {
+      "startSeconds": 13.36,
+      "text": "Docker Compose is a YAML based tool for"
+    },
+    {
+      "startSeconds": 15.599,
+      "text": "defining and running multicontainer"
+    },
+    {
+      "startSeconds": 17.44,
+      "text": "Docker applications with simplified"
+    },
+    {
+      "startSeconds": 19.359,
+      "text": "orchestration."
+    },
+    {
+      "startSeconds": 20.96,
+      "text": "It uses a single configuration file. It"
+    },
+    {
+      "startSeconds": 24.32,
+      "text": "can deploy with one command and handles"
+    },
+    {
+      "startSeconds": 26.72,
+      "text": "service dependencies."
+    },
+    {
+      "startSeconds": 28.72,
+      "text": "Here"
+    },
+    {
+      "startSeconds": 30.56,
+      "text": "is the structure of docker compose file."
+    },
+    {
+      "startSeconds": 33.52,
+      "text": "The file name is dockerympose.yiml."
+    },
+    {
+      "startSeconds": 37.36,
+      "text": "This yaml configuration file defines"
+    },
+    {
+      "startSeconds": 39.68,
+      "text": "services networks and volumes for your"
+    },
+    {
+      "startSeconds": 42.399,
+      "text": "application. Below is the example code."
+    },
+    {
+      "startSeconds": 46.239,
+      "text": "Version 3.8"
+    },
+    {
+      "startSeconds": 48.559,
+      "text": "services web image jinx ports 80"
+    },
+    {
+      "startSeconds": 52.48,
+      "text": "database image postgress."
+    },
+    {
+      "startSeconds": 56.719,
+      "text": "The basic docker compose up command."
+    },
+    {
+      "startSeconds": 59.6,
+      "text": "dollar docker hyphen compose up starts"
+    },
+    {
+      "startSeconds": 62.8,
+      "text": "all services defined in dockery"
+    },
+    {
+      "startSeconds": 64.96,
+      "text": "compose.iml with a single command."
+    },
+    {
+      "startSeconds": 69.76,
+      "text": "Here are some common command variations."
+    },
+    {
+      "startSeconds": 72.799,
+      "text": "Docker hyphen compose up hyphen d run"
+    },
+    {
+      "startSeconds": 76.24,
+      "text": "containers in detached mode that is"
+    },
+    {
+      "startSeconds": 78.159,
+      "text": "background. Docker hyphen compose up"
+    },
+    {
+      "startSeconds": 81.119,
+      "text": "double hyphen build images before"
+    },
+    {
+      "startSeconds": 84.24,
+      "text": "starting containers."
+    },
+    {
+      "startSeconds": 86.159,
+      "text": "docker hyphen compose up service"
+    },
+    {
+      "startSeconds": 88.08,
+      "text": "underscore name start only specific"
+    },
+    {
+      "startSeconds": 90.88,
+      "text": "service and dependencies"
+    },
+    {
+      "startSeconds": 94.72,
+      "text": "here is an example of a multicontainer"
+    },
+    {
+      "startSeconds": 96.96,
+      "text": "application a web app stack it has a"
+    },
+    {
+      "startSeconds": 100.479,
+      "text": "front-end service a database service a"
+    },
+    {
+      "startSeconds": 102.72,
+      "text": "cache service all connected and"
+    },
+    {
+      "startSeconds": 105.28,
+      "text": "orchestrated together services web image"
+    },
+    {
+      "startSeconds": 108.72,
+      "text": "jinx alpine ports 8080 col 80 API image"
+    },
+    {
+      "startSeconds": 114.32,
+      "text": "node col"
+    },
+    {
+      "startSeconds": 115.92,
+      "text": "ports 3000 col 3000"
+    },
+    {
+      "startSeconds": 118.96,
+      "text": "database image postgress 13."
+    },
+    {
+      "startSeconds": 124.159,
+      "text": "This is what happens when you run"
+    },
+    {
+      "startSeconds": 125.68,
+      "text": "dockery compose up. Number one, it reads"
+    },
+    {
+      "startSeconds": 129.2,
+      "text": "dockerympose.yiml"
+    },
+    {
+      "startSeconds": 131.36,
+      "text": "configuration."
+    },
+    {
+      "startSeconds": 133.04,
+      "text": "Number two, it creates a default network"
+    },
+    {
+      "startSeconds": 135.04,
+      "text": "for services."
+    },
+    {
+      "startSeconds": 136.8,
+      "text": "Number three, it pulls required docker"
+    },
+    {
+      "startSeconds": 138.879,
+      "text": "images if not present. Number four, it"
+    },
+    {
+      "startSeconds": 142.239,
+      "text": "creates and starts containers for each"
+    },
+    {
+      "startSeconds": 144.16,
+      "text": "service."
+    },
+    {
+      "startSeconds": 145.52,
+      "text": "Number five, it attaches to containers"
+    },
+    {
+      "startSeconds": 147.68,
+      "text": "and streams logs."
+    },
+    {
+      "startSeconds": 151.2,
+      "text": "Here are some key benefits of using"
+    },
+    {
+      "startSeconds": 153.04,
+      "text": "Docker Compose. Simplified deployment."
+    },
+    {
+      "startSeconds": 157.12,
+      "text": "Start entire application stack with"
+    },
+    {
+      "startSeconds": 159.2,
+      "text": "single command. Service coordination."
+    },
+    {
+      "startSeconds": 163.04,
+      "text": "Automatic dependency management between"
+    },
+    {
+      "startSeconds": 165.2,
+      "text": "containers."
+    },
+    {
+      "startSeconds": 166.8,
+      "text": "Environment consistency."
+    },
+    {
+      "startSeconds": 169.28,
+      "text": "Identical setup across development and"
+    },
+    {
+      "startSeconds": 171.44,
+      "text": "production. Easy configuration"
+    },
+    {
+      "startSeconds": 174.959,
+      "text": "declarative YAML based infrastructure as"
+    },
+    {
+      "startSeconds": 177.28,
+      "text": "code."
+    },
+    {
+      "startSeconds": 179.599,
+      "text": "If you like this video, hit that like"
+    },
+    {
+      "startSeconds": 181.84,
+      "text": "button and don't forget to subscribe."
+    },
+    {
+      "startSeconds": 185.36,
+      "text": "Visit codelucky.com for more such useful"
+    },
+    {
+      "startSeconds": 188.08,
+      "text": "content."
+    },
+    {
+      "startSeconds": 189.76,
+      "text": "[Music]"
+    }
+  ]
+}

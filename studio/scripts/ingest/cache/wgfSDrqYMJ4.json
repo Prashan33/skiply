@@ -1,0 +1,558 @@
+{
+  "id": "wgfSDrqYMJ4",
+  "url": "https://www.youtube.com/watch?v=wgfSDrqYMJ4",
+  "fetchedAt": "2026-09-01T04:06:57.510Z",
+  "captionKind": "manual",
+  "chapters": [
+    {
+      "startSeconds": 0,
+      "label": "Intro"
+    },
+    {
+      "startSeconds": 66,
+      "label": "Applications"
+    },
+    {
+      "startSeconds": 234,
+      "label": "Embedding Methods"
+    },
+    {
+      "startSeconds": 360,
+      "label": "Embedding Models"
+    }
+  ],
+  "cues": [
+    {
+      "startSeconds": 0.2,
+      "text": "A word on word embeddings."
+    },
+    {
+      "startSeconds": 3.837,
+      "text": "Maybe a few words."
+    },
+    {
+      "startSeconds": 5.138,
+      "text": "Word embeddings represent words as numbers,"
+    },
+    {
+      "startSeconds": 8.249,
+      "text": "specifically as numeric vectors,"
+    },
+    {
+      "startSeconds": 12.639,
+      "text": "in a way that captures the semantic relationships and contextual information."
+    },
+    {
+      "startSeconds": 17.851,
+      "text": "So that means words with similar meanings are positioned"
+    },
+    {
+      "startSeconds": 20.887,
+      "text": "close to each other, and the distance and direction between vectors"
+    },
+    {
+      "startSeconds": 24.824,
+      "text": "encode the degree of similarity between words."
+    },
+    {
+      "startSeconds": 29.015,
+      "text": "But why do we need to transform words into numbers?"
+    },
+    {
+      "startSeconds": 33.8,
+      "text": "The reason vectors are used to represent words is that"
+    },
+    {
+      "startSeconds": 36.958,
+      "text": "most machine learning algorithms are just incapable of processing"
+    },
+    {
+      "startSeconds": 40.269,
+      "text": "plain text in its raw form."
+    },
+    {
+      "startSeconds": 42.475,
+      "text": "They require numbers as input to perform any task,"
+    },
+    {
+      "startSeconds": 46.319,
+      "text": "and that's where word embeddings come in."
+    },
+    {
+      "startSeconds": 48.448,
+      "text": "So let's take a look at how word embeddings are used and the model is used to create them."
+    },
+    {
+      "startSeconds": 54.054,
+      "text": "And let's start with a look at some applications."
+    },
+    {
+      "startSeconds": 55.922,
+      "text": "Now what embeddings have become a fundamental tool"
+    },
+    {
+      "startSeconds": 59.097,
+      "text": "in the world of NLP."
+    },
+    {
+      "startSeconds": 62.39,
+      "text": "That's natural language processing."
+    },
+    {
+      "startSeconds": 66.674,
+      "text": "Natural language processing helps machines understand human language."
+    },
+    {
+      "startSeconds": 70.87,
+      "text": "Word embeddings are used in various NLP tasks, so for example,"
+    },
+    {
+      "startSeconds": 75.041,
+      "text": "you'll find them used in text classification very frequently."
+    },
+    {
+      "startSeconds": 79.687,
+      "text": "Now in text classification, word embeddings are often used in tasks such as"
+    },
+    {
+      "startSeconds": 84.215,
+      "text": "spam detection and topic categorization."
+    },
+    {
+      "startSeconds": 87.587,
+      "text": "Another common task is NER,"
+    },
+    {
+      "startSeconds": 91.591,
+      "text": "that's an acronym for named entity recognition,"
+    },
+    {
+      "startSeconds": 95.261,
+      "text": "and there is used to identify and classify entities in text."
+    },
+    {
+      "startSeconds": 99.065,
+      "text": "And an entity is like a name of a person or a place or an organization."
+    },
+    {
+      "startSeconds": 103.87,
+      "text": "Now, word embeddings can also help with tasks"
+    },
+    {
+      "startSeconds": 107.24,
+      "text": "related to word similarity and word analogy tasks."
+    },
+    {
+      "startSeconds": 113.279,
+      "text": "So, for example, the king is the queen as man is to a woman,"
+    },
+    {
+      "startSeconds": 118.384,
+      "text": "and then another example is in Q&A."
+    },
+    {
+      "startSeconds": 121.488,
+      "text": "So question and answering systems"
+    },
+    {
+      "startSeconds": 124.699,
+      "text": "they can benefit from word embeddings for measuring semantic"
+    },
+    {
+      "startSeconds": 128.652,
+      "text": "similarities between words or documents for tasks like"
+    },
+    {
+      "startSeconds": 131.777,
+      "text": "clustering related articles, or finding similar documents, or"
+    },
+    {
+      "startSeconds": 135.466,
+      "text": "recommending similar items."
+    },
+    {
+      "startSeconds": 137.804,
+      "text": "Now, word embeddings are created by trained models on a large corpus of text."
+    },
+    {
+      "startSeconds": 143.009,
+      "text": "So maybe, like all of Wikipedia,"
+    },
+    {
+      "startSeconds": 145.621,
+      "text": "the process begins with preprocessing the text,"
+    },
+    {
+      "startSeconds": 147.945,
+      "text": "including tokenization and removing stopwords and punctuation."
+    },
+    {
+      "startSeconds": 151.251,
+      "text": "A sliding context window identifies target and context words,"
+    },
+    {
+      "startSeconds": 154.954,
+      "text": "allowing the model to learn word relationships."
+    },
+    {
+      "startSeconds": 157.79,
+      "text": "Then the model is trained to predict based on their context."
+    },
+    {
+      "startSeconds": 160.927,
+      "text": "Positioning semantically similar words close together"
+    },
+    {
+      "startSeconds": 163.459,
+      "text": "in the vector space and throughout the training,"
+    },
+    {
+      "startSeconds": 166.566,
+      "text": "the model parameters are adjusted to minimize prediction errors."
+    },
+    {
+      "startSeconds": 170.503,
+      "text": "So what does this look like?"
+    },
+    {
+      "startSeconds": 173.306,
+      "text": "Well, let's start with a super small corpus of just six words."
+    },
+    {
+      "startSeconds": 178.678,
+      "text": "Here they are."
+    },
+    {
+      "startSeconds": 180.079,
+      "text": "Now we'll represent each word as a three dimensional vector."
+    },
+    {
+      "startSeconds": 185.485,
+      "text": "So each dimension"
+    },
+    {
+      "startSeconds": 187.153,
+      "text": "has a numeric value creating a unique vector for each word."
+    },
+    {
+      "startSeconds": 191.457,
+      "text": "And these values represent the word's position"
+    },
+    {
+      "startSeconds": 193.593,
+      "text": "in a continuous three dimensional vector space."
+    },
+    {
+      "startSeconds": 195.962,
+      "text": "And if you look closely, you can see that words with similar"
+    },
+    {
+      "startSeconds": 200.233,
+      "text": "meanings or contexts have similar vector representations."
+    },
+    {
+      "startSeconds": 204.437,
+      "text": "So, for instance, the vectors for apple and for orange"
+    },
+    {
+      "startSeconds": 208.441,
+      "text": "are close together, reflecting this semantic relationship."
+    },
+    {
+      "startSeconds": 212.145,
+      "text": "Likewise, the vectors for happy and sad have opposite directions,"
+    },
+    {
+      "startSeconds": 216.116,
+      "text": "indicating their contrasting meanings."
+    },
+    {
+      "startSeconds": 218.685,
+      "text": "Now, of course, in real life, it's not this simple."
+    },
+    {
+      "startSeconds": 222.088,
+      "text": "A corpus of six words isn't going to be too helpful in practice,"
+    },
+    {
+      "startSeconds": 225.758,
+      "text": "and actual word embeddings typically have hundreds of dimensions, not just three."
+    },
+    {
+      "startSeconds": 230.163,
+      "text": "To capture more intricate relationships and nuances in meaning."
+    },
+    {
+      "startSeconds": 234.701,
+      "text": "Now, there are two fundamental approaches to how word"
+    },
+    {
+      "startSeconds": 238.071,
+      "text": "embedding methods generate effective representations for words."
+    },
+    {
+      "startSeconds": 242.308,
+      "text": "So let's take a look at some of these embedding methods."
+    },
+    {
+      "startSeconds": 246.512,
+      "text": "And we'll start with the first one which is frequency."
+    },
+    {
+      "startSeconds": 252.552,
+      "text": "So frequency based embeddings."
+    },
+    {
+      "startSeconds": 256.923,
+      "text": "Now frequency based embeddings are word"
+    },
+    {
+      "startSeconds": 259.792,
+      "text": "representations that are derived from the frequency of words in a corpus."
+    },
+    {
+      "startSeconds": 264.197,
+      "text": "They're based on the idea that the importance or the significance of a word"
+    },
+    {
+      "startSeconds": 267.467,
+      "text": "can be inferred from how frequently it occurs in the text."
+    },
+    {
+      "startSeconds": 271.314,
+      "text": "Now, one such embedding of frequency based is called TF-IDF"
+    },
+    {
+      "startSeconds": 279.051,
+      "text": "that stands for Term Frequency Inverse Document Frequency."
+    },
+    {
+      "startSeconds": 283.716,
+      "text": "TF-IDF highlights words that are frequent"
+    },
+    {
+      "startSeconds": 287.22,
+      "text": "within a specific document, but are rare across the entire corpus."
+    },
+    {
+      "startSeconds": 291.791,
+      "text": "So, for example, in a document about coffee, TF-IDF would emphasize words"
+    },
+    {
+      "startSeconds": 296.896,
+      "text": "like espresso or cappuccino, which might appear often"
+    },
+    {
+      "startSeconds": 300.733,
+      "text": "in that document, but rarely in others about different topics."
+    },
+    {
+      "startSeconds": 304.604,
+      "text": "Common words like the or and, which appear frequently across all documents,"
+    },
+    {
+      "startSeconds": 309.809,
+      "text": "would receive low TF-IDF based scores."
+    },
+    {
+      "startSeconds": 314.614,
+      "text": "Now another embedding type"
+    },
+    {
+      "startSeconds": 317.183,
+      "text": "is called prediction based embeddings"
+    },
+    {
+      "startSeconds": 321.721,
+      "text": "and prediction based embeddings."
+    },
+    {
+      "startSeconds": 324.39,
+      "text": "They capture semantic relationships and contextual information between words."
+    },
+    {
+      "startSeconds": 329.762,
+      "text": "So, for example, in the sentences, \"the dog is barking loudly.\" and \"the dog is wagging its tail.\""
+    },
+    {
+      "startSeconds": 336.936,
+      "text": "A prediction based model would learn to associate dog"
+    },
+    {
+      "startSeconds": 340.74,
+      "text": "with words like bark, wag, and tail."
+    },
+    {
+      "startSeconds": 343.843,
+      "text": "This allows these models to create a single fixed representation"
+    },
+    {
+      "startSeconds": 347.146,
+      "text": "for dog that encompasses various, well, dog related concepts."
+    },
+    {
+      "startSeconds": 351.851,
+      "text": "Prediction based embeddings."
+    },
+    {
+      "startSeconds": 353.353,
+      "text": "They excel at separating words with close meanings,"
+    },
+    {
+      "startSeconds": 356.422,
+      "text": "and can manage the various senses in which a word may be used."
+    },
+    {
+      "startSeconds": 360.66,
+      "text": "Now there are various models for generating word embeddings."
+    },
+    {
+      "startSeconds": 365.131,
+      "text": "One of the most popular is called word2vec"
+    },
+    {
+      "startSeconds": 370.87,
+      "text": "that was developed by Google in 2013."
+    },
+    {
+      "startSeconds": 373.906,
+      "text": "Now word2vec has two main architectures."
+    },
+    {
+      "startSeconds": 377.543,
+      "text": "There's something called c b, o, w"
+    },
+    {
+      "startSeconds": 381.18,
+      "text": "and there's something called skip-gram,"
+    },
+    {
+      "startSeconds": 384.805,
+      "text": "and CBOW, that's an acronym for Continuous Bag of Words."
+    },
+    {
+      "startSeconds": 389.355,
+      "text": "Now CBOW predicts a target word based on its surrounding context words."
+    },
+    {
+      "startSeconds": 394.627,
+      "text": "Well, skip-gram does the opposite,"
+    },
+    {
+      "startSeconds": 396.763,
+      "text": "predicting the context words given a target word."
+    },
+    {
+      "startSeconds": 399.899,
+      "text": "Now another popular method is called GLOVE."
+    },
+    {
+      "startSeconds": 403.636,
+      "text": "Also an acronym, that one stands for Global Vectors for Word Representation."
+    },
+    {
+      "startSeconds": 409.101,
+      "text": "That was created at Stanford University in 2014"
+    },
+    {
+      "startSeconds": 412.378,
+      "text": "and that uses co-occurrence statistics to create word vectors."
+    },
+    {
+      "startSeconds": 416.582,
+      "text": "Now, these models, they differ in their approach."
+    },
+    {
+      "startSeconds": 419.085,
+      "text": "What's a vec that focuses on learning from the immediate context around each word?"
+    },
+    {
+      "startSeconds": 423.856,
+      "text": "While glove takes a broader view by analyzing"
+    },
+    {
+      "startSeconds": 426.392,
+      "text": "how often words appear together across the entire corpus,"
+    },
+    {
+      "startSeconds": 430.329,
+      "text": "then uses this information to create word vectors."
+    },
+    {
+      "startSeconds": 433.633,
+      "text": "Now, while these two word embedding models continue to be valuable tools in NLP,"
+    },
+    {
+      "startSeconds": 439.005,
+      "text": "the field has seen some significant advances with the emergence"
+    },
+    {
+      "startSeconds": 441.941,
+      "text": "of new tech, particularly transformers."
+    },
+    {
+      "startSeconds": 445.011,
+      "text": "While traditional word embeddings assign a fixed vector to each word,"
+    },
+    {
+      "startSeconds": 449.315,
+      "text": "transformer models use a different type of embedding,"
+    },
+    {
+      "startSeconds": 453.352,
+      "text": "and it's called a contextual based embedding."
+    },
+    {
+      "startSeconds": 457.59,
+      "text": "Now, contextual based embeddings are where"
+    },
+    {
+      "startSeconds": 460.827,
+      "text": "the representation of a word changes based on its surrounding context."
+    },
+    {
+      "startSeconds": 465.198,
+      "text": "So, for example, in a transformer model,"
+    },
+    {
+      "startSeconds": 467.166,
+      "text": "the word bank would have different representations in the sentence"
+    },
+    {
+      "startSeconds": 470.97,
+      "text": "I'm going to the bank to deposit money and I'm sitting on the bank of a river."
+    },
+    {
+      "startSeconds": 476.576,
+      "text": "This context sensitivity allows these models to capture"
+    },
+    {
+      "startSeconds": 479.312,
+      "text": "more nuanced meanings and relationships between words, which has led to all sorts"
+    },
+    {
+      "startSeconds": 483.816,
+      "text": "of improvements in the various fields of NLP tasks."
+    },
+    {
+      "startSeconds": 488.12,
+      "text": "So that's word embeddings,"
+    },
+    {
+      "startSeconds": 490.204,
+      "text": "from simple numeric vectors to complex representations."
+    },
+    {
+      "startSeconds": 495.127,
+      "text": "Word embeddings have revolutionized how machines understand and process human language."
+    },
+    {
+      "startSeconds": 500.466,
+      "text": "Proving that transforming words into numbers is indeed a powerful tool"
+    },
+    {
+      "startSeconds": 505.171,
+      "text": "for making sense of our linguistic world."
+    }
+  ]
+}

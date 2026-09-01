@@ -1,0 +1,2862 @@
+{
+  "id": "mr_J5v398Qo",
+  "url": "https://www.youtube.com/watch?v=mr_J5v398Qo",
+  "fetchedAt": "2026-09-01T04:09:11.237Z",
+  "captionKind": "manual",
+  "chapters": [
+    {
+      "startSeconds": 0,
+      "label": "Introduction"
+    },
+    {
+      "startSeconds": 50,
+      "label": "Schema migrations"
+    },
+    {
+      "startSeconds": 120,
+      "label": "Recipe"
+    },
+    {
+      "startSeconds": 175,
+      "label": "Change type of column"
+    },
+    {
+      "startSeconds": 200,
+      "label": "Migrations"
+    },
+    {
+      "startSeconds": 580,
+      "label": "Locktimeout"
+    },
+    {
+      "startSeconds": 770,
+      "label": "Exponential decay"
+    },
+    {
+      "startSeconds": 910,
+      "label": "How can we empower people"
+    },
+    {
+      "startSeconds": 1010,
+      "label": "New column and new table"
+    },
+    {
+      "startSeconds": 1443,
+      "label": "Tablecloth analogy"
+    },
+    {
+      "startSeconds": 1692,
+      "label": "Wrapup"
+    }
+  ],
+  "cues": [
+    {
+      "startSeconds": 0.44,
+      "text": "Hello, this is, uh, I'm Nikolai, and my co-host is Michael."
+    },
+    {
+      "startSeconds": 4.49,
+      "text": "Hi Michael."
+    },
+    {
+      "startSeconds": 5.915,
+      "text": "Hello Cola."
+    },
+    {
+      "startSeconds": 8.51,
+      "text": "So we will be talking today about my, one of"
+    },
+    {
+      "startSeconds": 11.57,
+      "text": "my favorite topics, most favorite topics, and, um, I"
+    },
+    {
+      "startSeconds": 16.459,
+      "text": "think it's very, quite often under, um, underestimated"
+    },
+    {
+      "startSeconds": 22.58,
+      "text": "when we grow, when our database and workloads grow."
+    },
+    {
+      "startSeconds": 26.69,
+      "text": "Uh, it'll be about."
+    },
+    {
+      "startSeconds": 30.365,
+      "text": "Migrations, right?"
+    },
+    {
+      "startSeconds": 31.444,
+      "text": "Or, but what kind of migrations?"
+    },
+    {
+      "startSeconds": 33.245,
+      "text": "Migrations is not a good term."
+    },
+    {
+      "startSeconds": 34.535,
+      "text": "I don't like it, but we all use it because of some, I guess"
+    },
+    {
+      "startSeconds": 38.134,
+      "text": "some Ruby guys now, right?"
+    },
+    {
+      "startSeconds": 39.544,
+      "text": "Or where did it start from?"
+    },
+    {
+      "startSeconds": 41.675,
+      "text": "Database migrations."
+    },
+    {
+      "startSeconds": 43.625,
+      "text": "It sounds like we migrating from one place to another,"
+    },
+    {
+      "startSeconds": 46.324,
+      "text": "but, uh, actually it's about schema changes."
+    },
+    {
+      "startSeconds": 50.509,
+      "text": "Yeah, I've heard the phrase scheme of migrations as well."
+    },
+    {
+      "startSeconds": 53.479,
+      "text": "Uh, so we are talking specifically about, and I know"
+    },
+    {
+      "startSeconds": 56.179,
+      "text": "this is implicit in what you are saying, but I don't think"
+    },
+    {
+      "startSeconds": 58.399,
+      "text": "everybody, um, has this implicit but zero downtime migration."
+    },
+    {
+      "startSeconds": 62.479,
+      "text": "So how do we, how do we do ache of migration in a way"
+    },
+    {
+      "startSeconds": 66.59,
+      "text": "that doesn't block rights or reads or Yeah, absolutely."
+    },
+    {
+      "startSeconds": 72.169,
+      "text": "Something that,"
+    },
+    {
+      "startSeconds": 73.28,
+      "text": "it's a better"
+    },
+    {
+      "startSeconds": 73.895,
+      "text": "If we're, yeah, well, anybody that's building products,"
+    },
+    {
+      "startSeconds": 77.494,
+      "text": "building applications, managing a database, uh, if it has any"
+    },
+    {
+      "startSeconds": 81.485,
+      "text": "success at all, it's gonna change over time, right?"
+    },
+    {
+      "startSeconds": 83.765,
+      "text": "You're gonna want to add things, you're gonna"
+    },
+    {
+      "startSeconds": 85.324,
+      "text": "wanna change things."
+    },
+    {
+      "startSeconds": 86.225,
+      "text": "You might even wanna rename"
+    },
+    {
+      "startSeconds": 87.41,
+      "text": "Three deployments per day as usual."
+    },
+    {
+      "startSeconds": 91.13,
+      "text": "Yeah. Ab Yeah."
+    },
+    {
+      "startSeconds": 92.54,
+      "text": "But, and a lot of those changes, uh, by default,"
+    },
+    {
+      "startSeconds": 96.71,
+      "text": "the, the way that they happen take locks, right?"
+    },
+    {
+      "startSeconds": 100.19,
+      "text": "So, uh, those locks on small tables nice and fast, but once"
+    },
+    {
+      "startSeconds": 104.425,
+      "text": "they start getting bigger, those locks can be really problematic."
+    },
+    {
+      "startSeconds": 107.455,
+      "text": "So we're talking about changes that can cause these heavy"
+    },
+    {
+      "startSeconds": 110.66,
+      "text": "locks for long periods of time and alternatives to"
+    },
+    {
+      "startSeconds": 114.185,
+      "text": "or or cannot acquire Lock,"
+    },
+    {
+      "startSeconds": 117.965,
+      "text": "Yep. Yep."
+    },
+    {
+      "startSeconds": 118.595,
+      "text": "Absolutely."
+    },
+    {
+      "startSeconds": 119.555,
+      "text": "Also"
+    },
+    {
+      "startSeconds": 119.959,
+      "text": "this is more, yeah, more dangerous."
+    },
+    {
+      "startSeconds": 122.239,
+      "text": "And, uh, it's, it's, um, it usually remains unnoticed"
+    },
+    {
+      "startSeconds": 126.229,
+      "text": "until some level of workload."
+    },
+    {
+      "startSeconds": 128.449,
+      "text": "Uh, but I have a good recipe and probably this recipe"
+    },
+    {
+      "startSeconds": 131.51,
+      "text": "will work for everyone."
+    },
+    {
+      "startSeconds": 132.679,
+      "text": "And we will, we will just end this episode as"
+    },
+    {
+      "startSeconds": 134.845,
+      "text": "promised long earlier, much earlier than u usual, when."
+    },
+    {
+      "startSeconds": 138.785,
+      "text": "Latest our episodes."
+    },
+    {
+      "startSeconds": 140.375,
+      "text": "So we, we promised to not to exceed 30 minutes"
+    },
+    {
+      "startSeconds": 143.584,
+      "text": "to ourselves and to our, some of our listeners,"
+    },
+    {
+      "startSeconds": 146.045,
+      "text": "and let's try to do it."
+    },
+    {
+      "startSeconds": 147.244,
+      "text": "I, I, I see a timer here."
+    },
+    {
+      "startSeconds": 149.855,
+      "text": "So recipe is simple."
+    },
+    {
+      "startSeconds": 151.774,
+      "text": "Let's have ID column with perfect UL ID or"
+    },
+    {
+      "startSeconds": 157.894,
+      "text": "U I D version 7 98."
+    },
+    {
+      "startSeconds": 160.385,
+      "text": "I don't remember some ID column that can be inter eight."
+    },
+    {
+      "startSeconds": 163.834,
+      "text": "Just don't use inter four, right?"
+    },
+    {
+      "startSeconds": 166.144,
+      "text": "N J."
+    },
+    {
+      "startSeconds": 167.495,
+      "text": "B or without B, it depends, but column, and that's it."
+    },
+    {
+      "startSeconds": 173.9,
+      "text": "Well, actually the integer, the integer four, integer eight,"
+    },
+    {
+      "startSeconds": 178.04,
+      "text": "uh, question is a really good point, and that the reason"
+    },
+    {
+      "startSeconds": 181.01,
+      "text": "that that's problematic is because changing the type of a"
+    },
+    {
+      "startSeconds": 183.95,
+      "text": "column is one of these issues."
+    },
+    {
+      "startSeconds": 186.41,
+      "text": "It was one of these operations that takes, uh,"
+    },
+    {
+      "startSeconds": 190.174,
+      "text": "I know it very well."
+    },
+    {
+      "startSeconds": 191.225,
+      "text": "I I've earned more than a hundred K on it."
+    },
+    {
+      "startSeconds": 194.524,
+      "text": "Just on this sold task for multiple companies, at"
+    },
+    {
+      "startSeconds": 197.825,
+      "text": "least four companies, so,"
+    },
+    {
+      "startSeconds": 200.555,
+      "text": "yeah."
+    },
+    {
+      "startSeconds": 201.785,
+      "text": "But yeah, so obvi, obvi, I think we could probably do, uh, quite"
+    },
+    {
+      "startSeconds": 205.175,
+      "text": "a long time on that issue alone."
+    },
+    {
+      "startSeconds": 206.83,
+      "text": "But my, my main point was that it's because that"
+    },
+    {
+      "startSeconds": 209.855,
+      "text": "requires a migration."
+    },
+    {
+      "startSeconds": 211.025,
+      "text": "So that is one of the, one of the category of issues here."
+    },
+    {
+      "startSeconds": 214.565,
+      "text": "I guess it would take a long time to discuss the details"
+    },
+    {
+      "startSeconds": 217.145,
+      "text": "of every single one, so I was hoping we'd give some, maybe,"
+    },
+    {
+      "startSeconds": 221.855,
+      "text": "Newbies, a little bit of a, an insight into what kinds"
+    },
+    {
+      "startSeconds": 225.605,
+      "text": "of things can cause problems."
+    },
+    {
+      "startSeconds": 227.524,
+      "text": "Uh, you don't understand."
+    },
+    {
+      "startSeconds": 228.505,
+      "text": "Let's, let's put everything to Jason and, and we"
+    },
+    {
+      "startSeconds": 231.29,
+      "text": "don't need migrations."
+    },
+    {
+      "startSeconds": 232.255,
+      "text": "That's it."
+    },
+    {
+      "startSeconds": 232.584,
+      "text": "uh, I understood, but I thought you were like being facetious."
+    },
+    {
+      "startSeconds": 235.969,
+      "text": "Right?"
+    },
+    {
+      "startSeconds": 236.209,
+      "text": "We get like, that's the whole NoSQL argument, right?"
+    },
+    {
+      "startSeconds": 239.089,
+      "text": "They, they made the, they had the marketing"
+    },
+    {
+      "startSeconds": 241.075,
+      "text": "claim of schemaless."
+    },
+    {
+      "startSeconds": 242.299,
+      "text": "Don't worry about migrations ever."
+    },
+    {
+      "startSeconds": 244.195,
+      "text": "And, and there's some compelling stuff in there until, but"
+    },
+    {
+      "startSeconds": 247.239,
+      "text": "the, but then the benefit of relation database is, a lot"
+    },
+    {
+      "startSeconds": 249.529,
+      "text": "of the reason a lot of us love them is we get validation"
+    },
+    {
+      "startSeconds": 252.274,
+      "text": "just mention that, uh, multiple banks and financial"
+    },
+    {
+      "startSeconds": 255.545,
+      "text": "organizations, so, and also e-commerce, uh, organizations,"
+    },
+    {
+      "startSeconds": 258.605,
+      "text": "uh, used, uh, this approach, uh, just on for everything"
+    },
+    {
+      "startSeconds": 262.235,
+      "text": "and Schemeless and or."
+    },
+    {
+      "startSeconds": 263.78,
+      "text": "Like how, how it's cold, uh, and, uh, it, um,"
+    },
+    {
+      "startSeconds": 269.27,
+      "text": "doesn't work well for data."
+    },
+    {
+      "startSeconds": 271.01,
+      "text": "You, you, uh, where you need good quality"
+    },
+    {
+      "startSeconds": 274.34,
+      "text": "of your data, right?"
+    },
+    {
+      "startSeconds": 275.21,
+      "text": "For example, billing, billing system."
+    },
+    {
+      "startSeconds": 277.46,
+      "text": "And this, this is on one hand, on and on another hand."
+    },
+    {
+      "startSeconds": 281.06,
+      "text": "Also, uh, I can, uh, encourage listeners to read the article"
+    },
+    {
+      "startSeconds": 287.51,
+      "text": "from Michael Stone Breaker."
+    },
+    {
+      "startSeconds": 289.25,
+      "text": "It was an e DB blog."
+    },
+    {
+      "startSeconds": 291.23,
+      "text": "Uh, co-authored with, uh, Albert Hernandez."
+    },
+    {
+      "startSeconds": 294.5,
+      "text": "Yep."
+    },
+    {
+      "startSeconds": 295.13,
+      "text": "Right about, uh, how bad it is to avoid,"
+    },
+    {
+      "startSeconds": 299.479,
+      "text": "uh, good normalization."
+    },
+    {
+      "startSeconds": 301.64,
+      "text": "So normalization, generalization should be, uh, in, in our"
+    },
+    {
+      "startSeconds": 305.239,
+      "text": "toolbox, and both, by the way, and the, if we talk"
+    },
+    {
+      "startSeconds": 309.354,
+      "text": "about it, uh, schema changes are inevitable, right?"
+    },
+    {
+      "startSeconds": 312.81,
+      "text": "So, yeah."
+    },
+    {
+      "startSeconds": 313.789,
+      "text": "Let, I, I want to just to exclude this because"
+    },
+    {
+      "startSeconds": 316.369,
+      "text": "some, someone can ask, uh, why do we need it at all?"
+    },
+    {
+      "startSeconds": 319.429,
+      "text": "The schema changes."
+    },
+    {
+      "startSeconds": 320.99,
+      "text": "But Right."
+    },
+    {
+      "startSeconds": 321.98,
+      "text": "Let's, let's start from like, I agree with you."
+    },
+    {
+      "startSeconds": 324.08,
+      "text": "Let's start from some, from something simple."
+    },
+    {
+      "startSeconds": 326.42,
+      "text": "You try to add a column and it's, it's very"
+    },
+    {
+      "startSeconds": 330.32,
+      "text": "simple column without defaults, without anything."
+    },
+    {
+      "startSeconds": 334.19,
+      "text": "Like, I just want some small column on the"
+    },
+    {
+      "startSeconds": 336.98,
+      "text": "right side of my table."
+    },
+    {
+      "startSeconds": 338.695,
+      "text": "That's it."
+    },
+    {
+      "startSeconds": 339.83,
+      "text": "And suddenly you have traffic, uh, went down for many minutes."
+    },
+    {
+      "startSeconds": 343.7,
+      "text": "What happened?"
+    },
+    {
+      "startSeconds": 347,
+      "text": "I mean, traffic to this table, it's like partial down times."
+    },
+    {
+      "startSeconds": 349.94,
+      "text": "Other tables are accessible, but this table"
+    },
+    {
+      "startSeconds": 351.83,
+      "text": "even sells are blocked."
+    },
+    {
+      "startSeconds": 354.86,
+      "text": "What happened?"
+    },
+    {
+      "startSeconds": 356.54,
+      "text": "What do you think?"
+    },
+    {
+      "startSeconds": 358.055,
+      "text": "Something waiting on a lock."
+    },
+    {
+      "startSeconds": 359.435,
+      "text": "Right?"
+    },
+    {
+      "startSeconds": 359.825,
+      "text": "Like something gets stuck behind that."
+    },
+    {
+      "startSeconds": 361.895,
+      "text": "Yeah."
+    },
+    {
+      "startSeconds": 362.72,
+      "text": "It's, I think this is something that eventually should be"
+    },
+    {
+      "startSeconds": 366.08,
+      "text": "improved in pos, right?"
+    },
+    {
+      "startSeconds": 368.66,
+      "text": "It, it"
+    },
+    {
+      "startSeconds": 369.155,
+      "text": "retries or how, how would you."
+    },
+    {
+      "startSeconds": 372.29,
+      "text": "right?"
+    },
+    {
+      "startSeconds": 372.59,
+      "text": "So, We have created this concurrently."
+    },
+    {
+      "startSeconds": 375.59,
+      "text": "We can, we have two stage procedure to create various,"
+    },
+    {
+      "startSeconds": 381.32,
+      "text": "um, constraints like form keys or check constraints"
+    },
+    {
+      "startSeconds": 385.82,
+      "text": "or, or, or unique constraints and unique index of course."
+    },
+    {
+      "startSeconds": 390.425,
+      "text": "Uh, concurrently."
+    },
+    {
+      "startSeconds": 391.145,
+      "text": "So we have, we have tools to avoid the long, exclusive locks."
+    },
+    {
+      "startSeconds": 394.895,
+      "text": "Long, uh, exclusive locks are inevitable to adjust."
+    },
+    {
+      "startSeconds": 397.655,
+      "text": "Uh, sche mine in system catalogs brief, at least brief"
+    },
+    {
+      "startSeconds": 403.535,
+      "text": "exclusive lock is needed, but there are two big problems."
+    },
+    {
+      "startSeconds": 407.825,
+      "text": "Uh, at least two very big problems first."
+    },
+    {
+      "startSeconds": 412.215,
+      "text": "Okay."
+    },
+    {
+      "startSeconds": 412.535,
+      "text": "Three."
+    },
+    {
+      "startSeconds": 413.405,
+      "text": "First, we first is very obvious we cause full table rewrite."
+    },
+    {
+      "startSeconds": 418.835,
+      "text": "For example, if you change interval four to inter eight"
+    },
+    {
+      "startSeconds": 422.345,
+      "text": "with with single live, single comment alter table arone,"
+    },
+    {
+      "startSeconds": 427.625,
+      "text": "you'll cause full table re rewrite and if it has"
+    },
+    {
+      "startSeconds": 431.225,
+      "text": "one, Billion rows probably."
+    },
+    {
+      "startSeconds": 433.68,
+      "text": "This is when you think, oh, it's already 50% of capacity,"
+    },
+    {
+      "startSeconds": 437.34,
+      "text": "which is 2.1 billions, roughly."
+    },
+    {
+      "startSeconds": 440.67,
+      "text": "This is when you already start be being nervous and,"
+    },
+    {
+      "startSeconds": 443.31,
+      "text": "uh, try to do something."
+    },
+    {
+      "startSeconds": 444.659,
+      "text": "In this case, full table rewrite will cause very long,"
+    },
+    {
+      "startSeconds": 447.15,
+      "text": "uh, lock and nobody will, will be able to talk to this table."
+    },
+    {
+      "startSeconds": 450.99,
+      "text": "But this is obvious, right?"
+    },
+    {
+      "startSeconds": 451.98,
+      "text": "We, we do some work, uh, while still keeping holding this."
+    },
+    {
+      "startSeconds": 459.5,
+      "text": "Exclusive lock, of course, even cellex are not possible."
+    },
+    {
+      "startSeconds": 463.19,
+      "text": "There is another problem, slightly like lighter problem,"
+    },
+    {
+      "startSeconds": 466.64,
+      "text": "problem when we, uh, don't need to rewrite whole table, but"
+    },
+    {
+      "startSeconds": 471.26,
+      "text": "we need to at least scan it at least once to, to check that."
+    },
+    {
+      "startSeconds": 474.95,
+      "text": "For example, constraints is, uh, not violated by existing rows."
+    },
+    {
+      "startSeconds": 480.68,
+      "text": "So it's just read, but still long because"
+    },
+    {
+      "startSeconds": 483.32,
+      "text": "billion rows, right?"
+    },
+    {
+      "startSeconds": 484.58,
+      "text": "And during this we also hold this exclusive law, but these"
+    },
+    {
+      "startSeconds": 487.79,
+      "text": "two problems are quite obvious."
+    },
+    {
+      "startSeconds": 489.475,
+      "text": "There is one particular problem with hits everyone, and we"
+    },
+    {
+      "startSeconds": 493.79,
+      "text": "don't have anything inside out of a boxer inside POCUS itself."
+    },
+    {
+      "startSeconds": 498.965,
+      "text": "And, uh, people just keep, no, not noticing it until they"
+    },
+    {
+      "startSeconds": 502.715,
+      "text": "reach some thousands of TPSs."
+    },
+    {
+      "startSeconds": 504.905,
+      "text": "And this problem is nasty."
+    },
+    {
+      "startSeconds": 506.104,
+      "text": "It's like we try to obtain our lock for one millisecond"
+    },
+    {
+      "startSeconds": 511.535,
+      "text": "or less just to adjust our system catalogs, but we cannot"
+    },
+    {
+      "startSeconds": 514.66,
+      "text": "because for example, uh, somebody read from something"
+    },
+    {
+      "startSeconds": 519.995,
+      "text": "from this table and didn't close transaction or still reading"
+    },
+    {
+      "startSeconds": 522.545,
+      "text": "from it, or OWA is running in."
+    },
+    {
+      "startSeconds": 527.465,
+      "text": "Non-regular mode in transaction idea,"
+    },
+    {
+      "startSeconds": 530.495,
+      "text": "wraparound prevention mode."
+    },
+    {
+      "startSeconds": 532.205,
+      "text": "And in this case, auto vacuum doesn't yield so"
+    },
+    {
+      "startSeconds": 536.225,
+      "text": "it won't auto kill itself."
+    },
+    {
+      "startSeconds": 539.105,
+      "text": "Uh, in this case, uh, we are need just wait to this"
+    },
+    {
+      "startSeconds": 545.045,
+      "text": "lock to be acquired and this is easy to see in producer"
+    },
+    {
+      "startSeconds": 548.195,
+      "text": "activity, weight event."
+    },
+    {
+      "startSeconds": 550.265,
+      "text": "For our session."
+    },
+    {
+      "startSeconds": 551.525,
+      "text": "Right."
+    },
+    {
+      "startSeconds": 552.635,
+      "text": "But the problem is why it's nest."
+    },
+    {
+      "startSeconds": 554.705,
+      "text": "Why is it nest?"
+    },
+    {
+      "startSeconds": 555.515,
+      "text": "It's okay to be blocked."
+    },
+    {
+      "startSeconds": 556.835,
+      "text": "Uh, if it, if it's only about us, right?"
+    },
+    {
+      "startSeconds": 559.265,
+      "text": "But the problem is, uh, we have a long line of all other"
+    },
+    {
+      "startSeconds": 562.21,
+      "text": "transactions who try to even read from this table and they"
+    },
+    {
+      "startSeconds": 566.855,
+      "text": "form long line behind us waiting if we will succeed or fail."
+    },
+    {
+      "startSeconds": 574.715,
+      "text": "This is it."
+    },
+    {
+      "startSeconds": 575.465,
+      "text": "This is our like, landscape of problems with."
+    },
+    {
+      "startSeconds": 578.75,
+      "text": "Making Skima changes."
+    },
+    {
+      "startSeconds": 581.01,
+      "text": "Yeah."
+    },
+    {
+      "startSeconds": 581.375,
+      "text": "I feel like you d dove into kind of like, I know it's"
+    },
+    {
+      "startSeconds": 584.075,
+      "text": "one of the simpler examples, but it's also one of the"
+    },
+    {
+      "startSeconds": 586.145,
+      "text": "more complex ones, right?"
+    },
+    {
+      "startSeconds": 587.555,
+      "text": "Like it's, it's one of those things that looks"
+    },
+    {
+      "startSeconds": 589.475,
+      "text": "fine in a lot of them,"
+    },
+    {
+      "startSeconds": 591.2,
+      "text": "Yeah, it's simple, but."
+    },
+    {
+      "startSeconds": 593.075,
+      "text": "A lot of the time it's fine and then sometimes"
+    },
+    {
+      "startSeconds": 595.355,
+      "text": "it's a problem, right?"
+    },
+    {
+      "startSeconds": 596.23,
+      "text": "It's, um, so it's a, a real challenge, that one."
+    },
+    {
+      "startSeconds": 599.635,
+      "text": "Yeah."
+    },
+    {
+      "startSeconds": 600.155,
+      "text": "So, um, well before we move on from that one, solution."
+    },
+    {
+      "startSeconds": 605.03,
+      "text": "I think you've written a good, really good blog"
+    },
+    {
+      "startSeconds": 606.38,
+      "text": "post that includes us as a one of the examples."
+    },
+    {
+      "startSeconds": 609.29,
+      "text": "Um, so I'll make sure I link that one up."
+    },
+    {
+      "startSeconds": 611.54,
+      "text": "But we can, we can, um, there's a setting where we"
+    },
+    {
+      "startSeconds": 615.92,
+      "text": "can cancel things that are the, in this example, right?"
+    },
+    {
+      "startSeconds": 619.825,
+      "text": "Or we,"
+    },
+    {
+      "startSeconds": 620.345,
+      "text": "Walk time out"
+    },
+    {
+      "startSeconds": 621.17,
+      "text": "a stay on time out."
+    },
+    {
+      "startSeconds": 623.03,
+      "text": "Uh, uh, yeah, for example, p um, for example, PGE Park"
+    },
+    {
+      "startSeconds": 627.23,
+      "text": "does it, uh, with P Park does something like that."
+    },
+    {
+      "startSeconds": 631.61,
+      "text": "Um, and it uses statement time out,"
+    },
+    {
+      "startSeconds": 635.015,
+      "text": "Mm-hmm."
+    },
+    {
+      "startSeconds": 635.405,
+      "text": "Okay,"
+    },
+    {
+      "startSeconds": 635.9,
+      "text": "but it's old school, old-fashioned way because it'll"
+    },
+    {
+      "startSeconds": 640.37,
+      "text": "affect also GML and so on."
+    },
+    {
+      "startSeconds": 642.05,
+      "text": "We, there is lock time out."
+    },
+    {
+      "startSeconds": 644.165,
+      "text": "Uh, and, uh, well statement I'm out."
+    },
+    {
+      "startSeconds": 647.375,
+      "text": "If you do it in your session, if you have"
+    },
+    {
+      "startSeconds": 649.865,
+      "text": "quite complex transaction, very properly organized."
+    },
+    {
+      "startSeconds": 653.315,
+      "text": "So all locks are closer to the, the end because"
+    },
+    {
+      "startSeconds": 656.675,
+      "text": "locks, uh, all acquired locks will be held until"
+    },
+    {
+      "startSeconds": 659.555,
+      "text": "the variant of transaction, the rollback or, or commit."
+    },
+    {
+      "startSeconds": 662.115,
+      "text": "So in this case, if you use statement amount, it'll"
+    },
+    {
+      "startSeconds": 665.135,
+      "text": "be applied both to dgl and dml, including cell."
+    },
+    {
+      "startSeconds": 670.745,
+      "text": "So there is a finer."
+    },
+    {
+      "startSeconds": 673.43,
+      "text": "Gray, how to say it."
+    },
+    {
+      "startSeconds": 675.725,
+      "text": "Special, uh, timeout, fine grant setting, uh, which"
+    },
+    {
+      "startSeconds": 680.195,
+      "text": "will be applied only to, uh, lock acquisition, not"
+    },
+    {
+      "startSeconds": 683.435,
+      "text": "to whole statement duration."
+    },
+    {
+      "startSeconds": 685.145,
+      "text": "And it's called Lock Timeout."
+    },
+    {
+      "startSeconds": 686.555,
+      "text": "And of course I prefer using it."
+    },
+    {
+      "startSeconds": 688.505,
+      "text": "I don't remember what P Park decided that they originally"
+    },
+    {
+      "startSeconds": 691.72,
+      "text": "said, oh, we need to think when I proposed to use lock time"
+    },
+    {
+      "startSeconds": 694.835,
+      "text": "out because statement, time out, uh, you, you know, it's."
+    },
+    {
+      "startSeconds": 698.005,
+      "text": "It's, it was not working well in some cases with Ger Park,"
+    },
+    {
+      "startSeconds": 702.145,
+      "text": "I don't remember details."
+    },
+    {
+      "startSeconds": 703.285,
+      "text": "It was long ago."
+    },
+    {
+      "startSeconds": 704.425,
+      "text": "Uh, but lock them out is what you can use at least to not"
+    },
+    {
+      "startSeconds": 710.215,
+      "text": "to block others for long."
+    },
+    {
+      "startSeconds": 711.505,
+      "text": "Because if you are lo, if you are being blocked, not"
+    },
+    {
+      "startSeconds": 715.285,
+      "text": "being able to acquire lock, you block others, at least"
+    },
+    {
+      "startSeconds": 718.135,
+      "text": "it can be like, okay, half a million, half a second."
+    },
+    {
+      "startSeconds": 721.945,
+      "text": "Right?"
+    },
+    {
+      "startSeconds": 722.785,
+      "text": "Why so, so why, why this value?"
+    },
+    {
+      "startSeconds": 725.255,
+      "text": "Uh, we had our first episodes about episode about, uh,"
+    },
+    {
+      "startSeconds": 730.535,
+      "text": "query duration latency."
+    },
+    {
+      "startSeconds": 733.265,
+      "text": "What is long water?"
+    },
+    {
+      "startSeconds": 734.615,
+      "text": "Short for human perception in ltp, uh, case, uh,"
+    },
+    {
+      "startSeconds": 738.905,
+      "text": "web and, uh, mobile apps."
+    },
+    {
+      "startSeconds": 741.185,
+      "text": "So, second is already very noticeable, but half a"
+    },
+    {
+      "startSeconds": 745.175,
+      "text": "second or maybe a hundred milliseconds quite good,"
+    },
+    {
+      "startSeconds": 748.3,
+      "text": "but depends on the cases."
+    },
+    {
+      "startSeconds": 750.035,
+      "text": "Maybe you try but you fail and you need, you need retry."
+    },
+    {
+      "startSeconds": 754.775,
+      "text": "And in my article, I have another article about it."
+    },
+    {
+      "startSeconds": 758.255,
+      "text": "Right."
+    },
+    {
+      "startSeconds": 758.525,
+      "text": "Uh, any specifically for this problem?"
+    },
+    {
+      "startSeconds": 761.225,
+      "text": "Uh, proposing the solution, uh, reprise and low lifetime"
+    },
+    {
+      "startSeconds": 766.265,
+      "text": "out, maybe increasing with some, uh, back, back of"
+    },
+    {
+      "startSeconds": 771.365,
+      "text": "jitter and so like, you know."
+    },
+    {
+      "startSeconds": 772.775,
+      "text": "Yeah, sometimes people call like exponential decay."
+    },
+    {
+      "startSeconds": 775.265,
+      "text": "Like that kind of,"
+    },
+    {
+      "startSeconds": 776.465,
+      "text": "Right, right."
+    },
+    {
+      "startSeconds": 777.395,
+      "text": "But, but not until."
+    },
+    {
+      "startSeconds": 779.27,
+      "text": "Hours, right?"
+    },
+    {
+      "startSeconds": 780.05,
+      "text": "Not until minutes seven."
+    },
+    {
+      "startSeconds": 781.34,
+      "text": "Still quite limited."
+    },
+    {
+      "startSeconds": 783.56,
+      "text": "And maybe try a bit later and so on and be prepared for"
+    },
+    {
+      "startSeconds": 787.975,
+      "text": "your deployments to be failed."
+    },
+    {
+      "startSeconds": 789.29,
+      "text": "It's fine if you have auto vacuum pro processing."
+    },
+    {
+      "startSeconds": 792.8,
+      "text": "Well, it also depends."
+    },
+    {
+      "startSeconds": 793.79,
+      "text": "I see some people pre prefer."
+    },
+    {
+      "startSeconds": 796.16,
+      "text": "Uh, observing auto vacuum running in this mode,"
+    },
+    {
+      "startSeconds": 798.835,
+      "text": "understanding that it starts, it kick off, kicks off early,"
+    },
+    {
+      "startSeconds": 803.03,
+      "text": "like at 10%, 20%, usually it depends, uh, of all capacity."
+    },
+    {
+      "startSeconds": 807.35,
+      "text": "It's very safe to, to just terminate it and"
+    },
+    {
+      "startSeconds": 810.14,
+      "text": "let it restart later."
+    },
+    {
+      "startSeconds": 811.79,
+      "text": "But you, if you terminate it, your session will should be"
+    },
+    {
+      "startSeconds": 815.45,
+      "text": "already in process of attempt of acquisition of lock, because"
+    },
+    {
+      "startSeconds": 820.04,
+      "text": "if you just terminate and go."
+    },
+    {
+      "startSeconds": 821.945,
+      "text": "Try, I bet auto will be sooner than you and you will"
+    },
+    {
+      "startSeconds": 827.495,
+      "text": "have, uh, the problem again."
+    },
+    {
+      "startSeconds": 830.195,
+      "text": "So you need to start attempt and kill auto, vacuum for"
+    },
+    {
+      "startSeconds": 835.03,
+      "text": "auto, and then it freezes, uh, it, it opens the"
+    },
+    {
+      "startSeconds": 840.545,
+      "text": "road, uh, in front of you."
+    },
+    {
+      "startSeconds": 843.935,
+      "text": "Right."
+    },
+    {
+      "startSeconds": 844.265,
+      "text": "Uh, but I wanted to mention, you're right, uh, this is"
+    },
+    {
+      "startSeconds": 846.725,
+      "text": "one of ki one kind of a problems when you think."
+    },
+    {
+      "startSeconds": 849.68,
+      "text": "It's so simple."
+    },
+    {
+      "startSeconds": 850.91,
+      "text": "Everyone hits it, at least, um, in like silently not noticed"
+    },
+    {
+      "startSeconds": 855.65,
+      "text": "until some level of workload."
+    },
+    {
+      "startSeconds": 857.69,
+      "text": "So simple, but it's also complex in, uh, under the hood."
+    },
+    {
+      "startSeconds": 863.645,
+      "text": "If you dive inside, it's like many things, many"
+    },
+    {
+      "startSeconds": 865.925,
+      "text": "things, but it's so simple."
+    },
+    {
+      "startSeconds": 867.665,
+      "text": "How come people live without, uh, solution to it?"
+    },
+    {
+      "startSeconds": 870.97,
+      "text": "And it's still amuses me actually."
+    },
+    {
+      "startSeconds": 874.325,
+      "text": "So I don't understand what, like, I, we definitely"
+    },
+    {
+      "startSeconds": 877.57,
+      "text": "need something, but, uh, I have solution, uh, at"
+    },
+    {
+      "startSeconds": 880.775,
+      "text": "Apple level outside of poss."
+    },
+    {
+      "startSeconds": 882.305,
+      "text": "But I think at some point inside POCUS should be done."
+    },
+    {
+      "startSeconds": 884.525,
+      "text": "Something."
+    },
+    {
+      "startSeconds": 885.245,
+      "text": "We see some improvements in the area of partitioning,"
+    },
+    {
+      "startSeconds": 888.365,
+      "text": "like detached partition is, is already not blocking and so on."
+    },
+    {
+      "startSeconds": 893.39,
+      "text": "Many things like that."
+    },
+    {
+      "startSeconds": 894.56,
+      "text": "But this is, uh, just let me add the column gracefully,"
+    },
+    {
+      "startSeconds": 899.685,
+      "text": "Yeah, well we have"
+    },
+    {
+      "startSeconds": 900.98,
+      "text": "I would specify, I would like to specify a number of"
+    },
+    {
+      "startSeconds": 904.555,
+      "text": "free tries and logic right inside this alter table"
+    },
+    {
+      "startSeconds": 907.28,
+      "text": "statement proposal, right?"
+    },
+    {
+      "startSeconds": 911.3,
+      "text": "Yeah, it's a good, that's an interesting idea."
+    },
+    {
+      "startSeconds": 912.985,
+      "text": "I, I always think how can you make these things"
+    },
+    {
+      "startSeconds": 915.95,
+      "text": "the default, right?"
+    },
+    {
+      "startSeconds": 916.79,
+      "text": "Cuz until you know that those settings exist, you're still"
+    },
+    {
+      "startSeconds": 920.99,
+      "text": "gonna hit that the first time."
+    },
+    {
+      "startSeconds": 922.48,
+      "text": "But yeah, it would be nice to empower people that do"
+    },
+    {
+      "startSeconds": 924.536,
+      "text": "know it's an issue as well."
+    },
+    {
+      "startSeconds": 926.12,
+      "text": "Uh, just wondering how"
+    },
+    {
+      "startSeconds": 927.215,
+      "text": "case."
+    },
+    {
+      "startSeconds": 928.935,
+      "text": "Sorry."
+    },
+    {
+      "startSeconds": 929.755,
+      "text": "Yeah, yeah."
+    },
+    {
+      "startSeconds": 930.395,
+      "text": "Sorry, I, I, I promise not to interrupt."
+    },
+    {
+      "startSeconds": 932.525,
+      "text": "Sorry I'm listening."
+    },
+    {
+      "startSeconds": 935.315,
+      "text": "Um, no."
+    },
+    {
+      "startSeconds": 936.065,
+      "text": "Okay."
+    },
+    {
+      "startSeconds": 936.395,
+      "text": "Let me, let me try, let, uh, I'm wondering how we"
+    },
+    {
+      "startSeconds": 939.005,
+      "text": "can help people who don't even know it's an issue."
+    },
+    {
+      "startSeconds": 943.03,
+      "text": "So, like, uh, the, the people I, I've, I've come across"
+    },
+    {
+      "startSeconds": 946.325,
+      "text": "really experienced engineers."
+    },
+    {
+      "startSeconds": 947.735,
+      "text": "Some people that I consider, some of the best engineers"
+    },
+    {
+      "startSeconds": 949.625,
+      "text": "I've ever worked with."
+    },
+    {
+      "startSeconds": 950.945,
+      "text": "And for example, this was, I think must have"
+    },
+    {
+      "startSeconds": 953.105,
+      "text": "been pre Postgres 11, but somebody adding a column."
+    },
+    {
+      "startSeconds": 957.92,
+      "text": "With a default."
+    },
+    {
+      "startSeconds": 958.79,
+      "text": "So they, they, um, that was always gonna cause"
+    },
+    {
+      "startSeconds": 962.03,
+      "text": "an issue and it did."
+    },
+    {
+      "startSeconds": 963.14,
+      "text": "So that"
+    },
+    {
+      "startSeconds": 964.19,
+      "text": "this is, this falls into, sorry, I'm, I'm interrupting again."
+    },
+    {
+      "startSeconds": 967.94,
+      "text": "It falls into previous, like we have table, right"
+    },
+    {
+      "startSeconds": 971.93,
+      "text": "table full scan and this like, uh, Unsuccessful work"
+    },
+    {
+      "startSeconds": 977.54,
+      "text": "acquisition problem, right?"
+    },
+    {
+      "startSeconds": 979.04,
+      "text": "What you mentioned, it was to full table re rewrite"
+    },
+    {
+      "startSeconds": 981.95,
+      "text": "because, uh, pre post 11, uh, when we create a new"
+    },
+    {
+      "startSeconds": 986.57,
+      "text": "table, we've defaulted cost full table rewrite."
+    },
+    {
+      "startSeconds": 989.39,
+      "text": "It's quite, it's quite it."
+    },
+    {
+      "startSeconds": 991.1,
+      "text": "This I would expect."
+    },
+    {
+      "startSeconds": 993.305,
+      "text": "I understand this is like the post is not perfect here."
+    },
+    {
+      "startSeconds": 998.105,
+      "text": "I understand this."
+    },
+    {
+      "startSeconds": 998.825,
+      "text": "Okay."
+    },
+    {
+      "startSeconds": 999.575,
+      "text": "But that I like what?"
+    },
+    {
+      "startSeconds": 1002.694,
+      "text": "Like how come I, even simpler example, I"
+    },
+    {
+      "startSeconds": 1006.295,
+      "text": "want to drop a column."
+    },
+    {
+      "startSeconds": 1009.085,
+      "text": "Same."
+    },
+    {
+      "startSeconds": 1010.455,
+      "text": "Yeah. Yeah."
+    },
+    {
+      "startSeconds": 1012.265,
+      "text": "Um, there's some, we, I'm conscious we're not"
+    },
+    {
+      "startSeconds": 1014.605,
+      "text": "gonna have time to discuss every single case of this."
+    },
+    {
+      "startSeconds": 1017.005,
+      "text": "So there is a couple of good articles, um, one on the one"
+    },
+    {
+      "startSeconds": 1021.805,
+      "text": "I just mentioned on, uh, it was, uh, by Brando, wasn't it?"
+    },
+    {
+      "startSeconds": 1025.435,
+      "text": "Um, on adding, uh, on the, the change in version 11."
+    },
+    {
+      "startSeconds": 1028.125,
+      "text": "And I think the nice thing about that article is it"
+    },
+    {
+      "startSeconds": 1030.835,
+      "text": "goes into some of, not all of the complexities, he"
+    },
+    {
+      "startSeconds": 1033.445,
+      "text": "does link to the patch, for example, but how complicated"
+    },
+    {
+      "startSeconds": 1036.685,
+      "text": "some of the remediations needed to be to make."
+    },
+    {
+      "startSeconds": 1039.88,
+      "text": "Adding a column with a default, not a UI case."
+    },
+    {
+      "startSeconds": 1044.05,
+      "text": "So that changed in version 11."
+    },
+    {
+      "startSeconds": 1047.29,
+      "text": "it's not si, it's not trivial."
+    },
+    {
+      "startSeconds": 1048.94,
+      "text": "That change, it's uh, it's, there's a lot of"
+    },
+    {
+      "startSeconds": 1051.79,
+      "text": "places that that touches."
+    },
+    {
+      "startSeconds": 1053.35,
+      "text": "So I, I do have sympathy with that."
+    },
+    {
+      "startSeconds": 1055.695,
+      "text": "These things are difficult to do and difficult"
+    },
+    {
+      "startSeconds": 1057.975,
+      "text": "to do in a way that."
+    },
+    {
+      "startSeconds": 1059.665,
+      "text": "Still lets people on simple databases just get things done."
+    },
+    {
+      "startSeconds": 1063.415,
+      "text": "So I, yeah, I understand like the complexity, but equally"
+    },
+    {
+      "startSeconds": 1067.495,
+      "text": "it would be nice to not have people shoot themselves in"
+    },
+    {
+      "startSeconds": 1069.805,
+      "text": "the foot, uh, quite so often as as happens at the moment."
+    },
+    {
+      "startSeconds": 1073.99,
+      "text": "Right."
+    },
+    {
+      "startSeconds": 1074.35,
+      "text": "And actually this, this, uh, change in POS 11 is"
+    },
+    {
+      "startSeconds": 1077.89,
+      "text": "very connected to integer four primary key problem."
+    },
+    {
+      "startSeconds": 1080.59,
+      "text": "Because if you think about, uh, how you can convert"
+    },
+    {
+      "startSeconds": 1083.77,
+      "text": "to eight, there are two big, uh, approaches."
+    },
+    {
+      "startSeconds": 1086.83,
+      "text": "Uh, I call it new column and new table."
+    },
+    {
+      "startSeconds": 1089.56,
+      "text": "New table is more like, uh, ppac style."
+    },
+    {
+      "startSeconds": 1091.38,
+      "text": "When you need both are should be down, uh, zero downtime."
+    },
+    {
+      "startSeconds": 1095.515,
+      "text": "Right."
+    },
+    {
+      "startSeconds": 1096.715,
+      "text": "Uh, the second one, new table, it's more like ri p style."
+    },
+    {
+      "startSeconds": 1100.465,
+      "text": "You need to create another table, but first,"
+    },
+    {
+      "startSeconds": 1103.765,
+      "text": "implement triggers that will record all changes."
+    },
+    {
+      "startSeconds": 1106.885,
+      "text": "In some delta table."
+    },
+    {
+      "startSeconds": 1108.655,
+      "text": "And then you do select create table as, as select"
+    },
+    {
+      "startSeconds": 1112.825,
+      "text": "or just copy like, like some snapshot of existing table."
+    },
+    {
+      "startSeconds": 1117.115,
+      "text": "And then you actually draw interesting"
+    },
+    {
+      "startSeconds": 1119.455,
+      "text": "clicks there as well."
+    },
+    {
+      "startSeconds": 1120.505,
+      "text": "And then you need to take care of about, uh,"
+    },
+    {
+      "startSeconds": 1122.785,
+      "text": "indexes, constraints, form pieces, especially."
+    },
+    {
+      "startSeconds": 1125.305,
+      "text": "It's interesting."
+    },
+    {
+      "startSeconds": 1126.025,
+      "text": "Very interesting."
+    },
+    {
+      "startSeconds": 1126.835,
+      "text": "And then you apply delta maybe in several steps."
+    },
+    {
+      "startSeconds": 1129.84,
+      "text": "Actually, it's possible to split it to multiple transactions,"
+    },
+    {
+      "startSeconds": 1132.175,
+      "text": "which I didn't know."
+    },
+    {
+      "startSeconds": 1133.69,
+      "text": "Initially I thought, oh, whole Delta needs to"
+    },
+    {
+      "startSeconds": 1136.3,
+      "text": "be applied in at once."
+    },
+    {
+      "startSeconds": 1137.35,
+      "text": "No, PG park is, is much smarter."
+    },
+    {
+      "startSeconds": 1140.2,
+      "text": "Uh, we can do in steps just last time should be inside"
+    },
+    {
+      "startSeconds": 1143.83,
+      "text": "our renaming transaction."
+    },
+    {
+      "startSeconds": 1146.11,
+      "text": "But this is more complex, uh, approach than just new column."
+    },
+    {
+      "startSeconds": 1150.4,
+      "text": "Yep."
+    },
+    {
+      "startSeconds": 1150.73,
+      "text": "But if you do, if you do new, new Newcomb, eventually"
+    },
+    {
+      "startSeconds": 1153.159,
+      "text": "you need to redefine primary key, but primary key."
+    },
+    {
+      "startSeconds": 1156.159,
+      "text": "Okay, primary, primary, key."
+    },
+    {
+      "startSeconds": 1159.445,
+      "text": "Not only imposs in fear, even, it consists of two"
+    },
+    {
+      "startSeconds": 1162.925,
+      "text": "things, uniqueness and, and not now two constraints."
+    },
+    {
+      "startSeconds": 1167.065,
+      "text": "Uniqueness."
+    },
+    {
+      "startSeconds": 1167.725,
+      "text": "We can create index concurrently with unique,"
+    },
+    {
+      "startSeconds": 1170.455,
+      "text": "create, unique index."
+    },
+    {
+      "startSeconds": 1171.504,
+      "text": "Concurrently it might fail."
+    },
+    {
+      "startSeconds": 1172.705,
+      "text": "We, if that duplicates, we fix it."
+    },
+    {
+      "startSeconds": 1175.68,
+      "text": "We eventually, we can create it without, um,"
+    },
+    {
+      "startSeconds": 1178.825,
+      "text": "uh, long, uh, locks."
+    },
+    {
+      "startSeconds": 1183.055,
+      "text": "So it's like so-called, so-called online operation."
+    },
+    {
+      "startSeconds": 1187.36,
+      "text": "So create index concurrently is online operation and create"
+    },
+    {
+      "startSeconds": 1190.659,
+      "text": "unique index concurrently."
+    },
+    {
+      "startSeconds": 1191.679,
+      "text": "Create index is not online operation, not uh, how to"
+    },
+    {
+      "startSeconds": 1195.399,
+      "text": "say online safe or there should be some term for it."
+    },
+    {
+      "startSeconds": 1199.33,
+      "text": "Zero downtime."
+    },
+    {
+      "startSeconds": 1200.169,
+      "text": "It's not proper term because if we block one"
+    },
+    {
+      "startSeconds": 1202.54,
+      "text": "table, it's not downtime."
+    },
+    {
+      "startSeconds": 1203.649,
+      "text": "I call it partial downtime only."
+    },
+    {
+      "startSeconds": 1205.335,
+      "text": "Some part of workload which deals with its table is"
+    },
+    {
+      "startSeconds": 1209.44,
+      "text": "experiencing problems, but everything else is fine, right?"
+    },
+    {
+      "startSeconds": 1212.62,
+      "text": "So,"
+    },
+    {
+      "startSeconds": 1213.175,
+      "text": "online operation as the op, as the, yeah."
+    },
+    {
+      "startSeconds": 1215.774,
+      "text": "Sounds"
+    },
+    {
+      "startSeconds": 1216.385,
+      "text": "the, a good friend of mine who is from SQL World, uh, good,"
+    },
+    {
+      "startSeconds": 1220.045,
+      "text": "very big professional, uh, gave this, gave me this term."
+    },
+    {
+      "startSeconds": 1224.695,
+      "text": "I like it as well, online operation."
+    },
+    {
+      "startSeconds": 1226.555,
+      "text": "So if, but what about, uh, not now."
+    },
+    {
+      "startSeconds": 1230.365,
+      "text": "Before post 11 is terrible."
+    },
+    {
+      "startSeconds": 1232.915,
+      "text": "Absolutely terrible."
+    },
+    {
+      "startSeconds": 1234.025,
+      "text": "You cannot create it."
+    },
+    {
+      "startSeconds": 1236.065,
+      "text": "Period."
+    },
+    {
+      "startSeconds": 1237.865,
+      "text": "So yeah, if you create it, you have second type of our problem."
+    },
+    {
+      "startSeconds": 1242.845,
+      "text": "You need a full scan."
+    },
+    {
+      "startSeconds": 1244.225,
+      "text": "PO needs to fully scan table at creation time."
+    },
+    {
+      "startSeconds": 1247.675,
+      "text": "And during this time, it, uh, holds this, uh, uh, very"
+    },
+    {
+      "startSeconds": 1253.315,
+      "text": "expensive exclusive look."
+    },
+    {
+      "startSeconds": 1255.775,
+      "text": "But, uh, we've, and, and check constraint can"
+    },
+    {
+      "startSeconds": 1260.335,
+      "text": "be done in two phases."
+    },
+    {
+      "startSeconds": 1261.9,
+      "text": "So you, first, you say, not valid."
+    },
+    {
+      "startSeconds": 1264.7,
+      "text": "You create check and stand very fast."
+    },
+    {
+      "startSeconds": 1266.14,
+      "text": "Not where it, again, you need to do retrace."
+    },
+    {
+      "startSeconds": 1268.93,
+      "text": "If you do it very properly, you need to retry and lo low."
+    },
+    {
+      "startSeconds": 1272.86,
+      "text": "Cause it's still changing schema, right?"
+    },
+    {
+      "startSeconds": 1275.29,
+      "text": "But not where it means it'll not be applied for few."
+    },
+    {
+      "startSeconds": 1277.66,
+      "text": "Some people think not well."
+    },
+    {
+      "startSeconds": 1278.805,
+      "text": "It, it's not valid."
+    },
+    {
+      "startSeconds": 1279.58,
+      "text": "Like no, I mean, it's not valid for all data, but it's already"
+    },
+    {
+      "startSeconds": 1283.665,
+      "text": "being checked for all new rows."
+    },
+    {
+      "startSeconds": 1285.76,
+      "text": "Updated or inserted."
+    },
+    {
+      "startSeconds": 1287.485,
+      "text": "It's like no validation rather than not"
+    },
+    {
+      "startSeconds": 1290.11,
+      "text": "Right,"
+    },
+    {
+      "startSeconds": 1290.655,
+      "text": "that fair?"
+    },
+    {
+      "startSeconds": 1290.995,
+      "text": "Mm-hmm."
+    },
+    {
+      "startSeconds": 1291.82,
+      "text": "Yeah."
+    },
+    {
+      "startSeconds": 1292.12,
+      "text": "It's, it's already working, but, uh, it's, we skipped validation"
+    },
+    {
+      "startSeconds": 1296.2,
+      "text": "for existing row and then we now transactional table validate and"
+    },
+    {
+      "startSeconds": 1300.825,
+      "text": "this doesn't, uh, need the long lock concentrate already there."
+    },
+    {
+      "startSeconds": 1305.68,
+      "text": "It's just a flag."
+    },
+    {
+      "startSeconds": 1306.86,
+      "text": "And this is like a two phase, two transactions,"
+    },
+    {
+      "startSeconds": 1309.52,
+      "text": "separate transactions."
+    },
+    {
+      "startSeconds": 1310.54,
+      "text": "And this is how we can market, uh, we can create"
+    },
+    {
+      "startSeconds": 1313.33,
+      "text": "a, a check and strain."
+    },
+    {
+      "startSeconds": 1314.86,
+      "text": "Is, uh, our new con is not now, but in before POG Solar 11."
+    },
+    {
+      "startSeconds": 1319.54,
+      "text": "If you create check constraint, uh, it cannot be done in two"
+    },
+    {
+      "startSeconds": 1324.13,
+      "text": "phases, I think since POG 12."
+    },
+    {
+      "startSeconds": 1327.55,
+      "text": "If there is check constraint and then you create, not"
+    },
+    {
+      "startSeconds": 1331.27,
+      "text": "now, it's smart enough."
+    },
+    {
+      "startSeconds": 1333.37,
+      "text": "I think GE CAR implemented this, uh, It sees, oh, there is check"
+    },
+    {
+      "startSeconds": 1338.83,
+      "text": "constraint is not, is not now."
+    },
+    {
+      "startSeconds": 1340.27,
+      "text": "So I can rely on it."
+    },
+    {
+      "startSeconds": 1341.95,
+      "text": "It already validated all row, like I it skip it in POS"
+    },
+    {
+      "startSeconds": 1346.135,
+      "text": "That would be cool."
+    },
+    {
+      "startSeconds": 1347.77,
+      "text": "but using some brain power, we solve the problem"
+    },
+    {
+      "startSeconds": 1351.375,
+      "text": "for POGS 11 as well."
+    },
+    {
+      "startSeconds": 1352.87,
+      "text": "What we can do, we say, because just relying on this new"
+    },
+    {
+      "startSeconds": 1356.889,
+      "text": "feature, not blocking default."
+    },
+    {
+      "startSeconds": 1359.26,
+      "text": "When we create our in eight new id, we say"
+    },
+    {
+      "startSeconds": 1363.85,
+      "text": "default minus one, not"
+    },
+    {
+      "startSeconds": 1365.895,
+      "text": "Yeah."
+    },
+    {
+      "startSeconds": 1367.635,
+      "text": "Well,"
+    },
+    {
+      "startSeconds": 1368.185,
+      "text": "And it's, it's magic like POGS thinks, oh, it's,"
+    },
+    {
+      "startSeconds": 1371.785,
+      "text": "it's this minus one."
+    },
+    {
+      "startSeconds": 1373.855,
+      "text": "This default is, is virtual."
+    },
+    {
+      "startSeconds": 1376.615,
+      "text": "It doesn't, pos doesn't, um, rewrite whole table."
+    },
+    {
+      "startSeconds": 1380.965,
+      "text": "It just says, okay, for all existing tables, we think"
+    },
+    {
+      "startSeconds": 1383.965,
+      "text": "it's minus one virtually."
+    },
+    {
+      "startSeconds": 1385.825,
+      "text": "Right?"
+    },
+    {
+      "startSeconds": 1387.025,
+      "text": "But if it's already filled with some, we can say not now."
+    },
+    {
+      "startSeconds": 1390.835,
+      "text": "Right?"
+    },
+    {
+      "startSeconds": 1391.375,
+      "text": "Then we back field."
+    },
+    {
+      "startSeconds": 1393.55,
+      "text": "In batches and drop default minus one goes away."
+    },
+    {
+      "startSeconds": 1399.37,
+      "text": "We have real values that not, not now is there."
+    },
+    {
+      "startSeconds": 1402.25,
+      "text": "So this trick we used for post level, it's funny, it's"
+    },
+    {
+      "startSeconds": 1404.98,
+      "text": "like, like very interesting."
+    },
+    {
+      "startSeconds": 1407.92,
+      "text": "Like this is like, it feels like art."
+    },
+    {
+      "startSeconds": 1410.56,
+      "text": "You, you, you used what you have to achieve something."
+    },
+    {
+      "startSeconds": 1415.66,
+      "text": "Uh, Like multiple things, uh, work together and you"
+    },
+    {
+      "startSeconds": 1420.82,
+      "text": "achieved something very useful."
+    },
+    {
+      "startSeconds": 1423.22,
+      "text": "But, uh, then, uh, I, I even was slightly disappointed"
+    },
+    {
+      "startSeconds": 1427.15,
+      "text": "in the 12, seeing this like, okay, now we can do just check."
+    },
+    {
+      "startSeconds": 1431.5,
+      "text": "And then, not now, two in two steps."
+    },
+    {
+      "startSeconds": 1433.515,
+      "text": "Then, uh, we create, not now regular, not now."
+    },
+    {
+      "startSeconds": 1436.93,
+      "text": "And, uh, this interesting trick is not needed anymore."
+    },
+    {
+      "startSeconds": 1442.12,
+      "text": "So,"
+    },
+    {
+      "startSeconds": 1442.785,
+      "text": "Yeah, I, I know it's not, I know it's not a good analogy, but"
+    },
+    {
+      "startSeconds": 1446.235,
+      "text": "I quite like thinking about it as the, you know, have you ever"
+    },
+    {
+      "startSeconds": 1448.665,
+      "text": "seen those magicians putting lots on the table, like a dining"
+    },
+    {
+      "startSeconds": 1451.94,
+      "text": "table, and then they get the."
+    },
+    {
+      "startSeconds": 1453.93,
+      "text": "Um, the tablecloth and then they whip it out just, and"
+    },
+    {
+      "startSeconds": 1456.93,
+      "text": "with everything stays as it is."
+    },
+    {
+      "startSeconds": 1458.76,
+      "text": "A good migration is a bit like that."
+    },
+    {
+      "startSeconds": 1460.5,
+      "text": "There's always one step at the end that's kind of like the"
+    },
+    {
+      "startSeconds": 1462.66,
+      "text": "little finesse, the last little thing to make everything work."
+    },
+    {
+      "startSeconds": 1466.5,
+      "text": "Uh, but it needs to be really quick and it needs to be"
+    },
+    {
+      "startSeconds": 1468.72,
+      "text": "like, not change anything."
+    },
+    {
+      "startSeconds": 1470.4,
+      "text": "Um, but it can all go wrong as well."
+    },
+    {
+      "startSeconds": 1472.61,
+      "text": "So it, if they pull the tablecloth in it and you haven't"
+    },
+    {
+      "startSeconds": 1475.26,
+      "text": "quite sorted everything out, uh, everything falls on it."
+    },
+    {
+      "startSeconds": 1478.22,
+      "text": "Everything smashes basically."
+    },
+    {
+      "startSeconds": 1480.29,
+      "text": "Um, so yeah, that's a really good example."
+    },
+    {
+      "startSeconds": 1482.84,
+      "text": "And I think we've got some, uh, there's one other blog"
+    },
+    {
+      "startSeconds": 1485.27,
+      "text": "post that discusses some of that in more detail,"
+    },
+    {
+      "startSeconds": 1487.07,
+      "text": "which is the Braintree one."
+    },
+    {
+      "startSeconds": 1489.05,
+      "text": "I think they've updated on the PayPal blog."
+    },
+    {
+      "startSeconds": 1491.24,
+      "text": "So I'll link that up."
+    },
+    {
+      "startSeconds": 1492.32,
+      "text": "That has some of these like kind of worked examples."
+    },
+    {
+      "startSeconds": 1494.6,
+      "text": "And, uh, the, another one I did wanna make sure we"
+    },
+    {
+      "startSeconds": 1497.45,
+      "text": "covered, or at least I think that's on the slightly more"
+    },
+    {
+      "startSeconds": 1499.34,
+      "text": "complex side, is one that one of my colleagues covered from"
+    },
+    {
+      "startSeconds": 1503.15,
+      "text": "GoCardless that caught them out."
+    },
+    {
+      "startSeconds": 1504.715,
+      "text": "And I think you cover really well in your post."
+    },
+    {
+      "startSeconds": 1507.31,
+      "text": "But it is not obvious, which is the foreign key updates."
+    },
+    {
+      "startSeconds": 1511.72,
+      "text": "So like the, the fact that it can, that it takes locks on both"
+    },
+    {
+      "startSeconds": 1516.399,
+      "text": "tables, I think is really like"
+    },
+    {
+      "startSeconds": 1518.005,
+      "text": "different locks."
+    },
+    {
+      "startSeconds": 1519.635,
+      "text": "Different locks."
+    },
+    {
+      "startSeconds": 1520.825,
+      "text": "And if, if also, if partitioning involved."
+    },
+    {
+      "startSeconds": 1524.035,
+      "text": "It's very interesting."
+    },
+    {
+      "startSeconds": 1525.715,
+      "text": "I cannot like, I like, it's very interesting and."
+    },
+    {
+      "startSeconds": 1531.265,
+      "text": "Let me also advertise a couple of things."
+    },
+    {
+      "startSeconds": 1533.065,
+      "text": "First, GitLab, um, uh, has very good migration helpers"
+    },
+    {
+      "startSeconds": 1539.635,
+      "text": "if you, if you use Ruby."
+    },
+    {
+      "startSeconds": 1542.005,
+      "text": "And if you don't use Ruby, still very insightful."
+    },
+    {
+      "startSeconds": 1545.845,
+      "text": "It's, uh, they're source code and they have very,"
+    },
+    {
+      "startSeconds": 1549.385,
+      "text": "very good documentation about all these things."
+    },
+    {
+      "startSeconds": 1553.255,
+      "text": "So, uh, it's very well, well tested both on, uh, their"
+    },
+    {
+      "startSeconds": 1558.325,
+      "text": "production uh, dot com and."
+    },
+    {
+      "startSeconds": 1560.725,
+      "text": "All GitLab instances, there are so many of them, right?"
+    },
+    {
+      "startSeconds": 1564.685,
+      "text": "And you need to deploy without seeing what is happening."
+    },
+    {
+      "startSeconds": 1568.71,
+      "text": "So fully automated."
+    },
+    {
+      "startSeconds": 1570.355,
+      "text": "And sometimes tables are huge, even, uh, if"
+    },
+    {
+      "startSeconds": 1573.805,
+      "text": "it's not, uh, there.com."
+    },
+    {
+      "startSeconds": 1575.46,
+      "text": "So it's like it's very challenging task"
+    },
+    {
+      "startSeconds": 1577.675,
+      "text": "and they solve it."
+    },
+    {
+      "startSeconds": 1578.575,
+      "text": "So their experience, I think, I find their experience is"
+    },
+    {
+      "startSeconds": 1581.935,
+      "text": "very like one of the best in this area for pogs."
+    },
+    {
+      "startSeconds": 1584.965,
+      "text": "And also, of course our tool dap."
+    },
+    {
+      "startSeconds": 1588.385,
+      "text": "So if you."
+    },
+    {
+      "startSeconds": 1590.68,
+      "text": "Deal with foreign keys on both sides."
+    },
+    {
+      "startSeconds": 1592.54,
+      "text": "Sometimes like we need the different types of logs."
+    },
+    {
+      "startSeconds": 1597.34,
+      "text": "We, we can, we, fortunately we can, uh, create foreign"
+    },
+    {
+      "startSeconds": 1600.22,
+      "text": "keys in two steps, but if partitioning is involved, it's"
+    },
+    {
+      "startSeconds": 1603.07,
+      "text": "tricky how foreign keys are propagated from parent to."
+    },
+    {
+      "startSeconds": 1607.18,
+      "text": "Like partitions from main table to partitions."
+    },
+    {
+      "startSeconds": 1609.565,
+      "text": "Mm-hmm."
+    },
+    {
+      "startSeconds": 1610.165,
+      "text": "Mm-hmm."
+    },
+    {
+      "startSeconds": 1610.66,
+      "text": "I never, I never keep it in my mind."
+    },
+    {
+      "startSeconds": 1612.7,
+      "text": "It's too much."
+    },
+    {
+      "startSeconds": 1613.9,
+      "text": "I, I trust Two things."
+    },
+    {
+      "startSeconds": 1615.28,
+      "text": "First, documentation, source code."
+    },
+    {
+      "startSeconds": 1616.99,
+      "text": "And second, our tool, our tool detects longlasting,"
+    },
+    {
+      "startSeconds": 1620.59,
+      "text": "uh, exclusive locks."
+    },
+    {
+      "startSeconds": 1622.24,
+      "text": "You just need to apply it with either for existing tables."
+    },
+    {
+      "startSeconds": 1626.395,
+      "text": "Taken from production without PI or something,"
+    },
+    {
+      "startSeconds": 1628.435,
+      "text": "or just raw production."
+    },
+    {
+      "startSeconds": 1629.58,
+      "text": "It's, it's even better if you can afford it in terms of how"
+    },
+    {
+      "startSeconds": 1633.115,
+      "text": "data, how infrastructure is organized, or you need to like"
+    },
+    {
+      "startSeconds": 1637.555,
+      "text": "to generate some row, right?"
+    },
+    {
+      "startSeconds": 1639.685,
+      "text": "For testing."
+    },
+    {
+      "startSeconds": 1640.645,
+      "text": "And by the way, by the way, I today, uh, I just used,"
+    },
+    {
+      "startSeconds": 1643.83,
+      "text": "uh, chat PT to fill tables."
+    },
+    {
+      "startSeconds": 1647.065,
+      "text": "I had some, I had some, I, I, I had some rose in my table."
+    },
+    {
+      "startSeconds": 1652.565,
+      "text": "And I needed to, to have more."
+    },
+    {
+      "startSeconds": 1654.655,
+      "text": "Right."
+    },
+    {
+      "startSeconds": 1655.075,
+      "text": "Okay."
+    },
+    {
+      "startSeconds": 1655.35,
+      "text": "I, I have one gigabyte, I want one gigabyte or 1,000 gigabytes."
+    },
+    {
+      "startSeconds": 1659.875,
+      "text": "And help me, it's, it's good in this, if you show examples"
+    },
+    {
+      "startSeconds": 1663.175,
+      "text": "and it helps you like, uh, increase the size, uh,"
+    },
+    {
+      "startSeconds": 1667.615,
+      "text": "according to some patterns, uh, to already, already have."
+    },
+    {
+      "startSeconds": 1671.875,
+      "text": "So, um, if you just test with big data, our"
+    },
+    {
+      "startSeconds": 1677.425,
+      "text": "tool can, uh, catch."
+    },
+    {
+      "startSeconds": 1679.36,
+      "text": "Database, lab engine and DBU app can catch long,"
+    },
+    {
+      "startSeconds": 1682.69,
+      "text": "long running exclusive logs."
+    },
+    {
+      "startSeconds": 1684.159,
+      "text": "And in this case, you understand your solution is"
+    },
+    {
+      "startSeconds": 1686.5,
+      "text": "not good and you go fix it."
+    },
+    {
+      "startSeconds": 1689.32,
+      "text": "I think these, these things I trust, right?"
+    },
+    {
+      "startSeconds": 1692.365,
+      "text": "so this is great for catching."
+    },
+    {
+      "startSeconds": 1694.645,
+      "text": "Yeah, this is great for catching two of those classes, right?"
+    },
+    {
+      "startSeconds": 1698.005,
+      "text": "Like in including the let, let's say it's a large table and."
+    },
+    {
+      "startSeconds": 1702.715,
+      "text": "It's the third case is still difficult, right?"
+    },
+    {
+      "startSeconds": 1705.175,
+      "text": "Because like as in the Go Cardless blog, you need"
+    },
+    {
+      "startSeconds": 1708.685,
+      "text": "to have some long-running transactional or vacuum as"
+    },
+    {
+      "startSeconds": 1712.02,
+      "text": "you said, some something hold like, and it's still tricky."
+    },
+    {
+      "startSeconds": 1716.31,
+      "text": "It's still catches."
+    },
+    {
+      "startSeconds": 1717.025,
+      "text": "So I'm not sure if the, maybe the GitLab one does one for"
+    },
+    {
+      "startSeconds": 1720.175,
+      "text": "that as well, but I think"
+    },
+    {
+      "startSeconds": 1721.57,
+      "text": "Uh, additional help."
+    },
+    {
+      "startSeconds": 1723.295,
+      "text": "Migration helpers, GitLab."
+    },
+    {
+      "startSeconds": 1724.575,
+      "text": "GitLab has implemented this approach, uh, a low"
+    },
+    {
+      "startSeconds": 1727.675,
+      "text": "log timeout, and they have it, uh, they have helpers"
+    },
+    {
+      "startSeconds": 1732.235,
+      "text": "for, for this, this thing."
+    },
+    {
+      "startSeconds": 1734.215,
+      "text": "Uh, but you're absolutely right."
+    },
+    {
+      "startSeconds": 1736.105,
+      "text": "And our tool right now doesn't do it."
+    },
+    {
+      "startSeconds": 1738.325,
+      "text": "Like we don't have, uh, background, uh,"
+    },
+    {
+      "startSeconds": 1740.58,
+      "text": "transactions which do this."
+    },
+    {
+      "startSeconds": 1742.345,
+      "text": "It's, it's technically possible."
+    },
+    {
+      "startSeconds": 1744.865,
+      "text": "Uh, yes, like we, we can think about it, but, uh, so far this"
+    },
+    {
+      "startSeconds": 1749.64,
+      "text": "is something you need to do."
+    },
+    {
+      "startSeconds": 1751.285,
+      "text": "And, uh, So, yeah, we cover only two first classes."
+    },
+    {
+      "startSeconds": 1755.15,
+      "text": "We are Right."
+    },
+    {
+      "startSeconds": 1756.02,
+      "text": "But"
+    },
+    {
+      "startSeconds": 1756.49,
+      "text": "I see the, sorry."
+    },
+    {
+      "startSeconds": 1759.41,
+      "text": "for this, I think everyone should just need to, just"
+    },
+    {
+      "startSeconds": 1762.2,
+      "text": "needs to have it always, you know, be prepared for long"
+    },
+    {
+      "startSeconds": 1765.92,
+      "text": "running, like after vacuum or some transactions holding,"
+    },
+    {
+      "startSeconds": 1770.37,
+      "text": "some even share locks."
+    },
+    {
+      "startSeconds": 1773.08,
+      "text": "Blocking our ddl."
+    },
+    {
+      "startSeconds": 1775.21,
+      "text": "So we didn't cover, actually interesting topic, how DDL is"
+    },
+    {
+      "startSeconds": 1779.5,
+      "text": "related to DL and like updates or deletes in batches or"
+    },
+    {
+      "startSeconds": 1784.09,
+      "text": "like massive insert as well."
+    },
+    {
+      "startSeconds": 1785.71,
+      "text": "Also interesting."
+    },
+    {
+      "startSeconds": 1786.91,
+      "text": "There are many things, right?"
+    },
+    {
+      "startSeconds": 1788.2,
+      "text": "And we already reached our limit in time, so let's wrap up."
+    },
+    {
+      "startSeconds": 1792.43,
+      "text": "I think we, we scratched surface, but um, but"
+    },
+    {
+      "startSeconds": 1796.99,
+      "text": "we did well because we."
+    },
+    {
+      "startSeconds": 1799.315,
+      "text": "Brought many good, uh, links on the table,"
+    },
+    {
+      "startSeconds": 1802.705,
+      "text": "right, articles and so on."
+    },
+    {
+      "startSeconds": 1804.625,
+      "text": "Materials."
+    },
+    {
+      "startSeconds": 1806.29,
+      "text": "and I think we've given some good warning signs."
+    },
+    {
+      "startSeconds": 1808.18,
+      "text": "You know, if you're thinking about adding a column, if"
+    },
+    {
+      "startSeconds": 1810.22,
+      "text": "you're thinking about adding an index, anything to do with"
+    },
+    {
+      "startSeconds": 1813.46,
+      "text": "partitioning, create detach."
+    },
+    {
+      "startSeconds": 1815.86,
+      "text": "Um, we've given some good warning."
+    },
+    {
+      "startSeconds": 1817.81,
+      "text": "Oh, foreign keys especially."
+    },
+    {
+      "startSeconds": 1819.1,
+      "text": "Anything around renaming."
+    },
+    {
+      "startSeconds": 1820.57,
+      "text": "These things are scary and you should be careful and"
+    },
+    {
+      "startSeconds": 1823.61,
+      "text": "Oh, renaming has issues, renaming has issues also related"
+    },
+    {
+      "startSeconds": 1828.91,
+      "text": "to application because we have many application notes."
+    },
+    {
+      "startSeconds": 1831.91,
+      "text": "It's also interesting."
+    },
+    {
+      "startSeconds": 1832.81,
+      "text": "Sometimes you cannot simply rename."
+    },
+    {
+      "startSeconds": 1834.79,
+      "text": "Yeah."
+    },
+    {
+      "startSeconds": 1835,
+      "text": "Well, It's interesting and the topic is very"
+    },
+    {
+      "startSeconds": 1837.465,
+      "text": "broad and, uh, yeah."
+    },
+    {
+      "startSeconds": 1838.935,
+      "text": "Warnings are right, and, and just like, I bet most"
+    },
+    {
+      "startSeconds": 1844.125,
+      "text": "people have issues in their, like, database migrations."
+    },
+    {
+      "startSeconds": 1847.605,
+      "text": "They have like, uh, they just don't, if, if you"
+    },
+    {
+      "startSeconds": 1850.514,
+      "text": "think everything is all right, you, you just don't"
+    },
+    {
+      "startSeconds": 1852.465,
+      "text": "have, uh, uh, proper cases."
+    },
+    {
+      "startSeconds": 1855.764,
+      "text": "Uh, yeah."
+    },
+    {
+      "startSeconds": 1856.185,
+      "text": "You ha you haven't met problems yet."
+    },
+    {
+      "startSeconds": 1858.29,
+      "text": "They, they, because they, there might be problems lasting a"
+    },
+    {
+      "startSeconds": 1861.975,
+      "text": "second and nobody noticed."
+    },
+    {
+      "startSeconds": 1863.535,
+      "text": "Right."
+    },
+    {
+      "startSeconds": 1864.895,
+      "text": "But, uh, later it'll be 10 seconds, then one minute"
+    },
+    {
+      "startSeconds": 1868.045,
+      "text": "and, uh, it's already bad."
+    },
+    {
+      "startSeconds": 1869.785,
+      "text": "So I hope it was, it was helpful."
+    },
+    {
+      "startSeconds": 1872.395,
+      "text": "Uh, please read articles, a lot of wisdom there."
+    },
+    {
+      "startSeconds": 1875.905,
+      "text": "And, uh, yeah, all we mentioned."
+    },
+    {
+      "startSeconds": 1878.754,
+      "text": "yep."
+    },
+    {
+      "startSeconds": 1880.435,
+      "text": "Nice one."
+    },
+    {
+      "startSeconds": 1880.77,
+      "text": "Nicola."
+    },
+    {
+      "startSeconds": 1881.215,
+      "text": "Thanks so much and catch you next week."
+    },
+    {
+      "startSeconds": 1884.115,
+      "text": "Yeah."
+    },
+    {
+      "startSeconds": 1884.845,
+      "text": "Uh, thank you all listeners."
+    },
+    {
+      "startSeconds": 1885.925,
+      "text": "So let us know if you like shorter episodes."
+    },
+    {
+      "startSeconds": 1890.725,
+      "text": "Okay,"
+    },
+    {
+      "startSeconds": 1891.16,
+      "text": "son. Take care."
+    },
+    {
+      "startSeconds": 1891.94,
+      "text": "Bye."
+    }
+  ]
+}

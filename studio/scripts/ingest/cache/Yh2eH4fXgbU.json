@@ -1,8 +1,1397 @@
 {
   "id": "Yh2eH4fXgbU",
   "url": "https://www.youtube.com/watch?v=Yh2eH4fXgbU",
-  "fetchedAt": "2026-08-31T05:14:59.804Z",
-  "captionKind": "empty",
+  "fetchedAt": "2026-09-01T04:05:20.176Z",
+  "captionKind": "asr",
   "chapters": [],
-  "cues": []
+  "cues": [
+    {
+      "startSeconds": 0.04,
+      "text": "react is slow well kind of there's a lot"
+    },
+    {
+      "startSeconds": 2.8,
+      "text": "of nuance to this conversation that I"
+    },
+    {
+      "startSeconds": 4.48,
+      "text": "find gets missed pretty often and react"
+    },
+    {
+      "startSeconds": 6.759,
+      "text": "has a lot of pieces baked in to help it"
+    },
+    {
+      "startSeconds": 8.8,
+      "text": "perform better one of those pieces is"
+    },
+    {
+      "startSeconds": 10.559,
+      "text": "react memo which allows you to prevent a"
+    },
+    {
+      "startSeconds": 12.88,
+      "text": "component or component tree from"
+    },
+    {
+      "startSeconds": 14.559,
+      "text": "updating when it doesn't need to however"
+    },
+    {
+      "startSeconds": 16.8,
+      "text": "react. memo is one of the most"
+    },
+    {
+      "startSeconds": 18.48,
+      "text": "misunderstood pieces of react and I've"
+    },
+    {
+      "startSeconds": 20.6,
+      "text": "honestly seen people use it incorrectly"
+    },
+    {
+      "startSeconds": 22.64,
+      "text": "more than correctly our good friend TK"
+    },
+    {
+      "startSeconds": 24.92,
+      "text": "dodo mostly known for his contributions"
+    },
+    {
+      "startSeconds": 26.8,
+      "text": "to react query as well as his incredible"
+    },
+    {
+      "startSeconds": 29.08,
+      "text": "blog post series about react query"
+    },
+    {
+      "startSeconds": 31.039,
+      "text": "titled practical react query he wrote an"
+    },
+    {
+      "startSeconds": 32.64,
+      "text": "article all about how people use react"
+    },
+    {
+      "startSeconds": 34.68,
+      "text": "noo incorrectly and how to think about"
+    },
+    {
+      "startSeconds": 36.44,
+      "text": "it a little bit better and I was really"
+    },
+    {
+      "startSeconds": 38.28,
+      "text": "excited when I saw this existed and"
+    },
+    {
+      "startSeconds": 39.48,
+      "text": "wanted to read it with y'all today so"
+    },
+    {
+      "startSeconds": 40.76,
+      "text": "let's take a look Dominic TK Doo"
+    },
+    {
+      "startSeconds": 42.28,
+      "text": "absolute goat if you're not already"
+    },
+    {
+      "startSeconds": 43.68,
+      "text": "following him on Twitter you should fix"
+    },
+    {
+      "startSeconds": 45.2,
+      "text": "that before you even continue watching"
+    },
+    {
+      "startSeconds": 46.559,
+      "text": "this video because he's a legend he's"
+    },
+    {
+      "startSeconds": 48.12,
+      "text": "making some of the most useful open"
+    },
+    {
+      "startSeconds": 49.84,
+      "text": "source contributions in react as well as"
+    },
+    {
+      "startSeconds": 51.48,
+      "text": "some of the best resources we can rely"
+    },
+    {
+      "startSeconds": 53.079,
+      "text": "on as react developers so definitely"
+    },
+    {
+      "startSeconds": 55.399,
+      "text": "check him out if you haven't already his"
+    },
+    {
+      "startSeconds": 56.719,
+      "text": "whole blog's incredible in this post is"
+    },
+    {
+      "startSeconds": 58.32,
+      "text": "no exception so nice simple quick uphill"
+    },
+    {
+      "startSeconds": 61.199,
+      "text": "battle of memoization there's lots of"
+    },
+    {
+      "startSeconds": 62.64,
+      "text": "good content out there already about"
+    },
+    {
+      "startSeconds": 63.96,
+      "text": "what you should do before you reach for"
+    },
+    {
+      "startSeconds": 65.519,
+      "text": "react. memo Dan's post before you Memo"
+    },
+    {
+      "startSeconds": 67.88,
+      "text": "from Dan abramof if you're not already"
+    },
+    {
+      "startSeconds": 69.28,
+      "text": "familiar on overreacted as well as"
+    },
+    {
+      "startSeconds": 71.159,
+      "text": "Kent's simple tricked optimize renders"
+    },
+    {
+      "startSeconds": 73.52,
+      "text": "article both these are incredible I've"
+    },
+    {
+      "startSeconds": 75.24,
+      "text": "read both of these but this is a very"
+    },
+    {
+      "startSeconds": 76.799,
+      "text": "different angle the idea is to let"
+    },
+    {
+      "startSeconds": 78.4,
+      "text": "components composition solve the problem"
+    },
+    {
+      "startSeconds": 80.479,
+      "text": "for you either by moving a state down or"
+    },
+    {
+      "startSeconds": 82.479,
+      "text": "lifting content up this is brilliant"
+    },
+    {
+      "startSeconds": 83.92,
+      "text": "because component composition is react's"
+    },
+    {
+      "startSeconds": 85.64,
+      "text": "natural mental model as Dan points out"
+    },
+    {
+      "startSeconds": 87.56,
+      "text": "this will also work well with server"
+    },
+    {
+      "startSeconds": 88.799,
+      "text": "components which are now reality what's"
+    },
+    {
+      "startSeconds": 90.439,
+      "text": "missing for most of the Articles I've"
+    },
+    {
+      "startSeconds": 91.6,
+      "text": "read is the why yes composition is great"
+    },
+    {
+      "startSeconds": 93.759,
+      "text": "but what's the problem with using react."
+    },
+    {
+      "startSeconds": 95.36,
+      "text": "memo why isn't it as good as a first"
+    },
+    {
+      "startSeconds": 97.399,
+      "text": "choice so here's my take on it memo is"
+    },
+    {
+      "startSeconds": 99.2,
+      "text": "too easy to break to recap when react"
+    },
+    {
+      "startSeconds": 101.32,
+      "text": "renders a component tree it will do so"
+    },
+    {
+      "startSeconds": 102.88,
+      "text": "top down for all children once a render"
+    },
+    {
+      "startSeconds": 105.159,
+      "text": "has started there is no way for us to"
+    },
+    {
+      "startSeconds": 106.88,
+      "text": "stop it mostly that's a good thing"
+    },
+    {
+      "startSeconds": 108.52,
+      "text": "because renders make sure that we see a"
+    },
+    {
+      "startSeconds": 110.399,
+      "text": "correct reflection of our state on the"
+    },
+    {
+      "startSeconds": 112.119,
+      "text": "screen also renders are usually fast"
+    },
+    {
+      "startSeconds": 114.88,
+      "text": "then of course there are those edge"
+    },
+    {
+      "startSeconds": 116.2,
+      "text": "cases where they aren't we all have some"
+    },
+    {
+      "startSeconds": 118.2,
+      "text": "components that don't render as fast as"
+    },
+    {
+      "startSeconds": 119.56,
+      "text": "we wish wish they could for some reason"
+    },
+    {
+      "startSeconds": 120.92,
+      "text": "we can't easily change luckily react can"
+    },
+    {
+      "startSeconds": 123.039,
+      "text": "still abort renders and it will do so if"
+    },
+    {
+      "startSeconds": 124.96,
+      "text": "it sees the same thing that's what makes"
+    },
+    {
+      "startSeconds": 126.88,
+      "text": "techniques like lifting content up work"
+    },
+    {
+      "startSeconds": 128.679,
+      "text": "in the first place so in this case we"
+    },
+    {
+      "startSeconds": 131.52,
+      "text": "moved the hello world and the expensive"
+    },
+    {
+      "startSeconds": 134.2,
+      "text": "tree render to be past as children here"
+    },
+    {
+      "startSeconds": 137.12,
+      "text": "and if children is always the exact same"
+    },
+    {
+      "startSeconds": 138.8,
+      "text": "reference react can Short Circuit the"
+    },
+    {
+      "startSeconds": 140.36,
+      "text": "render even if color changes the"
+    },
+    {
+      "startSeconds": 141.8,
+      "text": "expensive tree will not render the"
+    },
+    {
+      "startSeconds": 143.2,
+      "text": "benefit here since this is mounted above"
+    },
+    {
+      "startSeconds": 145.519,
+      "text": "is when this state changes let's say"
+    },
+    {
+      "startSeconds": 147,
+      "text": "this changes constantly like every frame"
+    },
+    {
+      "startSeconds": 149,
+      "text": "or so this div and this input will have"
+    },
+    {
+      "startSeconds": 151.239,
+      "text": "to render but the children that are"
+    },
+    {
+      "startSeconds": 153.239,
+      "text": "being passed in don't which is really"
+    },
+    {
+      "startSeconds": 154.84,
+      "text": "important because with stuff like react"
+    },
+    {
+      "startSeconds": 156.76,
+      "text": "server components the children could be"
+    },
+    {
+      "startSeconds": 158.239,
+      "text": "serialized HTML and that just being"
+    },
+    {
+      "startSeconds": 160.159,
+      "text": "passed through and guaranteed to not be"
+    },
+    {
+      "startSeconds": 161.68,
+      "text": "touched is really really nice so moving"
+    },
+    {
+      "startSeconds": 163.64,
+      "text": "things that don't change a lot outside"
+    },
+    {
+      "startSeconds": 165.84,
+      "text": "of the things that change a lot ideally"
+    },
+    {
+      "startSeconds": 167.56,
+      "text": "passing them through tends to be the"
+    },
+    {
+      "startSeconds": 168.84,
+      "text": "best solution a lot of the time the"
+    },
+    {
+      "startSeconds": 170.48,
+      "text": "alternative solution would be to keep"
+    },
+    {
+      "startSeconds": 172.04,
+      "text": "rendering everything from within the"
+    },
+    {
+      "startSeconds": 173.36,
+      "text": "same component but slap a react memo"
+    },
+    {
+      "startSeconds": 175.319,
+      "text": "around the expensive tree so we put it"
+    },
+    {
+      "startSeconds": 177.159,
+      "text": "in here we have this expensive component"
+    },
+    {
+      "startSeconds": 179.08,
+      "text": "which isn't that expensive but for the"
+    },
+    {
+      "startSeconds": 180.4,
+      "text": "sake of argument pretend it is and then"
+    },
+    {
+      "startSeconds": 181.84,
+      "text": "expensive tree which is react. memo"
+    },
+    {
+      "startSeconds": 183.879,
+      "text": "around this if we wrap a component with"
+    },
+    {
+      "startSeconds": 186.04,
+      "text": "react. memo react will skip rendering"
+    },
+    {
+      "startSeconds": 188.08,
+      "text": "that component and its children if its"
+    },
+    {
+      "startSeconds": 189.72,
+      "text": "props are unchanged this will certainly"
+    },
+    {
+      "startSeconds": 191.64,
+      "text": "achieve the same result as changing the"
+    },
+    {
+      "startSeconds": 193.2,
+      "text": "component composition but it's a lot"
+    },
+    {
+      "startSeconds": 194.68,
+      "text": "easier to break in the future when a"
+    },
+    {
+      "startSeconds": 196.4,
+      "text": "component is memorized react will"
+    },
+    {
+      "startSeconds": 197.68,
+      "text": "compare each prop with object.is if they"
+    },
+    {
+      "startSeconds": 200.36,
+      "text": "haven't changed rendering can be skipped"
+    },
+    {
+      "startSeconds": 202.4,
+      "text": "this works fine in our current example"
+    },
+    {
+      "startSeconds": 203.879,
+      "text": "because our component has no props and"
+    },
+    {
+      "startSeconds": 205.56,
+      "text": "it will also work if the props are"
+    },
+    {
+      "startSeconds": 206.84,
+      "text": "primitive values like numbers and"
+    },
+    {
+      "startSeconds": 208.76,
+      "text": "strings but as soon as get into"
+    },
+    {
+      "startSeconds": 210.159,
+      "text": "functions objects and arrays being"
+    },
+    {
+      "startSeconds": 211.92,
+      "text": "passed it can get rough like this"
+    },
+    {
+      "startSeconds": 214.08,
+      "text": "example where we're passing a style to"
+    },
+    {
+      "startSeconds": 216.08,
+      "text": "the expensive component and now we"
+    },
+    {
+      "startSeconds": 217.519,
+      "text": "memorized it this is pretty common where"
+    },
+    {
+      "startSeconds": 219.36,
+      "text": "you have a component and then you add"
+    },
+    {
+      "startSeconds": 220.799,
+      "text": "additional props later on but the thing"
+    },
+    {
+      "startSeconds": 222.36,
+      "text": "consuming expensive tree doesn't"
+    },
+    {
+      "startSeconds": 223.959,
+      "text": "actually necessarily know that it's"
+    },
+    {
+      "startSeconds": 225.4,
+      "text": "memorized so now when we pass expensive"
+    },
+    {
+      "startSeconds": 228.12,
+      "text": "tree style equals background color blue"
+    },
+    {
+      "startSeconds": 230.76,
+      "text": "this object is effectively getting"
+    },
+    {
+      "startSeconds": 232.4,
+      "text": "recreated on each render check so the"
+    },
+    {
+      "startSeconds": 234.76,
+      "text": "comparison is going to fail and now it's"
+    },
+    {
+      "startSeconds": 236.799,
+      "text": "going to reender this every time because"
+    },
+    {
+      "startSeconds": 238.519,
+      "text": "it's generated new props and it's"
+    },
+    {
+      "startSeconds": 240.599,
+      "text": "possible that this new object would"
+    },
+    {
+      "startSeconds": 242.76,
+      "text": "result in different content being"
+    },
+    {
+      "startSeconds": 244.64,
+      "text": "rendered but if we wrap the memoized"
+    },
+    {
+      "startSeconds": 247.04,
+      "text": "style in a react you memo call this"
+    },
+    {
+      "startSeconds": 249.959,
+      "text": "fixes it so to speak but you still have"
+    },
+    {
+      "startSeconds": 251.959,
+      "text": "no guarantees from above or below that"
+    },
+    {
+      "startSeconds": 253.84,
+      "text": "these things aren't going to change in"
+    },
+    {
+      "startSeconds": 255.799,
+      "text": "other ways especially once you have more"
+    },
+    {
+      "startSeconds": 257.239,
+      "text": "and more props that are being consumed"
+    },
+    {
+      "startSeconds": 259.04,
+      "text": "here it gets increasingly difficult yeah"
+    },
+    {
+      "startSeconds": 261.72,
+      "text": "once style becomes a prop being passed"
+    },
+    {
+      "startSeconds": 263.4,
+      "text": "in you do something innocent like this"
+    },
+    {
+      "startSeconds": 265.16,
+      "text": "well you don't actually know if the"
+    },
+    {
+      "startSeconds": 266,
+      "text": "style coming in is used memoed and"
+    },
+    {
+      "startSeconds": 268.28,
+      "text": "properly memorized or not and as soon as"
+    },
+    {
+      "startSeconds": 270.16,
+      "text": "there is a value that isn't properly"
+    },
+    {
+      "startSeconds": 272.28,
+      "text": "memorized coming into the memorized"
+    },
+    {
+      "startSeconds": 274.32,
+      "text": "component no matter how far away it"
+    },
+    {
+      "startSeconds": 275.8,
+      "text": "comes from you're going to start running"
+    },
+    {
+      "startSeconds": 277.32,
+      "text": "into problems and the these types of"
+    },
+    {
+      "startSeconds": 279.44,
+      "text": "innocent changes where you move the"
+    },
+    {
+      "startSeconds": 282,
+      "text": "style from in the component to being a"
+    },
+    {
+      "startSeconds": 284.24,
+      "text": "prop that you pass through might cause a"
+    },
+    {
+      "startSeconds": 286.52,
+      "text": "massive performance issue for your app"
+    },
+    {
+      "startSeconds": 288.16,
+      "text": "you didn't predict because it abstracts"
+    },
+    {
+      "startSeconds": 290.479,
+      "text": "the slow part away from the thing that"
+    },
+    {
+      "startSeconds": 292.919,
+      "text": "can trigger it being slow I think that's"
+    },
+    {
+      "startSeconds": 294.88,
+      "text": "the biggest issue that we'll see in a"
+    },
+    {
+      "startSeconds": 296.96,
+      "text": "lot of react code it's very very easy to"
+    },
+    {
+      "startSeconds": 300.24,
+      "text": "separate the place where the slow thing"
+    },
+    {
+      "startSeconds": 301.8,
+      "text": "is from the place that makes it slow and"
+    },
+    {
+      "startSeconds": 303.68,
+      "text": "when you use memo you have Now hidden"
+    },
+    {
+      "startSeconds": 305.56,
+      "text": "the slow part in a way where it doesn't"
+    },
+    {
+      "startSeconds": 307.28,
+      "text": "seem slow but any subtle change that"
+    },
+    {
+      "startSeconds": 309.36,
+      "text": "doesn't seem like it should affect"
+    },
+    {
+      "startSeconds": 310.52,
+      "text": "anything will suddenly make that code"
+    },
+    {
+      "startSeconds": 312,
+      "text": "slow again and that's the fear that"
+    },
+    {
+      "startSeconds": 314.08,
+      "text": "react memo instills in developers like"
+    },
+    {
+      "startSeconds": 316.84,
+      "text": "myself oh boy here's another fun one if"
+    },
+    {
+      "startSeconds": 319.28,
+      "text": "the memoized component accepts"
+    },
+    {
+      "startSeconds": 321.759,
+      "text": "children yeah you didn't know this would"
+    },
+    {
+      "startSeconds": 323.88,
+      "text": "break memoization why would it I'm just"
+    },
+    {
+      "startSeconds": 325.68,
+      "text": "passing the same stable P tag well jsx"
+    },
+    {
+      "startSeconds": 327.96,
+      "text": "is just syntact sugar for react up"
+    },
+    {
+      "startSeconds": 329.919,
+      "text": "create element which creates a new"
+    },
+    {
+      "startSeconds": 331.12,
+      "text": "object on every render if you want to"
+    },
+    {
+      "startSeconds": 333.199,
+      "text": "pass children to a memoized component"
+    },
+    {
+      "startSeconds": 335.28,
+      "text": "you need to use memo that jsx render and"
+    },
+    {
+      "startSeconds": 338.12,
+      "text": "then pass that memoized element as the"
+    },
+    {
+      "startSeconds": 339.96,
+      "text": "child instead God we can surely wrap the"
+    },
+    {
+      "startSeconds": 343.319,
+      "text": "children we're passing with a used memo"
+    },
+    {
+      "startSeconds": 345.12,
+      "text": "but I hope you're realizing by now that"
+    },
+    {
+      "startSeconds": 347.28,
+      "text": "we're fighting an uphill battle that is"
+    },
+    {
+      "startSeconds": 349.039,
+      "text": "hardly"
+    },
+    {
+      "startSeconds": 350.6,
+      "text": "winnable Yep this is the issue the next"
+    },
+    {
+      "startSeconds": 353.88,
+      "text": "person might just come by and pass an"
+    },
+    {
+      "startSeconds": 355.16,
+      "text": "empty object or raise a fallback value"
+    },
+    {
+      "startSeconds": 356.88,
+      "text": "to a prop on a memoized component and"
+    },
+    {
+      "startSeconds": 358.24,
+      "text": "we're back to square one yeah you you"
+    },
+    {
+      "startSeconds": 359.56,
+      "text": "make one small mistake like this and"
+    },
+    {
+      "startSeconds": 361.28,
+      "text": "it's all over again so using r. memo is"
+    },
+    {
+      "startSeconds": 363.6,
+      "text": "a bit of a mindfield and choosing one of"
+    },
+    {
+      "startSeconds": 365.199,
+      "text": "the proposed Alternatives seems way"
+    },
+    {
+      "startSeconds": 366.479,
+      "text": "better to me but sometimes we seemingly"
+    },
+    {
+      "startSeconds": 368.16,
+      "text": "can't avoid a memorization of a"
+    },
+    {
+      "startSeconds": 369.72,
+      "text": "component let's take a look at the"
+    },
+    {
+      "startSeconds": 370.919,
+      "text": "example I've seen on Twitter that"
+    },
+    {
+      "startSeconds": 372.16,
+      "text": "sparked the idea for this blog"
+    },
+    {
+      "startSeconds": 373.88,
+      "text": "post I really need to do react"
+    },
+    {
+      "startSeconds": 375.72,
+      "text": "performance optimizations but we have a"
+    },
+    {
+      "startSeconds": 377.24,
+      "text": "page with five big tables and a summary"
+    },
+    {
+      "startSeconds": 379.039,
+      "text": "box when one big table changes"
+    },
+    {
+      "startSeconds": 380.72,
+      "text": "everything renders it's slow solution"
+    },
+    {
+      "startSeconds": 382.599,
+      "text": "one I wrapped each table in a memo two I"
+    },
+    {
+      "startSeconds": 384.68,
+      "text": "wrap the functions passed down and use"
+    },
+    {
+      "startSeconds": 385.96,
+      "text": "callback much faster looks to me more"
+    },
+    {
+      "startSeconds": 388.199,
+      "text": "like state is too high up if every table"
+    },
+    {
+      "startSeconds": 390.08,
+      "text": "had their own State changing one"
+    },
+    {
+      "startSeconds": 391.36,
+      "text": "wouldn't reender the others problem with"
+    },
+    {
+      "startSeconds": 392.88,
+      "text": "M when use callback is that it only"
+    },
+    {
+      "startSeconds": 394.199,
+      "text": "takes one prop to screw it all up yeah"
+    },
+    {
+      "startSeconds": 395.88,
+      "text": "if you accidentally pass an empty arrays"
+    },
+    {
+      "startSeconds": 397.36,
+      "text": "a default there goes all your perf WIS"
+    },
+    {
+      "startSeconds": 399.12,
+      "text": "so let's see what he said about this"
+    },
+    {
+      "startSeconds": 400.84,
+      "text": "here here I expect the component tree to"
+    },
+    {
+      "startSeconds": 402.84,
+      "text": "look something like this I'm using two"
+    },
+    {
+      "startSeconds": 404.36,
+      "text": "tables instead of five for brevity so"
+    },
+    {
+      "startSeconds": 406.039,
+      "text": "table one table two both of these are in"
+    },
+    {
+      "startSeconds": 407.759,
+      "text": "state together and they're both being"
+    },
+    {
+      "startSeconds": 409.039,
+      "text": "passed here State holds the data of both"
+    },
+    {
+      "startSeconds": 411.319,
+      "text": "tables and the summary Bar Needs access"
+    },
+    {
+      "startSeconds": 412.88,
+      "text": "to all of it we can't move State down"
+    },
+    {
+      "startSeconds": 414.96,
+      "text": "into the tables and we also can't"
+    },
+    {
+      "startSeconds": 416.4,
+      "text": "compose the components in a different"
+    },
+    {
+      "startSeconds": 417.96,
+      "text": "way it seems that memorization is our"
+    },
+    {
+      "startSeconds": 419.199,
+      "text": "only only option so yeah in this"
+    },
+    {
+      "startSeconds": 420.68,
+      "text": "particular case memoizing probably makes"
+    },
+    {
+      "startSeconds": 422.319,
+      "text": "a lot of sense if the state has to live"
+    },
+    {
+      "startSeconds": 424.12,
+      "text": "here don't start rendering remember when"
+    },
+    {
+      "startSeconds": 426.4,
+      "text": "I said that once a render started we"
+    },
+    {
+      "startSeconds": 427.96,
+      "text": "have no way of stopping it that's still"
+    },
+    {
+      "startSeconds": 429.4,
+      "text": "true but what if we'd stop the render"
+    },
+    {
+      "startSeconds": 431.28,
+      "text": "from starting in the first place if"
+    },
+    {
+      "startSeconds": 432.599,
+      "text": "State wouldn't live at the top of the"
+    },
+    {
+      "startSeconds": 433.68,
+      "text": "app we wouldn't need to reender the"
+    },
+    {
+      "startSeconds": 435.08,
+      "text": "whole tree whenever it changes where"
+    },
+    {
+      "startSeconds": 436.72,
+      "text": "could it live instead we've already"
+    },
+    {
+      "startSeconds": 438.08,
+      "text": "established we can't move it down so"
+    },
+    {
+      "startSeconds": 439.44,
+      "text": "let's put it to the side outside of"
+    },
+    {
+      "startSeconds": 440.84,
+      "text": "react this is precisely what most state"
+    },
+    {
+      "startSeconds": 442.919,
+      "text": "Management Solutions do they store the"
+    },
+    {
+      "startSeconds": 444.4,
+      "text": "state outside of react and surgically"
+    },
+    {
+      "startSeconds": 446.12,
+      "text": "trigger reenders of the parts of the"
+    },
+    {
+      "startSeconds": 447.919,
+      "text": "component tree that need to know about"
+    },
+    {
+      "startSeconds": 449.44,
+      "text": "what changes you use react query before"
+    },
+    {
+      "startSeconds": 451.16,
+      "text": "this is exactly what happens there as"
+    },
+    {
+      "startSeconds": 452.599,
+      "text": "well without the technique you'd see way"
+    },
+    {
+      "startSeconds": 454.16,
+      "text": "more re-renders than you'd like to so"
+    },
+    {
+      "startSeconds": 456,
+      "text": "yes my proposed alternative solution is"
+    },
+    {
+      "startSeconds": 457.44,
+      "text": "to bring in an effective State manager"
+    },
+    {
+      "startSeconds": 458.96,
+      "text": "I'm going to use zustand because it's"
+    },
+    {
+      "startSeconds": 460.12,
+      "text": "the one I'm most familiar with it's a"
+    },
+    {
+      "startSeconds": 461.44,
+      "text": "really nice example we create a store it"
+    },
+    {
+      "startSeconds": 463.24,
+      "text": "has these two values in it and it has"
+    },
+    {
+      "startSeconds": 464.8,
+      "text": "actions which are things that operate on"
+    },
+    {
+      "startSeconds": 466.319,
+      "text": "the store these would be things like add"
+    },
+    {
+      "startSeconds": 468.08,
+      "text": "to table or remove from table or in the"
+    },
+    {
+      "startSeconds": 470.28,
+      "text": "things you put in here which again this"
+    },
+    {
+      "startSeconds": 471.599,
+      "text": "is just a random key he chose but it's"
+    },
+    {
+      "startSeconds": 473.159,
+      "text": "very easy within created zustand store"
+    },
+    {
+      "startSeconds": 475.639,
+      "text": "to call the set function in functions"
+    },
+    {
+      "startSeconds": 477.319,
+      "text": "you define so now the store has these"
+    },
+    {
+      "startSeconds": 479.319,
+      "text": "behaviors that will trigger updates"
+    },
+    {
+      "startSeconds": 481.28,
+      "text": "externally which if hooked into with"
+    },
+    {
+      "startSeconds": 483.199,
+      "text": "react hooks will trigger those"
+    },
+    {
+      "startSeconds": 484.68,
+      "text": "internally in react so here we have"
+    },
+    {
+      "startSeconds": 486.36,
+      "text": "exported custom hooks for use table one"
+    },
+    {
+      "startSeconds": 488.159,
+      "text": "data and use table 2 Data as well as a"
+    },
+    {
+      "startSeconds": 490.12,
+      "text": "use summary data and my assumption is"
+    },
+    {
+      "startSeconds": 492,
+      "text": "that all of these hooks are going to be"
+    },
+    {
+      "startSeconds": 493.879,
+      "text": "placed in different places and ideally"
+    },
+    {
+      "startSeconds": 495.84,
+      "text": "the ones that are the most expensive"
+    },
+    {
+      "startSeconds": 497.319,
+      "text": "aren't going to be too close to the top"
+    },
+    {
+      "startSeconds": 498.879,
+      "text": "and all of these will be called near the"
+    },
+    {
+      "startSeconds": 500.319,
+      "text": "leaves so the renders only affect those"
+    },
+    {
+      "startSeconds": 502.8,
+      "text": "elements now every component can"
+    },
+    {
+      "startSeconds": 504.919,
+      "text": "subscribe internally to the state it is"
+    },
+    {
+      "startSeconds": 506.56,
+      "text": "interested in avoiding any top- down"
+    },
+    {
+      "startSeconds": 508.159,
+      "text": "renders if table two dat updates table"
+    },
+    {
+      "startSeconds": 509.96,
+      "text": "one won't render this is as effective as"
+    },
+    {
+      "startSeconds": 511.84,
+      "text": "memorizing the tables but won't suffer"
+    },
+    {
+      "startSeconds": 513.32,
+      "text": "from the pitfalls when adding new props"
+    },
+    {
+      "startSeconds": 515,
+      "text": "that can negatively impact performance a"
+    },
+    {
+      "startSeconds": 516.919,
+      "text": "way out granted all solutions we have"
+    },
+    {
+      "startSeconds": 519.2,
+      "text": "here are not great memorizing in general"
+    },
+    {
+      "startSeconds": 520.8,
+      "text": "makes our code harder to read and it's"
+    },
+    {
+      "startSeconds": 522.32,
+      "text": "easy to get wrong which makes it the"
+    },
+    {
+      "startSeconds": 523.719,
+      "text": "worst option for me using external State"
+    },
+    {
+      "startSeconds": 525.44,
+      "text": "managers is a bit better you might have"
+    },
+    {
+      "startSeconds": 527.04,
+      "text": "that dependency in your app anyway"
+    },
+    {
+      "startSeconds": 528.519,
+      "text": "adapting the way you compose components"
+    },
+    {
+      "startSeconds": 530.16,
+      "text": "is still the best option but it's not"
+    },
+    {
+      "startSeconds": 531.8,
+      "text": "always possible what would really be a"
+    },
+    {
+      "startSeconds": 533.92,
+      "text": "way out is if we change the rules of the"
+    },
+    {
+      "startSeconds": 535.56,
+      "text": "game records in tupal in ecma script"
+    },
+    {
+      "startSeconds": 537.48,
+      "text": "proposal it's in stage two for quite"
+    },
+    {
+      "startSeconds": 538.72,
+      "text": "some time would would help us with"
+    },
+    {
+      "startSeconds": 539.6,
+      "text": "arrays and objects but not for functions"
+    },
+    {
+      "startSeconds": 541.6,
+      "text": "Sebastian lber has a great read on that"
+    },
+    {
+      "startSeconds": 543.24,
+      "text": "I haven't actually read this one records"
+    },
+    {
+      "startSeconds": 544.72,
+      "text": "and tupal for react interesting I'll be"
+    },
+    {
+      "startSeconds": 546.279,
+      "text": "sure to read that in the future the"
+    },
+    {
+      "startSeconds": 547.16,
+      "text": "react team has also hinted that they are"
+    },
+    {
+      "startSeconds": 548.6,
+      "text": "working on a compiler called react"
+    },
+    {
+      "startSeconds": 550.12,
+      "text": "forget which will supposedly memorize"
+    },
+    {
+      "startSeconds": 551.72,
+      "text": "everything for us automatically with"
+    },
+    {
+      "startSeconds": 553.36,
+      "text": "that in place we can get the perf"
+    },
+    {
+      "startSeconds": 554.399,
+      "text": "optimizations of react. memo without the"
+    },
+    {
+      "startSeconds": 556.2,
+      "text": "error surface make sure you're following"
+    },
+    {
+      "startSeconds": 557.92,
+      "text": "TK because he more so than almost"
+    },
+    {
+      "startSeconds": 559.72,
+      "text": "anybody on Twitter exclusively provides"
+    },
+    {
+      "startSeconds": 561.88,
+      "text": "value like I'm just going to scroll"
+    },
+    {
+      "startSeconds": 563.079,
+      "text": "through and look at some random tweets"
+    },
+    {
+      "startSeconds": 564.44,
+      "text": "every single one of these are going to"
+    },
+    {
+      "startSeconds": 565.36,
+      "text": "be useful API design avoid optional"
+    },
+    {
+      "startSeconds": 567.32,
+      "text": "prams if they are mutually exclusive"
+    },
+    {
+      "startSeconds": 568.76,
+      "text": "that's very useful point and I'm sure he"
+    },
+    {
+      "startSeconds": 570.24,
+      "text": "broke it down great shorter to write is"
+    },
+    {
+      "startSeconds": 572,
+      "text": "one of my favorite Arguments for"
+    },
+    {
+      "startSeconds": 573.32,
+      "text": "anything really it's the reason I"
+    },
+    {
+      "startSeconds": 574.72,
+      "text": "stopped programming in cobal here like"
+    },
+    {
+      "startSeconds": 576.48,
+      "text": "one of the highest signal to noise"
+    },
+    {
+      "startSeconds": 578.36,
+      "text": "ratios of anybody on the platform please"
+    },
+    {
+      "startSeconds": 580.24,
+      "text": "follow him if you haven't already great"
+    },
+    {
+      "startSeconds": 581.44,
+      "text": "content great dude great blog posts"
+    },
+    {
+      "startSeconds": 583.2,
+      "text": "thank you all as always I know react"
+    },
+    {
+      "startSeconds": 584.64,
+      "text": "performance is a scary topic I hope this"
+    },
+    {
+      "startSeconds": 586.279,
+      "text": "shows you some strategies to mitigate it"
+    },
+    {
+      "startSeconds": 588.079,
+      "text": "generally speaking the simpler you make"
+    },
+    {
+      "startSeconds": 590,
+      "text": "things in terms of how State lives and"
+    },
+    {
+      "startSeconds": 591.92,
+      "text": "the closer you attach the things"
+    },
+    {
+      "startSeconds": 593.519,
+      "text": "rendering to the data that it's"
+    },
+    {
+      "startSeconds": 594.76,
+      "text": "rendering with the better things will"
+    },
+    {
+      "startSeconds": 596.839,
+      "text": "perform and it's really cool seeing"
+    },
+    {
+      "startSeconds": 598.36,
+      "text": "authors like K Doo going out of their"
+    },
+    {
+      "startSeconds": 600.399,
+      "text": "way to write useful quality resources"
+    },
+    {
+      "startSeconds": 602.64,
+      "text": "explaining why these trade-offs matter"
+    },
+    {
+      "startSeconds": 604.12,
+      "text": "so much appreciate all of you as always"
+    },
+    {
+      "startSeconds": 606.44,
+      "text": "I'll pin a video in the corner here with"
+    },
+    {
+      "startSeconds": 607.88,
+      "text": "all sorts of other fun things you can do"
+    },
+    {
+      "startSeconds": 609.32,
+      "text": "with react if you weren't familiar"
+    },
+    {
+      "startSeconds": 610.64,
+      "text": "performance matters more than ever in"
+    },
+    {
+      "startSeconds": 611.959,
+      "text": "some of those examples appreciate you"
+    },
+    {
+      "startSeconds": 613.64,
+      "text": "all a ton see you guys next time peace"
+    },
+    {
+      "startSeconds": 615.72,
+      "text": "NS"
+    }
+  ]
 }

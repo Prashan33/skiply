@@ -1,0 +1,1498 @@
+{
+  "id": "pD6C1-zSxIM",
+  "url": "https://www.youtube.com/watch?v=pD6C1-zSxIM",
+  "fetchedAt": "2026-09-01T04:10:07.018Z",
+  "captionKind": "asr",
+  "chapters": [
+    {
+      "startSeconds": 0,
+      "label": "Intro"
+    },
+    {
+      "startSeconds": 160,
+      "label": "XSS Stored Attacks"
+    },
+    {
+      "startSeconds": 290,
+      "label": "Reflected XSS Attacks"
+    },
+    {
+      "startSeconds": 480,
+      "label": "Source Code Explained"
+    },
+    {
+      "startSeconds": 590,
+      "label": "Prevent XSS Attacks with CSP"
+    },
+    {
+      "startSeconds": 960,
+      "label": "Prevent all scripts with CSP"
+    }
+  ],
+  "cues": [
+    {
+      "startSeconds": 0.03,
+      "text": "what is going on guys my name is Hussein"
+    },
+    {
+      "startSeconds": 1.68,
+      "text": "and this video I want to discuss XSS or"
+    },
+    {
+      "startSeconds": 4.71,
+      "text": "cross-site scripting attacks in this"
+    },
+    {
+      "startSeconds": 10.08,
+      "text": "video I want to describe two of three"
+    },
+    {
+      "startSeconds": 12.84,
+      "text": "known cross-site scripting attack one is"
+    },
+    {
+      "startSeconds": 15.599,
+      "text": "called the stored attack accesses stored"
+    },
+    {
+      "startSeconds": 18.24,
+      "text": "attack and the second was called that"
+    },
+    {
+      "startSeconds": 19.89,
+      "text": "reflected XSS attacks and then there's a"
+    },
+    {
+      "startSeconds": 22.439,
+      "text": "third one that I'm not gonna go through"
+    },
+    {
+      "startSeconds": 23.85,
+      "text": "this video because it's most obvious one"
+    },
+    {
+      "startSeconds": 25.89,
+      "text": "was called the dom-based xss attack"
+    },
+    {
+      "startSeconds": 28.92,
+      "text": "where you manipulate the dom so and"
+    },
+    {
+      "startSeconds": 30.949,
+      "text": "finally at the end of the video I'm"
+    },
+    {
+      "startSeconds": 33.03,
+      "text": "gonna show you how you can mitigate this"
+    },
+    {
+      "startSeconds": 35.07,
+      "text": "attack by adding some headers at the"
+    },
+    {
+      "startSeconds": 37.95,
+      "text": "server side to prevent executing off"
+    },
+    {
+      "startSeconds": 40.29,
+      "text": "scripts so about a minute so might as"
+    },
+    {
+      "startSeconds": 43.77,
+      "text": "well going to define what exercises"
+    },
+    {
+      "startSeconds": 46.35,
+      "text": "cross-site scripting is the ability for"
+    },
+    {
+      "startSeconds": 48.809,
+      "text": "you have a legitimate website which is"
+    },
+    {
+      "startSeconds": 51.03,
+      "text": "in my case this is my product catalog"
+    },
+    {
+      "startSeconds": 53.489,
+      "text": "website and to legitimate site but with"
+    },
+    {
+      "startSeconds": 57.42,
+      "text": "legitimate entries like a door input or"
+    },
+    {
+      "startSeconds": 62.399,
+      "text": "function search attackers can inject"
+    },
+    {
+      "startSeconds": 66,
+      "text": "scripts that aren't supposed to execute"
+    },
+    {
+      "startSeconds": 68.909,
+      "text": "but they gotta execute on your own your"
+    },
+    {
+      "startSeconds": 71.13,
+      "text": "clients all right which will essentially"
+    },
+    {
+      "startSeconds": 74.46,
+      "text": "cause havoc right"
+    },
+    {
+      "startSeconds": 76.74,
+      "text": "they can't JavaScript executing on the"
+    },
+    {
+      "startSeconds": 79.799,
+      "text": "client-side that is not your code as a"
+    },
+    {
+      "startSeconds": 81.63,
+      "text": "bad idea"
+    },
+    {
+      "startSeconds": 82.35,
+      "text": "it can sniff your cookies and send them"
+    },
+    {
+      "startSeconds": 85.049,
+      "text": "to the server it can cause a repeating"
+    },
+    {
+      "startSeconds": 88.65,
+      "text": "attack right it can take down the server"
+    },
+    {
+      "startSeconds": 90.9,
+      "text": "it can take down your API rates it's a"
+    },
+    {
+      "startSeconds": 94.409,
+      "text": "mess right so we want to prevent this"
+    },
+    {
+      "startSeconds": 96.72,
+      "text": "attack as much as well but how about we"
+    },
+    {
+      "startSeconds": 98.31,
+      "text": "just describe this kind of attack but"
+    },
+    {
+      "startSeconds": 100.5,
+      "text": "let's go through with my beautiful"
+    },
+    {
+      "startSeconds": 102.57,
+      "text": "server here I have a node.js server I'm"
+    },
+    {
+      "startSeconds": 105.479,
+      "text": "gonna share with the code with you guys"
+    },
+    {
+      "startSeconds": 107.22,
+      "text": "but what it does essentially it's a very"
+    },
+    {
+      "startSeconds": 109.14,
+      "text": "simple thing it shows this HTML page and"
+    },
+    {
+      "startSeconds": 111.57,
+      "text": "if I can add some products peach and"
+    },
+    {
+      "startSeconds": 114.689,
+      "text": "just like that I added it to the back"
+    },
+    {
+      "startSeconds": 117.03,
+      "text": "end right and then afresh it shows yeah"
+    },
+    {
+      "startSeconds": 119.759,
+      "text": "you added a peach let's add some beta"
+    },
+    {
+      "startSeconds": 121.469,
+      "text": "right I don't know why I call it product"
+    },
+    {
+      "startSeconds": 124.88,
+      "text": "might as well just grocery alright so"
+    },
+    {
+      "startSeconds": 129.44,
+      "text": "legit website right there's another"
+    },
+    {
+      "startSeconds": 132.3,
+      "text": "search function that I did"
+    },
+    {
+      "startSeconds": 133.92,
+      "text": "where you can do Q you do like that"
+    },
+    {
+      "startSeconds": 136.53,
+      "text": "search q equal R now"
+    },
+    {
+      "startSeconds": 141.68,
+      "text": "pineapple right and says hey I cannot"
+    },
+    {
+      "startSeconds": 145.56,
+      "text": "find product pineapple that's what it"
+    },
+    {
+      "startSeconds": 147.54,
+      "text": "does right so it it just basically tells"
+    },
+    {
+      "startSeconds": 150.9,
+      "text": "you what it couldn't find right this"
+    },
+    {
+      "startSeconds": 153.33,
+      "text": "seems innocent right alright so that was"
+    },
+    {
+      "startSeconds": 156.3,
+      "text": "that seems innocent so let's talk about"
+    },
+    {
+      "startSeconds": 158.88,
+      "text": "the first guy above attack which is XSS"
+    },
+    {
+      "startSeconds": 161.4,
+      "text": "stored attack right when I add this"
+    },
+    {
+      "startSeconds": 166.77,
+      "text": "puppy I'll be prompted to enter the name"
+    },
+    {
+      "startSeconds": 171.57,
+      "text": "of the product"
+    },
+    {
+      "startSeconds": 172.26,
+      "text": "and if the users typed this script right"
+    },
+    {
+      "startSeconds": 176.4,
+      "text": "an actual script tag let's say I'm gonna"
+    },
+    {
+      "startSeconds": 179.37,
+      "text": "just say alert for simplicity here XSS"
+    },
+    {
+      "startSeconds": 184.77,
+      "text": "babes right and I said this this is the"
+    },
+    {
+      "startSeconds": 189.66,
+      "text": "product right but this also is a script"
+    },
+    {
+      "startSeconds": 193.23,
+      "text": "right when you do that and I send it the"
+    },
+    {
+      "startSeconds": 196.14,
+      "text": "server stored that entry in the database"
+    },
+    {
+      "startSeconds": 199.2,
+      "text": "right that's why don't have a database"
+    },
+    {
+      "startSeconds": 201.75,
+      "text": "but you can't idea its story now if i"
+    },
+    {
+      "startSeconds": 204.33,
+      "text": "refresh the page oh mama look at this"
+    },
+    {
+      "startSeconds": 209.42,
+      "text": "the script has been executed just by"
+    },
+    {
+      "startSeconds": 212.04,
+      "text": "refreshing now you Karen rec anyone who"
+    },
+    {
+      "startSeconds": 218.489,
+      "text": "views this page immediately get this"
+    },
+    {
+      "startSeconds": 221.16,
+      "text": "script executes and that's what happened"
+    },
+    {
+      "startSeconds": 223.2,
+      "text": "to Twitter someone actually injected an"
+    },
+    {
+      "startSeconds": 225.81,
+      "text": "XSS tweet and that anyone who viewed"
+    },
+    {
+      "startSeconds": 229.799,
+      "text": "this tweet will execute a script and"
+    },
+    {
+      "startSeconds": 233.22,
+      "text": "that script essentially retweeted the"
+    },
+    {
+      "startSeconds": 236.28,
+      "text": "same tweet by the user because it's just"
+    },
+    {
+      "startSeconds": 238.769,
+      "text": "it's it's basically JavaScript right you"
+    },
+    {
+      "startSeconds": 241.53,
+      "text": "can click the button and you can do"
+    },
+    {
+      "startSeconds": 242.88,
+      "text": "everything you want with JavaScript and"
+    },
+    {
+      "startSeconds": 244.769,
+      "text": "so yeah so that's the first kind of"
+    },
+    {
+      "startSeconds": 247.41,
+      "text": "attack XSS toward attack why is it"
+    },
+    {
+      "startSeconds": 249.57,
+      "text": "called store because the that attack"
+    },
+    {
+      "startSeconds": 252.09,
+      "text": "their access as a store at the server"
+    },
+    {
+      "startSeconds": 254.22,
+      "text": "the script is started the server and any"
+    },
+    {
+      "startSeconds": 256.53,
+      "text": "card who consumes that actually will"
+    },
+    {
+      "startSeconds": 260.94,
+      "text": "execute the script so how do you"
+    },
+    {
+      "startSeconds": 262.95,
+      "text": "mitigate that obviously you need to"
+    },
+    {
+      "startSeconds": 264.57,
+      "text": "sanitize your your"
+    },
+    {
+      "startSeconds": 265.98,
+      "text": "but as much as possible right if I send"
+    },
+    {
+      "startSeconds": 268.32,
+      "text": "something to the server the server"
+    },
+    {
+      "startSeconds": 269.19,
+      "text": "should clean it up or get rid of any"
+    },
+    {
+      "startSeconds": 271.92,
+      "text": "unwanted scripts even that doesn't"
+    },
+    {
+      "startSeconds": 274.53,
+      "text": "sometimes work because people are clever"
+    },
+    {
+      "startSeconds": 276.81,
+      "text": "they they ops if what's the word obsess"
+    },
+    {
+      "startSeconds": 281.13,
+      "text": "get up suffocate of suffocation yeah we"
+    },
+    {
+      "startSeconds": 284.04,
+      "text": "do application to the JavaScript to"
+    },
+    {
+      "startSeconds": 285.81,
+      "text": "change it to include like these weird"
+    },
+    {
+      "startSeconds": 289.61,
+      "text": "hexadecimal stuff right yeah like that"
+    },
+    {
+      "startSeconds": 292.38,
+      "text": "right so yeah so that's the first attack"
+    },
+    {
+      "startSeconds": 294.57,
+      "text": "the second is a is called reflected XSS"
+    },
+    {
+      "startSeconds": 297.81,
+      "text": "attack and that's a little bit more"
+    },
+    {
+      "startSeconds": 299.55,
+      "text": "dangerous in my opinion you know how we"
+    },
+    {
+      "startSeconds": 301.98,
+      "text": "made this search right Q equal test"
+    },
+    {
+      "startSeconds": 304.91,
+      "text": "right if the attacker took this URL and"
+    },
+    {
+      "startSeconds": 309.86,
+      "text": "let's go to example.com right I'm just"
+    },
+    {
+      "startSeconds": 316.5,
+      "text": "going to another side assume this is the"
+    },
+    {
+      "startSeconds": 318.57,
+      "text": "bad side right and I'm just gonna edit"
+    },
+    {
+      "startSeconds": 321.75,
+      "text": "this stuff right and I'm gonna edit the"
+    },
+    {
+      "startSeconds": 326.19,
+      "text": "HTML here and then to say at ref right"
+    },
+    {
+      "startSeconds": 336.66,
+      "text": "that says hey click here to download a"
+    },
+    {
+      "startSeconds": 343.88,
+      "text": "CPU booster because that's what ads do"
+    },
+    {
+      "startSeconds": 348.03,
+      "text": "right click here to speed up your"
+    },
+    {
+      "startSeconds": 349.98,
+      "text": "computer right and and and the attacker"
+    },
+    {
+      "startSeconds": 353.34,
+      "text": "will what he or she will do is it will"
+    },
+    {
+      "startSeconds": 355.83,
+      "text": "say okay instead of test do this layer"
+    },
+    {
+      "startSeconds": 358.46,
+      "text": "let's do this test semicolon it's"
+    },
+    {
+      "startSeconds": 364.62,
+      "text": "correct and now boom let's copy this"
+    },
+    {
+      "startSeconds": 370.02,
+      "text": "just in case and just like that I have"
+    },
+    {
+      "startSeconds": 373.35,
+      "text": "now this assume this is the bad website"
+    },
+    {
+      "startSeconds": 376.5,
+      "text": "right and poor Joe here says okay oh god"
+    },
+    {
+      "startSeconds": 381.57,
+      "text": "this ad and there's flashy and he's just"
+    },
+    {
+      "startSeconds": 384.33,
+      "text": "so click here oh that seems legit let's"
+    },
+    {
+      "startSeconds": 387.84,
+      "text": "click and you when you click it will"
+    },
+    {
+      "startSeconds": 390.42,
+      "text": "direct you to the website which is your"
+    },
+    {
+      "startSeconds": 393.75,
+      "text": "legit website and and you know it's a"
+    },
+    {
+      "startSeconds": 395.79,
+      "text": "legit website but this might be your"
+    },
+    {
+      "startSeconds": 399.27,
+      "text": "bank of M"
+    },
+    {
+      "startSeconds": 399.93,
+      "text": "Erica upside this might be or your"
+    },
+    {
+      "startSeconds": 401.85,
+      "text": "Twitter might be anything as legit and"
+    },
+    {
+      "startSeconds": 404.28,
+      "text": "now he injected a script or she injected"
+    },
+    {
+      "startSeconds": 409.139,
+      "text": "a script in that legitimate website"
+    },
+    {
+      "startSeconds": 411.63,
+      "text": "running as you if you're authenticated"
+    },
+    {
+      "startSeconds": 415.4,
+      "text": "that's good to have access to your"
+    },
+    {
+      "startSeconds": 417.6,
+      "text": "cookies know that none of they are HTTP"
+    },
+    {
+      "startSeconds": 420.57,
+      "text": "cookies right"
+    },
+    {
+      "startSeconds": 421.38,
+      "text": "there's TB only they cannot read it but"
+    },
+    {
+      "startSeconds": 423.77,
+      "text": "if if you have like local storage stuff"
+    },
+    {
+      "startSeconds": 427.919,
+      "text": "they have access to that stuff they can"
+    },
+    {
+      "startSeconds": 429.419,
+      "text": "read it they can send it to to Belize"
+    },
+    {
+      "startSeconds": 431.9,
+      "text": "right I can send it to anywhere so yeah"
+    },
+    {
+      "startSeconds": 435.81,
+      "text": "that's called the reflected and I don't"
+    },
+    {
+      "startSeconds": 438.69,
+      "text": "know why it's called reflected because"
+    },
+    {
+      "startSeconds": 439.74,
+      "text": "like it's it's like a like a mirror you"
+    },
+    {
+      "startSeconds": 442.38,
+      "text": "have like a link and it reflects the"
+    },
+    {
+      "startSeconds": 444.449,
+      "text": "website all right so that's the other"
+    },
+    {
+      "startSeconds": 446.009,
+      "text": "attack so reflected is a URL that points"
+    },
+    {
+      "startSeconds": 449.009,
+      "text": "to the site which injects scan and"
+    },
+    {
+      "startSeconds": 451.919,
+      "text": "that's that's the fault of both actually"
+    },
+    {
+      "startSeconds": 454.56,
+      "text": "right that's the fault maybe of the"
+    },
+    {
+      "startSeconds": 456.3,
+      "text": "server and the fault of the client"
+    },
+    {
+      "startSeconds": 459.419,
+      "text": "because the server actually took this"
+    },
+    {
+      "startSeconds": 461.07,
+      "text": "input and didn't sanitize it and just"
+    },
+    {
+      "startSeconds": 462.72,
+      "text": "really reflect it back to the client and"
+    },
+    {
+      "startSeconds": 465.63,
+      "text": "and and we printed it right here right"
+    },
+    {
+      "startSeconds": 468.36,
+      "text": "cuz that's what we do we just print"
+    },
+    {
+      "startSeconds": 470.43,
+      "text": "whatever here and when you do that that"
+    },
+    {
+      "startSeconds": 472.86,
+      "text": "one is X queued the attack what is that"
+    },
+    {
+      "startSeconds": 474.99,
+      "text": "skirt all right how do I prevent these"
+    },
+    {
+      "startSeconds": 480.03,
+      "text": "kind of attacks let's go to the code"
+    },
+    {
+      "startSeconds": 481.83,
+      "text": "guys I'll show you the code so here's"
+    },
+    {
+      "startSeconds": 484.05,
+      "text": "Michael this is the HTML page right and"
+    },
+    {
+      "startSeconds": 486.8,
+      "text": "Margera page have basically it's a html5"
+    },
+    {
+      "startSeconds": 490.5,
+      "text": "page this is the header this is the"
+    },
+    {
+      "startSeconds": 492.75,
+      "text": "button the ad and this is then order"
+    },
+    {
+      "startSeconds": 495.24,
+      "text": "lists which I show this and there is"
+    },
+    {
+      "startSeconds": 496.979,
+      "text": "where I load my JavaScript slash Jas"
+    },
+    {
+      "startSeconds": 500.61,
+      "text": "will go to my source right will go to my"
+    },
+    {
+      "startSeconds": 504.21,
+      "text": "index to J's which will load this file"
+    },
+    {
+      "startSeconds": 507.12,
+      "text": "source the J's which is this puppy"
+    },
+    {
+      "startSeconds": 510,
+      "text": "that's the source code right I'm gonna"
+    },
+    {
+      "startSeconds": 512.909,
+      "text": "tell you why I didn't do it in line in a"
+    },
+    {
+      "startSeconds": 515.07,
+      "text": "minute but that's always the best idea"
+    },
+    {
+      "startSeconds": 518.01,
+      "text": "is to always reload scripts from URLs"
+    },
+    {
+      "startSeconds": 523.62,
+      "text": "don't load don't write this I know I am"
+    },
+    {
+      "startSeconds": 527.7,
+      "text": "guilty of this but don't do this right"
+    },
+    {
+      "startSeconds": 530.279,
+      "text": "because I'm gonna tell you why always"
+    },
+    {
+      "startSeconds": 532.35,
+      "text": "loaded from well"
+    },
+    {
+      "startSeconds": 533.7,
+      "text": "on URLs so that the client can verify"
+    },
+    {
+      "startSeconds": 537.48,
+      "text": "the identity of the skirt if you do it"
+    },
+    {
+      "startSeconds": 539.58,
+      "text": "this way then you allow pretty much"
+    },
+    {
+      "startSeconds": 542.1,
+      "text": "anybody excluded you to exclude execute"
+    },
+    {
+      "startSeconds": 546.23,
+      "text": "execute any script that then you can"
+    },
+    {
+      "startSeconds": 550.98,
+      "text": "execute right so now here is what you"
+    },
+    {
+      "startSeconds": 555.3,
+      "text": "can do there is wouldn't you let's go"
+    },
+    {
+      "startSeconds": 559.83,
+      "text": "through the rest of the script first"
+    },
+    {
+      "startSeconds": 562.41,
+      "text": "there is the slash which reads the"
+    },
+    {
+      "startSeconds": 565.2,
+      "text": "index.html and basically loop through"
+    },
+    {
+      "startSeconds": 568.35,
+      "text": "all the product and then reduce it and"
+    },
+    {
+      "startSeconds": 571.47,
+      "text": "replace this says this is server-side"
+    },
+    {
+      "startSeconds": 573.57,
+      "text": "rendering and in a in a very primitive"
+    },
+    {
+      "startSeconds": 577.74,
+      "text": "way okay and then run sending back the"
+    },
+    {
+      "startSeconds": 580.95,
+      "text": "results right and when we do that that's"
+    },
+    {
+      "startSeconds": 584.94,
+      "text": "the product that's just the API and"
+    },
+    {
+      "startSeconds": 587.52,
+      "text": "that's the Search API which I cannot"
+    },
+    {
+      "startSeconds": 590.43,
+      "text": "find a product that's exactly what we"
+    },
+    {
+      "startSeconds": 592.29,
+      "text": "did right when we send back the HTML"
+    },
+    {
+      "startSeconds": 597.24,
+      "text": "page whether here or in the search page"
+    },
+    {
+      "startSeconds": 599.57,
+      "text": "we should assign a header and that"
+    },
+    {
+      "startSeconds": 604.05,
+      "text": "header is called content security policy"
+    },
+    {
+      "startSeconds": 609.14,
+      "text": "or CSP so that content security policy"
+    },
+    {
+      "startSeconds": 618.41,
+      "text": "so content security policy and what that"
+    },
+    {
+      "startSeconds": 625.62,
+      "text": "header says it has I'm gonna go through"
+    },
+    {
+      "startSeconds": 628.11,
+      "text": "there that details of this header this"
+    },
+    {
+      "startSeconds": 632.22,
+      "text": "header was introduced to prevent some of"
+    },
+    {
+      "startSeconds": 634.26,
+      "text": "the exes and attack a basic theory was"
+    },
+    {
+      "startSeconds": 636.84,
+      "text": "like ok for a script execution"
+    },
+    {
+      "startSeconds": 639.86,
+      "text": "please don't execute anything there is"
+    },
+    {
+      "startSeconds": 642.93,
+      "text": "something called none literally says hey"
+    },
+    {
+      "startSeconds": 645.6,
+      "text": "my website don't have any JavaScript I"
+    },
+    {
+      "startSeconds": 650.1,
+      "text": "know that as a server I know that what"
+    },
+    {
+      "startSeconds": 653.01,
+      "text": "I'm gonna send you doesn't have any"
+    },
+    {
+      "startSeconds": 654.63,
+      "text": "scripts so don't attempt to execute any"
+    },
+    {
+      "startSeconds": 657.84,
+      "text": "script that's very good some website"
+    },
+    {
+      "startSeconds": 660.66,
+      "text": "don't have that you just have cssm HTML"
+    },
+    {
+      "startSeconds": 663.6,
+      "text": "right and and they don't have script so"
+    },
+    {
+      "startSeconds": 665.49,
+      "text": "you might want to do that it's actually"
+    },
+    {
+      "startSeconds": 666.99,
+      "text": "like this"
+    },
+    {
+      "startSeconds": 667.62,
+      "text": "script their source and then you say"
+    },
+    {
+      "startSeconds": 669.48,
+      "text": "none right this is the correct method of"
+    },
+    {
+      "startSeconds": 672.6,
+      "text": "doing it right so that's means hey my I"
+    },
+    {
+      "startSeconds": 675.72,
+      "text": "don't have any scripts on my website"
+    },
+    {
+      "startSeconds": 679.77,
+      "text": "don't attempt to see if you're a few if"
+    },
+    {
+      "startSeconds": 681.57,
+      "text": "we did that none of the website our oh"
+    },
+    {
+      "startSeconds": 683.7,
+      "text": "that will not work obviously but there"
+    },
+    {
+      "startSeconds": 686.37,
+      "text": "is another thing you can do where you"
+    },
+    {
+      "startSeconds": 688.83,
+      "text": "say okay my script source should only"
+    },
+    {
+      "startSeconds": 692.43,
+      "text": "come from this source and this can kiss"
+    },
+    {
+      "startSeconds": 696.27,
+      "text": "this case it's localhost right 8080"
+    },
+    {
+      "startSeconds": 698.67,
+      "text": "right this is the only place you go to"
+    },
+    {
+      "startSeconds": 703.95,
+      "text": "execute script"
+    },
+    {
+      "startSeconds": 705.39,
+      "text": "don't execute any inline scripts that"
+    },
+    {
+      "startSeconds": 708.089,
+      "text": "means if someone injected a skirt or"
+    },
+    {
+      "startSeconds": 710.58,
+      "text": "even like if you did that right it will"
+    },
+    {
+      "startSeconds": 713.79,
+      "text": "not work it will immediately fail that"
+    },
+    {
+      "startSeconds": 716.55,
+      "text": "schedule will fail it will only attempt"
+    },
+    {
+      "startSeconds": 720.12,
+      "text": "to execute scripts from this URL and"
+    },
+    {
+      "startSeconds": 723.42,
+      "text": "that's at right and you can be fancy"
+    },
+    {
+      "startSeconds": 727.5,
+      "text": "here like where you can put your website"
+    },
+    {
+      "startSeconds": 729.21,
+      "text": "in your script in a completely different"
+    },
+    {
+      "startSeconds": 731.55,
+      "text": "domain right some people do that for for"
+    },
+    {
+      "startSeconds": 734.88,
+      "text": "caching reasons for or for security"
+    },
+    {
+      "startSeconds": 737.339,
+      "text": "reasons for monitoring reasons really"
+    },
+    {
+      "startSeconds": 739.83,
+      "text": "after I set this header what will happen"
+    },
+    {
+      "startSeconds": 742.98,
+      "text": "is only scripts coming from my local"
+    },
+    {
+      "startSeconds": 747.06,
+      "text": "host from the server from the JavaScript"
+    },
+    {
+      "startSeconds": 749.4,
+      "text": "side will be executed any I think else"
+    },
+    {
+      "startSeconds": 753.209,
+      "text": "in line when I say online means injected"
+    },
+    {
+      "startSeconds": 756.029,
+      "text": "or or even you if you wrote HTML code"
+    },
+    {
+      "startSeconds": 758.94,
+      "text": "that is here script alert that is legit"
+    },
+    {
+      "startSeconds": 762.99,
+      "text": "you you wrote it that will fail and I'm"
+    },
+    {
+      "startSeconds": 765.6,
+      "text": "gonna show that"
+    },
+    {
+      "startSeconds": 766.7,
+      "text": "so although we actually execute that"
+    },
+    {
+      "startSeconds": 769.37,
+      "text": "code and show you what will happen"
+    },
+    {
+      "startSeconds": 773.85,
+      "text": "refresh this puppy go back"
+    },
+    {
+      "startSeconds": 785.55,
+      "text": "awesome so now let's add Hussein that's"
+    },
+    {
+      "startSeconds": 790.99,
+      "text": "not really a problem but let's add a"
+    },
+    {
+      "startSeconds": 794.14,
+      "text": "script alert but but I don't want to add"
+    },
+    {
+      "startSeconds": 798.52,
+      "text": "it like that I want I want to open this"
+    },
+    {
+      "startSeconds": 800.47,
+      "text": "so I can you guys can see the errors"
+    },
+    {
+      "startSeconds": 804.1,
+      "text": "that happens here because we want to see"
+    },
+    {
+      "startSeconds": 806.59,
+      "text": "this error so I'm gonna add a script"
+    },
+    {
+      "startSeconds": 808.3,
+      "text": "alert test script when I do that and i"
+    },
+    {
+      "startSeconds": 814.84,
+      "text": "refresh the page look at this beautiful"
+    },
+    {
+      "startSeconds": 818.01,
+      "text": "refuse to execute inline script because"
+    },
+    {
+      "startSeconds": 820.81,
+      "text": "it violates the following content"
+    },
+    {
+      "startSeconds": 822.97,
+      "text": "security policy directive this is my"
+    },
+    {
+      "startSeconds": 825.43,
+      "text": "directive script source only execute"
+    },
+    {
+      "startSeconds": 828.19,
+      "text": "from localhost which we saw alright it"
+    },
+    {
+      "startSeconds": 831.22,
+      "text": "did eschewed scripts from us the prompt"
+    },
+    {
+      "startSeconds": 834.37,
+      "text": "the adding the fetch command all of that"
+    },
+    {
+      "startSeconds": 837.19,
+      "text": "stuff actually worked right so if you"
+    },
+    {
+      "startSeconds": 839.83,
+      "text": "want to execute this use unsafe and line"
+    },
+    {
+      "startSeconds": 842.53,
+      "text": "right but bad idea do not use that okay"
+    },
+    {
+      "startSeconds": 847.29,
+      "text": "you can use a hash of the script itself"
+    },
+    {
+      "startSeconds": 850.9,
+      "text": "by the way right if you want to execute"
+    },
+    {
+      "startSeconds": 853.6,
+      "text": "it you can just use a hash of the script"
+    },
+    {
+      "startSeconds": 856.51,
+      "text": "or hash the script and put it in the"
+    },
+    {
+      "startSeconds": 860.2,
+      "text": "server so that only that script get"
+    },
+    {
+      "startSeconds": 862.54,
+      "text": "executed right it's okay that particular"
+    },
+    {
+      "startSeconds": 864.76,
+      "text": "script is okay right so you can do so"
+    },
+    {
+      "startSeconds": 867.61,
+      "text": "many things I'm gonna go through them"
+    },
+    {
+      "startSeconds": 869.08,
+      "text": "but let's finish this up so I can also"
+    },
+    {
+      "startSeconds": 872.65,
+      "text": "do this right boom doesn't work doesn't"
+    },
+    {
+      "startSeconds": 876.37,
+      "text": "work same error same error right and if"
+    },
+    {
+      "startSeconds": 881.59,
+      "text": "we look at the network and now let's"
+    },
+    {
+      "startSeconds": 884.83,
+      "text": "just search we look at the response"
+    },
+    {
+      "startSeconds": 889.27,
+      "text": "header that's that beautiful new puppy"
+    },
+    {
+      "startSeconds": 891.94,
+      "text": "that we just added content security"
+    },
+    {
+      "startSeconds": 893.74,
+      "text": "policy browsers have this code to"
+    },
+    {
+      "startSeconds": 897.34,
+      "text": "respect that has nothing to do with the"
+    },
+    {
+      "startSeconds": 899.35,
+      "text": "sort of the server just is a just tells"
+    },
+    {
+      "startSeconds": 901.78,
+      "text": "the browser to respect it but browsers"
+    },
+    {
+      "startSeconds": 904.54,
+      "text": "that's what I have building browsers is"
+    },
+    {
+      "startSeconds": 906.73,
+      "text": "hard man this is like you have to know"
+    },
+    {
+      "startSeconds": 909.46,
+      "text": "all that stuff right so yeah content"
+    },
+    {
+      "startSeconds": 914.02,
+      "text": "security policy"
+    },
+    {
+      "startSeconds": 915.34,
+      "text": "that's essentially one example let's go"
+    },
+    {
+      "startSeconds": 919.99,
+      "text": "through the other examples here I'm"
+    },
+    {
+      "startSeconds": 921.55,
+      "text": "gonna show you look at that stuff this"
+    },
+    {
+      "startSeconds": 923.56,
+      "text": "is the page content security policy you"
+    },
+    {
+      "startSeconds": 926.83,
+      "text": "can do just script - source and you can"
+    },
+    {
+      "startSeconds": 928.9,
+      "text": "add multiple sources like yeah let's say"
+    },
+    {
+      "startSeconds": 930.7,
+      "text": "hey we're saying my script has actually"
+    },
+    {
+      "startSeconds": 933.46,
+      "text": "lived in multiple places it lives here"
+    },
+    {
+      "startSeconds": 935.65,
+      "text": "lives here and lives here right on one"
+    },
+    {
+      "startSeconds": 938.2,
+      "text": "of these domains sorry no problem you"
+    },
+    {
+      "startSeconds": 940.39,
+      "text": "can just add multiple domains I think he"
+    },
+    {
+      "startSeconds": 944.02,
+      "text": "can use a wild-card but only in certain"
+    },
+    {
+      "startSeconds": 947.29,
+      "text": "subdomains right"
+    },
+    {
+      "startSeconds": 948.67,
+      "text": "ports all that stuff you can yourself"
+    },
+    {
+      "startSeconds": 951.37,
+      "text": "that means they only stuff from me as"
+    },
+    {
+      "startSeconds": 954.79,
+      "text": "our domain prevent unsafe evals hashes"
+    },
+    {
+      "startSeconds": 959.2,
+      "text": "in line none like if you if you don't"
+    },
+    {
+      "startSeconds": 962.62,
+      "text": "have scrap just did say group no if we"
+    },
+    {
+      "startSeconds": 966.25,
+      "text": "replace this to none our website will"
+    },
+    {
+      "startSeconds": 968.23,
+      "text": "break right"
+    },
+    {
+      "startSeconds": 969.339,
+      "text": "how about actually show them we're just"
+    },
+    {
+      "startSeconds": 971.47,
+      "text": "a little bit adventurous so I'm gonna"
+    },
+    {
+      "startSeconds": 976.75,
+      "text": "come in this out code for you guys so"
+    },
+    {
+      "startSeconds": 979.6,
+      "text": "you can see it you can uncomment it back"
+    },
+    {
+      "startSeconds": 982.63,
+      "text": "but what I'm gonna do here is do this"
+    },
+    {
+      "startSeconds": 986.68,
+      "text": "none right and then we go to the this"
+    },
+    {
+      "startSeconds": 991.27,
+      "text": "puppy let's Rin no yes let's do this now"
+    },
+    {
+      "startSeconds": 1006.05,
+      "text": "the XSS will not work and our code would"
+    },
+    {
+      "startSeconds": 1010.82,
+      "text": "look at this nothing works that is"
+    },
+    {
+      "startSeconds": 1014.43,
+      "text": "awesome"
+    },
+    {
+      "startSeconds": 1015.42,
+      "text": "you can add products you cannot search"
+    },
+    {
+      "startSeconds": 1017.97,
+      "text": "you cannot do anything this is a"
+    },
+    {
+      "startSeconds": 1021.74,
+      "text": "completely blocked site is he refused to"
+    },
+    {
+      "startSeconds": 1025.89,
+      "text": "load script even our decent script was"
+    },
+    {
+      "startSeconds": 1030.89,
+      "text": "refused to come load right because the"
+    },
+    {
+      "startSeconds": 1033.929,
+      "text": "security says like no it says no you"
+    },
+    {
+      "startSeconds": 1036.6,
+      "text": "didn't set any of that stuff right all"
+    },
+    {
+      "startSeconds": 1039.689,
+      "text": "right guys that's it for me"
+    },
+    {
+      "startSeconds": 1041.28,
+      "text": "XSS cross-site scripting attacks and how"
+    },
+    {
+      "startSeconds": 1044.579,
+      "text": "to prevent them right I'm gonna see you"
+    },
+    {
+      "startSeconds": 1047.79,
+      "text": "on the next one"
+    },
+    {
+      "startSeconds": 1048.99,
+      "text": "should I talk about next coming below in"
+    },
+    {
+      "startSeconds": 1052.53,
+      "text": "the comment section check out the other"
+    },
+    {
+      "startSeconds": 1053.88,
+      "text": "content of this channel most of my"
+    },
+    {
+      "startSeconds": 1055.679,
+      "text": "videos are actually back in engineering"
+    },
+    {
+      "startSeconds": 1057.21,
+      "text": "this is kind of back indie but it's also"
+    },
+    {
+      "startSeconds": 1059.61,
+      "text": "front indie but it's back MV because we"
+    },
+    {
+      "startSeconds": 1062.94,
+      "text": "are here right and we need to know how"
+    },
+    {
+      "startSeconds": 1066.15,
+      "text": "our web servers behave right that's what"
+    },
+    {
+      "startSeconds": 1070.08,
+      "text": "I prefer to to play with like low level"
+    },
+    {
+      "startSeconds": 1072.54,
+      "text": "frameworks like like Express right that"
+    },
+    {
+      "startSeconds": 1075.27,
+      "text": "allows you to kind of tweak these things"
+    },
+    {
+      "startSeconds": 1079.53,
+      "text": "right with I is you have to go through"
+    },
+    {
+      "startSeconds": 1083.16,
+      "text": "that Internet Information Services the"
+    },
+    {
+      "startSeconds": 1085.32,
+      "text": "Microsoft one that's the first web"
+    },
+    {
+      "startSeconds": 1087.21,
+      "text": "server that's the second web server I"
+    },
+    {
+      "startSeconds": 1088.83,
+      "text": "work to it right after Apache right it's"
+    },
+    {
+      "startSeconds": 1092.309,
+      "text": "just it's just hidden this these options"
+    },
+    {
+      "startSeconds": 1094.74,
+      "text": "are hidden in a UI which I don't like"
+    },
+    {
+      "startSeconds": 1097.74,
+      "text": "alright so that's let's sit this back so"
+    },
+    {
+      "startSeconds": 1100.29,
+      "text": "we can push the code and the code will"
+    },
+    {
+      "startSeconds": 1102.27,
+      "text": "be available below guys for you and"
+    },
+    {
+      "startSeconds": 1106.7,
+      "text": "gonna see you in the next one"
+    },
+    {
+      "startSeconds": 1108.54,
+      "text": "you guys stay awesome good bye"
+    }
+  ]
+}

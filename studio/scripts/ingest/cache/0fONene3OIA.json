@@ -1,8 +1,937 @@
 {
   "id": "0fONene3OIA",
   "url": "https://www.youtube.com/watch?v=0fONene3OIA",
-  "fetchedAt": "2026-08-31T05:15:12.802Z",
-  "captionKind": "empty",
+  "fetchedAt": "2026-09-01T04:05:45.341Z",
+  "captionKind": "asr",
   "chapters": [],
-  "cues": []
+  "cues": [
+    {
+      "startSeconds": 0,
+      "text": "if I don't capture your attention in the"
+    },
+    {
+      "startSeconds": 1.62,
+      "text": "next five seconds you're not going to"
+    },
+    {
+      "startSeconds": 2.94,
+      "text": "watch this video humans today have"
+    },
+    {
+      "startSeconds": 4.62,
+      "text": "extremely short attention spans thanks"
+    },
+    {
+      "startSeconds": 6.24,
+      "text": "to the nearly unlimited number of ways"
+    },
+    {
+      "startSeconds": 7.799,
+      "text": "to get instant gratification and"
+    },
+    {
+      "startSeconds": 9.179,
+      "text": "pleasure and because of that web"
+    },
+    {
+      "startSeconds": 10.62,
+      "text": "developers need to be obsessed with"
+    },
+    {
+      "startSeconds": 12.12,
+      "text": "initial page load performance if your"
+    },
+    {
+      "startSeconds": 13.86,
+      "text": "website is slow it will lose money"
+    },
+    {
+      "startSeconds": 15.42,
+      "text": "because people won't get their instant"
+    },
+    {
+      "startSeconds": 16.98,
+      "text": "gratification and then bounce but"
+    },
+    {
+      "startSeconds": 18.6,
+      "text": "achieving Optimal Performance is complex"
+    },
+    {
+      "startSeconds": 20.52,
+      "text": "like do you really understand things"
+    },
+    {
+      "startSeconds": 22.02,
+      "text": "like largest contentful paint first"
+    },
+    {
+      "startSeconds": 23.82,
+      "text": "input delay and cumulative layout shift"
+    },
+    {
+      "startSeconds": 25.92,
+      "text": "by the end of today's video you'll"
+    },
+    {
+      "startSeconds": 27.359,
+      "text": "understand what these are but more"
+    },
+    {
+      "startSeconds": 28.92,
+      "text": "importantly how to measure and optimize"
+    },
+    {
+      "startSeconds": 30.9,
+      "text": "them in your own project and I'm not"
+    },
+    {
+      "startSeconds": 32.399,
+      "text": "just talking about Lighthouse here but"
+    },
+    {
+      "startSeconds": 33.78,
+      "text": "I'll show you how to use some tools"
+    },
+    {
+      "startSeconds": 34.8,
+      "text": "you've never heard of like unlike house"
+    },
+    {
+      "startSeconds": 36.42,
+      "text": "and the new web vitals Chrome extension"
+    },
+    {
+      "startSeconds": 38.28,
+      "text": "and we'll use them to analyze popular"
+    },
+    {
+      "startSeconds": 39.899,
+      "text": "websites in the real world like Amazon"
+    },
+    {
+      "startSeconds": 41.76,
+      "text": "Google and of course in order to use"
+    },
+    {
+      "startSeconds": 44.28,
+      "text": "these tools effectively though we first"
+    },
+    {
+      "startSeconds": 45.78,
+      "text": "need to understand core web vitals let's"
+    },
+    {
+      "startSeconds": 48.059,
+      "text": "start with the largest contentful paint"
+    },
+    {
+      "startSeconds": 49.739,
+      "text": "simply put this metric is most important"
+    },
+    {
+      "startSeconds": 51.899,
+      "text": "for measuring loading performance when a"
+    },
+    {
+      "startSeconds": 53.94,
+      "text": "website loads it needs to fetch a bunch"
+    },
+    {
+      "startSeconds": 55.8,
+      "text": "of assets from the internet somewhere"
+    },
+    {
+      "startSeconds": 57.3,
+      "text": "like your CSS HTML JavaScript images is"
+    },
+    {
+      "startSeconds": 60.36,
+      "text": "and videos initially you'll get the"
+    },
+    {
+      "startSeconds": 62.039,
+      "text": "first contentful paint then gradually"
+    },
+    {
+      "startSeconds": 63.719,
+      "text": "the web page will load all the images"
+    },
+    {
+      "startSeconds": 65.04,
+      "text": "and videos which will be your largest"
+    },
+    {
+      "startSeconds": 66.84,
+      "text": "contentful paint to achieve good"
+    },
+    {
+      "startSeconds": 68.34,
+      "text": "performance Google says you need to get"
+    },
+    {
+      "startSeconds": 70.08,
+      "text": "to LCP within 2.5 seconds anything"
+    },
+    {
+      "startSeconds": 72.659,
+      "text": "beyond 4 seconds is bad and will likely"
+    },
+    {
+      "startSeconds": 74.7,
+      "text": "have an impact on things like search"
+    },
+    {
+      "startSeconds": 76.08,
+      "text": "engine optimization the most basic way"
+    },
+    {
+      "startSeconds": 77.939,
+      "text": "to analyze it is to open up the network"
+    },
+    {
+      "startSeconds": 79.619,
+      "text": "tab in your browser and examine the"
+    },
+    {
+      "startSeconds": 81.659,
+      "text": "network waterfall this will show you how"
+    },
+    {
+      "startSeconds": 83.4,
+      "text": "each asset is loaded and you can"
+    },
+    {
+      "startSeconds": 84.84,
+      "text": "identify bottlenecks because they'll"
+    },
+    {
+      "startSeconds": 86.34,
+      "text": "have a really Wide Bar in the chart so"
+    },
+    {
+      "startSeconds": 87.96,
+      "text": "once you've identified an issue how do"
+    },
+    {
+      "startSeconds": 89.58,
+      "text": "you actually optimize for largest"
+    },
+    {
+      "startSeconds": 91.14,
+      "text": "contentful pain well there's quite a few"
+    },
+    {
+      "startSeconds": 92.82,
+      "text": "things we can do the first and most"
+    },
+    {
+      "startSeconds": 94.259,
+      "text": "obvious thing is to reduce the resource"
+    },
+    {
+      "startSeconds": 96.42,
+      "text": "load time if you have massive images and"
+    },
+    {
+      "startSeconds": 98.46,
+      "text": "assets they're going to take longer to"
+    },
+    {
+      "startSeconds": 100.02,
+      "text": "load make sure your images are"
+    },
+    {
+      "startSeconds": 101.28,
+      "text": "compressed and you likely want to use"
+    },
+    {
+      "startSeconds": 102.659,
+      "text": "modern formats like webp same thing goes"
+    },
+    {
+      "startSeconds": 104.939,
+      "text": "for fonts and you should only use the"
+    },
+    {
+      "startSeconds": 106.5,
+      "text": "bare minimum number of fonts that you"
+    },
+    {
+      "startSeconds": 108,
+      "text": "need to render the page that's step one"
+    },
+    {
+      "startSeconds": 109.74,
+      "text": "but in production you'll also want to"
+    },
+    {
+      "startSeconds": 111.54,
+      "text": "make sure you're serving your assets"
+    },
+    {
+      "startSeconds": 112.86,
+      "text": "from a Content delivery network if you"
+    },
+    {
+      "startSeconds": 114.72,
+      "text": "deploy to a place like Firebase or"
+    },
+    {
+      "startSeconds": 116.34,
+      "text": "versel it'll handle all the CDN magic"
+    },
+    {
+      "startSeconds": 118.259,
+      "text": "for you automatically the other big"
+    },
+    {
+      "startSeconds": 119.88,
+      "text": "potential issue is render blocking"
+    },
+    {
+      "startSeconds": 121.799,
+      "text": "JavaScript for example maybe you need to"
+    },
+    {
+      "startSeconds": 123.6,
+      "text": "run some JavaScript before you display"
+    },
+    {
+      "startSeconds": 125.159,
+      "text": "the actual image in the page which will"
+    },
+    {
+      "startSeconds": 127.2,
+      "text": "delay LCP you should try to avoid this"
+    },
+    {
+      "startSeconds": 129.3,
+      "text": "at all cost and it's one of the reasons"
+    },
+    {
+      "startSeconds": 130.92,
+      "text": "that server-side Frameworks like nexjs"
+    },
+    {
+      "startSeconds": 133.08,
+      "text": "have taken favor over single page"
+    },
+    {
+      "startSeconds": 134.7,
+      "text": "applications like plain react because on"
+    },
+    {
+      "startSeconds": 136.68,
+      "text": "initial page load single page"
+    },
+    {
+      "startSeconds": 138.18,
+      "text": "applications need to run a bunch of"
+    },
+    {
+      "startSeconds": 139.56,
+      "text": "JavaScript before they can render the"
+    },
+    {
+      "startSeconds": 141.06,
+      "text": "main content that's good to know but"
+    },
+    {
+      "startSeconds": 142.739,
+      "text": "there's at least one more cool"
+    },
+    {
+      "startSeconds": 143.7,
+      "text": "optimization we can make in modern"
+    },
+    {
+      "startSeconds": 145.2,
+      "text": "browsers you can optimize resource"
+    },
+    {
+      "startSeconds": 146.879,
+      "text": "priority by using preload links to make"
+    },
+    {
+      "startSeconds": 149.16,
+      "text": "sure that important assets are"
+    },
+    {
+      "startSeconds": 150.48,
+      "text": "discovered first in addition you can"
+    },
+    {
+      "startSeconds": 152.16,
+      "text": "change the fetch priority on images to"
+    },
+    {
+      "startSeconds": 154.08,
+      "text": "either high or low so that low priority"
+    },
+    {
+      "startSeconds": 156.06,
+      "text": "image is at the bottom of the page won't"
+    },
+    {
+      "startSeconds": 157.68,
+      "text": "get loaded before the more important"
+    },
+    {
+      "startSeconds": 159,
+      "text": "ones unfortunately though largest"
+    },
+    {
+      "startSeconds": 160.62,
+      "text": "contentful paint isn't the only thing we"
+    },
+    {
+      "startSeconds": 162.18,
+      "text": "need to worry about we also have first"
+    },
+    {
+      "startSeconds": 163.92,
+      "text": "input delay which measures interactivity"
+    },
+    {
+      "startSeconds": 166.14,
+      "text": "a website needs to have a first input"
+    },
+    {
+      "startSeconds": 167.94,
+      "text": "delay of 100 milliseconds or less and at"
+    },
+    {
+      "startSeconds": 170.519,
+      "text": "300 milliseconds becomes bad what it's"
+    },
+    {
+      "startSeconds": 172.56,
+      "text": "measuring is the amount of time it takes"
+    },
+    {
+      "startSeconds": 174.06,
+      "text": "from the moment a user interacts with"
+    },
+    {
+      "startSeconds": 175.68,
+      "text": "the page like when they click on a"
+    },
+    {
+      "startSeconds": 177.06,
+      "text": "button to the time it takes the browser"
+    },
+    {
+      "startSeconds": 178.68,
+      "text": "to process event handler is for that"
+    },
+    {
+      "startSeconds": 180.54,
+      "text": "interaction basically you don't want a"
+    },
+    {
+      "startSeconds": 182.099,
+      "text": "website to render if the actual things"
+    },
+    {
+      "startSeconds": 183.78,
+      "text": "on it don't work measuring it is a"
+    },
+    {
+      "startSeconds": 185.4,
+      "text": "little more tricky but I'll show you how"
+    },
+    {
+      "startSeconds": 186.66,
+      "text": "to do it in just a minute with the new"
+    },
+    {
+      "startSeconds": 188.04,
+      "text": "web vitals plugin and basically the only"
+    },
+    {
+      "startSeconds": 189.9,
+      "text": "way to optimize it is to reduce your"
+    },
+    {
+      "startSeconds": 191.819,
+      "text": "JavaScript execution time but One does"
+    },
+    {
+      "startSeconds": 193.739,
+      "text": "not simply just get rid of their"
+    },
+    {
+      "startSeconds": 194.94,
+      "text": "JavaScript you can use tools like web"
+    },
+    {
+      "startSeconds": 196.8,
+      "text": "workers and Party Town to move some of"
+    },
+    {
+      "startSeconds": 198.599,
+      "text": "your JavaScript into a worker or most"
+    },
+    {
+      "startSeconds": 200.459,
+      "text": "JavaScript Frameworks have the option"
+    },
+    {
+      "startSeconds": 201.84,
+      "text": "for lazy loading like react lazy for"
+    },
+    {
+      "startSeconds": 203.879,
+      "text": "example or there are Frameworks like"
+    },
+    {
+      "startSeconds": 205.319,
+      "text": "quick that are optimized for instant"
+    },
+    {
+      "startSeconds": 207.18,
+      "text": "interactivity by using highly aggressive"
+    },
+    {
+      "startSeconds": 209.159,
+      "text": "lazy loading but that brings us to our"
+    },
+    {
+      "startSeconds": 210.959,
+      "text": "final metric cumulative layout shift it"
+    },
+    {
+      "startSeconds": 213.06,
+      "text": "measures visual stability or in other"
+    },
+    {
+      "startSeconds": 214.739,
+      "text": "words elements on the page shouldn't be"
+    },
+    {
+      "startSeconds": 216.3,
+      "text": "jumping around in unexpected ways you"
+    },
+    {
+      "startSeconds": 218.4,
+      "text": "can measure it by generating a"
+    },
+    {
+      "startSeconds": 219.599,
+      "text": "lighthouse reporting Chrome Dev tools or"
+    },
+    {
+      "startSeconds": 221.519,
+      "text": "with the web vitals extension as we'll"
+    },
+    {
+      "startSeconds": 223.019,
+      "text": "see in a minute one of the easiest ways"
+    },
+    {
+      "startSeconds": 224.459,
+      "text": "to get bad CLS is to use images without"
+    },
+    {
+      "startSeconds": 226.62,
+      "text": "Dimensions when using images they should"
+    },
+    {
+      "startSeconds": 228.84,
+      "text": "always have a width and height or"
+    },
+    {
+      "startSeconds": 230.28,
+      "text": "alternatively use the CSS aspect ratio"
+    },
+    {
+      "startSeconds": 232.92,
+      "text": "property that's usually an easy fix"
+    },
+    {
+      "startSeconds": 234.599,
+      "text": "unless you have responsive images that"
+    },
+    {
+      "startSeconds": 236.58,
+      "text": "need to change their aspect ratio based"
+    },
+    {
+      "startSeconds": 238.56,
+      "text": "on the viewport in that case you'll"
+    },
+    {
+      "startSeconds": 239.76,
+      "text": "likely want to use Source set to use"
+    },
+    {
+      "startSeconds": 241.5,
+      "text": "different images under different"
+    },
+    {
+      "startSeconds": 242.819,
+      "text": "conditions in addition you might get bad"
+    },
+    {
+      "startSeconds": 244.86,
+      "text": "CLS as a result of advertisements being"
+    },
+    {
+      "startSeconds": 247.2,
+      "text": "injected into the website or from poorly"
+    },
+    {
+      "startSeconds": 249.18,
+      "text": "designed animations that try to do too"
+    },
+    {
+      "startSeconds": 250.92,
+      "text": "much we could talk all day about"
+    },
+    {
+      "startSeconds": 252.36,
+      "text": "performance but I think these three"
+    },
+    {
+      "startSeconds": 253.799,
+      "text": "metrics are the most important to"
+    },
+    {
+      "startSeconds": 255.299,
+      "text": "understand now that you know how they"
+    },
+    {
+      "startSeconds": 256.68,
+      "text": "work let's do some real world analysis"
+    },
+    {
+      "startSeconds": 258.78,
+      "text": "the Chrome team at Google just released"
+    },
+    {
+      "startSeconds": 260.699,
+      "text": "a new web vitals extension and go ahead"
+    },
+    {
+      "startSeconds": 262.86,
+      "text": "and install it and then also go to the"
+    },
+    {
+      "startSeconds": 264.72,
+      "text": "settings and enable console login after"
+    },
+    {
+      "startSeconds": 266.82,
+      "text": "that go to your favorite webpage like"
+    },
+    {
+      "startSeconds": 268.639,
+      "text": "fireship.io and open up the console"
+    },
+    {
+      "startSeconds": 270.96,
+      "text": "you'll notice that we now get console"
+    },
+    {
+      "startSeconds": 272.46,
+      "text": "logs for CLS and LCP when it comes to"
+    },
+    {
+      "startSeconds": 275.22,
+      "text": "largest contentful paint it will tell us"
+    },
+    {
+      "startSeconds": 276.96,
+      "text": "exactly which element is affecting that"
+    },
+    {
+      "startSeconds": 278.94,
+      "text": "metric which is extremely important"
+    },
+    {
+      "startSeconds": 280.44,
+      "text": "because that's the thing you want to"
+    },
+    {
+      "startSeconds": 281.88,
+      "text": "optimize in addition it will break down"
+    },
+    {
+      "startSeconds": 283.62,
+      "text": "the time for its subparts like time to"
+    },
+    {
+      "startSeconds": 285.72,
+      "text": "First byte and element render delay then"
+    },
+    {
+      "startSeconds": 287.759,
+      "text": "when it comes to layout shift it will"
+    },
+    {
+      "startSeconds": 289.32,
+      "text": "give us the elements in the Dom that are"
+    },
+    {
+      "startSeconds": 290.94,
+      "text": "affecting that metric so we might want"
+    },
+    {
+      "startSeconds": 292.32,
+      "text": "to investigate those and see if we can"
+    },
+    {
+      "startSeconds": 294,
+      "text": "do anything to optimize them if we then"
+    },
+    {
+      "startSeconds": 295.74,
+      "text": "click on something we'll also get a log"
+    },
+    {
+      "startSeconds": 297.36,
+      "text": "for first input delay and we'll also get"
+    },
+    {
+      "startSeconds": 299.4,
+      "text": "measurement chance for any interactions"
+    },
+    {
+      "startSeconds": 301.139,
+      "text": "thereafter and this will allow you to"
+    },
+    {
+      "startSeconds": 302.639,
+      "text": "pinpoint any bottlenecks with"
+    },
+    {
+      "startSeconds": 303.96,
+      "text": "interactivity I've only been using this"
+    },
+    {
+      "startSeconds": 305.58,
+      "text": "extension for a couple days now but it's"
+    },
+    {
+      "startSeconds": 307.38,
+      "text": "been a game changer for analyzing"
+    },
+    {
+      "startSeconds": 309,
+      "text": "performance on my own website primarily"
+    },
+    {
+      "startSeconds": 310.86,
+      "text": "because it's so good at pinpointing the"
+    },
+    {
+      "startSeconds": 312.36,
+      "text": "exact things that need to be fixed but"
+    },
+    {
+      "startSeconds": 313.979,
+      "text": "when you have a website that has"
+    },
+    {
+      "startSeconds": 315.24,
+      "text": "hundreds or thousands of different pages"
+    },
+    {
+      "startSeconds": 317.04,
+      "text": "it's impossible to go through and"
+    },
+    {
+      "startSeconds": 318.6,
+      "text": "analyze performance on every single page"
+    },
+    {
+      "startSeconds": 320.52,
+      "text": "and that's why you should know about"
+    },
+    {
+      "startSeconds": 321.78,
+      "text": "this other tool called unlite house it's"
+    },
+    {
+      "startSeconds": 323.94,
+      "text": "an open source tool that runs a Google"
+    },
+    {
+      "startSeconds": 325.56,
+      "text": "Lighthouse report on every single page"
+    },
+    {
+      "startSeconds": 327.539,
+      "text": "in your website and it does everything"
+    },
+    {
+      "startSeconds": 329.039,
+      "text": "in parallel so it only takes a couple of"
+    },
+    {
+      "startSeconds": 330.9,
+      "text": "minutes to analyze hundreds of pages to"
+    },
+    {
+      "startSeconds": 332.94,
+      "text": "run it simply create a new directory and"
+    },
+    {
+      "startSeconds": 334.86,
+      "text": "then run npx on Lighthouse with your"
+    },
+    {
+      "startSeconds": 337.139,
+      "text": "website address it'll bring up a UI to"
+    },
+    {
+      "startSeconds": 339.3,
+      "text": "show you how bad your website"
+    },
+    {
+      "startSeconds": 340.38,
+      "text": "performance is in real time and while I"
+    },
+    {
+      "startSeconds": 342.419,
+      "text": "was happy to find that most pages had"
+    },
+    {
+      "startSeconds": 343.86,
+      "text": "great performance there were some"
+    },
+    {
+      "startSeconds": 345.3,
+      "text": "unexpected pages that had very poor"
+    },
+    {
+      "startSeconds": 347.28,
+      "text": "performance and I never would have known"
+    },
+    {
+      "startSeconds": 348.6,
+      "text": "that otherwise I thought that was pretty"
+    },
+    {
+      "startSeconds": 350.039,
+      "text": "interesting so I went ahead and ran on"
+    },
+    {
+      "startSeconds": 351.9,
+      "text": "lighthouse on a variety of popular"
+    },
+    {
+      "startSeconds": 353.34,
+      "text": "websites first I tried amazon.com I"
+    },
+    {
+      "startSeconds": 356.039,
+      "text": "expected it to have relatively poor"
+    },
+    {
+      "startSeconds": 357.6,
+      "text": "performance just because it's relatively"
+    },
+    {
+      "startSeconds": 359.1,
+      "text": "complex with tons of images but it"
+    },
+    {
+      "startSeconds": 361.139,
+      "text": "actually did quite well although when"
+    },
+    {
+      "startSeconds": 362.52,
+      "text": "using the web vitals plugin I noticed a"
+    },
+    {
+      "startSeconds": 364.32,
+      "text": "lot of cumulative layout shift issues on"
+    },
+    {
+      "startSeconds": 366.24,
+      "text": "Amazon Google as expected performed very"
+    },
+    {
+      "startSeconds": 368.4,
+      "text": "well because they're the ones that"
+    },
+    {
+      "startSeconds": 369.66,
+      "text": "create all these performance rules in"
+    },
+    {
+      "startSeconds": 371.039,
+      "text": "the first place and almost every major"
+    },
+    {
+      "startSeconds": 372.479,
+      "text": "website I analyzed including Reddit and"
+    },
+    {
+      "startSeconds": 374.88,
+      "text": "hub all performed extremely well with an"
+    },
+    {
+      "startSeconds": 377.16,
+      "text": "average performance of around 90. the"
+    },
+    {
+      "startSeconds": 378.78,
+      "text": "one website that really crushed it in"
+    },
+    {
+      "startSeconds": 380.28,
+      "text": "performance though is astro.build the"
+    },
+    {
+      "startSeconds": 382.68,
+      "text": "homepage for the Astro framework it"
+    },
+    {
+      "startSeconds": 384.419,
+      "text": "almost got perfect 100s across the board"
+    },
+    {
+      "startSeconds": 386.16,
+      "text": "so it really does live up to its claims"
+    },
+    {
+      "startSeconds": 387.78,
+      "text": "for awesome performance what's cool"
+    },
+    {
+      "startSeconds": 389.34,
+      "text": "about unlite house though is that it"
+    },
+    {
+      "startSeconds": 390.84,
+      "text": "also has an SDK so you can integrate it"
+    },
+    {
+      "startSeconds": 393,
+      "text": "into your continuous integration"
+    },
+    {
+      "startSeconds": 394.319,
+      "text": "pipeline as well if you want to learn"
+    },
+    {
+      "startSeconds": 395.819,
+      "text": "more about stuff like this become a pro"
+    },
+    {
+      "startSeconds": 397.56,
+      "text": "member at fireship i o for even more"
+    },
+    {
+      "startSeconds": 399.72,
+      "text": "content thanks for watching and I will"
+    },
+    {
+      "startSeconds": 401.52,
+      "text": "see you in the next one"
+    }
+  ]
 }

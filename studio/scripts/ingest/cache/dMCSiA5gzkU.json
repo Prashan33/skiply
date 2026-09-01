@@ -1,8 +1,618 @@
 {
   "id": "dMCSiA5gzkU",
   "url": "https://www.youtube.com/watch?v=dMCSiA5gzkU",
-  "fetchedAt": "2026-08-31T05:14:47.584Z",
-  "captionKind": "empty",
-  "chapters": [],
-  "cues": []
+  "fetchedAt": "2026-09-01T04:04:50.051Z",
+  "captionKind": "asr",
+  "chapters": [
+    {
+      "startSeconds": 0,
+      "label": "Introduction to React Server Components"
+    },
+    {
+      "startSeconds": 15,
+      "label": "Setting Up a Next.js Project"
+    },
+    {
+      "startSeconds": 48,
+      "label": "Creating a Server Component"
+    },
+    {
+      "startSeconds": 93,
+      "label": "Advantages and Limitations of Server Components"
+    },
+    {
+      "startSeconds": 155,
+      "label": "Creating a Client Component"
+    },
+    {
+      "startSeconds": 263,
+      "label": "Client Component Rendering Behavior"
+    },
+    {
+      "startSeconds": 344,
+      "label": "Summary and Next Steps"
+    },
+    {
+      "startSeconds": 371,
+      "label": "Support the Channel"
+    }
+  ],
+  "cues": [
+    {
+      "startSeconds": 0.56,
+      "text": "previously we explored react server"
+    },
+    {
+      "startSeconds": 2.56,
+      "text": "components and learned about its dual"
+    },
+    {
+      "startSeconds": 4.64,
+      "text": "component model that distinguishes"
+    },
+    {
+      "startSeconds": 6.359,
+      "text": "between server and client components now"
+    },
+    {
+      "startSeconds": 9.44,
+      "text": "let's put that knowledge into practice"
+    },
+    {
+      "startSeconds": 11.2,
+      "text": "by creating both types of components in"
+    },
+    {
+      "startSeconds": 13.24,
+      "text": "an EXs application for this second"
+    },
+    {
+      "startSeconds": 15.92,
+      "text": "section of the course on rendering I've"
+    },
+    {
+      "startSeconds": 18.4,
+      "text": "created a fresh next year's project"
+    },
+    {
+      "startSeconds": 20.32,
+      "text": "using the command npx create next app at"
+    },
+    {
+      "startSeconds": 23.439,
+      "text": "latest rendering hyphen demo once you"
+    },
+    {
+      "startSeconds": 26.599,
+      "text": "run this command you'll have a similar"
+    },
+    {
+      "startSeconds": 28.32,
+      "text": "project structure to work with"
+    },
+    {
+      "startSeconds": 30.48,
+      "text": "looking at how the RSC architecture"
+    },
+    {
+      "startSeconds": 32.52,
+      "text": "integrates with nexs there is a key"
+    },
+    {
+      "startSeconds": 35.04,
+      "text": "point to remember every component in a"
+    },
+    {
+      "startSeconds": 37.68,
+      "text": "nexas application defaults to being a"
+    },
+    {
+      "startSeconds": 40.12,
+      "text": "server component this includes the"
+    },
+    {
+      "startSeconds": 42.52,
+      "text": "built-in root layout and root page that"
+    },
+    {
+      "startSeconds": 46,
+      "text": "come with every new next year's project"
+    },
+    {
+      "startSeconds": 48.68,
+      "text": "but let's create a new component to"
+    },
+    {
+      "startSeconds": 50.32,
+      "text": "verify this we will add an about page to"
+    },
+    {
+      "startSeconds": 53.559,
+      "text": "our app by creating a new folder within"
+    },
+    {
+      "startSeconds": 56.6,
+      "text": "the app folder about with the page . TSX"
+    },
+    {
+      "startSeconds": 61.239,
+      "text": "file here Define a simple react"
+    },
+    {
+      "startSeconds": 63.96,
+      "text": "component export default function about"
+    },
+    {
+      "startSeconds": 66.88,
+      "text": "page that returns an each one about page"
+    },
+    {
+      "startSeconds": 70.32,
+      "text": "and just like that we have created a"
+    },
+    {
+      "startSeconds": 72.24,
+      "text": "server component to prove this let's add"
+    },
+    {
+      "startSeconds": 76.64,
+      "text": "console.log about server"
+    },
+    {
+      "startSeconds": 79.799,
+      "text": "component in the browser when we"
+    },
+    {
+      "startSeconds": 82,
+      "text": "navigate to"
+    },
+    {
+      "startSeconds": 83.479,
+      "text": "slab notice how it is locked with a"
+    },
+    {
+      "startSeconds": 86.04,
+      "text": "special server tag you can also see the"
+    },
+    {
+      "startSeconds": 88.64,
+      "text": "same message in the terminal"
+    },
+    {
+      "startSeconds": 90.439,
+      "text": "this confirms our component is a server"
+    },
+    {
+      "startSeconds": 93.56,
+      "text": "component running components on the"
+    },
+    {
+      "startSeconds": 95.6,
+      "text": "server brings several advantages zero"
+    },
+    {
+      "startSeconds": 98.32,
+      "text": "bundle Size Direct access to serers side"
+    },
+    {
+      "startSeconds": 100.68,
+      "text": "resources improved security and better"
+    },
+    {
+      "startSeconds": 104.079,
+      "text": "SEO however server components do have"
+    },
+    {
+      "startSeconds": 106.96,
+      "text": "limitations they can't interact with the"
+    },
+    {
+      "startSeconds": 109.159,
+      "text": "browser apis or handle user interaction"
+    },
+    {
+      "startSeconds": 112.28,
+      "text": "for example if we try to use state in"
+    },
+    {
+      "startSeconds": 114.6,
+      "text": "our about page with the use State Hook"
+    },
+    {
+      "startSeconds": 117.2,
+      "text": "from react so import use state from"
+    },
+    {
+      "startSeconds": 120.479,
+      "text": "react and invoke the hook let's call it"
+    },
+    {
+      "startSeconds": 123.64,
+      "text": "name and set name we will get an error"
+    },
+    {
+      "startSeconds": 126.719,
+      "text": "because you state requires a client"
+    },
+    {
+      "startSeconds": 129,
+      "text": "component environment currently our"
+    },
+    {
+      "startSeconds": 131.44,
+      "text": "about page is a server component server"
+    },
+    {
+      "startSeconds": 134.16,
+      "text": "components can't maintain State because"
+    },
+    {
+      "startSeconds": 136.36,
+      "text": "they run on the server where browser"
+    },
+    {
+      "startSeconds": 138.56,
+      "text": "based State Management doesn't exist"
+    },
+    {
+      "startSeconds": 141.2,
+      "text": "this reinforces the fact that Nexia"
+    },
+    {
+      "startSeconds": 143.48,
+      "text": "treats every component as a server"
+    },
+    {
+      "startSeconds": 145.16,
+      "text": "component by default unless explicitly"
+    },
+    {
+      "startSeconds": 147.519,
+      "text": "specified otherwise let's leave the"
+    },
+    {
+      "startSeconds": 150.08,
+      "text": "about page as a functioning server"
+    },
+    {
+      "startSeconds": 152.16,
+      "text": "component by removing the UST State hook"
+    },
+    {
+      "startSeconds": 155.64,
+      "text": "and learn how to create a new client"
+    },
+    {
+      "startSeconds": 157.8,
+      "text": "component we will create a dashboard SL"
+    },
+    {
+      "startSeconds": 161.879,
+      "text": "page. TSX in the app folder that uses"
+    },
+    {
+      "startSeconds": 165.48,
+      "text": "state to manage a user's name so export"
+    },
+    {
+      "startSeconds": 169.28,
+      "text": "default function dashboard page we"
+    },
+    {
+      "startSeconds": 171.879,
+      "text": "import and invoke use state name and set"
+    },
+    {
+      "startSeconds": 175.64,
+      "text": "name for the jsx we have a div tag"
+    },
+    {
+      "startSeconds": 178.76,
+      "text": "within each one D dashboard and input"
+    },
+    {
+      "startSeconds": 181.12,
+      "text": "element with value set to the name State"
+    },
+    {
+      "startSeconds": 183.799,
+      "text": "variable and on change we call set name"
+    },
+    {
+      "startSeconds": 187.28,
+      "text": "which is our seter function we then have"
+    },
+    {
+      "startSeconds": 190.239,
+      "text": "a paragraph hello followed by the name"
+    },
+    {
+      "startSeconds": 192.48,
+      "text": "State variable to convert This Server"
+    },
+    {
+      "startSeconds": 194.84,
+      "text": "component into a client component at the"
+    },
+    {
+      "startSeconds": 197.48,
+      "text": "top of the file we must include a"
+    },
+    {
+      "startSeconds": 199.879,
+      "text": "directive or to put it simply a special"
+    },
+    {
+      "startSeconds": 202.68,
+      "text": "instruction within the code use client"
+    },
+    {
+      "startSeconds": 205.72,
+      "text": "within quotes this directive acts as our"
+    },
+    {
+      "startSeconds": 209,
+      "text": "ticket to cross the boundary from server"
+    },
+    {
+      "startSeconds": 211.239,
+      "text": "to client side and is what allows us to"
+    },
+    {
+      "startSeconds": 213.799,
+      "text": "Define client components it signals to"
+    },
+    {
+      "startSeconds": 216.519,
+      "text": "next shs that this dashboard component"
+    },
+    {
+      "startSeconds": 219.2,
+      "text": "along with any components it Imports is"
+    },
+    {
+      "startSeconds": 221.92,
+      "text": "intended for client side execution as a"
+    },
+    {
+      "startSeconds": 224.959,
+      "text": "result the component gains full access"
+    },
+    {
+      "startSeconds": 227.04,
+      "text": "to browser apis and the ability to"
+    },
+    {
+      "startSeconds": 229.319,
+      "text": "handle interactivity to navigate to this"
+    },
+    {
+      "startSeconds": 232,
+      "text": "route let's add a link in our home page"
+    },
+    {
+      "startSeconds": 234.799,
+      "text": "so in the root page. TSX below the image"
+    },
+    {
+      "startSeconds": 238.239,
+      "text": "link the text is dashboard each ref is"
+    },
+    {
+      "startSeconds": 241.72,
+      "text": "equal to/ dashboard and make sure to"
+    },
+    {
+      "startSeconds": 245.159,
+      "text": "import the link component at the top"
+    },
+    {
+      "startSeconds": 247.84,
+      "text": "import link from next slash"
+    },
+    {
+      "startSeconds": 251.48,
+      "text": "link if you return to the browser and"
+    },
+    {
+      "startSeconds": 254.159,
+      "text": "navigate to slash dashboard by clicking"
+    },
+    {
+      "startSeconds": 256.16,
+      "text": "the link we see the component with its"
+    },
+    {
+      "startSeconds": 258.68,
+      "text": "state functioning as expected hello"
+    },
+    {
+      "startSeconds": 262.44,
+      "text": "vishwas let's now look at a very"
+    },
+    {
+      "startSeconds": 264.84,
+      "text": "important point about client components"
+    },
+    {
+      "startSeconds": 267,
+      "text": "rendering behavior let's add"
+    },
+    {
+      "startSeconds": 271.24,
+      "text": "console.log dashboard client component"
+    },
+    {
+      "startSeconds": 273.72,
+      "text": "to our dashboard page"
+    },
+    {
+      "startSeconds": 275.88,
+      "text": "component back in the browser when we"
+    },
+    {
+      "startSeconds": 278.32,
+      "text": "click the dashboard link from the"
+    },
+    {
+      "startSeconds": 280.16,
+      "text": "homepage the log appears in the browser"
+    },
+    {
+      "startSeconds": 282.72,
+      "text": "console but without the server tag if"
+    },
+    {
+      "startSeconds": 286.479,
+      "text": "you take a look at the terminal we don't"
+    },
+    {
+      "startSeconds": 288.039,
+      "text": "see the message but if we reload the"
+    },
+    {
+      "startSeconds": 290.84,
+      "text": "dashboard"
+    },
+    {
+      "startSeconds": 292.24,
+      "text": "page the dashboard appears both in the"
+    },
+    {
+      "startSeconds": 295.52,
+      "text": "browser and in the terminal let me"
+    },
+    {
+      "startSeconds": 298.36,
+      "text": "explain why this happen"
+    },
+    {
+      "startSeconds": 300.68,
+      "text": "when we navigate using the link"
+    },
+    {
+      "startSeconds": 302.4,
+      "text": "component the dashboard component is"
+    },
+    {
+      "startSeconds": 304.44,
+      "text": "only rendered client side and we see the"
+    },
+    {
+      "startSeconds": 306.68,
+      "text": "message in the browser console but if we"
+    },
+    {
+      "startSeconds": 309.199,
+      "text": "reload the page the dashboard component"
+    },
+    {
+      "startSeconds": 311.4,
+      "text": "is rendered once on the server to allow"
+    },
+    {
+      "startSeconds": 313.639,
+      "text": "the user to immediately see the Page's"
+    },
+    {
+      "startSeconds": 315.68,
+      "text": "HTML content rather than a blank screen"
+    },
+    {
+      "startSeconds": 318.639,
+      "text": "and then again on the client side during"
+    },
+    {
+      "startSeconds": 321.16,
+      "text": "hydration this is why we see the message"
+    },
+    {
+      "startSeconds": 323.479,
+      "text": "in the browser console and the terminal"
+    },
+    {
+      "startSeconds": 326.88,
+      "text": "the term client component is indeed"
+    },
+    {
+      "startSeconds": 329.12,
+      "text": "confusing but you'll get used to this"
+    },
+    {
+      "startSeconds": 331.199,
+      "text": "Behavior as you work with rsc's on a"
+    },
+    {
+      "startSeconds": 334.039,
+      "text": "side note the message in the browser is"
+    },
+    {
+      "startSeconds": 336.44,
+      "text": "logged twice in the browser because of"
+    },
+    {
+      "startSeconds": 338.479,
+      "text": "the strict mode during development this"
+    },
+    {
+      "startSeconds": 341,
+      "text": "doesn't happen in production so don't"
+    },
+    {
+      "startSeconds": 342.639,
+      "text": "worry about it to summarize in the RSC"
+    },
+    {
+      "startSeconds": 346.6,
+      "text": "architecture and by extension in the"
+    },
+    {
+      "startSeconds": 348.56,
+      "text": "nexs app router components are server"
+    },
+    {
+      "startSeconds": 351.199,
+      "text": "components by default to create client"
+    },
+    {
+      "startSeconds": 353.96,
+      "text": "components at the use Cent directive at"
+    },
+    {
+      "startSeconds": 356.36,
+      "text": "the top of the file server components"
+    },
+    {
+      "startSeconds": 358.88,
+      "text": "are rendered EX exclusively on the"
+    },
+    {
+      "startSeconds": 360.4,
+      "text": "server while client components are"
+    },
+    {
+      "startSeconds": 362.24,
+      "text": "rendered once on the server and then on"
+    },
+    {
+      "startSeconds": 364.36,
+      "text": "the client all right up next we will"
+    },
+    {
+      "startSeconds": 366.96,
+      "text": "explore the rendering life cycle of"
+    },
+    {
+      "startSeconds": 368.919,
+      "text": "server and client components in next"
+    },
+    {
+      "startSeconds": 372.199,
+      "text": "year supporting the channel is free"
+    },
+    {
+      "startSeconds": 374.759,
+      "text": "please like And subscribe it helps a lot"
+    }
+  ]
 }

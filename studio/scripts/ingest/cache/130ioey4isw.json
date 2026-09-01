@@ -1,0 +1,206 @@
+{
+  "id": "130ioey4isw",
+  "url": "https://www.youtube.com/watch?v=130ioey4isw",
+  "fetchedAt": "2026-09-01T04:11:20.199Z",
+  "captionKind": "manual",
+  "chapters": [
+    {
+      "startSeconds": 0,
+      "label": "What Is the Principle of Least Privilege (POLP)?"
+    },
+    {
+      "startSeconds": 69,
+      "label": "Business Benefits of POLP"
+    },
+    {
+      "startSeconds": 163,
+      "label": "Principle of Least Privilege Best Practices"
+    }
+  ],
+  "cues": [
+    {
+      "startSeconds": 5.16,
+      "text": "The Principle of Least Privilege (POLP), also known as access control principle"
+    },
+    {
+      "startSeconds": 9.96,
+      "text": "or the principle of least authority, is a cybersecurity approach and one of the"
+    },
+    {
+      "startSeconds": 15.48,
+      "text": "core concepts of Zero Trust Security that has become increasingly popular over the last few"
+    },
+    {
+      "startSeconds": 21.8,
+      "text": "years. For many companies, it’s now simply the default setting for effective, modern security."
+    },
+    {
+      "startSeconds": 28.16,
+      "text": "Implementing the Principle of Least Privilege ensures that individuals"
+    },
+    {
+      "startSeconds": 32.6,
+      "text": "receive limited access rights to networks, systems, and applications. By restricting"
+    },
+    {
+      "startSeconds": 37.96,
+      "text": "user privileges to the minimum required for their tasks, the risk of accidents, errors,"
+    },
+    {
+      "startSeconds": 43.8,
+      "text": "or unauthorized activities is greatly reduced. Consider this: should your marketing managers have"
+    },
+    {
+      "startSeconds": 49.88,
+      "text": "access to the software development environment? Absolutely not. Similarly, should your software"
+    },
+    {
+      "startSeconds": 55.68,
+      "text": "developers access financial information? No. By following the principle of least privilege,"
+    },
+    {
+      "startSeconds": 61.76,
+      "text": "each user group is given only the permissions needed for their essential job functions."
+    },
+    {
+      "startSeconds": 71.56,
+      "text": "By preventing users from installing unauthorized applications, POLP limits the ability of malware"
+    },
+    {
+      "startSeconds": 80,
+      "text": "to spread. In addition, it restricts lateral network movement confining malware to the entry"
+    },
+    {
+      "startSeconds": 85.88,
+      "text": "point and preventing it from launching attacks against other connected devices."
+    },
+    {
+      "startSeconds": 91,
+      "text": "By protecting superuser and administrator privileges, POLP diminishes the entry points"
+    },
+    {
+      "startSeconds": 98.44,
+      "text": "a malicious actor can use to access sensitive data or carry out sophisticated attacks."
+    },
+    {
+      "startSeconds": 104.24,
+      "text": "Restricting access to sensitive information reduces the likelihood"
+    },
+    {
+      "startSeconds": 108.88,
+      "text": "of unauthorized data exposure or leaks. If an account is compromised, the damage"
+    },
+    {
+      "startSeconds": 114.52,
+      "text": "is limited to the minimum permissions assigned to that account, preventing widespread access."
+    },
+    {
+      "startSeconds": 119.92,
+      "text": "Limiting privileges helps prevent accidental changes or deletions of critical system files"
+    },
+    {
+      "startSeconds": 126.76,
+      "text": "and data by users who do not need such access. With fewer permissions granted, it is easier"
+    },
+    {
+      "startSeconds": 133.4,
+      "text": "to track and audit user activities, enhancing accountability and oversight."
+    },
+    {
+      "startSeconds": 139.92,
+      "text": "POLP helps meet regulatory requirements and internal policies by restricting privileged"
+    },
+    {
+      "startSeconds": 147.04,
+      "text": "account access, and providing a full audit trail of activities for compliance verification."
+    },
+    {
+      "startSeconds": 153,
+      "text": "By granting only needed access, system performance and management can be optimized,"
+    },
+    {
+      "startSeconds": 158.92,
+      "text": "avoiding unnecessary complexity. If you want to implement the least"
+    },
+    {
+      "startSeconds": 167.6,
+      "text": "privilege in your IT environment, here are some best practices to get you on the right track."
+    },
+    {
+      "startSeconds": 173.96,
+      "text": "Conduct a comprehensive audit to identify all privileged accounts, including passwords,"
+    },
+    {
+      "startSeconds": 179.88,
+      "text": "SSH keys, password hashes, and access keys. This audit should cover on-premises systems,"
+    },
+    {
+      "startSeconds": 187.2,
+      "text": "cloud environments, DevOps setups, and endpoints. Eliminate any local admin privileges that are not"
+    },
+    {
+      "startSeconds": 194.64,
+      "text": "essential. Ensure both human and non-human users only have the minimum privileges"
+    },
+    {
+      "startSeconds": 200.88,
+      "text": "necessary to perform their tasks. Distinguish between administrator"
+    },
+    {
+      "startSeconds": 205.32,
+      "text": "accounts and standard user accounts. Isolate privileged user sessions to enhance security."
+    },
+    {
+      "startSeconds": 212.56,
+      "text": "Store the credentials of privileged administrator accounts in a digital vault. This step is crucial"
+    },
+    {
+      "startSeconds": 219.2,
+      "text": "for securing and managing these accounts. Implement a policy to rotate all administrator"
+    },
+    {
+      "startSeconds": 225.76,
+      "text": "passwords immediately after each use. This practice helps invalidate any credentials that"
+    },
+    {
+      "startSeconds": 232.16,
+      "text": "might have been captured by malicious software and mitigates the risk of attacks like Pass-the-Hash."
+    },
+    {
+      "startSeconds": 238.88,
+      "text": "Constantly monitor activities related to administrator accounts. Set up systems to"
+    },
+    {
+      "startSeconds": 244.64,
+      "text": "detect and alert on any suspicious behavior, which could indicate an ongoing attack."
+    },
+    {
+      "startSeconds": 251.2,
+      "text": "Implement just-in-time access elevation, allowing users to access privileged"
+    },
+    {
+      "startSeconds": 256.48,
+      "text": "accounts or run privileged commands only temporarily and on an as-needed basis."
+    },
+    {
+      "startSeconds": 262.72,
+      "text": "Regularly review all cloud IAM permissions and entitlements across AWS, Azure,"
+    },
+    {
+      "startSeconds": 270.08,
+      "text": "and GCP environments. Remove any excessive permissions to ensure"
+    },
+    {
+      "startSeconds": 275.64,
+      "text": "cloud workloads have only the necessary access."
+    },
+    {
+      "startSeconds": 279.12,
+      "text": "Thanks for watching! If you enjoyed this video and found it useful, I invite you to like it,"
+    },
+    {
+      "startSeconds": 285.88,
+      "text": "share it with your connections, and subscribe to Heimdal’s YT channel for more."
+    }
+  ]
+}

@@ -1,0 +1,1046 @@
+{
+  "id": "YON9PliOYFk",
+  "url": "https://www.youtube.com/watch?v=YON9PliOYFk",
+  "fetchedAt": "2026-09-01T04:09:04.563Z",
+  "captionKind": "asr",
+  "chapters": [
+    {
+      "startSeconds": 0,
+      "label": "Intro"
+    },
+    {
+      "startSeconds": 19,
+      "label": "Prepared Statements"
+    },
+    {
+      "startSeconds": 71,
+      "label": "Benchmark"
+    },
+    {
+      "startSeconds": 103,
+      "label": "Indexing"
+    },
+    {
+      "startSeconds": 217,
+      "label": "Partitioning"
+    },
+    {
+      "startSeconds": 294,
+      "label": "Benchmarks"
+    },
+    {
+      "startSeconds": 402,
+      "label": "Separation of Concerns"
+    }
+  ],
+  "cues": [
+    {
+      "startSeconds": 0,
+      "text": "postgres sometimes referred to as the"
+    },
+    {
+      "startSeconds": 2.46,
+      "text": "Toyota Camry of databases is one of the"
+    },
+    {
+      "startSeconds": 4.62,
+      "text": "most popular SQL databases used by"
+    },
+    {
+      "startSeconds": 6.42,
+      "text": "Developers but it's slow isn't it"
+    },
+    {
+      "startSeconds": 9.12,
+      "text": "shouldn't we use something fancy like"
+    },
+    {
+      "startSeconds": 10.98,
+      "text": "mongodb for Speed wrong"
+    },
+    {
+      "startSeconds": 13.86,
+      "text": "after learning these five approaches"
+    },
+    {
+      "startSeconds": 16.02,
+      "text": "you'll be able to make postgres Zoom"
+    },
+    {
+      "startSeconds": 17.82,
+      "text": "like a Bugatti"
+    },
+    {
+      "startSeconds": 19.74,
+      "text": "when you're working with long-running"
+    },
+    {
+      "startSeconds": 21.18,
+      "text": "services that talk to postgres such as a"
+    },
+    {
+      "startSeconds": 23.16,
+      "text": "rest API then you're likely making the"
+    },
+    {
+      "startSeconds": 25.019,
+      "text": "same queries over and over again"
+    },
+    {
+      "startSeconds": 27.18,
+      "text": "in this case you can increase the"
+    },
+    {
+      "startSeconds": 28.8,
+      "text": "performance of postgres by using"
+    },
+    {
+      "startSeconds": 30.18,
+      "text": "prepared statements which allows you to"
+    },
+    {
+      "startSeconds": 32.22,
+      "text": "generate queries once and reuse them"
+    },
+    {
+      "startSeconds": 34.079,
+      "text": "with different inputs"
+    },
+    {
+      "startSeconds": 35.399,
+      "text": "by doing this it reduces the need for"
+    },
+    {
+      "startSeconds": 37.32,
+      "text": "postgres to parse and plan your queries"
+    },
+    {
+      "startSeconds": 39.059,
+      "text": "every time as it reuses the initial"
+    },
+    {
+      "startSeconds": 40.92,
+      "text": "generated statement"
+    },
+    {
+      "startSeconds": 42.48,
+      "text": "creating a prepared statement is as"
+    },
+    {
+      "startSeconds": 44.34,
+      "text": "simple as using the prepare command in"
+    },
+    {
+      "startSeconds": 46.26,
+      "text": "SQL followed by the name of the"
+    },
+    {
+      "startSeconds": 48,
+      "text": "statement and the query we Define any"
+    },
+    {
+      "startSeconds": 50.34,
+      "text": "input parameters we expect by using the"
+    },
+    {
+      "startSeconds": 52.26,
+      "text": "dollar prefix on a numbered index"
+    },
+    {
+      "startSeconds": 53.82,
+      "text": "starting from one"
+    },
+    {
+      "startSeconds": 55.8,
+      "text": "with our prepared query created we can"
+    },
+    {
+      "startSeconds": 58.079,
+      "text": "then use the execute command to go ahead"
+    },
+    {
+      "startSeconds": 59.94,
+      "text": "and run it passing in any parameters"
+    },
+    {
+      "startSeconds": 61.68,
+      "text": "we're expecting"
+    },
+    {
+      "startSeconds": 63.66,
+      "text": "let's go ahead and Benchmark this shall"
+    },
+    {
+      "startSeconds": 65.4,
+      "text": "we"
+    },
+    {
+      "startSeconds": 66.78,
+      "text": "here you can see the difference between"
+    },
+    {
+      "startSeconds": 68.159,
+      "text": "using the prepared statements versus not"
+    },
+    {
+      "startSeconds": 70.14,
+      "text": "using them"
+    },
+    {
+      "startSeconds": 71.34,
+      "text": "whilst prepared statements provide an"
+    },
+    {
+      "startSeconds": 73.32,
+      "text": "easy performance boost there are a"
+    },
+    {
+      "startSeconds": 75.119,
+      "text": "couple of caveats to be aware of"
+    },
+    {
+      "startSeconds": 76.92,
+      "text": "the first is that a prepared statement"
+    },
+    {
+      "startSeconds": 78.72,
+      "text": "only lasts for the duration of the"
+    },
+    {
+      "startSeconds": 80.7,
+      "text": "current database session"
+    },
+    {
+      "startSeconds": 82.14,
+      "text": "which means they'll need to be recreated"
+    },
+    {
+      "startSeconds": 83.52,
+      "text": "if the session is terminated"
+    },
+    {
+      "startSeconds": 85.56,
+      "text": "the second is that a single prepared"
+    },
+    {
+      "startSeconds": 87.479,
+      "text": "statement is only scoped to that session"
+    },
+    {
+      "startSeconds": 89.1,
+      "text": "that means that multiple connections"
+    },
+    {
+      "startSeconds": 90.84,
+      "text": "cannot use the same statement instead"
+    },
+    {
+      "startSeconds": 92.82,
+      "text": "each client must create its own"
+    },
+    {
+      "startSeconds": 94.2,
+      "text": "statements"
+    },
+    {
+      "startSeconds": 95.4,
+      "text": "fortunately the popular postgres clients"
+    },
+    {
+      "startSeconds": 97.5,
+      "text": "for most languages will manage prepared"
+    },
+    {
+      "startSeconds": 99.119,
+      "text": "statements under the hood as long as"
+    },
+    {
+      "startSeconds": 100.92,
+      "text": "you're using the correct query syntax"
+    },
+    {
+      "startSeconds": 102.6,
+      "text": "this means you don't have to create them"
+    },
+    {
+      "startSeconds": 104.579,
+      "text": "manually or worry about the connection"
+    },
+    {
+      "startSeconds": 105.96,
+      "text": "logic prepared statements offer the most"
+    },
+    {
+      "startSeconds": 108.54,
+      "text": "performance Improvement when it comes to"
+    },
+    {
+      "startSeconds": 110.04,
+      "text": "long-running sessions performing the"
+    },
+    {
+      "startSeconds": 111.54,
+      "text": "same queries over and over again however"
+    },
+    {
+      "startSeconds": 114.06,
+      "text": "if you have a large amount of data in"
+    },
+    {
+      "startSeconds": 115.38,
+      "text": "your table then prepared statements"
+    },
+    {
+      "startSeconds": 117.06,
+      "text": "aren't going to help as much instead"
+    },
+    {
+      "startSeconds": 118.56,
+      "text": "you're going to want to use indexing"
+    },
+    {
+      "startSeconds": 120.899,
+      "text": "by default whenever you run a query"
+    },
+    {
+      "startSeconds": 123,
+      "text": "against a table postgres will look at"
+    },
+    {
+      "startSeconds": 124.979,
+      "text": "each row to see if it matches your where"
+    },
+    {
+      "startSeconds": 126.479,
+      "text": "Clause this is known as a sequential"
+    },
+    {
+      "startSeconds": 128.88,
+      "text": "scan"
+    },
+    {
+      "startSeconds": 130.08,
+      "text": "whilst sequential scans are fine for"
+    },
+    {
+      "startSeconds": 132.48,
+      "text": "smaller tables as the number of rows"
+    },
+    {
+      "startSeconds": 134.4,
+      "text": "increases the query becomes slower and"
+    },
+    {
+      "startSeconds": 136.14,
+      "text": "slower the solution to this is to use"
+    },
+    {
+      "startSeconds": 138.06,
+      "text": "indexing which enables queries to"
+    },
+    {
+      "startSeconds": 139.92,
+      "text": "perform well even as the table size"
+    },
+    {
+      "startSeconds": 141.72,
+      "text": "grows the basic idea between indexing is"
+    },
+    {
+      "startSeconds": 144.12,
+      "text": "similar to that of a directory or a"
+    },
+    {
+      "startSeconds": 145.62,
+      "text": "lookup table it works by storing the"
+    },
+    {
+      "startSeconds": 147.42,
+      "text": "associated columns in a data structure"
+    },
+    {
+      "startSeconds": 149.099,
+      "text": "with a reference to the applicable row"
+    },
+    {
+      "startSeconds": 151.02,
+      "text": "IDs in the associated table when a query"
+    },
+    {
+      "startSeconds": 153.36,
+      "text": "is made that can be served by the index"
+    },
+    {
+      "startSeconds": 155.099,
+      "text": "either completely or partially then the"
+    },
+    {
+      "startSeconds": 157.98,
+      "text": "index is used to find rows that match"
+    },
+    {
+      "startSeconds": 159.78,
+      "text": "that condition to see this in action"
+    },
+    {
+      "startSeconds": 161.819,
+      "text": "I've loaded a table with about 20"
+    },
+    {
+      "startSeconds": 163.62,
+      "text": "million users each that has an age value"
+    },
+    {
+      "startSeconds": 166.14,
+      "text": "Associated if we search for all users"
+    },
+    {
+      "startSeconds": 168.36,
+      "text": "that fall within the range of 21 to 35"
+    },
+    {
+      "startSeconds": 170.459,
+      "text": "you can see that it takes a long time to"
+    },
+    {
+      "startSeconds": 172.14,
+      "text": "run in fact we can measure the time"
+    },
+    {
+      "startSeconds": 174,
+      "text": "taken by using the explain analyze"
+    },
+    {
+      "startSeconds": 175.92,
+      "text": "command before our query which also"
+    },
+    {
+      "startSeconds": 177.78,
+      "text": "tells us what it's doing under the hood"
+    },
+    {
+      "startSeconds": 179.22,
+      "text": "notice the sex scan which stands for"
+    },
+    {
+      "startSeconds": 181.44,
+      "text": "sequential scan let's optimize this by"
+    },
+    {
+      "startSeconds": 183.54,
+      "text": "creating an index for our age field we"
+    },
+    {
+      "startSeconds": 186.18,
+      "text": "first use the create index command"
+    },
+    {
+      "startSeconds": 188.22,
+      "text": "followed by the index name and the table"
+    },
+    {
+      "startSeconds": 190.14,
+      "text": "we wish to create it on we then specify"
+    },
+    {
+      "startSeconds": 192.54,
+      "text": "the columns we want to use for our index"
+    },
+    {
+      "startSeconds": 194.459,
+      "text": "in this case we're just going to use the"
+    },
+    {
+      "startSeconds": 196.14,
+      "text": "age column creating an index can take a"
+    },
+    {
+      "startSeconds": 198.659,
+      "text": "while depending on the index complexity"
+    },
+    {
+      "startSeconds": 200.28,
+      "text": "and the amount of data in our table once"
+    },
+    {
+      "startSeconds": 202.68,
+      "text": "our index is created we can go ahead and"
+    },
+    {
+      "startSeconds": 204.3,
+      "text": "run the same command again here it's in"
+    },
+    {
+      "startSeconds": 206.159,
+      "text": "a fraction of the time if we run explain"
+    },
+    {
+      "startSeconds": 208.019,
+      "text": "analyze again you can see it's using the"
+    },
+    {
+      "startSeconds": 209.879,
+      "text": "index for the lookup instead of"
+    },
+    {
+      "startSeconds": 211.2,
+      "text": "sequential scanning now there are a"
+    },
+    {
+      "startSeconds": 213.3,
+      "text": "number of caveats with indexing as well"
+    },
+    {
+      "startSeconds": 215.099,
+      "text": "which I'll cover in other videos however"
+    },
+    {
+      "startSeconds": 217.44,
+      "text": "the major one to note is that indexing"
+    },
+    {
+      "startSeconds": 219.36,
+      "text": "increases the time to write to a table"
+    },
+    {
+      "startSeconds": 221.4,
+      "text": "as any new rows also have to be added to"
+    },
+    {
+      "startSeconds": 223.799,
+      "text": "the index and then balanced fortunately"
+    },
+    {
+      "startSeconds": 226.08,
+      "text": "there are a couple of ways to improve"
+    },
+    {
+      "startSeconds": 227.819,
+      "text": "right performance"
+    },
+    {
+      "startSeconds": 229.68,
+      "text": "when you have a large database table"
+    },
+    {
+      "startSeconds": 231.42,
+      "text": "operations performed against it will"
+    },
+    {
+      "startSeconds": 233.159,
+      "text": "have to run against more rows which"
+    },
+    {
+      "startSeconds": 234.959,
+      "text": "obviously impacts performance if the"
+    },
+    {
+      "startSeconds": 237.36,
+      "text": "data is able to be segmented then a"
+    },
+    {
+      "startSeconds": 239.159,
+      "text": "viable approach to improved performance"
+    },
+    {
+      "startSeconds": 240.78,
+      "text": "is to use table partitioning what"
+    },
+    {
+      "startSeconds": 243.12,
+      "text": "partitioning does is breaks up the"
+    },
+    {
+      "startSeconds": 244.86,
+      "text": "larger table into smaller tables based"
+    },
+    {
+      "startSeconds": 247.14,
+      "text": "on a column segmentation"
+    },
+    {
+      "startSeconds": 249.06,
+      "text": "these smaller tables are logically"
+    },
+    {
+      "startSeconds": 251.04,
+      "text": "grouped which allows them to operate as"
+    },
+    {
+      "startSeconds": 252.78,
+      "text": "one single table when it comes to"
+    },
+    {
+      "startSeconds": 254.4,
+      "text": "queries you can partition a table based"
+    },
+    {
+      "startSeconds": 256.859,
+      "text": "on any column that it has for example on"
+    },
+    {
+      "startSeconds": 259.919,
+      "text": "the range of a timestamp or on the hash"
+    },
+    {
+      "startSeconds": 262.32,
+      "text": "of some bytes to creative table"
+    },
+    {
+      "startSeconds": 264.24,
+      "text": "partition is as easy as calling our"
+    },
+    {
+      "startSeconds": 266.22,
+      "text": "create table statement and adding the"
+    },
+    {
+      "startSeconds": 268.02,
+      "text": "Partition by keyword at the end with the"
+    },
+    {
+      "startSeconds": 270.3,
+      "text": "type of partition to use and the column"
+    },
+    {
+      "startSeconds": 272.22,
+      "text": "to partition on in our example we're"
+    },
+    {
+      "startSeconds": 274.62,
+      "text": "going to use a range partition on the"
+    },
+    {
+      "startSeconds": 276.9,
+      "text": "event timestamp"
+    },
+    {
+      "startSeconds": 278.58,
+      "text": "once the partition has been created we"
+    },
+    {
+      "startSeconds": 280.919,
+      "text": "then create the individual partition"
+    },
+    {
+      "startSeconds": 282.36,
+      "text": "tables using the partition of command"
+    },
+    {
+      "startSeconds": 284.82,
+      "text": "followed by the range we wish to"
+    },
+    {
+      "startSeconds": 286.5,
+      "text": "Partition by in our case we're going to"
+    },
+    {
+      "startSeconds": 288.419,
+      "text": "do it by day"
+    },
+    {
+      "startSeconds": 290.04,
+      "text": "we can now perform operations on our"
+    },
+    {
+      "startSeconds": 291.78,
+      "text": "table as we would do normally"
+    },
+    {
+      "startSeconds": 293.94,
+      "text": "for reference here's a couple of"
+    },
+    {
+      "startSeconds": 295.5,
+      "text": "benchmarks for the performance"
+    },
+    {
+      "startSeconds": 297.12,
+      "text": "Improvement or partitioning in this case"
+    },
+    {
+      "startSeconds": 299.28,
+      "text": "when sequentially reading data from the"
+    },
+    {
+      "startSeconds": 301.08,
+      "text": "table that only hits a single partition"
+    },
+    {
+      "startSeconds": 302.88,
+      "text": "and in this case adding data to the"
+    },
+    {
+      "startSeconds": 304.86,
+      "text": "table when it has a number of indexes"
+    },
+    {
+      "startSeconds": 306.54,
+      "text": "you can also run these benchmarks"
+    },
+    {
+      "startSeconds": 308.4,
+      "text": "Yourself by downloading the source code"
+    },
+    {
+      "startSeconds": 310.139,
+      "text": "of course as with anything related to"
+    },
+    {
+      "startSeconds": 312.24,
+      "text": "database optimization there are some"
+    },
+    {
+      "startSeconds": 313.979,
+      "text": "caveats with partitioning as well the"
+    },
+    {
+      "startSeconds": 315.9,
+      "text": "first is that it can make queries slower"
+    },
+    {
+      "startSeconds": 317.58,
+      "text": "if they have to scan a large number of"
+    },
+    {
+      "startSeconds": 319.199,
+      "text": "multiple partitions instead of scanning"
+    },
+    {
+      "startSeconds": 321.36,
+      "text": "a single partition"
+    },
+    {
+      "startSeconds": 322.8,
+      "text": "and the second you'll need to manage the"
+    },
+    {
+      "startSeconds": 325.08,
+      "text": "creation of new partitions typically"
+    },
+    {
+      "startSeconds": 326.82,
+      "text": "with a Cron job there are some postgres"
+    },
+    {
+      "startSeconds": 328.919,
+      "text": "extensions which can help with this such"
+    },
+    {
+      "startSeconds": 330.539,
+      "text": "as PG partman and PG cron overall"
+    },
+    {
+      "startSeconds": 333.419,
+      "text": "partitions can be very useful technique"
+    },
+    {
+      "startSeconds": 335.22,
+      "text": "for improving database performance"
+    },
+    {
+      "startSeconds": 336.6,
+      "text": "however if you have a large amount of"
+    },
+    {
+      "startSeconds": 338.34,
+      "text": "data to insert in bulk there is another"
+    },
+    {
+      "startSeconds": 340.199,
+      "text": "way to improve right performance"
+    },
+    {
+      "startSeconds": 342.72,
+      "text": "if you have a large amount of data to"
+    },
+    {
+      "startSeconds": 344.28,
+      "text": "write to a table using individual"
+    },
+    {
+      "startSeconds": 346.02,
+      "text": "inserts can take a long time instead"
+    },
+    {
+      "startSeconds": 348.24,
+      "text": "it's possible to use the copy command"
+    },
+    {
+      "startSeconds": 350.16,
+      "text": "which allows you to insert a large"
+    },
+    {
+      "startSeconds": 351.419,
+      "text": "amount of data from a file or the"
+    },
+    {
+      "startSeconds": 353.28,
+      "text": "standard input"
+    },
+    {
+      "startSeconds": 354.539,
+      "text": "postgres supports either a CSV text or"
+    },
+    {
+      "startSeconds": 357.72,
+      "text": "binary format for the copy command as"
+    },
+    {
+      "startSeconds": 359.639,
+      "text": "structured data CSV tends to be"
+    },
+    {
+      "startSeconds": 362.039,
+      "text": "preferable in my experience as it"
+    },
+    {
+      "startSeconds": 363.66,
+      "text": "balances speed and compatibility"
+    },
+    {
+      "startSeconds": 366.479,
+      "text": "by using copy we can increase the speed"
+    },
+    {
+      "startSeconds": 368.52,
+      "text": "of writing data to our table by orders"
+    },
+    {
+      "startSeconds": 370.32,
+      "text": "of magnitude to show the speed"
+    },
+    {
+      "startSeconds": 372,
+      "text": "Improvement we get with copy here we're"
+    },
+    {
+      "startSeconds": 374.1,
+      "text": "using it to add 100 000 rows to our"
+    },
+    {
+      "startSeconds": 376.68,
+      "text": "events table on the left with the copy"
+    },
+    {
+      "startSeconds": 379.32,
+      "text": "command and on the right with a batched"
+    },
+    {
+      "startSeconds": 381.72,
+      "text": "insert you know the drill now but"
+    },
+    {
+      "startSeconds": 383.94,
+      "text": "there's a couple of caveats when using"
+    },
+    {
+      "startSeconds": 385.56,
+      "text": "copy the first is that if the data is"
+    },
+    {
+      "startSeconds": 388.38,
+      "text": "malformed at any point during the copy"
+    },
+    {
+      "startSeconds": 390.3,
+      "text": "then the entire operation will fail"
+    },
+    {
+      "startSeconds": 392.819,
+      "text": "and the second is you can only really"
+    },
+    {
+      "startSeconds": 395.22,
+      "text": "copy from the client side via sddn"
+    },
+    {
+      "startSeconds": 397.62,
+      "text": "otherwise the data file has to live on"
+    },
+    {
+      "startSeconds": 399.539,
+      "text": "the server most postgres drivers provide"
+    },
+    {
+      "startSeconds": 401.819,
+      "text": "for this however whilst copy is good for"
+    },
+    {
+      "startSeconds": 404.16,
+      "text": "large batches of data there is another"
+    },
+    {
+      "startSeconds": 405.84,
+      "text": "way to increase both read and write"
+    },
+    {
+      "startSeconds": 407.699,
+      "text": "performance which is to actually"
+    },
+    {
+      "startSeconds": 409.38,
+      "text": "separate the two tasks"
+    },
+    {
+      "startSeconds": 411.36,
+      "text": "in the majority of cases the number of"
+    },
+    {
+      "startSeconds": 413.699,
+      "text": "reads to a table typically outweighs the"
+    },
+    {
+      "startSeconds": 415.68,
+      "text": "number of writes because of this"
+    },
+    {
+      "startSeconds": 417.3,
+      "text": "performance can be improved by a concept"
+    },
+    {
+      "startSeconds": 419.16,
+      "text": "called separation of concerns where you"
+    },
+    {
+      "startSeconds": 421.74,
+      "text": "have multiple instances of your database"
+    },
+    {
+      "startSeconds": 423.419,
+      "text": "each dedicated to a different task"
+    },
+    {
+      "startSeconds": 425.16,
+      "text": "reading or writing with postgres"
+    },
+    {
+      "startSeconds": 427.56,
+      "text": "separation of concerns can be achieved"
+    },
+    {
+      "startSeconds": 429.419,
+      "text": "by using read replicas this is where you"
+    },
+    {
+      "startSeconds": 431.819,
+      "text": "have a primary database which enables"
+    },
+    {
+      "startSeconds": 433.56,
+      "text": "rights and replica databases which are"
+    },
+    {
+      "startSeconds": 435.78,
+      "text": "read-only the primary database will sync"
+    },
+    {
+      "startSeconds": 438.539,
+      "text": "its data with the read replicas this"
+    },
+    {
+      "startSeconds": 440.46,
+      "text": "enables multiple instances to be read"
+    },
+    {
+      "startSeconds": 442.62,
+      "text": "from which can horizontally scale your"
+    },
+    {
+      "startSeconds": 444.599,
+      "text": "performance"
+    },
+    {
+      "startSeconds": 446.16,
+      "text": "creating a read replica is too much for"
+    },
+    {
+      "startSeconds": 448.139,
+      "text": "this video but fortunately a lot of"
+    },
+    {
+      "startSeconds": 449.88,
+      "text": "cloud providers do allow read"
+    },
+    {
+      "startSeconds": 451.08,
+      "text": "replication there's also a Docker"
+    },
+    {
+      "startSeconds": 453.12,
+      "text": "compose in the source code which can"
+    },
+    {
+      "startSeconds": 454.5,
+      "text": "help get you started with it the main"
+    },
+    {
+      "startSeconds": 456.12,
+      "text": "caveat when using read replicas is that"
+    },
+    {
+      "startSeconds": 458.28,
+      "text": "it does introduce additional complexity"
+    },
+    {
+      "startSeconds": 459.9,
+      "text": "to your system and requires careful"
+    },
+    {
+      "startSeconds": 461.759,
+      "text": "setup and monitoring to ensure that the"
+    },
+    {
+      "startSeconds": 463.74,
+      "text": "rib replicas are working correctly there"
+    },
+    {
+      "startSeconds": 465.9,
+      "text": "are a couple of tools such as PG bouncer"
+    },
+    {
+      "startSeconds": 467.88,
+      "text": "or PG pool 2 to help abstract some of"
+    },
+    {
+      "startSeconds": 470.4,
+      "text": "this complexity away with these five"
+    },
+    {
+      "startSeconds": 472.62,
+      "text": "approaches you can turn postgres not"
+    },
+    {
+      "startSeconds": 474.78,
+      "text": "only into a Bugatti but also a Lambo or"
+    },
+    {
+      "startSeconds": 477.3,
+      "text": "a Ferrari"
+    },
+    {
+      "startSeconds": 478.979,
+      "text": "we only touched on the surface of what"
+    },
+    {
+      "startSeconds": 480.96,
+      "text": "can be achieved with these approaches"
+    },
+    {
+      "startSeconds": 482.34,
+      "text": "and I'll be doing more in-depth videos"
+    },
+    {
+      "startSeconds": 484.139,
+      "text": "in the future until then however you can"
+    },
+    {
+      "startSeconds": 486.599,
+      "text": "lower the roof and feel the wind in your"
+    },
+    {
+      "startSeconds": 488.28,
+      "text": "hair"
+    }
+  ]
+}

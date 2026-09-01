@@ -1,8 +1,1498 @@
 {
   "id": "zfQgsGXTpOg",
   "url": "https://www.youtube.com/watch?v=zfQgsGXTpOg",
-  "fetchedAt": "2026-08-31T05:15:13.875Z",
-  "captionKind": "empty",
-  "chapters": [],
-  "cues": []
+  "fetchedAt": "2026-09-01T04:05:48.280Z",
+  "captionKind": "asr",
+  "chapters": [
+    {
+      "startSeconds": 0,
+      "label": "<Untitled Chapter 1>"
+    },
+    {
+      "startSeconds": 95,
+      "label": "The Type System in Typescript"
+    },
+    {
+      "startSeconds": 221,
+      "label": "Class"
+    },
+    {
+      "startSeconds": 267,
+      "label": "Why Use an Interface at all Types"
+    },
+    {
+      "startSeconds": 402,
+      "label": "Constructor"
+    }
+  ],
+  "cues": [
+    {
+      "startSeconds": 0.88,
+      "text": "hi welcome back to coding shorts"
+    },
+    {
+      "startSeconds": 3.04,
+      "text": "my name is sean wildermuth today we're"
+    },
+    {
+      "startSeconds": 5.6,
+      "text": "going to talk about typescript"
+    },
+    {
+      "startSeconds": 7.12,
+      "text": "and how it uses structural typing and"
+    },
+    {
+      "startSeconds": 9.84,
+      "text": "i'm starting to think that this coding"
+    },
+    {
+      "startSeconds": 11.679,
+      "text": "shorts video series"
+    },
+    {
+      "startSeconds": 13.12,
+      "text": "is really about showing you how i was"
+    },
+    {
+      "startSeconds": 15.2,
+      "text": "wrong in a bunch of different cases"
+    },
+    {
+      "startSeconds": 16.96,
+      "text": "and this is going to be another one of"
+    },
+    {
+      "startSeconds": 18.16,
+      "text": "them i brought a lot of expectations"
+    },
+    {
+      "startSeconds": 20.88,
+      "text": "into what typescript would do because of"
+    },
+    {
+      "startSeconds": 22.72,
+      "text": "the other languages i had started with"
+    },
+    {
+      "startSeconds": 25.039,
+      "text": "and the hope here is to show you how the"
+    },
+    {
+      "startSeconds": 26.56,
+      "text": "type system is different than"
+    },
+    {
+      "startSeconds": 28.48,
+      "text": "type systems in other languages notably"
+    },
+    {
+      "startSeconds": 31.279,
+      "text": "c"
+    },
+    {
+      "startSeconds": 31.519,
+      "text": "sharp java c plus plus etc so that you"
+    },
+    {
+      "startSeconds": 34.64,
+      "text": "can understand the differences so when"
+    },
+    {
+      "startSeconds": 36.239,
+      "text": "you come to typescript"
+    },
+    {
+      "startSeconds": 37.52,
+      "text": "you can make better sense of the"
+    },
+    {
+      "startSeconds": 39.28,
+      "text": "important ideas behind"
+    },
+    {
+      "startSeconds": 41.04,
+      "text": "inheritance behind classes interfaces"
+    },
+    {
+      "startSeconds": 45.039,
+      "text": "and in no small measure types"
+    },
+    {
+      "startSeconds": 48.239,
+      "text": "let's get started"
+    },
+    {
+      "startSeconds": 60.079,
+      "text": "let's start with some code that could be"
+    },
+    {
+      "startSeconds": 61.68,
+      "text": "typescript could be javascript"
+    },
+    {
+      "startSeconds": 63.6,
+      "text": "no real type information in here right"
+    },
+    {
+      "startSeconds": 66.24,
+      "text": "we've got"
+    },
+    {
+      "startSeconds": 67.119,
+      "text": "this little fake console section that's"
+    },
+    {
+      "startSeconds": 69.04,
+      "text": "just to build the right thing to the"
+    },
+    {
+      "startSeconds": 70.479,
+      "text": "screen for me you can ignore that"
+    },
+    {
+      "startSeconds": 72.08,
+      "text": "piece we're really talking about just"
+    },
+    {
+      "startSeconds": 73.76,
+      "text": "this default function that's being run"
+    },
+    {
+      "startSeconds": 75.92,
+      "text": "for us on the page creating a structure"
+    },
+    {
+      "startSeconds": 79.36,
+      "text": "just with an object and then we're doing"
+    },
+    {
+      "startSeconds": 81.759,
+      "text": "some just writing out to that fake"
+    },
+    {
+      "startSeconds": 83.36,
+      "text": "console"
+    },
+    {
+      "startSeconds": 85.439,
+      "text": "there's our magic fake console it's"
+    },
+    {
+      "startSeconds": 87.28,
+      "text": "writing out the payment"
+    },
+    {
+      "startSeconds": 88.799,
+      "text": "we're all good probably right"
+    },
+    {
+      "startSeconds": 91.92,
+      "text": "as this project gets bigger we're going"
+    },
+    {
+      "startSeconds": 93.439,
+      "text": "to want to think about types and so i"
+    },
+    {
+      "startSeconds": 95.119,
+      "text": "want to talk about the type system"
+    },
+    {
+      "startSeconds": 97.04,
+      "text": "in typescript because if you come from a"
+    },
+    {
+      "startSeconds": 100.56,
+      "text": "typed language something like c sharp or"
+    },
+    {
+      "startSeconds": 103.2,
+      "text": "java"
+    },
+    {
+      "startSeconds": 104,
+      "text": "you might be assuming that this type"
+    },
+    {
+      "startSeconds": 105.68,
+      "text": "system even though it's checked at"
+    },
+    {
+      "startSeconds": 107.2,
+      "text": "compile time only"
+    },
+    {
+      "startSeconds": 108.799,
+      "text": "is the same sort of type system than"
+    },
+    {
+      "startSeconds": 110.72,
+      "text": "you're used to sure you can't check for"
+    },
+    {
+      "startSeconds": 112.64,
+      "text": "things at runtime as easily"
+    },
+    {
+      "startSeconds": 114.32,
+      "text": "but you still want to have some notion"
+    },
+    {
+      "startSeconds": 116.159,
+      "text": "of that and so we have this structure"
+    },
+    {
+      "startSeconds": 117.92,
+      "text": "here that"
+    },
+    {
+      "startSeconds": 118.479,
+      "text": "we might want to type check right and so"
+    },
+    {
+      "startSeconds": 122.079,
+      "text": "one of the things we can do if you come"
+    },
+    {
+      "startSeconds": 124.159,
+      "text": "from that world is you might create an"
+    },
+    {
+      "startSeconds": 125.6,
+      "text": "interface"
+    },
+    {
+      "startSeconds": 126.32,
+      "text": "that matches that right and i'll call"
+    },
+    {
+      "startSeconds": 128.399,
+      "text": "this our payment"
+    },
+    {
+      "startSeconds": 129.759,
+      "text": "interface you can use an i before"
+    },
+    {
+      "startSeconds": 132.08,
+      "text": "payment or not i'm sort of stuck in the"
+    },
+    {
+      "startSeconds": 134.16,
+      "text": "typescript world where they don't bother"
+    },
+    {
+      "startSeconds": 135.68,
+      "text": "with that i from c"
+    },
+    {
+      "startSeconds": 137.04,
+      "text": "sharp i don't think it matters that much"
+    },
+    {
+      "startSeconds": 139.52,
+      "text": "and i'm just gonna"
+    },
+    {
+      "startSeconds": 140.4,
+      "text": "do a little copy paste here to create"
+    },
+    {
+      "startSeconds": 143.04,
+      "text": "our"
+    },
+    {
+      "startSeconds": 143.52,
+      "text": "types here right but of course this is"
+    },
+    {
+      "startSeconds": 145.92,
+      "text": "going to be a string"
+    },
+    {
+      "startSeconds": 147.28,
+      "text": "because this is an interface this is"
+    },
+    {
+      "startSeconds": 148.879,
+      "text": "going to be a number"
+    },
+    {
+      "startSeconds": 150.959,
+      "text": "this will conveniently be a date"
+    },
+    {
+      "startSeconds": 154.08,
+      "text": "and this will conveniently be a boolean"
+    },
+    {
+      "startSeconds": 156,
+      "text": "right so we have this"
+    },
+    {
+      "startSeconds": 157.44,
+      "text": "interface and if we just come over to"
+    },
+    {
+      "startSeconds": 159.28,
+      "text": "our type here"
+    },
+    {
+      "startSeconds": 160.64,
+      "text": "and say payment right we're saying hey"
+    },
+    {
+      "startSeconds": 163.36,
+      "text": "make this payment"
+    },
+    {
+      "startSeconds": 164.64,
+      "text": "interface match this and this is what"
+    },
+    {
+      "startSeconds": 167.12,
+      "text": "they mean by structural"
+    },
+    {
+      "startSeconds": 168.56,
+      "text": "we're not saying create some object that"
+    },
+    {
+      "startSeconds": 171.519,
+      "text": "implements"
+    },
+    {
+      "startSeconds": 172.239,
+      "text": "interface we're saying that this"
+    },
+    {
+      "startSeconds": 173.599,
+      "text": "structure we created this anonymous"
+    },
+    {
+      "startSeconds": 175.44,
+      "text": "object really"
+    },
+    {
+      "startSeconds": 176.319,
+      "text": "if you want to think about it in that"
+    },
+    {
+      "startSeconds": 177.599,
+      "text": "sense matches this"
+    },
+    {
+      "startSeconds": 179.44,
+      "text": "interface and that's really what the"
+    },
+    {
+      "startSeconds": 181.12,
+      "text": "structural type information is for"
+    },
+    {
+      "startSeconds": 183.2,
+      "text": "is to make sure that it looks like it"
+    },
+    {
+      "startSeconds": 185.2,
+      "text": "it's not going to guarantee"
+    },
+    {
+      "startSeconds": 186.879,
+      "text": "that it is that type it's going to"
+    },
+    {
+      "startSeconds": 189.12,
+      "text": "guarantee that it looks"
+    },
+    {
+      "startSeconds": 190.72,
+      "text": "and implements all the pieces of that"
+    },
+    {
+      "startSeconds": 192.72,
+      "text": "type so"
+    },
+    {
+      "startSeconds": 194.239,
+      "text": "if we were to make a mistake later in"
+    },
+    {
+      "startSeconds": 196.239,
+      "text": "code and put our amount"
+    },
+    {
+      "startSeconds": 198.08,
+      "text": "in a string of course it's going to"
+    },
+    {
+      "startSeconds": 200.159,
+      "text": "complain"
+    },
+    {
+      "startSeconds": 201.12,
+      "text": "even though this is just an anonymous"
+    },
+    {
+      "startSeconds": 203.68,
+      "text": "object as for as far as it's concerned"
+    },
+    {
+      "startSeconds": 205.68,
+      "text": "right but the compiler is"
+    },
+    {
+      "startSeconds": 207.36,
+      "text": "complaining saying amount you've told me"
+    },
+    {
+      "startSeconds": 209.36,
+      "text": "has to be a number"
+    },
+    {
+      "startSeconds": 210.4,
+      "text": "and this clearly isn't a number right"
+    },
+    {
+      "startSeconds": 214.159,
+      "text": "and so what's interesting to me is that"
+    },
+    {
+      "startSeconds": 217.28,
+      "text": "there's two other pieces of type"
+    },
+    {
+      "startSeconds": 218.64,
+      "text": "information that i care about"
+    },
+    {
+      "startSeconds": 220.799,
+      "text": "one is a class and class is going to be"
+    },
+    {
+      "startSeconds": 223.519,
+      "text": "similar to what you're used to and in"
+    },
+    {
+      "startSeconds": 224.959,
+      "text": "fact"
+    },
+    {
+      "startSeconds": 225.36,
+      "text": "i think for c-sharp and java programmers"
+    },
+    {
+      "startSeconds": 227.84,
+      "text": "we end up creating more classes"
+    },
+    {
+      "startSeconds": 229.68,
+      "text": "in typescript than we probably need"
+    },
+    {
+      "startSeconds": 232.08,
+      "text": "remember this is about compile-time"
+    },
+    {
+      "startSeconds": 233.76,
+      "text": "checking and so"
+    },
+    {
+      "startSeconds": 234.879,
+      "text": "we'll get to a class in a minute but"
+    },
+    {
+      "startSeconds": 236.48,
+      "text": "there's also another one that a lot of"
+    },
+    {
+      "startSeconds": 238.239,
+      "text": "people"
+    },
+    {
+      "startSeconds": 238.64,
+      "text": "end up especially when coming from type"
+    },
+    {
+      "startSeconds": 240.64,
+      "text": "safe languages"
+    },
+    {
+      "startSeconds": 241.68,
+      "text": "don't use that much and that's something"
+    },
+    {
+      "startSeconds": 243.28,
+      "text": "called a type and this is basically"
+    },
+    {
+      "startSeconds": 245.68,
+      "text": "something that the compiler is going to"
+    },
+    {
+      "startSeconds": 247.28,
+      "text": "do"
+    },
+    {
+      "startSeconds": 247.599,
+      "text": "to guarantee that something matches it"
+    },
+    {
+      "startSeconds": 249.68,
+      "text": "and so in fact"
+    },
+    {
+      "startSeconds": 250.879,
+      "text": "this could be just a type right the"
+    },
+    {
+      "startSeconds": 253.2,
+      "text": "syntax is a little different that we"
+    },
+    {
+      "startSeconds": 254.48,
+      "text": "need to"
+    },
+    {
+      "startSeconds": 255.04,
+      "text": "assign that type information but we have"
+    },
+    {
+      "startSeconds": 257.84,
+      "text": "the same structure here and we have the"
+    },
+    {
+      "startSeconds": 259.68,
+      "text": "same"
+    },
+    {
+      "startSeconds": 260.16,
+      "text": "testing this is a type instead of an"
+    },
+    {
+      "startSeconds": 262.639,
+      "text": "interface"
+    },
+    {
+      "startSeconds": 263.919,
+      "text": "but we do get that same type safety that"
+    },
+    {
+      "startSeconds": 266,
+      "text": "we saw a minute ago right so why use an"
+    },
+    {
+      "startSeconds": 268.8,
+      "text": "interface at all"
+    },
+    {
+      "startSeconds": 270.32,
+      "text": "types and interfaces are actually pretty"
+    },
+    {
+      "startSeconds": 272.56,
+      "text": "closely"
+    },
+    {
+      "startSeconds": 273.36,
+      "text": "the same set of information the"
+    },
+    {
+      "startSeconds": 275.6,
+      "text": "difference really comes down to"
+    },
+    {
+      "startSeconds": 277.6,
+      "text": "that types can also dictate"
+    },
+    {
+      "startSeconds": 281.12,
+      "text": "rules on non-object types whereas"
+    },
+    {
+      "startSeconds": 283.84,
+      "text": "interfaces are always going to be"
+    },
+    {
+      "startSeconds": 285.12,
+      "text": "against"
+    },
+    {
+      "startSeconds": 285.6,
+      "text": "object types right and so let's make"
+    },
+    {
+      "startSeconds": 287.68,
+      "text": "payment type credit card"
+    },
+    {
+      "startSeconds": 290.16,
+      "text": "or cash right we're saying that"
+    },
+    {
+      "startSeconds": 293.759,
+      "text": "if we use this type information and"
+    },
+    {
+      "startSeconds": 296.32,
+      "text": "let's change this type here from payment"
+    },
+    {
+      "startSeconds": 298.4,
+      "text": "type"
+    },
+    {
+      "startSeconds": 298.8,
+      "text": "to uppercase payment type to this type"
+    },
+    {
+      "startSeconds": 301.12,
+      "text": "we have here"
+    },
+    {
+      "startSeconds": 302,
+      "text": "and we can see it's checking this and"
+    },
+    {
+      "startSeconds": 303.44,
+      "text": "what happens if i just misname that"
+    },
+    {
+      "startSeconds": 305.6,
+      "text": "it doesn't follow this type information"
+    },
+    {
+      "startSeconds": 308.479,
+      "text": "and so"
+    },
+    {
+      "startSeconds": 309.28,
+      "text": "it's not assignable to it and what i"
+    },
+    {
+      "startSeconds": 311.199,
+      "text": "find interesting here is this is where i"
+    },
+    {
+      "startSeconds": 312.96,
+      "text": "would normally drop down"
+    },
+    {
+      "startSeconds": 314.4,
+      "text": "into an enumeration in c sharp or java"
+    },
+    {
+      "startSeconds": 316.96,
+      "text": "but i don't need to because some of"
+    },
+    {
+      "startSeconds": 318.479,
+      "text": "these are just about checking"
+    },
+    {
+      "startSeconds": 320.08,
+      "text": "simple types in fact this type"
+    },
+    {
+      "startSeconds": 322.24,
+      "text": "information could have just done this"
+    },
+    {
+      "startSeconds": 323.84,
+      "text": "here as well"
+    },
+    {
+      "startSeconds": 324.56,
+      "text": "right the type here is going to give us"
+    },
+    {
+      "startSeconds": 327.36,
+      "text": "that same"
+    },
+    {
+      "startSeconds": 328.32,
+      "text": "information right because we're defining"
+    },
+    {
+      "startSeconds": 330.56,
+      "text": "an expression that describes"
+    },
+    {
+      "startSeconds": 332.4,
+      "text": "what payment type really is and we're"
+    },
+    {
+      "startSeconds": 334.24,
+      "text": "saying hey this is a string but it has"
+    },
+    {
+      "startSeconds": 336.32,
+      "text": "to be"
+    },
+    {
+      "startSeconds": 337.039,
+      "text": "following the rules here and that is"
+    },
+    {
+      "startSeconds": 338.96,
+      "text": "credit card"
+    },
+    {
+      "startSeconds": 341.039,
+      "text": "i'd like being able to reuse these and"
+    },
+    {
+      "startSeconds": 342.88,
+      "text": "so i'll go ahead and switch back to"
+    },
+    {
+      "startSeconds": 344.16,
+      "text": "payment type but again it's really the"
+    },
+    {
+      "startSeconds": 346.16,
+      "text": "same thing"
+    },
+    {
+      "startSeconds": 347.52,
+      "text": "so why would you create interfaces at"
+    },
+    {
+      "startSeconds": 349.44,
+      "text": "all and you can use"
+    },
+    {
+      "startSeconds": 351.12,
+      "text": "types to worry about the implementation"
+    },
+    {
+      "startSeconds": 354,
+      "text": "of a class"
+    },
+    {
+      "startSeconds": 354.88,
+      "text": "but it's also a little bit more"
+    },
+    {
+      "startSeconds": 355.919,
+      "text": "descriptive if you're really defining an"
+    },
+    {
+      "startSeconds": 357.68,
+      "text": "interface so let's come back here"
+    },
+    {
+      "startSeconds": 359.36,
+      "text": "and make this an interface because"
+    },
+    {
+      "startSeconds": 361.039,
+      "text": "that's really what we're talking about"
+    },
+    {
+      "startSeconds": 362.72,
+      "text": "here right"
+    },
+    {
+      "startSeconds": 363.84,
+      "text": "and we just need to change the syntax"
+    },
+    {
+      "startSeconds": 365.919,
+      "text": "get rid of that little equals"
+    },
+    {
+      "startSeconds": 367.52,
+      "text": "and notice that this continues to work"
+    },
+    {
+      "startSeconds": 369.6,
+      "text": "because the interface is doing exactly"
+    },
+    {
+      "startSeconds": 371.84,
+      "text": "what we want we can use types"
+    },
+    {
+      "startSeconds": 373.36,
+      "text": "inside those interfaces as well but"
+    },
+    {
+      "startSeconds": 375.12,
+      "text": "we'll get back to the final one that"
+    },
+    {
+      "startSeconds": 377.199,
+      "text": "happens a lot and that is the class now"
+    },
+    {
+      "startSeconds": 379.52,
+      "text": "why do we bother with a class"
+    },
+    {
+      "startSeconds": 381.44,
+      "text": "the difference between types and"
+    },
+    {
+      "startSeconds": 383.039,
+      "text": "interfaces is i can't say"
+    },
+    {
+      "startSeconds": 384.8,
+      "text": "new i can't think about construction"
+    },
+    {
+      "startSeconds": 387.919,
+      "text": "i can only think about matching the"
+    },
+    {
+      "startSeconds": 390.4,
+      "text": "structural"
+    },
+    {
+      "startSeconds": 391.52,
+      "text": "shapes to those types to the type or the"
+    },
+    {
+      "startSeconds": 394.4,
+      "text": "interface"
+    },
+    {
+      "startSeconds": 395.36,
+      "text": "class really comes in when i want to be"
+    },
+    {
+      "startSeconds": 397.199,
+      "text": "able to control the construction of the"
+    },
+    {
+      "startSeconds": 398.96,
+      "text": "objects"
+    },
+    {
+      "startSeconds": 399.84,
+      "text": "and by using a class we can introduce"
+    },
+    {
+      "startSeconds": 402.08,
+      "text": "the idea of a constructor"
+    },
+    {
+      "startSeconds": 403.6,
+      "text": "right so with a constructor we may want"
+    },
+    {
+      "startSeconds": 406.16,
+      "text": "some of that"
+    },
+    {
+      "startSeconds": 406.8,
+      "text": "same information in fact we often will"
+    },
+    {
+      "startSeconds": 409.12,
+      "text": "say implements"
+    },
+    {
+      "startSeconds": 410.72,
+      "text": "payment right that we're going to have"
+    },
+    {
+      "startSeconds": 412.4,
+      "text": "that same shape and of course it's going"
+    },
+    {
+      "startSeconds": 414.08,
+      "text": "to complain"
+    },
+    {
+      "startSeconds": 414.8,
+      "text": "until we have these so i'm going to copy"
+    },
+    {
+      "startSeconds": 416.639,
+      "text": "this yet again"
+    },
+    {
+      "startSeconds": 418.56,
+      "text": "and i could create members for this but"
+    },
+    {
+      "startSeconds": 421.52,
+      "text": "i find a little easier sometimes because"
+    },
+    {
+      "startSeconds": 423.44,
+      "text": "i want the same structure to just"
+    },
+    {
+      "startSeconds": 426,
+      "text": "make these public members of the"
+    },
+    {
+      "startSeconds": 427.599,
+      "text": "constructor"
+    },
+    {
+      "startSeconds": 429.12,
+      "text": "because i still need all of these in"
+    },
+    {
+      "startSeconds": 430.72,
+      "text": "here and there are different ways we"
+    },
+    {
+      "startSeconds": 432.24,
+      "text": "could do this i could"
+    },
+    {
+      "startSeconds": 433.36,
+      "text": "accept a object that has the interface"
+    },
+    {
+      "startSeconds": 436.56,
+      "text": "of the payment"
+    },
+    {
+      "startSeconds": 438.639,
+      "text": "and then do copy of one over the other"
+    },
+    {
+      "startSeconds": 440.4,
+      "text": "but i just find this a little easier"
+    },
+    {
+      "startSeconds": 442.08,
+      "text": "again i'm using public here really to"
+    },
+    {
+      "startSeconds": 445.039,
+      "text": "define"
+    },
+    {
+      "startSeconds": 446,
+      "text": "that i'm going to have properties of"
+    },
+    {
+      "startSeconds": 447.44,
+      "text": "them right and of course the interface"
+    },
+    {
+      "startSeconds": 449.68,
+      "text": "is going to say fine doesn't give us"
+    },
+    {
+      "startSeconds": 451.84,
+      "text": "that underscore anymore"
+    },
+    {
+      "startSeconds": 453.12,
+      "text": "because we've implemented by having each"
+    },
+    {
+      "startSeconds": 455.039,
+      "text": "of these types that match the underlying"
+    },
+    {
+      "startSeconds": 456.96,
+      "text": "types"
+    },
+    {
+      "startSeconds": 457.68,
+      "text": "and so that means if we want this to be"
+    },
+    {
+      "startSeconds": 459.28,
+      "text": "a payment entry right we don't need the"
+    },
+    {
+      "startSeconds": 461.52,
+      "text": "type there anymore"
+    },
+    {
+      "startSeconds": 462.56,
+      "text": "because what we're going to do is"
+    },
+    {
+      "startSeconds": 463.68,
+      "text": "actually assign a new payment"
+    },
+    {
+      "startSeconds": 466.4,
+      "text": "entry we're allowing ourselves to have"
+    },
+    {
+      "startSeconds": 468.319,
+      "text": "control over the construction"
+    },
+    {
+      "startSeconds": 470,
+      "text": "as well as have default implementations"
+    },
+    {
+      "startSeconds": 473.12,
+      "text": "right"
+    },
+    {
+      "startSeconds": 473.919,
+      "text": "let's come down here and let's just"
+    },
+    {
+      "startSeconds": 475.28,
+      "text": "clean this up a little we don't need the"
+    },
+    {
+      "startSeconds": 477.28,
+      "text": "names in here"
+    },
+    {
+      "startSeconds": 478,
+      "text": "anymore we just need the values"
+    },
+    {
+      "startSeconds": 481.52,
+      "text": "to get rid of that and in fact let's"
+    },
+    {
+      "startSeconds": 483.44,
+      "text": "move this"
+    },
+    {
+      "startSeconds": 484.72,
+      "text": "to a method so let's say log payment"
+    },
+    {
+      "startSeconds": 489.28,
+      "text": "tell it that we don't want to an end and"
+    },
+    {
+      "startSeconds": 492,
+      "text": "we'll just use fake console to do that"
+    },
+    {
+      "startSeconds": 493.84,
+      "text": "again"
+    },
+    {
+      "startSeconds": 494.479,
+      "text": "and of course it's going to be this dot"
+    },
+    {
+      "startSeconds": 496.4,
+      "text": "amount here"
+    },
+    {
+      "startSeconds": 497.599,
+      "text": "because we're part of this class"
+    },
+    {
+      "startSeconds": 500.879,
+      "text": "we would be part of this class if i"
+    },
+    {
+      "startSeconds": 502.56,
+      "text": "didn't have too many of these"
+    },
+    {
+      "startSeconds": 504.879,
+      "text": "there we go because we're now part of"
+    },
+    {
+      "startSeconds": 507.12,
+      "text": "this class and of course then down here"
+    },
+    {
+      "startSeconds": 509.12,
+      "text": "we could just replace that"
+    },
+    {
+      "startSeconds": 510.56,
+      "text": "with payment.log payment and be done"
+    },
+    {
+      "startSeconds": 514,
+      "text": "with it"
+    },
+    {
+      "startSeconds": 514.8,
+      "text": "we still get the same functionality but"
+    },
+    {
+      "startSeconds": 516.719,
+      "text": "we've sort of wrapped it in here"
+    },
+    {
+      "startSeconds": 518.959,
+      "text": "and so this idea of construction and"
+    },
+    {
+      "startSeconds": 521.36,
+      "text": "behavior"
+    },
+    {
+      "startSeconds": 522.32,
+      "text": "is one where using classes makes a lot"
+    },
+    {
+      "startSeconds": 524.64,
+      "text": "of sense but using classes"
+    },
+    {
+      "startSeconds": 526,
+      "text": "just because you're dealing with let's"
+    },
+    {
+      "startSeconds": 527.519,
+      "text": "say data from a"
+    },
+    {
+      "startSeconds": 529.36,
+      "text": "web service or something where you're"
+    },
+    {
+      "startSeconds": 531.2,
+      "text": "just getting structural data"
+    },
+    {
+      "startSeconds": 532.88,
+      "text": "i think class is often overused in order"
+    },
+    {
+      "startSeconds": 535.36,
+      "text": "to implement that"
+    },
+    {
+      "startSeconds": 536.56,
+      "text": "interfaces and types are more than fine"
+    },
+    {
+      "startSeconds": 539.44,
+      "text": "the last thing that you may need"
+    },
+    {
+      "startSeconds": 541.36,
+      "text": "though i have to tell you i really"
+    },
+    {
+      "startSeconds": 543.12,
+      "text": "rarely use it inside of typescript"
+    },
+    {
+      "startSeconds": 545.12,
+      "text": "is inheritance so being able to say"
+    },
+    {
+      "startSeconds": 547.36,
+      "text": "class"
+    },
+    {
+      "startSeconds": 548.24,
+      "text": "billing payment entry extends"
+    },
+    {
+      "startSeconds": 552.64,
+      "text": "payment to entry right we have that"
+    },
+    {
+      "startSeconds": 555.12,
+      "text": "ability to have a"
+    },
+    {
+      "startSeconds": 556.64,
+      "text": "class that extends another one and let's"
+    },
+    {
+      "startSeconds": 559.279,
+      "text": "copy this constructor real quick"
+    },
+    {
+      "startSeconds": 561.44,
+      "text": "but we're going to change it in some"
+    },
+    {
+      "startSeconds": 562.8,
+      "text": "small subtle ways because we actually"
+    },
+    {
+      "startSeconds": 565.2,
+      "text": "want a public"
+    },
+    {
+      "startSeconds": 566.88,
+      "text": "date due in here as well that has to be"
+    },
+    {
+      "startSeconds": 570.16,
+      "text": "a date right that's giving us all these"
+    },
+    {
+      "startSeconds": 573.04,
+      "text": "complaints"
+    },
+    {
+      "startSeconds": 573.68,
+      "text": "because we actually don't want these to"
+    },
+    {
+      "startSeconds": 575.279,
+      "text": "create these as public because of course"
+    },
+    {
+      "startSeconds": 577.519,
+      "text": "the base class has implemented all but"
+    },
+    {
+      "startSeconds": 579.76,
+      "text": "one of those"
+    },
+    {
+      "startSeconds": 580.88,
+      "text": "and in order to make this work we're"
+    },
+    {
+      "startSeconds": 582.8,
+      "text": "gonna have to call"
+    },
+    {
+      "startSeconds": 583.92,
+      "text": "super payment type amount"
+    },
+    {
+      "startSeconds": 587.12,
+      "text": "approved i think i missed one payment"
+    },
+    {
+      "startSeconds": 589.519,
+      "text": "date"
+    },
+    {
+      "startSeconds": 590.56,
+      "text": "in order to pass those down into the"
+    },
+    {
+      "startSeconds": 592.72,
+      "text": "other constructor"
+    },
+    {
+      "startSeconds": 594.08,
+      "text": "right now this still creates a public"
+    },
+    {
+      "startSeconds": 596.88,
+      "text": "member and so when we look at the"
+    },
+    {
+      "startSeconds": 598.399,
+      "text": "payment entry"
+    },
+    {
+      "startSeconds": 599.68,
+      "text": "we change this to new billing payment"
+    },
+    {
+      "startSeconds": 601.6,
+      "text": "entry right it's gonna"
+    },
+    {
+      "startSeconds": 603.36,
+      "text": "expect us to have what new date"
+    },
+    {
+      "startSeconds": 606.8,
+      "text": "as our due date right obviously having"
+    },
+    {
+      "startSeconds": 609.279,
+      "text": "the approval date and the date due on"
+    },
+    {
+      "startSeconds": 610.8,
+      "text": "the same day"
+    },
+    {
+      "startSeconds": 611.68,
+      "text": "doesn't make a lot of sense but it gives"
+    },
+    {
+      "startSeconds": 613.12,
+      "text": "us that ability and"
+    },
+    {
+      "startSeconds": 614.8,
+      "text": "log payment still exists because it's"
+    },
+    {
+      "startSeconds": 616.959,
+      "text": "within the derivation"
+    },
+    {
+      "startSeconds": 618.8,
+      "text": "of that particular class even though"
+    },
+    {
+      "startSeconds": 621.04,
+      "text": "we're using this"
+    },
+    {
+      "startSeconds": 621.92,
+      "text": "other class we could even take this and"
+    },
+    {
+      "startSeconds": 624.16,
+      "text": "go you know what"
+    },
+    {
+      "startSeconds": 625.279,
+      "text": "we want our own implementation here"
+    },
+    {
+      "startSeconds": 628.8,
+      "text": "and let's go ahead and say do this dot"
+    },
+    {
+      "startSeconds": 631.92,
+      "text": "due date right"
+    },
+    {
+      "startSeconds": 633.279,
+      "text": "of course that works here wouldn't work"
+    },
+    {
+      "startSeconds": 635.44,
+      "text": "here because"
+    },
+    {
+      "startSeconds": 636.64,
+      "text": "we've extended that to support that and"
+    },
+    {
+      "startSeconds": 638.959,
+      "text": "log payment here"
+    },
+    {
+      "startSeconds": 640.079,
+      "text": "notice it's going to be calling the"
+    },
+    {
+      "startSeconds": 641.68,
+      "text": "billing log entry payment not just the"
+    },
+    {
+      "startSeconds": 643.6,
+      "text": "log entry payment"
+    },
+    {
+      "startSeconds": 644.72,
+      "text": "because one exists at that level"
+    },
+    {
+      "startSeconds": 648,
+      "text": "and so i wanted to cover this to really"
+    },
+    {
+      "startSeconds": 649.839,
+      "text": "understand that typescript"
+    },
+    {
+      "startSeconds": 651.6,
+      "text": "has this thing called structural typing"
+    },
+    {
+      "startSeconds": 654.48,
+      "text": "so that you know that you don't always"
+    },
+    {
+      "startSeconds": 656.24,
+      "text": "need to fall back"
+    },
+    {
+      "startSeconds": 657.36,
+      "text": "into your type safety language habits"
+    },
+    {
+      "startSeconds": 660.8,
+      "text": "that this is a very different sort of"
+    },
+    {
+      "startSeconds": 662.8,
+      "text": "language we're dealing with"
+    },
+    {
+      "startSeconds": 664.16,
+      "text": "but that we still want to have those"
+    },
+    {
+      "startSeconds": 666.16,
+      "text": "types whether they're"
+    },
+    {
+      "startSeconds": 667.2,
+      "text": "interface classes or actual just type"
+    },
+    {
+      "startSeconds": 669.839,
+      "text": "definitions"
+    },
+    {
+      "startSeconds": 670.959,
+      "text": "they can help us build and extend our"
+    },
+    {
+      "startSeconds": 673.519,
+      "text": "type checking so"
+    },
+    {
+      "startSeconds": 674.72,
+      "text": "as we build these larger projects we're"
+    },
+    {
+      "startSeconds": 676.48,
+      "text": "going to get the benefit out of"
+    },
+    {
+      "startSeconds": 678.16,
+      "text": "type safety and that by making"
+    },
+    {
+      "startSeconds": 680.24,
+      "text": "everything absolutely everything"
+    },
+    {
+      "startSeconds": 681.92,
+      "text": "a class i think we're working harder"
+    },
+    {
+      "startSeconds": 684.56,
+      "text": "than we need to we're thinking about it"
+    },
+    {
+      "startSeconds": 686.56,
+      "text": "as the traditional sort of class instead"
+    },
+    {
+      "startSeconds": 688.56,
+      "text": "of functional language that javascript"
+    },
+    {
+      "startSeconds": 690.8,
+      "text": "ultimately is"
+    },
+    {
+      "startSeconds": 693.76,
+      "text": "this has been sean wildermuth again on"
+    },
+    {
+      "startSeconds": 695.68,
+      "text": "coding shorts"
+    },
+    {
+      "startSeconds": 696.8,
+      "text": "thanks for joining me"
+    },
+    {
+      "startSeconds": 708.56,
+      "text": "you"
+    }
+  ]
 }

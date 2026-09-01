@@ -1,8 +1,405 @@
 {
   "id": "pYax2rupKEY",
   "url": "https://www.youtube.com/watch?v=pYax2rupKEY",
-  "fetchedAt": "2026-08-31T05:15:39.254Z",
-  "captionKind": "empty",
+  "fetchedAt": "2026-09-01T04:06:28.608Z",
+  "captionKind": "manual",
   "chapters": [],
-  "cues": []
+  "cues": [
+    {
+      "startSeconds": 0.25,
+      "text": "With the huge amount of large language models out there today,"
+    },
+    {
+      "startSeconds": 3.178,
+      "text": "it can be a bit overwhelming to choose the perfect one for your use case."
+    },
+    {
+      "startSeconds": 7.27,
+      "text": "Plus, the decision you make might have an impact on the accuracy of your results, as well as cost and performance."
+    },
+    {
+      "startSeconds": 13.65,
+      "text": "But don't worry."
+    },
+    {
+      "startSeconds": 14.39,
+      "text": "In the next few minutes, I'll show you as a developer how"
+    },
+    {
+      "startSeconds": 16.932,
+      "text": "I independently evaluate different models, both proprietary and open source,"
+    },
+    {
+      "startSeconds": 21.097,
+      "text": "and walk you through different demos of model use cases,"
+    },
+    {
+      "startSeconds": 23.777,
+      "text": "like summarization, questioning and answering on your data, and more."
+    },
+    {
+      "startSeconds": 27.87,
+      "text": "Now, some people start off by looking at benchmarks or leaderboards,"
+    },
+    {
+      "startSeconds": 31.526,
+      "text": "but for me, the biggest consideration for model selection is the problem that you're trying to solve."
+    },
+    {
+      "startSeconds": 36.87,
+      "text": "Because while GPT and other SaaS-based models are an easy and fast way to begin prototyping,"
+    },
+    {
+      "startSeconds": 41.567,
+      "text": "many organizations need the full control,"
+    },
+    {
+      "startSeconds": 43.936,
+      "text": "customization, and flexibility that an open-source model like Llama or Mistral provides."
+    },
+    {
+      "startSeconds": 49.05,
+      "text": "But no matter what you choose, you'll need to consider the performance, speed, and price of the model."
+    },
+    {
+      "startSeconds": 54.79,
+      "text": "And there's a lot of tools to help out with this."
+    },
+    {
+      "startSeconds": 57.44,
+      "text": "So, let's get started."
+    },
+    {
+      "startSeconds": 58.54,
+      "text": "Here I'm starting off at artificial analysis, comparing the entire landscape of models, both proprietary and open source."
+    },
+    {
+      "startSeconds": 65.12,
+      "text": "And you're probably gonna see some familiar names here, but something I do wanna note is that there are some trends."
+    },
+    {
+      "startSeconds": 70.58,
+      "text": "For example, with higher intelligence, typically results in a higher price or higher cost."
+    },
+    {
+      "startSeconds": 76.14,
+      "text": "While at the same time, smaller models might result in faster speeds and lower costs at the same time."
+    },
+    {
+      "startSeconds": 81.44,
+      "text": "Let's take intelligence as an example."
+    },
+    {
+      "startSeconds": 84.17,
+      "text": "So, the numbers that they calculated actually result from a variety of benchmarks on MMLU-Pro and similar evaluations."
+    },
+    {
+      "startSeconds": 91.47,
+      "text": "But let's say that you're scaling things up to millions of queries to your model."
+    },
+    {
+      "startSeconds": 95.95,
+      "text": "You probably don't need a PhD-level AI for a simple task like that."
+    },
+    {
+      "startSeconds": 99.63,
+      "text": "But one of my favorite community-based platforms to evaluate models is"
+    },
+    {
+      "startSeconds": 103.108,
+      "text": "the Chatbot Arena Leaderboard by UC Berkeley and ALM Arena,"
+    },
+    {
+      "startSeconds": 107.476,
+      "text": "which combines over a million blind user votes on models to rank them and essentially provide a vibe score."
+    },
+    {
+      "startSeconds": 115.05,
+      "text": "Because benchmarks sometimes can be reverse engineered by models,"
+    },
+    {
+      "startSeconds": 117.779,
+      "text": "the Chatbot Arena is a great way to understand what the general AI community thinks is the best model."
+    },
+    {
+      "startSeconds": 123.57,
+      "text": "And this directly correlates to its abilities on reasoning, math, writing, and more."
+    },
+    {
+      "startSeconds": 129.13,
+      "text": "Plus, let's say, for example, that you want to compare two different models."
+    },
+    {
+      "startSeconds": 132.47,
+      "text": "You can actually do so in the interface."
+    },
+    {
+      "startSeconds": 134.49,
+      "text": "For example, I tried out this prompt to write an example customer response for a bank in JSON,"
+    },
+    {
+      "startSeconds": 139.357,
+      "text": "and we're able to compare between Granite 8 billion and Llama 8 billion."
+    },
+    {
+      "startSeconds": 143.46,
+      "text": "So it's pretty cool, right?"
+    },
+    {
+      "startSeconds": 144.62,
+      "text": "And finally, for simply open-source foundation and fine tune models,"
+    },
+    {
+      "startSeconds": 148.365,
+      "text": "the Open LLM Leaderboard has a wide variety of model metrics"
+    },
+    {
+      "startSeconds": 152.841,
+      "text": "and filters in order to understand which model might be best for your specific use case."
+    },
+    {
+      "startSeconds": 157.82,
+      "text": "For example, if you have a GPU or you wanna run it locally on your machine"
+    },
+    {
+      "startSeconds": 161.65,
+      "text": "or even do real-time inferencing on a mobile or edge device."
+    },
+    {
+      "startSeconds": 165.7,
+      "text": "So what's great is that you can easily select these filters and see the model directly on Hugging Face."
+    },
+    {
+      "startSeconds": 170.91,
+      "text": "For example, the number three result here is the Granite model."
+    },
+    {
+      "startSeconds": 174.19,
+      "text": "And on Hugging Face, you can understand the millions of models and"
+    },
+    {
+      "startSeconds": 177.341,
+      "text": "datasets that are on there and understand how you can use it on your machine."
+    },
+    {
+      "startSeconds": 181.35,
+      "text": "Now, we've taken a look at the general model landscape here, but let's start testing these out locally with our data."
+    },
+    {
+      "startSeconds": 187.81,
+      "text": "For example, this Granite model that we have here on Hugging Face."
+    },
+    {
+      "startSeconds": 191.22,
+      "text": "In order to test out different models and their use cases, we're going to use Ollama,"
+    },
+    {
+      "startSeconds": 195.552,
+      "text": "which is a popular developer tool that enables everybody to run their own large language models on their own system."
+    },
+    {
+      "startSeconds": 201.66,
+      "text": "It's open source, and it has a model repository, meaning that we can run chat,"
+    },
+    {
+      "startSeconds": 205.855,
+      "text": "vision, tool calling, and even a rag-embedding models locally."
+    },
+    {
+      "startSeconds": 210.06,
+      "text": "So to start, we're going to run Granite, specifically that Granite 3.1 model that we took a look at earlier on Hugging Face."
+    },
+    {
+      "startSeconds": 217.55,
+      "text": "And here, it's already quantized or optimized and compressed for our machine."
+    },
+    {
+      "startSeconds": 222.53,
+      "text": "And we're going to give it a quick question to make sure it's running."
+    },
+    {
+      "startSeconds": 225.45,
+      "text": "Talk like a pirate."
+    },
+    {
+      "startSeconds": 227.91,
+      "text": "Let's make sure."
+    },
+    {
+      "startSeconds": 228.89,
+      "text": "And there we go."
+    },
+    {
+      "startSeconds": 229.93,
+      "text": "We've got a funny response from our model."
+    },
+    {
+      "startSeconds": 232.07,
+      "text": "But now, with the model running locally on our machine, I want to use it with my"
+    },
+    {
+      "startSeconds": 235.655,
+      "text": "own data to understand what it can do and its possibilities."
+    },
+    {
+      "startSeconds": 239.43,
+      "text": "We're going use RAG or retrieval augmented generation in order to do this."
+    },
+    {
+      "startSeconds": 243.66,
+      "text": "Here's an open-source AI interface called Open WebUI."
+    },
+    {
+      "startSeconds": 247.38,
+      "text": "And it's going to allow us to use a local model that we have running, for example, Granite,"
+    },
+    {
+      "startSeconds": 251.823,
+      "text": "with Ollama, or maybe any open AI-compatible API model remotely as well."
+    },
+    {
+      "startSeconds": 257.959,
+      "text": "But let's think about it as an AI application, right?"
+    },
+    {
+      "startSeconds": 260.48,
+      "text": "The back end could be our model and model server."
+    },
+    {
+      "startSeconds": 263.4,
+      "text": "And the front end could a user interface like this that allows us to take in"
+    },
+    {
+      "startSeconds": 267.635,
+      "text": "our own custom data, to search the web, or to build agentic applications all with AI."
+    },
+    {
+      "startSeconds": 273.88,
+      "text": "So let's start off with RAG by attaching a file of something the model traditionally wouldn't know."
+    },
+    {
+      "startSeconds": 279.3,
+      "text": "This is specific enterprise data, right? Stuff that the model wasn't trained on originally, and specifically about Marty McFly."
+    },
+    {
+      "startSeconds": 286.6,
+      "text": "And we're going to provide this to the model and ask a specific question."
+    },
+    {
+      "startSeconds": 290.511,
+      "text": "What happened to Marty McFly in the 1955 accident from the claim?"
+    },
+    {
+      "startSeconds": 295,
+      "text": "Now, traditionally, a model wouldn't know about this information."
+    },
+    {
+      "startSeconds": 297.74,
+      "text": "But by using an embedding model in the background, as well as a vector database,"
+    },
+    {
+      "startSeconds": 302.48,
+      "text": "we're able to pull certain information from that source document"
+    },
+    {
+      "startSeconds": 306.088,
+      "text": "and even provide that in ah the citations here to have a clear source of truth for our model's answers."
+    },
+    {
+      "startSeconds": 313.1,
+      "text": "So we're about to try out RAG here, but also different agentic functions as well."
+    },
+    {
+      "startSeconds": 317.34,
+      "text": "And it's a great place to get started with your own unique data."
+    },
+    {
+      "startSeconds": 320.32,
+      "text": "Now, let's say that you're building applications and you want to use a free coding assistant within your IDE."
+    },
+    {
+      "startSeconds": 325.4,
+      "text": "Well, traditionally, you need to use a SAS offering or a specifically fine-tuned coding model."
+    },
+    {
+      "startSeconds": 330.87,
+      "text": "But now, more recently, one model can now work with a variety of languages, including your code."
+    },
+    {
+      "startSeconds": 336.51,
+      "text": "So, what I've set up here is Continue."
+    },
+    {
+      "startSeconds": 338.55,
+      "text": "And it's an open-source and free extension from the VS Code marketplace or IntelliJ"
+    },
+    {
+      "startSeconds": 343.113,
+      "text": "and specified it to use a local model that I have running with Ollama, that Granite model from earlier."
+    },
+    {
+      "startSeconds": 348.87,
+      "text": "So what we're able to do is to chat with our code base, explain entire files, and make edits for us."
+    },
+    {
+      "startSeconds": 354.77,
+      "text": "So here, I think we should add comments and some quick documentation"
+    },
+    {
+      "startSeconds": 358.64,
+      "text": "on what this class is doing so that other developers can understand it as well."
+    },
+    {
+      "startSeconds": 362.44,
+      "text": "So I'm going to ask to add java.comments describing the service."
+    },
+    {
+      "startSeconds": 366.4,
+      "text": "And it's going to go in and add this necessary and important documentation"
+    },
+    {
+      "startSeconds": 370.792,
+      "text": "to my project inline and be able to ask me to approve it or to deny it."
+    },
+    {
+      "startSeconds": 376.38,
+      "text": "So, I think it's pretty cool."
+    },
+    {
+      "startSeconds": 377.84,
+      "text": "And it is a great way to use an AI model with your code base as well."
+    },
+    {
+      "startSeconds": 382.275,
+      "text": "Okay great, so now you know the various ways to evaluate and test models,"
+    },
+    {
+      "startSeconds": 386.804,
+      "text": "both from online leaderboards and benchmarks, as well as from your own machine."
+    },
+    {
+      "startSeconds": 391.37,
+      "text": "But remember, it all comes down to your use case,"
+    },
+    {
+      "startSeconds": 393.711,
+      "text": "and there's even hybrid approaches of using a more powerful model in conjunction with a small model on device."
+    },
+    {
+      "startSeconds": 400.47,
+      "text": "But we're just getting started, because after experimenting with models comes the stage of building something great with AI."
+    },
+    {
+      "startSeconds": 406.89,
+      "text": "Now, what are you working on these days?"
+    },
+    {
+      "startSeconds": 408.69,
+      "text": "Please let us know in the comments below. But as always, thank you so much for watching."
+    },
+    {
+      "startSeconds": 413.17,
+      "text": "Be sure to leave a like if you learned something today and have a good one."
+    }
+  ]
 }

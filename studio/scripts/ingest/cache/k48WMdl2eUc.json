@@ -1,8 +1,597 @@
 {
   "id": "k48WMdl2eUc",
   "url": "https://www.youtube.com/watch?v=k48WMdl2eUc",
-  "fetchedAt": "2026-08-31T05:14:43.181Z",
-  "captionKind": "empty",
+  "fetchedAt": "2026-09-01T04:04:39.315Z",
+  "captionKind": "asr",
   "chapters": [],
-  "cues": []
+  "cues": [
+    {
+      "startSeconds": 0.04,
+      "text": "in my previous xjs video we discussed"
+    },
+    {
+      "startSeconds": 2.48,
+      "text": "the idea of layouts and how you can use"
+    },
+    {
+      "startSeconds": 5,
+      "text": "layouts in xjs a specific layout file to"
+    },
+    {
+      "startSeconds": 10.12,
+      "text": "share parts of your user interface"
+    },
+    {
+      "startSeconds": 13.559,
+      "text": "across several different route segments"
+    },
+    {
+      "startSeconds": 16.56,
+      "text": "so you could create a layout in this"
+    },
+    {
+      "startSeconds": 19.32,
+      "text": "dashboard folder and then this layout"
+    },
+    {
+      "startSeconds": 22.039,
+      "text": "here is going to be shared across all"
+    },
+    {
+      "startSeconds": 25,
+      "text": "the different routes and all the"
+    },
+    {
+      "startSeconds": 26.84,
+      "text": "different pages within your dashboard"
+    },
+    {
+      "startSeconds": 29.679,
+      "text": "folder"
+    },
+    {
+      "startSeconds": 30.84,
+      "text": "and how you also have this root layout"
+    },
+    {
+      "startSeconds": 32.64,
+      "text": "to where this root layout is going to be"
+    },
+    {
+      "startSeconds": 34.84,
+      "text": "some UI here that is shared throughout"
+    },
+    {
+      "startSeconds": 37.48,
+      "text": "all of your different pages throughout"
+    },
+    {
+      "startSeconds": 38.879,
+      "text": "your application that's great at all but"
+    },
+    {
+      "startSeconds": 41.2,
+      "text": "nextjs also has this idea of templates"
+    },
+    {
+      "startSeconds": 44.44,
+      "text": "so straight from the nextjs docs here"
+    },
+    {
+      "startSeconds": 46.64,
+      "text": "templates are very similar to layouts"
+    },
+    {
+      "startSeconds": 48.92,
+      "text": "basically the same as layouts to where"
+    },
+    {
+      "startSeconds": 50.64,
+      "text": "they wrap child layouts or pages but"
+    },
+    {
+      "startSeconds": 55.12,
+      "text": "unlike layouts that persist across"
+    },
+    {
+      "startSeconds": 57.199,
+      "text": "routes and maintained State templates"
+    },
+    {
+      "startSeconds": 59.519,
+      "text": "create new instance for each of their"
+    },
+    {
+      "startSeconds": 61.68,
+      "text": "children on navigation meaning when a"
+    },
+    {
+      "startSeconds": 64.799,
+      "text": "user navigates between routes that share"
+    },
+    {
+      "startSeconds": 66.84,
+      "text": "a template a new instance of the child"
+    },
+    {
+      "startSeconds": 69.119,
+      "text": "that's mounted Domin elements created"
+    },
+    {
+      "startSeconds": 71.4,
+      "text": "and state is not preserved in client"
+    },
+    {
+      "startSeconds": 73.6,
+      "text": "components you might specifically want"
+    },
+    {
+      "startSeconds": 75.72,
+      "text": "to use a template instead of a layout"
+    },
+    {
+      "startSeconds": 77.68,
+      "text": "when you want to resynchronize the use"
+    },
+    {
+      "startSeconds": 80.56,
+      "text": "effect on navigation or to reset the"
+    },
+    {
+      "startSeconds": 83,
+      "text": "state of child client components on"
+    },
+    {
+      "startSeconds": 86.04,
+      "text": "navigation and those are really the kind"
+    },
+    {
+      "startSeconds": 88.56,
+      "text": "of core differences there"
+    },
+    {
+      "startSeconds": 90.6,
+      "text": "now a template can be defined the same"
+    },
+    {
+      "startSeconds": 93.159,
+      "text": "way that you kind of would do a layout"
+    },
+    {
+      "startSeconds": 95.119,
+      "text": "you just create a template. JS or TSX"
+    },
+    {
+      "startSeconds": 98.84,
+      "text": "file or jsx file instead of a layout."
+    },
+    {
+      "startSeconds": 102.88,
+      "text": "file so if we look at our application"
+    },
+    {
+      "startSeconds": 105.32,
+      "text": "here let's show you an example of kind"
+    },
+    {
+      "startSeconds": 107.759,
+      "text": "of the actual practical differences of"
+    },
+    {
+      "startSeconds": 110.56,
+      "text": "this in our dashboard layout we render"
+    },
+    {
+      "startSeconds": 113.079,
+      "text": "this nav links component and this is a"
+    },
+    {
+      "startSeconds": 115.52,
+      "text": "client component where you can see use"
+    },
+    {
+      "startSeconds": 117.479,
+      "text": "client here at the top we use this use"
+    },
+    {
+      "startSeconds": 120.24,
+      "text": "path name Hook from react to set"
+    },
+    {
+      "startSeconds": 122.92,
+      "text": "different kind of background colors for"
+    },
+    {
+      "startSeconds": 125.039,
+      "text": "these links then also on Mount here we"
+    },
+    {
+      "startSeconds": 128.479,
+      "text": "console log mounting and then we also"
+    },
+    {
+      "startSeconds": 131.039,
+      "text": "set the active link right here to"
+    },
+    {
+      "startSeconds": 134.72,
+      "text": "whatever the link title is from the path"
+    },
+    {
+      "startSeconds": 137.239,
+      "text": "name so we have this link title State on"
+    },
+    {
+      "startSeconds": 140.64,
+      "text": "Mount we set this little title name here"
+    },
+    {
+      "startSeconds": 143.36,
+      "text": "just for this example to whatever the"
+    },
+    {
+      "startSeconds": 145.599,
+      "text": "end of the path name is so if we come"
+    },
+    {
+      "startSeconds": 147.72,
+      "text": "look at this in our running application"
+    },
+    {
+      "startSeconds": 150.28,
+      "text": "I'm going to open my console like so and"
+    },
+    {
+      "startSeconds": 152.8,
+      "text": "I'm going to clear my console and I'm"
+    },
+    {
+      "startSeconds": 154.48,
+      "text": "going to do a hard refresh of my page of"
+    },
+    {
+      "startSeconds": 156.599,
+      "text": "command shift R and we see it mounted"
+    },
+    {
+      "startSeconds": 160.2,
+      "text": "once and then if I go back and forth"
+    },
+    {
+      "startSeconds": 162.44,
+      "text": "between about and settings here you see"
+    },
+    {
+      "startSeconds": 166.72,
+      "text": "that it's it's not"
+    },
+    {
+      "startSeconds": 169.959,
+      "text": "actually recount logging mounting"
+    },
+    {
+      "startSeconds": 173.08,
+      "text": "because it's not going to remount and"
+    },
+    {
+      "startSeconds": 176.92,
+      "text": "render this naving component with within"
+    },
+    {
+      "startSeconds": 180.36,
+      "text": "my dashboard layout here because it's"
+    },
+    {
+      "startSeconds": 183.48,
+      "text": "just a layout. TSX file so since this"
+    },
+    {
+      "startSeconds": 187.799,
+      "text": "nav links is a child client component"
+    },
+    {
+      "startSeconds": 190.68,
+      "text": "it's not going to remount it on"
+    },
+    {
+      "startSeconds": 192.72,
+      "text": "navigation here but if I change this to"
+    },
+    {
+      "startSeconds": 195.879,
+      "text": "a template. TSX file what you're going"
+    },
+    {
+      "startSeconds": 198.72,
+      "text": "to immediately see here if I come back"
+    },
+    {
+      "startSeconds": 201.12,
+      "text": "to my app I'm going to clear my console"
+    },
+    {
+      "startSeconds": 203.44,
+      "text": "and I'm going to do a hard refresh from"
+    },
+    {
+      "startSeconds": 205.319,
+      "text": "my page you're going to see that I get"
+    },
+    {
+      "startSeconds": 207.68,
+      "text": "the mounting I also see"
+    },
+    {
+      "startSeconds": 210.439,
+      "text": "it sets my active link here to settings"
+    },
+    {
+      "startSeconds": 213.12,
+      "text": "because it's actually remounting this"
+    },
+    {
+      "startSeconds": 215.159,
+      "text": "component and if I shift to about here"
+    },
+    {
+      "startSeconds": 218.239,
+      "text": "it switches my active link to about and"
+    },
+    {
+      "startSeconds": 220.799,
+      "text": "you see it counil log mounting again"
+    },
+    {
+      "startSeconds": 223.519,
+      "text": "settings counil logs mounting again"
+    },
+    {
+      "startSeconds": 226.48,
+      "text": "active link settings about settings"
+    },
+    {
+      "startSeconds": 229.76,
+      "text": "about you can see that it's remounting"
+    },
+    {
+      "startSeconds": 232.56,
+      "text": "this component and it's"
+    },
+    {
+      "startSeconds": 235.239,
+      "text": "recalling the use effect hook here on"
+    },
+    {
+      "startSeconds": 238.439,
+      "text": "Mount so that is one of the kind of core"
+    },
+    {
+      "startSeconds": 241.599,
+      "text": "differences there between a layout and a"
+    },
+    {
+      "startSeconds": 244.04,
+      "text": "template it is going to effectively"
+    },
+    {
+      "startSeconds": 246.72,
+      "text": "remount its children client components"
+    },
+    {
+      "startSeconds": 249.92,
+      "text": "on those navigation events and if I just"
+    },
+    {
+      "startSeconds": 253.079,
+      "text": "go back to switching this from a"
+    },
+    {
+      "startSeconds": 255.48,
+      "text": "template back to a layout here so we can"
+    },
+    {
+      "startSeconds": 257.479,
+      "text": "just see those changes one more time and"
+    },
+    {
+      "startSeconds": 259.639,
+      "text": "then we come back let me clear the"
+    },
+    {
+      "startSeconds": 261.4,
+      "text": "console and now let me start switching"
+    },
+    {
+      "startSeconds": 264.12,
+      "text": "back you see that it just stays at the"
+    },
+    {
+      "startSeconds": 266.8,
+      "text": "active link of about here because it's"
+    },
+    {
+      "startSeconds": 269.479,
+      "text": "not"
+    },
+    {
+      "startSeconds": 270.28,
+      "text": "remounting and it's not updating or"
+    },
+    {
+      "startSeconds": 273.16,
+      "text": "calling that use effect hook on Mount"
+    },
+    {
+      "startSeconds": 276,
+      "text": "because it's just staying mounted the"
+    },
+    {
+      "startSeconds": 278.44,
+      "text": "state is remaining preserved and it's"
+    },
+    {
+      "startSeconds": 281.08,
+      "text": "not Council logging the the mounting"
+    },
+    {
+      "startSeconds": 283.16,
+      "text": "because it's not running this use effect"
+    },
+    {
+      "startSeconds": 285.6,
+      "text": "hook because this component is just"
+    },
+    {
+      "startSeconds": 287.08,
+      "text": "staying mounted when it's rendered"
+    },
+    {
+      "startSeconds": 289.12,
+      "text": "within a layout instead of being"
+    },
+    {
+      "startSeconds": 291.16,
+      "text": "rendered within a template so hopefully"
+    },
+    {
+      "startSeconds": 293.28,
+      "text": "that gives you a good kind of more"
+    },
+    {
+      "startSeconds": 294.919,
+      "text": "practical example of just the little"
+    },
+    {
+      "startSeconds": 298,
+      "text": "subtle differences between lout and"
+    },
+    {
+      "startSeconds": 299.96,
+      "text": "templates in xjs and just to kind of"
+    },
+    {
+      "startSeconds": 301.919,
+      "text": "recap them templates are effectively"
+    },
+    {
+      "startSeconds": 304.4,
+      "text": "layouts in xjs you can use them for"
+    },
+    {
+      "startSeconds": 307.72,
+      "text": "really the same things however for a"
+    },
+    {
+      "startSeconds": 311.84,
+      "text": "template it is going to create a new"
+    },
+    {
+      "startSeconds": 314.24,
+      "text": "instance for each of their children on"
+    },
+    {
+      "startSeconds": 317.28,
+      "text": "navigation which is why are we were just"
+    },
+    {
+      "startSeconds": 319.479,
+      "text": "seeing the behavior that we're just"
+    },
+    {
+      "startSeconds": 321.56,
+      "text": "seeing so for its children it is going"
+    },
+    {
+      "startSeconds": 324.199,
+      "text": "to remount those components recreate"
+    },
+    {
+      "startSeconds": 327.08,
+      "text": "those Dom elements in state is not going"
+    },
+    {
+      "startSeconds": 329.479,
+      "text": "to be preserved and effects are going to"
+    },
+    {
+      "startSeconds": 331.44,
+      "text": "be resynchronized so if you have"
+    },
+    {
+      "startSeconds": 334.12,
+      "text": "children client components where on"
+    },
+    {
+      "startSeconds": 336.08,
+      "text": "navigation you really want them to"
+    },
+    {
+      "startSeconds": 338.479,
+      "text": "resynchronize their effects use a"
+    },
+    {
+      "startSeconds": 341.12,
+      "text": "template also if you want to reset the"
+    },
+    {
+      "startSeconds": 343.52,
+      "text": "state of those client components on"
+    },
+    {
+      "startSeconds": 345.199,
+      "text": "navigation use a template else I'm"
+    },
+    {
+      "startSeconds": 348.52,
+      "text": "probably going to just default to using"
+    },
+    {
+      "startSeconds": 350.36,
+      "text": "a layout but if it's not giving you the"
+    },
+    {
+      "startSeconds": 352.56,
+      "text": "behavior you want and you want to do out"
+    },
+    {
+      "startSeconds": 354.8,
+      "text": "of one of these two things then using a"
+    },
+    {
+      "startSeconds": 356.84,
+      "text": "template might be the solution you go"
+    },
+    {
+      "startSeconds": 358.96,
+      "text": "for so hopefully this video kind of"
+    },
+    {
+      "startSeconds": 361.68,
+      "text": "helps clear up the difference between"
+    },
+    {
+      "startSeconds": 363.16,
+      "text": "templates and layouts next youz it is"
+    },
+    {
+      "startSeconds": 365.88,
+      "text": "pretty subtle but it can be kind of the"
+    },
+    {
+      "startSeconds": 368.319,
+      "text": "solution that you need once you uh are"
+    },
+    {
+      "startSeconds": 371.039,
+      "text": "experiencing an undesirable behavior"
+    },
+    {
+      "startSeconds": 373.72,
+      "text": "when using layouts so thanks for tuning"
+    },
+    {
+      "startSeconds": 376.4,
+      "text": "into this I'll see you in that next one"
+    }
+  ]
 }

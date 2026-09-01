@@ -1,0 +1,2849 @@
+{
+  "id": "gBdyIv9d_O8",
+  "url": "https://www.youtube.com/watch?v=gBdyIv9d_O8",
+  "fetchedAt": "2026-09-01T04:09:49.566Z",
+  "captionKind": "asr",
+  "chapters": [],
+  "cues": [
+    {
+      "startSeconds": 0.04,
+      "text": "hello everyone welcome back to my"
+    },
+    {
+      "startSeconds": 1.48,
+      "text": "channel this is video number five for 10"
+    },
+    {
+      "startSeconds": 3.76,
+      "text": "weeks of cloud Ops and this video is"
+    },
+    {
+      "startSeconds": 6.279,
+      "text": "mainly focused on monitoring logging and"
+    },
+    {
+      "startSeconds": 8.88,
+      "text": "alerting on a kubernetes cluster so the"
+    },
+    {
+      "startSeconds": 12.04,
+      "text": "reason why I'm wearing a Google Cloud"
+    },
+    {
+      "startSeconds": 14.36,
+      "text": "hat is because this project I will be"
+    },
+    {
+      "startSeconds": 16.6,
+      "text": "implementing on gke which is Google"
+    },
+    {
+      "startSeconds": 19.32,
+      "text": "kubernetes engine but even if you are"
+    },
+    {
+      "startSeconds": 21.96,
+      "text": "using AWS or aure do not worry because I"
+    },
+    {
+      "startSeconds": 25.199,
+      "text": "will be using all the open source tools"
+    },
+    {
+      "startSeconds": 27.119,
+      "text": "such as Prometheus grafana and manager"
+    },
+    {
+      "startSeconds": 30.64,
+      "text": "all those and you can follow the same"
+    },
+    {
+      "startSeconds": 33.559,
+      "text": "steps in whatever kubernetes cluster you"
+    },
+    {
+      "startSeconds": 35.76,
+      "text": "are using even your on premises cluster"
+    },
+    {
+      "startSeconds": 38.719,
+      "text": "let me quickly walk you through about"
+    },
+    {
+      "startSeconds": 40.52,
+      "text": "the challenge here is our uh GitHub"
+    },
+    {
+      "startSeconds": 43.12,
+      "text": "repository in which we are uh putting"
+    },
+    {
+      "startSeconds": 46.079,
+      "text": "all the details of all the challenges"
+    },
+    {
+      "startSeconds": 47.84,
+      "text": "and their Solutions as well so if you go"
+    },
+    {
+      "startSeconds": 50.239,
+      "text": "to this particular repository which says"
+    },
+    {
+      "startSeconds": 53.32,
+      "text": "uh the link is over here and I will"
+    },
+    {
+      "startSeconds": 55.16,
+      "text": "paste it in the description section as"
+    },
+    {
+      "startSeconds": 57,
+      "text": "well and then go to the folder where it"
+    },
+    {
+      "startSeconds": 60.16,
+      "text": "says week five inside that the challenge"
+    },
+    {
+      "startSeconds": 63.28,
+      "text": "details are there in the readme file"
+    },
+    {
+      "startSeconds": 65.32,
+      "text": "like you have to set up continuous"
+    },
+    {
+      "startSeconds": 67.759,
+      "text": "monitoring alerting and logging on"
+    },
+    {
+      "startSeconds": 69.52,
+      "text": "kubernetes cluster and uh you know you"
+    },
+    {
+      "startSeconds": 72.4,
+      "text": "can create dashboards you can set up"
+    },
+    {
+      "startSeconds": 74.88,
+      "text": "alerts you can stream your lcks to U you"
+    },
+    {
+      "startSeconds": 77.72,
+      "text": "know a third party logging service such"
+    },
+    {
+      "startSeconds": 80.64,
+      "text": "as uh elastic search logs"
+    },
+    {
+      "startSeconds": 83.119,
+      "text": "Stana and uh here are the deliverables"
+    },
+    {
+      "startSeconds": 86.04,
+      "text": "detail inside the same folder there is"
+    },
+    {
+      "startSeconds": 88.88,
+      "text": "another folder which which is named as"
+    },
+    {
+      "startSeconds": 91.439,
+      "text": "solution and in this folder I have"
+    },
+    {
+      "startSeconds": 93.96,
+      "text": "mentioned all the steps that I have"
+    },
+    {
+      "startSeconds": 95.759,
+      "text": "performed including all the commands"
+    },
+    {
+      "startSeconds": 97.759,
+      "text": "that I have used you know the helm"
+    },
+    {
+      "startSeconds": 99.88,
+      "text": "installation or uh the repositories that"
+    },
+    {
+      "startSeconds": 103.04,
+      "text": "I have used for deploying the sample"
+    },
+    {
+      "startSeconds": 105.52,
+      "text": "application and uh the installation and"
+    },
+    {
+      "startSeconds": 108,
+      "text": "configuration steps of all other tools"
+    },
+    {
+      "startSeconds": 110.439,
+      "text": "so that would be pretty handy um in case"
+    },
+    {
+      "startSeconds": 113.439,
+      "text": "you are following along the video before"
+    },
+    {
+      "startSeconds": 115.439,
+      "text": "we start the video I just wanted to give"
+    },
+    {
+      "startSeconds": 117.399,
+      "text": "a huge shout out to Malik Arjun who"
+    },
+    {
+      "startSeconds": 120.6,
+      "text": "implemented this project excellently"
+    },
+    {
+      "startSeconds": 123.159,
+      "text": "like he created the detailed blog and"
+    },
+    {
+      "startSeconds": 127,
+      "text": "the architectural diagram and included"
+    },
+    {
+      "startSeconds": 129.039,
+      "text": "all the relevant details uh that was"
+    },
+    {
+      "startSeconds": 131.68,
+      "text": "required as part of this challenge so uh"
+    },
+    {
+      "startSeconds": 134.2,
+      "text": "thank you for doing this Malik Arjun and"
+    },
+    {
+      "startSeconds": 136.239,
+      "text": "kudos for the great work if you scroll"
+    },
+    {
+      "startSeconds": 138.4,
+      "text": "down he implemented this in eks so if"
+    },
+    {
+      "startSeconds": 141.519,
+      "text": "you are using AWS feel free to uh refer"
+    },
+    {
+      "startSeconds": 144.56,
+      "text": "this blog as well it was perfectly"
+    },
+    {
+      "startSeconds": 146.72,
+      "text": "written and he mentioned everything in"
+    },
+    {
+      "startSeconds": 149.959,
+      "text": "detail included all the diagrams and"
+    },
+    {
+      "startSeconds": 152.239,
+      "text": "Architectural diagrams wherever required"
+    },
+    {
+      "startSeconds": 155.08,
+      "text": "so um you know um everything is there"
+    },
+    {
+      "startSeconds": 158.239,
+      "text": "have a look again this link will be"
+    },
+    {
+      "startSeconds": 160.76,
+      "text": "there in the description section and I"
+    },
+    {
+      "startSeconds": 163.44,
+      "text": "have tried to explain a few of these"
+    },
+    {
+      "startSeconds": 165.4,
+      "text": "diagrams as well in the video so you"
+    },
+    {
+      "startSeconds": 167.72,
+      "text": "know it's coming up right next without"
+    },
+    {
+      "startSeconds": 169.56,
+      "text": "any further Ado let's start the video"
+    },
+    {
+      "startSeconds": 172.08,
+      "text": "all right uh as part of the first step"
+    },
+    {
+      "startSeconds": 173.8,
+      "text": "I'll be logging into the Google Cloud"
+    },
+    {
+      "startSeconds": 175.4,
+      "text": "console and provisioning the gke cluster"
+    },
+    {
+      "startSeconds": 178.2,
+      "text": "so I already logged in it's console."
+    },
+    {
+      "startSeconds": 181.68,
+      "text": "cloud.google.com"
+    },
+    {
+      "startSeconds": 183.159,
+      "text": "and I'll click on the cloud shell icon"
+    },
+    {
+      "startSeconds": 186.04,
+      "text": "on the right side over here and it will"
+    },
+    {
+      "startSeconds": 188.28,
+      "text": "provision a cloud shell for me so that I"
+    },
+    {
+      "startSeconds": 190.519,
+      "text": "could run the ccloud and Cube C commands"
+    },
+    {
+      "startSeconds": 193.76,
+      "text": "uh directly from here instead of using"
+    },
+    {
+      "startSeconds": 196,
+      "text": "an external client such as py um if you"
+    },
+    {
+      "startSeconds": 199.68,
+      "text": "are using it for the first time it will"
+    },
+    {
+      "startSeconds": 201.239,
+      "text": "take a few seconds maybe to provision"
+    },
+    {
+      "startSeconds": 203.36,
+      "text": "the cloud shell for you um but uh other"
+    },
+    {
+      "startSeconds": 206.44,
+      "text": "than that it will be instantaneous just"
+    },
+    {
+      "startSeconds": 208.64,
+      "text": "like it was for me so I'll just clear"
+    },
+    {
+      "startSeconds": 210.84,
+      "text": "the screen and I'll run the command to"
+    },
+    {
+      "startSeconds": 213.879,
+      "text": "provision the cluster these commands are"
+    },
+    {
+      "startSeconds": 215.879,
+      "text": "already document in the GitHub reposit"
+    },
+    {
+      "startSeconds": 218.159,
+      "text": "that I have shown you just now and I"
+    },
+    {
+      "startSeconds": 220.84,
+      "text": "have copied the command and uh I've have"
+    },
+    {
+      "startSeconds": 222.799,
+      "text": "pasted it over here so it says gcloud"
+    },
+    {
+      "startSeconds": 224.959,
+      "text": "container clusters create auto that"
+    },
+    {
+      "startSeconds": 227.48,
+      "text": "means it's going to be an autopilot"
+    },
+    {
+      "startSeconds": 229.519,
+      "text": "cluster so GK has two type of cluster"
+    },
+    {
+      "startSeconds": 232.28,
+      "text": "one is a standard cluster in which uh"
+    },
+    {
+      "startSeconds": 235.04,
+      "text": "you maintain and manage all the you know"
+    },
+    {
+      "startSeconds": 237.519,
+      "text": "worker nodes and then there is an"
+    },
+    {
+      "startSeconds": 239.76,
+      "text": "autopilot cluster in which worker notes"
+    },
+    {
+      "startSeconds": 242.079,
+      "text": "are also managed by Google cloud and you"
+    },
+    {
+      "startSeconds": 245.079,
+      "text": "are basically only charged for the"
+    },
+    {
+      "startSeconds": 246.599,
+      "text": "workload that is running for you so this"
+    },
+    {
+      "startSeconds": 248.84,
+      "text": "is uh the command create auto and then"
+    },
+    {
+      "startSeconds": 251.68,
+      "text": "the name of the cluster so I have given"
+    },
+    {
+      "startSeconds": 253.64,
+      "text": "it a name as the cloud Ops Community"
+    },
+    {
+      "startSeconds": 256.12,
+      "text": "then release Channel you could choose"
+    },
+    {
+      "startSeconds": 258.04,
+      "text": "either Rapid or stable or the default"
+    },
+    {
+      "startSeconds": 260.16,
+      "text": "Channel and then we have the region I"
+    },
+    {
+      "startSeconds": 262.4,
+      "text": "chose it as a Us East one uh once you"
+    },
+    {
+      "startSeconds": 265,
+      "text": "verify everything is right you hit enter"
+    },
+    {
+      "startSeconds": 267.44,
+      "text": "and it will start provisioning the"
+    },
+    {
+      "startSeconds": 268.96,
+      "text": "cluster for you"
+    },
+    {
+      "startSeconds": 270.199,
+      "text": "it will take around 8 to 10 minutes"
+    },
+    {
+      "startSeconds": 272,
+      "text": "maybe uh so I'm going to pause the video"
+    },
+    {
+      "startSeconds": 273.68,
+      "text": "here and I'll come back once the cluster"
+    },
+    {
+      "startSeconds": 275.8,
+      "text": "is ready and we can go from there all"
+    },
+    {
+      "startSeconds": 278.639,
+      "text": "right so after waiting about 10 minutes"
+    },
+    {
+      "startSeconds": 280.8,
+      "text": "or so my cluster is ready now so this is"
+    },
+    {
+      "startSeconds": 283.039,
+      "text": "the message that it says uh the name is"
+    },
+    {
+      "startSeconds": 286.199,
+      "text": "the cloud Ops Community which is what I"
+    },
+    {
+      "startSeconds": 287.88,
+      "text": "have given and the location the master"
+    },
+    {
+      "startSeconds": 289.96,
+      "text": "version is this which is the uh default"
+    },
+    {
+      "startSeconds": 292.56,
+      "text": "version in the stable Channel and then"
+    },
+    {
+      "startSeconds": 294.96,
+      "text": "uh the default machine type is E2 medium"
+    },
+    {
+      "startSeconds": 297.52,
+      "text": "the node version is same as the control"
+    },
+    {
+      "startSeconds": 299.24,
+      "text": "plane version and there are three notes"
+    },
+    {
+      "startSeconds": 301.08,
+      "text": "running uh which is the default number"
+    },
+    {
+      "startSeconds": 304.32,
+      "text": "and now let's go ahead uh and see our"
+    },
+    {
+      "startSeconds": 307.96,
+      "text": "cluster from the console as well so go"
+    },
+    {
+      "startSeconds": 310.32,
+      "text": "to kubernetes"
+    },
+    {
+      "startSeconds": 311.919,
+      "text": "engine and you know if you scroll down"
+    },
+    {
+      "startSeconds": 315,
+      "text": "you will see the cluster is up and"
+    },
+    {
+      "startSeconds": 316.44,
+      "text": "running number of noes it's not showing"
+    },
+    {
+      "startSeconds": 319.28,
+      "text": "over here because in autopilot cluster"
+    },
+    {
+      "startSeconds": 321.28,
+      "text": "as I've said before worker notes are"
+    },
+    {
+      "startSeconds": 323.96,
+      "text": "also managed by um by Google Cloud"
+    },
+    {
+      "startSeconds": 327.16,
+      "text": "itself so you don't have any access to"
+    },
+    {
+      "startSeconds": 329.08,
+      "text": "the work notes as well so you can just"
+    },
+    {
+      "startSeconds": 331.319,
+      "text": "manage and focus on your workload so if"
+    },
+    {
+      "startSeconds": 334.24,
+      "text": "you do a cube CDL get"
+    },
+    {
+      "startSeconds": 338.88,
+      "text": "notes right so here these two notes Let"
+    },
+    {
+      "startSeconds": 342.759,
+      "text": "me just clear the screen and run it"
+    },
+    {
+      "startSeconds": 344.4,
+      "text": "again here it says uh these two uh nodes"
+    },
+    {
+      "startSeconds": 347.6,
+      "text": "created for you but you wouldn't be able"
+    },
+    {
+      "startSeconds": 349.16,
+      "text": "to SS into that and so on right um so"
+    },
+    {
+      "startSeconds": 352.759,
+      "text": "let's move ahead now that we have our"
+    },
+    {
+      "startSeconds": 354.52,
+      "text": "cluster ready let's move ahead to our"
+    },
+    {
+      "startSeconds": 357.199,
+      "text": "next step which is the helm installation"
+    },
+    {
+      "startSeconds": 359.8,
+      "text": "again I have copied the command from the"
+    },
+    {
+      "startSeconds": 361.72,
+      "text": "same GitHub repository I'll paste it"
+    },
+    {
+      "startSeconds": 363.68,
+      "text": "over here and this will just install"
+    },
+    {
+      "startSeconds": 366.16,
+      "text": "Helm for"
+    },
+    {
+      "startSeconds": 367.56,
+      "text": "you um let's wait and it says it's"
+    },
+    {
+      "startSeconds": 371.599,
+      "text": "installed let's clear the screen and run"
+    },
+    {
+      "startSeconds": 374,
+      "text": "Helm"
+    },
+    {
+      "startSeconds": 376.72,
+      "text": "version okay it says uh this version has"
+    },
+    {
+      "startSeconds": 379.919,
+      "text": "been installed successfully which is"
+    },
+    {
+      "startSeconds": 382.759,
+      "text": "3.13.1 um we are good to proceed further"
+    },
+    {
+      "startSeconds": 385.28,
+      "text": "to the next step which is to deploy uh"
+    },
+    {
+      "startSeconds": 387.84,
+      "text": "Prometheus and grafana so I'll I have"
+    },
+    {
+      "startSeconds": 390.36,
+      "text": "copied the command again the command to"
+    },
+    {
+      "startSeconds": 393.8,
+      "text": "add the because I'll be using the"
+    },
+    {
+      "startSeconds": 395.68,
+      "text": "bitnami chart that was created and uh so"
+    },
+    {
+      "startSeconds": 399.319,
+      "text": "so here is the command to add the repo"
+    },
+    {
+      "startSeconds": 402.639,
+      "text": "so Helm repo add bitnami and then uh you"
+    },
+    {
+      "startSeconds": 405.639,
+      "text": "know name and it's been added to the"
+    },
+    {
+      "startSeconds": 408.039,
+      "text": "repository and now I'll also install the"
+    },
+    {
+      "startSeconds": 410.919,
+      "text": "Prometheus uh which is this command and"
+    },
+    {
+      "startSeconds": 414.24,
+      "text": "it says the chart is bitnami Q"
+    },
+    {
+      "startSeconds": 417.36,
+      "text": "Prometheus um you might not be see"
+    },
+    {
+      "startSeconds": 419.4,
+      "text": "seeing uh entirely over here but it is"
+    },
+    {
+      "startSeconds": 421.479,
+      "text": "there in the repository so you can take"
+    },
+    {
+      "startSeconds": 423.199,
+      "text": "it from there so this particular chart"
+    },
+    {
+      "startSeconds": 425.4,
+      "text": "will have three components one is the"
+    },
+    {
+      "startSeconds": 427.44,
+      "text": "Prometheus operator using which the"
+    },
+    {
+      "startSeconds": 429.319,
+      "text": "Prometheus will be deployed it is a one"
+    },
+    {
+      "startSeconds": 432.12,
+      "text": "of the popular way of deploying the open"
+    },
+    {
+      "startSeconds": 434,
+      "text": "source Prometheus then it will have"
+    },
+    {
+      "startSeconds": 435.919,
+      "text": "alert manager which which takes care of"
+    },
+    {
+      "startSeconds": 438.479,
+      "text": "you know handling and um triggering your"
+    },
+    {
+      "startSeconds": 441.319,
+      "text": "alert to an external system such as"
+    },
+    {
+      "startSeconds": 443.36,
+      "text": "maybe a slack message and then it'll"
+    },
+    {
+      "startSeconds": 445.759,
+      "text": "also have a blackbox operator which lets"
+    },
+    {
+      "startSeconds": 448.44,
+      "text": "you prop to different endpoints for uh"
+    },
+    {
+      "startSeconds": 451.16,
+      "text": "monitoring purpose right so I'll hit"
+    },
+    {
+      "startSeconds": 453.8,
+      "text": "enter to install the Prometheus chart"
+    },
+    {
+      "startSeconds": 456.52,
+      "text": "okay it says no such file or directory"
+    },
+    {
+      "startSeconds": 458.72,
+      "text": "because I haven't cloned the G"
+    },
+    {
+      "startSeconds": 460.4,
+      "text": "repository I forgot to do that so let me"
+    },
+    {
+      "startSeconds": 462.52,
+      "text": "do that first okay so I will clear the"
+    },
+    {
+      "startSeconds": 465.479,
+      "text": "screen and I will uh run this command um"
+    },
+    {
+      "startSeconds": 469.28,
+      "text": "you know to clone the"
+    },
+    {
+      "startSeconds": 471.4,
+      "text": "repository this uh repository is the"
+    },
+    {
+      "startSeconds": 474.199,
+      "text": "default repository provided by Google"
+    },
+    {
+      "startSeconds": 476.24,
+      "text": "Cloud it will have uh the default"
+    },
+    {
+      "startSeconds": 478.479,
+      "text": "application which is is Bank of anthos"
+    },
+    {
+      "startSeconds": 480.44,
+      "text": "and along with that it will have some"
+    },
+    {
+      "startSeconds": 482.039,
+      "text": "configuration file for Prometheus and"
+    },
+    {
+      "startSeconds": 484.12,
+      "text": "alert manager so this is what I'll be"
+    },
+    {
+      "startSeconds": 486.52,
+      "text": "using I'll hit enter to clone the"
+    },
+    {
+      "startSeconds": 489.24,
+      "text": "repository and then CD into the"
+    },
+    {
+      "startSeconds": 492.96,
+      "text": "repository uh I inside the repository"
+    },
+    {
+      "startSeconds": 495.599,
+      "text": "and um inside that uh there is a folder"
+    },
+    {
+      "startSeconds": 498.68,
+      "text": "extras which has that file that uh"
+    },
+    {
+      "startSeconds": 501.56,
+      "text": "Prometheus was looking"
+    },
+    {
+      "startSeconds": 503.44,
+      "text": "for right so I'll clear the screen and"
+    },
+    {
+      "startSeconds": 506,
+      "text": "I'll run the previous command again uh"
+    },
+    {
+      "startSeconds": 509.319,
+      "text": "to install the helm chart of Prometheus"
+    },
+    {
+      "startSeconds": 512.36,
+      "text": "hit enter"
+    },
+    {
+      "startSeconds": 513.839,
+      "text": "now okay so it took like 5 minutes or so"
+    },
+    {
+      "startSeconds": 517.919,
+      "text": "but finally the command was completed"
+    },
+    {
+      "startSeconds": 520.959,
+      "text": "and now it says uh let me scroll a"
+    },
+    {
+      "startSeconds": 523.479,
+      "text": "little up now it says it's been deployed"
+    },
+    {
+      "startSeconds": 526.519,
+      "text": "U this is the Q Prometheus chart with"
+    },
+    {
+      "startSeconds": 529.279,
+      "text": "this version so there are now two ways"
+    },
+    {
+      "startSeconds": 532,
+      "text": "to access the components deployed such"
+    },
+    {
+      "startSeconds": 534.12,
+      "text": "as Prometheus alert manager either you"
+    },
+    {
+      "startSeconds": 537.16,
+      "text": "can convert that into uh service type of"
+    },
+    {
+      "startSeconds": 540.04,
+      "text": "load balancer so that it is accessible"
+    },
+    {
+      "startSeconds": 542.36,
+      "text": "from outside the cluster or you can do"
+    },
+    {
+      "startSeconds": 544.68,
+      "text": "the port forwarding so the commands for"
+    },
+    {
+      "startSeconds": 547.72,
+      "text": "port forwarding are already provided"
+    },
+    {
+      "startSeconds": 549.88,
+      "text": "over here in the example I'll just copy"
+    },
+    {
+      "startSeconds": 552.36,
+      "text": "it from here and we can use it later on"
+    },
+    {
+      "startSeconds": 555,
+      "text": "okay now I'll just clear the screen and"
+    },
+    {
+      "startSeconds": 557.2,
+      "text": "let me check what pods have been"
+    },
+    {
+      "startSeconds": 559.24,
+      "text": "deployed till now so if you do Cube CDL"
+    },
+    {
+      "startSeconds": 562.16,
+      "text": "get pods so we have the Prometheus alert"
+    },
+    {
+      "startSeconds": 566.2,
+      "text": "manager and then we have uh the prome P"
+    },
+    {
+      "startSeconds": 570,
+      "text": "we have we have the blackbox exporter"
+    },
+    {
+      "startSeconds": 573.32,
+      "text": "and then we have the Prometheus operator"
+    },
+    {
+      "startSeconds": 575.72,
+      "text": "and all of them are in running state"
+    },
+    {
+      "startSeconds": 577.92,
+      "text": "which is what we"
+    },
+    {
+      "startSeconds": 579.12,
+      "text": "needed okay so now that our services are"
+    },
+    {
+      "startSeconds": 581.839,
+      "text": "up and running you can run the command"
+    },
+    {
+      "startSeconds": 583.64,
+      "text": "to port forward and access the"
+    },
+    {
+      "startSeconds": 585.279,
+      "text": "Prometheus uh from the port itself so uh"
+    },
+    {
+      "startSeconds": 589.32,
+      "text": "I'll paste the command here uh to do the"
+    },
+    {
+      "startSeconds": 591.8,
+      "text": "port"
+    },
+    {
+      "startSeconds": 593.6,
+      "text": "forwarding hit enter it will basically"
+    },
+    {
+      "startSeconds": 596.56,
+      "text": "expose our Prometheus on Port 9090"
+    },
+    {
+      "startSeconds": 599.64,
+      "text": "um you can open it from here like click"
+    },
+    {
+      "startSeconds": 603.2,
+      "text": "over here of where it says web preview"
+    },
+    {
+      "startSeconds": 606.36,
+      "text": "click over here and then by default the"
+    },
+    {
+      "startSeconds": 608.88,
+      "text": "port number would be 8080 so change it"
+    },
+    {
+      "startSeconds": 611.2,
+      "text": "to 9090 by clicking over here Change"
+    },
+    {
+      "startSeconds": 615.279,
+      "text": "Port enter the new port number 9090 and"
+    },
+    {
+      "startSeconds": 618.959,
+      "text": "hit change and preview and it will open"
+    },
+    {
+      "startSeconds": 621.44,
+      "text": "a new tab with the Prometheus"
+    },
+    {
+      "startSeconds": 624.56,
+      "text": "UI and uh here it is now you can go to"
+    },
+    {
+      "startSeconds": 628,
+      "text": "status and then hit targets and it will"
+    },
+    {
+      "startSeconds": 630.48,
+      "text": "show you all the end points that have"
+    },
+    {
+      "startSeconds": 632.72,
+      "text": "been exposed so this is your alert"
+    },
+    {
+      "startSeconds": 635.279,
+      "text": "manager which is exposed on Port"
+    },
+    {
+      "startSeconds": 637.92,
+      "text": "1993 so this is your Prometheus"
+    },
+    {
+      "startSeconds": 641.24,
+      "text": "operator then we have your um Prometheus"
+    },
+    {
+      "startSeconds": 644.92,
+      "text": "itself which is running on Port 19990 so"
+    },
+    {
+      "startSeconds": 647.32,
+      "text": "it monitors itself as well here is uh"
+    },
+    {
+      "startSeconds": 651.32,
+      "text": "the last scrape duration that means it"
+    },
+    {
+      "startSeconds": 654.399,
+      "text": "checked the end point 2 minutes ago that"
+    },
+    {
+      "startSeconds": 657.04,
+      "text": "it was up and running okay and it says"
+    },
+    {
+      "startSeconds": 659.8,
+      "text": "the status has up and everything is"
+    },
+    {
+      "startSeconds": 661.88,
+      "text": "green that means it is able to reach the"
+    },
+    {
+      "startSeconds": 663.92,
+      "text": "endo and there are no reported errors so"
+    },
+    {
+      "startSeconds": 667.279,
+      "text": "far right and if you click on alerts"
+    },
+    {
+      "startSeconds": 670.079,
+      "text": "currently we haven't configured the"
+    },
+    {
+      "startSeconds": 671.56,
+      "text": "alerts here but it's not been fired yet"
+    },
+    {
+      "startSeconds": 673.48,
+      "text": "so that is why this field is also blank"
+    },
+    {
+      "startSeconds": 675.6,
+      "text": "we'll see that uh in in few minutes then"
+    },
+    {
+      "startSeconds": 679.12,
+      "text": "if you click on status and click on"
+    },
+    {
+      "startSeconds": 681.279,
+      "text": "configuration here is all your"
+    },
+    {
+      "startSeconds": 683.16,
+      "text": "configuration which is also mentioned in"
+    },
+    {
+      "startSeconds": 685.56,
+      "text": "the in the yaml file uh that we"
+    },
+    {
+      "startSeconds": 687.76,
+      "text": "downloaded from the GitHub repository"
+    },
+    {
+      "startSeconds": 689.56,
+      "text": "you can check that as well so if you see"
+    },
+    {
+      "startSeconds": 692.32,
+      "text": "over here the scrape interval is 30"
+    },
+    {
+      "startSeconds": 693.959,
+      "text": "seconds that means it will check after"
+    },
+    {
+      "startSeconds": 695.959,
+      "text": "every 30 seconds the reason why our"
+    },
+    {
+      "startSeconds": 699.44,
+      "text": "scrape interval why it was showing as 2"
+    },
+    {
+      "startSeconds": 702.24,
+      "text": "minutes ago because there is some time"
+    },
+    {
+      "startSeconds": 703.88,
+      "text": "difference between my machine and the"
+    },
+    {
+      "startSeconds": 706.68,
+      "text": "server itself so it's not able to sync"
+    },
+    {
+      "startSeconds": 709.92,
+      "text": "it properly but uh for you it should be"
+    },
+    {
+      "startSeconds": 713.279,
+      "text": "able to scrape the Matrix after every 30"
+    },
+    {
+      "startSeconds": 716,
+      "text": "seconds and scrape will time out in 10s"
+    },
+    {
+      "startSeconds": 719.04,
+      "text": "seconds if it doesn't get the response"
+    },
+    {
+      "startSeconds": 721,
+      "text": "from the endpoint and the evaluation"
+    },
+    {
+      "startSeconds": 723.839,
+      "text": "interview is 30 seconds that means it"
+    },
+    {
+      "startSeconds": 726.36,
+      "text": "will keep evaluating for 30 seconds and"
+    },
+    {
+      "startSeconds": 729,
+      "text": "then there are different fields such as"
+    },
+    {
+      "startSeconds": 730.72,
+      "text": "alerting configuration and uh all other"
+    },
+    {
+      "startSeconds": 733.48,
+      "text": "things so feel free to have a look at"
+    },
+    {
+      "startSeconds": 735.44,
+      "text": "that there is Hell lot of details right"
+    },
+    {
+      "startSeconds": 739.839,
+      "text": "um what else um here are your rules if"
+    },
+    {
+      "startSeconds": 743.16,
+      "text": "you click on rules currently we haven't"
+    },
+    {
+      "startSeconds": 744.92,
+      "text": "configured it yet but we will be doing"
+    },
+    {
+      "startSeconds": 746.8,
+      "text": "it shortly so that's why it's blank"
+    },
+    {
+      "startSeconds": 749.68,
+      "text": "and then your service Discovery again"
+    },
+    {
+      "startSeconds": 751.8,
+      "text": "this is U A collapsed view of the end"
+    },
+    {
+      "startSeconds": 754.8,
+      "text": "points that we have just seen in the"
+    },
+    {
+      "startSeconds": 756.48,
+      "text": "targets so it says one of one active"
+    },
+    {
+      "startSeconds": 759.16,
+      "text": "targets for uh you know each of"
+    },
+    {
+      "startSeconds": 762.12,
+      "text": "those and um yeah you can Define more"
+    },
+    {
+      "startSeconds": 764.76,
+      "text": "targets as you wish and you can run all"
+    },
+    {
+      "startSeconds": 767.399,
+      "text": "your Prometheus query over here so for"
+    },
+    {
+      "startSeconds": 770.399,
+      "text": "example up uh this will show you you"
+    },
+    {
+      "startSeconds": 774.279,
+      "text": "know click on execute and this will show"
+    },
+    {
+      "startSeconds": 776.24,
+      "text": "you your targets that are up the there"
+    },
+    {
+      "startSeconds": 779,
+      "text": "are different um type of metrics in"
+    },
+    {
+      "startSeconds": 781.72,
+      "text": "Prometheus query language like we have"
+    },
+    {
+      "startSeconds": 783.72,
+      "text": "counter we have gauge so for example"
+    },
+    {
+      "startSeconds": 786.44,
+      "text": "Prometheus HTTP request total so if you"
+    },
+    {
+      "startSeconds": 788.92,
+      "text": "click over there click on execute it"
+    },
+    {
+      "startSeconds": 791.199,
+      "text": "will show you all the HTTP request and"
+    },
+    {
+      "startSeconds": 793.76,
+      "text": "the you know response yl of it so I'll"
+    },
+    {
+      "startSeconds": 798.12,
+      "text": "go back and I'll proceed further with"
+    },
+    {
+      "startSeconds": 800.92,
+      "text": "the installation so our Prometheus is"
+    },
+    {
+      "startSeconds": 802.92,
+      "text": "now being installed okay now I'll go"
+    },
+    {
+      "startSeconds": 805.48,
+      "text": "ahead and uh install grafana which is"
+    },
+    {
+      "startSeconds": 808.6,
+      "text": "which which is what we will use for the"
+    },
+    {
+      "startSeconds": 810.92,
+      "text": "visualization so I'll uh cancel this"
+    },
+    {
+      "startSeconds": 813.399,
+      "text": "command clear the screen and run the"
+    },
+    {
+      "startSeconds": 816,
+      "text": "commands to add the grafana helm chart"
+    },
+    {
+      "startSeconds": 819.44,
+      "text": "to the repository I'll update the uh"
+    },
+    {
+      "startSeconds": 822.519,
+      "text": "repo once Helm repo update and then I'll"
+    },
+    {
+      "startSeconds": 825.56,
+      "text": "install the helm using this command okay"
+    },
+    {
+      "startSeconds": 828.639,
+      "text": "it's been installed and it says"
+    },
+    {
+      "startSeconds": 833.079,
+      "text": "the um password would be over here"
+    },
+    {
+      "startSeconds": 836.199,
+      "text": "somewhere if you scroll up uh the the"
+    },
+    {
+      "startSeconds": 838.959,
+      "text": "username is admin and the password you"
+    },
+    {
+      "startSeconds": 842.04,
+      "text": "will get it by running this command so"
+    },
+    {
+      "startSeconds": 844,
+      "text": "I'll copy the command from"
+    },
+    {
+      "startSeconds": 846.959,
+      "text": "here okay I'll clear the screen one more"
+    },
+    {
+      "startSeconds": 849.759,
+      "text": "time I'll paste this hit enter and this"
+    },
+    {
+      "startSeconds": 853.759,
+      "text": "is my uh grafana default password so let"
+    },
+    {
+      "startSeconds": 856.88,
+      "text": "me just copy it somewhere uh now for"
+    },
+    {
+      "startSeconds": 859.92,
+      "text": "grafana as well we'll do the same thing"
+    },
+    {
+      "startSeconds": 861.519,
+      "text": "to access the UI we'll uh do the port"
+    },
+    {
+      "startSeconds": 864.16,
+      "text": "forwarding uh let's see if uh the poorts"
+    },
+    {
+      "startSeconds": 867.16,
+      "text": "have been deployed correctly or not Cube"
+    },
+    {
+      "startSeconds": 870.04,
+      "text": "CTL get"
+    },
+    {
+      "startSeconds": 871.399,
+      "text": "pods"
+    },
+    {
+      "startSeconds": 873.04,
+      "text": "and I don't see any grafana pod okay"
+    },
+    {
+      "startSeconds": 876.839,
+      "text": "it's uh still coming up it's uh in"
+    },
+    {
+      "startSeconds": 879.199,
+      "text": "pending"
+    },
+    {
+      "startSeconds": 881.32,
+      "text": "State okay it's container creating now"
+    },
+    {
+      "startSeconds": 884.279,
+      "text": "let's wait for a few more"
+    },
+    {
+      "startSeconds": 886.959,
+      "text": "seconds o"
+    },
+    {
+      "startSeconds": 889,
+      "text": "CTL get parts Hy watch now that uh we"
+    },
+    {
+      "startSeconds": 893.8,
+      "text": "have seen how port forwarding Works uh"
+    },
+    {
+      "startSeconds": 896.44,
+      "text": "which is the right way of doing it"
+    },
+    {
+      "startSeconds": 898.079,
+      "text": "because you know in the production"
+    },
+    {
+      "startSeconds": 899.759,
+      "text": "system we wouldn't want to expose the"
+    },
+    {
+      "startSeconds": 901.839,
+      "text": "services externally like especially"
+    },
+    {
+      "startSeconds": 904.56,
+      "text": "these Services Prometheus grafana and so"
+    },
+    {
+      "startSeconds": 906.92,
+      "text": "on but for this demo purpose let me try"
+    },
+    {
+      "startSeconds": 909.839,
+      "text": "to um change the service type to load"
+    },
+    {
+      "startSeconds": 912.68,
+      "text": "balancer so that it'll be easier for us"
+    },
+    {
+      "startSeconds": 914.68,
+      "text": "to you know go through the demo so let"
+    },
+    {
+      "startSeconds": 916.759,
+      "text": "me clear the screen and uh let me do"
+    },
+    {
+      "startSeconds": 919.519,
+      "text": "Cube CDL get SVC first we'll do it for"
+    },
+    {
+      "startSeconds": 923.639,
+      "text": "Prometheus so the way to do it"
+    },
+    {
+      "startSeconds": 926.56,
+      "text": "is uh let's locate the myia service"
+    },
+    {
+      "startSeconds": 929.6,
+      "text": "which is over"
+    },
+    {
+      "startSeconds": 931.04,
+      "text": "here right so let's do a cube CTL edit"
+    },
+    {
+      "startSeconds": 936,
+      "text": "and the name of the service SVC hyphen"
+    },
+    {
+      "startSeconds": 939.16,
+      "text": "name of the service SVC slash name of"
+    },
+    {
+      "startSeconds": 942.12,
+      "text": "the service and hit enter um let's go"
+    },
+    {
+      "startSeconds": 945.759,
+      "text": "down and change the cluster IP to load"
+    },
+    {
+      "startSeconds": 948.56,
+      "text": "balancer L is uppercase and then B is"
+    },
+    {
+      "startSeconds": 952.16,
+      "text": "also upper case load balancer then save"
+    },
+    {
+      "startSeconds": 955.44,
+      "text": "the"
+    },
+    {
+      "startSeconds": 957.279,
+      "text": "file and you do that and do get SVC"
+    },
+    {
+      "startSeconds": 960.759,
+      "text": "again now you will see the service type"
+    },
+    {
+      "startSeconds": 963.12,
+      "text": "has been changed to load balancer and"
+    },
+    {
+      "startSeconds": 965.959,
+      "text": "this will also assign an external IP to"
+    },
+    {
+      "startSeconds": 968.6,
+      "text": "it or an external uh DNS through which"
+    },
+    {
+      "startSeconds": 971.56,
+      "text": "we can access the Prometheus UI let's do"
+    },
+    {
+      "startSeconds": 974.279,
+      "text": "the same for um grafana as well which is"
+    },
+    {
+      "startSeconds": 977.8,
+      "text": "over here my release"
+    },
+    {
+      "startSeconds": 979.959,
+      "text": "grafana Cube CTL edit"
+    },
+    {
+      "startSeconds": 986.279,
+      "text": "SVC gra and then go to end of the file"
+    },
+    {
+      "startSeconds": 991.12,
+      "text": "change the cluster IP"
+    },
+    {
+      "startSeconds": 993.16,
+      "text": "to load"
+    },
+    {
+      "startSeconds": 995.53,
+      "text": "[Music]"
+    },
+    {
+      "startSeconds": 997.72,
+      "text": "balancer save it and we'll do the same"
+    },
+    {
+      "startSeconds": 1000.56,
+      "text": "for alert manager as"
+    },
+    {
+      "startSeconds": 1002.92,
+      "text": "well C CTL edit"
+    },
+    {
+      "startSeconds": 1007,
+      "text": "SVC and this is alert"
+    },
+    {
+      "startSeconds": 1012.36,
+      "text": "manager go"
+    },
+    {
+      "startSeconds": 1017.48,
+      "text": "down"
+    },
+    {
+      "startSeconds": 1023.36,
+      "text": "okay now do get service again and"
+    },
+    {
+      "startSeconds": 1028.439,
+      "text": "umal IP is still showing a spending for"
+    },
+    {
+      "startSeconds": 1031.199,
+      "text": "two of those but"
+    },
+    {
+      "startSeconds": 1032.799,
+      "text": "for Prometheus we still uh we see the"
+    },
+    {
+      "startSeconds": 1036.679,
+      "text": "Prometheus has got the external IP so"
+    },
+    {
+      "startSeconds": 1039.88,
+      "text": "I'll copy the IP from here open a new"
+    },
+    {
+      "startSeconds": 1043,
+      "text": "tab and check out Port"
+    },
+    {
+      "startSeconds": 1047.4,
+      "text": "9090 right our Prometheus is accessible"
+    },
+    {
+      "startSeconds": 1050.48,
+      "text": "now we don't have to do the port"
+    },
+    {
+      "startSeconds": 1051.84,
+      "text": "forwarding anymore and this will be"
+    },
+    {
+      "startSeconds": 1053.919,
+      "text": "accessible over this URL the same way"
+    },
+    {
+      "startSeconds": 1056.76,
+      "text": "let's see if it"
+    },
+    {
+      "startSeconds": 1058.919,
+      "text": "assigns the IP for other services yes it"
+    },
+    {
+      "startSeconds": 1061.96,
+      "text": "did now so let's open the grafana from"
+    },
+    {
+      "startSeconds": 1064.88,
+      "text": "here external IP code for grafana was 80"
+    },
+    {
+      "startSeconds": 1068.559,
+      "text": "I"
+    },
+    {
+      "startSeconds": 1069.559,
+      "text": "believe yep so grafana UI is also been"
+    },
+    {
+      "startSeconds": 1073.16,
+      "text": "presented over here we copied the"
+    },
+    {
+      "startSeconds": 1075.24,
+      "text": "password from one of the step when we"
+    },
+    {
+      "startSeconds": 1076.88,
+      "text": "did the grafana installation"
+    },
+    {
+      "startSeconds": 1079,
+      "text": "username was admin and password was the"
+    },
+    {
+      "startSeconds": 1081.76,
+      "text": "one that we copied uh and login"
+    },
+    {
+      "startSeconds": 1085.28,
+      "text": "now and um here is the grafana UI for"
+    },
+    {
+      "startSeconds": 1088.72,
+      "text": "the first time now we need to add the"
+    },
+    {
+      "startSeconds": 1090.799,
+      "text": "data source from which the grafana will"
+    },
+    {
+      "startSeconds": 1093.2,
+      "text": "get the data from so hit on data"
+    },
+    {
+      "startSeconds": 1097.039,
+      "text": "sources add data source as"
+    },
+    {
+      "startSeconds": 1100.559,
+      "text": "Prometheus right and provide the"
+    },
+    {
+      "startSeconds": 1102.72,
+      "text": "Prometheus details over here so let's uh"
+    },
+    {
+      "startSeconds": 1105.6,
+      "text": "take the IP and URL from here"
+    },
+    {
+      "startSeconds": 1110.84,
+      "text": "Promethea server"
+    },
+    {
+      "startSeconds": 1114.32,
+      "text": "URI okay and uh let's keep everything as"
+    },
+    {
+      "startSeconds": 1121.24,
+      "text": "default and hit save and"
+    },
+    {
+      "startSeconds": 1124.28,
+      "text": "test okay it says successfully queried"
+    },
+    {
+      "startSeconds": 1127.52,
+      "text": "uh the Prometheus API so let's go back"
+    },
+    {
+      "startSeconds": 1131.12,
+      "text": "to"
+    },
+    {
+      "startSeconds": 1132.84,
+      "text": "homepage and we have added the first"
+    },
+    {
+      "startSeconds": 1135.96,
+      "text": "data source now we can start adding"
+    },
+    {
+      "startSeconds": 1137.919,
+      "text": "dashboard Bood from here U before that"
+    },
+    {
+      "startSeconds": 1140.919,
+      "text": "let me show you few more things we need"
+    },
+    {
+      "startSeconds": 1143.08,
+      "text": "to do some uh some more steps so I'll go"
+    },
+    {
+      "startSeconds": 1145.52,
+      "text": "back now the sample application that we"
+    },
+    {
+      "startSeconds": 1148.32,
+      "text": "have cloned uh which is Bank of anthos"
+    },
+    {
+      "startSeconds": 1150.799,
+      "text": "we will deploy that now uh we are in the"
+    },
+    {
+      "startSeconds": 1153.08,
+      "text": "same directory and I have copied uh the"
+    },
+    {
+      "startSeconds": 1156.24,
+      "text": "command to run the Manifest is this I'll"
+    },
+    {
+      "startSeconds": 1161.24,
+      "text": "hit enter it created a secret which is"
+    },
+    {
+      "startSeconds": 1163.4,
+      "text": "the prerequisite of that application and"
+    },
+    {
+      "startSeconds": 1165.919,
+      "text": "then I will apply the Manifest which is"
+    },
+    {
+      "startSeconds": 1168.559,
+      "text": "uh this command CU CD will apply hyphen"
+    },
+    {
+      "startSeconds": 1171,
+      "text": "have cuber net is"
+    },
+    {
+      "startSeconds": 1172.799,
+      "text": "Manifest and it will apply all the"
+    },
+    {
+      "startSeconds": 1174.96,
+      "text": "Manifest uh given in that folder and it"
+    },
+    {
+      "startSeconds": 1178.4,
+      "text": "created a lot of things it basically"
+    },
+    {
+      "startSeconds": 1180.28,
+      "text": "created uh the entire application for us"
+    },
+    {
+      "startSeconds": 1182.96,
+      "text": "to use so let's see Cube CTL get"
+    },
+    {
+      "startSeconds": 1188.44,
+      "text": "pods okay still coming up um yeah let's"
+    },
+    {
+      "startSeconds": 1192.52,
+      "text": "let's wait for few more seconds"
+    },
+    {
+      "startSeconds": 1196.679,
+      "text": "maybe now let's see see if our apps are"
+    },
+    {
+      "startSeconds": 1199.159,
+      "text": "running or not so I'll do the get pods"
+    },
+    {
+      "startSeconds": 1201.72,
+      "text": "again and I see everything is running"
+    },
+    {
+      "startSeconds": 1204.36,
+      "text": "now we don't have any issues let's go"
+    },
+    {
+      "startSeconds": 1206.799,
+      "text": "ahead and configure the slack so that we"
+    },
+    {
+      "startSeconds": 1208.72,
+      "text": "can test and uh trigger the notification"
+    },
+    {
+      "startSeconds": 1211.28,
+      "text": "based on alerts so I'll go to api."
+    },
+    {
+      "startSeconds": 1214.72,
+      "text": "slack.com"
+    },
+    {
+      "startSeconds": 1216.6,
+      "text": "and uh click over here which says create"
+    },
+    {
+      "startSeconds": 1219.4,
+      "text": "an app and uh click over here from"
+    },
+    {
+      "startSeconds": 1223.039,
+      "text": "scratch now give this app a name let's"
+    },
+    {
+      "startSeconds": 1226.32,
+      "text": "call it alert pick a workspace so I'll"
+    },
+    {
+      "startSeconds": 1230.36,
+      "text": "pick the workspace that I have created"
+    },
+    {
+      "startSeconds": 1232.44,
+      "text": "just for this demo"
+    },
+    {
+      "startSeconds": 1234.679,
+      "text": "purpose and hit create app now um inside"
+    },
+    {
+      "startSeconds": 1239.64,
+      "text": "this add functionality and feature click"
+    },
+    {
+      "startSeconds": 1242.44,
+      "text": "over incoming web hooks because we will"
+    },
+    {
+      "startSeconds": 1244.72,
+      "text": "be configuring the web hook okay now"
+    },
+    {
+      "startSeconds": 1247.24,
+      "text": "activate it now scroll down and where it"
+    },
+    {
+      "startSeconds": 1250.24,
+      "text": "says add new web hook to the workpace"
+    },
+    {
+      "startSeconds": 1252.44,
+      "text": "click over"
+    },
+    {
+      "startSeconds": 1255.039,
+      "text": "here and allow the permission"
+    },
+    {
+      "startSeconds": 1259.44,
+      "text": "for a particular Channel let's see um I"
+    },
+    {
+      "startSeconds": 1262.64,
+      "text": "would want uh to publish the"
+    },
+    {
+      "startSeconds": 1264.48,
+      "text": "notification in this particular Channel"
+    },
+    {
+      "startSeconds": 1266.88,
+      "text": "10 weeks of cloud Ops I'll select that"
+    },
+    {
+      "startSeconds": 1269.08,
+      "text": "and click allow um and then uh basically"
+    },
+    {
+      "startSeconds": 1273.2,
+      "text": "I'll copy the web hook URL from here"
+    },
+    {
+      "startSeconds": 1277.279,
+      "text": "this is what we need to configure uh"
+    },
+    {
+      "startSeconds": 1279.64,
+      "text": "from there let's let's take it back I'll"
+    },
+    {
+      "startSeconds": 1281.84,
+      "text": "just uh make a copy of it so we will be"
+    },
+    {
+      "startSeconds": 1284.96,
+      "text": "creating a secret for alert manager let"
+    },
+    {
+      "startSeconds": 1287.279,
+      "text": "me clear the screen and I'll paste the"
+    },
+    {
+      "startSeconds": 1290.4,
+      "text": "command over here is Cube C create"
+    },
+    {
+      "startSeconds": 1293.32,
+      "text": "secret generate alert manager slack web"
+    },
+    {
+      "startSeconds": 1295.52,
+      "text": "hook and we have to provide our web hook"
+    },
+    {
+      "startSeconds": 1298.039,
+      "text": "URL over here that we have just copied"
+    },
+    {
+      "startSeconds": 1300.919,
+      "text": "so from here I'll copy this and I'll"
+    },
+    {
+      "startSeconds": 1303.84,
+      "text": "paste this here right and hit"
+    },
+    {
+      "startSeconds": 1307.36,
+      "text": "enter this is done now apply the alert"
+    },
+    {
+      "startSeconds": 1310.84,
+      "text": "manager config to configure the alert"
+    },
+    {
+      "startSeconds": 1313.2,
+      "text": "rules for us so paste it over"
+    },
+    {
+      "startSeconds": 1316.52,
+      "text": "here and it says say it's been created"
+    },
+    {
+      "startSeconds": 1319.88,
+      "text": "now we will set up the props on which"
+    },
+    {
+      "startSeconds": 1322.84,
+      "text": "Prometheus will uh look into and uh the"
+    },
+    {
+      "startSeconds": 1326.08,
+      "text": "alert manager configs as well so I'll"
+    },
+    {
+      "startSeconds": 1329.52,
+      "text": "apply these two manifest as well which"
+    },
+    {
+      "startSeconds": 1331.84,
+      "text": "is a prop for every single application"
+    },
+    {
+      "startSeconds": 1334.919,
+      "text": "that we have and then we have for alert"
+    },
+    {
+      "startSeconds": 1337.919,
+      "text": "rules as"
+    },
+    {
+      "startSeconds": 1339.44,
+      "text": "well okay it's been created now let's go"
+    },
+    {
+      "startSeconds": 1342.84,
+      "text": "back and see if we see any difference"
+    },
+    {
+      "startSeconds": 1345.08,
+      "text": "now um from this is pretty pretty much"
+    },
+    {
+      "startSeconds": 1348.4,
+      "text": "the same number and if you go to alerts"
+    },
+    {
+      "startSeconds": 1351.84,
+      "text": "now it says uh it configured the alert"
+    },
+    {
+      "startSeconds": 1354.6,
+      "text": "for all of the application that means"
+    },
+    {
+      "startSeconds": 1357.44,
+      "text": "you know uh it is showing over here but"
+    },
+    {
+      "startSeconds": 1359.559,
+      "text": "it is not been triggered that is why it"
+    },
+    {
+      "startSeconds": 1361.44,
+      "text": "is showing as green now what we can do"
+    },
+    {
+      "startSeconds": 1364.48,
+      "text": "is we can try to simulate an failure by"
+    },
+    {
+      "startSeconds": 1367.559,
+      "text": "uh scaling down an"
+    },
+    {
+      "startSeconds": 1369.159,
+      "text": "application so let's pick uh this"
+    },
+    {
+      "startSeconds": 1372.12,
+      "text": "particular application we'll scale this"
+    },
+    {
+      "startSeconds": 1374.24,
+      "text": "one down contacts right so"
+    },
+    {
+      "startSeconds": 1378.52,
+      "text": "clear the screen Cube CTL scale"
+    },
+    {
+      "startSeconds": 1382.279,
+      "text": "deployment"
+    },
+    {
+      "startSeconds": 1384.36,
+      "text": "contacts hyphen hyphen replicas"
+    },
+    {
+      "startSeconds": 1388.72,
+      "text": "zero so it triggered the scale down"
+    },
+    {
+      "startSeconds": 1392.279,
+      "text": "let's wait for a few seconds now there"
+    },
+    {
+      "startSeconds": 1395.08,
+      "text": "should be an alert and there should be a"
+    },
+    {
+      "startSeconds": 1396.84,
+      "text": "slack notification because this is what"
+    },
+    {
+      "startSeconds": 1398.96,
+      "text": "we have configured okay uh after a few"
+    },
+    {
+      "startSeconds": 1402.44,
+      "text": "seconds uh now this is showing as"
+    },
+    {
+      "startSeconds": 1405.72,
+      "text": "Amber um the state is pending"
+    },
+    {
+      "startSeconds": 1408.6,
+      "text": "but it says over here in the prop says"
+    },
+    {
+      "startSeconds": 1411.279,
+      "text": "if the contact application status is"
+    },
+    {
+      "startSeconds": 1414,
+      "text": "zero that means unreachable for 1 minute"
+    },
+    {
+      "startSeconds": 1417.24,
+      "text": "or you know show this as a warning"
+    },
+    {
+      "startSeconds": 1419.24,
+      "text": "message so this is what it is doing but"
+    },
+    {
+      "startSeconds": 1421.96,
+      "text": "if we scale it up it this should be"
+    },
+    {
+      "startSeconds": 1424.919,
+      "text": "resolved but let's see if it triggered"
+    },
+    {
+      "startSeconds": 1426.64,
+      "text": "the notification or not if we go back to"
+    },
+    {
+      "startSeconds": 1429.159,
+      "text": "our slack Channel it did not trigger the"
+    },
+    {
+      "startSeconds": 1431.4,
+      "text": "notification yet maybe because it is"
+    },
+    {
+      "startSeconds": 1434.039,
+      "text": "still um evaluating itate is pending"
+    },
+    {
+      "startSeconds": 1437.039,
+      "text": "let's see if it is firing or not should"
+    },
+    {
+      "startSeconds": 1440.96,
+      "text": "be firing I believe okay now it shows as"
+    },
+    {
+      "startSeconds": 1443.72,
+      "text": "red that means the alert is"
+    },
+    {
+      "startSeconds": 1446.52,
+      "text": "firing and the application is not"
+    },
+    {
+      "startSeconds": 1449,
+      "text": "reachable let's go to our okay so we"
+    },
+    {
+      "startSeconds": 1452.08,
+      "text": "have got the alert now which says uh"
+    },
+    {
+      "startSeconds": 1455.12,
+      "text": "this is firing check contact spots and"
+    },
+    {
+      "startSeconds": 1458.039,
+      "text": "its logs and services and available now"
+    },
+    {
+      "startSeconds": 1460.48,
+      "text": "to resolve this what we can do is we can"
+    },
+    {
+      "startSeconds": 1463.36,
+      "text": "scale this back to one"
+    },
+    {
+      "startSeconds": 1466.799,
+      "text": "replica okay now let's wait"
+    },
+    {
+      "startSeconds": 1470.52,
+      "text": "again but you don't have to let me wait"
+    },
+    {
+      "startSeconds": 1473.2,
+      "text": "and I'll just pause it okay so after"
+    },
+    {
+      "startSeconds": 1475.32,
+      "text": "some time so this is now green again the"
+    },
+    {
+      "startSeconds": 1478.84,
+      "text": "alert has been resolved that is why uh"
+    },
+    {
+      "startSeconds": 1481.52,
+      "text": "the status has been changed and let's go"
+    },
+    {
+      "startSeconds": 1483.36,
+      "text": "back to our slack uh"
+    },
+    {
+      "startSeconds": 1486.399,
+      "text": "workplace okay so here it is we have now"
+    },
+    {
+      "startSeconds": 1489.559,
+      "text": "received the resolved alert as well now"
+    },
+    {
+      "startSeconds": 1492,
+      "text": "that the alert has been resolved we have"
+    },
+    {
+      "startSeconds": 1494.039,
+      "text": "scaled the application back to its"
+    },
+    {
+      "startSeconds": 1495.799,
+      "text": "original"
+    },
+    {
+      "startSeconds": 1496.76,
+      "text": "state um okay so uh this is what we"
+    },
+    {
+      "startSeconds": 1500.559,
+      "text": "wanted to test now let's move ahead"
+    },
+    {
+      "startSeconds": 1503.24,
+      "text": "before moving forward let's quickly see"
+    },
+    {
+      "startSeconds": 1505.039,
+      "text": "what's been done so far so we have our"
+    },
+    {
+      "startSeconds": 1507.64,
+      "text": "Promethea servers deployed along with"
+    },
+    {
+      "startSeconds": 1510.279,
+      "text": "the grafana alert"
+    },
+    {
+      "startSeconds": 1512.52,
+      "text": "manager and blackbox operator so these"
+    },
+    {
+      "startSeconds": 1516.36,
+      "text": "were the components that we have"
+    },
+    {
+      "startSeconds": 1517.799,
+      "text": "deployed so how it works is Prometheus"
+    },
+    {
+      "startSeconds": 1520.72,
+      "text": "server pull the Matrix from our"
+    },
+    {
+      "startSeconds": 1522.6,
+      "text": "applications with the help of node"
+    },
+    {
+      "startSeconds": 1524.6,
+      "text": "exporter basically node exporter or"
+    },
+    {
+      "startSeconds": 1526.559,
+      "text": "blackbox operator"
+    },
+    {
+      "startSeconds": 1528.279,
+      "text": "these are the third party services that"
+    },
+    {
+      "startSeconds": 1530.6,
+      "text": "helps exporting the node level metric"
+    },
+    {
+      "startSeconds": 1533.159,
+      "text": "CPU memory displace utilization and so"
+    },
+    {
+      "startSeconds": 1535.6,
+      "text": "on so these type of metrics are then"
+    },
+    {
+      "startSeconds": 1537.679,
+      "text": "pulled by the Promethea server and those"
+    },
+    {
+      "startSeconds": 1540.799,
+      "text": "metrics are stored in its local storage"
+    },
+    {
+      "startSeconds": 1543.08,
+      "text": "this is a tsdb database you know tsdb"
+    },
+    {
+      "startSeconds": 1547.36,
+      "text": "stands for time series database in which"
+    },
+    {
+      "startSeconds": 1549.559,
+      "text": "all the information are stored in Time"
+    },
+    {
+      "startSeconds": 1552.6,
+      "text": "series right um then uh you can also"
+    },
+    {
+      "startSeconds": 1555.84,
+      "text": "find Target with the help of service"
+    },
+    {
+      "startSeconds": 1557.919,
+      "text": "discovery which is what we have seen as"
+    },
+    {
+      "startSeconds": 1559.76,
+      "text": "well and based on the metrics or based"
+    },
+    {
+      "startSeconds": 1562.559,
+      "text": "on the alert rules that we have"
+    },
+    {
+      "startSeconds": 1564.279,
+      "text": "configured it then pushes the alert with"
+    },
+    {
+      "startSeconds": 1566.96,
+      "text": "the help of alert manager so you can um"
+    },
+    {
+      "startSeconds": 1570.48,
+      "text": "pushes uh email notification uh or any"
+    },
+    {
+      "startSeconds": 1573.88,
+      "text": "third party service such as Ops Genie"
+    },
+    {
+      "startSeconds": 1576.159,
+      "text": "pager Duty or in our case we have used"
+    },
+    {
+      "startSeconds": 1579.76,
+      "text": "slack right this is uh what's been"
+    },
+    {
+      "startSeconds": 1582.96,
+      "text": "done grafana how it works this part is"
+    },
+    {
+      "startSeconds": 1585.64,
+      "text": "pending this is what we're going to do"
+    },
+    {
+      "startSeconds": 1587.2,
+      "text": "now grafana uh will pull the details"
+    },
+    {
+      "startSeconds": 1591.24,
+      "text": "using the promql which is Prometheus"
+    },
+    {
+      "startSeconds": 1593.6,
+      "text": "query language from the Prometheus"
+    },
+    {
+      "startSeconds": 1595.36,
+      "text": "server or the database itself because"
+    },
+    {
+      "startSeconds": 1598.32,
+      "text": "Prometheus is what we have configured as"
+    },
+    {
+      "startSeconds": 1600.76,
+      "text": "the data source in grafana if you"
+    },
+    {
+      "startSeconds": 1602.84,
+      "text": "remember as the first step now it will"
+    },
+    {
+      "startSeconds": 1606.08,
+      "text": "pull all the details with the help of"
+    },
+    {
+      "startSeconds": 1608.76,
+      "text": "queries and then it will help visualize"
+    },
+    {
+      "startSeconds": 1611.279,
+      "text": "all those details we can also s set"
+    },
+    {
+      "startSeconds": 1614.039,
+      "text": "alerts through gaana itself and we'll"
+    },
+    {
+      "startSeconds": 1616.32,
+      "text": "see all those details now okay now let's"
+    },
+    {
+      "startSeconds": 1618.64,
+      "text": "go back to our grafana okay so now you"
+    },
+    {
+      "startSeconds": 1621.76,
+      "text": "can go to um dashboards from"
+    },
+    {
+      "startSeconds": 1625.039,
+      "text": "here and click over here to General if"
+    },
+    {
+      "startSeconds": 1628.24,
+      "text": "it's collapsed else uh it'll show you uh"
+    },
+    {
+      "startSeconds": 1631.279,
+      "text": "some default dashboards based on"
+    },
+    {
+      "startSeconds": 1633.2,
+      "text": "kubernetes so you can select anything"
+    },
+    {
+      "startSeconds": 1635.559,
+      "text": "that is relevant to you uh let's say"
+    },
+    {
+      "startSeconds": 1637.72,
+      "text": "this"
+    },
+    {
+      "startSeconds": 1639.12,
+      "text": "one um now it uh won't show you"
+    },
+    {
+      "startSeconds": 1642.6,
+      "text": "everything you know uh there is cluster"
+    },
+    {
+      "startSeconds": 1645.679,
+      "text": "dis usage memory CPU these details are"
+    },
+    {
+      "startSeconds": 1648.32,
+      "text": "missing for a reason because I have used"
+    },
+    {
+      "startSeconds": 1651.039,
+      "text": "autopilot kubernetes cluster on gke on"
+    },
+    {
+      "startSeconds": 1654.08,
+      "text": "which we don't have access to nodes and"
+    },
+    {
+      "startSeconds": 1655.919,
+      "text": "there are certain restrictions as well"
+    },
+    {
+      "startSeconds": 1658.6,
+      "text": "due to which I'm not able to install any"
+    },
+    {
+      "startSeconds": 1660.799,
+      "text": "external node exporter or cube State"
+    },
+    {
+      "startSeconds": 1663.559,
+      "text": "metrics on top of it and uh so I've"
+    },
+    {
+      "startSeconds": 1666.84,
+      "text": "tried it already and it's not like it's"
+    },
+    {
+      "startSeconds": 1669.48,
+      "text": "not allowing me to uh install all those"
+    },
+    {
+      "startSeconds": 1671.919,
+      "text": "things so basically CPU memory all those"
+    },
+    {
+      "startSeconds": 1676.12,
+      "text": "um metrics are not"
+    },
+    {
+      "startSeconds": 1678.559,
+      "text": "exposed because uh you know with"
+    },
+    {
+      "startSeconds": 1682.159,
+      "text": "autopilot GK cluster they have already"
+    },
+    {
+      "startSeconds": 1684.399,
+      "text": "enabled Google manage Prometheus which"
+    },
+    {
+      "startSeconds": 1686.84,
+      "text": "is a manage service by Prometheus that"
+    },
+    {
+      "startSeconds": 1688.88,
+      "text": "is why open source is not you know fully"
+    },
+    {
+      "startSeconds": 1691.799,
+      "text": "supported in that um so that's a shame"
+    },
+    {
+      "startSeconds": 1694.919,
+      "text": "but uh if you're using any other cloud"
+    },
+    {
+      "startSeconds": 1696.88,
+      "text": "or even if you are using standard GK"
+    },
+    {
+      "startSeconds": 1699.279,
+      "text": "cluster then you should be able to"
+    },
+    {
+      "startSeconds": 1701.08,
+      "text": "install node exporter and you know uh"
+    },
+    {
+      "startSeconds": 1703.559,
+      "text": "rest of the process is uh"
+    },
+    {
+      "startSeconds": 1706.12,
+      "text": "same so um this is um you know u a a"
+    },
+    {
+      "startSeconds": 1710.519,
+      "text": "sample dashboard where you are seeing uh"
+    },
+    {
+      "startSeconds": 1712.799,
+      "text": "deployment replicas how many are updated"
+    },
+    {
+      "startSeconds": 1716.159,
+      "text": "and uh you know up to-date replicas over"
+    },
+    {
+      "startSeconds": 1718.84,
+      "text": "here if you can see so all the"
+    },
+    {
+      "startSeconds": 1721.64,
+      "text": "deployments that we have running for"
+    },
+    {
+      "startSeconds": 1723.48,
+      "text": "example Cube DNS connectivity agent even"
+    },
+    {
+      "startSeconds": 1726.24,
+      "text": "though they are um part of different"
+    },
+    {
+      "startSeconds": 1729.039,
+      "text": "namespace because this dashboard we have"
+    },
+    {
+      "startSeconds": 1731.919,
+      "text": "not applied any filter so it is showing"
+    },
+    {
+      "startSeconds": 1733.88,
+      "text": "you everything um and here are workload"
+    },
+    {
+      "startSeconds": 1738.48,
+      "text": "as well like front end uh one replica"
+    },
+    {
+      "startSeconds": 1742.2,
+      "text": "and so on right so if you want to make"
+    },
+    {
+      "startSeconds": 1744.519,
+      "text": "any changes for example to this"
+    },
+    {
+      "startSeconds": 1746.32,
+      "text": "particular or any widget so far so click"
+    },
+    {
+      "startSeconds": 1748.799,
+      "text": "over here then click add it so uh if you"
+    },
+    {
+      "startSeconds": 1752.88,
+      "text": "remember I have told you in the"
+    },
+    {
+      "startSeconds": 1755.24,
+      "text": "beginning that it works based on the"
+    },
+    {
+      "startSeconds": 1757.399,
+      "text": "Prometheus query language so this query"
+    },
+    {
+      "startSeconds": 1759.559,
+      "text": "that's been generated over here let me"
+    },
+    {
+      "startSeconds": 1762.2,
+      "text": "just uh zoom"
+    },
+    {
+      "startSeconds": 1765.559,
+      "text": "in U so this quy over here this is"
+    },
+    {
+      "startSeconds": 1768.64,
+      "text": "nothing but your promql Prometheus query"
+    },
+    {
+      "startSeconds": 1771,
+      "text": "language so if you copy this and you go"
+    },
+    {
+      "startSeconds": 1774.84,
+      "text": "back to your"
+    },
+    {
+      "startSeconds": 1777.2,
+      "text": "Prometheus to paste it over here and"
+    },
+    {
+      "startSeconds": 1780,
+      "text": "maybe replace the variable let's say um"
+    },
+    {
+      "startSeconds": 1783.6,
+      "text": "so it autop populated the available name"
+    },
+    {
+      "startSeconds": 1786.159,
+      "text": "spaces so let's say uh default name"
+    },
+    {
+      "startSeconds": 1789.08,
+      "text": "space hit enter hit"
+    },
+    {
+      "startSeconds": 1791.6,
+      "text": "execute and then it will show you all"
+    },
+    {
+      "startSeconds": 1793.919,
+      "text": "the matrics in table or even graph"
+    },
+    {
+      "startSeconds": 1796.36,
+      "text": "format like whatever you have selected"
+    },
+    {
+      "startSeconds": 1799.84,
+      "text": "so one replica of each of these"
+    },
+    {
+      "startSeconds": 1804.08,
+      "text": "workloads right um this is how you can"
+    },
+    {
+      "startSeconds": 1808.279,
+      "text": "make any changes so you can update this"
+    },
+    {
+      "startSeconds": 1810.279,
+      "text": "query you can uh you know filter it or"
+    },
+    {
+      "startSeconds": 1813.64,
+      "text": "anything that you want to do or even you"
+    },
+    {
+      "startSeconds": 1815.64,
+      "text": "can if you are not comfortable with"
+    },
+    {
+      "startSeconds": 1817.96,
+      "text": "promql you can go to Builder over here"
+    },
+    {
+      "startSeconds": 1821.279,
+      "text": "you know and you can build your own"
+    },
+    {
+      "startSeconds": 1823,
+      "text": "query so if you see you can build your"
+    },
+    {
+      "startSeconds": 1826.039,
+      "text": "own query using the Met matx you can"
+    },
+    {
+      "startSeconds": 1828.96,
+      "text": "change the Matrix from here or you can"
+    },
+    {
+      "startSeconds": 1830.799,
+      "text": "use data source node anything else as"
+    },
+    {
+      "startSeconds": 1833.039,
+      "text": "well and um then you can filter with"
+    },
+    {
+      "startSeconds": 1837.159,
+      "text": "with different labels and and lots of"
+    },
+    {
+      "startSeconds": 1839.24,
+      "text": "things you can do but this was not uh"
+    },
+    {
+      "startSeconds": 1842.24,
+      "text": "like this is just I wanted to give you a"
+    },
+    {
+      "startSeconds": 1844.399,
+      "text": "brief introduction that is why I have"
+    },
+    {
+      "startSeconds": 1846.2,
+      "text": "opened it so I go back and now like if"
+    },
+    {
+      "startSeconds": 1849.84,
+      "text": "you want to use this dashboard you can"
+    },
+    {
+      "startSeconds": 1851.88,
+      "text": "just save it and maybe rename it"
+    },
+    {
+      "startSeconds": 1855.12,
+      "text": "or um if there if there there is any"
+    },
+    {
+      "startSeconds": 1857.799,
+      "text": "changes that needs to be done you can do"
+    },
+    {
+      "startSeconds": 1859.6,
+      "text": "that but for now please ignore these"
+    },
+    {
+      "startSeconds": 1861.48,
+      "text": "things because as I've already mentioned"
+    },
+    {
+      "startSeconds": 1864.24,
+      "text": "um try not to use the autopilot cluster"
+    },
+    {
+      "startSeconds": 1866.84,
+      "text": "because I've already SP like past four"
+    },
+    {
+      "startSeconds": 1869.639,
+      "text": "five hours troubleshooting this issue"
+    },
+    {
+      "startSeconds": 1871.24,
+      "text": "and then finally I got to know that's"
+    },
+    {
+      "startSeconds": 1872.84,
+      "text": "why I thought of sharing with you do not"
+    },
+    {
+      "startSeconds": 1874.44,
+      "text": "use autopilot gke cluster all right so"
+    },
+    {
+      "startSeconds": 1878.399,
+      "text": "that's it for this demo I hope this was"
+    },
+    {
+      "startSeconds": 1881,
+      "text": "uh somewhat helpful to you and"
+    },
+    {
+      "startSeconds": 1882.799,
+      "text": "understanding the concept and you were"
+    },
+    {
+      "startSeconds": 1885.159,
+      "text": "able to do um the and so on along with"
+    },
+    {
+      "startSeconds": 1888.08,
+      "text": "me if you face any issue please let me"
+    },
+    {
+      "startSeconds": 1890.88,
+      "text": "know in the comment section below or"
+    },
+    {
+      "startSeconds": 1892.399,
+      "text": "feel free to join our Discord community"
+    },
+    {
+      "startSeconds": 1894.84,
+      "text": "and uh there are a lot of individuals"
+    },
+    {
+      "startSeconds": 1897.32,
+      "text": "who are ready to help you out whenever"
+    },
+    {
+      "startSeconds": 1899.12,
+      "text": "you seek any assistance and uh thank you"
+    },
+    {
+      "startSeconds": 1901.76,
+      "text": "so much for watching I hope this was"
+    },
+    {
+      "startSeconds": 1903.519,
+      "text": "helpful and you have a good day I will"
+    },
+    {
+      "startSeconds": 1905.919,
+      "text": "see you soon with the next video"
+    }
+  ]
+}

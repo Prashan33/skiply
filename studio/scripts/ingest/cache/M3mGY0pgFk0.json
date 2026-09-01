@@ -1,8 +1,1246 @@
 {
   "id": "M3mGY0pgFk0",
   "url": "https://www.youtube.com/watch?v=M3mGY0pgFk0",
-  "fetchedAt": "2026-08-31T05:14:55.157Z",
-  "captionKind": "empty",
-  "chapters": [],
-  "cues": []
+  "fetchedAt": "2026-09-01T04:05:08.559Z",
+  "captionKind": "asr",
+  "chapters": [
+    {
+      "startSeconds": 0,
+      "label": "Introduction"
+    },
+    {
+      "startSeconds": 34,
+      "label": "What are optimistic updates"
+    },
+    {
+      "startSeconds": 73,
+      "label": "Why optimistic updates are hard"
+    },
+    {
+      "startSeconds": 125,
+      "label": "useOptimistic hook basics"
+    },
+    {
+      "startSeconds": 398,
+      "label": "useOptimistic hook advanced"
+    }
+  ],
+  "cues": [
+    {
+      "startSeconds": 0,
+      "text": "If you've ever wondered why an"
+    },
+    {
+      "startSeconds": 1.4,
+      "text": "application you're using is so fast,"
+    },
+    {
+      "startSeconds": 3.4,
+      "text": "it's almost always because they're using"
+    },
+    {
+      "startSeconds": 5.04,
+      "text": "optimistic updates. And normally"
+    },
+    {
+      "startSeconds": 7.04,
+      "text": "implementing these optimistic updates is"
+    },
+    {
+      "startSeconds": 8.76,
+      "text": "incredibly time-consuming and annoying,"
+    },
+    {
+      "startSeconds": 10.92,
+      "text": "but with the brand new use optimistic"
+    },
+    {
+      "startSeconds": 13.12,
+      "text": "react hook, it is incredibly easy. In"
+    },
+    {
+      "startSeconds": 15.36,
+      "text": "this video, I'm going to show you not"
+    },
+    {
+      "startSeconds": 16.48,
+      "text": "only what optimistic updates are, but"
+    },
+    {
+      "startSeconds": 18.44,
+      "text": "how to use this hook in your react"
+    },
+    {
+      "startSeconds": 19.88,
+      "text": "application to make it blazing fast."
+    },
+    {
+      "startSeconds": 25.12,
+      "text": "Welcome back to WebDev Simplified. My"
+    },
+    {
+      "startSeconds": 27.2,
+      "text": "name is Kyle, and my job is to simplify"
+    },
+    {
+      "startSeconds": 28.88,
+      "text": "the web so you can start building your"
+    },
+    {
+      "startSeconds": 30.16,
+      "text": "dream project sooner. And today we're"
+    },
+    {
+      "startSeconds": 31.64,
+      "text": "talking all about optimistic updates."
+    },
+    {
+      "startSeconds": 33.92,
+      "text": "Now, in this application right now,"
+    },
+    {
+      "startSeconds": 35.2,
+      "text": "there's a lot of problems with it. But"
+    },
+    {
+      "startSeconds": 36.6,
+      "text": "first of all, we're not doing optimistic"
+    },
+    {
+      "startSeconds": 38.12,
+      "text": "updates, which means when I type and I"
+    },
+    {
+      "startSeconds": 39.52,
+      "text": "click create, you can see that there's a"
+    },
+    {
+      "startSeconds": 40.92,
+      "text": "long pause before this item shows up."
+    },
+    {
+      "startSeconds": 43.2,
+      "text": "The idea behind optimistic updates is"
+    },
+    {
+      "startSeconds": 45.04,
+      "text": "even if your API takes a minute or 10"
+    },
+    {
+      "startSeconds": 46.96,
+      "text": "minutes or 20 seconds, it doesn't"
+    },
+    {
+      "startSeconds": 48.24,
+      "text": "matter. No matter how long your API"
+    },
+    {
+      "startSeconds": 49.88,
+      "text": "takes, you make it so that whatever the"
+    },
+    {
+      "startSeconds": 51.52,
+      "text": "user does shows up immediately for them,"
+    },
+    {
+      "startSeconds": 53.88,
+      "text": "and then it'll rectify itself if, for"
+    },
+    {
+      "startSeconds": 55.84,
+      "text": "example, there's an error on your API or"
+    },
+    {
+      "startSeconds": 57.56,
+      "text": "something like that. It'll change and"
+    },
+    {
+      "startSeconds": 59.08,
+      "text": "fix itself based on that. But it'll feel"
+    },
+    {
+      "startSeconds": 61.2,
+      "text": "super responsive because everything you"
+    },
+    {
+      "startSeconds": 62.84,
+      "text": "do will immediately update on your"
+    },
+    {
+      "startSeconds": 64.239,
+      "text": "screen. This is how pretty much every"
+    },
+    {
+      "startSeconds": 65.68,
+      "text": "social media app works. We have a like"
+    },
+    {
+      "startSeconds": 67.36,
+      "text": "counter, it'll instantly increment, and"
+    },
+    {
+      "startSeconds": 69.12,
+      "text": "then if for some reason there's a"
+    },
+    {
+      "startSeconds": 70.04,
+      "text": "failure, it'll decrement you back down."
+    },
+    {
+      "startSeconds": 72.12,
+      "text": "That's what we're trying to implement"
+    },
+    {
+      "startSeconds": 73.28,
+      "text": "here. And keeping track of that is"
+    },
+    {
+      "startSeconds": 74.88,
+      "text": "incredibly difficult in a normal react"
+    },
+    {
+      "startSeconds": 76.84,
+      "text": "application. That's because first of"
+    },
+    {
+      "startSeconds": 78.64,
+      "text": "all, I have, for example, my to-do's"
+    },
+    {
+      "startSeconds": 80,
+      "text": "here. So anytime my to-do's change, I"
+    },
+    {
+      "startSeconds": 81.84,
+      "text": "need to make sure I update my list."
+    },
+    {
+      "startSeconds": 83.16,
+      "text": "That's super straightforward and what"
+    },
+    {
+      "startSeconds": 84.28,
+      "text": "I'm currently doing. But if I wanted to"
+    },
+    {
+      "startSeconds": 86.08,
+      "text": "track optimistic updates, I would need"
+    },
+    {
+      "startSeconds": 88.08,
+      "text": "essentially another thing of state to"
+    },
+    {
+      "startSeconds": 89.8,
+      "text": "determine my optimistic to-do's. And"
+    },
+    {
+      "startSeconds": 92.4,
+      "text": "those optimistic to-do's I'd probably"
+    },
+    {
+      "startSeconds": 93.84,
+      "text": "put in state somewhere. And then I would"
+    },
+    {
+      "startSeconds": 95.36,
+      "text": "need to make sure I updated my"
+    },
+    {
+      "startSeconds": 96.64,
+      "text": "optimistic to-do before I create a"
+    },
+    {
+      "startSeconds": 98.32,
+      "text": "to-do. Then after I create a to-do, I"
+    },
+    {
+      "startSeconds": 100.12,
+      "text": "would need to remove that optimistic"
+    },
+    {
+      "startSeconds": 101.56,
+      "text": "update cuz it's currently in my to-do's."
+    },
+    {
+      "startSeconds": 103.36,
+      "text": "And then whatever my to-do's get updated"
+    },
+    {
+      "startSeconds": 104.96,
+      "text": "from some other source, I need to make"
+    },
+    {
+      "startSeconds": 106.28,
+      "text": "sure I update my optimistic to-do's."
+    },
+    {
+      "startSeconds": 108,
+      "text": "There's just so many different"
+    },
+    {
+      "startSeconds": 109.04,
+      "text": "dependencies and things that could cause"
+    },
+    {
+      "startSeconds": 110.64,
+      "text": "it to update that is a nightmare to try"
+    },
+    {
+      "startSeconds": 112.36,
+      "text": "to manage and maintain this on your own,"
+    },
+    {
+      "startSeconds": 114.04,
+      "text": "and it's honestly really difficult to"
+    },
+    {
+      "startSeconds": 115.36,
+      "text": "write custom hooks for. But react has"
+    },
+    {
+      "startSeconds": 117.48,
+      "text": "implemented their own custom hook for"
+    },
+    {
+      "startSeconds": 118.96,
+      "text": "you to use in this and it's called use"
+    },
+    {
+      "startSeconds": 120.68,
+      "text": "optimistic and it takes care of pretty"
+    },
+    {
+      "startSeconds": 122.24,
+      "text": "much all of the difficult parts of"
+    },
+    {
+      "startSeconds": 123.72,
+      "text": "optimistic updates. Now, if you want to"
+    },
+    {
+      "startSeconds": 125.24,
+      "text": "start using this hook inside your React"
+    },
+    {
+      "startSeconds": 126.8,
+      "text": "application, it is experimental, so"
+    },
+    {
+      "startSeconds": 128.64,
+      "text": "you're going to be needed to use an"
+    },
+    {
+      "startSeconds": 129.84,
+      "text": "experimental version of React and React"
+    },
+    {
+      "startSeconds": 131.76,
+      "text": "DOM, as well as this ESLint plugin React"
+    },
+    {
+      "startSeconds": 133.959,
+      "text": "hooks if you're using that. And then if"
+    },
+    {
+      "startSeconds": 135.68,
+      "text": "you're using TypeScript, you're going to"
+    },
+    {
+      "startSeconds": 136.92,
+      "text": "want to make sure you add these"
+    },
+    {
+      "startSeconds": 137.92,
+      "text": "reference lines in your code somewhere"
+    },
+    {
+      "startSeconds": 139.6,
+      "text": "just so you can actually get the"
+    },
+    {
+      "startSeconds": 140.72,
+      "text": "TypeScript definitions, but this is only"
+    },
+    {
+      "startSeconds": 142.44,
+      "text": "important if you care about the"
+    },
+    {
+      "startSeconds": 143.48,
+      "text": "TypeScript definitions. So, what you can"
+    },
+    {
+      "startSeconds": 145.44,
+      "text": "do, is up here, we can just type in use"
+    },
+    {
+      "startSeconds": 147.56,
+      "text": "optimistic and this is labeled as"
+    },
+    {
+      "startSeconds": 149.44,
+      "text": "experimental cuz it like I said, an"
+    },
+    {
+      "startSeconds": 151,
+      "text": "experimental hook. So, we're going to"
+    },
+    {
+      "startSeconds": 152.36,
+      "text": "rename it as use optimistic. And this"
+    },
+    {
+      "startSeconds": 155.12,
+      "text": "just imports directly from React. Now,"
+    },
+    {
+      "startSeconds": 156.959,
+      "text": "the way that this use optimistic hook"
+    },
+    {
+      "startSeconds": 158.56,
+      "text": "works is very similar to how the use"
+    },
+    {
+      "startSeconds": 160.52,
+      "text": "state hook works. So, I'm going to"
+    },
+    {
+      "startSeconds": 161.92,
+      "text": "create a new array called optimistic"
+    },
+    {
+      "startSeconds": 164.6,
+      "text": "to-dos and then I'm going to say set"
+    },
+    {
+      "startSeconds": 166.32,
+      "text": "optimistic to-dos. There we go. And I'm"
+    },
+    {
+      "startSeconds": 169.08,
+      "text": "going to change that to this use"
+    },
+    {
+      "startSeconds": 171.44,
+      "text": "optimistic hook."
+    },
+    {
+      "startSeconds": 173.48,
+      "text": "Let me make sure I paste that down"
+    },
+    {
+      "startSeconds": 174.44,
+      "text": "there. And by default, I'm going to set"
+    },
+    {
+      "startSeconds": 176,
+      "text": "that to my to-dos. So, the way that this"
+    },
+    {
+      "startSeconds": 177.92,
+      "text": "works is when you use the optimistic"
+    },
+    {
+      "startSeconds": 179.48,
+      "text": "hook, whatever you pass here is not just"
+    },
+    {
+      "startSeconds": 181.32,
+      "text": "the default value, but it's also like"
+    },
+    {
+      "startSeconds": 183.2,
+      "text": "the source of truth. So, when this thing"
+    },
+    {
+      "startSeconds": 185.32,
+      "text": "gets updated, it's going to use that as"
+    },
+    {
+      "startSeconds": 187.08,
+      "text": "your source of truth. And these"
+    },
+    {
+      "startSeconds": 188.519,
+      "text": "optimistic to-dos are just going to be"
+    },
+    {
+      "startSeconds": 190.04,
+      "text": "the other things you add in as like,"
+    },
+    {
+      "startSeconds": 191.48,
+      "text": "\"Hey, currently I'm waiting for my"
+    },
+    {
+      "startSeconds": 192.84,
+      "text": "to-dos to update, so here's my"
+    },
+    {
+      "startSeconds": 194.2,
+      "text": "optimistic to-dos.\" So, right now if I"
+    },
+    {
+      "startSeconds": 196.12,
+      "text": "just do that, I can replace everywhere I"
+    },
+    {
+      "startSeconds": 197.84,
+      "text": "used to-dos, for example, down here with"
+    },
+    {
+      "startSeconds": 199.36,
+      "text": "my optimistic to-dos and everything's"
+    },
+    {
+      "startSeconds": 201.04,
+      "text": "going to work exactly the same. But the"
+    },
+    {
+      "startSeconds": 202.84,
+      "text": "main difference is see, even if I type,"
+    },
+    {
+      "startSeconds": 204.64,
+      "text": "you can see it's working the same. And"
+    },
+    {
+      "startSeconds": 205.8,
+      "text": "then once my to-dos update, it's still"
+    },
+    {
+      "startSeconds": 207.8,
+      "text": "updating my optimistic to-dos. So, all"
+    },
+    {
+      "startSeconds": 209.28,
+      "text": "those weird dependencies are all taken"
+    },
+    {
+      "startSeconds": 211.44,
+      "text": "care of automatically for you by this,"
+    },
+    {
+      "startSeconds": 213.16,
+      "text": "which is really nice. The key difference"
+    },
+    {
+      "startSeconds": 214.76,
+      "text": "comes though in that I can add"
+    },
+    {
+      "startSeconds": 216.56,
+      "text": "optimistic to-dos by calling this a set"
+    },
+    {
+      "startSeconds": 218.32,
+      "text": "function. And again, it works just like"
+    },
+    {
+      "startSeconds": 219.72,
+      "text": "state. So, I can say I want to add a new"
+    },
+    {
+      "startSeconds": 221.36,
+      "text": "optimistic to-do. I'm going to get my"
+    },
+    {
+      "startSeconds": 223.28,
+      "text": "previous ones and essentially I'm just"
+    },
+    {
+      "startSeconds": 224.76,
+      "text": "going to add in a brand new to-do like"
+    },
+    {
+      "startSeconds": 226.2,
+      "text": "this. But this new to-do"
+    },
+    {
+      "startSeconds": 228.04,
+      "text": "is just going to have an ID, which is"
+    },
+    {
+      "startSeconds": 229.68,
+      "text": "just going to be a random number. I'll"
+    },
+    {
+      "startSeconds": 231.08,
+      "text": "just use crypto.randomUUID."
+    },
+    {
+      "startSeconds": 233.68,
+      "text": "And then it's going to take my title."
+    },
+    {
+      "startSeconds": 235.12,
+      "text": "So, this is kind of what I expect my API"
+    },
+    {
+      "startSeconds": 237.24,
+      "text": "to look like. And I want to make sure"
+    },
+    {
+      "startSeconds": 238.84,
+      "text": "actually this is inputRef.current"
+    },
+    {
+      "startSeconds": 241.4,
+      "text": ".value. And I'll set that to my title."
+    },
+    {
+      "startSeconds": 245.08,
+      "text": "There we go."
+    },
+    {
+      "startSeconds": 246.04,
+      "text": "So, essentially this is what I'm"
+    },
+    {
+      "startSeconds": 247.36,
+      "text": "expecting my API to output. And I can"
+    },
+    {
+      "startSeconds": 249.4,
+      "text": "make this even more apparent by just"
+    },
+    {
+      "startSeconds": 251.32,
+      "text": "coming in here and I can say that this"
+    },
+    {
+      "startSeconds": 252.64,
+      "text": "is going to be our optimistic"
+    },
+    {
+      "startSeconds": 255.08,
+      "text": "to do. I'm going to set it equal to this"
+    },
+    {
+      "startSeconds": 256.56,
+      "text": "object. So, it's a little bit more clear"
+    },
+    {
+      "startSeconds": 257.959,
+      "text": "exactly what's going on. And then I'll"
+    },
+    {
+      "startSeconds": 259.519,
+      "text": "just put this right into there. So,"
+    },
+    {
+      "startSeconds": 261.88,
+      "text": "there we go. So, I'm essentially saying,"
+    },
+    {
+      "startSeconds": 263.28,
+      "text": "\"Okay, I expect the result of my API to"
+    },
+    {
+      "startSeconds": 265.76,
+      "text": "be an ID and a title. And this title, I"
+    },
+    {
+      "startSeconds": 268.36,
+      "text": "expect it to be whatever I type in.\" So,"
+    },
+    {
+      "startSeconds": 270.28,
+      "text": "I'm going to set that as my optimistic"
+    },
+    {
+      "startSeconds": 271.68,
+      "text": "to do. Then I'm going to wait for my"
+    },
+    {
+      "startSeconds": 273.68,
+      "text": "actual to do to be created. And then"
+    },
+    {
+      "startSeconds": 275.52,
+      "text": "when it is, I'll use the actual to do"
+    },
+    {
+      "startSeconds": 277.52,
+      "text": "value to set my to do's. Now, let's see"
+    },
+    {
+      "startSeconds": 279.36,
+      "text": "what that actually looks like when I"
+    },
+    {
+      "startSeconds": 280.52,
+      "text": "implement it. What I can do is I can"
+    },
+    {
+      "startSeconds": 281.8,
+      "text": "type in new and I click create. And you"
+    },
+    {
+      "startSeconds": 283.919,
+      "text": "notice that to do immediately shows up"
+    },
+    {
+      "startSeconds": 285.68,
+      "text": "right here, which is really great. So,"
+    },
+    {
+      "startSeconds": 287.44,
+      "text": "immediately I'm getting that feedback,"
+    },
+    {
+      "startSeconds": 289.16,
+      "text": "but the real important thing is is"
+    },
+    {
+      "startSeconds": 290.84,
+      "text": "whatever my set to do's returns is"
+    },
+    {
+      "startSeconds": 292.56,
+      "text": "actually overriding this. And I can show"
+    },
+    {
+      "startSeconds": 294.52,
+      "text": "you what I mean by that. For example, I"
+    },
+    {
+      "startSeconds": 296.08,
+      "text": "can go down here and instead of just"
+    },
+    {
+      "startSeconds": 297.68,
+      "text": "returning my title, I'm going to take my"
+    },
+    {
+      "startSeconds": 299.44,
+      "text": "title and I'm just going to add"
+    },
+    {
+      "startSeconds": 300.68,
+      "text": "something to it. So, I can say title and"
+    },
+    {
+      "startSeconds": 302.44,
+      "text": "then I'll just add something to it that"
+    },
+    {
+      "startSeconds": 303.56,
+      "text": "says like it came from the server. So,"
+    },
+    {
+      "startSeconds": 305.52,
+      "text": "this is the result from the server and"
+    },
+    {
+      "startSeconds": 307.4,
+      "text": "this is my expected result. Now, let's"
+    },
+    {
+      "startSeconds": 309.84,
+      "text": "refresh and I'll type in new and I'll"
+    },
+    {
+      "startSeconds": 311.56,
+      "text": "click create. And you notice it says new"
+    },
+    {
+      "startSeconds": 313.28,
+      "text": "and then as soon as I get the value back"
+    },
+    {
+      "startSeconds": 314.8,
+      "text": "from my server, it's taking that old"
+    },
+    {
+      "startSeconds": 316.44,
+      "text": "optimistic value, removing it and"
+    },
+    {
+      "startSeconds": 318.2,
+      "text": "replacing it with the brand new value."
+    },
+    {
+      "startSeconds": 320.12,
+      "text": "So, all of that difficult code of"
+    },
+    {
+      "startSeconds": 321.44,
+      "text": "keeping things in sync, it's"
+    },
+    {
+      "startSeconds": 322.72,
+      "text": "automatically taken care of for you by"
+    },
+    {
+      "startSeconds": 324.76,
+      "text": "this use optimistic hook. It's really"
+    },
+    {
+      "startSeconds": 326.28,
+      "text": "that simple to use. So, this is pretty"
+    },
+    {
+      "startSeconds": 328,
+      "text": "much the most basic way to use this, but"
+    },
+    {
+      "startSeconds": 329.88,
+      "text": "the really nice thing about this, I'll"
+    },
+    {
+      "startSeconds": 331.16,
+      "text": "bring my code back to where it was so"
+    },
+    {
+      "startSeconds": 332.4,
+      "text": "that the title is actually the correct"
+    },
+    {
+      "startSeconds": 333.88,
+      "text": "title. There we go. The really nice"
+    },
+    {
+      "startSeconds": 335.56,
+      "text": "thing about this is you can actually add"
+    },
+    {
+      "startSeconds": 337.12,
+      "text": "extra properties to this optimistic to"
+    },
+    {
+      "startSeconds": 338.919,
+      "text": "do as well. For example, I can add in a"
+    },
+    {
+      "startSeconds": 340.96,
+      "text": "status that says pending. And I'll set"
+    },
+    {
+      "startSeconds": 343.2,
+      "text": "pending to true. And that means that"
+    },
+    {
+      "startSeconds": 344.8,
+      "text": "this This one of my optimistic to do's"
+    },
+    {
+      "startSeconds": 346.32,
+      "text": "and I'm waiting for it to finish"
+    },
+    {
+      "startSeconds": 347.6,
+      "text": "loading. So now down here in my code, I"
+    },
+    {
+      "startSeconds": 349.72,
+      "text": "can actually change around what my style"
+    },
+    {
+      "startSeconds": 351.16,
+      "text": "looks like based on that pending. So I"
+    },
+    {
+      "startSeconds": 353,
+      "text": "can say that, you know what, my opacity"
+    },
+    {
+      "startSeconds": 354.48,
+      "text": "here is going to be determined based on"
+    },
+    {
+      "startSeconds": 356.36,
+      "text": "my to do dot pending."
+    },
+    {
+      "startSeconds": 358.52,
+      "text": "And if it's pending, I'll set this to"
+    },
+    {
+      "startSeconds": 360.04,
+      "text": "like 0.5, otherwise I won't set it at"
+    },
+    {
+      "startSeconds": 362.28,
+      "text": "all. And in order to get the correct"
+    },
+    {
+      "startSeconds": 363.8,
+      "text": "typing, all I need to do is inside of"
+    },
+    {
+      "startSeconds": 365.52,
+      "text": "here, I have a type for my to do's."
+    },
+    {
+      "startSeconds": 367.76,
+      "text": "Let's create a type for my optimistic to"
+    },
+    {
+      "startSeconds": 369.68,
+      "text": "do."
+    },
+    {
+      "startSeconds": 372.28,
+      "text": "There we go. And this is going to"
+    },
+    {
+      "startSeconds": 373.44,
+      "text": "essentially just be my to do type, but"
+    },
+    {
+      "startSeconds": 375.08,
+      "text": "I'm going to add on pending, which is a"
+    },
+    {
+      "startSeconds": 376.96,
+      "text": "boolean that is going to sometimes be"
+    },
+    {
+      "startSeconds": 378.88,
+      "text": "there and sometimes not. So I'm going to"
+    },
+    {
+      "startSeconds": 381.04,
+      "text": "say"
+    },
+    {
+      "startSeconds": 381.96,
+      "text": "to do"
+    },
+    {
+      "startSeconds": 383.08,
+      "text": "and that type. So now I can say that"
+    },
+    {
+      "startSeconds": 385,
+      "text": "this is an optimistic to do array."
+    },
+    {
+      "startSeconds": 387.84,
+      "text": "That just cleaned up any TypeScript"
+    },
+    {
+      "startSeconds": 389.08,
+      "text": "errors. And now you can see, let's"
+    },
+    {
+      "startSeconds": 390.6,
+      "text": "refresh, type in new, and when I click"
+    },
+    {
+      "startSeconds": 392.44,
+      "text": "create, you notice that this has 50%"
+    },
+    {
+      "startSeconds": 394.12,
+      "text": "opacity until it comes back from the"
+    },
+    {
+      "startSeconds": 395.72,
+      "text": "server with the correct value. Now"
+    },
+    {
+      "startSeconds": 397.36,
+      "text": "that's the most basic version of this"
+    },
+    {
+      "startSeconds": 398.68,
+      "text": "optimistic update. There's also a more"
+    },
+    {
+      "startSeconds": 400.4,
+      "text": "advanced version of this optimistic"
+    },
+    {
+      "startSeconds": 402,
+      "text": "update that works exactly the same as"
+    },
+    {
+      "startSeconds": 403.76,
+      "text": "use reducer. So either it can work like"
+    },
+    {
+      "startSeconds": 405.52,
+      "text": "use state, or if you pass it two"
+    },
+    {
+      "startSeconds": 407.4,
+      "text": "properties, an initial value and a"
+    },
+    {
+      "startSeconds": 409.36,
+      "text": "reducer function, it'll work just like"
+    },
+    {
+      "startSeconds": 411.68,
+      "text": "use reducer. This reducer function could"
+    },
+    {
+      "startSeconds": 413.68,
+      "text": "be whatever you want. And then this"
+    },
+    {
+      "startSeconds": 415.04,
+      "text": "setter right here would just be"
+    },
+    {
+      "startSeconds": 416.44,
+      "text": "equivalent to dispatch inside of your"
+    },
+    {
+      "startSeconds": 418.44,
+      "text": "reducer. So literally works exactly the"
+    },
+    {
+      "startSeconds": 420.52,
+      "text": "same as use reducer. To prove how that"
+    },
+    {
+      "startSeconds": 422.28,
+      "text": "works, I'm just going to copy over"
+    },
+    {
+      "startSeconds": 423.8,
+      "text": "really quickly a reducer. This is the"
+    },
+    {
+      "startSeconds": 425.6,
+      "text": "simplest reducer you could possibly ever"
+    },
+    {
+      "startSeconds": 427.08,
+      "text": "make. It only has one state, which is"
+    },
+    {
+      "startSeconds": 428.48,
+      "text": "add, and it's adding that pending flag"
+    },
+    {
+      "startSeconds": 430.28,
+      "text": "just like we mentioned. And the payload"
+    },
+    {
+      "startSeconds": 431.96,
+      "text": "here is just a to do. And we can even"
+    },
+    {
+      "startSeconds": 434.04,
+      "text": "make the payload here just a string if"
+    },
+    {
+      "startSeconds": 435.84,
+      "text": "we want. And then we can say that the"
+    },
+    {
+      "startSeconds": 437.68,
+      "text": "title"
+    },
+    {
+      "startSeconds": 439.28,
+      "text": "is equal to our action payload. And our"
+    },
+    {
+      "startSeconds": 441.72,
+      "text": "ID is going to be a random ID. So there"
+    },
+    {
+      "startSeconds": 444.04,
+      "text": "we go, we have that. There is our"
+    },
+    {
+      "startSeconds": 445.68,
+      "text": "reducer, which looks great. And now we"
+    },
+    {
+      "startSeconds": 447.48,
+      "text": "don't even need this typing here because"
+    },
+    {
+      "startSeconds": 449.88,
+      "text": "essentially it's automatically getting"
+    },
+    {
+      "startSeconds": 451.12,
+      "text": "the typing from this. So now we have"
+    },
+    {
+      "startSeconds": 453.16,
+      "text": "this dispatch function, which we can use"
+    },
+    {
+      "startSeconds": 454.72,
+      "text": "in place of this set here. And we can"
+    },
+    {
+      "startSeconds": 456.72,
+      "text": "pass it along our action, which has a"
+    },
+    {
+      "startSeconds": 458.8,
+      "text": "type of add, and it's going to have a"
+    },
+    {
+      "startSeconds": 460.919,
+      "text": "payload, which is our title. There we"
+    },
+    {
+      "startSeconds": 462.92,
+      "text": "go. We don't need this optimistic to do"
+    },
+    {
+      "startSeconds": 464.68,
+      "text": "up here at all."
+    },
+    {
+      "startSeconds": 465.88,
+      "text": "And we just want to make sure we get"
+    },
+    {
+      "startSeconds": 467,
+      "text": "this title from our input"
+    },
+    {
+      "startSeconds": 468.28,
+      "text": "ref.current.value."
+    },
+    {
+      "startSeconds": 470.4,
+      "text": "There we go. So now let's test this out."
+    },
+    {
+      "startSeconds": 472.64,
+      "text": "Create a brand new one, click create."
+    },
+    {
+      "startSeconds": 474.16,
+      "text": "You notice that it has that 50% opacity"
+    },
+    {
+      "startSeconds": 475.76,
+      "text": "and then it comes in with the correct"
+    },
+    {
+      "startSeconds": 476.88,
+      "text": "color once it loads from the server. So"
+    },
+    {
+      "startSeconds": 478.56,
+      "text": "again, you can use it either way,"
+    },
+    {
+      "startSeconds": 479.8,
+      "text": "whether it's going to be with a reducer"
+    },
+    {
+      "startSeconds": 481.04,
+      "text": "or not, both of them are going to work."
+    },
+    {
+      "startSeconds": 482.76,
+      "text": "Now the final thing I want to mention"
+    },
+    {
+      "startSeconds": 483.84,
+      "text": "about this hook is that this is mostly"
+    },
+    {
+      "startSeconds": 485.44,
+      "text": "meant for being used inside of Next.js."
+    },
+    {
+      "startSeconds": 487.16,
+      "text": "I mean, obviously you can use it in"
+    },
+    {
+      "startSeconds": 488.32,
+      "text": "normal React like this, but it's kind of"
+    },
+    {
+      "startSeconds": 489.8,
+      "text": "coming out first in Next.js for like"
+    },
+    {
+      "startSeconds": 491.6,
+      "text": "server action stuff. So if you're using"
+    },
+    {
+      "startSeconds": 493.24,
+      "text": "server actions, which is already"
+    },
+    {
+      "startSeconds": 494.44,
+      "text": "experimental, you can use this hook"
+    },
+    {
+      "startSeconds": 496.08,
+      "text": "inside of there as well and it should"
+    },
+    {
+      "startSeconds": 497.28,
+      "text": "work really well inside of there."
+    },
+    {
+      "startSeconds": 499.52,
+      "text": "Now if you want to make sure you're"
+    },
+    {
+      "startSeconds": 500.48,
+      "text": "learning the latest and greatest of"
+    },
+    {
+      "startSeconds": 501.96,
+      "text": "React and Next.js, I highly recommend"
+    },
+    {
+      "startSeconds": 503.919,
+      "text": "checking out my React Simplified course,"
+    },
+    {
+      "startSeconds": 505.64,
+      "text": "linked in the description below. It"
+    },
+    {
+      "startSeconds": 507.04,
+      "text": "covers everything you need to know about"
+    },
+    {
+      "startSeconds": 508.52,
+      "text": "React and Next.js from an absolute"
+    },
+    {
+      "startSeconds": 510.56,
+      "text": "beginner all the way to incredibly"
+    },
+    {
+      "startSeconds": 512,
+      "text": "advanced features. And the best part is"
+    },
+    {
+      "startSeconds": 514.159,
+      "text": "it's brand new. I just finished updating"
+    },
+    {
+      "startSeconds": 516.2,
+      "text": "the entire course. It's got so much"
+    },
+    {
+      "startSeconds": 517.96,
+      "text": "content. I just highly recommend you"
+    },
+    {
+      "startSeconds": 519.36,
+      "text": "check it out if you want to learn React"
+    },
+    {
+      "startSeconds": 520.88,
+      "text": "or Next.js at all. I'll have a link down"
+    },
+    {
+      "startSeconds": 522.8,
+      "text": "in the description below for you."
+    }
+  ]
 }

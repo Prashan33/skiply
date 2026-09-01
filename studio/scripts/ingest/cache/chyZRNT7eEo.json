@@ -1,0 +1,530 @@
+{
+  "id": "chyZRNT7eEo",
+  "url": "https://www.youtube.com/watch?v=chyZRNT7eEo",
+  "fetchedAt": "2026-09-01T04:08:08.381Z",
+  "captionKind": "asr",
+  "chapters": [
+    {
+      "startSeconds": 0,
+      "label": "Why do we need load balancers?"
+    },
+    {
+      "startSeconds": 66,
+      "label": "How do load balancers work?"
+    },
+    {
+      "startSeconds": 141,
+      "label": "When should you use a load balancer?"
+    },
+    {
+      "startSeconds": 206,
+      "label": "Advantages"
+    },
+    {
+      "startSeconds": 231,
+      "label": "Considerations"
+    },
+    {
+      "startSeconds": 275,
+      "label": "Outro"
+    }
+  ],
+  "cues": [
+    {
+      "startSeconds": 0,
+      "text": "why do we need load balancers to"
+    },
+    {
+      "startSeconds": 2.52,
+      "text": "understand how and why load balancers"
+    },
+    {
+      "startSeconds": 4.92,
+      "text": "are used it's important to remember a"
+    },
+    {
+      "startSeconds": 6.899,
+      "text": "few Concepts about distributed computing"
+    },
+    {
+      "startSeconds": 9.3,
+      "text": "first web applications are deployed and"
+    },
+    {
+      "startSeconds": 12.179,
+      "text": "hosted on servers these applications"
+    },
+    {
+      "startSeconds": 14.46,
+      "text": "live on Hardware machines with finite"
+    },
+    {
+      "startSeconds": 16.68,
+      "text": "resources such as memory processing"
+    },
+    {
+      "startSeconds": 19.32,
+      "text": "power and network connections as the"
+    },
+    {
+      "startSeconds": 21.6,
+      "text": "traffic to an application increases"
+    },
+    {
+      "startSeconds": 23.34,
+      "text": "these resources can become limiting"
+    },
+    {
+      "startSeconds": 25.26,
+      "text": "factors and prevent the machine from"
+    },
+    {
+      "startSeconds": 26.939,
+      "text": "serving requests this limit is known as"
+    },
+    {
+      "startSeconds": 29.64,
+      "text": "the system's capacity at first some of"
+    },
+    {
+      "startSeconds": 32.52,
+      "text": "these scaling problems can be solved by"
+    },
+    {
+      "startSeconds": 34.32,
+      "text": "simply increasing the memory or CPU of"
+    },
+    {
+      "startSeconds": 36.54,
+      "text": "the server or by using the available"
+    },
+    {
+      "startSeconds": 38.219,
+      "text": "resources more efficiently as is the"
+    },
+    {
+      "startSeconds": 40.68,
+      "text": "case for something like multi-threading"
+    },
+    {
+      "startSeconds": 42.899,
+      "text": "at a certain point though increased"
+    },
+    {
+      "startSeconds": 45.059,
+      "text": "traffic will cause any application to"
+    },
+    {
+      "startSeconds": 46.92,
+      "text": "exceed the capacity that a single server"
+    },
+    {
+      "startSeconds": 48.84,
+      "text": "can provide"
+    },
+    {
+      "startSeconds": 50.039,
+      "text": "the only solution to this problem is to"
+    },
+    {
+      "startSeconds": 52.379,
+      "text": "add more servers to the system also"
+    },
+    {
+      "startSeconds": 54.48,
+      "text": "known as horizontal scaling"
+    },
+    {
+      "startSeconds": 56.879,
+      "text": "when more than one server can be used to"
+    },
+    {
+      "startSeconds": 58.98,
+      "text": "serve a request it becomes necessary to"
+    },
+    {
+      "startSeconds": 61.079,
+      "text": "decide which server to send the request"
+    },
+    {
+      "startSeconds": 63.18,
+      "text": "to that's where load balancers come in"
+    },
+    {
+      "startSeconds": 65.7,
+      "text": "how do load balancers work"
+    },
+    {
+      "startSeconds": 68.04,
+      "text": "a good load balancer will efficiently"
+    },
+    {
+      "startSeconds": 70.32,
+      "text": "distribute incoming traffic to maximize"
+    },
+    {
+      "startSeconds": 72.479,
+      "text": "the system's capacity and minimize the"
+    },
+    {
+      "startSeconds": 74.52,
+      "text": "time it takes to fulfill the request"
+    },
+    {
+      "startSeconds": 76.619,
+      "text": "load balancers can distribute traffic"
+    },
+    {
+      "startSeconds": 78.9,
+      "text": "using several different strategies round"
+    },
+    {
+      "startSeconds": 82.02,
+      "text": "robin servers are assigned in a"
+    },
+    {
+      "startSeconds": 84.54,
+      "text": "repeating sequence so the next server"
+    },
+    {
+      "startSeconds": 86.28,
+      "text": "assigned is guaranteed to be the least"
+    },
+    {
+      "startSeconds": 88.32,
+      "text": "recently used"
+    },
+    {
+      "startSeconds": 89.64,
+      "text": "lease connections this assigns the"
+    },
+    {
+      "startSeconds": 91.979,
+      "text": "server currently handling the fewest"
+    },
+    {
+      "startSeconds": 93.72,
+      "text": "number of requests consistent hashing"
+    },
+    {
+      "startSeconds": 96.299,
+      "text": "similar to database sharding the server"
+    },
+    {
+      "startSeconds": 98.82,
+      "text": "can be assigned consistently based on IP"
+    },
+    {
+      "startSeconds": 101.1,
+      "text": "address or URL since load balancers must"
+    },
+    {
+      "startSeconds": 103.92,
+      "text": "handle the traffic for the entire server"
+    },
+    {
+      "startSeconds": 106.14,
+      "text": "pool they need to be efficient and"
+    },
+    {
+      "startSeconds": 108.299,
+      "text": "highly available depending on the chosen"
+    },
+    {
+      "startSeconds": 110.7,
+      "text": "strategy and performance requirements"
+    },
+    {
+      "startSeconds": 112.5,
+      "text": "load balancers can operate at higher or"
+    },
+    {
+      "startSeconds": 115.14,
+      "text": "lower Network layers such as HTTP or TCP"
+    },
+    {
+      "startSeconds": 118.38,
+      "text": "they can even be implemented in Hardware"
+    },
+    {
+      "startSeconds": 120.54,
+      "text": "engineering teams typically don't"
+    },
+    {
+      "startSeconds": 122.64,
+      "text": "Implement their own load balancers"
+    },
+    {
+      "startSeconds": 124.259,
+      "text": "instead they use an industry standard"
+    },
+    {
+      "startSeconds": 126.54,
+      "text": "reverse proxy like AJ proxy or nginx to"
+    },
+    {
+      "startSeconds": 129.899,
+      "text": "perform load balancing and other"
+    },
+    {
+      "startSeconds": 131.58,
+      "text": "functions such as SSL termination and"
+    },
+    {
+      "startSeconds": 134.22,
+      "text": "health checks most Cloud providers also"
+    },
+    {
+      "startSeconds": 136.56,
+      "text": "offer out-of-the-box load balancers such"
+    },
+    {
+      "startSeconds": 138.599,
+      "text": "as Amazon's elastic load balancer so"
+    },
+    {
+      "startSeconds": 141.72,
+      "text": "when should you use a load balancer"
+    },
+    {
+      "startSeconds": 144.48,
+      "text": "you should use a load balancer whenever"
+    },
+    {
+      "startSeconds": 146.64,
+      "text": "you think the system you're designing"
+    },
+    {
+      "startSeconds": 148.2,
+      "text": "would benefit from increased capacity or"
+    },
+    {
+      "startSeconds": 150.599,
+      "text": "redundancy often load balancers sit"
+    },
+    {
+      "startSeconds": 153.54,
+      "text": "right between external traffic and the"
+    },
+    {
+      "startSeconds": 155.819,
+      "text": "application servers in a microservice"
+    },
+    {
+      "startSeconds": 158.04,
+      "text": "architecture it's important to use load"
+    },
+    {
+      "startSeconds": 160.5,
+      "text": "balancers in front of each internal"
+    },
+    {
+      "startSeconds": 162.9,
+      "text": "service so that every part of the system"
+    },
+    {
+      "startSeconds": 164.64,
+      "text": "can be scaled independently"
+    },
+    {
+      "startSeconds": 166.8,
+      "text": "be aware though that load balancing"
+    },
+    {
+      "startSeconds": 168.84,
+      "text": "cannot solve many scaling problems in"
+    },
+    {
+      "startSeconds": 171.18,
+      "text": "system design for example an application"
+    },
+    {
+      "startSeconds": 173.94,
+      "text": "can also succumb to database performance"
+    },
+    {
+      "startSeconds": 176.519,
+      "text": "algorithmic complexity and other types"
+    },
+    {
+      "startSeconds": 179.16,
+      "text": "of resource contention adding more web"
+    },
+    {
+      "startSeconds": 181.68,
+      "text": "servers won't compensate for inefficient"
+    },
+    {
+      "startSeconds": 183.9,
+      "text": "calculations slow database queries or"
+    },
+    {
+      "startSeconds": 187.26,
+      "text": "unreliable third-party apis in these"
+    },
+    {
+      "startSeconds": 189.959,
+      "text": "cases designing a system that can"
+    },
+    {
+      "startSeconds": 191.7,
+      "text": "process tasks asynchronously such as a"
+    },
+    {
+      "startSeconds": 194.459,
+      "text": "job queue may be necessary keep in mind"
+    },
+    {
+      "startSeconds": 197.04,
+      "text": "that load balancing is distinct from"
+    },
+    {
+      "startSeconds": 199.08,
+      "text": "rate limiting when traffic is"
+    },
+    {
+      "startSeconds": 201.06,
+      "text": "intentionally throttled or dropped to"
+    },
+    {
+      "startSeconds": 203.04,
+      "text": "prevent abuse by a particular user or"
+    },
+    {
+      "startSeconds": 205.319,
+      "text": "organization so what are some advantages"
+    },
+    {
+      "startSeconds": 207.78,
+      "text": "of load balancers scalability load"
+    },
+    {
+      "startSeconds": 210.959,
+      "text": "balancers make it easier to scale up and"
+    },
+    {
+      "startSeconds": 213.06,
+      "text": "down with Demand by adding or removing"
+    },
+    {
+      "startSeconds": 214.92,
+      "text": "back-end servers reliability load"
+    },
+    {
+      "startSeconds": 217.92,
+      "text": "balancers provide redundancy and can"
+    },
+    {
+      "startSeconds": 220.019,
+      "text": "minimize downtime by automatically"
+    },
+    {
+      "startSeconds": 221.7,
+      "text": "detecting and replacing unhealthy"
+    },
+    {
+      "startSeconds": 223.62,
+      "text": "servers performance by Distributing the"
+    },
+    {
+      "startSeconds": 227.04,
+      "text": "workload evenly across servers load"
+    },
+    {
+      "startSeconds": 229.08,
+      "text": "balancers can improve the average"
+    },
+    {
+      "startSeconds": 230.64,
+      "text": "response time what are some"
+    },
+    {
+      "startSeconds": 232.5,
+      "text": "considerations when using a load"
+    },
+    {
+      "startSeconds": 234.299,
+      "text": "balancer as scale increases load"
+    },
+    {
+      "startSeconds": 236.7,
+      "text": "balancers can themselves become a"
+    },
+    {
+      "startSeconds": 238.62,
+      "text": "bottleneck or single point of failure so"
+    },
+    {
+      "startSeconds": 241.44,
+      "text": "multiple load balancers must be used to"
+    },
+    {
+      "startSeconds": 243.54,
+      "text": "guarantee availability DNS round robin"
+    },
+    {
+      "startSeconds": 246.239,
+      "text": "can be used to balance traffic across"
+    },
+    {
+      "startSeconds": 248.519,
+      "text": "different load balancers additionally"
+    },
+    {
+      "startSeconds": 250.5,
+      "text": "the same user's requests can be served"
+    },
+    {
+      "startSeconds": 253.439,
+      "text": "from different back ends unless the load"
+    },
+    {
+      "startSeconds": 255.54,
+      "text": "balancer is configured otherwise this"
+    },
+    {
+      "startSeconds": 257.94,
+      "text": "could be problematic for applications"
+    },
+    {
+      "startSeconds": 259.739,
+      "text": "that rely on session data that isn't"
+    },
+    {
+      "startSeconds": 261.78,
+      "text": "shared across servers finally deploying"
+    },
+    {
+      "startSeconds": 265.259,
+      "text": "new server versions can take longer and"
+    },
+    {
+      "startSeconds": 267.419,
+      "text": "require more machines this is because"
+    },
+    {
+      "startSeconds": 269.46,
+      "text": "the load balancer needs to roll over"
+    },
+    {
+      "startSeconds": 271.32,
+      "text": "traffic to the new servers and drain"
+    },
+    {
+      "startSeconds": 273.96,
+      "text": "requests from the old machines and there"
+    },
+    {
+      "startSeconds": 276,
+      "text": "you have it an overview of load"
+    },
+    {
+      "startSeconds": 278.04,
+      "text": "balancers and how to build more scalable"
+    },
+    {
+      "startSeconds": 280.139,
+      "text": "web applications"
+    }
+  ]
+}

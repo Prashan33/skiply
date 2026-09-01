@@ -1,0 +1,1358 @@
+{
+  "id": "FAnQTgr04mU",
+  "url": "https://www.youtube.com/watch?v=FAnQTgr04mU",
+  "fetchedAt": "2026-09-01T04:09:38.773Z",
+  "captionKind": "asr",
+  "chapters": [
+    {
+      "startSeconds": 0,
+      "label": "Intro"
+    },
+    {
+      "startSeconds": 13,
+      "label": "Configuration Files usages in pods"
+    },
+    {
+      "startSeconds": 73,
+      "label": "ConfigMap and Secret creating individual values (key-value pairs) for env variables"
+    },
+    {
+      "startSeconds": 160,
+      "label": "ConfigMap and Secret creating files for mounting them into the pod"
+    },
+    {
+      "startSeconds": 884,
+      "label": "Summary"
+    }
+  ],
+  "cues": [
+    {
+      "startSeconds": 0.03,
+      "text": "in this video I will show you how to"
+    },
+    {
+      "startSeconds": 1.92,
+      "text": "create config map and secret volumes and"
+    },
+    {
+      "startSeconds": 4.5,
+      "text": "how to use them in pots I'm gonna give"
+    },
+    {
+      "startSeconds": 6.99,
+      "text": "you some real-life use cases and show"
+    },
+    {
+      "startSeconds": 9.389,
+      "text": "you the syntax of using volumes in a pod"
+    },
+    {
+      "startSeconds": 11.88,
+      "text": "configuration think of applications that"
+    },
+    {
+      "startSeconds": 14.79,
+      "text": "take configuration files as parameter"
+    },
+    {
+      "startSeconds": 17.369,
+      "text": "when they start like Prometheus"
+    },
+    {
+      "startSeconds": 20.06,
+      "text": "elasticsearch mosquito message broker"
+    },
+    {
+      "startSeconds": 23.51,
+      "text": "nginx or your own JavaScript or Java"
+    },
+    {
+      "startSeconds": 26.22,
+      "text": "application that has properties files or"
+    },
+    {
+      "startSeconds": 29.39,
+      "text": "applications that need a configuration"
+    },
+    {
+      "startSeconds": 31.56,
+      "text": "file with sensitive data like if you"
+    },
+    {
+      "startSeconds": 34.38,
+      "text": "have an application with ten external"
+    },
+    {
+      "startSeconds": 36.809,
+      "text": "services that it communicates with which"
+    },
+    {
+      "startSeconds": 39.75,
+      "text": "are all secured so you have a passwords"
+    },
+    {
+      "startSeconds": 42.45,
+      "text": "properties file with all these"
+    },
+    {
+      "startSeconds": 44.28,
+      "text": "credentials or maybe an application"
+    },
+    {
+      "startSeconds": 47.01,
+      "text": "needs a client certificate file to"
+    },
+    {
+      "startSeconds": 50.19,
+      "text": "communicate with an internal secured"
+    },
+    {
+      "startSeconds": 52.079,
+      "text": "service now how do you configure that or"
+    },
+    {
+      "startSeconds": 55.079,
+      "text": "pass these files to the kubernetes pots"
+    },
+    {
+      "startSeconds": 57.989,
+      "text": "and these are actually scenarios that I"
+    },
+    {
+      "startSeconds": 60.51,
+      "text": "have used very often when setting up"
+    },
+    {
+      "startSeconds": 63.09,
+      "text": "kubernetes clusters because many"
+    },
+    {
+      "startSeconds": 65.7,
+      "text": "services that you deploy in kubernetes"
+    },
+    {
+      "startSeconds": 67.799,
+      "text": "will have configuration files so it's"
+    },
+    {
+      "startSeconds": 71.159,
+      "text": "important to know these concepts if you"
+    },
+    {
+      "startSeconds": 73.92,
+      "text": "have seen my other video about"
+    },
+    {
+      "startSeconds": 75.36,
+      "text": "kubernetes main components including"
+    },
+    {
+      "startSeconds": 78.06,
+      "text": "config map and secret you know they are"
+    },
+    {
+      "startSeconds": 80.25,
+      "text": "used for external configuration of"
+    },
+    {
+      "startSeconds": 82.759,
+      "text": "individual values like this and you can"
+    },
+    {
+      "startSeconds": 87.63,
+      "text": "check out that video right here so this"
+    },
+    {
+      "startSeconds": 90.27,
+      "text": "is a MongoDB config map that has one key"
+    },
+    {
+      "startSeconds": 94.02,
+      "text": "value pair which is database host and"
+    },
+    {
+      "startSeconds": 96.81,
+      "text": "then you have secret for MongoDB as well"
+    },
+    {
+      "startSeconds": 100.17,
+      "text": "with username and password key value"
+    },
+    {
+      "startSeconds": 102.869,
+      "text": "pairs now note these are individual"
+    },
+    {
+      "startSeconds": 105.24,
+      "text": "values and the way we use that in the"
+    },
+    {
+      "startSeconds": 108.149,
+      "text": "pod configuration was like this so this"
+    },
+    {
+      "startSeconds": 112.2,
+      "text": "is a container where Express would"
+    },
+    {
+      "startSeconds": 115.35,
+      "text": "start and the Express can"
+    },
+    {
+      "startSeconds": 117.659,
+      "text": "reference these values this individual"
+    },
+    {
+      "startSeconds": 119.85,
+      "text": "key value pairs like this so this"
+    },
+    {
+      "startSeconds": 123.03,
+      "text": "individual values are used as values for"
+    },
+    {
+      "startSeconds": 126.39,
+      "text": "the environmental variables that"
+    },
+    {
+      "startSeconds": 129.259,
+      "text": "configure Express application in"
+    },
+    {
+      "startSeconds": 132.69,
+      "text": "this case"
+    },
+    {
+      "startSeconds": 133.8,
+      "text": "so you have the environmental variable"
+    },
+    {
+      "startSeconds": 135.69,
+      "text": "and we take the value of that from the"
+    },
+    {
+      "startSeconds": 138,
+      "text": "secret referencing the name of the"
+    },
+    {
+      "startSeconds": 140.37,
+      "text": "secret and the key inside the secret in"
+    },
+    {
+      "startSeconds": 144.99,
+      "text": "the same way we use the config map so"
+    },
+    {
+      "startSeconds": 148.56,
+      "text": "this is one specific use case of config"
+    },
+    {
+      "startSeconds": 151.41,
+      "text": "maps and secrets however these are"
+    },
+    {
+      "startSeconds": 153.54,
+      "text": "individual values and not files that"
+    },
+    {
+      "startSeconds": 156.21,
+      "text": "application in the pod container can"
+    },
+    {
+      "startSeconds": 158.76,
+      "text": "read"
+    },
+    {
+      "startSeconds": 160.2,
+      "text": "so with config map in secret you can"
+    },
+    {
+      "startSeconds": 162.42,
+      "text": "create individual key value pairs but"
+    },
+    {
+      "startSeconds": 165.09,
+      "text": "you can also create files that can be"
+    },
+    {
+      "startSeconds": 167.099,
+      "text": "mounted into the pod and then into the"
+    },
+    {
+      "startSeconds": 169.59,
+      "text": "container so that application in that"
+    },
+    {
+      "startSeconds": 172.05,
+      "text": "container can access it and you can do"
+    },
+    {
+      "startSeconds": 175.2,
+      "text": "that like this so we have the same"
+    },
+    {
+      "startSeconds": 177.63,
+      "text": "config component and instead of defining"
+    },
+    {
+      "startSeconds": 181.95,
+      "text": "here key value pairs we define the name"
+    },
+    {
+      "startSeconds": 184.92,
+      "text": "of that file"
+    },
+    {
+      "startSeconds": 186.09,
+      "text": "this is gonna be mosquito conf and these"
+    },
+    {
+      "startSeconds": 189.84,
+      "text": "are gonna be the contents of that file"
+    },
+    {
+      "startSeconds": 192.39,
+      "text": "know this pipe syntax right here so this"
+    },
+    {
+      "startSeconds": 196.35,
+      "text": "is whatever is gonna be inside that file"
+    },
+    {
+      "startSeconds": 199.44,
+      "text": "in the same way we can create secret"
+    },
+    {
+      "startSeconds": 202.29,
+      "text": "files like this so we have the same"
+    },
+    {
+      "startSeconds": 204.959,
+      "text": "secret kind and this is gonna be the"
+    },
+    {
+      "startSeconds": 208.35,
+      "text": "file name we're just gonna call it"
+    },
+    {
+      "startSeconds": 210.45,
+      "text": "secret that file could be passwords file"
+    },
+    {
+      "startSeconds": 212.85,
+      "text": "whatever and this is gonna be a value or"
+    },
+    {
+      "startSeconds": 216.239,
+      "text": "secret the contents of that file base64"
+    },
+    {
+      "startSeconds": 220.319,
+      "text": "encoded because this is how you set the"
+    },
+    {
+      "startSeconds": 222.75,
+      "text": "value in the secret component and"
+    },
+    {
+      "startSeconds": 225.12,
+      "text": "another use case as I mentioned is"
+    },
+    {
+      "startSeconds": 228.12,
+      "text": "sometimes you need client certificates"
+    },
+    {
+      "startSeconds": 230.25,
+      "text": "for your services"
+    },
+    {
+      "startSeconds": 231.239,
+      "text": "so that they can communicate with other"
+    },
+    {
+      "startSeconds": 233.01,
+      "text": "secured services and this way you can"
+    },
+    {
+      "startSeconds": 235.709,
+      "text": "create a single component where let's"
+    },
+    {
+      "startSeconds": 238.35,
+      "text": "say you define a CA certificate or"
+    },
+    {
+      "startSeconds": 240.799,
+      "text": "client certificate file and here just"
+    },
+    {
+      "startSeconds": 244.23,
+      "text": "paste in the base64 encoded contents of"
+    },
+    {
+      "startSeconds": 247.95,
+      "text": "that certificate file so I'm gonna show"
+    },
+    {
+      "startSeconds": 250.47,
+      "text": "you all these now in practice and for"
+    },
+    {
+      "startSeconds": 252.87,
+      "text": "this demo I'm gonna use mosquito which"
+    },
+    {
+      "startSeconds": 255,
+      "text": "is a message broker and mosquito like"
+    },
+    {
+      "startSeconds": 258.39,
+      "text": "many other services has a configuration"
+    },
+    {
+      "startSeconds": 261,
+      "text": "file where you can configure different"
+    },
+    {
+      "startSeconds": 262.95,
+      "text": "stuff like what ports to open whether to"
+    },
+    {
+      "startSeconds": 266.07,
+      "text": "secure it or not mosquito-y also takes a"
+    },
+    {
+      "startSeconds": 269.34,
+      "text": "passwords file where you can configure"
+    },
+    {
+      "startSeconds": 271.32,
+      "text": "all the authentication or you can also"
+    },
+    {
+      "startSeconds": 274.289,
+      "text": "override the certificate files of"
+    },
+    {
+      "startSeconds": 276.81,
+      "text": "mosquito and so we're gonna create a"
+    },
+    {
+      "startSeconds": 280.11,
+      "text": "config file and a secret file for"
+    },
+    {
+      "startSeconds": 282.93,
+      "text": "mosquito port right so we're gonna use"
+    },
+    {
+      "startSeconds": 286.32,
+      "text": "these two files and mount them into"
+    },
+    {
+      "startSeconds": 289.11,
+      "text": "mosquito pod but to see that first let's"
+    },
+    {
+      "startSeconds": 293.37,
+      "text": "actually"
+    },
+    {
+      "startSeconds": 293.95,
+      "text": "mosquito without any volumes so no files"
+    },
+    {
+      "startSeconds": 297.67,
+      "text": "mounted inside it it's just a default"
+    },
+    {
+      "startSeconds": 300.03,
+      "text": "mosquito container that starts without"
+    },
+    {
+      "startSeconds": 302.41,
+      "text": "any persistent so I'm gonna head over to"
+    },
+    {
+      "startSeconds": 304.84,
+      "text": "mini cube I have a mini cube cluster set"
+    },
+    {
+      "startSeconds": 308.17,
+      "text": "up if you want to know how to set up"
+    },
+    {
+      "startSeconds": 310.24,
+      "text": "mini cube cluster I have a separate"
+    },
+    {
+      "startSeconds": 311.71,
+      "text": "video about that so you can check that"
+    },
+    {
+      "startSeconds": 313.06,
+      "text": "out so if all the configuration files"
+    },
+    {
+      "startSeconds": 315.22,
+      "text": "already prepared for me here so that I"
+    },
+    {
+      "startSeconds": 317.59,
+      "text": "can use them and you can access all"
+    },
+    {
+      "startSeconds": 320.08,
+      "text": "these configuration files in the git"
+    },
+    {
+      "startSeconds": 321.82,
+      "text": "repository that I will link in the"
+    },
+    {
+      "startSeconds": 323.71,
+      "text": "description keep ztl apply mosquito"
+    },
+    {
+      "startSeconds": 328.69,
+      "text": "without volumes and I'm gonna have my"
+    },
+    {
+      "startSeconds": 333.82,
+      "text": "pot and now let's actually enter the"
+    },
+    {
+      "startSeconds": 338.02,
+      "text": "container or get the terminal and let's"
+    },
+    {
+      "startSeconds": 350.02,
+      "text": "see its filesystem so I'm gonna LS and"
+    },
+    {
+      "startSeconds": 353.14,
+      "text": "here I see a mosquito a pre-configured"
+    },
+    {
+      "startSeconds": 355.87,
+      "text": "mosquito directory let's actually go"
+    },
+    {
+      "startSeconds": 358.09,
+      "text": "inside and see what it's there and there"
+    },
+    {
+      "startSeconds": 361.3,
+      "text": "is a config folder data and lock folder"
+    },
+    {
+      "startSeconds": 364.3,
+      "text": "so this is all by default so this is"
+    },
+    {
+      "startSeconds": 366.64,
+      "text": "already configured in the image I'm"
+    },
+    {
+      "startSeconds": 368.71,
+      "text": "using an eclipse mosquito image this is"
+    },
+    {
+      "startSeconds": 371.08,
+      "text": "already pre configured there and if I go"
+    },
+    {
+      "startSeconds": 373.09,
+      "text": "into the config directory I see a"
+    },
+    {
+      "startSeconds": 375.55,
+      "text": "mosquito dot conf file and default this"
+    },
+    {
+      "startSeconds": 380.26,
+      "text": "comes with just commented out contents"
+    },
+    {
+      "startSeconds": 384.88,
+      "text": "of its attributes and description so"
+    },
+    {
+      "startSeconds": 387.04,
+      "text": "basically there is just description of"
+    },
+    {
+      "startSeconds": 390.4,
+      "text": "bunch of defaults here nothing is really"
+    },
+    {
+      "startSeconds": 393.42,
+      "text": "set so now we saw the default structure"
+    },
+    {
+      "startSeconds": 397.6,
+      "text": "let's actually go out and I'm gonna"
+    },
+    {
+      "startSeconds": 400.81,
+      "text": "delete that using the same file so and"
+    },
+    {
+      "startSeconds": 413.61,
+      "text": "now we just saw how the default"
+    },
+    {
+      "startSeconds": 416.35,
+      "text": "configuration in mosquito looks like and"
+    },
+    {
+      "startSeconds": 418.9,
+      "text": "we're gonna now overwrite that mosquito"
+    },
+    {
+      "startSeconds": 421.9,
+      "text": "file using the config map by mounting it"
+    },
+    {
+      "startSeconds": 425.62,
+      "text": "into the container"
+    },
+    {
+      "startSeconds": 428.95,
+      "text": "I'm going to clear that and one thing to"
+    },
+    {
+      "startSeconds": 433.01,
+      "text": "note here is that obviously before you"
+    },
+    {
+      "startSeconds": 435.74,
+      "text": "can use or reference config method"
+    },
+    {
+      "startSeconds": 438.53,
+      "text": "secrets inside your a pod you have to"
+    },
+    {
+      "startSeconds": 442.73,
+      "text": "create them so they have to be in the"
+    },
+    {
+      "startSeconds": 444.68,
+      "text": "cluster when the pod starts"
+    },
+    {
+      "startSeconds": 447.56,
+      "text": "otherwise you will get errors that the"
+    },
+    {
+      "startSeconds": 450.23,
+      "text": "config map or secrets component can be"
+    },
+    {
+      "startSeconds": 453.74,
+      "text": "found so let's actually go ahead and"
+    },
+    {
+      "startSeconds": 455.69,
+      "text": "create this two and secret and we can"
+    },
+    {
+      "startSeconds": 469.58,
+      "text": "actually check these are components like"
+    },
+    {
+      "startSeconds": 473.51,
+      "text": "this get secret and keep city I'll get"
+    },
+    {
+      "startSeconds": 479.03,
+      "text": "config map will give you mosquito config"
+    },
+    {
+      "startSeconds": 483.29,
+      "text": "file and I have another one in the"
+    },
+    {
+      "startSeconds": 485.18,
+      "text": "cluster okay so now we have those two"
+    },
+    {
+      "startSeconds": 489.68,
+      "text": "files ready or resources ready in the"
+    },
+    {
+      "startSeconds": 492.59,
+      "text": "cluster now we have to go back and"
+    },
+    {
+      "startSeconds": 494.75,
+      "text": "create a mosquito deployment that uses"
+    },
+    {
+      "startSeconds": 498.59,
+      "text": "these two files right so this is a"
+    },
+    {
+      "startSeconds": 502.22,
+      "text": "mosquito deployment which is exactly the"
+    },
+    {
+      "startSeconds": 504.98,
+      "text": "same as this one here the same image the"
+    },
+    {
+      "startSeconds": 508.31,
+      "text": "same configuration same port so what"
+    },
+    {
+      "startSeconds": 512.48,
+      "text": "we're going to do here is add volumes to"
+    },
+    {
+      "startSeconds": 515.93,
+      "text": "this configuration and the way to do"
+    },
+    {
+      "startSeconds": 518.57,
+      "text": "that is using volumes attribute at the"
+    },
+    {
+      "startSeconds": 522.23,
+      "text": "containers level so remember this is a"
+    },
+    {
+      "startSeconds": 525.02,
+      "text": "specification of the pod and inside the"
+    },
+    {
+      "startSeconds": 528.95,
+      "text": "pod specification we define volumes and"
+    },
+    {
+      "startSeconds": 531.97,
+      "text": "here we list all the volumes that we"
+    },
+    {
+      "startSeconds": 536.9,
+      "text": "want to mount into that pod and we just"
+    },
+    {
+      "startSeconds": 540.5,
+      "text": "give it names like let's call this"
+    },
+    {
+      "startSeconds": 542.42,
+      "text": "mosquito config and this is the type of"
+    },
+    {
+      "startSeconds": 550.37,
+      "text": "volume that you want to mount into that"
+    },
+    {
+      "startSeconds": 553.55,
+      "text": "part if you want to see the complete"
+    },
+    {
+      "startSeconds": 556.01,
+      "text": "overview of volumes and different types"
+    },
+    {
+      "startSeconds": 559.19,
+      "text": "of them you can check out my other"
+    },
+    {
+      "startSeconds": 560.99,
+      "text": "video where explained the volume"
+    },
+    {
+      "startSeconds": 562.61,
+      "text": "components so here we're mounting config"
+    },
+    {
+      "startSeconds": 565.85,
+      "text": "for limb type so I'm gonna write config"
+    },
+    {
+      "startSeconds": 568.58,
+      "text": "map and the name of that config map is"
+    },
+    {
+      "startSeconds": 573.25,
+      "text": "this one right here and that's it we"
+    },
+    {
+      "startSeconds": 577.97,
+      "text": "mounted fathered this config map created"
+    },
+    {
+      "startSeconds": 580.7,
+      "text": "into the pod and now let's do the same"
+    },
+    {
+      "startSeconds": 583.91,
+      "text": "for the secret let's call it mosquitos"
+    },
+    {
+      "startSeconds": 587.69,
+      "text": "secret and the attribute for secret this"
+    },
+    {
+      "startSeconds": 594.89,
+      "text": "is again the volume type secret and the"
+    },
+    {
+      "startSeconds": 597.89,
+      "text": "attribute is secret name and this is the"
+    },
+    {
+      "startSeconds": 603.26,
+      "text": "name and this is basically just some"
+    },
+    {
+      "startSeconds": 605.029,
+      "text": "random secret file that we are creating"
+    },
+    {
+      "startSeconds": 607.76,
+      "text": "just for the demonstration okay so now I"
+    },
+    {
+      "startSeconds": 610.64,
+      "text": "have both volume types mounted into the"
+    },
+    {
+      "startSeconds": 613.43,
+      "text": "pot the next step is that now you have"
+    },
+    {
+      "startSeconds": 616.61,
+      "text": "to mount those volumes inside the"
+    },
+    {
+      "startSeconds": 619.22,
+      "text": "container because the application is"
+    },
+    {
+      "startSeconds": 621.23,
+      "text": "actually running inside the container so"
+    },
+    {
+      "startSeconds": 623.48,
+      "text": "if we want the application to use that"
+    },
+    {
+      "startSeconds": 626.42,
+      "text": "we have to mount whatever's available"
+    },
+    {
+      "startSeconds": 628.97,
+      "text": "here inside the container and the way to"
+    },
+    {
+      "startSeconds": 631.76,
+      "text": "do that is inside each individual"
+    },
+    {
+      "startSeconds": 634.61,
+      "text": "container so you may have a list of"
+    },
+    {
+      "startSeconds": 636.77,
+      "text": "containers here so you have to do that"
+    },
+    {
+      "startSeconds": 638.87,
+      "text": "for each individual container so we have"
+    },
+    {
+      "startSeconds": 641.66,
+      "text": "just one here and inside that I'm gonna"
+    },
+    {
+      "startSeconds": 644.329,
+      "text": "create volume mounts attribute with"
+    },
+    {
+      "startSeconds": 649.339,
+      "text": "camelcase"
+    },
+    {
+      "startSeconds": 650.06,
+      "text": "like this and here again I'm gonna list"
+    },
+    {
+      "startSeconds": 654.649,
+      "text": "all the volumes that I want to mount"
+    },
+    {
+      "startSeconds": 656.899,
+      "text": "from pot to container now obviously you"
+    },
+    {
+      "startSeconds": 660.47,
+      "text": "can't mount into the container anything"
+    },
+    {
+      "startSeconds": 662.63,
+      "text": "that you don't have available inside the"
+    },
+    {
+      "startSeconds": 664.97,
+      "text": "pot so here I'm gonna against a name and"
+    },
+    {
+      "startSeconds": 668.42,
+      "text": "this name here is gonna be the name that"
+    },
+    {
+      "startSeconds": 672.079,
+      "text": "we defined here so it's gonna be you"
+    },
+    {
+      "startSeconds": 676.31,
+      "text": "know call and the second attribute is"
+    },
+    {
+      "startSeconds": 679.13,
+      "text": "mount path in the beginning I showed you"
+    },
+    {
+      "startSeconds": 683.87,
+      "text": "the file system or mosquito container"
+    },
+    {
+      "startSeconds": 686.24,
+      "text": "and we saw there was a mosquito"
+    },
+    {
+      "startSeconds": 688.42,
+      "text": "directory with config in it so mount"
+    },
+    {
+      "startSeconds": 692.12,
+      "text": "path references the path"
+    },
+    {
+      "startSeconds": 694.83,
+      "text": "file system inside the container where"
+    },
+    {
+      "startSeconds": 697.89,
+      "text": "we want this file to end up so we saw"
+    },
+    {
+      "startSeconds": 702.54,
+      "text": "that mosquito conf is inside the /"
+    },
+    {
+      "startSeconds": 705.68,
+      "text": "mosquito / config and we want to"
+    },
+    {
+      "startSeconds": 709.5,
+      "text": "overwrite that so that's gonna be the"
+    },
+    {
+      "startSeconds": 711.84,
+      "text": "mount path and we're gonna do the same"
+    },
+    {
+      "startSeconds": 714.27,
+      "text": "for the secret so I'm gonna copy that so"
+    },
+    {
+      "startSeconds": 721.71,
+      "text": "this is the name and mount path mosquito"
+    },
+    {
+      "startSeconds": 727.32,
+      "text": "and let's actually create a secret"
+    },
+    {
+      "startSeconds": 730.5,
+      "text": "folder inside which doesn't exist yet"
+    },
+    {
+      "startSeconds": 733.95,
+      "text": "and then this file the secret dot file"
+    },
+    {
+      "startSeconds": 737.67,
+      "text": "is going to be available inside that"
+    },
+    {
+      "startSeconds": 739.86,
+      "text": "directory in the container and that's it"
+    },
+    {
+      "startSeconds": 743.07,
+      "text": "you can also add additional attributes"
+    },
+    {
+      "startSeconds": 744.93,
+      "text": "here for example one very common case is"
+    },
+    {
+      "startSeconds": 748.59,
+      "text": "that for example when you're mounting a"
+    },
+    {
+      "startSeconds": 750.98,
+      "text": "client certificate which is maybe used"
+    },
+    {
+      "startSeconds": 753.99,
+      "text": "in many different applications you may"
+    },
+    {
+      "startSeconds": 757.17,
+      "text": "want to add a read-only attribute to"
+    },
+    {
+      "startSeconds": 759.69,
+      "text": "that which makes sense because you don't"
+    },
+    {
+      "startSeconds": 761.4,
+      "text": "want the applications to modify those"
+    },
+    {
+      "startSeconds": 764.9,
+      "text": "certificate files they're just there for"
+    },
+    {
+      "startSeconds": 767.45,
+      "text": "reading so you can add read-only true"
+    },
+    {
+      "startSeconds": 771.39,
+      "text": "attribute to that same could be done for"
+    },
+    {
+      "startSeconds": 774.33,
+      "text": "configuration files that are not meant"
+    },
+    {
+      "startSeconds": 776.07,
+      "text": "to be changed by the application so"
+    },
+    {
+      "startSeconds": 778.38,
+      "text": "let's add that attribute there and this"
+    },
+    {
+      "startSeconds": 781.17,
+      "text": "is it so we're done mounting the"
+    },
+    {
+      "startSeconds": 784.85,
+      "text": "configuration file created using config"
+    },
+    {
+      "startSeconds": 787.92,
+      "text": "map component and the secret file which"
+    },
+    {
+      "startSeconds": 790.77,
+      "text": "we just created random one inside the"
+    },
+    {
+      "startSeconds": 792.9,
+      "text": "pod and inside the container application"
+    },
+    {
+      "startSeconds": 795.45,
+      "text": "and obviously the path value depends on"
+    },
+    {
+      "startSeconds": 799.44,
+      "text": "the application for example if you have"
+    },
+    {
+      "startSeconds": 800.91,
+      "text": "elasticsearch it has a default config"
+    },
+    {
+      "startSeconds": 803.4,
+      "text": "location it's I believe slash ATC slash"
+    },
+    {
+      "startSeconds": 807.12,
+      "text": "elasticsearch so the config location"
+    },
+    {
+      "startSeconds": 809.94,
+      "text": "will be different for nginx it's etc'"
+    },
+    {
+      "startSeconds": 812.61,
+      "text": "nginx etc same with secret for example"
+    },
+    {
+      "startSeconds": 816.3,
+      "text": "if you have your own application that"
+    },
+    {
+      "startSeconds": 817.98,
+      "text": "expects passwords file at a specific"
+    },
+    {
+      "startSeconds": 820.38,
+      "text": "location then you want to mount that"
+    },
+    {
+      "startSeconds": 822.75,
+      "text": "secret in to that specific location so"
+    },
+    {
+      "startSeconds": 825.84,
+      "text": "that the application can find it this"
+    },
+    {
+      "startSeconds": 828.57,
+      "text": "con"
+    },
+    {
+      "startSeconds": 828.93,
+      "text": "cept here of first mounting the volumes"
+    },
+    {
+      "startSeconds": 830.79,
+      "text": "in the pot and then mounting into the"
+    },
+    {
+      "startSeconds": 832.89,
+      "text": "container basically is useful if you"
+    },
+    {
+      "startSeconds": 835.62,
+      "text": "have multiple containers you can decide"
+    },
+    {
+      "startSeconds": 837.44,
+      "text": "which container gets access to which"
+    },
+    {
+      "startSeconds": 841.32,
+      "text": "volumes that pot has available so you"
+    },
+    {
+      "startSeconds": 844.32,
+      "text": "can actually decide to give one"
+    },
+    {
+      "startSeconds": 846.18,
+      "text": "container one volume access to one"
+    },
+    {
+      "startSeconds": 849,
+      "text": "storage or not give the container access"
+    },
+    {
+      "startSeconds": 851.88,
+      "text": "to a certain storage okay so the"
+    },
+    {
+      "startSeconds": 854.52,
+      "text": "mosquito deployment file is ready so"
+    },
+    {
+      "startSeconds": 856.709,
+      "text": "let's actually create that so I'm gonna"
+    },
+    {
+      "startSeconds": 858.75,
+      "text": "head back to the mini cube and supply"
+    },
+    {
+      "startSeconds": 862.649,
+      "text": "mosquito"
+    },
+    {
+      "startSeconds": 869.959,
+      "text": "so let's actually get in the container"
+    },
+    {
+      "startSeconds": 872.67,
+      "text": "again so exact so Bash is not available"
+    },
+    {
+      "startSeconds": 888.93,
+      "text": "so we're gonna go with Sh and here let's"
+    },
+    {
+      "startSeconds": 893.79,
+      "text": "go inside the mosquito again and first"
+    },
+    {
+      "startSeconds": 898.23,
+      "text": "we'll see the secret directory that"
+    },
+    {
+      "startSeconds": 900.45,
+      "text": "wasn't here before"
+    },
+    {
+      "startSeconds": 901.44,
+      "text": "let's go inside and here we have the"
+    },
+    {
+      "startSeconds": 905.07,
+      "text": "secret dot file that we created with"
+    },
+    {
+      "startSeconds": 907.74,
+      "text": "basics different coded content and let's"
+    },
+    {
+      "startSeconds": 909.87,
+      "text": "see what's in there and there is a plain"
+    },
+    {
+      "startSeconds": 913.08,
+      "text": "text contents of that file which says"
+    },
+    {
+      "startSeconds": 916.86,
+      "text": "super secret nobody should see ok and"
+    },
+    {
+      "startSeconds": 920.4,
+      "text": "now let's go back to mosquito and config"
+    },
+    {
+      "startSeconds": 925.65,
+      "text": "folder and here previously was this"
+    },
+    {
+      "startSeconds": 930.18,
+      "text": "default configuration file that we"
+    },
+    {
+      "startSeconds": 931.89,
+      "text": "overrode if I display that these are the"
+    },
+    {
+      "startSeconds": 936.06,
+      "text": "contents of the new configuration file"
+    },
+    {
+      "startSeconds": 938.55,
+      "text": "that we mounted that mosquito now uses"
+    },
+    {
+      "startSeconds": 942.089,
+      "text": "so to summarize what we saw in this"
+    },
+    {
+      "startSeconds": 944.82,
+      "text": "video is config map and secret"
+    },
+    {
+      "startSeconds": 947.93,
+      "text": "components in kubernetes are used both"
+    },
+    {
+      "startSeconds": 951.089,
+      "text": "to create individual key pair values"
+    },
+    {
+      "startSeconds": 953.94,
+      "text": "that you can use as values of"
+    },
+    {
+      "startSeconds": 955.68,
+      "text": "environments of variables for example in"
+    },
+    {
+      "startSeconds": 957.839,
+      "text": "your pods configuration or you can"
+    },
+    {
+      "startSeconds": 960.6,
+      "text": "create files from them"
+    },
+    {
+      "startSeconds": 962.55,
+      "text": "that you can then pass in as a"
+    },
+    {
+      "startSeconds": 965.04,
+      "text": "configuration file to your application"
+    },
+    {
+      "startSeconds": 967.019,
+      "text": "which as I mentioned is a use case that"
+    },
+    {
+      "startSeconds": 970.26,
+      "text": "actually happens very frequently because"
+    },
+    {
+      "startSeconds": 972.959,
+      "text": "a lot of services take some kind of"
+    },
+    {
+      "startSeconds": 975.24,
+      "text": "external configuration file or multiple"
+    },
+    {
+      "startSeconds": 977.519,
+      "text": "configuration files and the second point"
+    },
+    {
+      "startSeconds": 980.04,
+      "text": "is the config map and secret are volume"
+    },
+    {
+      "startSeconds": 983.16,
+      "text": "types which people don't realize right"
+    },
+    {
+      "startSeconds": 985.95,
+      "text": "at the beginning because they don't look"
+    },
+    {
+      "startSeconds": 987.42,
+      "text": "like the typical volumes created with"
+    },
+    {
+      "startSeconds": 989.94,
+      "text": "volume persistent volume component but"
+    },
+    {
+      "startSeconds": 992.7,
+      "text": "there are local volume types and"
+    },
+    {
+      "startSeconds": 995.399,
+      "text": "communities so that's it for this video"
+    },
+    {
+      "startSeconds": 997.32,
+      "text": "I'm gonna create more content on how to"
+    },
+    {
+      "startSeconds": 1000.019,
+      "text": "use individual volume types like local"
+    },
+    {
+      "startSeconds": 1003.26,
+      "text": "volumes and remote volumes or cloud"
+    },
+    {
+      "startSeconds": 1005.779,
+      "text": "storage volumes for different use cases"
+    },
+    {
+      "startSeconds": 1008.149,
+      "text": "so stay tuned for that thank you for"
+    },
+    {
+      "startSeconds": 1010.67,
+      "text": "watching and see you in the next video"
+    }
+  ]
+}

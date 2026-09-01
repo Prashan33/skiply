@@ -1,0 +1,429 @@
+{
+  "id": "AOXMDbc11AE",
+  "url": "https://www.youtube.com/watch?v=AOXMDbc11AE",
+  "fetchedAt": "2026-09-01T04:10:09.503Z",
+  "captionKind": "asr",
+  "chapters": [],
+  "cues": [
+    {
+      "startSeconds": 8.559,
+      "text": "Have you ever worried about invisible"
+    },
+    {
+      "startSeconds": 10.719,
+      "text": "threats lurking in your application code"
+    },
+    {
+      "startSeconds": 13.36,
+      "text": "ready to compromise your precious data?"
+    },
+    {
+      "startSeconds": 16.16,
+      "text": "It is a common concern for developers"
+    },
+    {
+      "startSeconds": 19.039,
+      "text": "safeguarding information from malicious"
+    },
+    {
+      "startSeconds": 21.279,
+      "text": "attacks."
+    },
+    {
+      "startSeconds": 22.96,
+      "text": "Parameterized queries are your most"
+    },
+    {
+      "startSeconds": 25.199,
+      "text": "effective defense against structured"
+    },
+    {
+      "startSeconds": 27.199,
+      "text": "query language injection. They work by"
+    },
+    {
+      "startSeconds": 30,
+      "text": "fundamentally separating the structured"
+    },
+    {
+      "startSeconds": 32.079,
+      "text": "query language code from the data that"
+    },
+    {
+      "startSeconds": 34.239,
+      "text": "users provide. This critical separation"
+    },
+    {
+      "startSeconds": 37.44,
+      "text": "ensures that user input is always"
+    },
+    {
+      "startSeconds": 39.68,
+      "text": "treated as data, never as part of the"
+    },
+    {
+      "startSeconds": 42.16,
+      "text": "executable command."
+    },
+    {
+      "startSeconds": 44.399,
+      "text": "To understand why this is so powerful,"
+    },
+    {
+      "startSeconds": 47.12,
+      "text": "let us consider what structured query"
+    },
+    {
+      "startSeconds": 49.36,
+      "text": "language injection is. It is a security"
+    },
+    {
+      "startSeconds": 52.32,
+      "text": "vulnerability that allows an attacker to"
+    },
+    {
+      "startSeconds": 54.8,
+      "text": "interfere with the queries that an"
+    },
+    {
+      "startSeconds": 56.8,
+      "text": "application makes to its database. This"
+    },
+    {
+      "startSeconds": 59.68,
+      "text": "is usually done by inserting malicious"
+    },
+    {
+      "startSeconds": 61.92,
+      "text": "code into input fields which then gets"
+    },
+    {
+      "startSeconds": 64.72,
+      "text": "executed as part of a legitimate"
+    },
+    {
+      "startSeconds": 66.56,
+      "text": "database query."
+    },
+    {
+      "startSeconds": 68.64,
+      "text": "Without parameterized queries, your"
+    },
+    {
+      "startSeconds": 71.04,
+      "text": "application might construct a structured"
+    },
+    {
+      "startSeconds": 72.88,
+      "text": "query language statement by simply"
+    },
+    {
+      "startSeconds": 74.88,
+      "text": "concatenating user input directly into"
+    },
+    {
+      "startSeconds": 77.04,
+      "text": "the query string. If an attacker types"
+    },
+    {
+      "startSeconds": 79.6,
+      "text": "something like single quote O R1 equals"
+    },
+    {
+      "startSeconds": 82.479,
+      "text": "1- dash into a username field, your"
+    },
+    {
+      "startSeconds": 85.28,
+      "text": "database could be tricked into returning"
+    },
+    {
+      "startSeconds": 87.04,
+      "text": "all user records, bypassing"
+    },
+    {
+      "startSeconds": 89.04,
+      "text": "authentication entirely. This happens"
+    },
+    {
+      "startSeconds": 91.92,
+      "text": "because the database sees the attacker's"
+    },
+    {
+      "startSeconds": 94,
+      "text": "input as valid instructions to be"
+    },
+    {
+      "startSeconds": 96.24,
+      "text": "executed."
+    },
+    {
+      "startSeconds": 97.92,
+      "text": "Parameterized queries, often implemented"
+    },
+    {
+      "startSeconds": 100.479,
+      "text": "through what are called prepared"
+    },
+    {
+      "startSeconds": 101.92,
+      "text": "statements, change this dynamic"
+    },
+    {
+      "startSeconds": 103.92,
+      "text": "completely. When you use a parameterized"
+    },
+    {
+      "startSeconds": 106.56,
+      "text": "query, you first define the complete"
+    },
+    {
+      "startSeconds": 108.479,
+      "text": "structure of your structured query"
+    },
+    {
+      "startSeconds": 110.159,
+      "text": "language statement with placeholders for"
+    },
+    {
+      "startSeconds": 111.92,
+      "text": "any user supplied values. For example,"
+    },
+    {
+      "startSeconds": 114.96,
+      "text": "instead of directly embedding a"
+    },
+    {
+      "startSeconds": 116.56,
+      "text": "username, you might write select"
+    },
+    {
+      "startSeconds": 119.28,
+      "text": "asterisk fusers"
+    },
+    {
+      "startSeconds": 121.52,
+      "text": "wh username equals question mark. The"
+    },
+    {
+      "startSeconds": 125.759,
+      "text": "database management system then compiles"
+    },
+    {
+      "startSeconds": 128.08,
+      "text": "and optimizes this query structure once."
+    },
+    {
+      "startSeconds": 131.12,
+      "text": "Only after this step do you provide the"
+    },
+    {
+      "startSeconds": 133.36,
+      "text": "actual user data which is then bound to"
+    },
+    {
+      "startSeconds": 135.68,
+      "text": "those placeholders. The key here is that"
+    },
+    {
+      "startSeconds": 138.239,
+      "text": "the database engine treats what he is"
+    },
+    {
+      "startSeconds": 140.48,
+      "text": "bound to the placeholder as literal data"
+    },
+    {
+      "startSeconds": 142.959,
+      "text": "not as additional executable structured"
+    },
+    {
+      "startSeconds": 145.2,
+      "text": "query language commands. It simply"
+    },
+    {
+      "startSeconds": 147.68,
+      "text": "cannot confuse data with code"
+    },
+    {
+      "startSeconds": 149.92,
+      "text": "effectively neutralizing any malicious"
+    },
+    {
+      "startSeconds": 152.08,
+      "text": "input."
+    },
+    {
+      "startSeconds": 153.68,
+      "text": "Implementing parameterized queries is"
+    },
+    {
+      "startSeconds": 155.68,
+      "text": "straightforward across most programming"
+    },
+    {
+      "startSeconds": 157.519,
+      "text": "languages and database drivers. You"
+    },
+    {
+      "startSeconds": 160.08,
+      "text": "would typically use a method provided by"
+    },
+    {
+      "startSeconds": 161.84,
+      "text": "your database library to create a"
+    },
+    {
+      "startSeconds": 163.68,
+      "text": "prepared statement object, then set the"
+    },
+    {
+      "startSeconds": 166.08,
+      "text": "values for its parameters, and finally"
+    },
+    {
+      "startSeconds": 168.72,
+      "text": "execute the statement. This approach"
+    },
+    {
+      "startSeconds": 170.959,
+      "text": "works for all types of structured query"
+    },
+    {
+      "startSeconds": 173.12,
+      "text": "language operations, including inserts,"
+    },
+    {
+      "startSeconds": 175.92,
+      "text": "updates, and deletes, not just select"
+    },
+    {
+      "startSeconds": 178.72,
+      "text": "statements."
+    },
+    {
+      "startSeconds": 180.319,
+      "text": "It is a consistent, reliable way to"
+    },
+    {
+      "startSeconds": 182.959,
+      "text": "handle all dynamic interactions with"
+    },
+    {
+      "startSeconds": 184.959,
+      "text": "your database."
+    },
+    {
+      "startSeconds": 186.879,
+      "text": "Beyond just security, parameterized"
+    },
+    {
+      "startSeconds": 189.28,
+      "text": "queries offer additional benefits. They"
+    },
+    {
+      "startSeconds": 191.92,
+      "text": "are a crucial component of a robust"
+    },
+    {
+      "startSeconds": 193.68,
+      "text": "defense in depth strategy for your"
+    },
+    {
+      "startSeconds": 195.84,
+      "text": "applications."
+    },
+    {
+      "startSeconds": 197.36,
+      "text": "Furthermore, because the database"
+    },
+    {
+      "startSeconds": 199.44,
+      "text": "compiles the query structure only once,"
+    },
+    {
+      "startSeconds": 202.08,
+      "text": "using prepared statements can sometimes"
+    },
+    {
+      "startSeconds": 204.319,
+      "text": "lead to performance improvements for"
+    },
+    {
+      "startSeconds": 206.159,
+      "text": "queries that are executed repeatedly as"
+    },
+    {
+      "startSeconds": 209.12,
+      "text": "the database can reuse the optimized"
+    },
+    {
+      "startSeconds": 211.28,
+      "text": "execution plan."
+    },
+    {
+      "startSeconds": 213.36,
+      "text": "This makes them not just a security best"
+    },
+    {
+      "startSeconds": 215.68,
+      "text": "practice but also a potentially"
+    },
+    {
+      "startSeconds": 217.92,
+      "text": "efficient coding pattern. By adopting"
+    },
+    {
+      "startSeconds": 221.04,
+      "text": "parameterized queries, you are"
+    },
+    {
+      "startSeconds": 223.12,
+      "text": "fundamentally strengthening your"
+    },
+    {
+      "startSeconds": 224.64,
+      "text": "application's security posture and"
+    },
+    {
+      "startSeconds": 227.04,
+      "text": "safeguarding your database against one"
+    },
+    {
+      "startSeconds": 229.04,
+      "text": "of the most prevalent and dangerous web"
+    },
+    {
+      "startSeconds": 231.2,
+      "text": "vulnerabilities."
+    },
+    {
+      "startSeconds": 232.799,
+      "text": "It is a foundational technique that"
+    },
+    {
+      "startSeconds": 235.04,
+      "text": "ensures the integrity of your data and"
+    },
+    {
+      "startSeconds": 237.599,
+      "text": "the reliability of your services,"
+    },
+    {
+      "startSeconds": 240.159,
+      "text": "keeping malicious code where it belongs"
+    },
+    {
+      "startSeconds": 242.959,
+      "text": "out of your database commands."
+    },
+    {
+      "startSeconds": 247.76,
+      "text": "If this helps you code smarter, like,"
+    },
+    {
+      "startSeconds": 250.319,
+      "text": "subscribe, and stay tuned for more."
+    }
+  ]
+}

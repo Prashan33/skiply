@@ -1,0 +1,1374 @@
+{
+  "id": "80S8h5hEwTY",
+  "url": "https://www.youtube.com/watch?v=80S8h5hEwTY",
+  "fetchedAt": "2026-09-01T04:10:12.254Z",
+  "captionKind": "asr",
+  "chapters": [
+    {
+      "startSeconds": 0,
+      "label": "Introduction"
+    },
+    {
+      "startSeconds": 52,
+      "label": "Project Overview"
+    },
+    {
+      "startSeconds": 162,
+      "label": "How CSRF Works"
+    },
+    {
+      "startSeconds": 315,
+      "label": "How To Fix CSRF Vulnerabilities"
+    }
+  ],
+  "cues": [
+    {
+      "startSeconds": 0,
+      "text": "So, you've spent a ton of time on your"
+    },
+    {
+      "startSeconds": 1.52,
+      "text": "auth system, you're making sure that all"
+    },
+    {
+      "startSeconds": 3.2,
+      "text": "your cookies are super secure, you have"
+    },
+    {
+      "startSeconds": 4.88,
+      "text": "good session authentication, you're"
+    },
+    {
+      "startSeconds": 6.64,
+      "text": "making sure no unauthenticated requests"
+    },
+    {
+      "startSeconds": 8.56,
+      "text": "are coming through, you have CORS set"
+    },
+    {
+      "startSeconds": 9.8,
+      "text": "up, and you think your application is"
+    },
+    {
+      "startSeconds": 11.52,
+      "text": "secure, but there's one giant hole in"
+    },
+    {
+      "startSeconds": 13.64,
+      "text": "your application, and that is something"
+    },
+    {
+      "startSeconds": 15.2,
+      "text": "called CSRF."
+    },
+    {
+      "startSeconds": 17.2,
+      "text": "This stands for cross-site request"
+    },
+    {
+      "startSeconds": 19.08,
+      "text": "forgery, and I know it sounds super"
+    },
+    {
+      "startSeconds": 21.08,
+      "text": "complicated, but honestly, the entire"
+    },
+    {
+      "startSeconds": 23.04,
+      "text": "idea behind this is that some other site"
+    },
+    {
+      "startSeconds": 25.56,
+      "text": "is making a request to your site"
+    },
+    {
+      "startSeconds": 27.44,
+      "text": "pretending to be another user. This is a"
+    },
+    {
+      "startSeconds": 29.84,
+      "text": "very common issue that a lot of sites"
+    },
+    {
+      "startSeconds": 31.68,
+      "text": "run into, and luckily, the fix for it is"
+    },
+    {
+      "startSeconds": 33.56,
+      "text": "incredibly simple. In this video, I'm"
+    },
+    {
+      "startSeconds": 35.16,
+      "text": "going to walk through exactly what this"
+    },
+    {
+      "startSeconds": 36.56,
+      "text": "is and the fix to this problem."
+    },
+    {
+      "startSeconds": 41.72,
+      "text": "Welcome back to Web Dev Simplified. My"
+    },
+    {
+      "startSeconds": 43.64,
+      "text": "name is Kyle, and my job is to simplify"
+    },
+    {
+      "startSeconds": 45.44,
+      "text": "the web for you, so you can start"
+    },
+    {
+      "startSeconds": 46.72,
+      "text": "building your dream project sooner. And"
+    },
+    {
+      "startSeconds": 48.48,
+      "text": "today, I'm going to be talking all about"
+    },
+    {
+      "startSeconds": 49.88,
+      "text": "CSFR or cross-site request forgery. Now,"
+    },
+    {
+      "startSeconds": 52.96,
+      "text": "if you're not already familiar with the"
+    },
+    {
+      "startSeconds": 54.24,
+      "text": "basics of session-based authentication,"
+    },
+    {
+      "startSeconds": 56.48,
+      "text": "I have a full video covering that. It"
+    },
+    {
+      "startSeconds": 57.96,
+      "text": "actually uses this exact same project."
+    },
+    {
+      "startSeconds": 59.8,
+      "text": "I'm going to link it in the cards and"
+    },
+    {
+      "startSeconds": 60.76,
+      "text": "description for you. I recommend you"
+    },
+    {
+      "startSeconds": 62,
+      "text": "check that out first. Once you've"
+    },
+    {
+      "startSeconds": 63.6,
+      "text": "watched that video though, you're going"
+    },
+    {
+      "startSeconds": 64.8,
+      "text": "to know that in this application, we"
+    },
+    {
+      "startSeconds": 66.2,
+      "text": "have a very simple session-based"
+    },
+    {
+      "startSeconds": 67.96,
+      "text": "authentication system set up that I'm"
+    },
+    {
+      "startSeconds": 69.4,
+      "text": "going to walk you through really"
+    },
+    {
+      "startSeconds": 70.32,
+      "text": "quickly. We have three buttons on our"
+    },
+    {
+      "startSeconds": 72,
+      "text": "page for logging in, and on our back"
+    },
+    {
+      "startSeconds": 74,
+      "text": "end, we have users for WDS and for Kyle."
+    },
+    {
+      "startSeconds": 76.72,
+      "text": "So, when I click login WDS, I'm logged"
+    },
+    {
+      "startSeconds": 78.76,
+      "text": "as WDS. Same thing for Kyle. And if I"
+    },
+    {
+      "startSeconds": 80.68,
+      "text": "try to log in as Jim, I'm unauthorized"
+    },
+    {
+      "startSeconds": 82.4,
+      "text": "cuz there is no Jim user. And all these"
+    },
+    {
+      "startSeconds": 84.64,
+      "text": "functions do is they just make a request"
+    },
+    {
+      "startSeconds": 86.56,
+      "text": "to my API that is doing that logging in"
+    },
+    {
+      "startSeconds": 88.88,
+      "text": "right here, and it's just showing that"
+    },
+    {
+      "startSeconds": 90.32,
+      "text": "I'm logged in as that user. And the"
+    },
+    {
+      "startSeconds": 91.72,
+      "text": "important thing is it's sending down a"
+    },
+    {
+      "startSeconds": 93.44,
+      "text": "cookie with my session. So, if I just"
+    },
+    {
+      "startSeconds": 95.28,
+      "text": "inspect my page right here, and I go"
+    },
+    {
+      "startSeconds": 96.72,
+      "text": "over to the network tab, or I'm sorry,"
+    },
+    {
+      "startSeconds": 98.12,
+      "text": "not the network tab, the application"
+    },
+    {
+      "startSeconds": 99.84,
+      "text": "tab, and I look at my cookies, you can"
+    },
+    {
+      "startSeconds": 101.8,
+      "text": "see we have a cookie for our session ID,"
+    },
+    {
+      "startSeconds": 103.44,
+      "text": "and it has a long value for my session"
+    },
+    {
+      "startSeconds": 105.52,
+      "text": "ID for that current user. And in that"
+    },
+    {
+      "startSeconds": 107.36,
+      "text": "session on my server, I'm saving my user"
+    },
+    {
+      "startSeconds": 109.36,
+      "text": "information. So, whenever I log in, you"
+    },
+    {
+      "startSeconds": 111.44,
+      "text": "can see here, I'm saving a session that"
+    },
+    {
+      "startSeconds": 113.12,
+      "text": "links my user and that session ID. That"
+    },
+    {
+      "startSeconds": 115.52,
+      "text": "way, every time I make a request, I send"
+    },
+    {
+      "startSeconds": 117.36,
+      "text": "along that session ID, and now I can"
+    },
+    {
+      "startSeconds": 119.16,
+      "text": "access that user, for example, if I try"
+    },
+    {
+      "startSeconds": 120.64,
+      "text": "to get the admin data. So, if I log in"
+    },
+    {
+      "startSeconds": 122.64,
+      "text": "as WDS, and I click get admin data, you"
+    },
+    {
+      "startSeconds": 124.64,
+      "text": "can see it returns, but Kyle is not an"
+    },
+    {
+      "startSeconds": 126.28,
+      "text": "admin. So, when I try to get the data,"
+    },
+    {
+      "startSeconds": 127.88,
+      "text": "you can see we don't have that"
+    },
+    {
+      "startSeconds": 129,
+      "text": "information being sent to us. Now, I"
+    },
+    {
+      "startSeconds": 130.96,
+      "text": "also included some other stuff for"
+    },
+    {
+      "startSeconds": 132.32,
+      "text": "deleting my account. So, if I log in as"
+    },
+    {
+      "startSeconds": 134.36,
+      "text": "WDS, and I click delete, and now I try"
+    },
+    {
+      "startSeconds": 136.68,
+      "text": "to actually get my admin data, you can"
+    },
+    {
+      "startSeconds": 138.28,
+      "text": "see I'm unauthorized, and if I try to"
+    },
+    {
+      "startSeconds": 139.52,
+      "text": "log in as WDS, you can see it's not"
+    },
+    {
+      "startSeconds": 141.08,
+      "text": "working cuz there is no account for that"
+    },
+    {
+      "startSeconds": 142.6,
+      "text": "user anymore. It's been completely"
+    },
+    {
+      "startSeconds": 143.92,
+      "text": "deleted. Now, if we go over to our"
+    },
+    {
+      "startSeconds": 145.56,
+      "text": "client, you can see that in order to"
+    },
+    {
+      "startSeconds": 147,
+      "text": "make this work, we're just doing a fetch"
+    },
+    {
+      "startSeconds": 148.32,
+      "text": "request, and this is doing a post method"
+    },
+    {
+      "startSeconds": 150.2,
+      "text": "request here, and that's all that's"
+    },
+    {
+      "startSeconds": 151.959,
+      "text": "happening right here. Pretty"
+    },
+    {
+      "startSeconds": 152.88,
+      "text": "straightforward stuff. Generally, you'd"
+    },
+    {
+      "startSeconds": 154.8,
+      "text": "probably do a delete here if you're"
+    },
+    {
+      "startSeconds": 155.92,
+      "text": "doing a delete, but in our case, we're"
+    },
+    {
+      "startSeconds": 157.12,
+      "text": "using a post cuz it shows some of the"
+    },
+    {
+      "startSeconds": 158.52,
+      "text": "vulnerabilities to cross-site request"
+    },
+    {
+      "startSeconds": 160.4,
+      "text": "forgery. So, that's how this all works."
+    },
+    {
+      "startSeconds": 162.44,
+      "text": "How exactly is this vulnerable? Cuz you"
+    },
+    {
+      "startSeconds": 164.16,
+      "text": "may think this is super secure because"
+    },
+    {
+      "startSeconds": 166.12,
+      "text": "when we're saving our cookies, you're"
+    },
+    {
+      "startSeconds": 167.4,
+      "text": "noticing we're doing secure and"
+    },
+    {
+      "startSeconds": 168.56,
+      "text": "HTTP-only. That means that the cookie is"
+    },
+    {
+      "startSeconds": 170.88,
+      "text": "never exposed to JavaScript, so no one"
+    },
+    {
+      "startSeconds": 172.76,
+      "text": "can steal that session ID. That's great."
+    },
+    {
+      "startSeconds": 175.32,
+      "text": "We also have set up so it only accepts"
+    },
+    {
+      "startSeconds": 177.52,
+      "text": "requests coming from our particular URL."
+    },
+    {
+      "startSeconds": 180.08,
+      "text": "Again, that's super great. We can't make"
+    },
+    {
+      "startSeconds": 181.88,
+      "text": "requests from some other URL, but we"
+    },
+    {
+      "startSeconds": 184.4,
+      "text": "actually can. Course does not prevent"
+    },
+    {
+      "startSeconds": 186.6,
+      "text": "people from submitting forms from other"
+    },
+    {
+      "startSeconds": 188.84,
+      "text": "URLs. So, what I also have is another"
+    },
+    {
+      "startSeconds": 191.36,
+      "text": "page over here, localhost:5501,"
+    },
+    {
+      "startSeconds": 194.36,
+      "text": "evil.html. It's a completely different"
+    },
+    {
+      "startSeconds": 196.76,
+      "text": "URL. I know they're both on localhost,"
+    },
+    {
+      "startSeconds": 198.36,
+      "text": "but this is running on a different port,"
+    },
+    {
+      "startSeconds": 200.04,
+      "text": "and according to Course, those are two"
+    },
+    {
+      "startSeconds": 201.44,
+      "text": "completely different sites. Normally, it"
+    },
+    {
+      "startSeconds": 203.6,
+      "text": "would block me if I tried to make a"
+    },
+    {
+      "startSeconds": 205.04,
+      "text": "request from that 5501 to my normal"
+    },
+    {
+      "startSeconds": 207.92,
+      "text": "5500. And in this evil.html, all I'm"
+    },
+    {
+      "startSeconds": 211.08,
+      "text": "doing, really simply, is I'm making a"
+    },
+    {
+      "startSeconds": 213.04,
+      "text": "post action on a form that is going to"
+    },
+    {
+      "startSeconds": 215.6,
+      "text": "that delete user, and you can see that"
+    },
+    {
+      "startSeconds": 217.04,
+      "text": "this is happening automatically as soon"
+    },
+    {
+      "startSeconds": 218.72,
+      "text": "as I go to the page. I don't even need"
+    },
+    {
+      "startSeconds": 220.04,
+      "text": "to click any buttons at all. So, let me"
+    },
+    {
+      "startSeconds": 222.239,
+      "text": "real quickly log in as Kyle. You can see"
+    },
+    {
+      "startSeconds": 223.84,
+      "text": "I'm authenticated as Kyle. That's super"
+    },
+    {
+      "startSeconds": 225.76,
+      "text": "great. Everything is working as we would"
+    },
+    {
+      "startSeconds": 227.16,
+      "text": "expect. Now, all I need to do is just go"
+    },
+    {
+      "startSeconds": 229.16,
+      "text": "to this page. It's on a completely"
+    },
+    {
+      "startSeconds": 230.48,
+      "text": "different URL, and if I go to this page,"
+    },
+    {
+      "startSeconds": 232.68,
+      "text": "you can see it has deleted that Kyle"
+    },
+    {
+      "startSeconds": 234.28,
+      "text": "user. And if I come in here try to log"
+    },
+    {
+      "startSeconds": 235.84,
+      "text": "in, you can see it's now unauthorized"
+    },
+    {
+      "startSeconds": 237.4,
+      "text": "cuz that Kyle user has been deleted."
+    },
+    {
+      "startSeconds": 239.24,
+      "text": "Now, you're probably wondering how"
+    },
+    {
+      "startSeconds": 240.52,
+      "text": "exactly is this possible if you have"
+    },
+    {
+      "startSeconds": 242.12,
+      "text": "CORS set up and all these other"
+    },
+    {
+      "startSeconds": 243.48,
+      "text": "precautions? And the reason for this is"
+    },
+    {
+      "startSeconds": 245.6,
+      "text": "every single time that you make a"
+    },
+    {
+      "startSeconds": 247.08,
+      "text": "request to a server, the cookies are"
+    },
+    {
+      "startSeconds": 249.04,
+      "text": "sent along automatically. So, I was"
+    },
+    {
+      "startSeconds": 251.28,
+      "text": "logged in as Kyle on this page, so my"
+    },
+    {
+      "startSeconds": 253.4,
+      "text": "cookie for that Kyle session was already"
+    },
+    {
+      "startSeconds": 255.36,
+      "text": "saved in the cookies. And then when I"
+    },
+    {
+      "startSeconds": 257.28,
+      "text": "made a request to this server here, it"
+    },
+    {
+      "startSeconds": 259.68,
+      "text": "sent that cookie along automatically to"
+    },
+    {
+      "startSeconds": 261.84,
+      "text": "the server. And my server just saw that"
+    },
+    {
+      "startSeconds": 263.84,
+      "text": "and went, \"Okay, let's go. We're good to"
+    },
+    {
+      "startSeconds": 265.32,
+      "text": "go.\" And the reason CORS did not prevent"
+    },
+    {
+      "startSeconds": 267.68,
+      "text": "this is because when you do a form"
+    },
+    {
+      "startSeconds": 269.36,
+      "text": "action such as a form post here, CORS"
+    },
+    {
+      "startSeconds": 271.68,
+      "text": "doesn't prevent that. And CORS doesn't"
+    },
+    {
+      "startSeconds": 273.52,
+      "text": "actually prevent a lot of things. It's"
+    },
+    {
+      "startSeconds": 274.8,
+      "text": "not really a great security method per"
+    },
+    {
+      "startSeconds": 277.04,
+      "text": "se because it doesn't prevent like"
+    },
+    {
+      "startSeconds": 278.44,
+      "text": "servers from communicating with other"
+    },
+    {
+      "startSeconds": 279.919,
+      "text": "servers. Now, that particular use case"
+    },
+    {
+      "startSeconds": 281.56,
+      "text": "of servers calling other servers isn't"
+    },
+    {
+      "startSeconds": 283.24,
+      "text": "important in this case because your"
+    },
+    {
+      "startSeconds": 284.6,
+      "text": "cookies aren't saved on the server, but"
+    },
+    {
+      "startSeconds": 286.56,
+      "text": "it is just something to know that CORS"
+    },
+    {
+      "startSeconds": 288.2,
+      "text": "is not really a security measure. It's"
+    },
+    {
+      "startSeconds": 289.919,
+      "text": "more just something there to try to help"
+    },
+    {
+      "startSeconds": 291.6,
+      "text": "with certain things, but it shouldn't be"
+    },
+    {
+      "startSeconds": 293,
+      "text": "seen as like an all be all security"
+    },
+    {
+      "startSeconds": 294.88,
+      "text": "measure. So, we're getting around our"
+    },
+    {
+      "startSeconds": 296.84,
+      "text": "CORS and we're able to send requests"
+    },
+    {
+      "startSeconds": 298.4,
+      "text": "using the cookies of that user that are"
+    },
+    {
+      "startSeconds": 300.08,
+      "text": "saved in the cookies. So, in order to"
+    },
+    {
+      "startSeconds": 302.12,
+      "text": "make sure that this request problem"
+    },
+    {
+      "startSeconds": 303.68,
+      "text": "doesn't happen, we need to have some"
+    },
+    {
+      "startSeconds": 305.56,
+      "text": "other type of validation that is not"
+    },
+    {
+      "startSeconds": 307.48,
+      "text": "saved in the cookies. That way it's not"
+    },
+    {
+      "startSeconds": 309.48,
+      "text": "automatically sent along with our"
+    },
+    {
+      "startSeconds": 311.08,
+      "text": "request. And if we look at our server"
+    },
+    {
+      "startSeconds": 313.04,
+      "text": "here, our non-CSFR version, this is the"
+    },
+    {
+      "startSeconds": 315.16,
+      "text": "version that is vulnerable, you can see"
+    },
+    {
+      "startSeconds": 316.96,
+      "text": "that it's very basic stuff, but"
+    },
+    {
+      "startSeconds": 318.48,
+      "text": "essentially in our delete request here,"
+    },
+    {
+      "startSeconds": 320.2,
+      "text": "all we're doing is we're getting our"
+    },
+    {
+      "startSeconds": 321.48,
+      "text": "session and we're checking to see if we"
+    },
+    {
+      "startSeconds": 323.44,
+      "text": "have a user. And if we do have a user,"
+    },
+    {
+      "startSeconds": 325.24,
+      "text": "then we're deleting them and we're"
+    },
+    {
+      "startSeconds": 326.36,
+      "text": "deleting their session. Pretty"
+    },
+    {
+      "startSeconds": 327.48,
+      "text": "straightforward stuff. Now, let me show"
+    },
+    {
+      "startSeconds": 329.64,
+      "text": "you how this CS RF version works where"
+    },
+    {
+      "startSeconds": 331.919,
+      "text": "we have some other piece of validation."
+    },
+    {
+      "startSeconds": 334.24,
+      "text": "So, let me open that up real quick. We"
+    },
+    {
+      "startSeconds": 335.52,
+      "text": "have our normal server here. I'm"
+    },
+    {
+      "startSeconds": 336.76,
+      "text": "actually going to run that instead of"
+    },
+    {
+      "startSeconds": 338.04,
+      "text": "our other server. So, I'm just going to"
+    },
+    {
+      "startSeconds": 339.52,
+      "text": "start this up. This is going to be for"
+    },
+    {
+      "startSeconds": 340.96,
+      "text": "our correct version of our application."
+    },
+    {
+      "startSeconds": 343.6,
+      "text": "Here we go. So, what this correct"
+    },
+    {
+      "startSeconds": 344.919,
+      "text": "version does is when we log in, we have"
+    },
+    {
+      "startSeconds": 346.52,
+      "text": "a additional step that's happening is"
+    },
+    {
+      "startSeconds": 348.44,
+      "text": "we're creating this random token."
+    },
+    {
+      "startSeconds": 350,
+      "text": "Doesn't matter what it is, it's just a"
+    },
+    {
+      "startSeconds": 351.08,
+      "text": "random string of values, which is used"
+    },
+    {
+      "startSeconds": 352.88,
+      "text": "for authentication purposes, and we're"
+    },
+    {
+      "startSeconds": 354.8,
+      "text": "making sure we send that random value"
+    },
+    {
+      "startSeconds": 356.56,
+      "text": "down to our user on the client. Then, if"
+    },
+    {
+      "startSeconds": 359.76,
+      "text": "we make sure that we use the correct"
+    },
+    {
+      "startSeconds": 361.28,
+      "text": "client, so this right here is all the"
+    },
+    {
+      "startSeconds": 362.76,
+      "text": "correct code. I'm just going to paste"
+    },
+    {
+      "startSeconds": 363.88,
+      "text": "this in. It's almost identical. You can"
+    },
+    {
+      "startSeconds": 365.84,
+      "text": "see what happens when we log in, what"
+    },
+    {
+      "startSeconds": 367.2,
+      "text": "we're doing is we're just saving that CS"
+    },
+    {
+      "startSeconds": 368.72,
+      "text": "RF token inside of a variable here. So,"
+    },
+    {
+      "startSeconds": 370.92,
+      "text": "it's just being saved locally in our"
+    },
+    {
+      "startSeconds": 372.64,
+      "text": "JavaScript. There's no way any other"
+    },
+    {
+      "startSeconds": 374.28,
+      "text": "site could access this is not saved"
+    },
+    {
+      "startSeconds": 375.88,
+      "text": "anywhere else. And then what we're doing"
+    },
+    {
+      "startSeconds": 378.12,
+      "text": "is anytime we send along a request, for"
+    },
+    {
+      "startSeconds": 379.76,
+      "text": "example, if we wanted to delete our"
+    },
+    {
+      "startSeconds": 380.8,
+      "text": "user, we make sure we send along that"
+    },
+    {
+      "startSeconds": 382.72,
+      "text": "CSRF token inside of the body. Then, if"
+    },
+    {
+      "startSeconds": 385.68,
+      "text": "we go check our server real quick, we"
+    },
+    {
+      "startSeconds": 387.44,
+      "text": "can actually see inside that delete"
+    },
+    {
+      "startSeconds": 388.96,
+      "text": "function, instead of just checking our"
+    },
+    {
+      "startSeconds": 390.88,
+      "text": "session, we're also checking to make"
+    },
+    {
+      "startSeconds": 392.48,
+      "text": "sure the CSRF token is matching. And"
+    },
+    {
+      "startSeconds": 395.44,
+      "text": "you'll notice that when we create our"
+    },
+    {
+      "startSeconds": 396.76,
+      "text": "session, we link that together with our"
+    },
+    {
+      "startSeconds": 398.44,
+      "text": "user and our token. So, every single"
+    },
+    {
+      "startSeconds": 400.56,
+      "text": "session has a token and it's going to"
+    },
+    {
+      "startSeconds": 402.32,
+      "text": "have a user, and we need to make sure"
+    },
+    {
+      "startSeconds": 403.72,
+      "text": "not only does our session ID match, but"
+    },
+    {
+      "startSeconds": 405.6,
+      "text": "also our CSRF token matches. So, if we"
+    },
+    {
+      "startSeconds": 409.24,
+      "text": "want to see if this is working, let's"
+    },
+    {
+      "startSeconds": 410.32,
+      "text": "just refresh everything on our page. I'm"
+    },
+    {
+      "startSeconds": 411.76,
+      "text": "going to log in as Kyle, get my data,"
+    },
+    {
+      "startSeconds": 413.4,
+      "text": "that worked fine, delete, and log in."
+    },
+    {
+      "startSeconds": 415.44,
+      "text": "Everything you can see is working just"
+    },
+    {
+      "startSeconds": 417.08,
+      "text": "fine. Now, let's actually look at what's"
+    },
+    {
+      "startSeconds": 418.68,
+      "text": "being printed out in the console. I'm"
+    },
+    {
+      "startSeconds": 419.84,
+      "text": "just going to refresh everything real"
+    },
+    {
+      "startSeconds": 420.96,
+      "text": "quick, and if I click log in, you can"
+    },
+    {
+      "startSeconds": 422.72,
+      "text": "see that works. Get admin data, it's"
+    },
+    {
+      "startSeconds": 424.64,
+      "text": "working, and when I click delete, you"
+    },
+    {
+      "startSeconds": 426.04,
+      "text": "can see it's passing along some"
+    },
+    {
+      "startSeconds": 427.2,
+      "text": "information. If we look at what we're"
+    },
+    {
+      "startSeconds": 428.32,
+      "text": "logging out, we're logging out our"
+    },
+    {
+      "startSeconds": 429.4,
+      "text": "session, which is the first object,"
+    },
+    {
+      "startSeconds": 430.76,
+      "text": "which is our user, and our token, and"
+    },
+    {
+      "startSeconds": 432.88,
+      "text": "we're logging out the body that's being"
+    },
+    {
+      "startSeconds": 434.32,
+      "text": "passed up, which in our case is also"
+    },
+    {
+      "startSeconds": 436.24,
+      "text": "just this token. And these two tokens"
+    },
+    {
+      "startSeconds": 438.12,
+      "text": "are exactly the same. They match, which"
+    },
+    {
+      "startSeconds": 439.68,
+      "text": "is why our request is going through just"
+    },
+    {
+      "startSeconds": 441.64,
+      "text": "fine. But, let's see what happens when"
+    },
+    {
+      "startSeconds": 443.76,
+      "text": "we go over to that evil version of our"
+    },
+    {
+      "startSeconds": 445.48,
+      "text": "page. So, let me just make sure I"
+    },
+    {
+      "startSeconds": 446.76,
+      "text": "refresh everything again. I'm going to"
+    },
+    {
+      "startSeconds": 448.6,
+      "text": "log in as WDS. And then what I want to"
+    },
+    {
+      "startSeconds": 450.96,
+      "text": "do is I want to go to that URL, which is"
+    },
+    {
+      "startSeconds": 453.36,
+      "text": "5501"
+    },
+    {
+      "startSeconds": 455.56,
+      "text": "evil.html. And when I hit enter, you're"
+    },
+    {
+      "startSeconds": 458.12,
+      "text": "going to notice we get an unauthorized"
+    },
+    {
+      "startSeconds": 459.6,
+      "text": "error. And And we look at what's being"
+    },
+    {
+      "startSeconds": 460.919,
+      "text": "printed out in our console, you can see"
+    },
+    {
+      "startSeconds": 462.48,
+      "text": "the session has properly been caught."
+    },
+    {
+      "startSeconds": 464.2,
+      "text": "We're saying, \"Hey, we know that this is"
+    },
+    {
+      "startSeconds": 465.72,
+      "text": "the WDS user based on their session ID,"
+    },
+    {
+      "startSeconds": 468.08,
+      "text": "but we didn't pass a CSRF token over to"
+    },
+    {
+      "startSeconds": 471.08,
+      "text": "our API.\" So, this check right here"
+    },
+    {
+      "startSeconds": 472.92,
+      "text": "where it checks to see if the token in"
+    },
+    {
+      "startSeconds": 474.44,
+      "text": "our session is the same as the token in"
+    },
+    {
+      "startSeconds": 476.32,
+      "text": "our body is obviously going to fail"
+    },
+    {
+      "startSeconds": 477.96,
+      "text": "because there is no token in our body."
+    },
+    {
+      "startSeconds": 479.92,
+      "text": "And this is the key to preventing these"
+    },
+    {
+      "startSeconds": 481.44,
+      "text": "different vulnerabilities. Essentially,"
+    },
+    {
+      "startSeconds": 483.24,
+      "text": "all you're doing is creating a random"
+    },
+    {
+      "startSeconds": 484.96,
+      "text": "string of characters. In our case, it's"
+    },
+    {
+      "startSeconds": 486.36,
+      "text": "just a random UUID. It doesn't matter"
+    },
+    {
+      "startSeconds": 488.16,
+      "text": "what it is. It just has to be random,"
+    },
+    {
+      "startSeconds": 489.56,
+      "text": "completely random. You're giving that to"
+    },
+    {
+      "startSeconds": 491.2,
+      "text": "the user and you're saying, \"Whenever"
+    },
+    {
+      "startSeconds": 492.32,
+      "text": "you make a request, send us this random"
+    },
+    {
+      "startSeconds": 494.48,
+      "text": "information. And as long as that random"
+    },
+    {
+      "startSeconds": 496.4,
+      "text": "information matches the random"
+    },
+    {
+      "startSeconds": 498.04,
+      "text": "information we gave you when you"
+    },
+    {
+      "startSeconds": 499.44,
+      "text": "actually logged in, then you're fine,"
+    },
+    {
+      "startSeconds": 501.36,
+      "text": "good to go, doesn't matter, everything"
+    },
+    {
+      "startSeconds": 502.64,
+      "text": "works. But if a site is trying to steal"
+    },
+    {
+      "startSeconds": 504.88,
+      "text": "your information and pretend to be you,"
+    },
+    {
+      "startSeconds": 507.28,
+      "text": "they're not going to have that random"
+    },
+    {
+      "startSeconds": 508.6,
+      "text": "information because, as you can see, we"
+    },
+    {
+      "startSeconds": 510.64,
+      "text": "didn't store it anywhere. It's just"
+    },
+    {
+      "startSeconds": 511.88,
+      "text": "stored locally inside of JavaScript."
+    },
+    {
+      "startSeconds": 513.8,
+      "text": "It's not stored in local storage, it's"
+    },
+    {
+      "startSeconds": 515.12,
+      "text": "not stored in cookies. And that's the"
+    },
+    {
+      "startSeconds": 516.56,
+      "text": "key. Generally, you don't want to store"
+    },
+    {
+      "startSeconds": 517.919,
+      "text": "this anywhere. You just have it locally"
+    },
+    {
+      "startSeconds": 519.36,
+      "text": "on your JavaScript or locally in your"
+    },
+    {
+      "startSeconds": 521,
+      "text": "form, somewhere like as a hidden"
+    },
+    {
+      "startSeconds": 522.12,
+      "text": "element. And that's going to be fine cuz"
+    },
+    {
+      "startSeconds": 523.88,
+      "text": "there's no way this other site has"
+    },
+    {
+      "startSeconds": 525.56,
+      "text": "access to that information because it's"
+    },
+    {
+      "startSeconds": 526.839,
+      "text": "not stored anywhere at all. And you just"
+    },
+    {
+      "startSeconds": 529.04,
+      "text": "pass that along whenever you make an API"
+    },
+    {
+      "startSeconds": 530.76,
+      "text": "request. And that right there is what"
+    },
+    {
+      "startSeconds": 532.48,
+      "text": "doubly authenticates you. First, you"
+    },
+    {
+      "startSeconds": 534.04,
+      "text": "authenticate you are yourself, and then"
+    },
+    {
+      "startSeconds": 536.12,
+      "text": "this essentially is authenticating that"
+    },
+    {
+      "startSeconds": 537.92,
+      "text": "you are coming from this page and you"
+    },
+    {
+      "startSeconds": 539.839,
+      "text": "yourself made this request and not"
+    },
+    {
+      "startSeconds": 541.52,
+      "text": "someone else. Now, when you actually"
+    },
+    {
+      "startSeconds": 543.12,
+      "text": "create this CSRF token, doesn't really"
+    },
+    {
+      "startSeconds": 545.16,
+      "text": "matter too much. For example, if you're"
+    },
+    {
+      "startSeconds": 546.88,
+      "text": "doing like a traditional server-side"
+    },
+    {
+      "startSeconds": 548.6,
+      "text": "rendered application, you may create"
+    },
+    {
+      "startSeconds": 550.6,
+      "text": "this token every single time the user"
+    },
+    {
+      "startSeconds": 552.52,
+      "text": "loads up a page. So, if they go to a"
+    },
+    {
+      "startSeconds": 554.16,
+      "text": "page, it's automatically going to add"
+    },
+    {
+      "startSeconds": 555.76,
+      "text": "that token into the form for them. That"
+    },
+    {
+      "startSeconds": 557.8,
+      "text": "way, they don't have to manage anything"
+    },
+    {
+      "startSeconds": 559.08,
+      "text": "at all with it. But if you're doing more"
+    },
+    {
+      "startSeconds": 560.68,
+      "text": "of like a API style system, like a React"
+    },
+    {
+      "startSeconds": 563.56,
+      "text": "application, you may want to create that"
+    },
+    {
+      "startSeconds": 565.36,
+      "text": "when the user logs in, for example, like"
+    },
+    {
+      "startSeconds": 566.96,
+      "text": "we're doing here. The process of"
+    },
+    {
+      "startSeconds": 568.68,
+      "text": "actually creating it and when you create"
+    },
+    {
+      "startSeconds": 570.04,
+      "text": "it isn't too important. Just a matter"
+    },
+    {
+      "startSeconds": 571.76,
+      "text": "that you actually have this token, you"
+    },
+    {
+      "startSeconds": 573.32,
+      "text": "send it to the user, and they're able to"
+    },
+    {
+      "startSeconds": 574.64,
+      "text": "send it back to you, and you can"
+    },
+    {
+      "startSeconds": 575.76,
+      "text": "validate it. That's the part that really"
+    },
+    {
+      "startSeconds": 577.44,
+      "text": "matters. And that's all there is to CSRF"
+    },
+    {
+      "startSeconds": 580.24,
+      "text": "tokens. If you want to dive further into"
+    },
+    {
+      "startSeconds": 582.2,
+      "text": "authentication, you're going to"
+    },
+    {
+      "startSeconds": 583.48,
+      "text": "definitely want to check out my"
+    },
+    {
+      "startSeconds": 584.48,
+      "text": "session-based authentication tutorial."
+    },
+    {
+      "startSeconds": 586.52,
+      "text": "It's going to be linked right over here."
+    },
+    {
+      "startSeconds": 588.04,
+      "text": "I also have tutorials on how to"
+    },
+    {
+      "startSeconds": 589.2,
+      "text": "implement authentication in Node.js."
+    },
+    {
+      "startSeconds": 591.4,
+      "text": "Those are going to be linked right over"
+    },
+    {
+      "startSeconds": 592.36,
+      "text": "here as well. With that said, thank you"
+    },
+    {
+      "startSeconds": 594.32,
+      "text": "very much for watching and have a good"
+    },
+    {
+      "startSeconds": 595.68,
+      "text": "day."
+    }
+  ]
+}

@@ -1,8 +1,850 @@
 {
   "id": "-BBulGM6xF0",
   "url": "https://www.youtube.com/watch?v=-BBulGM6xF0",
-  "fetchedAt": "2026-08-31T05:15:38.068Z",
-  "captionKind": "empty",
-  "chapters": [],
-  "cues": []
+  "fetchedAt": "2026-09-01T04:06:26.363Z",
+  "captionKind": "asr",
+  "chapters": [
+    {
+      "startSeconds": 0,
+      "label": "Intro"
+    },
+    {
+      "startSeconds": 37,
+      "label": "Greedy Decoding"
+    },
+    {
+      "startSeconds": 65,
+      "label": "Random Sampling"
+    },
+    {
+      "startSeconds": 110,
+      "label": "Temperature"
+    },
+    {
+      "startSeconds": 235,
+      "label": "Top-k Sampling"
+    },
+    {
+      "startSeconds": 267,
+      "label": "Top-p Sampling"
+    },
+    {
+      "startSeconds": 310,
+      "label": "Pros and Cons"
+    },
+    {
+      "startSeconds": 450,
+      "label": "Outro"
+    }
+  ],
+  "cues": [
+    {
+      "startSeconds": 0.24,
+      "text": "hi there today we are going to learn"
+    },
+    {
+      "startSeconds": 2.2,
+      "text": "about random sampling which is a key"
+    },
+    {
+      "startSeconds": 4.279,
+      "text": "algorithm for large language models"
+    },
+    {
+      "startSeconds": 6.72,
+      "text": "together with three important techniques"
+    },
+    {
+      "startSeconds": 8.719,
+      "text": "that Aid Us in doing that temperature"
+    },
+    {
+      "startSeconds": 11.44,
+      "text": "top K and top P sampling to start with"
+    },
+    {
+      "startSeconds": 14.92,
+      "text": "let's recap how large language models"
+    },
+    {
+      "startSeconds": 17.24,
+      "text": "generate text simply put they generate"
+    },
+    {
+      "startSeconds": 20.119,
+      "text": "text in an autor regressive way meaning"
+    },
+    {
+      "startSeconds": 22.72,
+      "text": "that in order to generate a token at a"
+    },
+    {
+      "startSeconds": 25.279,
+      "text": "certain Step in Time it uses the"
+    },
+    {
+      "startSeconds": 27.32,
+      "text": "information from the previous tokens"
+    },
+    {
+      "startSeconds": 29.439,
+      "text": "within a certain window and creates a"
+    },
+    {
+      "startSeconds": 31.759,
+      "text": "distribution of probabilities for each"
+    },
+    {
+      "startSeconds": 34.04,
+      "text": "word to select the best candidate for"
+    },
+    {
+      "startSeconds": 36.079,
+      "text": "the current step now we could simply"
+    },
+    {
+      "startSeconds": 38.76,
+      "text": "select the word with the highest"
+    },
+    {
+      "startSeconds": 40.239,
+      "text": "probability a technique known as grey"
+    },
+    {
+      "startSeconds": 42.84,
+      "text": "decoding which for the sentence"
+    },
+    {
+      "startSeconds": 44.76,
+      "text": "displayed here to dat the weather is"
+    },
+    {
+      "startSeconds": 46.92,
+      "text": "would result in selecting the word Sunny"
+    },
+    {
+      "startSeconds": 49.8,
+      "text": "however this often leads to overly"
+    },
+    {
+      "startSeconds": 52.12,
+      "text": "deterministic and repetitive outputs"
+    },
+    {
+      "startSeconds": 54.559,
+      "text": "which may be useful in certain"
+    },
+    {
+      "startSeconds": 56.28,
+      "text": "situations where this is desired like"
+    },
+    {
+      "startSeconds": 58.719,
+      "text": "decoding the speech embeddings for a"
+    },
+    {
+      "startSeconds": 60.64,
+      "text": "speech recognition system ensuring"
+    },
+    {
+      "startSeconds": 62.719,
+      "text": "Precision in transcriptions still in the"
+    },
+    {
+      "startSeconds": 65.519,
+      "text": "realm of large language models our"
+    },
+    {
+      "startSeconds": 68.159,
+      "text": "objective is often to provide outputs"
+    },
+    {
+      "startSeconds": 70.479,
+      "text": "that are somehow creative these models"
+    },
+    {
+      "startSeconds": 73.32,
+      "text": "are designed to capture and reproduce"
+    },
+    {
+      "startSeconds": 75.2,
+      "text": "the intricacies of human language where"
+    },
+    {
+      "startSeconds": 77.52,
+      "text": "diversity and originality are valued by"
+    },
+    {
+      "startSeconds": 80.36,
+      "text": "incorporating Randomness through"
+    },
+    {
+      "startSeconds": 81.799,
+      "text": "techniques like temperature topk and"
+    },
+    {
+      "startSeconds": 84.119,
+      "text": "topy sampling we introduce an element of"
+    },
+    {
+      "startSeconds": 86.72,
+      "text": "variability that goes beyond rigid"
+    },
+    {
+      "startSeconds": 89.4,
+      "text": "determination IC choices this diversity"
+    },
+    {
+      "startSeconds": 92.32,
+      "text": "not only yields more interesting and"
+    },
+    {
+      "startSeconds": 94.28,
+      "text": "very text but also allows the model to"
+    },
+    {
+      "startSeconds": 96.759,
+      "text": "Showcase its capacity to generate"
+    },
+    {
+      "startSeconds": 99.28,
+      "text": "contextually relevant and imaginative"
+    },
+    {
+      "startSeconds": 101.799,
+      "text": "content making it well suited for"
+    },
+    {
+      "startSeconds": 103.88,
+      "text": "applications like natural language"
+    },
+    {
+      "startSeconds": 105.6,
+      "text": "generation dialogue systems and creative"
+    },
+    {
+      "startSeconds": 108.399,
+      "text": "writing support the first technique"
+    },
+    {
+      "startSeconds": 110.719,
+      "text": "usually employed in random sampling that"
+    },
+    {
+      "startSeconds": 112.92,
+      "text": "will explore in this video is the"
+    },
+    {
+      "startSeconds": 114.84,
+      "text": "temperature parameter the temperature"
+    },
+    {
+      "startSeconds": 117.28,
+      "text": "controls the randomness of the sampling"
+    },
+    {
+      "startSeconds": 119.36,
+      "text": "process by influencing the soft Max"
+    },
+    {
+      "startSeconds": 121.6,
+      "text": "function output which takes a vector of"
+    },
+    {
+      "startSeconds": 124.119,
+      "text": "arbitrary real value scores and converts"
+    },
+    {
+      "startSeconds": 126.84,
+      "text": "them into probabilities the sum to one"
+    },
+    {
+      "startSeconds": 129.399,
+      "text": "more concretely what the temperature is"
+    },
+    {
+      "startSeconds": 131.56,
+      "text": "doing is to divide by a parameter Theta"
+    },
+    {
+      "startSeconds": 134.2,
+      "text": "in the exponent that is specify before"
+    },
+    {
+      "startSeconds": 136.599,
+      "text": "the Tex generation starts thus the"
+    },
+    {
+      "startSeconds": 139.68,
+      "text": "temperature parameter scales the loges"
+    },
+    {
+      "startSeconds": 142.08,
+      "text": "before applying the softmax affecting"
+    },
+    {
+      "startSeconds": 144.56,
+      "text": "the steepness of the resulting"
+    },
+    {
+      "startSeconds": 146.28,
+      "text": "probability distribution a higher"
+    },
+    {
+      "startSeconds": 148.84,
+      "text": "temperature which translates to a"
+    },
+    {
+      "startSeconds": 150.68,
+      "text": "division by a higher number in the"
+    },
+    {
+      "startSeconds": 152.8,
+      "text": "exponent and the lower end result for"
+    },
+    {
+      "startSeconds": 155.2,
+      "text": "each probability increases the"
+    },
+    {
+      "startSeconds": 157.48,
+      "text": "randomness by flattening the"
+    },
+    {
+      "startSeconds": 159.2,
+      "text": "distribution making it more likely to"
+    },
+    {
+      "startSeconds": 161.64,
+      "text": "choose less probable words on the other"
+    },
+    {
+      "startSeconds": 164.48,
+      "text": "hand a lower temperature which"
+    },
+    {
+      "startSeconds": 166.84,
+      "text": "translates to dividing by a lower number"
+    },
+    {
+      "startSeconds": 169.2,
+      "text": "in the exponent and the higher end"
+    },
+    {
+      "startSeconds": 171.319,
+      "text": "result for each probability sharpeners"
+    },
+    {
+      "startSeconds": 173.76,
+      "text": "the distribution favoring more probable"
+    },
+    {
+      "startSeconds": 176.4,
+      "text": "words and producing more focused and"
+    },
+    {
+      "startSeconds": 178.959,
+      "text": "deterministic outputs taking the"
+    },
+    {
+      "startSeconds": 181.4,
+      "text": "previous sentence today the weather is"
+    },
+    {
+      "startSeconds": 184.239,
+      "text": "let's see what may happen when we try to"
+    },
+    {
+      "startSeconds": 186.159,
+      "text": "predict the next word of this sentence"
+    },
+    {
+      "startSeconds": 188.519,
+      "text": "if we leave the softmax function as it"
+    },
+    {
+      "startSeconds": 190.64,
+      "text": "was by setting the temperature equal to"
+    },
+    {
+      "startSeconds": 193.04,
+      "text": "one we would simply sample the next word"
+    },
+    {
+      "startSeconds": 195.92,
+      "text": "from the same probability distribution"
+    },
+    {
+      "startSeconds": 198.4,
+      "text": "on the other hand if we increase the"
+    },
+    {
+      "startSeconds": 200.4,
+      "text": "temperature by setting the Theta equal"
+    },
+    {
+      "startSeconds": 202.84,
+      "text": "to 2 we would decrease each probability"
+    },
+    {
+      "startSeconds": 205.239,
+      "text": "in the distribution because the"
+    },
+    {
+      "startSeconds": 207.08,
+      "text": "exponential function takes Le extreme"
+    },
+    {
+      "startSeconds": 209.4,
+      "text": "value if the input has a lower value"
+    },
+    {
+      "startSeconds": 212.12,
+      "text": "making it more likely to select words"
+    },
+    {
+      "startSeconds": 214.28,
+      "text": "with a lower probability like rainy or"
+    },
+    {
+      "startSeconds": 217.28,
+      "text": "the finally if we decrease the"
+    },
+    {
+      "startSeconds": 219.64,
+      "text": "temperature by setting the Theta"
+    },
+    {
+      "startSeconds": 221.48,
+      "text": "parameter to 0.5 we increase each"
+    },
+    {
+      "startSeconds": 224.519,
+      "text": "vector's probability because the"
+    },
+    {
+      "startSeconds": 226.64,
+      "text": "exponential function takes more extreme"
+    },
+    {
+      "startSeconds": 228.959,
+      "text": "values if the input has a higher value"
+    },
+    {
+      "startSeconds": 231.519,
+      "text": "making it more likely to select the most"
+    },
+    {
+      "startSeconds": 233.48,
+      "text": "probable word which is sunny moving on"
+    },
+    {
+      "startSeconds": 236.36,
+      "text": "to top case sampling this method"
+    },
+    {
+      "startSeconds": 238.76,
+      "text": "involves selecting the top K most"
+    },
+    {
+      "startSeconds": 240.64,
+      "text": "probable words at each step and sampling"
+    },
+    {
+      "startSeconds": 243.439,
+      "text": "from this redu set by employing another"
+    },
+    {
+      "startSeconds": 246.159,
+      "text": "hyperparameter K which determines the"
+    },
+    {
+      "startSeconds": 248.959,
+      "text": "size of the set this approach ensures"
+    },
+    {
+      "startSeconds": 251.879,
+      "text": "diversity in the generated text while"
+    },
+    {
+      "startSeconds": 254.2,
+      "text": "still maintaining some control over the"
+    },
+    {
+      "startSeconds": 256.359,
+      "text": "likelihood of chosen words and it"
+    },
+    {
+      "startSeconds": 258.639,
+      "text": "prevents the model from picking extreme"
+    },
+    {
+      "startSeconds": 260.84,
+      "text": "rare or nonsensical tokens striking a"
+    },
+    {
+      "startSeconds": 264,
+      "text": "balance between Randomness and"
+    },
+    {
+      "startSeconds": 266.4,
+      "text": "coherence lastly the top piece sampling"
+    },
+    {
+      "startSeconds": 269.199,
+      "text": "technique also known as nucleus sampling"
+    },
+    {
+      "startSeconds": 272.479,
+      "text": "involves selecting from the smallest set"
+    },
+    {
+      "startSeconds": 274.88,
+      "text": "of words whose cumulative probability"
+    },
+    {
+      "startSeconds": 277.199,
+      "text": "exceeds a predefined threshold often"
+    },
+    {
+      "startSeconds": 279.72,
+      "text": "denoted as p and by dynamically"
+    },
+    {
+      "startSeconds": 282.4,
+      "text": "adjusting the set size based on"
+    },
+    {
+      "startSeconds": 284.44,
+      "text": "probabilities topy sampling allows for"
+    },
+    {
+      "startSeconds": 287,
+      "text": "more adaptive control over the"
+    },
+    {
+      "startSeconds": 288.72,
+      "text": "randomness of the generated text"
+    },
+    {
+      "startSeconds": 291,
+      "text": "allowing either more words or less words"
+    },
+    {
+      "startSeconds": 293.24,
+      "text": "to be considered depending on the"
+    },
+    {
+      "startSeconds": 295.199,
+      "text": "sharpness of the distribution simply put"
+    },
+    {
+      "startSeconds": 297.88,
+      "text": "the topic sampl technique kept fees a"
+    },
+    {
+      "startSeconds": 300.08,
+      "text": "balance between exploration and"
+    },
+    {
+      "startSeconds": 302.039,
+      "text": "exploitation ensuring diversity while"
+    },
+    {
+      "startSeconds": 304.56,
+      "text": "maintaining a higher coherence in the"
+    },
+    {
+      "startSeconds": 306.6,
+      "text": "generated text compared to topk sampling"
+    },
+    {
+      "startSeconds": 310.12,
+      "text": "to summarize random sampling with"
+    },
+    {
+      "startSeconds": 312.4,
+      "text": "temperature topk and top techniques"
+    },
+    {
+      "startSeconds": 315.28,
+      "text": "provides a spectrum of options tailor"
+    },
+    {
+      "startSeconds": 317.759,
+      "text": "the output of large language models and"
+    },
+    {
+      "startSeconds": 320.4,
+      "text": "I would like to dedicate the last part"
+    },
+    {
+      "startSeconds": 322.199,
+      "text": "of this video to talk a little bit about"
+    },
+    {
+      "startSeconds": 324.639,
+      "text": "the pros and cons of each technique so"
+    },
+    {
+      "startSeconds": 327.199,
+      "text": "we get a better understanding of when to"
+    },
+    {
+      "startSeconds": 329.96,
+      "text": "use each method and what are some"
+    },
+    {
+      "startSeconds": 332.28,
+      "text": "possible limitations so for the"
+    },
+    {
+      "startSeconds": 334.72,
+      "text": "temperature some of the pros include"
+    },
+    {
+      "startSeconds": 337.28,
+      "text": "that it enhances the creativity of the"
+    },
+    {
+      "startSeconds": 339.44,
+      "text": "model meaning that the higher"
+    },
+    {
+      "startSeconds": 341.28,
+      "text": "temperature introduce more Randomness"
+    },
+    {
+      "startSeconds": 344.12,
+      "text": "faster in creativity and generating"
+    },
+    {
+      "startSeconds": 346.56,
+      "text": "diverse outputs and also that it"
+    },
+    {
+      "startSeconds": 348.479,
+      "text": "prevents the model from becoming to"
+    },
+    {
+      "startSeconds": 350.36,
+      "text": "deterministic leading to more varied and"
+    },
+    {
+      "startSeconds": 353.12,
+      "text": "interesting text however on the con side"
+    },
+    {
+      "startSeconds": 356.8,
+      "text": "we have that the excessive temperature"
+    },
+    {
+      "startSeconds": 359.16,
+      "text": "can lead to less coherent outputs as the"
+    },
+    {
+      "startSeconds": 361.759,
+      "text": "model becomes more likely to choose less"
+    },
+    {
+      "startSeconds": 364.08,
+      "text": "probable words but also that the"
+    },
+    {
+      "startSeconds": 366.479,
+      "text": "increased Randomness may result in the"
+    },
+    {
+      "startSeconds": 369.039,
+      "text": "generation of text that lacks context or"
+    },
+    {
+      "startSeconds": 371.96,
+      "text": "meaning for the topk sampling on the pro"
+    },
+    {
+      "startSeconds": 375.24,
+      "text": "side we have that it enabl Us control"
+    },
+    {
+      "startSeconds": 377.68,
+      "text": "over the diversity of generated text by"
+    },
+    {
+      "startSeconds": 380.88,
+      "text": "selecting from the top key most probable"
+    },
+    {
+      "startSeconds": 383.12,
+      "text": "words and that it limits the choices to"
+    },
+    {
+      "startSeconds": 386.12,
+      "text": "a set of high probable words reducing"
+    },
+    {
+      "startSeconds": 388.759,
+      "text": "the likelihood of generating nonsensical"
+    },
+    {
+      "startSeconds": 391.599,
+      "text": "text on the other hand if the set of top"
+    },
+    {
+      "startSeconds": 394.639,
+      "text": "k word is limited the model might"
+    },
+    {
+      "startSeconds": 396.84,
+      "text": "produce repetitive outputs as it aders"
+    },
+    {
+      "startSeconds": 399.68,
+      "text": "closely to highly probable tokens and"
+    },
+    {
+      "startSeconds": 402.88,
+      "text": "also that the choice of the key"
+    },
+    {
+      "startSeconds": 404.88,
+      "text": "parameter requires careful consideration"
+    },
+    {
+      "startSeconds": 407.479,
+      "text": "to strike a balance between diversity"
+    },
+    {
+      "startSeconds": 409.919,
+      "text": "and coherence finally the pro of"
+    },
+    {
+      "startSeconds": 413,
+      "text": "enabling topy sampling is firstly that"
+    },
+    {
+      "startSeconds": 415.84,
+      "text": "it dynamically adjusts the set size"
+    },
+    {
+      "startSeconds": 418.56,
+      "text": "based on probability abilities providing"
+    },
+    {
+      "startSeconds": 420.72,
+      "text": "a balance between exploration and"
+    },
+    {
+      "startSeconds": 422.879,
+      "text": "exploitation and secondly that it allows"
+    },
+    {
+      "startSeconds": 425.639,
+      "text": "for a control level of Randomness while"
+    },
+    {
+      "startSeconds": 428.16,
+      "text": "ensuring a diverse set of chosen words"
+    },
+    {
+      "startSeconds": 431.44,
+      "text": "however some of the cons include that"
+    },
+    {
+      "startSeconds": 433.84,
+      "text": "setting the appropriate P value can be"
+    },
+    {
+      "startSeconds": 436.12,
+      "text": "challenging and requires experimentation"
+    },
+    {
+      "startSeconds": 438.56,
+      "text": "to achieve the desired level of"
+    },
+    {
+      "startSeconds": 440.44,
+      "text": "diversity but also that in some cases"
+    },
+    {
+      "startSeconds": 444,
+      "text": "adjusting the set dynamically may lead"
+    },
+    {
+      "startSeconds": 446.28,
+      "text": "to a slight loss of coherence in the"
+    },
+    {
+      "startSeconds": 448.639,
+      "text": "generated text in summary these methods"
+    },
+    {
+      "startSeconds": 452.08,
+      "text": "allow practitioners to strike a balance"
+    },
+    {
+      "startSeconds": 454.199,
+      "text": "between Randomness and determinism"
+    },
+    {
+      "startSeconds": 456.639,
+      "text": "generating diverse and creative text"
+    },
+    {
+      "startSeconds": 459.16,
+      "text": "while ensuring that the result remains"
+    },
+    {
+      "startSeconds": 461.52,
+      "text": "contextually relevant and coherent and"
+    },
+    {
+      "startSeconds": 464.56,
+      "text": "the choice of which method to employ"
+    },
+    {
+      "startSeconds": 466.8,
+      "text": "depends on the specific requirements of"
+    },
+    {
+      "startSeconds": 468.919,
+      "text": "the task at hand and the desired"
+    },
+    {
+      "startSeconds": 471.039,
+      "text": "characteristics of the generated text"
+    },
+    {
+      "startSeconds": 473.84,
+      "text": "and that's basically it folks thanks for"
+    },
+    {
+      "startSeconds": 476,
+      "text": "watching and hit the like button if you"
+    },
+    {
+      "startSeconds": 478.039,
+      "text": "enjoy this explanation"
+    },
+    {
+      "startSeconds": 479.84,
+      "text": "also don't forget to share your thoughts"
+    },
+    {
+      "startSeconds": 481.84,
+      "text": "in the comments below and subscribe if"
+    },
+    {
+      "startSeconds": 484.24,
+      "text": "you want to stay up to dat with the"
+    },
+    {
+      "startSeconds": 486.159,
+      "text": "content I create on this channel see you"
+    },
+    {
+      "startSeconds": 488.599,
+      "text": "next time bye-bye"
+    }
+  ]
 }

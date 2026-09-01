@@ -1,0 +1,749 @@
+{
+  "id": "MZZSMaEAC2g",
+  "url": "https://www.youtube.com/watch?v=MZZSMaEAC2g",
+  "fetchedAt": "2026-09-01T04:07:30.094Z",
+  "captionKind": "asr",
+  "chapters": [],
+  "cues": [
+    {
+      "startSeconds": 0,
+      "text": "hey everybody in today's video I'm going"
+    },
+    {
+      "startSeconds": 1.979,
+      "text": "to explain dictionaries a dictionary is"
+    },
+    {
+      "startSeconds": 4.56,
+      "text": "one of the four basic collection types"
+    },
+    {
+      "startSeconds": 6.24,
+      "text": "for beginners a dictionary consists of"
+    },
+    {
+      "startSeconds": 8.88,
+      "text": "key value pairs they are ordered and"
+    },
+    {
+      "startSeconds": 11.4,
+      "text": "changeable no duplicates allowed a few"
+    },
+    {
+      "startSeconds": 13.799,
+      "text": "examples of key value pairs could be an"
+    },
+    {
+      "startSeconds": 16.92,
+      "text": "ID and a name an item and a price but in"
+    },
+    {
+      "startSeconds": 21,
+      "text": "today's example we'll create a"
+    },
+    {
+      "startSeconds": 22.68,
+      "text": "dictionary of countries and capitals"
+    },
+    {
+      "startSeconds": 24.84,
+      "text": "let's name our dictionary capitals"
+    },
+    {
+      "startSeconds": 27.619,
+      "text": "capitals equals in close your dictionary"
+    },
+    {
+      "startSeconds": 30.779,
+      "text": "with the set of curly braces much like"
+    },
+    {
+      "startSeconds": 32.88,
+      "text": "what you do with sets the first country"
+    },
+    {
+      "startSeconds": 35.46,
+      "text": "will be the USA"
+    },
+    {
+      "startSeconds": 37.559,
+      "text": "to add a value to this key type colon"
+    },
+    {
+      "startSeconds": 40.68,
+      "text": "then some other value"
+    },
+    {
+      "startSeconds": 42.36,
+      "text": "the capital of the USA will be"
+    },
+    {
+      "startSeconds": 44.94,
+      "text": "Washington DC"
+    },
+    {
+      "startSeconds": 49.32,
+      "text": "separate each key value pair with a"
+    },
+    {
+      "startSeconds": 51.78,
+      "text": "comma then we can add another key value"
+    },
+    {
+      "startSeconds": 54.059,
+      "text": "pair so the capital of India"
+    },
+    {
+      "startSeconds": 57.78,
+      "text": "that will be New Delhi"
+    },
+    {
+      "startSeconds": 61.559,
+      "text": "we'll add two more"
+    },
+    {
+      "startSeconds": 64.019,
+      "text": "China"
+    },
+    {
+      "startSeconds": 65.22,
+      "text": "the capital is Beijing"
+    },
+    {
+      "startSeconds": 69.06,
+      "text": "Russia"
+    },
+    {
+      "startSeconds": 72.119,
+      "text": "the capital is Moscow I think that's"
+    },
+    {
+      "startSeconds": 75.42,
+      "text": "good enough"
+    },
+    {
+      "startSeconds": 77.1,
+      "text": "just as a reminder if you would like to"
+    },
+    {
+      "startSeconds": 79.02,
+      "text": "see all of the different attributes and"
+    },
+    {
+      "startSeconds": 80.7,
+      "text": "methods of a dictionary you can use the"
+    },
+    {
+      "startSeconds": 82.979,
+      "text": "Der function pass in your dictionary"
+    },
+    {
+      "startSeconds": 85.2,
+      "text": "capitals"
+    },
+    {
+      "startSeconds": 86.88,
+      "text": "then we'll need to print this"
+    },
+    {
+      "startSeconds": 91.5,
+      "text": "here's all the different attributes and"
+    },
+    {
+      "startSeconds": 93.119,
+      "text": "methods of a dictionary"
+    },
+    {
+      "startSeconds": 94.979,
+      "text": "if you would like an in-depth"
+    },
+    {
+      "startSeconds": 96.42,
+      "text": "description of all these attributes and"
+    },
+    {
+      "startSeconds": 97.92,
+      "text": "methods you can use the help function"
+    },
+    {
+      "startSeconds": 103.92,
+      "text": "uh that's herp help there we go"
+    },
+    {
+      "startSeconds": 110.22,
+      "text": "so yeah that's just a reminder"
+    },
+    {
+      "startSeconds": 113.04,
+      "text": "all right let's go over a few of the"
+    },
+    {
+      "startSeconds": 114.42,
+      "text": "methods"
+    },
+    {
+      "startSeconds": 115.439,
+      "text": "two get one of the values from a"
+    },
+    {
+      "startSeconds": 117.42,
+      "text": "dictionary you would get the key"
+    },
+    {
+      "startSeconds": 120.299,
+      "text": "type the name of the dictionary"
+    },
+    {
+      "startSeconds": 122.34,
+      "text": "capitals dot get let's get the capital"
+    },
+    {
+      "startSeconds": 126,
+      "text": "of the USA"
+    },
+    {
+      "startSeconds": 128.039,
+      "text": "then we'll print it"
+    },
+    {
+      "startSeconds": 132.18,
+      "text": "the value associated with this key the"
+    },
+    {
+      "startSeconds": 135.12,
+      "text": "USA"
+    },
+    {
+      "startSeconds": 136.379,
+      "text": "is Washington DC if I picked a different"
+    },
+    {
+      "startSeconds": 139.2,
+      "text": "country like India"
+    },
+    {
+      "startSeconds": 141.959,
+      "text": "well then we would get that Associated"
+    },
+    {
+      "startSeconds": 143.819,
+      "text": "value which is New Delhi another thing"
+    },
+    {
+      "startSeconds": 146.819,
+      "text": "if python doesn't find a key this is"
+    },
+    {
+      "startSeconds": 149.16,
+      "text": "what will be returned"
+    },
+    {
+      "startSeconds": 150.72,
+      "text": "let's get Japan which is not in our"
+    },
+    {
+      "startSeconds": 152.94,
+      "text": "dictionary"
+    },
+    {
+      "startSeconds": 154.56,
+      "text": "this method would return none we can use"
+    },
+    {
+      "startSeconds": 157.62,
+      "text": "this within an if statement"
+    },
+    {
+      "startSeconds": 161.099,
+      "text": "if capitals dot get"
+    },
+    {
+      "startSeconds": 165.36,
+      "text": "Japan"
+    },
+    {
+      "startSeconds": 167.04,
+      "text": "if a value is returned"
+    },
+    {
+      "startSeconds": 169.5,
+      "text": "then we will print"
+    },
+    {
+      "startSeconds": 172.26,
+      "text": "that Capital exists"
+    },
+    {
+      "startSeconds": 176.819,
+      "text": "else"
+    },
+    {
+      "startSeconds": 178.68,
+      "text": "we will print"
+    },
+    {
+      "startSeconds": 180.42,
+      "text": "that capital"
+    },
+    {
+      "startSeconds": 183.06,
+      "text": "doesn't exist"
+    },
+    {
+      "startSeconds": 186.12,
+      "text": "so Japan is not in our dictionary that"
+    },
+    {
+      "startSeconds": 188.58,
+      "text": "Capital doesn't exist but Russia is"
+    },
+    {
+      "startSeconds": 192.78,
+      "text": "that Capital does exist"
+    },
+    {
+      "startSeconds": 194.94,
+      "text": "that's how to check to see if a key is"
+    },
+    {
+      "startSeconds": 196.92,
+      "text": "within our dictionary you can use the"
+    },
+    {
+      "startSeconds": 198.84,
+      "text": "get method"
+    },
+    {
+      "startSeconds": 200.76,
+      "text": "All Right Moving On Let's update our"
+    },
+    {
+      "startSeconds": 203.159,
+      "text": "dictionary"
+    },
+    {
+      "startSeconds": 204.8,
+      "text": "capitals dot update So within a set of"
+    },
+    {
+      "startSeconds": 208.8,
+      "text": "curly braces"
+    },
+    {
+      "startSeconds": 210.239,
+      "text": "I will add a key then a value"
+    },
+    {
+      "startSeconds": 213.659,
+      "text": "Germany"
+    },
+    {
+      "startSeconds": 216.3,
+      "text": "followed by"
+    },
+    {
+      "startSeconds": 218.64,
+      "text": "Berlin then let's print our dictionary"
+    },
+    {
+      "startSeconds": 221.04,
+      "text": "I'll use a print statement"
+    },
+    {
+      "startSeconds": 223.2,
+      "text": "print"
+    },
+    {
+      "startSeconds": 224.28,
+      "text": "capitals"
+    },
+    {
+      "startSeconds": 226.92,
+      "text": "yeah and there's Germany right there"
+    },
+    {
+      "startSeconds": 229.2,
+      "text": "using the update method we can insert a"
+    },
+    {
+      "startSeconds": 231.54,
+      "text": "new key value pair or update an existing"
+    },
+    {
+      "startSeconds": 234.06,
+      "text": "key value pair let's also change one of"
+    },
+    {
+      "startSeconds": 236.4,
+      "text": "the existing values with our key USA"
+    },
+    {
+      "startSeconds": 239.48,
+      "text": "let's update the capital to be Detroit"
+    },
+    {
+      "startSeconds": 245.28,
+      "text": "yeah see the value has been updated the"
+    },
+    {
+      "startSeconds": 247.739,
+      "text": "capital of the USA is now Detroit"
+    },
+    {
+      "startSeconds": 249.959,
+      "text": "Michigan"
+    },
+    {
+      "startSeconds": 251.519,
+      "text": "to remove a key value pair you can use"
+    },
+    {
+      "startSeconds": 253.86,
+      "text": "the pop method"
+    },
+    {
+      "startSeconds": 255.659,
+      "text": "then pass in a key let's remove China"
+    },
+    {
+      "startSeconds": 260.519,
+      "text": "no longer exists within our dictionary"
+    },
+    {
+      "startSeconds": 262.68,
+      "text": "it's gone you can remove the latest key"
+    },
+    {
+      "startSeconds": 265.919,
+      "text": "value pair within a dictionary by using"
+    },
+    {
+      "startSeconds": 267.9,
+      "text": "the pop item method"
+    },
+    {
+      "startSeconds": 269.88,
+      "text": "capitals dot pop item with pop item you"
+    },
+    {
+      "startSeconds": 275.4,
+      "text": "don't need to pass in a key"
+    },
+    {
+      "startSeconds": 277.38,
+      "text": "pop item will remove the latest key"
+    },
+    {
+      "startSeconds": 280.08,
+      "text": "value pair that was inserted"
+    },
+    {
+      "startSeconds": 281.94,
+      "text": "then we have clear"
+    },
+    {
+      "startSeconds": 283.5,
+      "text": "capitals dot clear"
+    },
+    {
+      "startSeconds": 285.9,
+      "text": "that will clear the dictionary it's"
+    },
+    {
+      "startSeconds": 287.94,
+      "text": "pretty self-explanatory"
+    },
+    {
+      "startSeconds": 290.58,
+      "text": "the next few methods are a little tricky"
+    },
+    {
+      "startSeconds": 292.74,
+      "text": "to explain to get all of the keys within"
+    },
+    {
+      "startSeconds": 295.919,
+      "text": "the dictionary but not the values there"
+    },
+    {
+      "startSeconds": 298.74,
+      "text": "is a keys method capitals dot keys I"
+    },
+    {
+      "startSeconds": 303.419,
+      "text": "think I'm going to insert this within a"
+    },
+    {
+      "startSeconds": 304.919,
+      "text": "variable"
+    },
+    {
+      "startSeconds": 306.24,
+      "text": "Keys equals capitals dot Keys let's see"
+    },
+    {
+      "startSeconds": 310.08,
+      "text": "what happens when we print this"
+    },
+    {
+      "startSeconds": 312.9,
+      "text": "the keys method will return all of the"
+    },
+    {
+      "startSeconds": 315.6,
+      "text": "keys within our dictionary technically"
+    },
+    {
+      "startSeconds": 318.06,
+      "text": "Keys is an object which resembles a list"
+    },
+    {
+      "startSeconds": 320.88,
+      "text": "I haven't discussed object oriented"
+    },
+    {
+      "startSeconds": 322.74,
+      "text": "programming yet this is a little bit"
+    },
+    {
+      "startSeconds": 324.3,
+      "text": "above our level if you ever need the"
+    },
+    {
+      "startSeconds": 326.22,
+      "text": "keys in a dictionary you can use the"
+    },
+    {
+      "startSeconds": 327.9,
+      "text": "keys method one use is that we can use"
+    },
+    {
+      "startSeconds": 330.12,
+      "text": "that within a for Loop they're iterable"
+    },
+    {
+      "startSeconds": 332.699,
+      "text": "for every key in capitals dot Keys"
+    },
+    {
+      "startSeconds": 337.08,
+      "text": "method"
+    },
+    {
+      "startSeconds": 338.759,
+      "text": "let's print every key"
+    },
+    {
+      "startSeconds": 342.78,
+      "text": "if at any time you need to iterate over"
+    },
+    {
+      "startSeconds": 345.06,
+      "text": "all the keys you can use a for Loop to"
+    },
+    {
+      "startSeconds": 347.759,
+      "text": "iterate over every key that is returned"
+    },
+    {
+      "startSeconds": 350.4,
+      "text": "from the keys method of your dictionary"
+    },
+    {
+      "startSeconds": 352.08,
+      "text": "there's also the values method"
+    },
+    {
+      "startSeconds": 355.44,
+      "text": "to get all of the values within your"
+    },
+    {
+      "startSeconds": 357.84,
+      "text": "dictionary"
+    },
+    {
+      "startSeconds": 358.86,
+      "text": "there is a values method"
+    },
+    {
+      "startSeconds": 361.56,
+      "text": "values equals capitals dot values method"
+    },
+    {
+      "startSeconds": 367.38,
+      "text": "then let's print our values"
+    },
+    {
+      "startSeconds": 372.24,
+      "text": "like before with the keys method the"
+    },
+    {
+      "startSeconds": 374.52,
+      "text": "values method will return an object"
+    },
+    {
+      "startSeconds": 376.38,
+      "text": "which resembles a list let's iterate and"
+    },
+    {
+      "startSeconds": 379.62,
+      "text": "print over every value within our"
+    },
+    {
+      "startSeconds": 381.12,
+      "text": "dictionary for every value in"
+    },
+    {
+      "startSeconds": 385.58,
+      "text": "capitals dot values"
+    },
+    {
+      "startSeconds": 391.44,
+      "text": "print every value"
+    },
+    {
+      "startSeconds": 395.88,
+      "text": "here are all the values within our"
+    },
+    {
+      "startSeconds": 397.56,
+      "text": "dictionary"
+    },
+    {
+      "startSeconds": 399.419,
+      "text": "this next one is probably the most"
+    },
+    {
+      "startSeconds": 400.86,
+      "text": "tricky it is the items method"
+    },
+    {
+      "startSeconds": 403.259,
+      "text": "capitals dot items I will assign what is"
+    },
+    {
+      "startSeconds": 406.56,
+      "text": "returned to a variable named items"
+    },
+    {
+      "startSeconds": 409.62,
+      "text": "then we will print items"
+    },
+    {
+      "startSeconds": 413.819,
+      "text": "items returns a dictionary object which"
+    },
+    {
+      "startSeconds": 416.52,
+      "text": "resembles a 2d list of tuples it's"
+    },
+    {
+      "startSeconds": 420,
+      "text": "really complicated how might this be"
+    },
+    {
+      "startSeconds": 421.8,
+      "text": "useful this time we're going to use a"
+    },
+    {
+      "startSeconds": 423.84,
+      "text": "for Loop to print every key comma value"
+    },
+    {
+      "startSeconds": 427.5,
+      "text": "in"
+    },
+    {
+      "startSeconds": 429.259,
+      "text": "capitals dot items method"
+    },
+    {
+      "startSeconds": 432.84,
+      "text": "we have in essence two counters this"
+    },
+    {
+      "startSeconds": 435.3,
+      "text": "time"
+    },
+    {
+      "startSeconds": 436.259,
+      "text": "I will print using an fstring every key"
+    },
+    {
+      "startSeconds": 439.979,
+      "text": "value pair"
+    },
+    {
+      "startSeconds": 441.24,
+      "text": "I will print every key"
+    },
+    {
+      "startSeconds": 443.94,
+      "text": "as well as every value in our print"
+    },
+    {
+      "startSeconds": 445.979,
+      "text": "statement"
+    },
+    {
+      "startSeconds": 448.979,
+      "text": "so there's our dictionary laid out we"
+    },
+    {
+      "startSeconds": 451.5,
+      "text": "have iterated over every key value pair"
+    },
+    {
+      "startSeconds": 453.78,
+      "text": "it's kind of an advanced topic but I"
+    },
+    {
+      "startSeconds": 455.759,
+      "text": "thought I would at least bring it up now"
+    },
+    {
+      "startSeconds": 457.199,
+      "text": "so yeah that's a dictionary everybody"
+    },
+    {
+      "startSeconds": 459.12,
+      "text": "it's a collection of key value pairs"
+    },
+    {
+      "startSeconds": 462.18,
+      "text": "they are ordered and changeable no"
+    },
+    {
+      "startSeconds": 464.88,
+      "text": "duplicates allowed you have a bunch of"
+    },
+    {
+      "startSeconds": 466.979,
+      "text": "different methods such as get update pop"
+    },
+    {
+      "startSeconds": 470.099,
+      "text": "pop item clear then you can get the keys"
+    },
+    {
+      "startSeconds": 472.919,
+      "text": "the values or both which is the items"
+    },
+    {
+      "startSeconds": 476.039,
+      "text": "method we'll be using dictionaries in a"
+    },
+    {
+      "startSeconds": 478.08,
+      "text": "few game programs we'll be making in the"
+    },
+    {
+      "startSeconds": 479.759,
+      "text": "future and well yeah those are"
+    },
+    {
+      "startSeconds": 481.44,
+      "text": "dictionaries in Python"
+    }
+  ]
+}

@@ -1,0 +1,226 @@
+{
+  "id": "aVgZE746OXw",
+  "url": "https://www.youtube.com/watch?v=aVgZE746OXw",
+  "fetchedAt": "2026-09-01T04:07:17.000Z",
+  "captionKind": "manual",
+  "chapters": [
+    {
+      "startSeconds": 0,
+      "label": "Background"
+    },
+    {
+      "startSeconds": 89,
+      "label": "Cross Encoder"
+    },
+    {
+      "startSeconds": 156,
+      "label": "Bi Encoder"
+    },
+    {
+      "startSeconds": 207,
+      "label": "Differences between bi encoders and cross encoders"
+    },
+    {
+      "startSeconds": 241,
+      "label": "Code Snippets for bi encoders and cross encoders"
+    },
+    {
+      "startSeconds": 256,
+      "label": "Attempts to bridge the gap"
+    }
+  ],
+  "cues": [
+    {
+      "startSeconds": 1.08,
+      "text": "Retrieval and reranking are two important concepts in the RAG workflow. But how do"
+    },
+    {
+      "startSeconds": 6.32,
+      "text": "they actually work and why is there a need to use reranking models to rank context passages"
+    },
+    {
+      "startSeconds": 12.32,
+      "text": "again after retrieval? That's what we'll be exploring in this video. We would be focusing"
+    },
+    {
+      "startSeconds": 17.44,
+      "text": "on embedding using BERT based bi-encoder and ranking using BERT based cross encoders. On a"
+    },
+    {
+      "startSeconds": 24.52,
+      "text": "high level embedding models are typically used for creating embeddings of documents and queries both"
+    },
+    {
+      "startSeconds": 30.6,
+      "text": "in the vector store creation and context retrieval stage, while reranking models are typically used"
+    },
+    {
+      "startSeconds": 36.8,
+      "text": "to rerank context passages post the context retrieval stage. Embedding models can be used"
+    },
+    {
+      "startSeconds": 43.24,
+      "text": "for creating embeddings as well as determining the similarity score but ranking models can only help"
+    },
+    {
+      "startSeconds": 50.24,
+      "text": "with determining the similarity score. BERT model uses the same Transformer architecture outlined in"
+    },
+    {
+      "startSeconds": 56.8,
+      "text": "the paper Attention is all you need. A Transformer model comprises of an encoder and a decoder. If"
+    },
+    {
+      "startSeconds": 64.2,
+      "text": "you would need the numerical representation of a passage of text, you would simply use"
+    },
+    {
+      "startSeconds": 68.52,
+      "text": "the pooled output of the BERT Model. A BERT model is simply a bidirectional multi-layer Transformer"
+    },
+    {
+      "startSeconds": 74.64,
+      "text": "encoder. This output embedding represents the semantics as well as other aspects of the piece"
+    },
+    {
+      "startSeconds": 80.88,
+      "text": "of text as a whole in the n dimensional space. Here n is the size of the embedding"
+    },
+    {
+      "startSeconds": 90.68,
+      "text": "A BERT based cross encoder model accepts a pair of text and determines the degree of similarity"
+    },
+    {
+      "startSeconds": 96.08,
+      "text": "between them using a binary classification head. Given a query and document, it first tokenizes"
+    },
+    {
+      "startSeconds": 102.08,
+      "text": "them. Then they are merged together separated by the SEP token. The input embeddings corresponding"
+    },
+    {
+      "startSeconds": 107.48,
+      "text": "to the tokens are then fed to the BERT model. The pooled output of the BERT model is finally passed"
+    },
+    {
+      "startSeconds": 113.48,
+      "text": "on to the binary classification layer. The output of the binary classification layer lies in the"
+    },
+    {
+      "startSeconds": 119.16,
+      "text": "range 0 and 1 and it is a measure of the semantic similarity between the query and the document."
+    },
+    {
+      "startSeconds": 126.16,
+      "text": "There are token level interactions between the query and the passage which contributes to its"
+    },
+    {
+      "startSeconds": 130.92,
+      "text": "high accuracy in determining semantic similarity. But there is an issue here. If we have a long"
+    },
+    {
+      "startSeconds": 137.72,
+      "text": "document and we want to get the passages most semantically similar to a given query,"
+    },
+    {
+      "startSeconds": 142.28,
+      "text": "we would have to pass all the query passage pairs at runtime for the entire document. This"
+    },
+    {
+      "startSeconds": 147.56,
+      "text": "would lead to poor latency if used on real time applications and also lead to high computational"
+    },
+    {
+      "startSeconds": 152.96,
+      "text": "cost. This is where buy encoder comes in. Here queries and passages are processed separately,"
+    },
+    {
+      "startSeconds": 162.24,
+      "text": "so we don't need to pass them in pairs just like in Cross encoders. A given"
+    },
+    {
+      "startSeconds": 167.36,
+      "text": "piece of text is tokenized and passed to a BERT model. Mean pooling is then applied,"
+    },
+    {
+      "startSeconds": 172.72,
+      "text": "finally after normalization we get the output embeddings corresponding to the input text"
+    },
+    {
+      "startSeconds": 184.92,
+      "text": "Now if we have a query and a passage, we can find"
+    },
+    {
+      "startSeconds": 188.12,
+      "text": "out their degree of semantic similarity by using cosine similarity over both the"
+    },
+    {
+      "startSeconds": 192.52,
+      "text": "embeddings. If we have a query and two passages, we can find out which passage is most semantically"
+    },
+    {
+      "startSeconds": 201.44,
+      "text": "similar by comparing the cosine similarity scores of both the passages with the query."
+    },
+    {
+      "startSeconds": 207.92,
+      "text": "So in bi-encoders, accuracy of semantic similarity matching is slightly reduced due to the absence of"
+    },
+    {
+      "startSeconds": 214.68,
+      "text": "token level interactions between the query and the passages. But on a brighter side,"
+    },
+    {
+      "startSeconds": 220.32,
+      "text": "passages can be processed separately, and the embeddings can be stored beforehand."
+    },
+    {
+      "startSeconds": 225.36,
+      "text": "For a given query we can retrieve the passage most semantically similar using the cosine"
+    },
+    {
+      "startSeconds": 230.88,
+      "text": "similarity operation. Since the passages needs to be processed just once, similarity matching"
+    },
+    {
+      "startSeconds": 236.88,
+      "text": "is less computationally expensive compared to cross encoders. You can try out cross"
+    },
+    {
+      "startSeconds": 243.56,
+      "text": "encoder and bi encoder models using both sentence Transformer library as well as through Langchain"
+    },
+    {
+      "startSeconds": 256.08,
+      "text": "Significant attempts have been made to bridge the gap between cross encoders"
+    },
+    {
+      "startSeconds": 260.04,
+      "text": "and bi encoders. This paper introduces the concept of late interactions. Instead"
+    },
+    {
+      "startSeconds": 266.48,
+      "text": "of compressing the entire passage into a single vector embedding, it proposes"
+    },
+    {
+      "startSeconds": 271.24,
+      "text": "token level embeddings. Similarity match is performed using the MaxSim"
+    },
+    {
+      "startSeconds": 276.12,
+      "text": "operation. This paper on the other hand proposes training strategies for shallow cross encoders."
+    },
+    {
+      "startSeconds": 286.6,
+      "text": "A shallow cross encoder would have less number of layers than a full-sized BERT model and their"
+    },
+    {
+      "startSeconds": 292,
+      "text": "latency on retrieval task would be much better. These would be covered in much more detail in"
+    },
+    {
+      "startSeconds": 298.8,
+      "text": "my upcoming videos. So that's it for this video. Hope you like it. Let's learn and grow together"
+    }
+  ]
+}

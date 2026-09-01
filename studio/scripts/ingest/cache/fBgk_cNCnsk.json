@@ -1,0 +1,654 @@
+{
+  "id": "fBgk_cNCnsk",
+  "url": "https://www.youtube.com/watch?v=fBgk_cNCnsk",
+  "fetchedAt": "2026-09-01T04:07:53.448Z",
+  "captionKind": "asr",
+  "chapters": [
+    {
+      "startSeconds": 0,
+      "label": "Introduction"
+    },
+    {
+      "startSeconds": 29,
+      "label": "3 Key Questions"
+    },
+    {
+      "startSeconds": 78,
+      "label": "What type of data are you working with?"
+    },
+    {
+      "startSeconds": 130,
+      "label": "What do you want to communicate?"
+    },
+    {
+      "startSeconds": 248,
+      "label": "Who is the audience and what do they need?"
+    },
+    {
+      "startSeconds": 336,
+      "label": "Free Course: Data Literacy Foundations"
+    }
+  ],
+  "cues": [
+    {
+      "startSeconds": 0.16,
+      "text": "we live in a world that runs on data"
+    },
+    {
+      "startSeconds": 2.879,
+      "text": "it's how Amazon and Netflix know which"
+    },
+    {
+      "startSeconds": 4.799,
+      "text": "movies and products to recommend how"
+    },
+    {
+      "startSeconds": 6.919,
+      "text": "Starbucks manages a global supply chain"
+    },
+    {
+      "startSeconds": 9.4,
+      "text": "and how Uber connects drivers with"
+    },
+    {
+      "startSeconds": 11.32,
+      "text": "passengers in real time but the thing is"
+    },
+    {
+      "startSeconds": 13.92,
+      "text": "data skills aren't just for tech"
+    },
+    {
+      "startSeconds": 15.599,
+      "text": "companies or professional analysts"
+    },
+    {
+      "startSeconds": 17.48,
+      "text": "anymore everyone works with data to some"
+    },
+    {
+      "startSeconds": 20.119,
+      "text": "degree and everyone can benefit from"
+    },
+    {
+      "startSeconds": 22.519,
+      "text": "data literacy skills in this video we're"
+    },
+    {
+      "startSeconds": 25,
+      "text": "covering an important topic that will"
+    },
+    {
+      "startSeconds": 26.679,
+      "text": "help you take your data literacy to the"
+    },
+    {
+      "startSeconds": 28.599,
+      "text": "next level"
+    },
+    {
+      "startSeconds": 31.199,
+      "text": "when it comes time to decide how to"
+    },
+    {
+      "startSeconds": 33,
+      "text": "visualize a data set or which specific"
+    },
+    {
+      "startSeconds": 35.239,
+      "text": "chart to use it's important to ask"
+    },
+    {
+      "startSeconds": 37.32,
+      "text": "yourself three key questions number one"
+    },
+    {
+      "startSeconds": 40.68,
+      "text": "what type of data are you working with"
+    },
+    {
+      "startSeconds": 43.16,
+      "text": "is it geospatial time series categorical"
+    },
+    {
+      "startSeconds": 46.64,
+      "text": "hierarchical or something more"
+    },
+    {
+      "startSeconds": 49,
+      "text": "specialized number two what exactly do"
+    },
+    {
+      "startSeconds": 52,
+      "text": "you want to communicate are you showing"
+    },
+    {
+      "startSeconds": 53.84,
+      "text": "a comparison a composition a"
+    },
+    {
+      "startSeconds": 56,
+      "text": "relationship or a distribution and"
+    },
+    {
+      "startSeconds": 58.44,
+      "text": "number three Who is the audience and"
+    },
+    {
+      "startSeconds": 60.879,
+      "text": "what they need are you sharing this with"
+    },
+    {
+      "startSeconds": 63.199,
+      "text": "an analyst a manager executive or the"
+    },
+    {
+      "startSeconds": 66.24,
+      "text": "general public how you answer these"
+    },
+    {
+      "startSeconds": 68.52,
+      "text": "questions will help you determine which"
+    },
+    {
+      "startSeconds": 70.56,
+      "text": "type of chart or visual is most"
+    },
+    {
+      "startSeconds": 72.36,
+      "text": "appropriate given the context so let's"
+    },
+    {
+      "startSeconds": 75,
+      "text": "unpack each of these in a bit more"
+    },
+    {
+      "startSeconds": 77.04,
+      "text": "detail so question one what type of data"
+    },
+    {
+      "startSeconds": 80.159,
+      "text": "are you working with there are many"
+    },
+    {
+      "startSeconds": 82.159,
+      "text": "flavors of data out there including"
+    },
+    {
+      "startSeconds": 84.4,
+      "text": "common ones like time series geospatial"
+    },
+    {
+      "startSeconds": 87.32,
+      "text": "categorical and hierarchical but you"
+    },
+    {
+      "startSeconds": 89.72,
+      "text": "might might also come across some more"
+    },
+    {
+      "startSeconds": 91.4,
+      "text": "unique and specialized types of data as"
+    },
+    {
+      "startSeconds": 93.6,
+      "text": "well like financial statements textual"
+    },
+    {
+      "startSeconds": 96.119,
+      "text": "data funnel stages survey responses and"
+    },
+    {
+      "startSeconds": 99.04,
+      "text": "much much more and the key takeaway here"
+    },
+    {
+      "startSeconds": 101.52,
+      "text": "is that the type of data you're working"
+    },
+    {
+      "startSeconds": 103.439,
+      "text": "with often helps determine which type of"
+    },
+    {
+      "startSeconds": 105.68,
+      "text": "visual will best represent it some"
+    },
+    {
+      "startSeconds": 107.96,
+      "text": "common examples include using maps for"
+    },
+    {
+      "startSeconds": 110.119,
+      "text": "geospatial analysis line charts to show"
+    },
+    {
+      "startSeconds": 112.92,
+      "text": "time series and bar or column charts for"
+    },
+    {
+      "startSeconds": 115.759,
+      "text": "categorical comparisons other more"
+    },
+    {
+      "startSeconds": 118,
+      "text": "specialized examples include things like"
+    },
+    {
+      "startSeconds": 120,
+      "text": "waterfall charts to track Financial"
+    },
+    {
+      "startSeconds": 121.88,
+      "text": "balances ler scales to summarize survey"
+    },
+    {
+      "startSeconds": 124.84,
+      "text": "responses even word clouds to visualize"
+    },
+    {
+      "startSeconds": 127.399,
+      "text": "information from text-based"
+    },
+    {
+      "startSeconds": 129.679,
+      "text": "documents question two is all about"
+    },
+    {
+      "startSeconds": 132.52,
+      "text": "understanding what you want to"
+    },
+    {
+      "startSeconds": 133.56,
+      "text": "communicate whether it's a comparison"
+    },
+    {
+      "startSeconds": 136.12,
+      "text": "composition distribution or relationship"
+    },
+    {
+      "startSeconds": 139.239,
+      "text": "comparison visuals as the name suggests"
+    },
+    {
+      "startSeconds": 141.92,
+      "text": "are used to compare values over time or"
+    },
+    {
+      "startSeconds": 144.36,
+      "text": "across categories common visuals here"
+    },
+    {
+      "startSeconds": 146.76,
+      "text": "include variations of bar and column"
+    },
+    {
+      "startSeconds": 148.72,
+      "text": "charts along with line or area charts"
+    },
+    {
+      "startSeconds": 151.12,
+      "text": "for showing time series and some less"
+    },
+    {
+      "startSeconds": 153.239,
+      "text": "common examples might be something like"
+    },
+    {
+      "startSeconds": 154.879,
+      "text": "a funnel chart if you specifically want"
+    },
+    {
+      "startSeconds": 157.04,
+      "text": "to show sequential stages like for"
+    },
+    {
+      "startSeconds": 159.64,
+      "text": "example the number of applicants who"
+    },
+    {
+      "startSeconds": 161.36,
+      "text": "made it through each round of a hiring"
+    },
+    {
+      "startSeconds": 163.68,
+      "text": "process composition visuals are used to"
+    },
+    {
+      "startSeconds": 166.44,
+      "text": "break down the component parts of a hole"
+    },
+    {
+      "startSeconds": 169.12,
+      "text": "this is where you'll typically use"
+    },
+    {
+      "startSeconds": 170.56,
+      "text": "stacked bar or column charts pies and"
+    },
+    {
+      "startSeconds": 173.04,
+      "text": "donuts stacked area charts for showing"
+    },
+    {
+      "startSeconds": 175.64,
+      "text": "composition changes over time and maybe"
+    },
+    {
+      "startSeconds": 178.36,
+      "text": "things like tree Maps or sun sunbursts"
+    },
+    {
+      "startSeconds": 180.599,
+      "text": "if you're dealing with hierarchical data"
+    },
+    {
+      "startSeconds": 182.48,
+      "text": "specifically distribution visuals are"
+    },
+    {
+      "startSeconds": 184.959,
+      "text": "useful when you want to show the"
+    },
+    {
+      "startSeconds": 186.2,
+      "text": "frequency of values within a series like"
+    },
+    {
+      "startSeconds": 188.799,
+      "text": "the Olympic Athlete example we talked"
+    },
+    {
+      "startSeconds": 190.599,
+      "text": "about earlier in this course by far the"
+    },
+    {
+      "startSeconds": 192.959,
+      "text": "most common and effective visual for"
+    },
+    {
+      "startSeconds": 194.879,
+      "text": "showing distributions is the histogram"
+    },
+    {
+      "startSeconds": 197.599,
+      "text": "but there are others as well like box"
+    },
+    {
+      "startSeconds": 199.44,
+      "text": "and whisker charts density plots violin"
+    },
+    {
+      "startSeconds": 202.159,
+      "text": "charts or heat maps and last but not"
+    },
+    {
+      "startSeconds": 204.64,
+      "text": "least relationship visuals help you show"
+    },
+    {
+      "startSeconds": 207.159,
+      "text": "correlation between multiple variables"
+    },
+    {
+      "startSeconds": 209.799,
+      "text": "this is typically done using Scatter"
+    },
+    {
+      "startSeconds": 211.56,
+      "text": "Plots or variations like bubble charts"
+    },
+    {
+      "startSeconds": 214.319,
+      "text": "but you might also use tools like a heat"
+    },
+    {
+      "startSeconds": 216.04,
+      "text": "map or correlation Matrix to show a"
+    },
+    {
+      "startSeconds": 218.2,
+      "text": "relationship as well now you might be"
+    },
+    {
+      "startSeconds": 220.68,
+      "text": "feeling a little bit lost or overwhelmed"
+    },
+    {
+      "startSeconds": 223.12,
+      "text": "given just how many types of visuals"
+    },
+    {
+      "startSeconds": 225.159,
+      "text": "exist but let me give you some peace of"
+    },
+    {
+      "startSeconds": 226.92,
+      "text": "mind 90% of the time basic variations of"
+    },
+    {
+      "startSeconds": 230.68,
+      "text": "bar column and line charts will be the"
+    },
+    {
+      "startSeconds": 233.4,
+      "text": "simplest and clearest way to visualize"
+    },
+    {
+      "startSeconds": 235.599,
+      "text": "your data so keep it simple avoid using"
+    },
+    {
+      "startSeconds": 238.879,
+      "text": "complex or custom visuals unless you"
+    },
+    {
+      "startSeconds": 241.079,
+      "text": "absolutely need to and make sure to"
+    },
+    {
+      "startSeconds": 243.12,
+      "text": "prioritize Simplicity and Clarity over"
+    },
+    {
+      "startSeconds": 246.12,
+      "text": "Aesthetics and design that takes us to"
+    },
+    {
+      "startSeconds": 248.64,
+      "text": "our third question who is the audience"
+    },
+    {
+      "startSeconds": 251.079,
+      "text": "and what they need one of the most"
+    },
+    {
+      "startSeconds": 253.239,
+      "text": "common mistakes that we see people make"
+    },
+    {
+      "startSeconds": 255.239,
+      "text": "is that they design based on what they"
+    },
+    {
+      "startSeconds": 257.079,
+      "text": "want to build not what Their audience"
+    },
+    {
+      "startSeconds": 259.199,
+      "text": "needs to see designing effective visuals"
+    },
+    {
+      "startSeconds": 261.919,
+      "text": "requires a level of empathy and an"
+    },
+    {
+      "startSeconds": 264.52,
+      "text": "understanding of who your audience is"
+    },
+    {
+      "startSeconds": 266.32,
+      "text": "and exactly what they're looking for so"
+    },
+    {
+      "startSeconds": 268.52,
+      "text": "here are a few examples including an"
+    },
+    {
+      "startSeconds": 270.4,
+      "text": "analyst manager and executive the"
+    },
+    {
+      "startSeconds": 273.12,
+      "text": "analyst tends to be someone who wants"
+    },
+    {
+      "startSeconds": 274.8,
+      "text": "detail they like to understand exactly"
+    },
+    {
+      "startSeconds": 277.039,
+      "text": "what's going on at a granular level so"
+    },
+    {
+      "startSeconds": 279.28,
+      "text": "they're likely to respond well to things"
+    },
+    {
+      "startSeconds": 281,
+      "text": "like data tables or combo charts with"
+    },
+    {
+      "startSeconds": 283.6,
+      "text": "enough detail to support root cause"
+    },
+    {
+      "startSeconds": 285.36,
+      "text": "analysis the manager typically wants"
+    },
+    {
+      "startSeconds": 288,
+      "text": "more summarized data that leads to clear"
+    },
+    {
+      "startSeconds": 290.28,
+      "text": "insights that will help them operate the"
+    },
+    {
+      "startSeconds": 292.4,
+      "text": "business for the manager audience it's"
+    },
+    {
+      "startSeconds": 294.84,
+      "text": "best to stick with common charts and"
+    },
+    {
+      "startSeconds": 296.639,
+      "text": "graphs and only enough detail to support"
+    },
+    {
+      "startSeconds": 299.199,
+      "text": "specific insights or recommendations and"
+    },
+    {
+      "startSeconds": 302,
+      "text": "finally the executive needs highlevel"
+    },
+    {
+      "startSeconds": 304.56,
+      "text": "crystalclear kpis to track Business"
+    },
+    {
+      "startSeconds": 307.039,
+      "text": "Health and Topline performance things"
+    },
+    {
+      "startSeconds": 309.4,
+      "text": "like kpi cards or very simple charts"
+    },
+    {
+      "startSeconds": 312.32,
+      "text": "with minimal detail unless it adds"
+    },
+    {
+      "startSeconds": 314.6,
+      "text": "critical context to those metrics so"
+    },
+    {
+      "startSeconds": 317.52,
+      "text": "bottom line here is that how you choose"
+    },
+    {
+      "startSeconds": 319.6,
+      "text": "to visualize and present data is very"
+    },
+    {
+      "startSeconds": 322.12,
+      "text": "much a function of who will be consuming"
+    },
+    {
+      "startSeconds": 324.12,
+      "text": "it analysts or data Specialists may want"
+    },
+    {
+      "startSeconds": 327,
+      "text": "granular details or complex charts while"
+    },
+    {
+      "startSeconds": 329.88,
+      "text": "managers or execs often prefer highle"
+    },
+    {
+      "startSeconds": 332.44,
+      "text": "metrics with a focus on clear data"
+    },
+    {
+      "startSeconds": 335,
+      "text": "driven insights if you enjoyed this"
+    },
+    {
+      "startSeconds": 337.68,
+      "text": "content and want to see more we've got a"
+    },
+    {
+      "startSeconds": 339.759,
+      "text": "brand new data literacy foundations"
+    },
+    {
+      "startSeconds": 342.08,
+      "text": "course and it's entirely free you can"
+    },
+    {
+      "startSeconds": 344.88,
+      "text": "check it out at Maven"
+    },
+    {
+      "startSeconds": 346.88,
+      "text": "analytics. so whether you're an"
+    },
+    {
+      "startSeconds": 348.56,
+      "text": "individual looking to build confidence a"
+    },
+    {
+      "startSeconds": 350.96,
+      "text": "leader seeking to empower and upskill"
+    },
+    {
+      "startSeconds": 352.919,
+      "text": "your team or a data professional just"
+    },
+    {
+      "startSeconds": 355.24,
+      "text": "trying to stay ahead of the curve this"
+    },
+    {
+      "startSeconds": 357.039,
+      "text": "is the course for you we've got a lot to"
+    },
+    {
+      "startSeconds": 359.4,
+      "text": "cover so let's Dive In"
+    }
+  ]
+}

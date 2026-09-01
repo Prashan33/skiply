@@ -1,8 +1,418 @@
 {
   "id": "zfLpzpH1t6Q",
   "url": "https://www.youtube.com/watch?v=zfLpzpH1t6Q",
-  "fetchedAt": "2026-08-31T05:15:18.252Z",
-  "captionKind": "empty",
-  "chapters": [],
-  "cues": []
+  "fetchedAt": "2026-09-01T04:06:00.102Z",
+  "captionKind": "asr",
+  "chapters": [
+    {
+      "startSeconds": 0,
+      "label": "Extending generic types"
+    },
+    {
+      "startSeconds": 102,
+      "label": "Type Argument Inference"
+    },
+    {
+      "startSeconds": 133,
+      "label": "Use different type arguments"
+    },
+    {
+      "startSeconds": 209,
+      "label": "Generic type parameter defaults"
+    }
+  ],
+  "cues": [
+    {
+      "startSeconds": 0.24,
+      "text": "let's talk about extending generics here"
+    },
+    {
+      "startSeconds": 2.96,
+      "text": "is a function called print name and"
+    },
+    {
+      "startSeconds": 5.52,
+      "text": "there is the argument of someone of type"
+    },
+    {
+      "startSeconds": 7.759,
+      "text": "t"
+    },
+    {
+      "startSeconds": 8.8,
+      "text": "and now i want to access the name"
+    },
+    {
+      "startSeconds": 11.2,
+      "text": "property of someone but since someone is"
+    },
+    {
+      "startSeconds": 14.639,
+      "text": "of type t typescript doesn't know if"
+    },
+    {
+      "startSeconds": 16.96,
+      "text": "type t comes with a name property"
+    },
+    {
+      "startSeconds": 19.92,
+      "text": "we can solve this by extending t"
+    },
+    {
+      "startSeconds": 22.88,
+      "text": "so t can inherit properties using the"
+    },
+    {
+      "startSeconds": 25.76,
+      "text": "extends keyword and now we say ok it"
+    },
+    {
+      "startSeconds": 28.16,
+      "text": "should inherit from an object"
+    },
+    {
+      "startSeconds": 30.4,
+      "text": "that has a name property of type string"
+    },
+    {
+      "startSeconds": 34.559,
+      "text": "now typescript knows that t"
+    },
+    {
+      "startSeconds": 37.2,
+      "text": "must have a name because it extends here"
+    },
+    {
+      "startSeconds": 39.92,
+      "text": "that object that comes with the name"
+    },
+    {
+      "startSeconds": 41.44,
+      "text": "property"
+    },
+    {
+      "startSeconds": 42.559,
+      "text": "let me zoom out a bit to make some more"
+    },
+    {
+      "startSeconds": 44.96,
+      "text": "space for new code"
+    },
+    {
+      "startSeconds": 47.44,
+      "text": "i'm writing now an interface called user"
+    },
+    {
+      "startSeconds": 50.64,
+      "text": "and i will give that user interface a"
+    },
+    {
+      "startSeconds": 53.039,
+      "text": "name property so also here name of type"
+    },
+    {
+      "startSeconds": 55.52,
+      "text": "string"
+    },
+    {
+      "startSeconds": 56.48,
+      "text": "and now i can replace the object next to"
+    },
+    {
+      "startSeconds": 60.16,
+      "text": "my extends keyword with the newly"
+    },
+    {
+      "startSeconds": 61.92,
+      "text": "created user interface"
+    },
+    {
+      "startSeconds": 64.96,
+      "text": "let's test our code so i will create a"
+    },
+    {
+      "startSeconds": 67.76,
+      "text": "new constant"
+    },
+    {
+      "startSeconds": 68.96,
+      "text": "called benny benny will be a user and"
+    },
+    {
+      "startSeconds": 72.32,
+      "text": "that user then must get a name so i will"
+    },
+    {
+      "startSeconds": 75.68,
+      "text": "call benny benny"
+    },
+    {
+      "startSeconds": 77.2,
+      "text": "and then i can use the print name"
+    },
+    {
+      "startSeconds": 79.2,
+      "text": "function and i can insert benny here as"
+    },
+    {
+      "startSeconds": 82.64,
+      "text": "the parameter"
+    },
+    {
+      "startSeconds": 85.52,
+      "text": "what we can see now is that benny is of"
+    },
+    {
+      "startSeconds": 88.32,
+      "text": "type user"
+    },
+    {
+      "startSeconds": 89.759,
+      "text": "and the return value from that function"
+    },
+    {
+      "startSeconds": 92.799,
+      "text": "call will also be of type user so"
+    },
+    {
+      "startSeconds": 95.84,
+      "text": "that is because the sum one is of type t"
+    },
+    {
+      "startSeconds": 98.56,
+      "text": "and the return value is also of type t"
+    },
+    {
+      "startSeconds": 101.84,
+      "text": "so the value the type that we put in is"
+    },
+    {
+      "startSeconds": 105.2,
+      "text": "also the type that we get out and this"
+    },
+    {
+      "startSeconds": 106.96,
+      "text": "is what we see here in"
+    },
+    {
+      "startSeconds": 108.56,
+      "text": "the type argument inference yeah"
+    },
+    {
+      "startSeconds": 110.72,
+      "text": "typescript inferred the t"
+    },
+    {
+      "startSeconds": 113.28,
+      "text": "by itself"
+    },
+    {
+      "startSeconds": 114.399,
+      "text": "because it knows that the input is of"
+    },
+    {
+      "startSeconds": 116,
+      "text": "type user so it knows that our t is also"
+    },
+    {
+      "startSeconds": 118.64,
+      "text": "then of type user and that's called type"
+    },
+    {
+      "startSeconds": 121.04,
+      "text": "argument inference we can also"
+    },
+    {
+      "startSeconds": 123.04,
+      "text": "explicitly define what is rt but in this"
+    },
+    {
+      "startSeconds": 126.399,
+      "text": "case typescript is smart enough to"
+    },
+    {
+      "startSeconds": 128.399,
+      "text": "figure it out itself"
+    },
+    {
+      "startSeconds": 135.68,
+      "text": "i will show you now why i'm using a"
+    },
+    {
+      "startSeconds": 137.76,
+      "text": "t-rex"
+    },
+    {
+      "startSeconds": 139.04,
+      "text": "to show generic inheritance because t"
+    },
+    {
+      "startSeconds": 141.76,
+      "text": "extends user but this just means that it"
+    },
+    {
+      "startSeconds": 144.8,
+      "text": "extends"
+    },
+    {
+      "startSeconds": 146.239,
+      "text": "the properties from the user interface"
+    },
+    {
+      "startSeconds": 149.36,
+      "text": "so i don't have to necessarily give it a"
+    },
+    {
+      "startSeconds": 151.36,
+      "text": "user interface i just have to provide"
+    },
+    {
+      "startSeconds": 153.68,
+      "text": "something that also has these properties"
+    },
+    {
+      "startSeconds": 156,
+      "text": "so for example if i have a t-rex"
+    },
+    {
+      "startSeconds": 157.84,
+      "text": "interface and this t-rex interface then"
+    },
+    {
+      "startSeconds": 160.56,
+      "text": "also has a name of type string then the"
+    },
+    {
+      "startSeconds": 163.519,
+      "text": "condition is fulfilled yeah because t"
+    },
+    {
+      "startSeconds": 166.319,
+      "text": "inherits all the properties from user"
+    },
+    {
+      "startSeconds": 168.64,
+      "text": "which are names so i can use my function"
+    },
+    {
+      "startSeconds": 171.92,
+      "text": "also with for example a dino"
+    },
+    {
+      "startSeconds": 174.08,
+      "text": "i will have a dyno that is a t-rex"
+    },
+    {
+      "startSeconds": 176.64,
+      "text": "and that t-rex i will just call rexy"
+    },
+    {
+      "startSeconds": 180.72,
+      "text": "and rexy will be also okay to be used"
+    },
+    {
+      "startSeconds": 184.08,
+      "text": "with this print name function if i pass"
+    },
+    {
+      "startSeconds": 186.4,
+      "text": "in now rexy then the t will be inferred"
+    },
+    {
+      "startSeconds": 190.08,
+      "text": "to be of type t-rex and what i then also"
+    },
+    {
+      "startSeconds": 193.2,
+      "text": "get back is a t-rex and my generic"
+    },
+    {
+      "startSeconds": 195.76,
+      "text": "function is then proven to work with"
+    },
+    {
+      "startSeconds": 197.84,
+      "text": "generic types and in this case i used"
+    },
+    {
+      "startSeconds": 200.56,
+      "text": "for example user and the t-rex but i can"
+    },
+    {
+      "startSeconds": 203.12,
+      "text": "use any other types generic as long as"
+    },
+    {
+      "startSeconds": 205.68,
+      "text": "that type has a name property"
+    },
+    {
+      "startSeconds": 212.48,
+      "text": "there is another feature that i want to"
+    },
+    {
+      "startSeconds": 214.56,
+      "text": "show you which is using a default type"
+    },
+    {
+      "startSeconds": 217.28,
+      "text": "variable"
+    },
+    {
+      "startSeconds": 218.4,
+      "text": "so we have the t at print name and we"
+    },
+    {
+      "startSeconds": 220.959,
+      "text": "can say that by default this t is of"
+    },
+    {
+      "startSeconds": 223.68,
+      "text": "type string"
+    },
+    {
+      "startSeconds": 224.959,
+      "text": "and then when we use the print name"
+    },
+    {
+      "startSeconds": 227.04,
+      "text": "function we will get some autocompletion"
+    },
+    {
+      "startSeconds": 229.44,
+      "text": "so intellisense will tell us that the"
+    },
+    {
+      "startSeconds": 231.84,
+      "text": "name is expected to be a string"
+    },
+    {
+      "startSeconds": 234.64,
+      "text": "when we then put a string so for example"
+    },
+    {
+      "startSeconds": 236.64,
+      "text": "i will put my name here the function"
+    },
+    {
+      "startSeconds": 238.879,
+      "text": "will work and the t is a string now of"
+    },
+    {
+      "startSeconds": 241.92,
+      "text": "course i can also change it to any other"
+    },
+    {
+      "startSeconds": 244,
+      "text": "type so i can put a number here"
+    },
+    {
+      "startSeconds": 245.76,
+      "text": "explicitly and then i have to supply a"
+    },
+    {
+      "startSeconds": 248.48,
+      "text": "number"
+    }
+  ]
 }

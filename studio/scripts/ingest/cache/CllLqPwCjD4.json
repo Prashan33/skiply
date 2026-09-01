@@ -1,0 +1,1057 @@
+{
+  "id": "CllLqPwCjD4",
+  "url": "https://www.youtube.com/watch?v=CllLqPwCjD4",
+  "fetchedAt": "2026-09-01T04:06:39.003Z",
+  "captionKind": "asr",
+  "chapters": [],
+  "cues": [
+    {
+      "startSeconds": 0,
+      "text": "So, when you work with AI models, prompt"
+    },
+    {
+      "startSeconds": 2.76,
+      "text": "engineering is very important is because"
+    },
+    {
+      "startSeconds": 4.32,
+      "text": "you specify what you want and AI knows"
+    },
+    {
+      "startSeconds": 7.12,
+      "text": "what you want. It will do some work and"
+    },
+    {
+      "startSeconds": 8.76,
+      "text": "it will give you the required"
+    },
+    {
+      "startSeconds": 10.52,
+      "text": "information. But see, now we have to"
+    },
+    {
+      "startSeconds": 13.12,
+      "text": "look at from a developer's perspective."
+    },
+    {
+      "startSeconds": 15.44,
+      "text": "See, when you build application, you"
+    },
+    {
+      "startSeconds": 17.32,
+      "text": "want data from AI, right? Now, in"
+    },
+    {
+      "startSeconds": 20.36,
+      "text": "general, when you want data, where do"
+    },
+    {
+      "startSeconds": 21.92,
+      "text": "you look for? We look for data in the"
+    },
+    {
+      "startSeconds": 24,
+      "text": "database, right? So, we have the"
+    },
+    {
+      "startSeconds": 25.2,
+      "text": "application, we try to get this data"
+    },
+    {
+      "startSeconds": 27.32,
+      "text": "from database, and or maybe let's say"
+    },
+    {
+      "startSeconds": 30.08,
+      "text": "front end. If front end wants data, it"
+    },
+    {
+      "startSeconds": 32,
+      "text": "will get it from the back end. Now, how"
+    },
+    {
+      "startSeconds": 33.4,
+      "text": "do you send data from the back end to"
+    },
+    {
+      "startSeconds": 35.2,
+      "text": "the front end? You use a format. Now,"
+    },
+    {
+      "startSeconds": 37.12,
+      "text": "this format can be XML format or this"
+    },
+    {
+      "startSeconds": 39.16,
+      "text": "can be a JSON format. And now nowadays,"
+    },
+    {
+      "startSeconds": 41.36,
+      "text": "we use JSON format. On the other hand,"
+    },
+    {
+      "startSeconds": 43.68,
+      "text": "if you have a back end which is asking"
+    },
+    {
+      "startSeconds": 47.28,
+      "text": "for the data from some other server,"
+    },
+    {
+      "startSeconds": 49.2,
+      "text": "even there you transfer JSON data. So,"
+    },
+    {
+      "startSeconds": 52.36,
+      "text": "that means we are used to work with JSON"
+    },
+    {
+      "startSeconds": 55.48,
+      "text": "formats, right? So, if you have an"
+    },
+    {
+      "startSeconds": 57.28,
+      "text": "object, let's say in Java or Python, you"
+    },
+    {
+      "startSeconds": 59.6,
+      "text": "basically try to fetch data, and you"
+    },
+    {
+      "startSeconds": 62.12,
+      "text": "want to convert that data from JSON to"
+    },
+    {
+      "startSeconds": 64.239,
+      "text": "object format. In the same way, if you"
+    },
+    {
+      "startSeconds": 66.4,
+      "text": "want to fetch data from AI, in what"
+    },
+    {
+      "startSeconds": 69.28,
+      "text": "format you're looking for? Of course,"
+    },
+    {
+      "startSeconds": 71.36,
+      "text": "JSON. Now, till this point, when we"
+    },
+    {
+      "startSeconds": 73.16,
+      "text": "worked with the prompt engineering, we"
+    },
+    {
+      "startSeconds": 75.4,
+      "text": "were basically working with the text."
+    },
+    {
+      "startSeconds": 77.48,
+      "text": "And it's okay to get text, but then how"
+    },
+    {
+      "startSeconds": 80.4,
+      "text": "will you parse it? How will you make a"
+    },
+    {
+      "startSeconds": 82.4,
+      "text": "use of those text? And specifically,"
+    },
+    {
+      "startSeconds": 85.04,
+      "text": "when you talk about AI, you don't get"
+    },
+    {
+      "startSeconds": 87.12,
+      "text": "the standard text from the AI. Sometimes"
+    },
+    {
+      "startSeconds": 90.04,
+      "text": "you get extra stuff, sometimes you get"
+    },
+    {
+      "startSeconds": 91.88,
+      "text": "the main thing at the end. So, you can't"
+    },
+    {
+      "startSeconds": 94.4,
+      "text": "predict that. And that's where you have"
+    },
+    {
+      "startSeconds": 96.48,
+      "text": "to work with the structured output. Now,"
+    },
+    {
+      "startSeconds": 98.72,
+      "text": "how do you get it? And to do that, let's"
+    },
+    {
+      "startSeconds": 100.72,
+      "text": "take an example of an application which"
+    },
+    {
+      "startSeconds": 102.68,
+      "text": "needs the data about a particular phone."
+    },
+    {
+      "startSeconds": 104.64,
+      "text": "So, let's say you're building an"
+    },
+    {
+      "startSeconds": 105.44,
+      "text": "application where you want to show data"
+    },
+    {
+      "startSeconds": 107.64,
+      "text": "about a phone. So, I will say, \"I"
+    },
+    {
+      "startSeconds": 110.4,
+      "text": "need details of iPhone ad, okay?"
+    },
+    {
+      "startSeconds": 115.76,
+      "text": "Uh so, when I do that, now it's already"
+    },
+    {
+      "startSeconds": 118,
+      "text": "launched, right? iPhone is there in the"
+    },
+    {
+      "startSeconds": 119.6,
+      "text": "market. You can buy it."
+    },
+    {
+      "startSeconds": 121.6,
+      "text": "I mean, should you buy it or not? That's"
+    },
+    {
+      "startSeconds": 122.68,
+      "text": "a different question, but you can buy"
+    },
+    {
+      "startSeconds": 124.08,
+      "text": "it. And if you say enter, it should say,"
+    },
+    {
+      "startSeconds": 127.88,
+      "text": "\"This is the phone which was launched"
+    },
+    {
+      "startSeconds": 129.92,
+      "text": "and these are the price.\""
+    },
+    {
+      "startSeconds": 131.72,
+      "text": "Uh let's see what it says. It says,"
+    },
+    {
+      "startSeconds": 133.28,
+      "text": "\"iPhone 8 is a model of iPhone lineup"
+    },
+    {
+      "startSeconds": 135.24,
+      "text": "announced in blah blah blah.\" Okay,"
+    },
+    {
+      "startSeconds": 136.84,
+      "text": "good. So, it's able to fetch the data"
+    },
+    {
+      "startSeconds": 138.12,
+      "text": "which we need. Okay, so everything is"
+    },
+    {
+      "startSeconds": 139.68,
+      "text": "there. Now, before making a video, I was"
+    },
+    {
+      "startSeconds": 141.52,
+      "text": "doing some experiments and once it it"
+    },
+    {
+      "startSeconds": 144.32,
+      "text": "said that it is rumored that iPhone 8 is"
+    },
+    {
+      "startSeconds": 147.2,
+      "text": "going to launch. So, maybe even Gemini"
+    },
+    {
+      "startSeconds": 150.2,
+      "text": "had don't have the updated data about"
+    },
+    {
+      "startSeconds": 152.28,
+      "text": "iPhone. Uh maybe it's Google versus"
+    },
+    {
+      "startSeconds": 154.28,
+      "text": "Apple. I'm not sure. But this time it is"
+    },
+    {
+      "startSeconds": 156,
+      "text": "giving you, that's good thing."
+    },
+    {
+      "startSeconds": 157.72,
+      "text": "But you have to also assume that AI"
+    },
+    {
+      "startSeconds": 160.48,
+      "text": "might not give you the correct"
+    },
+    {
+      "startSeconds": 161.88,
+      "text": "information or the latest information,"
+    },
+    {
+      "startSeconds": 164.24,
+      "text": "right? So, just by saying I need details"
+    },
+    {
+      "startSeconds": 167.08,
+      "text": "of an iPhone 8 might not give you the"
+    },
+    {
+      "startSeconds": 169.72,
+      "text": "exact information. So, if you want exact"
+    },
+    {
+      "startSeconds": 172.2,
+      "text": "information, what you can do is you can"
+    },
+    {
+      "startSeconds": 174.2,
+      "text": "say uh I need details about iPhone 8 and"
+    },
+    {
+      "startSeconds": 177.56,
+      "text": "you can also add a source in case if LLM"
+    },
+    {
+      "startSeconds": 180.36,
+      "text": "is not able to find data about it. Uh"
+    },
+    {
+      "startSeconds": 182.08,
+      "text": "we'll talk about this concept later,"
+    },
+    {
+      "startSeconds": 184.12,
+      "text": "what I'm doing now, how I'm injecting"
+    },
+    {
+      "startSeconds": 186.32,
+      "text": "the source in the prompt. We have some"
+    },
+    {
+      "startSeconds": 189.04,
+      "text": "concept for it or maybe uh it's more"
+    },
+    {
+      "startSeconds": 191.519,
+      "text": "about adding context to the prompt. And"
+    },
+    {
+      "startSeconds": 193.92,
+      "text": "when I do that, it will specifically go"
+    },
+    {
+      "startSeconds": 195.84,
+      "text": "to that website, scan, understand what"
+    },
+    {
+      "startSeconds": 198.36,
+      "text": "is happening, and then it will give you"
+    },
+    {
+      "startSeconds": 199.72,
+      "text": "the answer. So, even maybe this is right"
+    },
+    {
+      "startSeconds": 203.08,
+      "text": "and this should be right because we have"
+    },
+    {
+      "startSeconds": 205.08,
+      "text": "passed the source now."
+    },
+    {
+      "startSeconds": 206.68,
+      "text": "And if you go up here,"
+    },
+    {
+      "startSeconds": 209.08,
+      "text": "let's look at the price section. So,"
+    },
+    {
+      "startSeconds": 210.68,
+      "text": "when I looked at the price, okay, now"
+    },
+    {
+      "startSeconds": 212.48,
+      "text": "where there is a price is it?"
+    },
+    {
+      "startSeconds": 214.36,
+      "text": "Uh maybe I'm not able to find anywhere."
+    },
+    {
+      "startSeconds": 216.04,
+      "text": "But then,"
+    },
+    {
+      "startSeconds": 217.04,
+      "text": "even if it gives you a price and maybe"
+    },
+    {
+      "startSeconds": 219.12,
+      "text": "you can see on the screen, it might give"
+    },
+    {
+      "startSeconds": 221.12,
+      "text": "you in dollars."
+    },
+    {
+      "startSeconds": 222.56,
+      "text": "Now, specifically I'm recording this"
+    },
+    {
+      "startSeconds": 224.36,
+      "text": "video from India, so it should give me"
+    },
+    {
+      "startSeconds": 226.76,
+      "text": "Indian price. And when I pass the"
+    },
+    {
+      "startSeconds": 228.2,
+      "text": "source, it is IN here."
+    },
+    {
+      "startSeconds": 230.8,
+      "text": "And that's why you can see we got the"
+    },
+    {
+      "startSeconds": 232,
+      "text": "price in rupees. Additionally, it should"
+    },
+    {
+      "startSeconds": 234.4,
+      "text": "give you some more information. It's not"
+    },
+    {
+      "startSeconds": 236.24,
+      "text": "doing that now. Uh, in my experiment, it"
+    },
+    {
+      "startSeconds": 238.52,
+      "text": "was giving option of colors and okay,"
+    },
+    {
+      "startSeconds": 240.76,
+      "text": "there's a section here. Okay. So,"
+    },
+    {
+      "startSeconds": 242.36,
+      "text": "everything is you you got it here."
+    },
+    {
+      "startSeconds": 244.92,
+      "text": "But again, the problem is it is giving"
+    },
+    {
+      "startSeconds": 246.64,
+      "text": "you data in the text format. How will"
+    },
+    {
+      "startSeconds": 248.6,
+      "text": "you pass this in the application?"
+    },
+    {
+      "startSeconds": 251.28,
+      "text": "Now, that's where you can ask AI to give"
+    },
+    {
+      "startSeconds": 254.16,
+      "text": "this information in the JSON format."
+    },
+    {
+      "startSeconds": 256.799,
+      "text": "So, what I will do is I will just copy"
+    },
+    {
+      "startSeconds": 258.32,
+      "text": "this part because I want to reuse it and"
+    },
+    {
+      "startSeconds": 260.72,
+      "text": "paste it here."
+    },
+    {
+      "startSeconds": 262.28,
+      "text": "But additionally, I will mention, give"
+    },
+    {
+      "startSeconds": 263.919,
+      "text": "me this information"
+    },
+    {
+      "startSeconds": 266.84,
+      "text": "in JSON format. Okay, when I do that, it"
+    },
+    {
+      "startSeconds": 270.72,
+      "text": "will give you JSON format. That's what"
+    },
+    {
+      "startSeconds": 272.08,
+      "text": "we are requesting for, right? So, it is"
+    },
+    {
+      "startSeconds": 274.28,
+      "text": "its job to give you that data in JSON"
+    },
+    {
+      "startSeconds": 276.24,
+      "text": "format. And yeah, you got it. So, you"
+    },
+    {
+      "startSeconds": 278.2,
+      "text": "can see uh, it is giving this data,"
+    },
+    {
+      "startSeconds": 280.84,
+      "text": "iPhone Air, announced, released. Okay,"
+    },
+    {
+      "startSeconds": 283.72,
+      "text": "that's good. So, it is able to give the"
+    },
+    {
+      "startSeconds": 285.2,
+      "text": "data, pricing in Indian MRP. We got all"
+    },
+    {
+      "startSeconds": 288.12,
+      "text": "these details and okay, it looks good."
+    },
+    {
+      "startSeconds": 290.48,
+      "text": "Looks good. This is how the JSON data"
+    },
+    {
+      "startSeconds": 291.88,
+      "text": "should be, right? But there are chances"
+    },
+    {
+      "startSeconds": 294.76,
+      "text": "that it will give you some extra"
+    },
+    {
+      "startSeconds": 296.4,
+      "text": "details. Okay, by the way, you can"
+    },
+    {
+      "startSeconds": 297.84,
+      "text": "unlock the full functionality of all the"
+    },
+    {
+      "startSeconds": 299.36,
+      "text": "apps and able"
+    },
+    {
+      "startSeconds": 300.96,
+      "text": "Oh, okay, this is a new feature, not"
+    },
+    {
+      "startSeconds": 302.24,
+      "text": "sure. But you can see with this data, it"
+    },
+    {
+      "startSeconds": 303.84,
+      "text": "is also giving you some text. Okay, and"
+    },
+    {
+      "startSeconds": 305.96,
+      "text": "this is what we don't want. So, if you"
+    },
+    {
+      "startSeconds": 308.88,
+      "text": "I mean, not the same date text every"
+    },
+    {
+      "startSeconds": 310.36,
+      "text": "time, but it might give give you some"
+    },
+    {
+      "startSeconds": 312.32,
+      "text": "additional text with the JSON. We don't"
+    },
+    {
+      "startSeconds": 314.04,
+      "text": "want additional text."
+    },
+    {
+      "startSeconds": 315.84,
+      "text": "So, what you can do is you can use the"
+    },
+    {
+      "startSeconds": 317,
+      "text": "same prompt, but you can add more"
+    },
+    {
+      "startSeconds": 319.24,
+      "text": "details here. And let me show you that"
+    },
+    {
+      "startSeconds": 321.4,
+      "text": "details and I I do have it here so that"
+    },
+    {
+      "startSeconds": 323.88,
+      "text": "I don't have to do that and type that"
+    },
+    {
+      "startSeconds": 327.24,
+      "text": "by myself. So, this is the additional"
+    },
+    {
+      "startSeconds": 329.32,
+      "text": "prompt. So, instead of saying, give me"
+    },
+    {
+      "startSeconds": 330.84,
+      "text": "this information JSON format, I can just"
+    },
+    {
+      "startSeconds": 332.36,
+      "text": "write this, respond only with valid JSON"
+    },
+    {
+      "startSeconds": 335.56,
+      "text": "object because then it will also"
+    },
+    {
+      "startSeconds": 336.8,
+      "text": "validate if the JSON which he's sending"
+    },
+    {
+      "startSeconds": 338.24,
+      "text": "is correct or not."
+    },
+    {
+      "startSeconds": 339.84,
+      "text": "Uh, in this case, I'm not sure if this"
+    },
+    {
+      "startSeconds": 341.4,
+      "text": "is a valid JSON. And I have the feeling"
+    },
+    {
+      "startSeconds": 344.28,
+      "text": "now it's not a valid JSON. Okay, and you"
+    },
+    {
+      "startSeconds": 346.64,
+      "text": "let me know why in the chat. This is"
+    },
+    {
+      "startSeconds": 349.44,
+      "text": "closing here. Where is the opening?"
+    },
+    {
+      "startSeconds": 351.52,
+      "text": "Okay, this is not a valid JSON. Okay,"
+    },
+    {
+      "startSeconds": 353,
+      "text": "that's good. Uh so, now I'm mentioning"
+    },
+    {
+      "startSeconds": 355.56,
+      "text": "respond only with valid JSON object and"
+    },
+    {
+      "startSeconds": 357.32,
+      "text": "do not include any text or explanation."
+    },
+    {
+      "startSeconds": 359.84,
+      "text": "I'll just keep it copied so that uh we"
+    },
+    {
+      "startSeconds": 361.48,
+      "text": "can reuse it later. And now it says in"
+    },
+    {
+      "startSeconds": 363.72,
+      "text": "an occur previous search already"
+    },
+    {
+      "startSeconds": 365,
+      "text": "provided this information, so another"
+    },
+    {
+      "startSeconds": 366.52,
+      "text": "search is not required."
+    },
+    {
+      "startSeconds": 368.36,
+      "text": "Okay. So, it is not doing the thing"
+    },
+    {
+      "startSeconds": 371.04,
+      "text": "which I want. Very bad. I paid for it."
+    },
+    {
+      "startSeconds": 373.32,
+      "text": "Let me do that once again. Why it's not"
+    },
+    {
+      "startSeconds": 375.16,
+      "text": "doing it? Let me go for a new chat. I"
+    },
+    {
+      "startSeconds": 377.4,
+      "text": "don't know what went wrong there. Is it"
+    },
+    {
+      "startSeconds": 378.84,
+      "text": "the scenario when it gives you one"
+    },
+    {
+      "startSeconds": 380.44,
+      "text": "information it will not repeat? So, this"
+    },
+    {
+      "startSeconds": 382.08,
+      "text": "is for the first time. Let me know if"
+    },
+    {
+      "startSeconds": 383.28,
+      "text": "you have faced that before."
+    },
+    {
+      "startSeconds": 385.08,
+      "text": "Okay, now you got a JSON format and"
+    },
+    {
+      "startSeconds": 387.08,
+      "text": "which looks"
+    },
+    {
+      "startSeconds": 388.6,
+      "text": "a valid JSON format. If not, let me know"
+    },
+    {
+      "startSeconds": 390.76,
+      "text": "in the chat. Okay, looks like a valid"
+    },
+    {
+      "startSeconds": 392.32,
+      "text": "JSON. Cool. And you can see there's no"
+    },
+    {
+      "startSeconds": 394.36,
+      "text": "extra text anywhere. Not at the start,"
+    },
+    {
+      "startSeconds": 397.36,
+      "text": "not at the end, and this is what you"
+    },
+    {
+      "startSeconds": 399.48,
+      "text": "need, right? So, this is how basically"
+    },
+    {
+      "startSeconds": 401.68,
+      "text": "you can work with this JSON format."
+    },
+    {
+      "startSeconds": 403.96,
+      "text": "But there's one more thing which is"
+    },
+    {
+      "startSeconds": 405.44,
+      "text": "missing here, which is or not a missing"
+    },
+    {
+      "startSeconds": 407.56,
+      "text": "part, but then if you think about it as"
+    },
+    {
+      "startSeconds": 409.6,
+      "text": "a developer,"
+    },
+    {
+      "startSeconds": 410.84,
+      "text": "when you build objects, right? So, to"
+    },
+    {
+      "startSeconds": 413.08,
+      "text": "represent a particular data, you build"
+    },
+    {
+      "startSeconds": 414.44,
+      "text": "objects, right? And this object will"
+    },
+    {
+      "startSeconds": 416.2,
+      "text": "have certain properties. So, let's say I"
+    },
+    {
+      "startSeconds": 417.6,
+      "text": "want a phone class and a phone class"
+    },
+    {
+      "startSeconds": 420.52,
+      "text": "have these properties where you got the"
+    },
+    {
+      "startSeconds": 422.8,
+      "text": "model name, you got the price, you got"
+    },
+    {
+      "startSeconds": 425.4,
+      "text": "the RAM, CPU."
+    },
+    {
+      "startSeconds": 427.44,
+      "text": "So, you have a limited set of properties"
+    },
+    {
+      "startSeconds": 429.919,
+      "text": "which you want to assign to. If you look"
+    },
+    {
+      "startSeconds": 432.08,
+      "text": "at this JSON, it has a lot of data which"
+    },
+    {
+      "startSeconds": 434.48,
+      "text": "maybe I don't need."
+    },
+    {
+      "startSeconds": 436.2,
+      "text": "Uh example, let's say maybe I don't need"
+    },
+    {
+      "startSeconds": 438.68,
+      "text": "optical zooming of 1x 2x. Maybe I don't"
+    },
+    {
+      "startSeconds": 440.919,
+      "text": "need"
+    },
+    {
+      "startSeconds": 441.88,
+      "text": "uh USB speed. Okay, so it is giving you"
+    },
+    {
+      "startSeconds": 445,
+      "text": "everything. A good thing, but we don't"
+    },
+    {
+      "startSeconds": 447.32,
+      "text": "require those things."
+    },
+    {
+      "startSeconds": 449.24,
+      "text": "So, how do you specify what JSON format"
+    },
+    {
+      "startSeconds": 451.52,
+      "text": "you need? Now, in this case, I have one"
+    },
+    {
+      "startSeconds": 454.48,
+      "text": "more prompt here and I will show you"
+    },
+    {
+      "startSeconds": 455.96,
+      "text": "that prompt step by step."
+    },
+    {
+      "startSeconds": 458.2,
+      "text": "So, this is a prompt and let me just go"
+    },
+    {
+      "startSeconds": 460.12,
+      "text": "through this one by one."
+    },
+    {
+      "startSeconds": 462.68,
+      "text": "So, at the start I'm saying you are an"
+    },
+    {
+      "startSeconds": 464.68,
+      "text": "expert data extraction system. So, I'm"
+    },
+    {
+      "startSeconds": 466.88,
+      "text": "also specifying a role there. And if you"
+    },
+    {
+      "startSeconds": 468.48,
+      "text": "remember we have talked about role"
+    },
+    {
+      "startSeconds": 469.68,
+      "text": "prompting. Your task is to extract, so"
+    },
+    {
+      "startSeconds": 471.72,
+      "text": "we are specifying the instruction, the"
+    },
+    {
+      "startSeconds": 473.76,
+      "text": "key specification for iPhone ad input."
+    },
+    {
+      "startSeconds": 477.28,
+      "text": "Uh from providing text format into JSON"
+    },
+    {
+      "startSeconds": 479.28,
+      "text": "format, so I'm just specifying the"
+    },
+    {
+      "startSeconds": 480.4,
+      "text": "output format. And this output format"
+    },
+    {
+      "startSeconds": 482.96,
+      "text": "should be a valid JSON. Do not uh put"
+    },
+    {
+      "startSeconds": 485.44,
+      "text": "any explanation on text."
+    },
+    {
+      "startSeconds": 487.32,
+      "text": "Then we are specifying the JSON object"
+    },
+    {
+      "startSeconds": 490.8,
+      "text": "format. So, this is JSON object must"
+    },
+    {
+      "startSeconds": 492.68,
+      "text": "strictly adhere to the following schema,"
+    },
+    {
+      "startSeconds": 494.88,
+      "text": "extracting the information from the text"
+    },
+    {
+      "startSeconds": 496.44,
+      "text": "below. So, the I need model name."
+    },
+    {
+      "startSeconds": 498.48,
+      "text": "We don't need to specify the model name."
+    },
+    {
+      "startSeconds": 499.88,
+      "text": "Maybe in future I'm going to work with"
+    },
+    {
+      "startSeconds": 501.64,
+      "text": "Samsung or uh maybe OnePlus, whatever"
+    },
+    {
+      "startSeconds": 504.4,
+      "text": "the type is of phone is. Then"
+    },
+    {
+      "startSeconds": 507.12,
+      "text": "uh you can specify the type or display."
+    },
+    {
+      "startSeconds": 510.08,
+      "text": "Then"
+    },
+    {
+      "startSeconds": 511.24,
+      "text": "processor, what else we have? Design and"
+    },
+    {
+      "startSeconds": 514.76,
+      "text": "operating system. So, these are the"
+    },
+    {
+      "startSeconds": 515.719,
+      "text": "details I want and I'm also specifying"
+    },
+    {
+      "startSeconds": 517.24,
+      "text": "the source from where you will get this."
+    },
+    {
+      "startSeconds": 519.24,
+      "text": "And when I do that, it will return the"
+    },
+    {
+      "startSeconds": 521.719,
+      "text": "JSON format exactly in that format."
+    },
+    {
+      "startSeconds": 524.72,
+      "text": "Let's see. And yeah, you got it. So, you"
+    },
+    {
+      "startSeconds": 526.36,
+      "text": "can see we got model name, display,"
+    },
+    {
+      "startSeconds": 527.76,
+      "text": "processor, camera, design"
+    },
+    {
+      "startSeconds": 530.32,
+      "text": "and operating system."
+    },
+    {
+      "startSeconds": 532.24,
+      "text": "Right? So, yeah, this is what uh you can"
+    },
+    {
+      "startSeconds": 535.32,
+      "text": "do when you work with the AI to give you"
+    },
+    {
+      "startSeconds": 538.4,
+      "text": "JSON data. So, your prompt need to be"
+    },
+    {
+      "startSeconds": 540.64,
+      "text": "good. You have to specify the role. You"
+    },
+    {
+      "startSeconds": 541.96,
+      "text": "have to specify the JSON JSON format."
+    },
+    {
+      "startSeconds": 544.839,
+      "text": "And you can work with it. Now, how do"
+    },
+    {
+      "startSeconds": 546.76,
+      "text": "you use that in the code? We are going"
+    },
+    {
+      "startSeconds": 548.72,
+      "text": "to see that later. Okay, so I hope you"
+    },
+    {
+      "startSeconds": 551,
+      "text": "will enjoy that. I hope you enjoyed this"
+    },
+    {
+      "startSeconds": 552.64,
+      "text": "part. See you in the next video."
+    }
+  ]
+}

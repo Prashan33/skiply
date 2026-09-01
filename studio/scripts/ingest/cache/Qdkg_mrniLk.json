@@ -1,8 +1,1394 @@
 {
   "id": "Qdkg_mrniLk",
   "url": "https://www.youtube.com/watch?v=Qdkg_mrniLk",
-  "fetchedAt": "2026-08-31T05:14:46.365Z",
-  "captionKind": "empty",
-  "chapters": [],
-  "cues": []
+  "fetchedAt": "2026-09-01T04:04:47.592Z",
+  "captionKind": "asr",
+  "chapters": [
+    {
+      "startSeconds": 0,
+      "label": "Blunder #1"
+    },
+    {
+      "startSeconds": 90,
+      "label": "Client vs Server Components"
+    },
+    {
+      "startSeconds": 298,
+      "label": "When to refactor?"
+    },
+    {
+      "startSeconds": 363,
+      "label": "Blunder #2"
+    },
+    {
+      "startSeconds": 499,
+      "label": "Boundary"
+    },
+    {
+      "startSeconds": 546,
+      "label": "Import twice"
+    }
+  ],
+  "cues": [
+    {
+      "startSeconds": 0,
+      "text": "I see a lot of people make this mistake"
+    },
+    {
+      "startSeconds": 1.56,
+      "text": "it has to do with client and server"
+    },
+    {
+      "startSeconds": 3.12,
+      "text": "components let's say we have some page"
+    },
+    {
+      "startSeconds": 4.86,
+      "text": "here just as an H1 and a button"
+    },
+    {
+      "startSeconds": 6.839,
+      "text": "component very simple now this button"
+    },
+    {
+      "startSeconds": 8.82,
+      "text": "component right now doesn't really do"
+    },
+    {
+      "startSeconds": 10.08,
+      "text": "anything and typically if you click a"
+    },
+    {
+      "startSeconds": 11.28,
+      "text": "button you want to do something let's"
+    },
+    {
+      "startSeconds": 12.54,
+      "text": "add an on click Handler here not just a"
+    },
+    {
+      "startSeconds": 14.7,
+      "text": "function that will log hello world when"
+    },
+    {
+      "startSeconds": 16.68,
+      "text": "we click it if I save here we're going"
+    },
+    {
+      "startSeconds": 18.18,
+      "text": "to get an error because this client-side"
+    },
+    {
+      "startSeconds": 20.16,
+      "text": "interactivity is only possible in client"
+    },
+    {
+      "startSeconds": 22.199,
+      "text": "components and by default everything"
+    },
+    {
+      "startSeconds": 23.939,
+      "text": "here in the app directory in next year"
+    },
+    {
+      "startSeconds": 26.16,
+      "text": "as is a server component right so page"
+    },
+    {
+      "startSeconds": 28.68,
+      "text": "and button right now are server"
+    },
+    {
+      "startSeconds": 29.82,
+      "text": "components and we're trying to add this"
+    },
+    {
+      "startSeconds": 31.199,
+      "text": "interactivity well that's only possible"
+    },
+    {
+      "startSeconds": 32.759,
+      "text": "in client components and if you don't"
+    },
+    {
+      "startSeconds": 34.44,
+      "text": "pay attention you may think oh just turn"
+    },
+    {
+      "startSeconds": 36.54,
+      "text": "this component into a client's component"
+    },
+    {
+      "startSeconds": 38.34,
+      "text": "so actually the whole page so if you do"
+    },
+    {
+      "startSeconds": 40.5,
+      "text": "the whole page like this the error is"
+    },
+    {
+      "startSeconds": 43.02,
+      "text": "indeed gone and this will work but we"
+    },
+    {
+      "startSeconds": 45.239,
+      "text": "lose all the benefits that come from"
+    },
+    {
+      "startSeconds": 46.92,
+      "text": "server components because what's going"
+    },
+    {
+      "startSeconds": 48.539,
+      "text": "to happen now is not only the button"
+    },
+    {
+      "startSeconds": 50.399,
+      "text": "will become a client component right"
+    },
+    {
+      "startSeconds": 52.5,
+      "text": "because if you import something into a"
+    },
+    {
+      "startSeconds": 55.379,
+      "text": "client's component this button now will"
+    },
+    {
+      "startSeconds": 57.539,
+      "text": "also become a client component and that"
+    },
+    {
+      "startSeconds": 59.399,
+      "text": "means if you imp support something else"
+    },
+    {
+      "startSeconds": 61.02,
+      "text": "let's say a post component because let's"
+    },
+    {
+      "startSeconds": 63.66,
+      "text": "say we also have some post components"
+    },
+    {
+      "startSeconds": 65.58,
+      "text": "here which is just a server component"
+    },
+    {
+      "startSeconds": 67.439,
+      "text": "doesn't need any client-side"
+    },
+    {
+      "startSeconds": 68.82,
+      "text": "interactivity which is perfectly fine"
+    },
+    {
+      "startSeconds": 70.5,
+      "text": "staying a server component but because"
+    },
+    {
+      "startSeconds": 72.54,
+      "text": "we're now importing that here in this"
+    },
+    {
+      "startSeconds": 74.64,
+      "text": "page which is a client component this"
+    },
+    {
+      "startSeconds": 76.92,
+      "text": "post will now also become a client's"
+    },
+    {
+      "startSeconds": 78.78,
+      "text": "component and that's not what we want"
+    },
+    {
+      "startSeconds": 80.28,
+      "text": "ideally components can stay server"
+    },
+    {
+      "startSeconds": 82.68,
+      "text": "components there's a reason that next"
+    },
+    {
+      "startSeconds": 84.24,
+      "text": "year s made everything here a server"
+    },
+    {
+      "startSeconds": 86.34,
+      "text": "component by default and that's because"
+    },
+    {
+      "startSeconds": 87.78,
+      "text": "server components come with a lot of"
+    },
+    {
+      "startSeconds": 89.46,
+      "text": "benefits and they actually show this on"
+    },
+    {
+      "startSeconds": 91.14,
+      "text": "their website so let's quickly go"
+    },
+    {
+      "startSeconds": 92.159,
+      "text": "through it so they have server"
+    },
+    {
+      "startSeconds": 93.42,
+      "text": "components versus client components so"
+    },
+    {
+      "startSeconds": 95.46,
+      "text": "here Dimension if you want to fetch data"
+    },
+    {
+      "startSeconds": 97.2,
+      "text": "well they're basically saying you can do"
+    },
+    {
+      "startSeconds": 99.42,
+      "text": "it on a server component you can't do it"
+    },
+    {
+      "startSeconds": 101.28,
+      "text": "in a client component it's not entirely"
+    },
+    {
+      "startSeconds": 102.659,
+      "text": "true you can still you know fetch data"
+    },
+    {
+      "startSeconds": 104.34,
+      "text": "in a client component what they mean"
+    },
+    {
+      "startSeconds": 105.78,
+      "text": "here is in many cases it's it's optimal"
+    },
+    {
+      "startSeconds": 108.18,
+      "text": "to do it from a server component because"
+    },
+    {
+      "startSeconds": 109.799,
+      "text": "server component can be closer to the"
+    },
+    {
+      "startSeconds": 111.6,
+      "text": "source of data you can also access"
+    },
+    {
+      "startSeconds": 113.34,
+      "text": "back-end resources for example you can"
+    },
+    {
+      "startSeconds": 115.2,
+      "text": "update your database directly from a"
+    },
+    {
+      "startSeconds": 116.939,
+      "text": "server component you can keep sensitive"
+    },
+    {
+      "startSeconds": 118.68,
+      "text": "information like token API Keys now a"
+    },
+    {
+      "startSeconds": 121.439,
+      "text": "big one is actually this one keep large"
+    },
+    {
+      "startSeconds": 123.299,
+      "text": "dependencies on the server so for"
+    },
+    {
+      "startSeconds": 125.399,
+      "text": "example in our example here let's say"
+    },
+    {
+      "startSeconds": 127.439,
+      "text": "this post component is actually using"
+    },
+    {
+      "startSeconds": 129.78,
+      "text": "some third-party Library like sanitize"
+    },
+    {
+      "startSeconds": 132.12,
+      "text": "HTML this is a big import as you can see"
+    },
+    {
+      "startSeconds": 134.58,
+      "text": "ideally we can keep this on the server"
+    },
+    {
+      "startSeconds": 136.62,
+      "text": "we don't want to ship this to the client"
+    },
+    {
+      "startSeconds": 138.06,
+      "text": "but now we are importing this post"
+    },
+    {
+      "startSeconds": 140.64,
+      "text": "component here into a client component"
+    },
+    {
+      "startSeconds": 142.739,
+      "text": "therefore this post component will"
+    },
+    {
+      "startSeconds": 144.599,
+      "text": "actually become a client component and"
+    },
+    {
+      "startSeconds": 146.459,
+      "text": "this will be shipped to the client all"
+    },
+    {
+      "startSeconds": 148.68,
+      "text": "because we just wanted to add some"
+    },
+    {
+      "startSeconds": 150.42,
+      "text": "interactivity to this button right so we"
+    },
+    {
+      "startSeconds": 152.7,
+      "text": "don't we didn't even need to do this so"
+    },
+    {
+      "startSeconds": 154.26,
+      "text": "we don't want to do this we want to"
+    },
+    {
+      "startSeconds": 155.76,
+      "text": "remove this here and we want to add the"
+    },
+    {
+      "startSeconds": 157.8,
+      "text": "use client to the button instead right"
+    },
+    {
+      "startSeconds": 159.78,
+      "text": "so if we do this the button component"
+    },
+    {
+      "startSeconds": 161.94,
+      "text": "will become a client component we are"
+    },
+    {
+      "startSeconds": 163.98,
+      "text": "still importing the button here and now"
+    },
+    {
+      "startSeconds": 165.959,
+      "text": "if we go back to our page here you can"
+    },
+    {
+      "startSeconds": 167.4,
+      "text": "see the error is still gone this still"
+    },
+    {
+      "startSeconds": 168.84,
+      "text": "works but the page is still a server"
+    },
+    {
+      "startSeconds": 170.58,
+      "text": "component the post is still a server"
+    },
+    {
+      "startSeconds": 172.739,
+      "text": "component so this big third-party"
+    },
+    {
+      "startSeconds": 174.78,
+      "text": "library is still only on the server and"
+    },
+    {
+      "startSeconds": 176.819,
+      "text": "the button is now client component and"
+    },
+    {
+      "startSeconds": 178.739,
+      "text": "so we can add client side interactivity"
+    },
+    {
+      "startSeconds": 180.78,
+      "text": "right so this this these third parties"
+    },
+    {
+      "startSeconds": 182.7,
+      "text": "can take up a lot of space imagine"
+    },
+    {
+      "startSeconds": 184.2,
+      "text": "you're working with like 3D assets or"
+    },
+    {
+      "startSeconds": 186.84,
+      "text": "maybe video or audio assets and you're"
+    },
+    {
+      "startSeconds": 188.879,
+      "text": "doing some analytics on them or these"
+    },
+    {
+      "startSeconds": 190.62,
+      "text": "big data charts there's lots of"
+    },
+    {
+      "startSeconds": 192.3,
+      "text": "third-party libraries that you're going"
+    },
+    {
+      "startSeconds": 193.62,
+      "text": "to use in in those contexts and if you"
+    },
+    {
+      "startSeconds": 196.019,
+      "text": "can try keeping that a server components"
+    },
+    {
+      "startSeconds": 198.48,
+      "text": "not always possible sometimes you know"
+    },
+    {
+      "startSeconds": 200.159,
+      "text": "there's no way around you really need"
+    },
+    {
+      "startSeconds": 201.3,
+      "text": "that client-side interactivity but"
+    },
+    {
+      "startSeconds": 202.98,
+      "text": "there's already people they're coming up"
+    },
+    {
+      "startSeconds": 204.54,
+      "text": "with hacks right now but there's going"
+    },
+    {
+      "startSeconds": 205.92,
+      "text": "to be more standards in the future"
+    },
+    {
+      "startSeconds": 207.06,
+      "text": "around this that will allow you to keep"
+    },
+    {
+      "startSeconds": 208.86,
+      "text": "it a server component right so really"
+    },
+    {
+      "startSeconds": 210.54,
+      "text": "try to see if you can keep it a server"
+    },
+    {
+      "startSeconds": 212.28,
+      "text": "component right so it's really important"
+    },
+    {
+      "startSeconds": 213.659,
+      "text": "that you understand as a react developer"
+    },
+    {
+      "startSeconds": 215.819,
+      "text": "that your react app is basically a tree"
+    },
+    {
+      "startSeconds": 217.86,
+      "text": "of components so you have your root"
+    },
+    {
+      "startSeconds": 219.659,
+      "text": "component this is where it all starts so"
+    },
+    {
+      "startSeconds": 221.64,
+      "text": "next year s that's actually this layout"
+    },
+    {
+      "startSeconds": 223.799,
+      "text": "compound layout file and then there's"
+    },
+    {
+      "startSeconds": 225.78,
+      "text": "the root layout component this wraps all"
+    },
+    {
+      "startSeconds": 227.76,
+      "text": "of your pages in next to us right so"
+    },
+    {
+      "startSeconds": 229.5,
+      "text": "then you can have these Pages below"
+    },
+    {
+      "startSeconds": 231.06,
+      "text": "there so maybe a home page about page"
+    },
+    {
+      "startSeconds": 233.22,
+      "text": "post page right so these are pages right"
+    },
+    {
+      "startSeconds": 236.28,
+      "text": "page P page and this is the root that's"
+    },
+    {
+      "startSeconds": 239.22,
+      "text": "basically it 3. now these Pages can"
+    },
+    {
+      "startSeconds": 241.379,
+      "text": "import many different components maybe"
+    },
+    {
+      "startSeconds": 242.76,
+      "text": "you have a button component like we has"
+    },
+    {
+      "startSeconds": 244.56,
+      "text": "in this example or a post component or"
+    },
+    {
+      "startSeconds": 247.26,
+      "text": "some date component right data when it"
+    },
+    {
+      "startSeconds": 249.599,
+      "text": "was posted and you're going to import"
+    },
+    {
+      "startSeconds": 250.739,
+      "text": "these components all in this page and a"
+    },
+    {
+      "startSeconds": 253.019,
+      "text": "naive react developer when you want to"
+    },
+    {
+      "startSeconds": 255,
+      "text": "add some interactivity only to this"
+    },
+    {
+      "startSeconds": 256.56,
+      "text": "component may decide to mark this whole"
+    },
+    {
+      "startSeconds": 258.84,
+      "text": "page component as a client component"
+    },
+    {
+      "startSeconds": 260.94,
+      "text": "with use client and when you do that all"
+    },
+    {
+      "startSeconds": 262.919,
+      "text": "of these components now become client"
+    },
+    {
+      "startSeconds": 264.479,
+      "text": "components so this becomes a client"
+    },
+    {
+      "startSeconds": 265.86,
+      "text": "component this becomes a client"
+    },
+    {
+      "startSeconds": 267.12,
+      "text": "component and this becomes a client"
+    },
+    {
+      "startSeconds": 268.68,
+      "text": "component even though these two may not"
+    },
+    {
+      "startSeconds": 270.419,
+      "text": "even need any you know client-side"
+    },
+    {
+      "startSeconds": 272.34,
+      "text": "interactivity and you're losing all the"
+    },
+    {
+      "startSeconds": 273.96,
+      "text": "benefits from server components so the"
+    },
+    {
+      "startSeconds": 275.639,
+      "text": "reactor and xjs teams they recommend"
+    },
+    {
+      "startSeconds": 277.56,
+      "text": "that you mark the components as a client"
+    },
+    {
+      "startSeconds": 279.9,
+      "text": "component only on the outer edges of the"
+    },
+    {
+      "startSeconds": 282.54,
+      "text": "tree so the leaves of the tree so you"
+    },
+    {
+      "startSeconds": 284.58,
+      "text": "don't want to add it here you want to"
+    },
+    {
+      "startSeconds": 286.139,
+      "text": "add it to the button right so then this"
+    },
+    {
+      "startSeconds": 287.94,
+      "text": "can be gone and only the button is a"
+    },
+    {
+      "startSeconds": 289.979,
+      "text": "client component now and these can all"
+    },
+    {
+      "startSeconds": 291.419,
+      "text": "stay server components right so try to"
+    },
+    {
+      "startSeconds": 293.16,
+      "text": "use use client directive at the edge the"
+    },
+    {
+      "startSeconds": 295.8,
+      "text": "outer edges of your tree at the leaves"
+    },
+    {
+      "startSeconds": 297.84,
+      "text": "of the tree right and sometimes this"
+    },
+    {
+      "startSeconds": 299.22,
+      "text": "will require some refactoring let's say"
+    },
+    {
+      "startSeconds": 301.08,
+      "text": "we have some kind of form components and"
+    },
+    {
+      "startSeconds": 302.82,
+      "text": "in there we have a form and maybe other"
+    },
+    {
+      "startSeconds": 304.62,
+      "text": "elements as well and then eventually you"
+    },
+    {
+      "startSeconds": 306.419,
+      "text": "want to have a button as well so now if"
+    },
+    {
+      "startSeconds": 308.4,
+      "text": "we want to do some interactivity on this"
+    },
+    {
+      "startSeconds": 310.199,
+      "text": "button we can say on click console log"
+    },
+    {
+      "startSeconds": 312.36,
+      "text": "hello world so if you would do this you"
+    },
+    {
+      "startSeconds": 314.34,
+      "text": "would get an error now because this is a"
+    },
+    {
+      "startSeconds": 316.02,
+      "text": "server component and we're trying to add"
+    },
+    {
+      "startSeconds": 317.82,
+      "text": "interactivity here right so now"
+    },
+    {
+      "startSeconds": 319.5,
+      "text": "something here needs to become a client"
+    },
+    {
+      "startSeconds": 321.3,
+      "text": "component now if we would make this a"
+    },
+    {
+      "startSeconds": 323.46,
+      "text": "client component use clients all of this"
+    },
+    {
+      "startSeconds": 325.68,
+      "text": "is affected by it right so the form and"
+    },
+    {
+      "startSeconds": 327.6,
+      "text": "other elements that don't even need any"
+    },
+    {
+      "startSeconds": 329.34,
+      "text": "interactivity now they also become"
+    },
+    {
+      "startSeconds": 331.5,
+      "text": "client components and maybe you're using"
+    },
+    {
+      "startSeconds": 333.06,
+      "text": "some big third-party library in the form"
+    },
+    {
+      "startSeconds": 334.919,
+      "text": "or some other elements here now that"
+    },
+    {
+      "startSeconds": 336.539,
+      "text": "will also get shipped to the client all"
+    },
+    {
+      "startSeconds": 338.28,
+      "text": "because we're making this a client"
+    },
+    {
+      "startSeconds": 339.66,
+      "text": "component just for this button here and"
+    },
+    {
+      "startSeconds": 341.52,
+      "text": "so it's better to basically remove this"
+    },
+    {
+      "startSeconds": 343.68,
+      "text": "put it into its own component like here"
+    },
+    {
+      "startSeconds": 346.44,
+      "text": "mark this as the client component and"
+    },
+    {
+      "startSeconds": 349.08,
+      "text": "then just import it here and use it like"
+    },
+    {
+      "startSeconds": 351.36,
+      "text": "this right so now we can remove this"
+    },
+    {
+      "startSeconds": 352.919,
+      "text": "used clients here and this this can stay"
+    },
+    {
+      "startSeconds": 355.02,
+      "text": "a server component with all the benefits"
+    },
+    {
+      "startSeconds": 356.82,
+      "text": "benefits that we get from it and still"
+    },
+    {
+      "startSeconds": 358.5,
+      "text": "import this client component here and"
+    },
+    {
+      "startSeconds": 360.3,
+      "text": "just use it like this you get the same"
+    },
+    {
+      "startSeconds": 361.56,
+      "text": "result with all the benefits from server"
+    },
+    {
+      "startSeconds": 363.24,
+      "text": "components alright so a big"
+    },
+    {
+      "startSeconds": 364.44,
+      "text": "misconception a big mistake that people"
+    },
+    {
+      "startSeconds": 366.36,
+      "text": "are making as well is with these"
+    },
+    {
+      "startSeconds": 367.979,
+      "text": "provider components so let's say you're"
+    },
+    {
+      "startSeconds": 369.78,
+      "text": "using the context API are you using some"
+    },
+    {
+      "startSeconds": 372,
+      "text": "third-party library that has some kind"
+    },
+    {
+      "startSeconds": 373.68,
+      "text": "of Provider component so basically this"
+    },
+    {
+      "startSeconds": 375.84,
+      "text": "happens when a lot of your components in"
+    },
+    {
+      "startSeconds": 377.46,
+      "text": "your react app need access to data so"
+    },
+    {
+      "startSeconds": 380.039,
+      "text": "with the context API for example you"
+    },
+    {
+      "startSeconds": 381.78,
+      "text": "have this theme context provider I'm"
+    },
+    {
+      "startSeconds": 383.46,
+      "text": "just leaving out the context details"
+    },
+    {
+      "startSeconds": 385.199,
+      "text": "here and it takes in children and it"
+    },
+    {
+      "startSeconds": 387,
+      "text": "also passes through the children that's"
+    },
+    {
+      "startSeconds": 389.22,
+      "text": "very typical here and then you want to"
+    },
+    {
+      "startSeconds": 390.96,
+      "text": "wrap parts of your app that need access"
+    },
+    {
+      "startSeconds": 393.3,
+      "text": "to the data with this provider component"
+    },
+    {
+      "startSeconds": 396.18,
+      "text": "so typically a third typical pattern"
+    },
+    {
+      "startSeconds": 398.1,
+      "text": "here is if we go into this root layout"
+    },
+    {
+      "startSeconds": 400.199,
+      "text": "file if you're going to wrap basically"
+    },
+    {
+      "startSeconds": 402.36,
+      "text": "the entire app in that provider"
+    },
+    {
+      "startSeconds": 404.1,
+      "text": "component right this is a very typical"
+    },
+    {
+      "startSeconds": 405.72,
+      "text": "pattern here where all the pages"
+    },
+    {
+      "startSeconds": 407.28,
+      "text": "essentially now get access to the value"
+    },
+    {
+      "startSeconds": 409.44,
+      "text": "that you are passing through with the"
+    },
+    {
+      "startSeconds": 411.18,
+      "text": "provider component now these provider"
+    },
+    {
+      "startSeconds": 413.1,
+      "text": "components are typically client"
+    },
+    {
+      "startSeconds": 414.9,
+      "text": "components and now the question is since"
+    },
+    {
+      "startSeconds": 417.36,
+      "text": "this is a client component and we are"
+    },
+    {
+      "startSeconds": 419.28,
+      "text": "wrapping basically our entire app with"
+    },
+    {
+      "startSeconds": 421.319,
+      "text": "this do all of these other components"
+    },
+    {
+      "startSeconds": 423.24,
+      "text": "now also become client components and"
+    },
+    {
+      "startSeconds": 425.34,
+      "text": "the answer is no so something becomes a"
+    },
+    {
+      "startSeconds": 427.5,
+      "text": "client component if you add use clients"
+    },
+    {
+      "startSeconds": 430.199,
+      "text": "in the file or you import it in another"
+    },
+    {
+      "startSeconds": 433.08,
+      "text": "client component right so you need to"
+    },
+    {
+      "startSeconds": 435,
+      "text": "pay attention to basically the the"
+    },
+    {
+      "startSeconds": 437.16,
+      "text": "import tree not the render tree so these"
+    },
+    {
+      "startSeconds": 440.28,
+      "text": "children here all these components in"
+    },
+    {
+      "startSeconds": 441.72,
+      "text": "here can still be server components and"
+    },
+    {
+      "startSeconds": 443.819,
+      "text": "this can be a client's component because"
+    },
+    {
+      "startSeconds": 445.62,
+      "text": "here it's just taking the children and"
+    },
+    {
+      "startSeconds": 447.36,
+      "text": "passing through the children right so if"
+    },
+    {
+      "startSeconds": 449.039,
+      "text": "you want to have server components"
+    },
+    {
+      "startSeconds": 450.66,
+      "text": "inside a client component you have to"
+    },
+    {
+      "startSeconds": 452.94,
+      "text": "use this children pattern to pass"
+    },
+    {
+      "startSeconds": 454.8,
+      "text": "through the server components like this"
+    },
+    {
+      "startSeconds": 456.479,
+      "text": "right so that was a common misconception"
+    },
+    {
+      "startSeconds": 458.16,
+      "text": "that if this is a client's component and"
+    },
+    {
+      "startSeconds": 460.02,
+      "text": "everything in here automatically becomes"
+    },
+    {
+      "startSeconds": 461.639,
+      "text": "a client component that's not true if"
+    },
+    {
+      "startSeconds": 463.38,
+      "text": "you're using that children pattern right"
+    },
+    {
+      "startSeconds": 464.94,
+      "text": "so this can all stay server components"
+    },
+    {
+      "startSeconds": 466.74,
+      "text": "would also be kind of strange because"
+    },
+    {
+      "startSeconds": 468,
+      "text": "this is such a typical pattern in react"
+    },
+    {
+      "startSeconds": 469.62,
+      "text": "and would be kind of strange if this"
+    },
+    {
+      "startSeconds": 471.12,
+      "text": "would undo all those benefits from"
+    },
+    {
+      "startSeconds": 472.62,
+      "text": "server components that doesn't really"
+    },
+    {
+      "startSeconds": 474.24,
+      "text": "make sense so that's not how it works"
+    },
+    {
+      "startSeconds": 475.68,
+      "text": "right so the way to think about it is"
+    },
+    {
+      "startSeconds": 476.88,
+      "text": "it's not about the structure of how"
+    },
+    {
+      "startSeconds": 478.74,
+      "text": "we're rendering it here it's about the"
+    },
+    {
+      "startSeconds": 480.479,
+      "text": "structure of the import right so here if"
+    },
+    {
+      "startSeconds": 482.639,
+      "text": "I import button into this client"
+    },
+    {
+      "startSeconds": 484.56,
+      "text": "component the button becomes a client"
+    },
+    {
+      "startSeconds": 486.06,
+      "text": "component but here just because we are"
+    },
+    {
+      "startSeconds": 488.52,
+      "text": "rendering server components within a"
+    },
+    {
+      "startSeconds": 491.039,
+      "text": "client component as long as we're using"
+    },
+    {
+      "startSeconds": 492.84,
+      "text": "the children pattern that doesn't change"
+    },
+    {
+      "startSeconds": 494.699,
+      "text": "anything right so it's really about the"
+    },
+    {
+      "startSeconds": 497.22,
+      "text": "Imports and not really about this"
+    },
+    {
+      "startSeconds": 498.66,
+      "text": "rendering tree but another way of"
+    },
+    {
+      "startSeconds": 500.099,
+      "text": "looking at it is that's basically this"
+    },
+    {
+      "startSeconds": 501.36,
+      "text": "use client is basically the boundary for"
+    },
+    {
+      "startSeconds": 503.46,
+      "text": "server and client components so as soon"
+    },
+    {
+      "startSeconds": 505.86,
+      "text": "as you add a used clients here"
+    },
+    {
+      "startSeconds": 507.36,
+      "text": "everything that gets imported will also"
+    },
+    {
+      "startSeconds": 509.58,
+      "text": "become client component so this is"
+    },
+    {
+      "startSeconds": 511.319,
+      "text": "basically a boundary we don't even right"
+    },
+    {
+      "startSeconds": 513.3,
+      "text": "so this button right now I don't even"
+    },
+    {
+      "startSeconds": 514.62,
+      "text": "need to add use client here the fact"
+    },
+    {
+      "startSeconds": 516.719,
+      "text": "that I'm importing is here in this page"
+    },
+    {
+      "startSeconds": 518.58,
+      "text": "here will mean that it becomes a client"
+    },
+    {
+      "startSeconds": 520.38,
+      "text": "component so it's basically like a"
+    },
+    {
+      "startSeconds": 521.76,
+      "text": "boundary and then if I if I import"
+    },
+    {
+      "startSeconds": 523.919,
+      "text": "something else here like an icon an icon"
+    },
+    {
+      "startSeconds": 526.14,
+      "text": "component that would also become a"
+    },
+    {
+      "startSeconds": 527.76,
+      "text": "client component even though this file"
+    },
+    {
+      "startSeconds": 529.5,
+      "text": "itself does not have used clients if I"
+    },
+    {
+      "startSeconds": 531.54,
+      "text": "would import another components in here"
+    },
+    {
+      "startSeconds": 533.04,
+      "text": "that also becomes a client component"
+    },
+    {
+      "startSeconds": 534.66,
+      "text": "right so here we're basically defining a"
+    },
+    {
+      "startSeconds": 536.58,
+      "text": "boundary in the reactory like from now"
+    },
+    {
+      "startSeconds": 538.56,
+      "text": "on everything that gets importers here"
+    },
+    {
+      "startSeconds": 540.66,
+      "text": "will also become client component right"
+    },
+    {
+      "startSeconds": 542.459,
+      "text": "and those components in turn when they"
+    },
+    {
+      "startSeconds": 544.2,
+      "text": "import something they also become client"
+    },
+    {
+      "startSeconds": 546.06,
+      "text": "components all right now very tricky"
+    },
+    {
+      "startSeconds": 547.56,
+      "text": "what if you have a button and let's say"
+    },
+    {
+      "startSeconds": 549.72,
+      "text": "we're importing that here in a form and"
+    },
+    {
+      "startSeconds": 551.88,
+      "text": "let's make this form use client so this"
+    },
+    {
+      "startSeconds": 554.339,
+      "text": "is going to be a client component this"
+    },
+    {
+      "startSeconds": 555.959,
+      "text": "button itself does not have used clients"
+    },
+    {
+      "startSeconds": 558.12,
+      "text": "so this is not inherently a client"
+    },
+    {
+      "startSeconds": 559.8,
+      "text": "component this is a client component"
+    },
+    {
+      "startSeconds": 561.959,
+      "text": "we're importing the button here now as"
+    },
+    {
+      "startSeconds": 563.58,
+      "text": "you know you can import components in"
+    },
+    {
+      "startSeconds": 565.38,
+      "text": "multiple other components so this post"
+    },
+    {
+      "startSeconds": 567.24,
+      "text": "could also import button right so here"
+    },
+    {
+      "startSeconds": 569.82,
+      "text": "we could add button here and this post"
+    },
+    {
+      "startSeconds": 571.38,
+      "text": "is a server component so now I'm"
+    },
+    {
+      "startSeconds": 573.18,
+      "text": "importing the same component in a server"
+    },
+    {
+      "startSeconds": 576.36,
+      "text": "component as well as in a client"
+    },
+    {
+      "startSeconds": 578.1,
+      "text": "component so what's going to happen here"
+    },
+    {
+      "startSeconds": 579.959,
+      "text": "well it actually works as expected so"
+    },
+    {
+      "startSeconds": 581.82,
+      "text": "basically this component here is"
+    },
+    {
+      "startSeconds": 583.5,
+      "text": "instantiated twice and in the in"
+    },
+    {
+      "startSeconds": 585.6,
+      "text": "relation to this form here in the"
+    },
+    {
+      "startSeconds": 587.04,
+      "text": "context of the form it's going to be a"
+    },
+    {
+      "startSeconds": 588.839,
+      "text": "client's component but in relation to"
+    },
+    {
+      "startSeconds": 590.82,
+      "text": "the poster in the context of the post"
+    },
+    {
+      "startSeconds": 592.5,
+      "text": "components here it will stay a server"
+    },
+    {
+      "startSeconds": 594.3,
+      "text": "component and so all of this is very"
+    },
+    {
+      "startSeconds": 595.8,
+      "text": "confusing at first and my react next to"
+    },
+    {
+      "startSeconds": 597.959,
+      "text": "S course is almost finished I highly"
+    },
+    {
+      "startSeconds": 600,
+      "text": "recommend you get on the list and if you"
+    },
+    {
+      "startSeconds": 601.62,
+      "text": "do that you get a discount code when I"
+    },
+    {
+      "startSeconds": 603.24,
+      "text": "release it now I do want to mention I"
+    },
+    {
+      "startSeconds": 604.56,
+      "text": "see a lot of people they're jumping into"
+    },
+    {
+      "startSeconds": 605.94,
+      "text": "react and next.js with a lot of"
+    },
+    {
+      "startSeconds": 607.56,
+      "text": "enthusiasm but you do need to make sure"
+    },
+    {
+      "startSeconds": 609.18,
+      "text": "that you have mastered the underlying"
+    },
+    {
+      "startSeconds": 610.44,
+      "text": "fundamentals those are both JavaScript"
+    },
+    {
+      "startSeconds": 611.88,
+      "text": "as well as CSS I have courses on them"
+    },
+    {
+      "startSeconds": 613.74,
+      "text": "highly recommend you go through them the"
+    },
+    {
+      "startSeconds": 615.12,
+      "text": "links are in the description right so"
+    },
+    {
+      "startSeconds": 616.44,
+      "text": "it's very easy to pick up reacts and xjs"
+    },
+    {
+      "startSeconds": 618.54,
+      "text": "once you have mastered JavaScript and"
+    },
+    {
+      "startSeconds": 620.04,
+      "text": "also very easy to pick up something like"
+    },
+    {
+      "startSeconds": 621.36,
+      "text": "deal with when you've mastered CSS right"
+    },
+    {
+      "startSeconds": 623.339,
+      "text": "so I highly recommend you check it out"
+    },
+    {
+      "startSeconds": 624.6,
+      "text": "and if you like the video I would really"
+    },
+    {
+      "startSeconds": 626.1,
+      "text": "appreciate it if you like if you could"
+    },
+    {
+      "startSeconds": 627.3,
+      "text": "leave a like as well as subscribe with"
+    },
+    {
+      "startSeconds": 629.339,
+      "text": "the notifications on then I recommend"
+    },
+    {
+      "startSeconds": 630.899,
+      "text": "you check out the next video and I hope"
+    },
+    {
+      "startSeconds": 632.519,
+      "text": "to see you there"
+    }
+  ]
 }

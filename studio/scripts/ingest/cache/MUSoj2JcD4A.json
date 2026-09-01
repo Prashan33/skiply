@@ -1,8 +1,609 @@
 {
   "id": "MUSoj2JcD4A",
   "url": "https://www.youtube.com/watch?v=MUSoj2JcD4A",
-  "fetchedAt": "2026-08-31T05:15:06.278Z",
-  "captionKind": "empty",
+  "fetchedAt": "2026-09-01T04:05:39.077Z",
+  "captionKind": "asr",
   "chapters": [],
-  "cues": []
+  "cues": [
+    {
+      "startSeconds": 0,
+      "text": "in this video I'll talk about a very"
+    },
+    {
+      "startSeconds": 2.34,
+      "text": "interesting and important concept called"
+    },
+    {
+      "startSeconds": 4.08,
+      "text": "tree shaking in JavaScript this concept"
+    },
+    {
+      "startSeconds": 6.6,
+      "text": "can really improve your application's"
+    },
+    {
+      "startSeconds": 8.22,
+      "text": "performance now before explaining tree"
+    },
+    {
+      "startSeconds": 10.32,
+      "text": "shaking you must know what bundlers are"
+    },
+    {
+      "startSeconds": 12.54,
+      "text": "in JavaScript you must have heard of"
+    },
+    {
+      "startSeconds": 14.759,
+      "text": "webpack or rollup as a JavaScript"
+    },
+    {
+      "startSeconds": 16.68,
+      "text": "developer well they're exactly what we"
+    },
+    {
+      "startSeconds": 19.199,
+      "text": "call bundlers bundlers are tools used to"
+    },
+    {
+      "startSeconds": 21.66,
+      "text": "combine multiple JavaScript files into a"
+    },
+    {
+      "startSeconds": 24,
+      "text": "single file called a bundle this bundle"
+    },
+    {
+      "startSeconds": 26.519,
+      "text": "can then be used in a web application or"
+    },
+    {
+      "startSeconds": 28.74,
+      "text": "website to reduce the number of HTTP"
+    },
+    {
+      "startSeconds": 30.96,
+      "text": "requests needed to load the JavaScript"
+    },
+    {
+      "startSeconds": 33.059,
+      "text": "code they reduce the number of HTTP"
+    },
+    {
+      "startSeconds": 35.52,
+      "text": "requests because when a web page loads"
+    },
+    {
+      "startSeconds": 37.68,
+      "text": "the browser makes a separate HTTP"
+    },
+    {
+      "startSeconds": 39.84,
+      "text": "request for each Javascript file"
+    },
+    {
+      "startSeconds": 41.879,
+      "text": "referenced in the HTML this can slow"
+    },
+    {
+      "startSeconds": 44.7,
+      "text": "down the page load time and increase the"
+    },
+    {
+      "startSeconds": 46.92,
+      "text": "load on the server by using a bundler"
+    },
+    {
+      "startSeconds": 49.14,
+      "text": "the JavaScript code is combined into a"
+    },
+    {
+      "startSeconds": 51.48,
+      "text": "single file which means the browser only"
+    },
+    {
+      "startSeconds": 53.82,
+      "text": "needs to make one HTTP request to fetch"
+    },
+    {
+      "startSeconds": 56.64,
+      "text": "the entire code base this can"
+    },
+    {
+      "startSeconds": 58.739,
+      "text": "significantly improve the page load time"
+    },
+    {
+      "startSeconds": 60.78,
+      "text": "and reduce the load on the server now"
+    },
+    {
+      "startSeconds": 62.879,
+      "text": "bundlers can optimize your application"
+    },
+    {
+      "startSeconds": 64.559,
+      "text": "in many ways one of which is called tree"
+    },
+    {
+      "startSeconds": 67.08,
+      "text": "shaking so what is tree shaking tree"
+    },
+    {
+      "startSeconds": 69.54,
+      "text": "shaking is a technique used by modern"
+    },
+    {
+      "startSeconds": 71.22,
+      "text": "JavaScript bundlers such as webpack or"
+    },
+    {
+      "startSeconds": 73.439,
+      "text": "rollup to eliminate dead code from the"
+    },
+    {
+      "startSeconds": 75.84,
+      "text": "final bundle dead code refers to parts"
+    },
+    {
+      "startSeconds": 78.18,
+      "text": "of your JavaScript code base that are"
+    },
+    {
+      "startSeconds": 80.22,
+      "text": "never executed or used in your"
+    },
+    {
+      "startSeconds": 81.9,
+      "text": "application the process of tree shaking"
+    },
+    {
+      "startSeconds": 84.06,
+      "text": "involves analyzing your code base and"
+    },
+    {
+      "startSeconds": 86.159,
+      "text": "identifying which parts are actually"
+    },
+    {
+      "startSeconds": 87.72,
+      "text": "used and which parts are not the unused"
+    },
+    {
+      "startSeconds": 90.6,
+      "text": "parts are then removed from the final"
+    },
+    {
+      "startSeconds": 92.22,
+      "text": "bundle resulting in a smaller bundle"
+    },
+    {
+      "startSeconds": 94.799,
+      "text": "size and improved performance so how to"
+    },
+    {
+      "startSeconds": 97.5,
+      "text": "enable tree shaking using webpack to"
+    },
+    {
+      "startSeconds": 99.78,
+      "text": "improve our application's performance"
+    },
+    {
+      "startSeconds": 101.34,
+      "text": "for that let's see an example with some"
+    },
+    {
+      "startSeconds": 104.1,
+      "text": "simple JavaScript code and minimal"
+    },
+    {
+      "startSeconds": 106.14,
+      "text": "webpack setup first create a new"
+    },
+    {
+      "startSeconds": 108.84,
+      "text": "directory for the project and navigate"
+    },
+    {
+      "startSeconds": 110.399,
+      "text": "into it in your terminal I will name my"
+    },
+    {
+      "startSeconds": 112.979,
+      "text": "directory as tree shaking example then"
+    },
+    {
+      "startSeconds": 115.439,
+      "text": "initialize a simple new node.js project"
+    },
+    {
+      "startSeconds": 117.899,
+      "text": "with npm in it after that install the"
+    },
+    {
+      "startSeconds": 120.96,
+      "text": "required dependencies webpack webpack"
+    },
+    {
+      "startSeconds": 123.659,
+      "text": "CLI Babel loader and Babel preset EnV"
+    },
+    {
+      "startSeconds": 127.02,
+      "text": "table loader in case you didn't know is"
+    },
+    {
+      "startSeconds": 129.539,
+      "text": "used to convert code written in modern"
+    },
+    {
+      "startSeconds": 131.34,
+      "text": "JavaScript into plain old JavaScript"
+    },
+    {
+      "startSeconds": 133.5,
+      "text": "code supported by older browsers then"
+    },
+    {
+      "startSeconds": 136.68,
+      "text": "create a new file named"
+    },
+    {
+      "startSeconds": 138.68,
+      "text": "webpack.config.js in the root directory"
+    },
+    {
+      "startSeconds": 140.76,
+      "text": "of your project with the following"
+    },
+    {
+      "startSeconds": 142.319,
+      "text": "configuration all this configuration"
+    },
+    {
+      "startSeconds": 144.54,
+      "text": "does is it sets up webpack to use"
+    },
+    {
+      "startSeconds": 146.64,
+      "text": "payable to transpile your JavaScript"
+    },
+    {
+      "startSeconds": 148.5,
+      "text": "code and enables tree shaking by setting"
+    },
+    {
+      "startSeconds": 150.9,
+      "text": "the used exports optimization flag to"
+    },
+    {
+      "startSeconds": 153.239,
+      "text": "true this part setting the used exports"
+    },
+    {
+      "startSeconds": 156,
+      "text": "optimization to True is what enables"
+    },
+    {
+      "startSeconds": 158.34,
+      "text": "tree shaking and it's all we are"
+    },
+    {
+      "startSeconds": 160.319,
+      "text": "concerned about for this tutorial if you"
+    },
+    {
+      "startSeconds": 162.54,
+      "text": "want to know how to set up webpack and"
+    },
+    {
+      "startSeconds": 164.28,
+      "text": "what these other terms mean then that's"
+    },
+    {
+      "startSeconds": 166.44,
+      "text": "for a whole different tutorial now"
+    },
+    {
+      "startSeconds": 168.599,
+      "text": "create a new file named math.js in the"
+    },
+    {
+      "startSeconds": 171.239,
+      "text": "root directory of your project with the"
+    },
+    {
+      "startSeconds": 173.28,
+      "text": "following code to keep things simple I"
+    },
+    {
+      "startSeconds": 175.8,
+      "text": "will use these add and multiply"
+    },
+    {
+      "startSeconds": 177.3,
+      "text": "functions after that create a new file"
+    },
+    {
+      "startSeconds": 179.94,
+      "text": "named index.js in the root directory of"
+    },
+    {
+      "startSeconds": 182.459,
+      "text": "your project with the following code"
+    },
+    {
+      "startSeconds": 184.019,
+      "text": "then run the webpack build command to"
+    },
+    {
+      "startSeconds": 186.3,
+      "text": "generate the bundle.js file in the dist"
+    },
+    {
+      "startSeconds": 188.4,
+      "text": "directory this should successfully"
+    },
+    {
+      "startSeconds": 190.56,
+      "text": "compile your JavaScript files and"
+    },
+    {
+      "startSeconds": 192.239,
+      "text": "generate the bundle.js file in the desk"
+    },
+    {
+      "startSeconds": 194.159,
+      "text": "directory now create a index.html file"
+    },
+    {
+      "startSeconds": 197.04,
+      "text": "and add the following code in it make"
+    },
+    {
+      "startSeconds": 199.319,
+      "text": "sure the script points to the bundle.js"
+    },
+    {
+      "startSeconds": 201.3,
+      "text": "file in this directory generated from"
+    },
+    {
+      "startSeconds": 203.34,
+      "text": "webpack open the index.html file in a"
+    },
+    {
+      "startSeconds": 206.22,
+      "text": "web browser and check the console log to"
+    },
+    {
+      "startSeconds": 208.44,
+      "text": "verify that the add function was"
+    },
+    {
+      "startSeconds": 210.659,
+      "text": "successfully imported and used from the"
+    },
+    {
+      "startSeconds": 212.879,
+      "text": "mac.js module if the console log is"
+    },
+    {
+      "startSeconds": 215.76,
+      "text": "present then it means the bundle.js"
+    },
+    {
+      "startSeconds": 217.56,
+      "text": "works fine now how to see the bundle"
+    },
+    {
+      "startSeconds": 219.959,
+      "text": "size before and after using tree shaking"
+    },
+    {
+      "startSeconds": 222,
+      "text": "in the example I demonstrated for that"
+    },
+    {
+      "startSeconds": 224.519,
+      "text": "we can use the webpack bundle analyzer"
+    },
+    {
+      "startSeconds": 227.04,
+      "text": "plugin to visualize the size of our"
+    },
+    {
+      "startSeconds": 229.019,
+      "text": "bundle and compare the size before and"
+    },
+    {
+      "startSeconds": 231.18,
+      "text": "after tree shaking to install the plugin"
+    },
+    {
+      "startSeconds": 233.58,
+      "text": "run the following command in your"
+    },
+    {
+      "startSeconds": 235.26,
+      "text": "project directory then add the plugin to"
+    },
+    {
+      "startSeconds": 237.54,
+      "text": "your"
+    },
+    {
+      "startSeconds": 238.28,
+      "text": "webpack.config.js file the this will add"
+    },
+    {
+      "startSeconds": 240.72,
+      "text": "the bundle analyzer plugin to your"
+    },
+    {
+      "startSeconds": 242.459,
+      "text": "configuration and generate a report of"
+    },
+    {
+      "startSeconds": 244.5,
+      "text": "the bundle size when you run the webpack"
+    },
+    {
+      "startSeconds": 246.599,
+      "text": "build command now run the webpack build"
+    },
+    {
+      "startSeconds": 249,
+      "text": "command again after the build is"
+    },
+    {
+      "startSeconds": 250.98,
+      "text": "complete open the generated report in"
+    },
+    {
+      "startSeconds": 253.08,
+      "text": "your web browser the report will show"
+    },
+    {
+      "startSeconds": 255.18,
+      "text": "the size of each module in your bundle"
+    },
+    {
+      "startSeconds": 257.4,
+      "text": "and you can compare the size of your"
+    },
+    {
+      "startSeconds": 259.139,
+      "text": "bundle before and after tree shaking you"
+    },
+    {
+      "startSeconds": 261.54,
+      "text": "can clearly see the parse size and gzip"
+    },
+    {
+      "startSeconds": 263.759,
+      "text": "size have significantly reduced in the"
+    },
+    {
+      "startSeconds": 265.68,
+      "text": "analyzer tool when tree shaking is"
+    },
+    {
+      "startSeconds": 267.72,
+      "text": "applied just to give you an overview of"
+    },
+    {
+      "startSeconds": 269.699,
+      "text": "what these terms mean the stat size is"
+    },
+    {
+      "startSeconds": 271.979,
+      "text": "the actual size of the bundle in bytes"
+    },
+    {
+      "startSeconds": 274.08,
+      "text": "it includes the size of all the modules"
+    },
+    {
+      "startSeconds": 276.3,
+      "text": "assets and other files that are included"
+    },
+    {
+      "startSeconds": 278.52,
+      "text": "in the bundle parse size is the size of"
+    },
+    {
+      "startSeconds": 280.919,
+      "text": "the code after it has been parsed by"
+    },
+    {
+      "startSeconds": 282.78,
+      "text": "webpack this includes only the code that"
+    },
+    {
+      "startSeconds": 285.18,
+      "text": "is actually used by the application and"
+    },
+    {
+      "startSeconds": 287.46,
+      "text": "excludes any dead code that has been"
+    },
+    {
+      "startSeconds": 289.259,
+      "text": "eliminated by webpack's tree shaking"
+    },
+    {
+      "startSeconds": 291.18,
+      "text": "algorithm gzip size is the size of the"
+    },
+    {
+      "startSeconds": 293.759,
+      "text": "bundle after it has been compressed"
+    },
+    {
+      "startSeconds": 295.62,
+      "text": "using the gzip algorithm this is the"
+    },
+    {
+      "startSeconds": 298.02,
+      "text": "size that the bundle will be when it is"
+    },
+    {
+      "startSeconds": 299.88,
+      "text": "transferred over the network to the"
+    },
+    {
+      "startSeconds": 301.44,
+      "text": "client's browser so you can see in the"
+    },
+    {
+      "startSeconds": 304.02,
+      "text": "bundle.js file within disk directory the"
+    },
+    {
+      "startSeconds": 306.6,
+      "text": "contents of the code are significantly"
+    },
+    {
+      "startSeconds": 308.28,
+      "text": "reduced before and after applying tree"
+    },
+    {
+      "startSeconds": 310.32,
+      "text": "shaking because it removes all the dead"
+    },
+    {
+      "startSeconds": 312.36,
+      "text": "or unused code such as multiply function"
+    },
+    {
+      "startSeconds": 314.759,
+      "text": "and so on so this is how tree shaking"
+    },
+    {
+      "startSeconds": 317.46,
+      "text": "optimizes the performance of your"
+    },
+    {
+      "startSeconds": 319.02,
+      "text": "application and I hope you found this"
+    },
+    {
+      "startSeconds": 321,
+      "text": "example useful that's all for the video"
+    },
+    {
+      "startSeconds": 323.34,
+      "text": "if you found this video insightful then"
+    },
+    {
+      "startSeconds": 325.74,
+      "text": "don't forget to like And subscribe and"
+    },
+    {
+      "startSeconds": 327.72,
+      "text": "as usual stay tuned for more"
+    }
+  ]
 }

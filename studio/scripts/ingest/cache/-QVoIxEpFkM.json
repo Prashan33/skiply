@@ -1,8 +1,558 @@
 {
   "id": "-QVoIxEpFkM",
   "url": "https://www.youtube.com/watch?v=-QVoIxEpFkM",
-  "fetchedAt": "2026-08-31T05:15:36.955Z",
-  "captionKind": "empty",
-  "chapters": [],
-  "cues": []
+  "fetchedAt": "2026-09-01T04:06:23.658Z",
+  "captionKind": "manual",
+  "chapters": [
+    {
+      "startSeconds": 0,
+      "label": "Introduction"
+    },
+    {
+      "startSeconds": 169,
+      "label": "Tokens"
+    },
+    {
+      "startSeconds": 360,
+      "label": "Self Attention Mechanism"
+    },
+    {
+      "startSeconds": 542,
+      "label": "Challenges"
+    }
+  ],
+  "cues": [
+    {
+      "startSeconds": 0.39,
+      "text": "In the context of large language models."
+    },
+    {
+      "startSeconds": 2.88,
+      "text": "What is a context window?"
+    },
+    {
+      "startSeconds": 5.97,
+      "text": "Well, it's the equivalent of its working memory."
+    },
+    {
+      "startSeconds": 9.12,
+      "text": "It determines how long of a conversation the LLM can carry out without forgetting details from earlier in the exchange."
+    },
+    {
+      "startSeconds": 17.16,
+      "text": "And allow me to illustrate this using the scientifically recognized IBU scale that's international blah units."
+    },
+    {
+      "startSeconds": 25.77,
+      "text": "So blah here, that represents me sending a prompt to an LLM chatbot. Now the chatbot that returns with a response blah."
+    },
+    {
+      "startSeconds": 41.49,
+      "text": "Right."
+    },
+    {
+      "startSeconds": 42.12,
+      "text": "And then we continue the conversation."
+    },
+    {
+      "startSeconds": 43.92,
+      "text": "So I say something else and then it responds back to me."
+    },
+    {
+      "startSeconds": 52.44,
+      "text": "Blah, blah, blah, blah."
+    },
+    {
+      "startSeconds": 55.49,
+      "text": "International blah units."
+    },
+    {
+      "startSeconds": 58.01,
+      "text": "Now, this box here"
+    },
+    {
+      "startSeconds": 61.28,
+      "text": "represents the context window, and in this case, the entire conversation fits within it."
+    },
+    {
+      "startSeconds": 70.55,
+      "text": "Now, that means that when the LLM generated this response here, this blah,"
+    },
+    {
+      "startSeconds": 75.369,
+      "text": "it had within its working memory my prompts to the model here and here."
+    },
+    {
+      "startSeconds": 82.28,
+      "text": "And it also had the other response that the model had returned to me in order to build this response."
+    },
+    {
+      "startSeconds": 89.45,
+      "text": "All good."
+    },
+    {
+      "startSeconds": 90.29,
+      "text": "Now let's consider a longer conversation."
+    },
+    {
+      "startSeconds": 93.57,
+      "text": "So more blahs."
+    },
+    {
+      "startSeconds": 95.637,
+      "text": "I send my prompt blah."
+    },
+    {
+      "startSeconds": 99.41,
+      "text": "It then sends me a response."
+    },
+    {
+      "startSeconds": 103.75,
+      "text": "And now we go back and forth with more conversations."
+    },
+    {
+      "startSeconds": 107.5,
+      "text": "I say something."
+    },
+    {
+      "startSeconds": 109.15,
+      "text": "It responds to that."
+    },
+    {
+      "startSeconds": 110.68,
+      "text": "I say one more thing and it responds to that."
+    },
+    {
+      "startSeconds": 116.25,
+      "text": "So now we have a longer conversation here to deal with."
+    },
+    {
+      "startSeconds": 121.15,
+      "text": "And it turns out that this conversation thread is actually longer than the context window of the model."
+    },
+    {
+      "startSeconds": 129.639,
+      "text": "Now, that means that the blahs from earlier in the conversation are no longer available to the model."
+    },
+    {
+      "startSeconds": 138.64,
+      "text": "It has no memory of them when generating new responses."
+    },
+    {
+      "startSeconds": 143.65,
+      "text": "Now the LLM can do its best to infer what came earlier by looking at the conversation that is within its context window."
+    },
+    {
+      "startSeconds": 152.05,
+      "text": "But now the LLM is making educated guesses and that can result in some wicked hallucinations."
+    },
+    {
+      "startSeconds": 159.443,
+      "text": "So understanding how the context window works is essential to getting the most out about a LLMs."
+    },
+    {
+      "startSeconds": 165.49,
+      "text": "Let's get into a bit more detail about that now."
+    },
+    {
+      "startSeconds": 169.05,
+      "text": "Now my producer is telling me that context window size is in fact not measured in IBUs and that I made that up."
+    },
+    {
+      "startSeconds": 177.88,
+      "text": "We actually measure context windows in something called tokens."
+    },
+    {
+      "startSeconds": 182.71,
+      "text": "So let's describe tokenization."
+    },
+    {
+      "startSeconds": 185.71,
+      "text": "Let's get into context, length, size, and we're going to talk about the challenges of long context windows."
+    },
+    {
+      "startSeconds": 192.79,
+      "text": "So the start, what is a token?"
+    },
+    {
+      "startSeconds": 196.99,
+      "text": "Well, for us humans, the smallest unit of information that we use to represent language is a single."
+    },
+    {
+      "startSeconds": 204.96,
+      "text": "Character."
+    },
+    {
+      "startSeconds": 206.28,
+      "text": "So something like a letter or a number or a punctuation mark, something like that."
+    },
+    {
+      "startSeconds": 214.89,
+      "text": "But the smallest unit of language that AI models use is called a token."
+    },
+    {
+      "startSeconds": 221.4,
+      "text": "Now, a token can represent a character as well."
+    },
+    {
+      "startSeconds": 226.26,
+      "text": "But it might also be a part of a word or a whole word or even a short multi-word phrase."
+    },
+    {
+      "startSeconds": 233.52,
+      "text": "So, for example, let's consider the different roles played by the letter A."
+    },
+    {
+      "startSeconds": 239.16,
+      "text": "So I'm going to write some sentences and we're going to tokenize them."
+    },
+    {
+      "startSeconds": 242.28,
+      "text": "Let's start with Martin"
+    },
+    {
+      "startSeconds": 246.01,
+      "text": "drove a car."
+    },
+    {
+      "startSeconds": 252.18,
+      "text": "Now A here is an entire word and it will be represented by a distinct token."
+    },
+    {
+      "startSeconds": 263.03,
+      "text": "Now, what if we try a different sentence?"
+    },
+    {
+      "startSeconds": 264.59,
+      "text": "So, Martin"
+    },
+    {
+      "startSeconds": 267.42,
+      "text": "is"
+    },
+    {
+      "startSeconds": 270.25,
+      "text": "amoral."
+    },
+    {
+      "startSeconds": 271.84,
+      "text": "Not sure why we would say that,"
+    },
+    {
+      "startSeconds": 273.7,
+      "text": "but look, in this case, A is not a word, but it's an addition to moral that significantly changes the meaning of that word."
+    },
+    {
+      "startSeconds": 282.85,
+      "text": "So here a moral would be represented by two distinct tokens, a token for A and another token for moral."
+    },
+    {
+      "startSeconds": 294.54,
+      "text": "All right. one more."
+    },
+    {
+      "startSeconds": 296.3,
+      "text": "Martin"
+    },
+    {
+      "startSeconds": 298.91,
+      "text": "loves"
+    },
+    {
+      "startSeconds": 300.6,
+      "text": "his cat."
+    },
+    {
+      "startSeconds": 303.85,
+      "text": "Now the A in cat is simply a letter."
+    },
+    {
+      "startSeconds": 307.75,
+      "text": "In a word, it carries no semantic meaning by itself and would therefore not be a distinct token."
+    },
+    {
+      "startSeconds": 314.79,
+      "text": "The token here"
+    },
+    {
+      "startSeconds": 316.38,
+      "text": "It's just cat."
+    },
+    {
+      "startSeconds": 318.3,
+      "text": "Now, the tool, the converts language, to tokens."
+    },
+    {
+      "startSeconds": 321.96,
+      "text": "It's got a name."
+    },
+    {
+      "startSeconds": 323.22,
+      "text": "It's called a tokenizer."
+    },
+    {
+      "startSeconds": 328.42,
+      "text": "And different tokenizer, as might tokenize the same passage of writing differently."
+    },
+    {
+      "startSeconds": 332.8,
+      "text": "But kind of a good rule of thumb is that a a regular word in English language is represented by something like 1.5"
+    },
+    {
+      "startSeconds": 345.35,
+      "text": "tokens by the tokenizer."
+    },
+    {
+      "startSeconds": 348.26,
+      "text": "So hundred words that might result in 150 tokens."
+    },
+    {
+      "startSeconds": 353.18,
+      "text": "So context windows consist of tokens, but how many tokens are we actually talking about?"
+    },
+    {
+      "startSeconds": 360.79,
+      "text": "To answer that, we need to understand how LLM process tokens"
+    },
+    {
+      "startSeconds": 365.79,
+      "text": "in a context window."
+    },
+    {
+      "startSeconds": 368.64,
+      "text": "Now, transformer models use something called the self"
+    },
+    {
+      "startSeconds": 374.91,
+      "text": "attention"
+    },
+    {
+      "startSeconds": 377.28,
+      "text": "mechanism."
+    },
+    {
+      "startSeconds": 379.41,
+      "text": "And the self attention mechanism is used to calculate the relationships"
+    },
+    {
+      "startSeconds": 383.623,
+      "text": "and the dependencies between different parts of an input like words at the beginning and at the end of a paragraph."
+    },
+    {
+      "startSeconds": 390.81,
+      "text": "Now self attention mechanism computes vectors of weights in which each weight"
+    },
+    {
+      "startSeconds": 395.461,
+      "text": "represents how relevant that token is to the other tokens in the sequence."
+    },
+    {
+      "startSeconds": 399.72,
+      "text": "So the size of the context window determines the maximum number of tokens"
+    },
+    {
+      "startSeconds": 404.931,
+      "text": "that the model can pay attention to at any one time."
+    },
+    {
+      "startSeconds": 410.1,
+      "text": "Now, context window size has been rapidly increasing."
+    },
+    {
+      "startSeconds": 414.16,
+      "text": "So the first LLMs that I used, they had context windows of around 2000 tokens."
+    },
+    {
+      "startSeconds": 421.71,
+      "text": "The IBM Granite three model today has a context window of"
+    },
+    {
+      "startSeconds": 424.923,
+      "text": "128,000 tokens, and other models have larger context when they still."
+    },
+    {
+      "startSeconds": 432.19,
+      "text": "And but it almost seems like overkill, doesn't it?"
+    },
+    {
+      "startSeconds": 435.46,
+      "text": "I would have to be conversing with a chat bot all day to fill a 128K token window."
+    },
+    {
+      "startSeconds": 443.56,
+      "text": "Well, actually, it's not necessarily true because there can be a lot of things taking up space within a model's context window."
+    },
+    {
+      "startSeconds": 453.52,
+      "text": "So let's take a look at what some of those things could be."
+    },
+    {
+      "startSeconds": 457.12,
+      "text": "Well, one of them is the the user input, the the blah that I sent into the model."
+    },
+    {
+      "startSeconds": 465.19,
+      "text": "And of course, we also have the model responses as well,"
+    },
+    {
+      "startSeconds": 470.92,
+      "text": "the blahs that it was sending back,"
+    },
+    {
+      "startSeconds": 474.07,
+      "text": "but a context window may also contain all sorts of other things as well."
+    },
+    {
+      "startSeconds": 479.8,
+      "text": "So most models provide what is called a system prompt."
+    },
+    {
+      "startSeconds": 486.54,
+      "text": "Into the context window."
+    },
+    {
+      "startSeconds": 488.43,
+      "text": "Now, this is often hidden from the user."
+    },
+    {
+      "startSeconds": 491.52,
+      "text": "But it conditions the behavior of the model, telling it what it can and cannot do."
+    },
+    {
+      "startSeconds": 497.13,
+      "text": "A user may also choose to attach some documents into"
+    },
+    {
+      "startSeconds": 502.4,
+      "text": "their contacts window, or they might put in some source code as well."
+    },
+    {
+      "startSeconds": 508.38,
+      "text": "And that can be used by the LLM to refer to it and its responses."
+    },
+    {
+      "startSeconds": 512.85,
+      "text": "And then supplementary information drawn from external data sources"
+    },
+    {
+      "startSeconds": 516.901,
+      "text": "for retrieval augmented generation or RAG,"
+    },
+    {
+      "startSeconds": 521.885,
+      "text": "that might be stored within the context window during inference."
+    },
+    {
+      "startSeconds": 525.9,
+      "text": "So a few long documents, some snippets of source code, I can quickly fill up a context window."
+    },
+    {
+      "startSeconds": 533.82,
+      "text": "So the bigger the context window, the better, right?"
+    },
+    {
+      "startSeconds": 538.14,
+      "text": "Well, larger context windows do present some challenges as well."
+    },
+    {
+      "startSeconds": 542.73,
+      "text": "What sort of challenges?"
+    },
+    {
+      "startSeconds": 545.7,
+      "text": "Well, I think the most obvious one that would have to be"
+    },
+    {
+      "startSeconds": 550.07,
+      "text": "compute."
+    },
+    {
+      "startSeconds": 551.76,
+      "text": "The compute requirements scale quadratically with the length of a sequence."
+    },
+    {
+      "startSeconds": 558,
+      "text": "What does that mean?"
+    },
+    {
+      "startSeconds": 558.66,
+      "text": "Well, essentially, as the number of input tokens doubles,"
+    },
+    {
+      "startSeconds": 564.37,
+      "text": "that results in the model needing four times as much processing power to handle it."
+    },
+    {
+      "startSeconds": 572.53,
+      "text": "Now, remember, as the model predicts, the next token in a sequence."
+    },
+    {
+      "startSeconds": 576.19,
+      "text": "It computes the relationships between the token and every single preceding token in that sequence."
+    },
+    {
+      "startSeconds": 583.39,
+      "text": "So as context length increases, more and more computation is going to be required."
+    },
+    {
+      "startSeconds": 589.69,
+      "text": "Now, long context windows also can negatively affect performance, specifically the performance of the model."
+    },
+    {
+      "startSeconds": 599.83,
+      "text": "So like people and LLMs can be overwhelmed by an abundance of extra detail."
+    },
+    {
+      "startSeconds": 606.76,
+      "text": "They can also get lazy and take all sorts of cognitive shortcuts."
+    },
+    {
+      "startSeconds": 610.39,
+      "text": "A 2023 paper found that models perform best when relevant information is towards the"
+    },
+    {
+      "startSeconds": 616.803,
+      "text": "beginning or towards the end of the input context. And they found that performance"
+    },
+    {
+      "startSeconds": 622.461,
+      "text": "degrades when the model must carefully consider the information that is in the middle of long context."
+    },
+    {
+      "startSeconds": 627.4,
+      "text": "And then finally, we also have to be concerned with a number of safety challenges as well."
+    },
+    {
+      "startSeconds": 634.9,
+      "text": "Longer context window might have the unintended effect of presenting a longer attack surface for adversarial prompts,"
+    },
+    {
+      "startSeconds": 641.78,
+      "text": "a long context length can increase a model's vulnerability to jailbreaking,"
+    },
+    {
+      "startSeconds": 646.244,
+      "text": "where malicious content is embedded deep within the input, making it harder for the model safety mechanisms"
+    },
+    {
+      "startSeconds": 652.171,
+      "text": "to detect and filter out harmful instructions."
+    },
+    {
+      "startSeconds": 655.69,
+      "text": "So no matter how you measure it with either with IBUs or more accurately, tokens,"
+    },
+    {
+      "startSeconds": 662.909,
+      "text": "selecting the appropriate number of tokens for a context window involves balancing the need"
+    },
+    {
+      "startSeconds": 668.371,
+      "text": "to supply ample information for the model's self attention mechanism."
+    },
+    {
+      "startSeconds": 673.36,
+      "text": "With the increasing demands and performance issues those additional tokens may bring."
+    }
+  ]
 }

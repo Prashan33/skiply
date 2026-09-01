@@ -1,0 +1,1238 @@
+{
+  "id": "PZFiThbuTFg",
+  "url": "https://www.youtube.com/watch?v=PZFiThbuTFg",
+  "fetchedAt": "2026-09-01T04:08:56.777Z",
+  "captionKind": "asr",
+  "chapters": [
+    {
+      "startSeconds": 0,
+      "label": "Introduction"
+    },
+    {
+      "startSeconds": 30,
+      "label": "Create Table Employee"
+    },
+    {
+      "startSeconds": 70,
+      "label": "Insert Data"
+    },
+    {
+      "startSeconds": 112,
+      "label": "Select Data"
+    },
+    {
+      "startSeconds": 360,
+      "label": "More Features"
+    },
+    {
+      "startSeconds": 510,
+      "label": "Special Query"
+    },
+    {
+      "startSeconds": 663,
+      "label": "Summary"
+    }
+  ],
+  "cues": [
+    {
+      "startSeconds": 0.16,
+      "text": "Hello everyone, welcome to Lime Brew"
+    },
+    {
+      "startSeconds": 1.76,
+      "text": "channel. In this session, we are going"
+    },
+    {
+      "startSeconds": 3.2,
+      "text": "to learn that how you can query JSON"
+    },
+    {
+      "startSeconds": 5.6,
+      "text": "data in your Postgress database. So I"
+    },
+    {
+      "startSeconds": 8.48,
+      "text": "have opened my Postgress database on my"
+    },
+    {
+      "startSeconds": 10.639,
+      "text": "local. So I've opened the PG admin tool"
+    },
+    {
+      "startSeconds": 12.8,
+      "text": "and you can see on the left hand side"
+    },
+    {
+      "startSeconds": 14.639,
+      "text": "the table right now I don't have any"
+    },
+    {
+      "startSeconds": 16.56,
+      "text": "table. So what we going to do is we are"
+    },
+    {
+      "startSeconds": 18.24,
+      "text": "going to create that table first which"
+    },
+    {
+      "startSeconds": 20.72,
+      "text": "will have the JSON B column and then we"
+    },
+    {
+      "startSeconds": 23.279,
+      "text": "will be seeing that how you can query"
+    },
+    {
+      "startSeconds": 25.92,
+      "text": "different flavors uh of data fetch in"
+    },
+    {
+      "startSeconds": 29.119,
+      "text": "JSON B data type. So this is my first"
+    },
+    {
+      "startSeconds": 32,
+      "text": "query. Let me unccomment it which says"
+    },
+    {
+      "startSeconds": 34.399,
+      "text": "create table employee. So what it will"
+    },
+    {
+      "startSeconds": 36.88,
+      "text": "do is it will create a table employee"
+    },
+    {
+      "startSeconds": 38.719,
+      "text": "with employee ID and the data is going"
+    },
+    {
+      "startSeconds": 41.04,
+      "text": "to be JSON B. So for particular employee"
+    },
+    {
+      "startSeconds": 43.68,
+      "text": "ID all the data that I'll add it would"
+    },
+    {
+      "startSeconds": 46.399,
+      "text": "be in JSON format. So I've defined the"
+    },
+    {
+      "startSeconds": 48.399,
+      "text": "type as JSON B. So let me execute this"
+    },
+    {
+      "startSeconds": 50.879,
+      "text": "query first. So if I execute this query"
+    },
+    {
+      "startSeconds": 53.44,
+      "text": "so it says that query returned success"
+    },
+    {
+      "startSeconds": 55.92,
+      "text": "uh successfully. So let me comment this"
+    },
+    {
+      "startSeconds": 57.92,
+      "text": "query now and let me refresh this. So if"
+    },
+    {
+      "startSeconds": 60.48,
+      "text": "I refresh this. So you can see that one"
+    },
+    {
+      "startSeconds": 62.32,
+      "text": "table has been created employee table"
+    },
+    {
+      "startSeconds": 64.559,
+      "text": "which I just created. It has two columns"
+    },
+    {
+      "startSeconds": 66.56,
+      "text": "employee ID and data and data is of type"
+    },
+    {
+      "startSeconds": 69.439,
+      "text": "JSON B. So let me insert some values"
+    },
+    {
+      "startSeconds": 72,
+      "text": "inside this table. So what uh I'm going"
+    },
+    {
+      "startSeconds": 74.96,
+      "text": "to insert inside this table is two"
+    },
+    {
+      "startSeconds": 76.96,
+      "text": "employees whose ids are one and two and"
+    },
+    {
+      "startSeconds": 79.439,
+      "text": "then there are data with the uh with the"
+    },
+    {
+      "startSeconds": 82.96,
+      "text": "JSON values as name and hobbies. So name"
+    },
+    {
+      "startSeconds": 86.32,
+      "text": "is basically string type which is JSON"
+    },
+    {
+      "startSeconds": 88.56,
+      "text": "John and Mark and hobbies are basically"
+    },
+    {
+      "startSeconds": 91.439,
+      "text": "list type. Uh so there is one list"
+    },
+    {
+      "startSeconds": 93.759,
+      "text": "inside the JSON and there is one list uh"
+    },
+    {
+      "startSeconds": 96.079,
+      "text": "string inside the JSON. So we will see"
+    },
+    {
+      "startSeconds": 98.079,
+      "text": "that how uh this data will look like. So"
+    },
+    {
+      "startSeconds": 100.799,
+      "text": "let me insert both the values. So let me"
+    },
+    {
+      "startSeconds": 104.24,
+      "text": "insert both the values. So if I insert"
+    },
+    {
+      "startSeconds": 106.96,
+      "text": "run this query insert into so you see uh"
+    },
+    {
+      "startSeconds": 109.52,
+      "text": "it says it returned successfully. Let me"
+    },
+    {
+      "startSeconds": 112.479,
+      "text": "comment unc comment this insert"
+    },
+    {
+      "startSeconds": 114.96,
+      "text": "statements also. So let's run the select"
+    },
+    {
+      "startSeconds": 117.2,
+      "text": "data uh select let me run select star al"
+    },
+    {
+      "startSeconds": 119.84,
+      "text": "first select star from employee. So if I"
+    },
+    {
+      "startSeconds": 122.32,
+      "text": "run select star from employee. So you"
+    },
+    {
+      "startSeconds": 124.159,
+      "text": "can see there are two employees employee"
+    },
+    {
+      "startSeconds": 125.84,
+      "text": "one and two with the JSON P data as name"
+    },
+    {
+      "startSeconds": 129.039,
+      "text": "and hobbies. Um so employee one has"
+    },
+    {
+      "startSeconds": 131.44,
+      "text": "hobbies movies football and hiking and"
+    },
+    {
+      "startSeconds": 133.84,
+      "text": "employee 2 has the hikings uh hobbies"
+    },
+    {
+      "startSeconds": 136.48,
+      "text": "gaming movies and music and there is one"
+    },
+    {
+      "startSeconds": 138.8,
+      "text": "common u hobby in employee one and"
+    },
+    {
+      "startSeconds": 141.84,
+      "text": "employee 2 which is movies. So movies"
+    },
+    {
+      "startSeconds": 143.84,
+      "text": "exist in employee ID 1 also and movies"
+    },
+    {
+      "startSeconds": 147.68,
+      "text": "is the hobby for the employee ID 2 also."
+    },
+    {
+      "startSeconds": 149.599,
+      "text": "So this is the common hobby for both"
+    },
+    {
+      "startSeconds": 152.4,
+      "text": "employees employee one and employee two."
+    },
+    {
+      "startSeconds": 154.64,
+      "text": "So let's try to queries this data. Now"
+    },
+    {
+      "startSeconds": 156.4,
+      "text": "let's say I want to get the JSON B data"
+    },
+    {
+      "startSeconds": 158.239,
+      "text": "only. Select data from employee which I"
+    },
+    {
+      "startSeconds": 160,
+      "text": "was just showing. Um so let me run this"
+    },
+    {
+      "startSeconds": 162.8,
+      "text": "query. Now select data from employee. So"
+    },
+    {
+      "startSeconds": 164.64,
+      "text": "if I'll run this so I'll get the whole"
+    },
+    {
+      "startSeconds": 166.239,
+      "text": "JSON without employee ID. So you get the"
+    },
+    {
+      "startSeconds": 168.239,
+      "text": "whole JSON. So let's see how you can"
+    },
+    {
+      "startSeconds": 170.8,
+      "text": "query the individual. Let's say if I if"
+    },
+    {
+      "startSeconds": 172.959,
+      "text": "you want to access the name only from"
+    },
+    {
+      "startSeconds": 174.64,
+      "text": "this JSON B data. So what you need to do"
+    },
+    {
+      "startSeconds": 176.879,
+      "text": "is there is a special operator this"
+    },
+    {
+      "startSeconds": 179.2,
+      "text": "hyphen and then this sign uh uh then you"
+    },
+    {
+      "startSeconds": 184.4,
+      "text": "can access any attribute inside your"
+    },
+    {
+      "startSeconds": 186.56,
+      "text": "JSON. So what I'm saying is data is my"
+    },
+    {
+      "startSeconds": 188.48,
+      "text": "column name inside data. I want to"
+    },
+    {
+      "startSeconds": 190.72,
+      "text": "access name. So you see here name is the"
+    },
+    {
+      "startSeconds": 193.12,
+      "text": "attribute of the uh JSON. It's the key"
+    },
+    {
+      "startSeconds": 195.68,
+      "text": "of the JSON. So I can access any JSON"
+    },
+    {
+      "startSeconds": 197.92,
+      "text": "attribute using this query. If I do"
+    },
+    {
+      "startSeconds": 199.76,
+      "text": "select data um name from employee table."
+    },
+    {
+      "startSeconds": 203.44,
+      "text": "So if I run this query so you can see I"
+    },
+    {
+      "startSeconds": 205.519,
+      "text": "have get only the names now from the"
+    },
+    {
+      "startSeconds": 207.84,
+      "text": "JSON. So Postgress has successfully"
+    },
+    {
+      "startSeconds": 210,
+      "text": "parsed the JSON and it has returned me"
+    },
+    {
+      "startSeconds": 211.92,
+      "text": "only the value specific to name. So in"
+    },
+    {
+      "startSeconds": 214.08,
+      "text": "this way you can query JSON data. Let's"
+    },
+    {
+      "startSeconds": 216.72,
+      "text": "see some more examples. Let's say you"
+    },
+    {
+      "startSeconds": 218.959,
+      "text": "want to filter some data. Select star"
+    },
+    {
+      "startSeconds": 220.879,
+      "text": "from employee where name is equal to"
+    },
+    {
+      "startSeconds": 223.599,
+      "text": "John uh or name equal to mark. So you"
+    },
+    {
+      "startSeconds": 226.159,
+      "text": "want to filter based on um where"
+    },
+    {
+      "startSeconds": 228.959,
+      "text": "employee name is in is equal to mark but"
+    },
+    {
+      "startSeconds": 231.28,
+      "text": "employee name is not uh the column name"
+    },
+    {
+      "startSeconds": 233.92,
+      "text": "the employee name is present inside my"
+    },
+    {
+      "startSeconds": 236.319,
+      "text": "JSON column which is data. So the same"
+    },
+    {
+      "startSeconds": 238.319,
+      "text": "way I can do where data name is equal to"
+    },
+    {
+      "startSeconds": 242.4,
+      "text": "mark. So if I do this if I run this"
+    },
+    {
+      "startSeconds": 245.12,
+      "text": "query so you can see that I have I have"
+    },
+    {
+      "startSeconds": 248.08,
+      "text": "got the employee record its employee ID"
+    },
+    {
+      "startSeconds": 250.319,
+      "text": "is two uh where the employee name is"
+    },
+    {
+      "startSeconds": 252.959,
+      "text": "marked. So I got I I'm able to query the"
+    },
+    {
+      "startSeconds": 255.68,
+      "text": "data, filter the data also based on JSON"
+    },
+    {
+      "startSeconds": 258,
+      "text": "attributes. The attributes are nested"
+    },
+    {
+      "startSeconds": 259.919,
+      "text": "inside the JSON. So and and I'm still"
+    },
+    {
+      "startSeconds": 262.079,
+      "text": "able to do the filtering uh using this"
+    },
+    {
+      "startSeconds": 264.88,
+      "text": "JSON operator. Now what I'll do is I'll"
+    },
+    {
+      "startSeconds": 267.6,
+      "text": "just uh select the hobbies similar"
+    },
+    {
+      "startSeconds": 269.84,
+      "text": "similar way I the way we have fetched"
+    },
+    {
+      "startSeconds": 272.4,
+      "text": "the name similarly we will have fetch"
+    },
+    {
+      "startSeconds": 274.32,
+      "text": "the hobbies also which is data uh and"
+    },
+    {
+      "startSeconds": 277.84,
+      "text": "then hobby. So hobbies is inside my data"
+    },
+    {
+      "startSeconds": 280,
+      "text": "column. So let me run this query. So"
+    },
+    {
+      "startSeconds": 282.32,
+      "text": "I'll get the hobby um sorry let me run"
+    },
+    {
+      "startSeconds": 284.88,
+      "text": "this query. So I'll get hobbies now. So"
+    },
+    {
+      "startSeconds": 288.56,
+      "text": "you can see that employee one has"
+    },
+    {
+      "startSeconds": 290.639,
+      "text": "hobbies movies, football and hiking and"
+    },
+    {
+      "startSeconds": 292.88,
+      "text": "employee 2 has gaming, movies and music."
+    },
+    {
+      "startSeconds": 297.04,
+      "text": "So again you can do the um you can do uh"
+    },
+    {
+      "startSeconds": 301.36,
+      "text": "this thing also that you want to get"
+    },
+    {
+      "startSeconds": 303.12,
+      "text": "hobbies where the employee name is"
+    },
+    {
+      "startSeconds": 306.24,
+      "text": "marked. So you can do the filtering"
+    },
+    {
+      "startSeconds": 307.84,
+      "text": "also. So if if you do the filtering"
+    },
+    {
+      "startSeconds": 310.4,
+      "text": "sorry let me comment this uh now let me"
+    },
+    {
+      "startSeconds": 313.28,
+      "text": "run this"
+    },
+    {
+      "startSeconds": 315.12,
+      "text": "uh so if I run this statement so what"
+    },
+    {
+      "startSeconds": 317.199,
+      "text": "what I'm doing is so I'm saying that I"
+    },
+    {
+      "startSeconds": 319.6,
+      "text": "want to get hobbies only I want to get"
+    },
+    {
+      "startSeconds": 322.16,
+      "text": "hobbies only from my employee table"
+    },
+    {
+      "startSeconds": 325.36,
+      "text": "where the employee data column with name"
+    },
+    {
+      "startSeconds": 329.12,
+      "text": "attribute is equal to mark so I'm going"
+    },
+    {
+      "startSeconds": 331.28,
+      "text": "to get the hobbies for mark only so now"
+    },
+    {
+      "startSeconds": 334.96,
+      "text": "I'm selecting the data also from the"
+    },
+    {
+      "startSeconds": 337.84,
+      "text": "JSON on attribute also from the JSON and"
+    },
+    {
+      "startSeconds": 341.12,
+      "text": "my filter condition is also based on the"
+    },
+    {
+      "startSeconds": 343.28,
+      "text": "JSON. So basically I'm doing I want to"
+    },
+    {
+      "startSeconds": 345.759,
+      "text": "select certain attributes of a JSON"
+    },
+    {
+      "startSeconds": 347.84,
+      "text": "based on based on some some filter of"
+    },
+    {
+      "startSeconds": 350.08,
+      "text": "the JSON. I'm applying filters also on"
+    },
+    {
+      "startSeconds": 352.639,
+      "text": "the JSON and I'm selecting some"
+    },
+    {
+      "startSeconds": 353.919,
+      "text": "attributes also from the JSON. So this"
+    },
+    {
+      "startSeconds": 355.68,
+      "text": "is what this query is doing and I'm able"
+    },
+    {
+      "startSeconds": 357.68,
+      "text": "to get the data uh using this query. Uh"
+    },
+    {
+      "startSeconds": 361.199,
+      "text": "after that I want to give some flavor of"
+    },
+    {
+      "startSeconds": 364.16,
+      "text": "some more features of JSON B. Let's say"
+    },
+    {
+      "startSeconds": 366.88,
+      "text": "you want to expand all the hobbies."
+    },
+    {
+      "startSeconds": 369.68,
+      "text": "Let's say you right now you are a you"
+    },
+    {
+      "startSeconds": 371.36,
+      "text": "are seeing it in the list that gaming,"
+    },
+    {
+      "startSeconds": 374.56,
+      "text": "movies and music are in the list in a"
+    },
+    {
+      "startSeconds": 376.56,
+      "text": "one row. But let's say you want to"
+    },
+    {
+      "startSeconds": 378,
+      "text": "expand it. So what you can do is you can"
+    },
+    {
+      "startSeconds": 380.639,
+      "text": "do JSON B array elements text. So it"
+    },
+    {
+      "startSeconds": 384.4,
+      "text": "will expand your array into different"
+    },
+    {
+      "startSeconds": 386.88,
+      "text": "rows. So basically gaming will come in a"
+    },
+    {
+      "startSeconds": 388.56,
+      "text": "different row, movie in a different row"
+    },
+    {
+      "startSeconds": 390.479,
+      "text": "and music in a different row. And then"
+    },
+    {
+      "startSeconds": 392.88,
+      "text": "you are saying that you want to use this"
+    },
+    {
+      "startSeconds": 394.8,
+      "text": "function inside for for this particular"
+    },
+    {
+      "startSeconds": 397.28,
+      "text": "attribute data hobbies and you're giving"
+    },
+    {
+      "startSeconds": 399.44,
+      "text": "it as alias as hobbies and then from the"
+    },
+    {
+      "startSeconds": 402.24,
+      "text": "employee table. So let's try to run this"
+    },
+    {
+      "startSeconds": 404.24,
+      "text": "query now. So let's see what is the"
+    },
+    {
+      "startSeconds": 406.08,
+      "text": "output. So if I run this query so I see"
+    },
+    {
+      "startSeconds": 408.56,
+      "text": "that for both employee one and employee"
+    },
+    {
+      "startSeconds": 411.36,
+      "text": "two um I I'm able to get the hobbies. So"
+    },
+    {
+      "startSeconds": 414.639,
+      "text": "in this movies, football, hiking,"
+    },
+    {
+      "startSeconds": 417.12,
+      "text": "gaming, movies, music. So all the"
+    },
+    {
+      "startSeconds": 419.68,
+      "text": "hobbies of employee one and employee two"
+    },
+    {
+      "startSeconds": 422,
+      "text": "are printed but these are not distinct."
+    },
+    {
+      "startSeconds": 423.68,
+      "text": "So employee one has movie as a hobby and"
+    },
+    {
+      "startSeconds": 426.24,
+      "text": "employee two also has movies as a hobby."
+    },
+    {
+      "startSeconds": 428.8,
+      "text": "Let's say I want to apply distinct also"
+    },
+    {
+      "startSeconds": 432.16,
+      "text": "after uh after expanding it. So what I"
+    },
+    {
+      "startSeconds": 435.759,
+      "text": "need to do is so I need to use distinct"
+    },
+    {
+      "startSeconds": 438.479,
+      "text": "function and inside that the same thing"
+    },
+    {
+      "startSeconds": 440.56,
+      "text": "which we did earlier that I want to"
+    },
+    {
+      "startSeconds": 443.039,
+      "text": "expand my array of hobbies and but I"
+    },
+    {
+      "startSeconds": 445.759,
+      "text": "want to apply distinct function uh from"
+    },
+    {
+      "startSeconds": 448.8,
+      "text": "the employee table. So let's try to run"
+    },
+    {
+      "startSeconds": 450.639,
+      "text": "this query now. I should not get uh the"
+    },
+    {
+      "startSeconds": 453.28,
+      "text": "repeated hobbies now. So you can see now"
+    },
+    {
+      "startSeconds": 455.12,
+      "text": "the hobbies has reduced from six to"
+    },
+    {
+      "startSeconds": 457.919,
+      "text": "five. Movies is only coming once. It's"
+    },
+    {
+      "startSeconds": 460.96,
+      "text": "not coming coming twice. So in this way"
+    },
+    {
+      "startSeconds": 463.199,
+      "text": "you can play around with your list data"
+    },
+    {
+      "startSeconds": 465.84,
+      "text": "also inside uh inside the JSON data. Now"
+    },
+    {
+      "startSeconds": 470.56,
+      "text": "let's see one more uh query. Let's say"
+    },
+    {
+      "startSeconds": 473.599,
+      "text": "what I want to do is I want to get the"
+    },
+    {
+      "startSeconds": 475.84,
+      "text": "employee ID also. So what what uh hobby"
+    },
+    {
+      "startSeconds": 478.8,
+      "text": "belong to which employee ID? I have just"
+    },
+    {
+      "startSeconds": 481.039,
+      "text": "added employee ID column along with the"
+    },
+    {
+      "startSeconds": 483.68,
+      "text": "expanded hobbies. That's it. So if I run"
+    },
+    {
+      "startSeconds": 487.12,
+      "text": "this query so you can see that now you"
+    },
+    {
+      "startSeconds": 489.759,
+      "text": "have seen the employee ID also. So"
+    },
+    {
+      "startSeconds": 491.44,
+      "text": "employee one has three hobbies uh and"
+    },
+    {
+      "startSeconds": 493.68,
+      "text": "employee two has three hobbies but all"
+    },
+    {
+      "startSeconds": 496.639,
+      "text": "are expanded now all are in a different"
+    },
+    {
+      "startSeconds": 500.319,
+      "text": "rows now it's it's it's not in the same"
+    },
+    {
+      "startSeconds": 503.36,
+      "text": "row uh all the hobbies have been"
+    },
+    {
+      "startSeconds": 505.28,
+      "text": "expanded in into different rows. So this"
+    },
+    {
+      "startSeconds": 507.36,
+      "text": "is how you can expand uh the things."
+    },
+    {
+      "startSeconds": 510.25,
+      "text": "[snorts] Now let's say uh a special"
+    },
+    {
+      "startSeconds": 512.56,
+      "text": "query uh let me show the original data"
+    },
+    {
+      "startSeconds": 515.2,
+      "text": "first. Select star from employee. So let"
+    },
+    {
+      "startSeconds": 519.76,
+      "text": "me run this query again. So what is the"
+    },
+    {
+      "startSeconds": 522.32,
+      "text": "data inside my employee table? So this"
+    },
+    {
+      "startSeconds": 524.399,
+      "text": "is the data inside my uh employee table."
+    },
+    {
+      "startSeconds": 527.36,
+      "text": "What is saying is it has employee ID and"
+    },
+    {
+      "startSeconds": 529.92,
+      "text": "the data is name hobbies. What I want to"
+    },
+    {
+      "startSeconds": 532.64,
+      "text": "do is now uh I want to search an"
+    },
+    {
+      "startSeconds": 536.48,
+      "text": "employee whose particular hobby matches"
+    },
+    {
+      "startSeconds": 539.2,
+      "text": "with let's say um gaming. So I just want"
+    },
+    {
+      "startSeconds": 543.2,
+      "text": "to search for a one hobby. Instead of"
+    },
+    {
+      "startSeconds": 546.16,
+      "text": "all the hobbies fetch I want to filter"
+    },
+    {
+      "startSeconds": 548.64,
+      "text": "based on a one hobby that I want to get"
+    },
+    {
+      "startSeconds": 550.959,
+      "text": "all the employees whose hobby is gaming."
+    },
+    {
+      "startSeconds": 553.6,
+      "text": "So what I'm doing is first level I'm"
+    },
+    {
+      "startSeconds": 555.76,
+      "text": "going inside the JSON and then I want to"
+    },
+    {
+      "startSeconds": 558.72,
+      "text": "filter the data based on the list. So"
+    },
+    {
+      "startSeconds": 560.959,
+      "text": "this is a list. Hobbies is a list and"
+    },
+    {
+      "startSeconds": 562.88,
+      "text": "from the list also I want to search a"
+    },
+    {
+      "startSeconds": 565.519,
+      "text": "particular item that I want to get all"
+    },
+    {
+      "startSeconds": 567.76,
+      "text": "the employees whose hobby is gaming. So"
+    },
+    {
+      "startSeconds": 570.56,
+      "text": "how you can do is uh so you can do it"
+    },
+    {
+      "startSeconds": 573.04,
+      "text": "using this special operator which is uh"
+    },
+    {
+      "startSeconds": 576.64,
+      "text": "this one. So which I've highlighted at"
+    },
+    {
+      "startSeconds": 578.64,
+      "text": "the rate and then greater than. So what"
+    },
+    {
+      "startSeconds": 580.72,
+      "text": "I'm saying is select employee ID and"
+    },
+    {
+      "startSeconds": 582.8,
+      "text": "data column from employee where data"
+    },
+    {
+      "startSeconds": 585.839,
+      "text": "hobbies um contains a gaming hobby. So"
+    },
+    {
+      "startSeconds": 590.8,
+      "text": "this means contains. So this will check"
+    },
+    {
+      "startSeconds": 592.72,
+      "text": "for the containment whether"
+    },
+    {
+      "startSeconds": 595.6,
+      "text": "in this list this gaming exist or not."
+    },
+    {
+      "startSeconds": 599.519,
+      "text": "uh which is a JSON B type. So let me try"
+    },
+    {
+      "startSeconds": 601.76,
+      "text": "to run this query and let's see. So"
+    },
+    {
+      "startSeconds": 603.92,
+      "text": "gaming um uh hobby belongs to which"
+    },
+    {
+      "startSeconds": 607.04,
+      "text": "employee? It belongs to employee two. So"
+    },
+    {
+      "startSeconds": 608.959,
+      "text": "my output should be employee 2. Let's"
+    },
+    {
+      "startSeconds": 610.8,
+      "text": "say whether we get the output or not. So"
+    },
+    {
+      "startSeconds": 613.92,
+      "text": "if I run this query, so you can see only"
+    },
+    {
+      "startSeconds": 616.32,
+      "text": "one row is returned which is gaming. Now"
+    },
+    {
+      "startSeconds": 619.36,
+      "text": "there was one common hobby which is"
+    },
+    {
+      "startSeconds": 621.279,
+      "text": "movies for employee one as well as"
+    },
+    {
+      "startSeconds": 623.12,
+      "text": "employee 2. Let's see if I search for a"
+    },
+    {
+      "startSeconds": 625.6,
+      "text": "particular hobby which is movie. So"
+    },
+    {
+      "startSeconds": 628,
+      "text": "again you can see my query that what I'm"
+    },
+    {
+      "startSeconds": 630.56,
+      "text": "saying is data hobbies contains movies."
+    },
+    {
+      "startSeconds": 633.44,
+      "text": "So let me try to run this. I should get"
+    },
+    {
+      "startSeconds": 635.839,
+      "text": "both the employees because both the"
+    },
+    {
+      "startSeconds": 637.6,
+      "text": "employees has this hobby of movies. So I"
+    },
+    {
+      "startSeconds": 639.44,
+      "text": "you can see I got mo both the rows"
+    },
+    {
+      "startSeconds": 642.32,
+      "text": "because movies is a hobby of employee"
+    },
+    {
+      "startSeconds": 644.48,
+      "text": "one as well as employee two. So in this"
+    },
+    {
+      "startSeconds": 646.48,
+      "text": "way you can query your um uh JSON B"
+    },
+    {
+      "startSeconds": 650.399,
+      "text": "data. It's very easy to play around with"
+    },
+    {
+      "startSeconds": 652.88,
+      "text": "uh JSON data if you have stored it"
+    },
+    {
+      "startSeconds": 654.64,
+      "text": "inside postgress SQL. In the last I'll"
+    },
+    {
+      "startSeconds": 657.839,
+      "text": "just uh drop this table. Uh if I drop"
+    },
+    {
+      "startSeconds": 661.04,
+      "text": "this table. So yeah my table is dropped."
+    },
+    {
+      "startSeconds": 664.16,
+      "text": "So that's what I wanted to cover for"
+    },
+    {
+      "startSeconds": 666.32,
+      "text": "this video. It's a basic of uh JSON"
+    },
+    {
+      "startSeconds": 669.04,
+      "text": "handling JSON query. You can apply uh if"
+    },
+    {
+      "startSeconds": 671.839,
+      "text": "you have defined uh your column data"
+    },
+    {
+      "startSeconds": 674.079,
+      "text": "type as JSON B. Then you can query the"
+    },
+    {
+      "startSeconds": 676.64,
+      "text": "data from the JSON based on any"
+    },
+    {
+      "startSeconds": 678.56,
+      "text": "attribute. Uh and it's not for one level"
+    },
+    {
+      "startSeconds": 681.6,
+      "text": "of attribute. Let's say if you have a"
+    },
+    {
+      "startSeconds": 683.12,
+      "text": "nested JSON where um let's say two level"
+    },
+    {
+      "startSeconds": 686.16,
+      "text": "of nesting is there. So you can also do"
+    },
+    {
+      "startSeconds": 688,
+      "text": "two level of nesting like this data name"
+    },
+    {
+      "startSeconds": 690.959,
+      "text": "and let's say name has two two or more"
+    },
+    {
+      "startSeconds": 693.279,
+      "text": "attributes first name and last name. So"
+    },
+    {
+      "startSeconds": 694.959,
+      "text": "you can do first name like this. So you"
+    },
+    {
+      "startSeconds": 697.68,
+      "text": "can even go u uh to"
+    },
+    {
+      "startSeconds": 702.64,
+      "text": "deep down into you can also deep down"
+    },
+    {
+      "startSeconds": 704.48,
+      "text": "into the JSON level depending on your"
+    },
+    {
+      "startSeconds": 706.24,
+      "text": "hierarchy of JSON. So it's not limited"
+    },
+    {
+      "startSeconds": 708,
+      "text": "that you can only get first level of"
+    },
+    {
+      "startSeconds": 709.68,
+      "text": "attributes. You can get second level of"
+    },
+    {
+      "startSeconds": 711.279,
+      "text": "attributes also. third level of"
+    },
+    {
+      "startSeconds": 712.56,
+      "text": "attributes also. So wherever your uh"
+    },
+    {
+      "startSeconds": 715.04,
+      "text": "hierarchy goes in the JSON structure,"
+    },
+    {
+      "startSeconds": 716.8,
+      "text": "you can go till that depth. So this is"
+    },
+    {
+      "startSeconds": 719.68,
+      "text": "again a very useful feature within"
+    },
+    {
+      "startSeconds": 722.959,
+      "text": "uh Postgress using which you can use"
+    },
+    {
+      "startSeconds": 725.44,
+      "text": "Postgress database as a NoSQL database."
+    },
+    {
+      "startSeconds": 727.68,
+      "text": "You can store JSON documents inside"
+    },
+    {
+      "startSeconds": 729.519,
+      "text": "Postgress and then query uh apply some"
+    },
+    {
+      "startSeconds": 733.279,
+      "text": "filters, play around with list, array."
+    },
+    {
+      "startSeconds": 736.16,
+      "text": "So all those operations are allowed"
+    },
+    {
+      "startSeconds": 737.76,
+      "text": "within Postgress. So I hope uh you got"
+    },
+    {
+      "startSeconds": 740.56,
+      "text": "the uh gist of uh this feature in"
+    },
+    {
+      "startSeconds": 743.44,
+      "text": "Postgress. Um that's all about this"
+    },
+    {
+      "startSeconds": 745.519,
+      "text": "video. I'll share these queries into the"
+    },
+    {
+      "startSeconds": 747.04,
+      "text": "GitHub URL which will be shared in the"
+    },
+    {
+      "startSeconds": 748.639,
+      "text": "video description. And thank you for"
+    },
+    {
+      "startSeconds": 750.88,
+      "text": "watching."
+    }
+  ]
+}

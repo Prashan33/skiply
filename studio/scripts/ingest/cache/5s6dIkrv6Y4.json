@@ -1,8 +1,962 @@
 {
   "id": "5s6dIkrv6Y4",
   "url": "https://www.youtube.com/watch?v=5s6dIkrv6Y4",
-  "fetchedAt": "2026-08-31T05:15:19.234Z",
-  "captionKind": "empty",
-  "chapters": [],
-  "cues": []
+  "fetchedAt": "2026-09-01T04:06:02.530Z",
+  "captionKind": "asr",
+  "chapters": [
+    {
+      "startSeconds": 0,
+      "label": "Introduction"
+    },
+    {
+      "startSeconds": 47,
+      "label": "When You Need Generics"
+    },
+    {
+      "startSeconds": 165,
+      "label": "How To Create A Generic Component"
+    }
+  ],
+  "cues": [
+    {
+      "startSeconds": 0,
+      "text": "One of the most misunderstood concepts"
+    },
+    {
+      "startSeconds": 1.88,
+      "text": "in React is how generics work with"
+    },
+    {
+      "startSeconds": 4.08,
+      "text": "components. In this video, I'm going to"
+    },
+    {
+      "startSeconds": 5.92,
+      "text": "clear up any confusion that you could"
+    },
+    {
+      "startSeconds": 7.32,
+      "text": "possibly have with generics and"
+    },
+    {
+      "startSeconds": 8.72,
+      "text": "component and show you why they're an"
+    },
+    {
+      "startSeconds": 10.12,
+      "text": "incredibly useful feature you need to"
+    },
+    {
+      "startSeconds": 12,
+      "text": "know to write good quality React"
+    },
+    {
+      "startSeconds": 13.8,
+      "text": "applications."
+    },
+    {
+      "startSeconds": 17.92,
+      "text": "Welcome back to Web Dev Simplified. My"
+    },
+    {
+      "startSeconds": 19.8,
+      "text": "name is Kyle and my job is to simplify"
+    },
+    {
+      "startSeconds": 21.52,
+      "text": "the web for you so you can start"
+    },
+    {
+      "startSeconds": 22.72,
+      "text": "building your dream project sooner. And"
+    },
+    {
+      "startSeconds": 24.48,
+      "text": "if you like this video where I deep dive"
+    },
+    {
+      "startSeconds": 26.04,
+      "text": "into some of the more complex features"
+    },
+    {
+      "startSeconds": 27.52,
+      "text": "in React, you're going to love my React"
+    },
+    {
+      "startSeconds": 29.2,
+      "text": "Simplified course which covers"
+    },
+    {
+      "startSeconds": 30.6,
+      "text": "everything you need to know about React"
+    },
+    {
+      "startSeconds": 32.279,
+      "text": "all the way from the basics up to more"
+    },
+    {
+      "startSeconds": 34.2,
+      "text": "advanced features like generics. So, if"
+    },
+    {
+      "startSeconds": 36.16,
+      "text": "you're interested in that, check out my"
+    },
+    {
+      "startSeconds": 37.44,
+      "text": "React Simplified course linked in the"
+    },
+    {
+      "startSeconds": 38.96,
+      "text": "description or even just check out my"
+    },
+    {
+      "startSeconds": 40.56,
+      "text": "TypeScript course if all you care about"
+    },
+    {
+      "startSeconds": 42.12,
+      "text": "is TypeScript cuz I also cover all the"
+    },
+    {
+      "startSeconds": 43.92,
+      "text": "React TypeScript you need to know as"
+    },
+    {
+      "startSeconds": 45.32,
+      "text": "well. I'll link that in the description"
+    },
+    {
+      "startSeconds": 46.76,
+      "text": "as well. So, to look at the real quick"
+    },
+    {
+      "startSeconds": 48.72,
+      "text": "example code that we have, we have this"
+    },
+    {
+      "startSeconds": 50.52,
+      "text": "list component. And this list component"
+    },
+    {
+      "startSeconds": 52.48,
+      "text": "takes in an array of data and then it"
+    },
+    {
+      "startSeconds": 54.48,
+      "text": "uses that data inside of this get key"
+    },
+    {
+      "startSeconds": 57.36,
+      "text": "and this get row function to be able to"
+    },
+    {
+      "startSeconds": 59,
+      "text": "print out information. So, if we scroll"
+    },
+    {
+      "startSeconds": 61.04,
+      "text": "down to that list component, you can see"
+    },
+    {
+      "startSeconds": 62.72,
+      "text": "right now it's very simple. I have my"
+    },
+    {
+      "startSeconds": 64.559,
+      "text": "data, my get key function, and my get"
+    },
+    {
+      "startSeconds": 66.52,
+      "text": "row function. And all I'm doing is I'm"
+    },
+    {
+      "startSeconds": 68.12,
+      "text": "looping through my data and for each"
+    },
+    {
+      "startSeconds": 69.92,
+      "text": "item, I'm rendering out what the row for"
+    },
+    {
+      "startSeconds": 71.96,
+      "text": "that item should be and I'm getting the"
+    },
+    {
+      "startSeconds": 73.32,
+      "text": "key for that item just to make sure that"
+    },
+    {
+      "startSeconds": 74.8,
+      "text": "React can render everything out"
+    },
+    {
+      "startSeconds": 76.28,
+      "text": "properly. So, I have all of my types and"
+    },
+    {
+      "startSeconds": 78.4,
+      "text": "everything set up. But, you'll notice"
+    },
+    {
+      "startSeconds": 79.68,
+      "text": "I'm currently using an any type right"
+    },
+    {
+      "startSeconds": 81.44,
+      "text": "here for my data as well as my get key"
+    },
+    {
+      "startSeconds": 83.56,
+      "text": "has an any right here and my get row has"
+    },
+    {
+      "startSeconds": 85.84,
+      "text": "an any right here. And that's because I"
+    },
+    {
+      "startSeconds": 87.52,
+      "text": "don't know what the type of this"
+    },
+    {
+      "startSeconds": 88.88,
+      "text": "particular data is going to be whenever"
+    },
+    {
+      "startSeconds": 90.96,
+      "text": "I pass it in. Right now, you can see I"
+    },
+    {
+      "startSeconds": 92.72,
+      "text": "have an ID and a name. What happens if I"
+    },
+    {
+      "startSeconds": 94.92,
+      "text": "also wanted to throw in like an age"
+    },
+    {
+      "startSeconds": 96.6,
+      "text": "property into here as well? This is why"
+    },
+    {
+      "startSeconds": 98.48,
+      "text": "currently I have things typed as any so"
+    },
+    {
+      "startSeconds": 100.04,
+      "text": "I can just pass in any data I want and"
+    },
+    {
+      "startSeconds": 101.88,
+      "text": "it'll work fine. The problem with this"
+    },
+    {
+      "startSeconds": 103.64,
+      "text": "though is if I come in here with my"
+    },
+    {
+      "startSeconds": 105.28,
+      "text": "person object, you can see it has a type"
+    },
+    {
+      "startSeconds": 106.84,
+      "text": "of any. So, I don't get any fancy auto"
+    },
+    {
+      "startSeconds": 108.84,
+      "text": "complete at all. So, I can't say that it"
+    },
+    {
+      "startSeconds": 110.68,
+      "text": "has a name property or whatever and"
+    },
+    {
+      "startSeconds": 112.2,
+      "text": "there's just no safety in regards to"
+    },
+    {
+      "startSeconds": 113.84,
+      "text": "what data is being passed in here. I"
+    },
+    {
+      "startSeconds": 115.48,
+      "text": "essentially want my type of person"
+    },
+    {
+      "startSeconds": 117.16,
+      "text": "inside of this get key and get row to be"
+    },
+    {
+      "startSeconds": 119.04,
+      "text": "exactly what each one of these"
+    },
+    {
+      "startSeconds": 120.32,
+      "text": "individual pieces of data is."
+    },
+    {
+      "startSeconds": 122.48,
+      "text": "So, one thing that I could do is I could"
+    },
+    {
+      "startSeconds": 123.88,
+      "text": "come and I could manually type that. I"
+    },
+    {
+      "startSeconds": 125.479,
+      "text": "could say, \"Okay, this is going to be an"
+    },
+    {
+      "startSeconds": 126.88,
+      "text": "ID, which is a number, and a name, which"
+    },
+    {
+      "startSeconds": 129.24,
+      "text": "is a string.\" And I could just use that"
+    },
+    {
+      "startSeconds": 131.88,
+      "text": "for all of these different types. And"
+    },
+    {
+      "startSeconds": 133.52,
+      "text": "now we can see that this works fine. I"
+    },
+    {
+      "startSeconds": 135.16,
+      "text": "come here, I get auto complete for my ID"
+    },
+    {
+      "startSeconds": 137.16,
+      "text": "and my name. But, the problem is now if"
+    },
+    {
+      "startSeconds": 138.76,
+      "text": "I want to pass something else, like an"
+    },
+    {
+      "startSeconds": 140.32,
+      "text": "age property, I'm immediately getting an"
+    },
+    {
+      "startSeconds": 142,
+      "text": "error because this age property doesn't"
+    },
+    {
+      "startSeconds": 143.48,
+      "text": "exist on ID and name. If you ever run"
+    },
+    {
+      "startSeconds": 146.24,
+      "text": "into a problem like this where you want"
+    },
+    {
+      "startSeconds": 147.76,
+      "text": "essentially the type of something to be"
+    },
+    {
+      "startSeconds": 149.04,
+      "text": "inferred from the type of something"
+    },
+    {
+      "startSeconds": 150.28,
+      "text": "else, that's generally where you're"
+    },
+    {
+      "startSeconds": 151.56,
+      "text": "going to want to reach for generics. And"
+    },
+    {
+      "startSeconds": 153.56,
+      "text": "doing them in the form of React"
+    },
+    {
+      "startSeconds": 155.08,
+      "text": "components is rather simple and very"
+    },
+    {
+      "startSeconds": 156.959,
+      "text": "similar to normal TypeScript generics."
+    },
+    {
+      "startSeconds": 158.64,
+      "text": "But, if you're not already familiar with"
+    },
+    {
+      "startSeconds": 159.84,
+      "text": "normal TypeScript generics, I highly"
+    },
+    {
+      "startSeconds": 161.2,
+      "text": "recommend checking out my full video on"
+    },
+    {
+      "startSeconds": 162.64,
+      "text": "that. I'll link it in the cards and"
+    },
+    {
+      "startSeconds": 163.68,
+      "text": "description for you. But, essentially,"
+    },
+    {
+      "startSeconds": 165.44,
+      "text": "let's remove this age property from"
+    },
+    {
+      "startSeconds": 167,
+      "text": "here. And instead of hardcoding what"
+    },
+    {
+      "startSeconds": 168.88,
+      "text": "this type is going to be, I'm going to"
+    },
+    {
+      "startSeconds": 170.6,
+      "text": "change this to be using a generic"
+    },
+    {
+      "startSeconds": 172.24,
+      "text": "instead. I'm going to call that generic"
+    },
+    {
+      "startSeconds": 174.16,
+      "text": "item. It doesn't matter what you call"
+    },
+    {
+      "startSeconds": 175.64,
+      "text": "it. A lot of times you may see it called"
+    },
+    {
+      "startSeconds": 177.16,
+      "text": "T or something like that. It really"
+    },
+    {
+      "startSeconds": 179.2,
+      "text": "doesn't matter what you call it. You can"
+    },
+    {
+      "startSeconds": 180.32,
+      "text": "call it anything you want. We just"
+    },
+    {
+      "startSeconds": 181.84,
+      "text": "created our own type called item. And we"
+    },
+    {
+      "startSeconds": 183.88,
+      "text": "want this type to be able to infer"
+    },
+    {
+      "startSeconds": 185.28,
+      "text": "whatever we pass in as our data. So, to"
+    },
+    {
+      "startSeconds": 187.239,
+      "text": "do that, we just pass in some angle"
+    },
+    {
+      "startSeconds": 189,
+      "text": "brackets here and say we're going to be"
+    },
+    {
+      "startSeconds": 190.239,
+      "text": "passing in a type called item. By making"
+    },
+    {
+      "startSeconds": 192.4,
+      "text": "this into a generic type, we're"
+    },
+    {
+      "startSeconds": 194.12,
+      "text": "essentially saying that this lips prop"
+    },
+    {
+      "startSeconds": 195.88,
+      "text": "has this item type that it can accept,"
+    },
+    {
+      "startSeconds": 197.92,
+      "text": "and it can be anything at all that we"
+    },
+    {
+      "startSeconds": 199.44,
+      "text": "want. Now, down here, we obviously need"
+    },
+    {
+      "startSeconds": 201.56,
+      "text": "to pass in our generic as well. We can"
+    },
+    {
+      "startSeconds": 203.36,
+      "text": "again call this whatever we want. We"
+    },
+    {
+      "startSeconds": 204.519,
+      "text": "could call it T. I'm just going to call"
+    },
+    {
+      "startSeconds": 206.16,
+      "text": "it item again, the exact same name. And"
+    },
+    {
+      "startSeconds": 207.959,
+      "text": "to make sure that you're, you know, sure"
+    },
+    {
+      "startSeconds": 209.6,
+      "text": "that they're not the same exact thing,"
+    },
+    {
+      "startSeconds": 211.08,
+      "text": "I'm going to call this one item type."
+    },
+    {
+      "startSeconds": 212.519,
+      "text": "Just to be clear that this generic right"
+    },
+    {
+      "startSeconds": 214.6,
+      "text": "here is different from this one up here."
+    },
+    {
+      "startSeconds": 216.56,
+      "text": "I'm just passing in this new item type"
+    },
+    {
+      "startSeconds": 218.519,
+      "text": "property. And this comes from my list"
+    },
+    {
+      "startSeconds": 220.32,
+      "text": "function. So, here, I'm going to make"
+    },
+    {
+      "startSeconds": 222,
+      "text": "this actual component a generic"
+    },
+    {
+      "startSeconds": 224.12,
+      "text": "component. So, now we have a generic"
+    },
+    {
+      "startSeconds": 225.84,
+      "text": "function, and we have a generic type."
+    },
+    {
+      "startSeconds": 228.04,
+      "text": "Technically, you don't need this generic"
+    },
+    {
+      "startSeconds": 229.76,
+      "text": "type. I could write this entire type in"
+    },
+    {
+      "startSeconds": 231.88,
+      "text": "line right here if I wanted to and that"
+    },
+    {
+      "startSeconds": 234.52,
+      "text": "will work fine if I change around the"
+    },
+    {
+      "startSeconds": 236.08,
+      "text": "names of everything to be exactly the"
+    },
+    {
+      "startSeconds": 237.36,
+      "text": "same, this item type. But in our case,"
+    },
+    {
+      "startSeconds": 239.24,
+      "text": "I'm passing in a custom prop type here"
+    },
+    {
+      "startSeconds": 240.96,
+      "text": "just because that's most likely what"
+    },
+    {
+      "startSeconds": 242.32,
+      "text": "you're going to work with. So now my"
+    },
+    {
+      "startSeconds": 243.8,
+      "text": "list component has its own particular"
+    },
+    {
+      "startSeconds": 245.76,
+      "text": "generic type of item type and I'm"
+    },
+    {
+      "startSeconds": 247.44,
+      "text": "passing that along to my prop type right"
+    },
+    {
+      "startSeconds": 249.16,
+      "text": "here so I know exactly what the type of"
+    },
+    {
+      "startSeconds": 250.8,
+      "text": "all these are going to be. And now"
+    },
+    {
+      "startSeconds": 252.28,
+      "text": "you'll notice that I still get awesome"
+    },
+    {
+      "startSeconds": 254.08,
+      "text": "auto complete. You can see I get item"
+    },
+    {
+      "startSeconds": 255.6,
+      "text": "and name or ID and name. And if I wanted"
+    },
+    {
+      "startSeconds": 257.519,
+      "text": "to add in like an age property here of"
+    },
+    {
+      "startSeconds": 259.32,
+      "text": "29, let's add an age onto Sally as well."
+    },
+    {
+      "startSeconds": 262.4,
+      "text": "Doesn't really matter what it is. Now"
+    },
+    {
+      "startSeconds": 264.12,
+      "text": "down here, you'll see I now also have"
+    },
+    {
+      "startSeconds": 265.72,
+      "text": "that age property that I can use inside"
+    },
+    {
+      "startSeconds": 267.48,
+      "text": "the display. I could change this to age"
+    },
+    {
+      "startSeconds": 268.96,
+      "text": "and now you can see the ages are"
+    },
+    {
+      "startSeconds": 270,
+      "text": "displayed instead of the names. Now the"
+    },
+    {
+      "startSeconds": 271.68,
+      "text": "reason this all works super magically is"
+    },
+    {
+      "startSeconds": 274.08,
+      "text": "because TypeScript is smart enough to"
+    },
+    {
+      "startSeconds": 275.64,
+      "text": "infer what the type of our item prop"
+    },
+    {
+      "startSeconds": 278.44,
+      "text": "here is supposed to be, that generic"
+    },
+    {
+      "startSeconds": 279.76,
+      "text": "item type. It's smart enough to infer"
+    },
+    {
+      "startSeconds": 281.44,
+      "text": "that because it says, \"Okay, my data is"
+    },
+    {
+      "startSeconds": 283.4,
+      "text": "an array of items. I passed it in an"
+    },
+    {
+      "startSeconds": 285.48,
+      "text": "array that has objects with an ID, a"
+    },
+    {
+      "startSeconds": 287.4,
+      "text": "name, and an age.\" So it's smart enough"
+    },
+    {
+      "startSeconds": 289.12,
+      "text": "to know, \"Okay, this item type is just"
+    },
+    {
+      "startSeconds": 291.36,
+      "text": "an object with an ID, a name, and an"
+    },
+    {
+      "startSeconds": 293.2,
+      "text": "age.\" And it's able to infer that for"
+    },
+    {
+      "startSeconds": 294.88,
+      "text": "us. But in some cases, TypeScript may"
+    },
+    {
+      "startSeconds": 296.96,
+      "text": "not be smart enough to infer this"
+    },
+    {
+      "startSeconds": 298.56,
+      "text": "depending on how you wrote your code. So"
+    },
+    {
+      "startSeconds": 300.36,
+      "text": "you can actually pass in your own type"
+    },
+    {
+      "startSeconds": 302.2,
+      "text": "right here. So this looks a little bit"
+    },
+    {
+      "startSeconds": 304.12,
+      "text": "weird when you write out React"
+    },
+    {
+      "startSeconds": 305.24,
+      "text": "components like this, but you can put"
+    },
+    {
+      "startSeconds": 306.84,
+      "text": "your React component and then directly"
+    },
+    {
+      "startSeconds": 308.4,
+      "text": "after the name of your component, put"
+    },
+    {
+      "startSeconds": 309.84,
+      "text": "two more of these angle brackets and now"
+    },
+    {
+      "startSeconds": 312.08,
+      "text": "we can type in whatever we type we want."
+    },
+    {
+      "startSeconds": 314.08,
+      "text": "So we can say here we're going to have"
+    },
+    {
+      "startSeconds": 315.28,
+      "text": "an ID which is a number, we're going to"
+    },
+    {
+      "startSeconds": 317.44,
+      "text": "have a name which is a string, and let's"
+    },
+    {
+      "startSeconds": 319.36,
+      "text": "say that our age is going to be"
+    },
+    {
+      "startSeconds": 320.56,
+      "text": "optional. So let me just come in here"
+    },
+    {
+      "startSeconds": 322.36,
+      "text": "and say that it's going to be an"
+    },
+    {
+      "startSeconds": 323.2,
+      "text": "optional number just like that. Close"
+    },
+    {
+      "startSeconds": 325.72,
+      "text": "off that object. And now if we give this"
+    },
+    {
+      "startSeconds": 328,
+      "text": "a quick save, everything still works"
+    },
+    {
+      "startSeconds": 329.68,
+      "text": "fine. The only difference is down here,"
+    },
+    {
+      "startSeconds": 331.32,
+      "text": "my age is an optional property because I"
+    },
+    {
+      "startSeconds": 333.48,
+      "text": "essentially told TypeScript that it's"
+    },
+    {
+      "startSeconds": 335.08,
+      "text": "going to be an optional property inside"
+    },
+    {
+      "startSeconds": 336.8,
+      "text": "of there. So we have our age which is"
+    },
+    {
+      "startSeconds": 338.56,
+      "text": "optional or we have our name in here"
+    },
+    {
+      "startSeconds": 340.2,
+      "text": "which is required. So I could come down,"
+    },
+    {
+      "startSeconds": 342.2,
+      "text": "I could have a new person, and this new"
+    },
+    {
+      "startSeconds": 344.2,
+      "text": "person give them a new ID, and we can"
+    },
+    {
+      "startSeconds": 345.8,
+      "text": "make the age not exist because again,"
+    },
+    {
+      "startSeconds": 347.6,
+      "text": "it's an optional property, but I"
+    },
+    {
+      "startSeconds": 349.32,
+      "text": "couldn't add anything else on here like"
+    },
+    {
+      "startSeconds": 351.04,
+      "text": "is programmer"
+    },
+    {
+      "startSeconds": 352.52,
+      "text": "would be give me an error because I"
+    },
+    {
+      "startSeconds": 353.68,
+      "text": "didn't define that up here in this"
+    },
+    {
+      "startSeconds": 355.12,
+      "text": "particular hard-coded version of my"
+    },
+    {
+      "startSeconds": 356.84,
+      "text": "generic. But, if I remove this"
+    },
+    {
+      "startSeconds": 358.2,
+      "text": "hard-coded version, it's going to do the"
+    },
+    {
+      "startSeconds": 359.84,
+      "text": "inference for me. So, it knows that this"
+    },
+    {
+      "startSeconds": 361.44,
+      "text": "person is going to be an ID, name, age,"
+    },
+    {
+      "startSeconds": 363.76,
+      "text": "and this is programmer property. So, we"
+    },
+    {
+      "startSeconds": 365.4,
+      "text": "have all of those different properties"
+    },
+    {
+      "startSeconds": 366.8,
+      "text": "available for us right here. So, very"
+    },
+    {
+      "startSeconds": 369.36,
+      "text": "rarely do I actually pass along the"
+    },
+    {
+      "startSeconds": 371.28,
+      "text": "actual generic like this to a component,"
+    },
+    {
+      "startSeconds": 373.52,
+      "text": "but in the rare circumstances where you"
+    },
+    {
+      "startSeconds": 375.04,
+      "text": "need to, this is exactly how you would"
+    },
+    {
+      "startSeconds": 376.72,
+      "text": "do it. You would pass it in just like"
+    },
+    {
+      "startSeconds": 378.08,
+      "text": "this. I know it looks a little bit"
+    },
+    {
+      "startSeconds": 379.28,
+      "text": "funky, but that's just the way you need"
+    },
+    {
+      "startSeconds": 380.6,
+      "text": "to do things with TypeScript."
+    },
+    {
+      "startSeconds": 382.6,
+      "text": "Now, if you enjoyed this really quick"
+    },
+    {
+      "startSeconds": 383.68,
+      "text": "video, you're absolutely going to love"
+    },
+    {
+      "startSeconds": 384.88,
+      "text": "my React and TypeScript courses. I'm"
+    },
+    {
+      "startSeconds": 386.8,
+      "text": "going to link them both down in the"
+    },
+    {
+      "startSeconds": 387.88,
+      "text": "description below, but if you're looking"
+    },
+    {
+      "startSeconds": 389.28,
+      "text": "to master TypeScript or React, those"
+    },
+    {
+      "startSeconds": 391.4,
+      "text": "courses go from the absolute beginnings"
+    },
+    {
+      "startSeconds": 393.12,
+      "text": "of React and TypeScript all the way up"
+    },
+    {
+      "startSeconds": 394.84,
+      "text": "to what you need to know to actually"
+    },
+    {
+      "startSeconds": 395.96,
+      "text": "write real-world React and TypeScript"
+    },
+    {
+      "startSeconds": 397.84,
+      "text": "applications. So, depending on which one"
+    },
+    {
+      "startSeconds": 399.6,
+      "text": "you want to learn or if you want to"
+    },
+    {
+      "startSeconds": 400.96,
+      "text": "learn both, they're going to be linked"
+    },
+    {
+      "startSeconds": 402,
+      "text": "down in the description for you. And"
+    },
+    {
+      "startSeconds": 403.6,
+      "text": "with that said, thank you very much for"
+    },
+    {
+      "startSeconds": 404.96,
+      "text": "watching and have a good day."
+    }
+  ]
 }

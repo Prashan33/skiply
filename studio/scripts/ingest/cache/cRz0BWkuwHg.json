@@ -1,0 +1,1166 @@
+{
+  "id": "cRz0BWkuwHg",
+  "url": "https://www.youtube.com/watch?v=cRz0BWkuwHg",
+  "fetchedAt": "2026-09-01T04:07:27.703Z",
+  "captionKind": "asr",
+  "chapters": [
+    {
+      "startSeconds": 0,
+      "label": "Intro"
+    },
+    {
+      "startSeconds": 23,
+      "label": "What is Rag"
+    },
+    {
+      "startSeconds": 55,
+      "label": "Why is evaluating RAG important"
+    },
+    {
+      "startSeconds": 112,
+      "label": "Retrieval Matrix"
+    },
+    {
+      "startSeconds": 262,
+      "label": "Generation Metrics"
+    },
+    {
+      "startSeconds": 312,
+      "label": "Evaluation Data Set"
+    },
+    {
+      "startSeconds": 416,
+      "label": "Chain of Thought"
+    },
+    {
+      "startSeconds": 451,
+      "label": "Length"
+    },
+    {
+      "startSeconds": 479,
+      "label": "User Queries"
+    },
+    {
+      "startSeconds": 521,
+      "label": "Topic Clustering"
+    }
+  ],
+  "cues": [
+    {
+      "startSeconds": 0.08,
+      "text": "you are probably implementing rag"
+    },
+    {
+      "startSeconds": 2.04,
+      "text": "systems missing out on easy improvements"
+    },
+    {
+      "startSeconds": 4.64,
+      "text": "most don't even have an evaluation"
+    },
+    {
+      "startSeconds": 6.72,
+      "text": "pipeline how can you know if it's"
+    },
+    {
+      "startSeconds": 8.24,
+      "text": "optimal or if the system is improving"
+    },
+    {
+      "startSeconds": 10.36,
+      "text": "with any changes this is only through"
+    },
+    {
+      "startSeconds": 12.4,
+      "text": "real evaluation which is different from"
+    },
+    {
+      "startSeconds": 14.48,
+      "text": "evaluating llms them cells let's dive"
+    },
+    {
+      "startSeconds": 16.96,
+      "text": "into the key evaluation metrics and"
+    },
+    {
+      "startSeconds": 19.199,
+      "text": "methods we found useful while developing"
+    },
+    {
+      "startSeconds": 21.68,
+      "text": "rag systems at to rag combines retrieval"
+    },
+    {
+      "startSeconds": 25.519,
+      "text": "mechanisms as in Google search with"
+    },
+    {
+      "startSeconds": 28.08,
+      "text": "generative models like GP 4 to improve"
+    },
+    {
+      "startSeconds": 31.199,
+      "text": "response quality and relevance as a"
+    },
+    {
+      "startSeconds": 33.52,
+      "text": "quick reminder on what rag is rag is"
+    },
+    {
+      "startSeconds": 36,
+      "text": "simply the process of adding knowledge"
+    },
+    {
+      "startSeconds": 37.96,
+      "text": "to an existing llm into the input prompt"
+    },
+    {
+      "startSeconds": 40.719,
+      "text": "it's most useful for private data or"
+    },
+    {
+      "startSeconds": 42.84,
+      "text": "Advanced topics the llm might not have"
+    },
+    {
+      "startSeconds": 45,
+      "text": "seen during its training in rag the most"
+    },
+    {
+      "startSeconds": 47.44,
+      "text": "basic setup is to inject additional"
+    },
+    {
+      "startSeconds": 50.079,
+      "text": "information along with your prompt so"
+    },
+    {
+      "startSeconds": 52.12,
+      "text": "that it can be used to formulate a"
+    },
+    {
+      "startSeconds": 54.199,
+      "text": "better answer so why is evaluating rag"
+    },
+    {
+      "startSeconds": 56.719,
+      "text": "systems important effectively evaluating"
+    },
+    {
+      "startSeconds": 59.199,
+      "text": "and optimizing llm based systems like"
+    },
+    {
+      "startSeconds": 61.96,
+      "text": "rag can be the difference between a nice"
+    },
+    {
+      "startSeconds": 64.439,
+      "text": "demo and a highly useful trustworthy llm"
+    },
+    {
+      "startSeconds": 67.36,
+      "text": "tool or product whether you are"
+    },
+    {
+      "startSeconds": 68.96,
+      "text": "developing a customer service butt or a"
+    },
+    {
+      "startSeconds": 70.96,
+      "text": "research tool good evaluation will help"
+    },
+    {
+      "startSeconds": 73.479,
+      "text": "you create more reliable and effective"
+    },
+    {
+      "startSeconds": 76.08,
+      "text": "AI solutions that can actually be"
+    },
+    {
+      "startSeconds": 78.08,
+      "text": "shipped to production for example if"
+    },
+    {
+      "startSeconds": 80.32,
+      "text": "you're building a legal research tool"
+    },
+    {
+      "startSeconds": 82.2,
+      "text": "with rag it will need to be contextually"
+    },
+    {
+      "startSeconds": 84.84,
+      "text": "appropriate and up to date you can't"
+    },
+    {
+      "startSeconds": 86.72,
+      "text": "just assume it will work fine you need"
+    },
+    {
+      "startSeconds": 88.84,
+      "text": "proper evaluation to ensure a good"
+    },
+    {
+      "startSeconds": 90.92,
+      "text": "interpretation of legal jargon and"
+    },
+    {
+      "startSeconds": 93.28,
+      "text": "relevant information now you might think"
+    },
+    {
+      "startSeconds": 95.84,
+      "text": "I tested the app and the answers look"
+    },
+    {
+      "startSeconds": 97.68,
+      "text": "fine while testing the application"
+    },
+    {
+      "startSeconds": 99.36,
+      "text": "yourself is very important yes you need"
+    },
+    {
+      "startSeconds": 101.799,
+      "text": "to play with it yourself which we call"
+    },
+    {
+      "startSeconds": 103.72,
+      "text": "Vibe checking it doesn't tell you the"
+    },
+    {
+      "startSeconds": 105.759,
+      "text": "whole story we need more rigorous"
+    },
+    {
+      "startSeconds": 107.96,
+      "text": "methods and metrics to ensure the llm"
+    },
+    {
+      "startSeconds": 110.36,
+      "text": "applications are performing optimally as"
+    },
+    {
+      "startSeconds": 112.92,
+      "text": "we've said rag systems have two distinct"
+    },
+    {
+      "startSeconds": 115.96,
+      "text": "components that need evaluation the"
+    },
+    {
+      "startSeconds": 118.24,
+      "text": "retrieval component and the the answer"
+    },
+    {
+      "startSeconds": 120.6,
+      "text": "generation component let's discuss how"
+    },
+    {
+      "startSeconds": 123.039,
+      "text": "to evaluate both starting with the most"
+    },
+    {
+      "startSeconds": 125.24,
+      "text": "relevant metrics we'll discuss the"
+    },
+    {
+      "startSeconds": 127.2,
+      "text": "overall pipeline including the data set"
+    },
+    {
+      "startSeconds": 129.16,
+      "text": "needed for that in a few minutes"
+    },
+    {
+      "startSeconds": 131,
+      "text": "retrieval Matrix focus on how well the"
+    },
+    {
+      "startSeconds": 133.52,
+      "text": "system retrieves relevant information"
+    },
+    {
+      "startSeconds": 135.879,
+      "text": "from its knowledge base so you have your"
+    },
+    {
+      "startSeconds": 137.68,
+      "text": "data set and you want to find if the"
+    },
+    {
+      "startSeconds": 139.879,
+      "text": "system is able to find the most valuable"
+    },
+    {
+      "startSeconds": 142.319,
+      "text": "information to answer a user question"
+    },
+    {
+      "startSeconds": 144.959,
+      "text": "here you could use four metrics to do"
+    },
+    {
+      "startSeconds": 147.04,
+      "text": "that the first is Precision Precision"
+    },
+    {
+      "startSeconds": 149.36,
+      "text": "measures the proportion of relevant"
+    },
+    {
+      "startSeconds": 151.84,
+      "text": "documents among the retrieved documents"
+    },
+    {
+      "startSeconds": 154.519,
+      "text": "it's particularly useful when you want"
+    },
+    {
+      "startSeconds": 156.92,
+      "text": "to ensure that the information your"
+    },
+    {
+      "startSeconds": 158.879,
+      "text": "system retries is highly relevant such"
+    },
+    {
+      "startSeconds": 161.239,
+      "text": "as in medical diagnosis tool where false"
+    },
+    {
+      "startSeconds": 164,
+      "text": "positives could be dangerous then you"
+    },
+    {
+      "startSeconds": 166.2,
+      "text": "have the recall recall measures the"
+    },
+    {
+      "startSeconds": 168.56,
+      "text": "proportion of relevant documents that"
+    },
+    {
+      "startSeconds": 170.76,
+      "text": "were successfully retrieved it's crucial"
+    },
+    {
+      "startSeconds": 173.2,
+      "text": "in scenarios where missing important"
+    },
+    {
+      "startSeconds": 175.44,
+      "text": "information could be costly like in"
+    },
+    {
+      "startSeconds": 177.64,
+      "text": "legal research where overlooking a Rel"
+    },
+    {
+      "startSeconds": 179.84,
+      "text": "relevant precedent could affect the"
+    },
+    {
+      "startSeconds": 181.8,
+      "text": "outcome of a case we then have the hit"
+    },
+    {
+      "startSeconds": 184,
+      "text": "rate the hit rate measures the"
+    },
+    {
+      "startSeconds": 185.799,
+      "text": "proportion of queries for which at least"
+    },
+    {
+      "startSeconds": 188.4,
+      "text": "one relevant document is retrieved"
+    },
+    {
+      "startSeconds": 190.72,
+      "text": "within the top few results and you"
+    },
+    {
+      "startSeconds": 192.4,
+      "text": "decide of how many results reflecting"
+    },
+    {
+      "startSeconds": 194.48,
+      "text": "the retrieval system's ability to find"
+    },
+    {
+      "startSeconds": 197.2,
+      "text": "relevant documents at all one of the"
+    },
+    {
+      "startSeconds": 199.36,
+      "text": "most used metric is the main reciprocal"
+    },
+    {
+      "startSeconds": 201.92,
+      "text": "rank or Mr it evaluates how high the"
+    },
+    {
+      "startSeconds": 205.48,
+      "text": "first relevant document appears in the"
+    },
+    {
+      "startSeconds": 207.64,
+      "text": "search results it's valuable for system"
+    },
+    {
+      "startSeconds": 209.92,
+      "text": "where users typically focus on the top"
+    },
+    {
+      "startSeconds": 211.84,
+      "text": "few results like in a web search engine"
+    },
+    {
+      "startSeconds": 214.08,
+      "text": "finally we can use the normalized"
+    },
+    {
+      "startSeconds": 216.239,
+      "text": "discounted cumulative gain or ndcg this"
+    },
+    {
+      "startSeconds": 219.36,
+      "text": "takes into account both the relevance"
+    },
+    {
+      "startSeconds": 221.239,
+      "text": "and the ranking of retrieved documents"
+    },
+    {
+      "startSeconds": 223.319,
+      "text": "it's particularly useful for"
+    },
+    {
+      "startSeconds": 224.799,
+      "text": "recommendation systems or any"
+    },
+    {
+      "startSeconds": 226.48,
+      "text": "application where the order of results"
+    },
+    {
+      "startSeconds": 228.439,
+      "text": "matters here Mr is useful for evaluating"
+    },
+    {
+      "startSeconds": 231.84,
+      "text": "systems where the rank of the first"
+    },
+    {
+      "startSeconds": 234,
+      "text": "relevant document is most important such"
+    },
+    {
+      "startSeconds": 236.28,
+      "text": "as search engines like top one to three"
+    },
+    {
+      "startSeconds": 239.28,
+      "text": "Google results ndcg provides a more"
+    },
+    {
+      "startSeconds": 241.599,
+      "text": "holistic measure of ranking quality"
+    },
+    {
+      "startSeconds": 243.799,
+      "text": "considering the relevance and Order of"
+    },
+    {
+      "startSeconds": 245.959,
+      "text": "all documents making it ideal for"
+    },
+    {
+      "startSeconds": 247.92,
+      "text": "applications like recommendation systems"
+    },
+    {
+      "startSeconds": 250,
+      "text": "where the entire list is important like"
+    },
+    {
+      "startSeconds": 252.04,
+      "text": "a top 10 list for example you can then"
+    },
+    {
+      "startSeconds": 254.28,
+      "text": "use these five metrics to measure how"
+    },
+    {
+      "startSeconds": 256.519,
+      "text": "well your rag system can find relevant"
+    },
+    {
+      "startSeconds": 258.88,
+      "text": "information to send along with the"
+    },
+    {
+      "startSeconds": 260.919,
+      "text": "prompt to the LM now the second step is"
+    },
+    {
+      "startSeconds": 263.4,
+      "text": "to evaluate the llm answer with the"
+    },
+    {
+      "startSeconds": 265.96,
+      "text": "generation metrics we have three main"
+    },
+    {
+      "startSeconds": 267.96,
+      "text": "metrics to do that the first is is"
+    },
+    {
+      "startSeconds": 269.88,
+      "text": "faithfulness faithfulness measures the"
+    },
+    {
+      "startSeconds": 272.32,
+      "text": "Integrity of the answer concerning the"
+    },
+    {
+      "startSeconds": 274.479,
+      "text": "retrieved context it ensures that the"
+    },
+    {
+      "startSeconds": 276.6,
+      "text": "generated response accurately reflects"
+    },
+    {
+      "startSeconds": 278.68,
+      "text": "the information in the retrieved"
+    },
+    {
+      "startSeconds": 280.32,
+      "text": "documents without producing false or"
+    },
+    {
+      "startSeconds": 282.68,
+      "text": "unrelated information the second is"
+    },
+    {
+      "startSeconds": 284.84,
+      "text": "answer relevancy it evaluates the"
+    },
+    {
+      "startSeconds": 287,
+      "text": "relevance of the generated answer to the"
+    },
+    {
+      "startSeconds": 289.28,
+      "text": "original query it helps ensure that the"
+    },
+    {
+      "startSeconds": 291.479,
+      "text": "system is not just retrieving a relevant"
+    },
+    {
+      "startSeconds": 294.199,
+      "text": "documents but also using the information"
+    },
+    {
+      "startSeconds": 296.479,
+      "text": "to generate pertinent responses lastly"
+    },
+    {
+      "startSeconds": 298.96,
+      "text": "we have n answer correctness the"
+    },
+    {
+      "startSeconds": 301.039,
+      "text": "correctness assesses whether the"
+    },
+    {
+      "startSeconds": 303.12,
+      "text": "generated answer aligns with a given"
+    },
+    {
+      "startSeconds": 305.16,
+      "text": "queries reference answer it's"
+    },
+    {
+      "startSeconds": 306.96,
+      "text": "particularly useful when you have a set"
+    },
+    {
+      "startSeconds": 309.52,
+      "text": "of ground truth answers to compare"
+    },
+    {
+      "startSeconds": 311.72,
+      "text": "against okay so that's cool and all we"
+    },
+    {
+      "startSeconds": 313.56,
+      "text": "have metrics to evaluate our llm but"
+    },
+    {
+      "startSeconds": 316.199,
+      "text": "then we need a data set to Run demon an"
+    },
+    {
+      "startSeconds": 318.479,
+      "text": "evaluation data set can be done by"
+    },
+    {
+      "startSeconds": 320.56,
+      "text": "leveraging expertise from domain experts"
+    },
+    {
+      "startSeconds": 323.12,
+      "text": "using your own knowledge if you have"
+    },
+    {
+      "startSeconds": 324.919,
+      "text": "domain expertise or even using a"
+    },
+    {
+      "startSeconds": 327.08,
+      "text": "powerful llm to generate complex and"
+    },
+    {
+      "startSeconds": 329.72,
+      "text": "contextually Rich questions from your"
+    },
+    {
+      "startSeconds": 332.039,
+      "text": "indexed data remember to review and"
+    },
+    {
+      "startSeconds": 334.44,
+      "text": "refine these questions yourself to"
+    },
+    {
+      "startSeconds": 336.72,
+      "text": "ensure they reflect real word usage you"
+    },
+    {
+      "startSeconds": 338.919,
+      "text": "basically want to generate artificial or"
+    },
+    {
+      "startSeconds": 341.12,
+      "text": "ideally real questions where the answers"
+    },
+    {
+      "startSeconds": 343.759,
+      "text": "is in your data set you can then see if"
+    },
+    {
+      "startSeconds": 345.96,
+      "text": "the answer provided leverages the right"
+    },
+    {
+      "startSeconds": 348,
+      "text": "data and gives the expected answer using"
+    },
+    {
+      "startSeconds": 350.84,
+      "text": "the metrics we've just discussed now"
+    },
+    {
+      "startSeconds": 353.28,
+      "text": "what about the answers assuming we've"
+    },
+    {
+      "startSeconds": 355.44,
+      "text": "got the right information to answer the"
+    },
+    {
+      "startSeconds": 357.639,
+      "text": "question how can we judge if the the"
+    },
+    {
+      "startSeconds": 359.759,
+      "text": "generation is good one of the cool new"
+    },
+    {
+      "startSeconds": 361.96,
+      "text": "approaches for evaluating the generation"
+    },
+    {
+      "startSeconds": 364.199,
+      "text": "is using another llm as a judge Guided"
+    },
+    {
+      "startSeconds": 367.12,
+      "text": "by generation metrics this approach can"
+    },
+    {
+      "startSeconds": 369.16,
+      "text": "be highly effective but it's important"
+    },
+    {
+      "startSeconds": 371.24,
+      "text": "to follow some best practices first when"
+    },
+    {
+      "startSeconds": 373.919,
+      "text": "using an llm to evaluate outputs it's"
+    },
+    {
+      "startSeconds": 376.4,
+      "text": "often more effective to have it compare"
+    },
+    {
+      "startSeconds": 378.479,
+      "text": "two responses rather than evaluate a"
+    },
+    {
+      "startSeconds": 380.72,
+      "text": "single response in isolation it gives it"
+    },
+    {
+      "startSeconds": 383.08,
+      "text": "some sort of Baseline to then see if the"
+    },
+    {
+      "startSeconds": 385.12,
+      "text": "second response is better or not this is"
+    },
+    {
+      "startSeconds": 387.4,
+      "text": "called pairwise comparison and usually"
+    },
+    {
+      "startSeconds": 390,
+      "text": "provides a clearer Benchmark for quality"
+    },
+    {
+      "startSeconds": 392.24,
+      "text": "but then when presenting pairs of"
+    },
+    {
+      "startSeconds": 394.319,
+      "text": "responses to the llm judge you need to"
+    },
+    {
+      "startSeconds": 396.919,
+      "text": "randomize the order you give them llms"
+    },
+    {
+      "startSeconds": 399.36,
+      "text": "tend to have a bias with order like"
+    },
+    {
+      "startSeconds": 401.88,
+      "text": "always fing the first option for example"
+    },
+    {
+      "startSeconds": 404.4,
+      "text": "similarly you need to allow for ties"
+    },
+    {
+      "startSeconds": 406.88,
+      "text": "it's possible that two answers are just"
+    },
+    {
+      "startSeconds": 408.68,
+      "text": "as good give the llm judge the option to"
+    },
+    {
+      "startSeconds": 411.28,
+      "text": "declare responses are just equally good"
+    },
+    {
+      "startSeconds": 413.84,
+      "text": "this can provide more nuanced"
+    },
+    {
+      "startSeconds": 415.52,
+      "text": "evaluations and the best tip is to use a"
+    },
+    {
+      "startSeconds": 418.12,
+      "text": "Chain of Thought approach when"
+    },
+    {
+      "startSeconds": 419.879,
+      "text": "evaluating asking the llm to explain its"
+    },
+    {
+      "startSeconds": 422.68,
+      "text": "reasoning before making a final decision"
+    },
+    {
+      "startSeconds": 425.039,
+      "text": "this can lead to more reliable and"
+    },
+    {
+      "startSeconds": 426.879,
+      "text": "interpretable evaluations since llms"
+    },
+    {
+      "startSeconds": 429.199,
+      "text": "only generate one token at a time or one"
+    },
+    {
+      "startSeconds": 431.759,
+      "text": "word at a time they don't think like us"
+    },
+    {
+      "startSeconds": 434.36,
+      "text": "they don't have some sort of mental map"
+    },
+    {
+      "startSeconds": 436.4,
+      "text": "of what they want to say and how they"
+    },
+    {
+      "startSeconds": 438.479,
+      "text": "will say it they do this on the Fly"
+    },
+    {
+      "startSeconds": 440.639,
+      "text": "asking it to go step by step or even"
+    },
+    {
+      "startSeconds": 442.72,
+      "text": "write a plan of action first allows them"
+    },
+    {
+      "startSeconds": 444.879,
+      "text": "to have this plan in their context"
+    },
+    {
+      "startSeconds": 446.96,
+      "text": "acting as some sort of artificial"
+    },
+    {
+      "startSeconds": 448.96,
+      "text": "thinking before generating The Final"
+    },
+    {
+      "startSeconds": 450.96,
+      "text": "Answer improving the results and"
+    },
+    {
+      "startSeconds": 452.96,
+      "text": "evaluation a lot our last tip is to try"
+    },
+    {
+      "startSeconds": 455.96,
+      "text": "to ensure that responses are similar in"
+    },
+    {
+      "startSeconds": 458.599,
+      "text": "length When comparing them this helps"
+    },
+    {
+      "startSeconds": 460.759,
+      "text": "create a fairer comparison as length can"
+    },
+    {
+      "startSeconds": 463.879,
+      "text": "sometimes unfairly influence perceived"
+    },
+    {
+      "startSeconds": 465.919,
+      "text": "quality by incorporating these llm based"
+    },
+    {
+      "startSeconds": 468.44,
+      "text": "evaluations alongside traditional"
+    },
+    {
+      "startSeconds": 470.319,
+      "text": "retrieval metrics we can get a more"
+    },
+    {
+      "startSeconds": 472.56,
+      "text": "comprehensive view of our rag systems"
+    },
+    {
+      "startSeconds": 475,
+      "text": "performance addressing both the"
+    },
+    {
+      "startSeconds": 476.84,
+      "text": "retrieval and generation aspects then"
+    },
+    {
+      "startSeconds": 479.56,
+      "text": "any tweak feature or prompt can be"
+    },
+    {
+      "startSeconds": 481.72,
+      "text": "linked to a quantitative change along"
+    },
+    {
+      "startSeconds": 484,
+      "text": "with a necessary qualitative check you"
+    },
+    {
+      "startSeconds": 486.28,
+      "text": "must always do to check the systems Vibe"
+    },
+    {
+      "startSeconds": 488.879,
+      "text": "however these metrics and Vibe checking"
+    },
+    {
+      "startSeconds": 491,
+      "text": "yourself aren't enough we must consider"
+    },
+    {
+      "startSeconds": 493.24,
+      "text": "the broader context of how our rag"
+    },
+    {
+      "startSeconds": 495.8,
+      "text": "system is used this brings us to a"
+    },
+    {
+      "startSeconds": 497.879,
+      "text": "critical point that's often overlooked"
+    },
+    {
+      "startSeconds": 500.4,
+      "text": "the importance of understanding your"
+    },
+    {
+      "startSeconds": 502.24,
+      "text": "users's actual needs one of the most"
+    },
+    {
+      "startSeconds": 504.4,
+      "text": "effective ways to do this is by logging"
+    },
+    {
+      "startSeconds": 506.72,
+      "text": "and analyzing user queries by"
+    },
+    {
+      "startSeconds": 508.759,
+      "text": "implementing logging system you can"
+    },
+    {
+      "startSeconds": 510.8,
+      "text": "capture every question asked to your rag"
+    },
+    {
+      "startSeconds": 513.399,
+      "text": "system then using techniques like topic"
+    },
+    {
+      "startSeconds": 516.24,
+      "text": "clustering you can analyze these"
+    },
+    {
+      "startSeconds": 518.2,
+      "text": "questions to identify common themes and"
+    },
+    {
+      "startSeconds": 520.88,
+      "text": "patterns for example we've built an llm"
+    },
+    {
+      "startSeconds": 523.2,
+      "text": "application for a client after analyzing"
+    },
+    {
+      "startSeconds": 525.16,
+      "text": "user queries they finally discovered"
+    },
+    {
+      "startSeconds": 527.2,
+      "text": "that around 80% of the questions were"
+    },
+    {
+      "startSeconds": 529.68,
+      "text": "about a very specific subset of topics"
+    },
+    {
+      "startSeconds": 532.399,
+      "text": "this Insight allowed them to focus"
+    },
+    {
+      "startSeconds": 534.16,
+      "text": "optimization efforts where they'll have"
+    },
+    {
+      "startSeconds": 536.279,
+      "text": "the most impact you can tailor your"
+    },
+    {
+      "startSeconds": 537.92,
+      "text": "evaluation data sets to these"
+    },
+    {
+      "startSeconds": 539.64,
+      "text": "highfrequency topics ensuring that your"
+    },
+    {
+      "startSeconds": 541.64,
+      "text": "systems performs exceptionally well on"
+    },
+    {
+      "startSeconds": 544,
+      "text": "the queries your users care most about"
+    },
+    {
+      "startSeconds": 546.959,
+      "text": "it's also then much easier to Vibe check"
+    },
+    {
+      "startSeconds": 549.24,
+      "text": "than trying to check the whole set of"
+    },
+    {
+      "startSeconds": 551.24,
+      "text": "possible questions you now have your"
+    },
+    {
+      "startSeconds": 553.2,
+      "text": "reason for evaluating your metrics and"
+    },
+    {
+      "startSeconds": 555.88,
+      "text": "ways to do it automatically so what's"
+    },
+    {
+      "startSeconds": 557.92,
+      "text": "left the next step is to implement it we"
+    },
+    {
+      "startSeconds": 560.24,
+      "text": "suggest using libraries like ragas to"
+    },
+    {
+      "startSeconds": 562.68,
+      "text": "automate and scale your evaluation"
+    },
+    {
+      "startSeconds": 564.6,
+      "text": "process don't code everything yourself"
+    },
+    {
+      "startSeconds": 566.8,
+      "text": "these tools can help you measure various"
+    },
+    {
+      "startSeconds": 569.04,
+      "text": "aspects of your rag systems performance"
+    },
+    {
+      "startSeconds": 571.72,
+      "text": "including both retrieval and generation"
+    },
+    {
+      "startSeconds": 573.959,
+      "text": "quality including all the metrix we've"
+    },
+    {
+      "startSeconds": 576.36,
+      "text": "mentioned in the video of course last"
+    },
+    {
+      "startSeconds": 578.72,
+      "text": "but not least don't forget human"
+    },
+    {
+      "startSeconds": 580.68,
+      "text": "evaluation while automated Matrix and"
+    },
+    {
+      "startSeconds": 583,
+      "text": "llm based evaluations are valuable and"
+    },
+    {
+      "startSeconds": 585.44,
+      "text": "more scalable human judgment is still"
+    },
+    {
+      "startSeconds": 587.839,
+      "text": "the gold standard especially for"
+    },
+    {
+      "startSeconds": 590.079,
+      "text": "assessing factors like fluency"
+    },
+    {
+      "startSeconds": 592.24,
+      "text": "naturalness of responses and overall"
+    },
+    {
+      "startSeconds": 594.68,
+      "text": "usefulness in real world scenarios and"
+    },
+    {
+      "startSeconds": 597.16,
+      "text": "as we've said your users are best place"
+    },
+    {
+      "startSeconds": 599.72,
+      "text": "to evaluate this which can be done for"
+    },
+    {
+      "startSeconds": 601.76,
+      "text": "example through some AB testing or"
+    },
+    {
+      "startSeconds": 603.88,
+      "text": "paying people to do that you now have"
+    },
+    {
+      "startSeconds": 605.6,
+      "text": "the tools to go beyond basic metrics and"
+    },
+    {
+      "startSeconds": 608.16,
+      "text": "really understand how well your rag"
+    },
+    {
+      "startSeconds": 609.959,
+      "text": "system is performing in real world"
+    },
+    {
+      "startSeconds": 611.8,
+      "text": "scenarios focusing on the topics that"
+    },
+    {
+      "startSeconds": 614,
+      "text": "matters most to your users if you see"
+    },
+    {
+      "startSeconds": 616.6,
+      "text": "this video from YouTube I invite you to"
+    },
+    {
+      "startSeconds": 618.36,
+      "text": "check out our course on Advanced rag"
+    },
+    {
+      "startSeconds": 620.399,
+      "text": "architectures in it we discuss"
+    },
+    {
+      "startSeconds": 622.48,
+      "text": "techniques like re ranking quer"
+    },
+    {
+      "startSeconds": 624.24,
+      "text": "expansion and lots more to build a"
+    },
+    {
+      "startSeconds": 626.48,
+      "text": "state-of-the-art rag system from basic"
+    },
+    {
+      "startSeconds": 628.959,
+      "text": "implement mentation of to Advanced"
+    },
+    {
+      "startSeconds": 631.16,
+      "text": "optimization techniques"
+    }
+  ]
+}

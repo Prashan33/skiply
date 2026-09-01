@@ -1,0 +1,754 @@
+{
+  "id": "yGsGQBGzy6Y",
+  "url": "https://www.youtube.com/watch?v=yGsGQBGzy6Y",
+  "fetchedAt": "2026-09-01T04:07:03.816Z",
+  "captionKind": "asr",
+  "chapters": [
+    {
+      "startSeconds": 0,
+      "label": "Euclidean Distance"
+    },
+    {
+      "startSeconds": 52,
+      "label": "User 1- bought 1x eggs, 1x flour and 1x sugar."
+    },
+    {
+      "startSeconds": 145,
+      "label": "High Dimenstion Space"
+    },
+    {
+      "startSeconds": 247,
+      "label": "Cosine is essentially"
+    }
+  ],
+  "cues": [
+    {
+      "startSeconds": 0.719,
+      "text": "in this video i will take a look at"
+    },
+    {
+      "startSeconds": 2.8,
+      "text": "euclidean distance versus cosine"
+    },
+    {
+      "startSeconds": 4.88,
+      "text": "similarity distance measurement and also"
+    },
+    {
+      "startSeconds": 8.32,
+      "text": "the logic or cases of using the using"
+    },
+    {
+      "startSeconds": 11.84,
+      "text": "one versus the other"
+    },
+    {
+      "startSeconds": 13.92,
+      "text": "so we can see from this image here that"
+    },
+    {
+      "startSeconds": 16.48,
+      "text": "cosine similarity looks at the angle"
+    },
+    {
+      "startSeconds": 18.48,
+      "text": "between two vectors whereas euclidean"
+    },
+    {
+      "startSeconds": 21.279,
+      "text": "similarity looks at the distance between"
+    },
+    {
+      "startSeconds": 24.88,
+      "text": "two points so euclidean distance has no"
+    },
+    {
+      "startSeconds": 28.32,
+      "text": "idea or"
+    },
+    {
+      "startSeconds": 29.76,
+      "text": "no concern about the correlation or the"
+    },
+    {
+      "startSeconds": 33.28,
+      "text": "angle between two vectors because"
+    },
+    {
+      "startSeconds": 35.2,
+      "text": "euclidean distance is only about the"
+    },
+    {
+      "startSeconds": 38.079,
+      "text": "pure distance measurement"
+    },
+    {
+      "startSeconds": 41.44,
+      "text": "now let's say you are in an e-commerce"
+    },
+    {
+      "startSeconds": 44.64,
+      "text": "settings and you want to compare"
+    },
+    {
+      "startSeconds": 47.28,
+      "text": "users for product recommendation"
+    },
+    {
+      "startSeconds": 50.48,
+      "text": "so"
+    },
+    {
+      "startSeconds": 51.44,
+      "text": "let's say i have these three user user"
+    },
+    {
+      "startSeconds": 53.52,
+      "text": "one user two and three and we can see"
+    },
+    {
+      "startSeconds": 56.239,
+      "text": "the differences between them user one"
+    },
+    {
+      "startSeconds": 58.64,
+      "text": "bought one x eggs one x flower and one"
+    },
+    {
+      "startSeconds": 61.84,
+      "text": "egg sugar use a two bought 100 x eggs"
+    },
+    {
+      "startSeconds": 64.879,
+      "text": "100x flour and 100x sugar and use a"
+    },
+    {
+      "startSeconds": 67.52,
+      "text": "three baht 1x eggs 1x vodka and onyx"
+    },
+    {
+      "startSeconds": 72,
+      "text": "redbull"
+    },
+    {
+      "startSeconds": 74.08,
+      "text": "now by"
+    },
+    {
+      "startSeconds": 75.439,
+      "text": "cosign similarity metric user 1 and user"
+    },
+    {
+      "startSeconds": 78.64,
+      "text": "2 are more similar because both bore the"
+    },
+    {
+      "startSeconds": 81.04,
+      "text": "same items eggs flour and sugar it does"
+    },
+    {
+      "startSeconds": 84.64,
+      "text": "not consider that the user to bought"
+    },
+    {
+      "startSeconds": 86.64,
+      "text": "100x and user 1.1x"
+    },
+    {
+      "startSeconds": 90,
+      "text": "but by euclidean similarity user 3 is"
+    },
+    {
+      "startSeconds": 93.28,
+      "text": "more similar to user 1."
+    },
+    {
+      "startSeconds": 96.64,
+      "text": "that's because user 3 and user 1 both"
+    },
+    {
+      "startSeconds": 99.439,
+      "text": "bought one x quantity of each item but"
+    },
+    {
+      "startSeconds": 103.68,
+      "text": "then uh user one bought flour instead of"
+    },
+    {
+      "startSeconds": 106.88,
+      "text": "that user two bought sorry use a three"
+    },
+    {
+      "startSeconds": 109.52,
+      "text": "board vodka and also user one bought"
+    },
+    {
+      "startSeconds": 112.24,
+      "text": "sugar whereas user 3 bought red bull so"
+    },
+    {
+      "startSeconds": 115.04,
+      "text": "the items are different for user 3 but"
+    },
+    {
+      "startSeconds": 117.2,
+      "text": "because they bought the same quantity"
+    },
+    {
+      "startSeconds": 120.24,
+      "text": "so by euclidean distance metric user 1"
+    },
+    {
+      "startSeconds": 123.36,
+      "text": "and user 3 are more similar"
+    },
+    {
+      "startSeconds": 126,
+      "text": "now let's discuss about the situation"
+    },
+    {
+      "startSeconds": 128.56,
+      "text": "where dimension increases because that's"
+    },
+    {
+      "startSeconds": 130.8,
+      "text": "where uh the choice between a cosine"
+    },
+    {
+      "startSeconds": 134.16,
+      "text": "distance and"
+    },
+    {
+      "startSeconds": 135.84,
+      "text": "euclidean distance metric becomes uh"
+    },
+    {
+      "startSeconds": 138.08,
+      "text": "most argumentative and most confusing so"
+    },
+    {
+      "startSeconds": 141.36,
+      "text": "generally when"
+    },
+    {
+      "startSeconds": 142.879,
+      "text": "i have more dimensions that it was"
+    },
+    {
+      "startSeconds": 145.599,
+      "text": "mathematically proven that the more"
+    },
+    {
+      "startSeconds": 147.52,
+      "text": "dimensions i have the closer the average"
+    },
+    {
+      "startSeconds": 151.12,
+      "text": "distance and the maximum distance"
+    },
+    {
+      "startSeconds": 153.68,
+      "text": "between randomly placed points become"
+    },
+    {
+      "startSeconds": 157.44,
+      "text": "which means that euclidean distance"
+    },
+    {
+      "startSeconds": 160,
+      "text": "matrix suffers when dealing with high"
+    },
+    {
+      "startSeconds": 162.72,
+      "text": "dimension"
+    },
+    {
+      "startSeconds": 164,
+      "text": "similarly the average angle between"
+    },
+    {
+      "startSeconds": 167.36,
+      "text": "uniformly randomly placed points become"
+    },
+    {
+      "startSeconds": 170.959,
+      "text": "90 degree at high dimension"
+    },
+    {
+      "startSeconds": 173.2,
+      "text": "that is"
+    },
+    {
+      "startSeconds": 174.239,
+      "text": "in high dimension even cosine distance"
+    },
+    {
+      "startSeconds": 176.56,
+      "text": "metric also suffers"
+    },
+    {
+      "startSeconds": 179.44,
+      "text": "now think of an example of a 200"
+    },
+    {
+      "startSeconds": 181.84,
+      "text": "dimensional space which is very very"
+    },
+    {
+      "startSeconds": 183.519,
+      "text": "common in uh most uh machine learning"
+    },
+    {
+      "startSeconds": 186.48,
+      "text": "projects or whether nlp projects so a"
+    },
+    {
+      "startSeconds": 189.519,
+      "text": "200 dimensional space is so so empty"
+    },
+    {
+      "startSeconds": 192.08,
+      "text": "that everything is far from everything"
+    },
+    {
+      "startSeconds": 194.239,
+      "text": "else that's why many argue that using"
+    },
+    {
+      "startSeconds": 197.28,
+      "text": "cosine similarity in high dimensional"
+    },
+    {
+      "startSeconds": 199.519,
+      "text": "space because everything is far from"
+    },
+    {
+      "startSeconds": 202.319,
+      "text": "everything else so if two vectors are"
+    },
+    {
+      "startSeconds": 205.599,
+      "text": "pointing in the same direction that is"
+    },
+    {
+      "startSeconds": 207.92,
+      "text": "under the cosine similarity metric then"
+    },
+    {
+      "startSeconds": 210.56,
+      "text": "that's already pretty good because"
+    },
+    {
+      "startSeconds": 213.28,
+      "text": "in that case we are getting some sense"
+    },
+    {
+      "startSeconds": 215.68,
+      "text": "of the relation between two two vectors"
+    },
+    {
+      "startSeconds": 217.84,
+      "text": "in high dimension but then there's"
+    },
+    {
+      "startSeconds": 220.48,
+      "text": "argument for using euclidean distance as"
+    },
+    {
+      "startSeconds": 223.12,
+      "text": "well in the high dimensional space"
+    },
+    {
+      "startSeconds": 225.519,
+      "text": "first of all cosine distance is not"
+    },
+    {
+      "startSeconds": 227.519,
+      "text": "impervious to the curse of"
+    },
+    {
+      "startSeconds": 229.599,
+      "text": "dimensionality uh which is what we just"
+    },
+    {
+      "startSeconds": 232.4,
+      "text": "talked about that in high dimension two"
+    },
+    {
+      "startSeconds": 234.56,
+      "text": "randomly picked vectors will be almost"
+    },
+    {
+      "startSeconds": 237.36,
+      "text": "orthogonal that is the angle between"
+    },
+    {
+      "startSeconds": 239.2,
+      "text": "them will be 90 degree with high"
+    },
+    {
+      "startSeconds": 241.28,
+      "text": "probability"
+    },
+    {
+      "startSeconds": 242.799,
+      "text": "which will make the cosine distance"
+    },
+    {
+      "startSeconds": 244.319,
+      "text": "matrix less relevant in the high"
+    },
+    {
+      "startSeconds": 246,
+      "text": "dimension"
+    },
+    {
+      "startSeconds": 247.519,
+      "text": "it is easy to see that cosine is"
+    },
+    {
+      "startSeconds": 250.4,
+      "text": "essentially the same as euclidean on"
+    },
+    {
+      "startSeconds": 254.56,
+      "text": "normalized data"
+    },
+    {
+      "startSeconds": 256.239,
+      "text": "the normalization takes away one degree"
+    },
+    {
+      "startSeconds": 258.479,
+      "text": "of freedom thus"
+    },
+    {
+      "startSeconds": 260.239,
+      "text": "cosine on 1000 dimensional space is"
+    },
+    {
+      "startSeconds": 263.759,
+      "text": "about as cars"
+    },
+    {
+      "startSeconds": 265.919,
+      "text": "as euclidean on a 999 dimensional space"
+    },
+    {
+      "startSeconds": 270.96,
+      "text": "now consider the case that i want to"
+    },
+    {
+      "startSeconds": 272.8,
+      "text": "compute the semantic similarity of two"
+    },
+    {
+      "startSeconds": 275.44,
+      "text": "words using their vector representation"
+    },
+    {
+      "startSeconds": 278.72,
+      "text": "and the vector representation may be"
+    },
+    {
+      "startSeconds": 280.4,
+      "text": "word to vague or globe the popular"
+    },
+    {
+      "startSeconds": 283.04,
+      "text": "word vectors so now the key question is"
+    },
+    {
+      "startSeconds": 286.32,
+      "text": "shall i use the euclidean distance or"
+    },
+    {
+      "startSeconds": 288.96,
+      "text": "the cosine similarity now i will present"
+    },
+    {
+      "startSeconds": 291.759,
+      "text": "to you the logical case"
+    },
+    {
+      "startSeconds": 293.919,
+      "text": "for both cosine and euclidean there are"
+    },
+    {
+      "startSeconds": 296.479,
+      "text": "cases for both side"
+    },
+    {
+      "startSeconds": 299.6,
+      "text": "first of all if globe vectors gives you"
+    },
+    {
+      "startSeconds": 302.8,
+      "text": "normalized unit vectors then just as we"
+    },
+    {
+      "startSeconds": 306.08,
+      "text": "discussed the two calculation that is"
+    },
+    {
+      "startSeconds": 308.4,
+      "text": "euclidean or cosine becomes kind of"
+    },
+    {
+      "startSeconds": 310.88,
+      "text": "equivalent so"
+    },
+    {
+      "startSeconds": 313.12,
+      "text": "given that they are equivalent then some"
+    },
+    {
+      "startSeconds": 315.199,
+      "text": "argue that in this case rather use"
+    },
+    {
+      "startSeconds": 318.24,
+      "text": "cosine similarity since it removes"
+    },
+    {
+      "startSeconds": 320.8,
+      "text": "effect of document length"
+    },
+    {
+      "startSeconds": 323.52,
+      "text": "and what do i mean by that"
+    },
+    {
+      "startSeconds": 325.84,
+      "text": "for example a postcard and a full length"
+    },
+    {
+      "startSeconds": 329.919,
+      "text": "book may be about the same topic but"
+    },
+    {
+      "startSeconds": 332.639,
+      "text": "will likely be quite far apart in pure"
+    },
+    {
+      "startSeconds": 336.32,
+      "text": "term frequency space using the euclidean"
+    },
+    {
+      "startSeconds": 338.96,
+      "text": "distance because under the down"
+    },
+    {
+      "startSeconds": 341.12,
+      "text": "frequency or tf idea frequency metric"
+    },
+    {
+      "startSeconds": 344.4,
+      "text": "the"
+    },
+    {
+      "startSeconds": 345.12,
+      "text": "full length books measurement of"
+    },
+    {
+      "startSeconds": 346.96,
+      "text": "frequencies may be much much higher than"
+    },
+    {
+      "startSeconds": 349.6,
+      "text": "the postcard so that means in that case"
+    },
+    {
+      "startSeconds": 352.24,
+      "text": "the high values of each vector term due"
+    },
+    {
+      "startSeconds": 355.84,
+      "text": "to high frequency of some terms will put"
+    },
+    {
+      "startSeconds": 358.8,
+      "text": "a similar meaning word far away but with"
+    },
+    {
+      "startSeconds": 362.56,
+      "text": "cosine similarity metric they will be"
+    },
+    {
+      "startSeconds": 365.199,
+      "text": "right on top of each other so"
+    },
+    {
+      "startSeconds": 367.919,
+      "text": "rather use cosine similarity"
+    },
+    {
+      "startSeconds": 370.88,
+      "text": "but now we consider the logic for using"
+    },
+    {
+      "startSeconds": 373.84,
+      "text": "euclidean distance measure for this"
+    },
+    {
+      "startSeconds": 376.08,
+      "text": "situation"
+    },
+    {
+      "startSeconds": 377.44,
+      "text": "now the reason for using cosine"
+    },
+    {
+      "startSeconds": 379.28,
+      "text": "similarity was completely based on term"
+    },
+    {
+      "startSeconds": 381.52,
+      "text": "frequency metric"
+    },
+    {
+      "startSeconds": 383.199,
+      "text": "but"
+    },
+    {
+      "startSeconds": 384,
+      "text": "if we are using word vectors"
+    },
+    {
+      "startSeconds": 387.52,
+      "text": "using word to vector globe then the"
+    },
+    {
+      "startSeconds": 389.919,
+      "text": "vector terms are basically random"
+    },
+    {
+      "startSeconds": 392.639,
+      "text": "weights"
+    },
+    {
+      "startSeconds": 393.84,
+      "text": "of the neural network that they were"
+    },
+    {
+      "startSeconds": 395.44,
+      "text": "trained on it does not represent the"
+    },
+    {
+      "startSeconds": 398.319,
+      "text": "term frequency count anymore"
+    },
+    {
+      "startSeconds": 400.88,
+      "text": "so given that's the case shouldn't we be"
+    },
+    {
+      "startSeconds": 403.36,
+      "text": "taking euclidean distance instead of"
+    },
+    {
+      "startSeconds": 405.36,
+      "text": "cosine like what if a words word vector"
+    },
+    {
+      "startSeconds": 408.56,
+      "text": "occurs very far from another word but in"
+    },
+    {
+      "startSeconds": 411.919,
+      "text": "the same line then cosine similarity"
+    },
+    {
+      "startSeconds": 414.639,
+      "text": "would be high since the angle between"
+    },
+    {
+      "startSeconds": 416.8,
+      "text": "these two vectors is almost zero but"
+    },
+    {
+      "startSeconds": 419.199,
+      "text": "euclidean distance would be"
+    },
+    {
+      "startSeconds": 421.44,
+      "text": "high since these two vectors are far off"
+    },
+    {
+      "startSeconds": 425.199,
+      "text": "in a sense"
+    },
+    {
+      "startSeconds": 426.96,
+      "text": "if these two words happen to be"
+    },
+    {
+      "startSeconds": 429.039,
+      "text": "different words indeed as their weight"
+    },
+    {
+      "startSeconds": 431.599,
+      "text": "vectors are derived by word to fake or"
+    },
+    {
+      "startSeconds": 434.08,
+      "text": "glove"
+    },
+    {
+      "startSeconds": 435.12,
+      "text": "then we do want them to be different"
+    },
+    {
+      "startSeconds": 437.919,
+      "text": "which will be captured by euclidean"
+    },
+    {
+      "startSeconds": 440.479,
+      "text": "distance and missed by cosine similarity"
+    },
+    {
+      "startSeconds": 443.52,
+      "text": "in that case cosine similarity would"
+    },
+    {
+      "startSeconds": 445.759,
+      "text": "give wrong result and euclidean distance"
+    },
+    {
+      "startSeconds": 448.16,
+      "text": "makes more sense so"
+    },
+    {
+      "startSeconds": 450.56,
+      "text": "question is cosine distance makes sense"
+    },
+    {
+      "startSeconds": 453.52,
+      "text": "if the vector used is created out of"
+    },
+    {
+      "startSeconds": 456.479,
+      "text": "term frequency or tf idf measurement but"
+    },
+    {
+      "startSeconds": 460.479,
+      "text": "if the vectors created is word"
+    },
+    {
+      "startSeconds": 462.88,
+      "text": "embeddings as a result of a of training"
+    },
+    {
+      "startSeconds": 465.68,
+      "text": "a neural network does it still make"
+    },
+    {
+      "startSeconds": 468.16,
+      "text": "sense to use cosine in high dimensional"
+    },
+    {
+      "startSeconds": 470.24,
+      "text": "space"
+    }
+  ]
+}

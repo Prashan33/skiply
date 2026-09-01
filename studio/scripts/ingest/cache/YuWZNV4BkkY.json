@@ -1,0 +1,2570 @@
+{
+  "id": "YuWZNV4BkkY",
+  "url": "https://www.youtube.com/watch?v=YuWZNV4BkkY",
+  "fetchedAt": "2026-09-01T04:07:56.029Z",
+  "captionKind": "asr",
+  "chapters": [
+    {
+      "startSeconds": 0,
+      "label": "Introduction & video overview"
+    },
+    {
+      "startSeconds": 25,
+      "label": "Shoutout to this video’s sponsor, Brilliant.org!"
+    },
+    {
+      "startSeconds": 131,
+      "label": "1. Running terminal commands such as “pip” directly in a notebook"
+    },
+    {
+      "startSeconds": 317,
+      "label": "Magic lines in Jupyter"
+    },
+    {
+      "startSeconds": 371,
+      "label": "2. Shortcuts that you need to know for Jupyter!"
+    },
+    {
+      "startSeconds": 565,
+      "label": "3. Changing default Pandas options to improve results display"
+    },
+    {
+      "startSeconds": 840,
+      "label": "4. Setting up notifications for when a cell finishes execution"
+    },
+    {
+      "startSeconds": 1088,
+      "label": "5. Creating slideshows from a IPython notebook!"
+    },
+    {
+      "startSeconds": 1380,
+      "label": "Conclusion (and link to bonus tip!)"
+    }
+  ],
+  "cues": [
+    {
+      "startSeconds": 0.399,
+      "text": "hey how's it going everyone and welcome"
+    },
+    {
+      "startSeconds": 2.08,
+      "text": "back to another video this video is"
+    },
+    {
+      "startSeconds": 3.679,
+      "text": "going to be a little bit different than"
+    },
+    {
+      "startSeconds": 4.799,
+      "text": "a lot of my normal tutorials in it we're"
+    },
+    {
+      "startSeconds": 6.799,
+      "text": "going to kind of take a step back and"
+    },
+    {
+      "startSeconds": 8.559,
+      "text": "look at some tips tricks shortcuts hacks"
+    },
+    {
+      "startSeconds": 12.08,
+      "text": "all sorts of things that will make your"
+    },
+    {
+      "startSeconds": 13.519,
+      "text": "experience working with jupiter"
+    },
+    {
+      "startSeconds": 15.28,
+      "text": "notebooks better i use jupyter notebooks"
+    },
+    {
+      "startSeconds": 17.6,
+      "text": "for like 95 of my data science work so"
+    },
+    {
+      "startSeconds": 21.039,
+      "text": "having these kind of in your back pocket"
+    },
+    {
+      "startSeconds": 22.8,
+      "text": "it's definitely helpful and definitely"
+    },
+    {
+      "startSeconds": 24.48,
+      "text": "you know good to know before i dive into"
+    },
+    {
+      "startSeconds": 26.56,
+      "text": "tip number one though i want to say"
+    },
+    {
+      "startSeconds": 28.4,
+      "text": "thank you to our brilliant sponsor today"
+    },
+    {
+      "startSeconds": 31.039,
+      "text": "and that is brilliant.org brilliant.org"
+    },
+    {
+      "startSeconds": 34.32,
+      "text": "is a platform that allows you to learn"
+    },
+    {
+      "startSeconds": 36.719,
+      "text": "math physics computer science and other"
+    },
+    {
+      "startSeconds": 39.52,
+      "text": "subjects interactively specifically when"
+    },
+    {
+      "startSeconds": 41.84,
+      "text": "i was playing around with their platform"
+    },
+    {
+      "startSeconds": 43.6,
+      "text": "some of the courses that caught my eye"
+    },
+    {
+      "startSeconds": 45.28,
+      "text": "immediately was a python class but even"
+    },
+    {
+      "startSeconds": 48.16,
+      "text": "better than that i thought was a lot of"
+    },
+    {
+      "startSeconds": 50.239,
+      "text": "the classes that they have on algorithms"
+    },
+    {
+      "startSeconds": 53.6,
+      "text": "and kind of computer science logic i"
+    },
+    {
+      "startSeconds": 56.32,
+      "text": "think the reason i like a lot of these"
+    },
+    {
+      "startSeconds": 57.76,
+      "text": "interactive courses so much is that they"
+    },
+    {
+      "startSeconds": 59.6,
+      "text": "allow you to kind of think about these"
+    },
+    {
+      "startSeconds": 61.76,
+      "text": "computer science these very technical"
+    },
+    {
+      "startSeconds": 63.84,
+      "text": "things in a much friendlier much easier"
+    },
+    {
+      "startSeconds": 66.64,
+      "text": "to approach manner so you can like dive"
+    },
+    {
+      "startSeconds": 68.88,
+      "text": "in in that way and so that when you do"
+    },
+    {
+      "startSeconds": 70.96,
+      "text": "get into the weeds and do get into"
+    },
+    {
+      "startSeconds": 72.799,
+      "text": "really challenging tough stuff it is"
+    },
+    {
+      "startSeconds": 75.2,
+      "text": "much easier so a lot of great courses"
+    },
+    {
+      "startSeconds": 78.159,
+      "text": "some that immediately come to mind are"
+    },
+    {
+      "startSeconds": 80.32,
+      "text": "algorithms and implementations the one"
+    },
+    {
+      "startSeconds": 82.72,
+      "text": "that i liked was thinking with graphs"
+    },
+    {
+      "startSeconds": 85.04,
+      "text": "there's also applied computer science"
+    },
+    {
+      "startSeconds": 87.04,
+      "text": "concepts like search engines"
+    },
+    {
+      "startSeconds": 89.079,
+      "text": "cryptocurrency quantum computing so i"
+    },
+    {
+      "startSeconds": 91.92,
+      "text": "definitely think it's worth checking out"
+    },
+    {
+      "startSeconds": 93.2,
+      "text": "the platform it's free to get started"
+    },
+    {
+      "startSeconds": 95.28,
+      "text": "and then if you do want to subscribe and"
+    },
+    {
+      "startSeconds": 97.04,
+      "text": "get kind of that full membership right"
+    },
+    {
+      "startSeconds": 98.799,
+      "text": "now i'm offering 20 off to the first 200"
+    },
+    {
+      "startSeconds": 102.24,
+      "text": "people that sign up using that link that"
+    },
+    {
+      "startSeconds": 104.479,
+      "text": "is brilliant.org"
+    },
+    {
+      "startSeconds": 106.24,
+      "text": "keith galley thanks a lot to brilliant"
+    },
+    {
+      "startSeconds": 108.64,
+      "text": "for sponsoring this video but let's dive"
+    },
+    {
+      "startSeconds": 110.479,
+      "text": "into some awesome"
+    },
+    {
+      "startSeconds": 112.159,
+      "text": "jupiter notebook data science tips"
+    },
+    {
+      "startSeconds": 114.64,
+      "text": "tricks and shortcuts"
+    },
+    {
+      "startSeconds": 117.439,
+      "text": "all right to get started open up a new"
+    },
+    {
+      "startSeconds": 119.28,
+      "text": "jupiter notebook and for the sake of"
+    },
+    {
+      "startSeconds": 120.88,
+      "text": "this video i'm going to assume that"
+    },
+    {
+      "startSeconds": 122,
+      "text": "you've already set up jupiter notebooks"
+    },
+    {
+      "startSeconds": 123.759,
+      "text": "but if enough people request it in the"
+    },
+    {
+      "startSeconds": 125.2,
+      "text": "comments i can make a video on how to"
+    },
+    {
+      "startSeconds": 127.28,
+      "text": "set up a jupiter notebook environment"
+    },
+    {
+      "startSeconds": 129.44,
+      "text": "but open up a new notebook and the first"
+    },
+    {
+      "startSeconds": 131.68,
+      "text": "thing that we're going to touch on the"
+    },
+    {
+      "startSeconds": 132.959,
+      "text": "first trick and this is one you might"
+    },
+    {
+      "startSeconds": 134.879,
+      "text": "know but you might not know all the"
+    },
+    {
+      "startSeconds": 136.08,
+      "text": "caveats is running commands"
+    },
+    {
+      "startSeconds": 139.44,
+      "text": "in jupyter notebooks so when i say"
+    },
+    {
+      "startSeconds": 141.76,
+      "text": "running commands i mean like any linux"
+    },
+    {
+      "startSeconds": 143.36,
+      "text": "command any bash command whatever you"
+    },
+    {
+      "startSeconds": 145.12,
+      "text": "run in your terminal you can run in"
+    },
+    {
+      "startSeconds": 146.879,
+      "text": "jupyter notebooks so to do that to"
+    },
+    {
+      "startSeconds": 149.2,
+      "text": "specify something as a bash command you"
+    },
+    {
+      "startSeconds": 151.04,
+      "text": "can start with an explanation point and"
+    },
+    {
+      "startSeconds": 153.36,
+      "text": "just for the sake of cleanliness i'm"
+    },
+    {
+      "startSeconds": 155.2,
+      "text": "gonna first make a markdown cell tip"
+    },
+    {
+      "startSeconds": 157.68,
+      "text": "number one is"
+    },
+    {
+      "startSeconds": 159.2,
+      "text": "running run terminal commands"
+    },
+    {
+      "startSeconds": 163.2,
+      "text": "in jupiter"
+    },
+    {
+      "startSeconds": 165.519,
+      "text": "okay so to do this you're going to want"
+    },
+    {
+      "startSeconds": 168.08,
+      "text": "to"
+    },
+    {
+      "startSeconds": 168.8,
+      "text": "specify in a code cell"
+    },
+    {
+      "startSeconds": 171.2,
+      "text": "with a"
+    },
+    {
+      "startSeconds": 172.959,
+      "text": "exclamation point that's basically"
+    },
+    {
+      "startSeconds": 174.64,
+      "text": "telling jupiter notebooks hey this is a"
+    },
+    {
+      "startSeconds": 176.56,
+      "text": "bash command"
+    },
+    {
+      "startSeconds": 178,
+      "text": "and so the thing that you've probably"
+    },
+    {
+      "startSeconds": 179.2,
+      "text": "seen before is you can run"
+    },
+    {
+      "startSeconds": 181.519,
+      "text": "commands like pip install let's say"
+    },
+    {
+      "startSeconds": 184.64,
+      "text": "seaborn any sort of library that you"
+    },
+    {
+      "startSeconds": 186.8,
+      "text": "need in python you can do it right there"
+    },
+    {
+      "startSeconds": 189.68,
+      "text": "in your jupyter notebook"
+    },
+    {
+      "startSeconds": 191.44,
+      "text": "and you can see that i already have"
+    },
+    {
+      "startSeconds": 192.72,
+      "text": "seaborne so it's not actually doing"
+    },
+    {
+      "startSeconds": 194.319,
+      "text": "anything here but any package that you"
+    },
+    {
+      "startSeconds": 196.239,
+      "text": "might need that you don't have i find it"
+    },
+    {
+      "startSeconds": 197.92,
+      "text": "annoying switching back and forth"
+    },
+    {
+      "startSeconds": 199.36,
+      "text": "between my terminal window and jupiter"
+    },
+    {
+      "startSeconds": 201.04,
+      "text": "so i sometimes like doing this but one"
+    },
+    {
+      "startSeconds": 203.04,
+      "text": "thing you might not know is that you can"
+    },
+    {
+      "startSeconds": 204.319,
+      "text": "run all sorts of other commands within"
+    },
+    {
+      "startSeconds": 206.879,
+      "text": "jupiter notebooks i can run exclamation"
+    },
+    {
+      "startSeconds": 209.44,
+      "text": "point"
+    },
+    {
+      "startSeconds": 210.319,
+      "text": "ls so i'm listing the directory contents"
+    },
+    {
+      "startSeconds": 213.76,
+      "text": "and we see in this folder we have a"
+    },
+    {
+      "startSeconds": 215.68,
+      "text": "readme we have the trips tips and tricks"
+    },
+    {
+      "startSeconds": 218.159,
+      "text": "ipython notebook that we're working off"
+    },
+    {
+      "startSeconds": 220,
+      "text": "of and then we have a couple data files"
+    },
+    {
+      "startSeconds": 222.56,
+      "text": "it looks like and even cooler than this"
+    },
+    {
+      "startSeconds": 224.56,
+      "text": "is we can like string multiple commands"
+    },
+    {
+      "startSeconds": 226.48,
+      "text": "together so i could do"
+    },
+    {
+      "startSeconds": 228,
+      "text": "bang"
+    },
+    {
+      "startSeconds": 228.959,
+      "text": "cd social data so i want to get into"
+    },
+    {
+      "startSeconds": 231.04,
+      "text": "that folder and then i want to look at"
+    },
+    {
+      "startSeconds": 234,
+      "text": "everything that's in that folder and we"
+    },
+    {
+      "startSeconds": 236.08,
+      "text": "can see that we have a bunch of csv"
+    },
+    {
+      "startSeconds": 238.159,
+      "text": "files and why this is useful is because"
+    },
+    {
+      "startSeconds": 240.4,
+      "text": "i often find i need to like load a csv"
+    },
+    {
+      "startSeconds": 242.56,
+      "text": "load a file but i might not remember the"
+    },
+    {
+      "startSeconds": 244.4,
+      "text": "exact name of it so instead of opening"
+    },
+    {
+      "startSeconds": 246.959,
+      "text": "up like a file explorer and like finding"
+    },
+    {
+      "startSeconds": 249.599,
+      "text": "it there i can just do this all in my"
+    },
+    {
+      "startSeconds": 251.36,
+      "text": "jupyter notebook and everything's a"
+    },
+    {
+      "startSeconds": 253.68,
+      "text": "little bit neater and you know if things"
+    },
+    {
+      "startSeconds": 255.599,
+      "text": "change i can still see those updates and"
+    },
+    {
+      "startSeconds": 257.84,
+      "text": "just for the sake of if you're curious"
+    },
+    {
+      "startSeconds": 259.28,
+      "text": "about where this data is coming from"
+    },
+    {
+      "startSeconds": 261.12,
+      "text": "along with this video i have a github"
+    },
+    {
+      "startSeconds": 264.16,
+      "text": "repo data that's in this repo is just"
+    },
+    {
+      "startSeconds": 266.24,
+      "text": "some social data social media data for"
+    },
+    {
+      "startSeconds": 269.12,
+      "text": "my channels that i collected off of a"
+    },
+    {
+      "startSeconds": 271.68,
+      "text": "site called socialblade i'm going to use"
+    },
+    {
+      "startSeconds": 273.52,
+      "text": "this for a future video so it's a little"
+    },
+    {
+      "startSeconds": 275.36,
+      "text": "bit of a you know future preview you can"
+    },
+    {
+      "startSeconds": 277.919,
+      "text": "clone this repo if you want to there if"
+    },
+    {
+      "startSeconds": 280,
+      "text": "you want data to work off of but it's"
+    },
+    {
+      "startSeconds": 281.68,
+      "text": "not necessary to clone this repo but"
+    },
+    {
+      "startSeconds": 283.44,
+      "text": "that is linked in the description okay"
+    },
+    {
+      "startSeconds": 285.44,
+      "text": "so now what do we what else can we do"
+    },
+    {
+      "startSeconds": 287.68,
+      "text": "with this"
+    },
+    {
+      "startSeconds": 288.88,
+      "text": "well you can run all sorts of fun"
+    },
+    {
+      "startSeconds": 290.96,
+      "text": "commands so one of my favorite bash"
+    },
+    {
+      "startSeconds": 293.28,
+      "text": "commands is a command called cowsei"
+    },
+    {
+      "startSeconds": 296.479,
+      "text": "so i could do cow say"
+    },
+    {
+      "startSeconds": 298.72,
+      "text": "keith"
+    },
+    {
+      "startSeconds": 299.68,
+      "text": "is"
+    },
+    {
+      "startSeconds": 300.56,
+      "text": "really"
+    },
+    {
+      "startSeconds": 301.759,
+      "text": "cool"
+    },
+    {
+      "startSeconds": 303.28,
+      "text": "run that"
+    },
+    {
+      "startSeconds": 304.479,
+      "text": "and we see we get a nice little cow in"
+    },
+    {
+      "startSeconds": 306.72,
+      "text": "our jupiter notebook and i think one"
+    },
+    {
+      "startSeconds": 309.039,
+      "text": "last thing i want to mention about these"
+    },
+    {
+      "startSeconds": 310.8,
+      "text": "terminal commands in jupiter this is all"
+    },
+    {
+      "startSeconds": 313.039,
+      "text": "using like whatever"
+    },
+    {
+      "startSeconds": 314.479,
+      "text": "linux system that we're running our"
+    },
+    {
+      "startSeconds": 316,
+      "text": "jupiter notebook from let's say you're"
+    },
+    {
+      "startSeconds": 317.919,
+      "text": "having issues with pip and you can't run"
+    },
+    {
+      "startSeconds": 320.16,
+      "text": "this command jupiter also has what it's"
+    },
+    {
+      "startSeconds": 322.24,
+      "text": "called magic lines built into its system"
+    },
+    {
+      "startSeconds": 325.759,
+      "text": "what i recommend is trying to do"
+    },
+    {
+      "startSeconds": 328.56,
+      "text": "something like this so percentage sign"
+    },
+    {
+      "startSeconds": 331.36,
+      "text": "specifies a magic line a magic command"
+    },
+    {
+      "startSeconds": 334,
+      "text": "within pip so you could try something"
+    },
+    {
+      "startSeconds": 335.84,
+      "text": "like pip install"
+    },
+    {
+      "startSeconds": 337.759,
+      "text": "seaborn"
+    },
+    {
+      "startSeconds": 338.88,
+      "text": "if the exclamation doesn't work behind"
+    },
+    {
+      "startSeconds": 341.28,
+      "text": "the scenes it's probably doing pretty"
+    },
+    {
+      "startSeconds": 343.12,
+      "text": "much the same thing but there are"
+    },
+    {
+      "startSeconds": 345.36,
+      "text": "special"
+    },
+    {
+      "startSeconds": 346.4,
+      "text": "jupiter specific"
+    },
+    {
+      "startSeconds": 348,
+      "text": "magic commands that are available you'll"
+    },
+    {
+      "startSeconds": 350.96,
+      "text": "see one later in the video so i'll link"
+    },
+    {
+      "startSeconds": 353.44,
+      "text": "in the description of the visit this"
+    },
+    {
+      "startSeconds": 354.72,
+      "text": "video or in the github repo some more"
+    },
+    {
+      "startSeconds": 357.199,
+      "text": "details about these magic commands with"
+    },
+    {
+      "startSeconds": 358.96,
+      "text": "the percentage signs specifically"
+    },
+    {
+      "startSeconds": 361.68,
+      "text": "moving onward"
+    },
+    {
+      "startSeconds": 365.759,
+      "text": "and i'm going to give you a sneak"
+    },
+    {
+      "startSeconds": 366.96,
+      "text": "preview you see me making all these"
+    },
+    {
+      "startSeconds": 368.479,
+      "text": "cells and then i could delete these"
+    },
+    {
+      "startSeconds": 370.319,
+      "text": "cells if i want to the next thing we're"
+    },
+    {
+      "startSeconds": 372.24,
+      "text": "going to walk through is some very"
+    },
+    {
+      "startSeconds": 374.479,
+      "text": "useful shortcuts all right so what are"
+    },
+    {
+      "startSeconds": 377.039,
+      "text": "some useful shortcuts you should know"
+    },
+    {
+      "startSeconds": 379.12,
+      "text": "well one of the ones i've been doing a"
+    },
+    {
+      "startSeconds": 380.72,
+      "text": "lot is"
+    },
+    {
+      "startSeconds": 382.639,
+      "text": "dd"
+    },
+    {
+      "startSeconds": 383.68,
+      "text": "so if you tap d twice it's going to"
+    },
+    {
+      "startSeconds": 385.36,
+      "text": "delete a cell and then if we want to"
+    },
+    {
+      "startSeconds": 387.36,
+      "text": "create some more cells we can press b"
+    },
+    {
+      "startSeconds": 390.479,
+      "text": "to create cells below the way i remember"
+    },
+    {
+      "startSeconds": 392.639,
+      "text": "it is if you type in b it will create a"
+    },
+    {
+      "startSeconds": 395.039,
+      "text": "cell below and if you type in a"
+    },
+    {
+      "startSeconds": 398.24,
+      "text": "it will create a cell above so a above b"
+    },
+    {
+      "startSeconds": 401.12,
+      "text": "below you might notice that if you're"
+    },
+    {
+      "startSeconds": 403.36,
+      "text": "like typing in the cell like i can type"
+    },
+    {
+      "startSeconds": 405.039,
+      "text": "a aaa it's not doing anything so to get"
+    },
+    {
+      "startSeconds": 407.68,
+      "text": "these shortcuts to work the first thing"
+    },
+    {
+      "startSeconds": 409.36,
+      "text": "you're going to have to do is escape so"
+    },
+    {
+      "startSeconds": 411.759,
+      "text": "hit the escape can command on your"
+    },
+    {
+      "startSeconds": 413.52,
+      "text": "keyboard and then you can do a and b"
+    },
+    {
+      "startSeconds": 416.319,
+      "text": "and delete cells with dd"
+    },
+    {
+      "startSeconds": 418.72,
+      "text": "cool so sometimes i like to make extra"
+    },
+    {
+      "startSeconds": 420.72,
+      "text": "cells"
+    },
+    {
+      "startSeconds": 421.68,
+      "text": "down below so that i can work higher up"
+    },
+    {
+      "startSeconds": 423.68,
+      "text": "on the screen some other useful"
+    },
+    {
+      "startSeconds": 425.36,
+      "text": "shortcuts or just things that you might"
+    },
+    {
+      "startSeconds": 426.88,
+      "text": "want to do is like i could toggle the"
+    },
+    {
+      "startSeconds": 428.72,
+      "text": "header here to make it a little bit more"
+    },
+    {
+      "startSeconds": 430.96,
+      "text": "filling the screen i could toggle the"
+    },
+    {
+      "startSeconds": 433.28,
+      "text": "toolbar here depending on how much room"
+    },
+    {
+      "startSeconds": 436,
+      "text": "i want and how much distractions i want"
+    },
+    {
+      "startSeconds": 438.16,
+      "text": "let's write out some of those shortcuts"
+    },
+    {
+      "startSeconds": 439.52,
+      "text": "i just mentioned so one is escape and"
+    },
+    {
+      "startSeconds": 442.319,
+      "text": "then m m for markdown that's going to be"
+    },
+    {
+      "startSeconds": 445.12,
+      "text": "how we switch to markdown m"
+    },
+    {
+      "startSeconds": 448.08,
+      "text": "switch"
+    },
+    {
+      "startSeconds": 448.96,
+      "text": "to markdown"
+    },
+    {
+      "startSeconds": 450.479,
+      "text": "a"
+    },
+    {
+      "startSeconds": 451.919,
+      "text": "create"
+    },
+    {
+      "startSeconds": 452.8,
+      "text": "cells above"
+    },
+    {
+      "startSeconds": 454.88,
+      "text": "b"
+    },
+    {
+      "startSeconds": 455.919,
+      "text": "create cells below"
+    },
+    {
+      "startSeconds": 458.56,
+      "text": "d plus d that's going to be delete a"
+    },
+    {
+      "startSeconds": 461.599,
+      "text": "cell"
+    },
+    {
+      "startSeconds": 462.639,
+      "text": "and let me think if there's other ones"
+    },
+    {
+      "startSeconds": 464.4,
+      "text": "another useful one is if we're switching"
+    },
+    {
+      "startSeconds": 466.16,
+      "text": "to markdown we want to be able to switch"
+    },
+    {
+      "startSeconds": 467.68,
+      "text": "back to code so that's going to be y y"
+    },
+    {
+      "startSeconds": 470.319,
+      "text": "is switch to code so i've hit escape and"
+    },
+    {
+      "startSeconds": 473.759,
+      "text": "then y"
+    },
+    {
+      "startSeconds": 475.199,
+      "text": "we see that it changes kind of the"
+    },
+    {
+      "startSeconds": 476.639,
+      "text": "format of the cell but because this is"
+    },
+    {
+      "startSeconds": 478.879,
+      "text": "text we will want it to be markdown"
+    },
+    {
+      "startSeconds": 481.84,
+      "text": "other useful shortcuts that you'll want"
+    },
+    {
+      "startSeconds": 483.52,
+      "text": "to know i'll want to be able to run this"
+    },
+    {
+      "startSeconds": 485.84,
+      "text": "ctrl enter runs it in place and then"
+    },
+    {
+      "startSeconds": 489.039,
+      "text": "shift enter will run the cell and then"
+    },
+    {
+      "startSeconds": 491.12,
+      "text": "jump to the next one just to make this"
+    },
+    {
+      "startSeconds": 492.879,
+      "text": "deeter too i'm going to add breaks"
+    },
+    {
+      "startSeconds": 494.879,
+      "text": "between each of these lines"
+    },
+    {
+      "startSeconds": 497.12,
+      "text": "all right and then control"
+    },
+    {
+      "startSeconds": 499.919,
+      "text": "plus enter"
+    },
+    {
+      "startSeconds": 502.4,
+      "text": "is run cell"
+    },
+    {
+      "startSeconds": 504.479,
+      "text": "and stay on cell"
+    },
+    {
+      "startSeconds": 507.12,
+      "text": "shift plus enter so you're going to be"
+    },
+    {
+      "startSeconds": 509.68,
+      "text": "holding shift pressing enter is"
+    },
+    {
+      "startSeconds": 512.159,
+      "text": "run cell"
+    },
+    {
+      "startSeconds": 514.159,
+      "text": "and go to next so this is just nicer"
+    },
+    {
+      "startSeconds": 516.479,
+      "text": "like when you don't have to take your"
+    },
+    {
+      "startSeconds": 517.919,
+      "text": "hands off the keyboard it's nice and"
+    },
+    {
+      "startSeconds": 519.12,
+      "text": "then happen to go up here and clicking"
+    },
+    {
+      "startSeconds": 520.64,
+      "text": "run"
+    },
+    {
+      "startSeconds": 521.519,
+      "text": "but you can always do this so shift"
+    },
+    {
+      "startSeconds": 524.08,
+      "text": "enter and again i'm going to just want"
+    },
+    {
+      "startSeconds": 526.08,
+      "text": "to create some breaks another thing i"
+    },
+    {
+      "startSeconds": 528.32,
+      "text": "recommend i always love using markdown"
+    },
+    {
+      "startSeconds": 530.64,
+      "text": "within my jupyter notebooks just makes"
+    },
+    {
+      "startSeconds": 532.64,
+      "text": "things neater so getting a hang of"
+    },
+    {
+      "startSeconds": 534.32,
+      "text": "markdown is definitely worthwhile i"
+    },
+    {
+      "startSeconds": 536.959,
+      "text": "think one other thing to keep in mind is"
+    },
+    {
+      "startSeconds": 539.44,
+      "text": "that if you go into edit one thing that"
+    },
+    {
+      "startSeconds": 541.36,
+      "text": "i find pretty useful is find and replace"
+    },
+    {
+      "startSeconds": 543.76,
+      "text": "so let's say you had a data frame called"
+    },
+    {
+      "startSeconds": 545.839,
+      "text": "df you could change it to maybe a more"
+    },
+    {
+      "startSeconds": 548.16,
+      "text": "descriptive name like social df or"
+    },
+    {
+      "startSeconds": 550.959,
+      "text": "something like that and you could"
+    },
+    {
+      "startSeconds": 552.64,
+      "text": "replace all batches you can use regexes"
+    },
+    {
+      "startSeconds": 555.2,
+      "text": "within this so find and replace often is"
+    },
+    {
+      "startSeconds": 557.279,
+      "text": "useful too it's not really a shortcut a"
+    },
+    {
+      "startSeconds": 559.44,
+      "text": "useful command so i'll just add that i"
+    },
+    {
+      "startSeconds": 562.16,
+      "text": "think that covers the shortcuts that i"
+    },
+    {
+      "startSeconds": 563.76,
+      "text": "want to cover so the third tip we're"
+    },
+    {
+      "startSeconds": 566.56,
+      "text": "going to cover is pandas i'll say"
+    },
+    {
+      "startSeconds": 569.04,
+      "text": "changing"
+    },
+    {
+      "startSeconds": 571.68,
+      "text": "pandas"
+    },
+    {
+      "startSeconds": 573.04,
+      "text": "display"
+    },
+    {
+      "startSeconds": 574.64,
+      "text": "options"
+    },
+    {
+      "startSeconds": 576.8,
+      "text": "make some cells below alrighty so what"
+    },
+    {
+      "startSeconds": 580,
+      "text": "do i mean by changing panna's display"
+    },
+    {
+      "startSeconds": 582.32,
+      "text": "options if we go back to one of our"
+    },
+    {
+      "startSeconds": 584.72,
+      "text": "previous tips if i look at ls"
+    },
+    {
+      "startSeconds": 587.279,
+      "text": "we see we have this so this csv called"
+    },
+    {
+      "startSeconds": 590.16,
+      "text": "social media data all so i'm going to"
+    },
+    {
+      "startSeconds": 592.24,
+      "text": "load that into a data frame real quick"
+    },
+    {
+      "startSeconds": 596.24,
+      "text": "so import pandas pd"
+    },
+    {
+      "startSeconds": 598.399,
+      "text": "and i'll do df equals pd dot read csv"
+    },
+    {
+      "startSeconds": 603.12,
+      "text": "social media data"
+    },
+    {
+      "startSeconds": 605.44,
+      "text": "all dot csv run that df.head"
+    },
+    {
+      "startSeconds": 609.68,
+      "text": "this is telling me all sorts of stats"
+    },
+    {
+      "startSeconds": 611.92,
+      "text": "based on the date of how many subs i"
+    },
+    {
+      "startSeconds": 613.839,
+      "text": "have how many views i have has"
+    },
+    {
+      "startSeconds": 615.68,
+      "text": "everything got instagram followers on"
+    },
+    {
+      "startSeconds": 618,
+      "text": "twitter one thing we should know is by"
+    },
+    {
+      "startSeconds": 621.279,
+      "text": "doing df head it's just gonna list the"
+    },
+    {
+      "startSeconds": 623.519,
+      "text": "first five rows but let's say we wanted"
+    },
+    {
+      "startSeconds": 626,
+      "text": "to see the first 100 rows and i did df"
+    },
+    {
+      "startSeconds": 628.72,
+      "text": "head 100 well we see that it cuts off"
+    },
+    {
+      "startSeconds": 632.48,
+      "text": "and only lists 10 total rolls here and"
+    },
+    {
+      "startSeconds": 635.519,
+      "text": "the reason before that is panda's baked"
+    },
+    {
+      "startSeconds": 637.519,
+      "text": "in has a set max rose count so if you"
+    },
+    {
+      "startSeconds": 640.72,
+      "text": "exceed how many rows that is its maxrose"
+    },
+    {
+      "startSeconds": 643.44,
+      "text": "count it's not going to display it and"
+    },
+    {
+      "startSeconds": 645.36,
+      "text": "we can see what that is by doing the"
+    },
+    {
+      "startSeconds": 647.2,
+      "text": "following we do pd"
+    },
+    {
+      "startSeconds": 649.04,
+      "text": "dot options dot display and i don't"
+    },
+    {
+      "startSeconds": 652.48,
+      "text": "remember this type of thing off the top"
+    },
+    {
+      "startSeconds": 653.92,
+      "text": "of my head i was just reviewing these"
+    },
+    {
+      "startSeconds": 655.519,
+      "text": "before i made the video so"
+    },
+    {
+      "startSeconds": 658,
+      "text": "max rose what is that going to be equal"
+    },
+    {
+      "startSeconds": 660.16,
+      "text": "we see it's 60. so if i did df head of"
+    },
+    {
+      "startSeconds": 663.279,
+      "text": "let's say 50 everything's going to show"
+    },
+    {
+      "startSeconds": 665.36,
+      "text": "up here because it's below that max rose"
+    },
+    {
+      "startSeconds": 667.76,
+      "text": "count but if i do 75 you know it's going"
+    },
+    {
+      "startSeconds": 669.839,
+      "text": "to do what we just saw with 100. one"
+    },
+    {
+      "startSeconds": 671.92,
+      "text": "thing that's useful here is"
+    },
+    {
+      "startSeconds": 674.48,
+      "text": "we can switch this within our jupiter"
+    },
+    {
+      "startSeconds": 676.48,
+      "text": "notebook and sometimes this makes sense"
+    },
+    {
+      "startSeconds": 678.48,
+      "text": "sometimes it's better for jupiter"
+    },
+    {
+      "startSeconds": 680.079,
+      "text": "notebooks to cut this off for us we"
+    },
+    {
+      "startSeconds": 682.16,
+      "text": "could say something like pd options"
+    },
+    {
+      "startSeconds": 684.079,
+      "text": "display max rows equals so we can see it"
+    },
+    {
+      "startSeconds": 687.6,
+      "text": "by not having equals but if we add the"
+    },
+    {
+      "startSeconds": 689.279,
+      "text": "equals i can do something like 200 run"
+    },
+    {
+      "startSeconds": 692.16,
+      "text": "this and now if we run df head 100 again"
+    },
+    {
+      "startSeconds": 696.079,
+      "text": "we're going to be able to see every"
+    },
+    {
+      "startSeconds": 697.6,
+      "text": "single thing"
+    },
+    {
+      "startSeconds": 698.8,
+      "text": "in those first top 100 rows it's not"
+    },
+    {
+      "startSeconds": 701.92,
+      "text": "going to cut them off we're going to see"
+    },
+    {
+      "startSeconds": 703.36,
+      "text": "everything sometimes very very useful"
+    },
+    {
+      "startSeconds": 705.2,
+      "text": "especially if you're like working with a"
+    },
+    {
+      "startSeconds": 706.56,
+      "text": "data frame that only has 100 rows it's"
+    },
+    {
+      "startSeconds": 709.519,
+      "text": "nice to be able to see everything same"
+    },
+    {
+      "startSeconds": 711.839,
+      "text": "thing with columns actually so we can do"
+    },
+    {
+      "startSeconds": 713.839,
+      "text": "pd.options.display"
+    },
+    {
+      "startSeconds": 717.76,
+      "text": "columns"
+    },
+    {
+      "startSeconds": 719.36,
+      "text": "if i run that we see that 20 is the max"
+    },
+    {
+      "startSeconds": 722.48,
+      "text": "number of columns that we can have so"
+    },
+    {
+      "startSeconds": 724.88,
+      "text": "scroll all the way to the top the max"
+    },
+    {
+      "startSeconds": 727.36,
+      "text": "number of columns we can have is 20. in"
+    },
+    {
+      "startSeconds": 729.76,
+      "text": "this situation we don't actually have 20"
+    },
+    {
+      "startSeconds": 732,
+      "text": "so we see all the columns but just like"
+    },
+    {
+      "startSeconds": 734.48,
+      "text": "before let's say you had 50 columns and"
+    },
+    {
+      "startSeconds": 736.959,
+      "text": "you when you were exploring your data"
+    },
+    {
+      "startSeconds": 738.72,
+      "text": "you wanted to be able to see them all"
+    },
+    {
+      "startSeconds": 740.32,
+      "text": "you could set something like max columns"
+    },
+    {
+      "startSeconds": 742.399,
+      "text": "equals 50 and get everything contained"
+    },
+    {
+      "startSeconds": 744.88,
+      "text": "in that display just kind of for proof"
+    },
+    {
+      "startSeconds": 747.2,
+      "text": "if i did max columns equals three and i"
+    },
+    {
+      "startSeconds": 749.92,
+      "text": "run this rerun head we see get the index"
+    },
+    {
+      "startSeconds": 754.079,
+      "text": "you get the date and you get uploads"
+    },
+    {
+      "startSeconds": 755.92,
+      "text": "other useful display options that you"
+    },
+    {
+      "startSeconds": 757.76,
+      "text": "have within your fingertips pd.options"
+    },
+    {
+      "startSeconds": 762.88,
+      "text": "dot display"
+    },
+    {
+      "startSeconds": 765.2,
+      "text": "max"
+    },
+    {
+      "startSeconds": 766.399,
+      "text": "column"
+    },
+    {
+      "startSeconds": 767.44,
+      "text": "width"
+    },
+    {
+      "startSeconds": 769.2,
+      "text": "and i looked at a medium article to help"
+    },
+    {
+      "startSeconds": 771.04,
+      "text": "me kind of find some of these so i'll"
+    },
+    {
+      "startSeconds": 772.48,
+      "text": "link that in the description as well if"
+    },
+    {
+      "startSeconds": 774.32,
+      "text": "we just run this we see that the max"
+    },
+    {
+      "startSeconds": 776.56,
+      "text": "column width is 50. and so one thing to"
+    },
+    {
+      "startSeconds": 778.959,
+      "text": "note let's say you notice like some"
+    },
+    {
+      "startSeconds": 781.279,
+      "text": "really text rich columns that you have"
+    },
+    {
+      "startSeconds": 783.36,
+      "text": "are getting cut off well you could"
+    },
+    {
+      "startSeconds": 785.12,
+      "text": "change this parameter"
+    },
+    {
+      "startSeconds": 787.2,
+      "text": "to something like 200 and now it's gonna"
+    },
+    {
+      "startSeconds": 789.279,
+      "text": "be four times as wide at the max case"
+    },
+    {
+      "startSeconds": 792,
+      "text": "i'm not going to bother with this for"
+    },
+    {
+      "startSeconds": 793.6,
+      "text": "now because i don't need to change the"
+    },
+    {
+      "startSeconds": 795.2,
+      "text": "column width this is mostly numerical"
+    },
+    {
+      "startSeconds": 797.36,
+      "text": "information good thing to have in your"
+    },
+    {
+      "startSeconds": 799.44,
+      "text": "back pocket another useful one is going"
+    },
+    {
+      "startSeconds": 801.44,
+      "text": "to be pd.options.display.precision"
+    },
+    {
+      "startSeconds": 806.399,
+      "text": "so that is set to six in this case we"
+    },
+    {
+      "startSeconds": 809.36,
+      "text": "don't actually"
+    },
+    {
+      "startSeconds": 810.639,
+      "text": "use precision much i guess average likes"
+    },
+    {
+      "startSeconds": 813.12,
+      "text": "instagram is kind of a useful thing that"
+    },
+    {
+      "startSeconds": 815.519,
+      "text": "we do see some further precision but"
+    },
+    {
+      "startSeconds": 818.32,
+      "text": "what this is is how many floating points"
+    },
+    {
+      "startSeconds": 820.24,
+      "text": "that something will go to in this case"
+    },
+    {
+      "startSeconds": 822.32,
+      "text": "we're saying six is the max if i set"
+    },
+    {
+      "startSeconds": 825.44,
+      "text": "that to let's say two and then re-run"
+    },
+    {
+      "startSeconds": 828.399,
+      "text": "the head here we see"
+    },
+    {
+      "startSeconds": 830.8,
+      "text": "that in situations like average likes"
+    },
+    {
+      "startSeconds": 833.76,
+      "text": "instagram now we're only seeing two"
+    },
+    {
+      "startSeconds": 835.76,
+      "text": "decimal points instead of the three that"
+    },
+    {
+      "startSeconds": 838.16,
+      "text": "we saw before next tip"
+    },
+    {
+      "startSeconds": 841.68,
+      "text": "is going to be"
+    },
+    {
+      "startSeconds": 843.6,
+      "text": "setting up"
+    },
+    {
+      "startSeconds": 845.199,
+      "text": "alerts"
+    },
+    {
+      "startSeconds": 846.88,
+      "text": "in when cells finish i'll say"
+    },
+    {
+      "startSeconds": 850.399,
+      "text": "and so what do i mean by setting up"
+    },
+    {
+      "startSeconds": 852.079,
+      "text": "alerts when cells finish when we're"
+    },
+    {
+      "startSeconds": 853.76,
+      "text": "doing a lot of like complex process"
+    },
+    {
+      "startSeconds": 857.04,
+      "text": "intensive"
+    },
+    {
+      "startSeconds": 858.399,
+      "text": "jobs especially like machine learning"
+    },
+    {
+      "startSeconds": 860.24,
+      "text": "training jobs within our jupiter"
+    },
+    {
+      "startSeconds": 861.68,
+      "text": "notebooks they often take a while to run"
+    },
+    {
+      "startSeconds": 864.079,
+      "text": "so let's say we're building some sort of"
+    },
+    {
+      "startSeconds": 865.68,
+      "text": "natural language processing model and it"
+    },
+    {
+      "startSeconds": 867.68,
+      "text": "needs to train on a ton of data and it"
+    },
+    {
+      "startSeconds": 869.92,
+      "text": "might take two hours to run we don't"
+    },
+    {
+      "startSeconds": 871.92,
+      "text": "really like we'll run the cell and then"
+    },
+    {
+      "startSeconds": 873.76,
+      "text": "kind of like hope that it finishes"
+    },
+    {
+      "startSeconds": 875.519,
+      "text": "quickly enough but we'll probably go off"
+    },
+    {
+      "startSeconds": 877.199,
+      "text": "and do something else and won't really"
+    },
+    {
+      "startSeconds": 878.959,
+      "text": "be paying attention to that specific"
+    },
+    {
+      "startSeconds": 880.88,
+      "text": "cell maybe we come back six hours and"
+    },
+    {
+      "startSeconds": 882.639,
+      "text": "it's finally done but one thing that we"
+    },
+    {
+      "startSeconds": 884.16,
+      "text": "can do is we can set up alerts within"
+    },
+    {
+      "startSeconds": 886.48,
+      "text": "our operating system to send a kind of"
+    },
+    {
+      "startSeconds": 888.959,
+      "text": "pop-up when the job is done which"
+    },
+    {
+      "startSeconds": 891.68,
+      "text": "definitely can be pretty useful if you"
+    },
+    {
+      "startSeconds": 893.279,
+      "text": "want to work on other things while your"
+    },
+    {
+      "startSeconds": 895.12,
+      "text": "jupyter notebook sales are running all"
+    },
+    {
+      "startSeconds": 896.8,
+      "text": "right so to start this one what we're"
+    },
+    {
+      "startSeconds": 899.04,
+      "text": "going to need to do is we're going to"
+    },
+    {
+      "startSeconds": 900.639,
+      "text": "need to install pip"
+    },
+    {
+      "startSeconds": 902.959,
+      "text": "install"
+    },
+    {
+      "startSeconds": 904.16,
+      "text": "jupiter notify"
+    },
+    {
+      "startSeconds": 906.639,
+      "text": "as you can see that i already have this"
+    },
+    {
+      "startSeconds": 909.199,
+      "text": "next once we have jupyter notify we're"
+    },
+    {
+      "startSeconds": 911.92,
+      "text": "going to load it into our jupiter"
+    },
+    {
+      "startSeconds": 913.6,
+      "text": "notebook so we can do that by using the"
+    },
+    {
+      "startSeconds": 915.839,
+      "text": "magic line"
+    },
+    {
+      "startSeconds": 917.199,
+      "text": "load extension so this is kind of a"
+    },
+    {
+      "startSeconds": 918.8,
+      "text": "built-in special command jupyter"
+    },
+    {
+      "startSeconds": 921.199,
+      "text": "notebooks offer to us"
+    },
+    {
+      "startSeconds": 922.959,
+      "text": "so we're going to load in what we just"
+    },
+    {
+      "startSeconds": 924.399,
+      "text": "installed which is jupyter notify"
+    },
+    {
+      "startSeconds": 926.56,
+      "text": "and then to actually use it there's a"
+    },
+    {
+      "startSeconds": 928.32,
+      "text": "couple lines to keep in mind and you"
+    },
+    {
+      "startSeconds": 930.8,
+      "text": "know i always have to kind of remind"
+    },
+    {
+      "startSeconds": 932,
+      "text": "myself how to do this but if you start"
+    },
+    {
+      "startSeconds": 933.92,
+      "text": "using it enough it'll become kind of"
+    },
+    {
+      "startSeconds": 936.079,
+      "text": "more natural so we run percentage"
+    },
+    {
+      "startSeconds": 938.32,
+      "text": "percentage notify and this is basically"
+    },
+    {
+      "startSeconds": 940.16,
+      "text": "telling the cell hey when this cell"
+    },
+    {
+      "startSeconds": 942.48,
+      "text": "finishes let me know run something on my"
+    },
+    {
+      "startSeconds": 945.199,
+      "text": "system and tell my system to let me know"
+    },
+    {
+      "startSeconds": 947.68,
+      "text": "i'm done for the sake of an example i'm"
+    },
+    {
+      "startSeconds": 949.759,
+      "text": "going to import the time library of"
+    },
+    {
+      "startSeconds": 952.24,
+      "text": "python and i'm going to import the"
+    },
+    {
+      "startSeconds": 953.839,
+      "text": "random library and so we're just going"
+    },
+    {
+      "startSeconds": 955.759,
+      "text": "to run a random length job"
+    },
+    {
+      "startSeconds": 958.639,
+      "text": "and kind of just let us have a system"
+    },
+    {
+      "startSeconds": 960.56,
+      "text": "notification when it is done so i'm"
+    },
+    {
+      "startSeconds": 963.04,
+      "text": "going to say"
+    },
+    {
+      "startSeconds": 964.24,
+      "text": "r equals random dot rand int and let's"
+    },
+    {
+      "startSeconds": 968.079,
+      "text": "say we wanted this job to take anywhere"
+    },
+    {
+      "startSeconds": 970.48,
+      "text": "from 30 seconds to"
+    },
+    {
+      "startSeconds": 972.88,
+      "text": "60 seconds you could imagine in the"
+    },
+    {
+      "startSeconds": 975.839,
+      "text": "cases of training models this might be"
+    },
+    {
+      "startSeconds": 977.92,
+      "text": "three hours to six hours we don't know"
+    },
+    {
+      "startSeconds": 979.68,
+      "text": "exactly but for the of sake of an"
+    },
+    {
+      "startSeconds": 982.079,
+      "text": "example i'm going to do r equals random"
+    },
+    {
+      "startSeconds": 984.24,
+      "text": "random 30 to 60 and then i'm going to do"
+    },
+    {
+      "startSeconds": 986.48,
+      "text": "time dot sleep of whatever that random"
+    },
+    {
+      "startSeconds": 988.56,
+      "text": "number is and then i don't have to do"
+    },
+    {
+      "startSeconds": 990.959,
+      "text": "this but i'm just going to run like cell"
+    },
+    {
+      "startSeconds": 992.72,
+      "text": "finished executing at the the bottom i'm"
+    },
+    {
+      "startSeconds": 995.12,
+      "text": "going to print that out"
+    },
+    {
+      "startSeconds": 996.48,
+      "text": "so we can run this"
+    },
+    {
+      "startSeconds": 998.72,
+      "text": "line and kind of in the background i"
+    },
+    {
+      "startSeconds": 1001.44,
+      "text": "could let's say"
+    },
+    {
+      "startSeconds": 1002.959,
+      "text": "pop up you know like the github for this"
+    },
+    {
+      "startSeconds": 1005.68,
+      "text": "you know i could play around with things"
+    },
+    {
+      "startSeconds": 1008.88,
+      "text": "so i just realized that when i"
+    },
+    {
+      "startSeconds": 1011.6,
+      "text": "my screen recorder automatically turns"
+    },
+    {
+      "startSeconds": 1013.92,
+      "text": "on what's called focus assist so the"
+    },
+    {
+      "startSeconds": 1016,
+      "text": "notifications don't pop up properly so"
+    },
+    {
+      "startSeconds": 1018.48,
+      "text": "i'm going to go over here"
+    },
+    {
+      "startSeconds": 1020.639,
+      "text": "and i'm going to click on focus assist"
+    },
+    {
+      "startSeconds": 1023.36,
+      "text": "settings"
+    },
+    {
+      "startSeconds": 1024.64,
+      "text": "and i'm going to say off i want to get"
+    },
+    {
+      "startSeconds": 1026.64,
+      "text": "all notifications from your apps and"
+    },
+    {
+      "startSeconds": 1028.16,
+      "text": "contacts"
+    },
+    {
+      "startSeconds": 1029.76,
+      "text": "and"
+    },
+    {
+      "startSeconds": 1030.72,
+      "text": "i can exit out of this and now i'm going"
+    },
+    {
+      "startSeconds": 1032.64,
+      "text": "to run these two lines again"
+    },
+    {
+      "startSeconds": 1035.36,
+      "text": "and in the meantime so you can see kind"
+    },
+    {
+      "startSeconds": 1036.959,
+      "text": "of what's going on i'll shamelessly plug"
+    },
+    {
+      "startSeconds": 1041.039,
+      "text": "my website"
+    },
+    {
+      "startSeconds": 1044.6,
+      "text": "keithgalley.com"
+    },
+    {
+      "startSeconds": 1046.24,
+      "text": "it's kind of cool"
+    },
+    {
+      "startSeconds": 1047.919,
+      "text": "i made it with what's called web flow"
+    },
+    {
+      "startSeconds": 1051.039,
+      "text": "um"
+    },
+    {
+      "startSeconds": 1053.919,
+      "text": "yeah all sorts of fun stuff here"
+    },
+    {
+      "startSeconds": 1057.039,
+      "text": "look at that"
+    },
+    {
+      "startSeconds": 1057.82,
+      "text": "[Music]"
+    },
+    {
+      "startSeconds": 1059.679,
+      "text": "cell execution has finished so what's"
+    },
+    {
+      "startSeconds": 1061.76,
+      "text": "useful about this is i mean there's a"
+    },
+    {
+      "startSeconds": 1064.08,
+      "text": "couple things i can click on this and it"
+    },
+    {
+      "startSeconds": 1065.84,
+      "text": "will take me immediately back to my tab"
+    },
+    {
+      "startSeconds": 1067.84,
+      "text": "that has this open which is nice but"
+    },
+    {
+      "startSeconds": 1069.52,
+      "text": "just imagine that this isn't 30 to 60"
+    },
+    {
+      "startSeconds": 1071.44,
+      "text": "seconds this is two hours like we're"
+    },
+    {
+      "startSeconds": 1074.16,
+      "text": "doing something else like and just note"
+    },
+    {
+      "startSeconds": 1075.76,
+      "text": "that like this code right here would be"
+    },
+    {
+      "startSeconds": 1077.679,
+      "text": "kind of replaced by"
+    },
+    {
+      "startSeconds": 1079.679,
+      "text": "ml like model training or something like"
+    },
+    {
+      "startSeconds": 1082.08,
+      "text": "it could be whatever the biggest thing"
+    },
+    {
+      "startSeconds": 1083.76,
+      "text": "is that you put this percent percent"
+    },
+    {
+      "startSeconds": 1085.52,
+      "text": "notify at the top when you want it"
+    },
+    {
+      "startSeconds": 1087.28,
+      "text": "finished all right what else should we"
+    },
+    {
+      "startSeconds": 1088.96,
+      "text": "do in this video create a slideshow out"
+    },
+    {
+      "startSeconds": 1092.24,
+      "text": "of"
+    },
+    {
+      "startSeconds": 1093.2,
+      "text": "your notebook"
+    },
+    {
+      "startSeconds": 1095.6,
+      "text": "there's a few different things here so"
+    },
+    {
+      "startSeconds": 1097.36,
+      "text": "slides subside fragments skip and notes"
+    },
+    {
+      "startSeconds": 1099.679,
+      "text": "these are the five like options we have"
+    },
+    {
+      "startSeconds": 1101.44,
+      "text": "creating a slideshow with our jupiter"
+    },
+    {
+      "startSeconds": 1103.28,
+      "text": "notebook and so when i say create a"
+    },
+    {
+      "startSeconds": 1104.799,
+      "text": "slideshow like what the heck do i mean"
+    },
+    {
+      "startSeconds": 1106.72,
+      "text": "built into jupiter notebooks there's"
+    },
+    {
+      "startSeconds": 1108.88,
+      "text": "some useful options to access this we're"
+    },
+    {
+      "startSeconds": 1112.24,
+      "text": "going to want to go to view and then"
+    },
+    {
+      "startSeconds": 1114.48,
+      "text": "we're going to go to cell toolbar and"
+    },
+    {
+      "startSeconds": 1116.96,
+      "text": "then we're going to want to do slideshow"
+    },
+    {
+      "startSeconds": 1119.76,
+      "text": "and so if we do that we see cell toolbar"
+    },
+    {
+      "startSeconds": 1123.919,
+      "text": "slideshow we see we get like different"
+    },
+    {
+      "startSeconds": 1126.16,
+      "text": "options for slide types on all of these"
+    },
+    {
+      "startSeconds": 1129.36,
+      "text": "if we start specifying what we want each"
+    },
+    {
+      "startSeconds": 1131.679,
+      "text": "of these slide types to be"
+    },
+    {
+      "startSeconds": 1133.52,
+      "text": "it's like for example headers it makes"
+    },
+    {
+      "startSeconds": 1135.44,
+      "text": "sense to have as a slide but i'll make"
+    },
+    {
+      "startSeconds": 1138.16,
+      "text": "this a fragment so my typical strategy"
+    },
+    {
+      "startSeconds": 1141.039,
+      "text": "is to"
+    },
+    {
+      "startSeconds": 1142.08,
+      "text": "make the header a slide and make these"
+    },
+    {
+      "startSeconds": 1144.64,
+      "text": "slide types of the other stuff fragments"
+    },
+    {
+      "startSeconds": 1147.12,
+      "text": "and you'll see why in a second"
+    },
+    {
+      "startSeconds": 1150.799,
+      "text": "fragment"
+    },
+    {
+      "startSeconds": 1154,
+      "text": "fragment"
+    },
+    {
+      "startSeconds": 1157.039,
+      "text": "slide"
+    },
+    {
+      "startSeconds": 1158.88,
+      "text": "slide or i guess not slide that's a"
+    },
+    {
+      "startSeconds": 1162.84,
+      "text": "fragment slide"
+    },
+    {
+      "startSeconds": 1166.96,
+      "text": "fragment"
+    },
+    {
+      "startSeconds": 1168.48,
+      "text": "fragment there might be even shortcuts"
+    },
+    {
+      "startSeconds": 1170.08,
+      "text": "to do this but you only have to do this"
+    },
+    {
+      "startSeconds": 1172,
+      "text": "one so it's not the worst case"
+    },
+    {
+      "startSeconds": 1174.24,
+      "text": "fragment"
+    },
+    {
+      "startSeconds": 1176.84,
+      "text": "fragment fragment"
+    },
+    {
+      "startSeconds": 1180.24,
+      "text": "another slide"
+    },
+    {
+      "startSeconds": 1182.799,
+      "text": "fragment"
+    },
+    {
+      "startSeconds": 1184.48,
+      "text": "fragment and"
+    },
+    {
+      "startSeconds": 1186.64,
+      "text": "i'll make this a sub slide just so you"
+    },
+    {
+      "startSeconds": 1188.24,
+      "text": "can see what i mean when we create a sub"
+    },
+    {
+      "startSeconds": 1190.32,
+      "text": "slide slide"
+    },
+    {
+      "startSeconds": 1192.799,
+      "text": "fragment"
+    },
+    {
+      "startSeconds": 1194,
+      "text": "fragment okay so everything's specified"
+    },
+    {
+      "startSeconds": 1197.2,
+      "text": "now let's see what happens when we"
+    },
+    {
+      "startSeconds": 1200.32,
+      "text": "make a slideshow out of this so download"
+    },
+    {
+      "startSeconds": 1202.559,
+      "text": "as"
+    },
+    {
+      "startSeconds": 1203.44,
+      "text": "and so this is file"
+    },
+    {
+      "startSeconds": 1205.36,
+      "text": "download as"
+    },
+    {
+      "startSeconds": 1207.76,
+      "text": "and then"
+    },
+    {
+      "startSeconds": 1210.4,
+      "text": "reveal.js slides so this should work in"
+    },
+    {
+      "startSeconds": 1212.72,
+      "text": "any browser"
+    },
+    {
+      "startSeconds": 1215.12,
+      "text": "click that boy okay this is what i was"
+    },
+    {
+      "startSeconds": 1216.96,
+      "text": "expecting maybe we had to rerun it"
+    },
+    {
+      "startSeconds": 1219.679,
+      "text": "but i click on this if i hit down"
+    },
+    {
+      "startSeconds": 1222.72,
+      "text": "it pops"
+    },
+    {
+      "startSeconds": 1224.64,
+      "text": "up those fragments into the picture"
+    },
+    {
+      "startSeconds": 1227.36,
+      "text": "so we see now we have the pip install"
+    },
+    {
+      "startSeconds": 1229.12,
+      "text": "seaborn command"
+    },
+    {
+      "startSeconds": 1230.799,
+      "text": "if i hit up it removes it"
+    },
+    {
+      "startSeconds": 1233.52,
+      "text": "if i"
+    },
+    {
+      "startSeconds": 1234.64,
+      "text": "zoom out a little bit"
+    },
+    {
+      "startSeconds": 1240.32,
+      "text": "it's adding that fragment below so it's"
+    },
+    {
+      "startSeconds": 1242,
+      "text": "a little bit fidgety the slideshow"
+    },
+    {
+      "startSeconds": 1245.28,
+      "text": "but then if we hit"
+    },
+    {
+      "startSeconds": 1246.84,
+      "text": "right we get to a new slide hit down we"
+    },
+    {
+      "startSeconds": 1251.039,
+      "text": "see the fragments hit right again we're"
+    },
+    {
+      "startSeconds": 1253.919,
+      "text": "on our new slide hit down we start"
+    },
+    {
+      "startSeconds": 1256.64,
+      "text": "seeing fragments"
+    },
+    {
+      "startSeconds": 1259.679,
+      "text": "keep going"
+    },
+    {
+      "startSeconds": 1260.96,
+      "text": "keep going the one thing is i've been"
+    },
+    {
+      "startSeconds": 1263.76,
+      "text": "having trouble like it's not really"
+    },
+    {
+      "startSeconds": 1265.36,
+      "text": "resizing the screen so the reason i use"
+    },
+    {
+      "startSeconds": 1268.32,
+      "text": "sub slide versus fragment is when i"
+    },
+    {
+      "startSeconds": 1270.4,
+      "text": "start going off the screen i'll probably"
+    },
+    {
+      "startSeconds": 1271.919,
+      "text": "just change the parameter so that"
+    },
+    {
+      "startSeconds": 1273.84,
+      "text": "everything can fit so like a big"
+    },
+    {
+      "startSeconds": 1275.919,
+      "text": "parameter like df.head that shows a lot"
+    },
+    {
+      "startSeconds": 1278.559,
+      "text": "of information i might make that a sub"
+    },
+    {
+      "startSeconds": 1280.64,
+      "text": "slide instead of a fragment and i'll"
+    },
+    {
+      "startSeconds": 1282.24,
+      "text": "show you how those changes affect things"
+    },
+    {
+      "startSeconds": 1284.08,
+      "text": "in just a second sitting with alerts and"
+    },
+    {
+      "startSeconds": 1286.88,
+      "text": "commands like pip install jupyter notify"
+    },
+    {
+      "startSeconds": 1289.12,
+      "text": "we might want to just skip this"
+    },
+    {
+      "startSeconds": 1291.039,
+      "text": "or comment it out or delete the output"
+    },
+    {
+      "startSeconds": 1294.559,
+      "text": "just so it doesn't take up the entire"
+    },
+    {
+      "startSeconds": 1296.32,
+      "text": "space"
+    },
+    {
+      "startSeconds": 1299.28,
+      "text": "and then create a slideshow notebook"
+    },
+    {
+      "startSeconds": 1301.679,
+      "text": "cool so that is the slideshow in its"
+    },
+    {
+      "startSeconds": 1304.48,
+      "text": "core you can play around with things a"
+    },
+    {
+      "startSeconds": 1306.24,
+      "text": "bit so you can imagine like if you were"
+    },
+    {
+      "startSeconds": 1308.559,
+      "text": "let's say in a meeting like with your"
+    },
+    {
+      "startSeconds": 1310.24,
+      "text": "company"
+    },
+    {
+      "startSeconds": 1311.44,
+      "text": "this is a good quick way to have"
+    },
+    {
+      "startSeconds": 1312.96,
+      "text": "something like nicely prepared from just"
+    },
+    {
+      "startSeconds": 1314.72,
+      "text": "your jupiter notebook without having to"
+    },
+    {
+      "startSeconds": 1316.96,
+      "text": "set up you know a completely separate"
+    },
+    {
+      "startSeconds": 1319.44,
+      "text": "uh powerpoint presentation and like the"
+    },
+    {
+      "startSeconds": 1321.44,
+      "text": "nice thing about this is it evolves with"
+    },
+    {
+      "startSeconds": 1325.2,
+      "text": "your you know the code that you change"
+    },
+    {
+      "startSeconds": 1327.84,
+      "text": "you can keep playing around things and"
+    },
+    {
+      "startSeconds": 1329.28,
+      "text": "then like it does kind of annoy me"
+    },
+    {
+      "startSeconds": 1331.52,
+      "text": "having this view always here so"
+    },
+    {
+      "startSeconds": 1334.32,
+      "text": "you can save all this information"
+    },
+    {
+      "startSeconds": 1338.559,
+      "text": "but then do none oh"
+    },
+    {
+      "startSeconds": 1342.4,
+      "text": "do none here and it's back to normal but"
+    },
+    {
+      "startSeconds": 1345.039,
+      "text": "the way that the powerpoint saved is"
+    },
+    {
+      "startSeconds": 1347.2,
+      "text": "still there so that's powerpoint in"
+    },
+    {
+      "startSeconds": 1350.32,
+      "text": "jupyter notebooks"
+    },
+    {
+      "startSeconds": 1351.76,
+      "text": "all right i think that's all we're going"
+    },
+    {
+      "startSeconds": 1352.88,
+      "text": "to cover in this video hopefully these"
+    },
+    {
+      "startSeconds": 1354.24,
+      "text": "tips were helpful for you if you did"
+    },
+    {
+      "startSeconds": 1356.24,
+      "text": "enjoy this video and mean a lot to me if"
+    },
+    {
+      "startSeconds": 1357.76,
+      "text": "you threw it a big thumbs up and"
+    },
+    {
+      "startSeconds": 1359.44,
+      "text": "subscribe if you haven't already thanks"
+    },
+    {
+      "startSeconds": 1361.44,
+      "text": "again to our sponsor brilliant.org"
+    },
+    {
+      "startSeconds": 1364.24,
+      "text": "definitely check them out link in the"
+    },
+    {
+      "startSeconds": 1366.48,
+      "text": "description and first 200 people to sign"
+    },
+    {
+      "startSeconds": 1369.039,
+      "text": "up using that link can get 20 off an"
+    },
+    {
+      "startSeconds": 1371.44,
+      "text": "annual subscription as always check me"
+    },
+    {
+      "startSeconds": 1374.159,
+      "text": "out on the other socials as well"
+    },
+    {
+      "startSeconds": 1375.919,
+      "text": "instagram twitter tick talk till next"
+    },
+    {
+      "startSeconds": 1378.32,
+      "text": "time everyone this was fun but peace"
+    },
+    {
+      "startSeconds": 1381.84,
+      "text": "out"
+    },
+    {
+      "startSeconds": 1383.14,
+      "text": "[Music]"
+    },
+    {
+      "startSeconds": 1395.919,
+      "text": "you"
+    }
+  ]
+}

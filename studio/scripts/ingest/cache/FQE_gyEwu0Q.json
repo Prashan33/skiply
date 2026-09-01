@@ -1,0 +1,1690 @@
+{
+  "id": "FQE_gyEwu0Q",
+  "url": "https://www.youtube.com/watch?v=FQE_gyEwu0Q",
+  "fetchedAt": "2026-09-01T04:10:27.214Z",
+  "captionKind": "asr",
+  "chapters": [
+    {
+      "startSeconds": 0,
+      "label": "Introduction to Terraform Secrets"
+    },
+    {
+      "startSeconds": 48,
+      "label": "Method 1: Using Variables and TFvars (Good)"
+    },
+    {
+      "startSeconds": 284,
+      "label": "Method 2: Using Environment Variables (Better)"
+    },
+    {
+      "startSeconds": 475,
+      "label": "Method 3: HashiCorp Vault Integration (Best)"
+    },
+    {
+      "startSeconds": 1052,
+      "label": "Benefits of HashiCorp Vault & Essential Security Practice"
+    },
+    {
+      "startSeconds": 1086,
+      "label": "Conclusion"
+    }
+  ],
+  "cues": [
+    {
+      "startSeconds": 0.08,
+      "text": "hello Cloud Engineers I'm Jeremy Morgan"
+    },
+    {
+      "startSeconds": 2.44,
+      "text": "from code cloud and today we're focusing"
+    },
+    {
+      "startSeconds": 4.44,
+      "text": "on a key part of infrastructure's code"
+    },
+    {
+      "startSeconds": 6.919,
+      "text": "managing secrets and terraform whether"
+    },
+    {
+      "startSeconds": 9.32,
+      "text": "you're a beginner or an expert managing"
+    },
+    {
+      "startSeconds": 11.24,
+      "text": "secrets well is vital for secure"
+    },
+    {
+      "startSeconds": 13.2,
+      "text": "deployments today we're going to look at"
+    },
+    {
+      "startSeconds": 15.16,
+      "text": "three ways to store secrets and"
+    },
+    {
+      "startSeconds": 16.6,
+      "text": "terraform there's good with variables"
+    },
+    {
+      "startSeconds": 19.039,
+      "text": "and TF bars there's better with"
+    },
+    {
+      "startSeconds": 21.439,
+      "text": "environment variables and then best with"
+    },
+    {
+      "startSeconds": 23.92,
+      "text": "Hashi cor Vault integration now before"
+    },
+    {
+      "startSeconds": 26.599,
+      "text": "we start let me show you what to avoid"
+    },
+    {
+      "startSeconds": 28.56,
+      "text": "and I often see this in GitHub"
+    },
+    {
+      "startSeconds": 30.439,
+      "text": "repositories Secrets stored in plain"
+    },
+    {
+      "startSeconds": 32.719,
+      "text": "text in config files we don't ever want"
+    },
+    {
+      "startSeconds": 35.28,
+      "text": "to do this now if you've done this"
+    },
+    {
+      "startSeconds": 36.92,
+      "text": "before don't worry by the end of this"
+    },
+    {
+      "startSeconds": 38.84,
+      "text": "video you'll learn three secure ways to"
+    },
+    {
+      "startSeconds": 40.719,
+      "text": "manage secrets and terraform let's"
+    },
+    {
+      "startSeconds": 46.32,
+      "text": "begin now approach number one is going"
+    },
+    {
+      "startSeconds": 48.64,
+      "text": "to be variables and TF bars and I"
+    },
+    {
+      "startSeconds": 51.36,
+      "text": "consider that good it's not the safest"
+    },
+    {
+      "startSeconds": 54.079,
+      "text": "but it's good to learn for our"
+    },
+    {
+      "startSeconds": 55.359,
+      "text": "foundation"
+    },
+    {
+      "startSeconds": 60.96,
+      "text": "so first we'll create a variables. TF"
+    },
+    {
+      "startSeconds": 69.32,
+      "text": "file okay and in variables. TF we're"
+    },
+    {
+      "startSeconds": 71.84,
+      "text": "telling terraform we have these two"
+    },
+    {
+      "startSeconds": 73.88,
+      "text": "variables we don't know where the data"
+    },
+    {
+      "startSeconds": 75.68,
+      "text": "is coming from to populate them but we"
+    },
+    {
+      "startSeconds": 77.799,
+      "text": "want to make my SQL username and MySQL"
+    },
+    {
+      "startSeconds": 80.439,
+      "text": "password available to terraform and we"
+    },
+    {
+      "startSeconds": 83.6,
+      "text": "can see here we have a description the"
+    },
+    {
+      "startSeconds": 85.52,
+      "text": "type is string and insensitive equals"
+    },
+    {
+      "startSeconds": 87.96,
+      "text": "true now notice this line it's crucial"
+    },
+    {
+      "startSeconds": 90.72,
+      "text": "it tells terraform to mask this value in"
+    },
+    {
+      "startSeconds": 93.119,
+      "text": "logs and output so this basic protection"
+    },
+    {
+      "startSeconds": 96.72,
+      "text": "helps accidental"
+    },
+    {
+      "startSeconds": 99.52,
+      "text": "exposure now let's create our"
+    },
+    {
+      "startSeconds": 104.52,
+      "text": "main.tf okay now what we're doing here"
+    },
+    {
+      "startSeconds": 106.64,
+      "text": "is actually a big breach of security"
+    },
+    {
+      "startSeconds": 109.399,
+      "text": "however we're doing this for"
+    },
+    {
+      "startSeconds": 110.32,
+      "text": "demonstration purposes so I'm creating a"
+    },
+    {
+      "startSeconds": 112.479,
+      "text": "resource named local file and that is"
+    },
+    {
+      "startSeconds": 115.32,
+      "text": "named credentials file what it's going"
+    },
+    {
+      "startSeconds": 117,
+      "text": "to do is it's going to create a file"
+    },
+    {
+      "startSeconds": 119,
+      "text": "called MySQL _ credentials. text and"
+    },
+    {
+      "startSeconds": 122.28,
+      "text": "it's going to write out these values to"
+    },
+    {
+      "startSeconds": 124.2,
+      "text": "that text file something we would never"
+    },
+    {
+      "startSeconds": 126.439,
+      "text": "ever want to do right but we're doing"
+    },
+    {
+      "startSeconds": 127.88,
+      "text": "that so that we can prove that these"
+    },
+    {
+      "startSeconds": 130.039,
+      "text": "values are being taken from the"
+    },
+    {
+      "startSeconds": 131.879,
+      "text": "different sources and being written to"
+    },
+    {
+      "startSeconds": 133.92,
+      "text": "this file so it's just good for"
+    },
+    {
+      "startSeconds": 135.64,
+      "text": "demonstration"
+    },
+    {
+      "startSeconds": 137.239,
+      "text": "purposes so I should be able to run this"
+    },
+    {
+      "startSeconds": 139.959,
+      "text": "and it should be able to grab the"
+    },
+    {
+      "startSeconds": 141.64,
+      "text": "username and password and write it to a"
+    },
+    {
+      "startSeconds": 143.92,
+      "text": "text file right let's see if what"
+    },
+    {
+      "startSeconds": 146.36,
+      "text": "happens when we run right now we'll do a"
+    },
+    {
+      "startSeconds": 148.64,
+      "text": "terraform a knit"
+    },
+    {
+      "startSeconds": 155.44,
+      "text": "and then terraform"
+    },
+    {
+      "startSeconds": 157.36,
+      "text": "plan now you see here it's asking us for"
+    },
+    {
+      "startSeconds": 160.04,
+      "text": "a MySQL password right so we need to"
+    },
+    {
+      "startSeconds": 162.8,
+      "text": "type in a username and password for"
+    },
+    {
+      "startSeconds": 165.519,
+      "text": "this and we'll just type in"
+    },
+    {
+      "startSeconds": 168.68,
+      "text": "password here's a MySQL username we'll"
+    },
+    {
+      "startSeconds": 171.319,
+      "text": "type in user Etc right so variables TF"
+    },
+    {
+      "startSeconds": 175.44,
+      "text": "is telling terraform hey you've got"
+    },
+    {
+      "startSeconds": 177.68,
+      "text": "these variables you need to get them"
+    },
+    {
+      "startSeconds": 179.12,
+      "text": "terraform is isn't seeing any source for"
+    },
+    {
+      "startSeconds": 180.92,
+      "text": "it so it's asking us when we run"
+    },
+    {
+      "startSeconds": 183.2,
+      "text": "terraform"
+    },
+    {
+      "startSeconds": 184.68,
+      "text": "plan so what we're going to do is store"
+    },
+    {
+      "startSeconds": 186.879,
+      "text": "the secrets in a TF bars file that way"
+    },
+    {
+      "startSeconds": 189.04,
+      "text": "we don't have to remember it and type it"
+    },
+    {
+      "startSeconds": 190.76,
+      "text": "in every time now in terraform TF bars"
+    },
+    {
+      "startSeconds": 194.68,
+      "text": "we have data for those two variables"
+    },
+    {
+      "startSeconds": 196.879,
+      "text": "that we've created we have Jeremy and"
+    },
+    {
+      "startSeconds": 199.159,
+      "text": "then password 123 because we're being"
+    },
+    {
+      "startSeconds": 201.44,
+      "text": "super secure here right so let's try"
+    },
+    {
+      "startSeconds": 203.959,
+      "text": "this"
+    },
+    {
+      "startSeconds": 205.319,
+      "text": "now we'll do a terraform apply"
+    },
+    {
+      "startSeconds": 210.84,
+      "text": "and you'll notice here that it's asking"
+    },
+    {
+      "startSeconds": 212.48,
+      "text": "us if we want to perform these actions"
+    },
+    {
+      "startSeconds": 214.68,
+      "text": "but it's not asking us for the MySQL"
+    },
+    {
+      "startSeconds": 217.08,
+      "text": "username or MySQL password anymore"
+    },
+    {
+      "startSeconds": 219.28,
+      "text": "because it found it in"
+    },
+    {
+      "startSeconds": 221.28,
+      "text": "tfrs so I'm going to type in yes to"
+    },
+    {
+      "startSeconds": 223.519,
+      "text": "write"
+    },
+    {
+      "startSeconds": 225.159,
+      "text": "this and here's our file with our MySQL"
+    },
+    {
+      "startSeconds": 228.08,
+      "text": "username of Jeremy and the password of"
+    },
+    {
+      "startSeconds": 230.319,
+      "text": "123 so it's taking these variables from"
+    },
+    {
+      "startSeconds": 233.76,
+      "text": "this TF bars file and using them so if"
+    },
+    {
+      "startSeconds": 236.48,
+      "text": "we we were actually connecting to a"
+    },
+    {
+      "startSeconds": 238.04,
+      "text": "MySQL server here it would be using this"
+    },
+    {
+      "startSeconds": 240.72,
+      "text": "username and password to connect to it"
+    },
+    {
+      "startSeconds": 242.92,
+      "text": "which is"
+    },
+    {
+      "startSeconds": 244.4,
+      "text": "great so this is one method of storing"
+    },
+    {
+      "startSeconds": 246.959,
+      "text": "Secrets now you're still storing secrets"
+    },
+    {
+      "startSeconds": 249.72,
+      "text": "in a plain text file so it's not that"
+    },
+    {
+      "startSeconds": 252.319,
+      "text": "great and you'll want to add this"
+    },
+    {
+      "startSeconds": 254.4,
+      "text": "terraform dotf bars or whatever you name"
+    },
+    {
+      "startSeconds": 256.799,
+      "text": "it you'll want to add that to your get"
+    },
+    {
+      "startSeconds": 258.359,
+      "text": "ignore so that it's not stored in your"
+    },
+    {
+      "startSeconds": 262.199,
+      "text": "repository so this approach is better"
+    },
+    {
+      "startSeconds": 264.36,
+      "text": "than hardcoding secrets into your config"
+    },
+    {
+      "startSeconds": 266.32,
+      "text": "files but there are risks the secrets"
+    },
+    {
+      "startSeconds": 268.919,
+      "text": "are still stored and plain text on your"
+    },
+    {
+      "startSeconds": 271.039,
+      "text": "file system and that's why I said you"
+    },
+    {
+      "startSeconds": 272.96,
+      "text": "should always add the TF bars to your G"
+    },
+    {
+      "startSeconds": 275.32,
+      "text": "ignore"
+    },
+    {
+      "startSeconds": 276.8,
+      "text": "file now let's level up our security"
+    },
+    {
+      "startSeconds": 279.28,
+      "text": "game instead of storing secrets in files"
+    },
+    {
+      "startSeconds": 281.84,
+      "text": "we can use environment"
+    },
+    {
+      "startSeconds": 284.32,
+      "text": "variables so I'm going to delete this"
+    },
+    {
+      "startSeconds": 286.56,
+      "text": "terraform TFS"
+    },
+    {
+      "startSeconds": 291.63,
+      "text": "[Music]"
+    },
+    {
+      "startSeconds": 294.199,
+      "text": "file so terraform is still going to have"
+    },
+    {
+      "startSeconds": 296.72,
+      "text": "to go out and look for my SQL username"
+    },
+    {
+      "startSeconds": 298.8,
+      "text": "and my SQL password"
+    },
+    {
+      "startSeconds": 300.199,
+      "text": "what we're going to do is store them as"
+    },
+    {
+      "startSeconds": 301.96,
+      "text": "environment variables on our"
+    },
+    {
+      "startSeconds": 304.84,
+      "text": "system here's how we'll do"
+    },
+    {
+      "startSeconds": 308,
+      "text": "that so notice here I'm typing in export"
+    },
+    {
+      "startSeconds": 312.72,
+      "text": "TF barcor MySQL username equals Jeremy 2"
+    },
+    {
+      "startSeconds": 317.4,
+      "text": "and I'm changing that so that we can see"
+    },
+    {
+      "startSeconds": 319.08,
+      "text": "the change when it writes it to the text"
+    },
+    {
+      "startSeconds": 321.24,
+      "text": "file so notice this Capital TF uncore"
+    },
+    {
+      "startSeconds": 325.319,
+      "text": "Capital Vore prefix that I have here so"
+    },
+    {
+      "startSeconds": 329.759,
+      "text": "any of your environment variables that"
+    },
+    {
+      "startSeconds": 331.12,
+      "text": "are prefixed with this terraform will"
+    },
+    {
+      "startSeconds": 333.6,
+      "text": "pick those up read them and use them and"
+    },
+    {
+      "startSeconds": 336.16,
+      "text": "when terraform uses it it just removes"
+    },
+    {
+      "startSeconds": 338.479,
+      "text": "this"
+    },
+    {
+      "startSeconds": 339.36,
+      "text": "tfv part of it and only the MySQL"
+    },
+    {
+      "startSeconds": 342.199,
+      "text": "username so as far as terraform is"
+    },
+    {
+      "startSeconds": 344.12,
+      "text": "concerned this TF barcor MySQL uncore"
+    },
+    {
+      "startSeconds": 348.4,
+      "text": "username is"
+    },
+    {
+      "startSeconds": 350.24,
+      "text": "actually MySQL username anytime it goes"
+    },
+    {
+      "startSeconds": 354.08,
+      "text": "to use it so we will store this"
+    },
+    {
+      "startSeconds": 356.4,
+      "text": "environment variable here"
+    },
+    {
+      "startSeconds": 361.16,
+      "text": "and then I'm going to do the same thing"
+    },
+    {
+      "startSeconds": 362.479,
+      "text": "for"
+    },
+    {
+      "startSeconds": 369.199,
+      "text": "password and for the password I'm going"
+    },
+    {
+      "startSeconds": 371.319,
+      "text": "to say we're going to get more secure"
+    },
+    {
+      "startSeconds": 373.8,
+      "text": "than last time and say password 1 2 3"
+    },
+    {
+      "startSeconds": 378.36,
+      "text": "4 now we have both of these variables"
+    },
+    {
+      "startSeconds": 381.24,
+      "text": "here so we should be able to run"
+    },
+    {
+      "startSeconds": 383.4,
+      "text": "terraform again and it will look for"
+    },
+    {
+      "startSeconds": 386.479,
+      "text": "different sources for these two"
+    },
+    {
+      "startSeconds": 388.12,
+      "text": "variables and variables. TS and it's"
+    },
+    {
+      "startSeconds": 390.36,
+      "text": "going to find these two environment"
+    },
+    {
+      "startSeconds": 392.28,
+      "text": "variables that I just"
+    },
+    {
+      "startSeconds": 394.56,
+      "text": "created so we're going to do a terraform"
+    },
+    {
+      "startSeconds": 400.36,
+      "text": "plan and we don't see any big errors"
+    },
+    {
+      "startSeconds": 404.319,
+      "text": "there so we're going to say terraform"
+    },
+    {
+      "startSeconds": 411.599,
+      "text": "apply now you'll notice here we go with"
+    },
+    {
+      "startSeconds": 414.759,
+      "text": "a prompt and this is the basic prompt"
+    },
+    {
+      "startSeconds": 417,
+      "text": "that we always get when we run terraform"
+    },
+    {
+      "startSeconds": 418.72,
+      "text": "apply right the yes but it's not"
+    },
+    {
+      "startSeconds": 421.12,
+      "text": "prompting us for a MySQL username or a"
+    },
+    {
+      "startSeconds": 423.44,
+      "text": "MySQL password if it did then we'd know"
+    },
+    {
+      "startSeconds": 426.16,
+      "text": "that it doesn't have these two variables"
+    },
+    {
+      "startSeconds": 428.16,
+      "text": "populated since it didn't prompt us then"
+    },
+    {
+      "startSeconds": 430.599,
+      "text": "it obviously knew where to find"
+    },
+    {
+      "startSeconds": 433.199,
+      "text": "it and here we go we've got our new"
+    },
+    {
+      "startSeconds": 436.28,
+      "text": "values written into that MySQL"
+    },
+    {
+      "startSeconds": 438.36,
+      "text": "credentials. text so this is a step"
+    },
+    {
+      "startSeconds": 442.4,
+      "text": "forward"
+    },
+    {
+      "startSeconds": 444.36,
+      "text": "right so this way is better than the"
+    },
+    {
+      "startSeconds": 446.599,
+      "text": "previous one right because the secrets"
+    },
+    {
+      "startSeconds": 448.199,
+      "text": "aren't stored in any files"
+    },
+    {
+      "startSeconds": 450.12,
+      "text": "the environment variables only exist on"
+    },
+    {
+      "startSeconds": 452.44,
+      "text": "your current session on your current"
+    },
+    {
+      "startSeconds": 454.16,
+      "text": "machine so there's no risk of"
+    },
+    {
+      "startSeconds": 456.84,
+      "text": "accidentally committing them to Version"
+    },
+    {
+      "startSeconds": 458.56,
+      "text": "Control or anything like"
+    },
+    {
+      "startSeconds": 461.72,
+      "text": "that so terraform is now extracting"
+    },
+    {
+      "startSeconds": 464.52,
+      "text": "these values from our environment"
+    },
+    {
+      "startSeconds": 466.96,
+      "text": "variables and this is a better way of"
+    },
+    {
+      "startSeconds": 469.44,
+      "text": "handling Secrets but what if we need to"
+    },
+    {
+      "startSeconds": 471.919,
+      "text": "share these secrets across the team well"
+    },
+    {
+      "startSeconds": 474.44,
+      "text": "this brings us to our best practice so"
+    },
+    {
+      "startSeconds": 476.52,
+      "text": "I've show you good and better now we're"
+    },
+    {
+      "startSeconds": 478.72,
+      "text": "going to best which is going to be hashy"
+    },
+    {
+      "startSeconds": 480.8,
+      "text": "core Vault so I'm going to install hashy"
+    },
+    {
+      "startSeconds": 484.44,
+      "text": "core Vault on my machine according to"
+    },
+    {
+      "startSeconds": 486.319,
+      "text": "the instructions on the website and then"
+    },
+    {
+      "startSeconds": 488,
+      "text": "we're going to jump"
+    },
+    {
+      "startSeconds": 489.44,
+      "text": "in this is where things get really"
+    },
+    {
+      "startSeconds": 491.479,
+      "text": "interesting Hashi cor vault is a"
+    },
+    {
+      "startSeconds": 493.28,
+      "text": "dedicated Secrets management solution"
+    },
+    {
+      "startSeconds": 495.319,
+      "text": "that integrates beautifully with"
+    },
+    {
+      "startSeconds": 497.96,
+      "text": "terraform we've downloaded and installed"
+    },
+    {
+      "startSeconds": 500.199,
+      "text": "Vault on this machine so I'll create"
+    },
+    {
+      "startSeconds": 501.96,
+      "text": "another terminal here and we'll start up"
+    },
+    {
+      "startSeconds": 503.72,
+      "text": "the"
+    },
+    {
+      "startSeconds": 504.8,
+      "text": "server okay so now I've got Vault"
+    },
+    {
+      "startSeconds": 506.96,
+      "text": "installed I can talk Vault version"
+    },
+    {
+      "startSeconds": 510.84,
+      "text": "and it shows the version of hashy core"
+    },
+    {
+      "startSeconds": 512.719,
+      "text": "Vault that I'm"
+    },
+    {
+      "startSeconds": 513.8,
+      "text": "using great now what we need to do is we"
+    },
+    {
+      "startSeconds": 518.76,
+      "text": "need to change a few"
+    },
+    {
+      "startSeconds": 520.839,
+      "text": "things so I will need to create another"
+    },
+    {
+      "startSeconds": 523.32,
+      "text": "terminal to"
+    },
+    {
+      "startSeconds": 526.24,
+      "text": "start and this is the terminal that"
+    },
+    {
+      "startSeconds": 528.24,
+      "text": "we're going to run hashy cor vault in"
+    },
+    {
+      "startSeconds": 530.48,
+      "text": "and I'm going to run it in a Dev"
+    },
+    {
+      "startSeconds": 533.92,
+      "text": "mode the reason I'm running this in Dev"
+    },
+    {
+      "startSeconds": 536.2,
+      "text": "mode is because in production mode"
+    },
+    {
+      "startSeconds": 538.44,
+      "text": "there's a little bit of difference with"
+    },
+    {
+      "startSeconds": 540.56,
+      "text": "uh the secrets and keys and how things"
+    },
+    {
+      "startSeconds": 542.24,
+      "text": "are set up but I just want to show this"
+    },
+    {
+      "startSeconds": 544.48,
+      "text": "for demonstration how you can access"
+    },
+    {
+      "startSeconds": 546.839,
+      "text": "Vault so I'll say"
+    },
+    {
+      "startSeconds": 549.8,
+      "text": "Vault"
+    },
+    {
+      "startSeconds": 551.399,
+      "text": "server"
+    },
+    {
+      "startSeconds": 555.48,
+      "text": "Dev there we go now we have an"
+    },
+    {
+      "startSeconds": 558.24,
+      "text": "application running"
+    },
+    {
+      "startSeconds": 560.24,
+      "text": "here and we can see that it says you may"
+    },
+    {
+      "startSeconds": 563.56,
+      "text": "need to set the following environment"
+    },
+    {
+      "startSeconds": 565.2,
+      "text": "variables which we do need to set this"
+    },
+    {
+      "startSeconds": 572.32,
+      "text": "and I will copy"
+    },
+    {
+      "startSeconds": 574.56,
+      "text": "that now you can see here we have an"
+    },
+    {
+      "startSeconds": 576.959,
+      "text": "unseal key and a root token we're going"
+    },
+    {
+      "startSeconds": 578.839,
+      "text": "to need this root token in order to"
+    },
+    {
+      "startSeconds": 581.32,
+      "text": "connect to the"
+    },
+    {
+      "startSeconds": 582.8,
+      "text": "Vault okay and we'll go back to our"
+    },
+    {
+      "startSeconds": 584.72,
+      "text": "other terminal here and we will add that"
+    },
+    {
+      "startSeconds": 587.32,
+      "text": "Vault address to our environment"
+    },
+    {
+      "startSeconds": 591.92,
+      "text": "variables and now we need to type in"
+    },
+    {
+      "startSeconds": 593.88,
+      "text": "Vault Secrets enable Das path equals"
+    },
+    {
+      "startSeconds": 596.519,
+      "text": "secret KV Now secret might already be"
+    },
+    {
+      "startSeconds": 599,
+      "text": "created"
+    },
+    {
+      "startSeconds": 599.959,
+      "text": "as it is in this"
+    },
+    {
+      "startSeconds": 601.56,
+      "text": "case says path is already in use at"
+    },
+    {
+      "startSeconds": 603.959,
+      "text": "secret so we can start storing things"
+    },
+    {
+      "startSeconds": 609.399,
+      "text": "there so I'm going to type"
+    },
+    {
+      "startSeconds": 612.68,
+      "text": "in following command Vault KV"
+    },
+    {
+      "startSeconds": 616.92,
+      "text": "put secret my app"
+    },
+    {
+      "startSeconds": 622.8,
+      "text": "database and I only have to do this one"
+    },
+    {
+      "startSeconds": 625.36,
+      "text": "time my SQL"
+    },
+    {
+      "startSeconds": 627.76,
+      "text": "username this time we're we're going to"
+    },
+    {
+      "startSeconds": 629.519,
+      "text": "be Bob 2"
+    },
+    {
+      "startSeconds": 633.12,
+      "text": "3 my SQL"
+    },
+    {
+      "startSeconds": 637.76,
+      "text": "password we're going to put"
+    },
+    {
+      "startSeconds": 642.36,
+      "text": "in super"
+    },
+    {
+      "startSeconds": 645.56,
+      "text": "secret and there we go now they're"
+    },
+    {
+      "startSeconds": 647.48,
+      "text": "stored in our vault and we can verify"
+    },
+    {
+      "startSeconds": 650.48,
+      "text": "that by typing in Vault KV"
+    },
+    {
+      "startSeconds": 654.12,
+      "text": "get"
+    },
+    {
+      "startSeconds": 655.88,
+      "text": "secret my app"
+    },
+    {
+      "startSeconds": 659.399,
+      "text": "database we can see here we have a SQL"
+    },
+    {
+      "startSeconds": 662.44,
+      "text": "username and password stored now in the"
+    },
+    {
+      "startSeconds": 665.44,
+      "text": "production version you won't be able to"
+    },
+    {
+      "startSeconds": 667.519,
+      "text": "do this Vault KV git unless you have the"
+    },
+    {
+      "startSeconds": 670.12,
+      "text": "proper permissions so that's one thing"
+    },
+    {
+      "startSeconds": 672.48,
+      "text": "that you might be thinking right now is"
+    },
+    {
+      "startSeconds": 674.24,
+      "text": "oh well can any of our developers just"
+    },
+    {
+      "startSeconds": 676.16,
+      "text": "type in Vault KV get secret no in a"
+    },
+    {
+      "startSeconds": 679.32,
+      "text": "production environment you wouldn't be"
+    },
+    {
+      "startSeconds": 681,
+      "text": "able to do that but right now we're set"
+    },
+    {
+      "startSeconds": 683.079,
+      "text": "as"
+    },
+    {
+      "startSeconds": 684.26,
+      "text": "[Music]"
+    },
+    {
+      "startSeconds": 685.72,
+      "text": "rout so we know we've got the secrets"
+    },
+    {
+      "startSeconds": 688.12,
+      "text": "stored in our vault right so this is off"
+    },
+    {
+      "startSeconds": 690.36,
+      "text": "on a server somewhere else so any"
+    },
+    {
+      "startSeconds": 692.68,
+      "text": "developer that's building a terraform"
+    },
+    {
+      "startSeconds": 694.399,
+      "text": "plan on their machine can get the access"
+    },
+    {
+      "startSeconds": 697.519,
+      "text": "to those"
+    },
+    {
+      "startSeconds": 698.76,
+      "text": "values so in our main TF we need to set"
+    },
+    {
+      "startSeconds": 701.8,
+      "text": "up a vault"
+    },
+    {
+      "startSeconds": 703.76,
+      "text": "provider and here's what our provider"
+    },
+    {
+      "startSeconds": 705.92,
+      "text": "looks like the provider's name is Vault"
+    },
+    {
+      "startSeconds": 708.2,
+      "text": "our address is going to be Local Host"
+    },
+    {
+      "startSeconds": 710.56,
+      "text": "8200 and then token is going to be VAR"
+    },
+    {
+      "startSeconds": 714.04,
+      "text": "Vault token but where does that come"
+    },
+    {
+      "startSeconds": 717.079,
+      "text": "from well we're going to have to set"
+    },
+    {
+      "startSeconds": 718.8,
+      "text": "another environment"
+    },
+    {
+      "startSeconds": 720.68,
+      "text": "variable but we'll save this for"
+    },
+    {
+      "startSeconds": 723.48,
+      "text": "now now here's the magic part instead of"
+    },
+    {
+      "startSeconds": 726.44,
+      "text": "storing secrets in terraform will fetch"
+    },
+    {
+      "startSeconds": 728.56,
+      "text": "them from hashy cord Vault and what that"
+    },
+    {
+      "startSeconds": 731.079,
+      "text": "means is we no longer need these two"
+    },
+    {
+      "startSeconds": 735.279,
+      "text": "variables because they are going to be"
+    },
+    {
+      "startSeconds": 737.6,
+      "text": "retrieved from"
+    },
+    {
+      "startSeconds": 741.38,
+      "text": "[Music]"
+    },
+    {
+      "startSeconds": 745.88,
+      "text": "Vault however we do need that Vault"
+    },
+    {
+      "startSeconds": 748.48,
+      "text": "token so here in our main TF we have"
+    },
+    {
+      "startSeconds": 751.959,
+      "text": "that bar Vault token so we need to"
+    },
+    {
+      "startSeconds": 753.839,
+      "text": "create a variable space for"
+    },
+    {
+      "startSeconds": 759.959,
+      "text": "that and that's going to look like this"
+    },
+    {
+      "startSeconds": 762.079,
+      "text": "and notice we're marking this one as"
+    },
+    {
+      "startSeconds": 763.72,
+      "text": "sensitive equals true also and this is"
+    },
+    {
+      "startSeconds": 766.04,
+      "text": "going to be the Vault token that's just"
+    },
+    {
+      "startSeconds": 768.079,
+      "text": "used for"
+    },
+    {
+      "startSeconds": 772.959,
+      "text": "authentication now we need to set that"
+    },
+    {
+      "startSeconds": 775.079,
+      "text": "Vault"
+    },
+    {
+      "startSeconds": 775.66,
+      "text": "[Music]"
+    },
+    {
+      "startSeconds": 777.519,
+      "text": "token here's how we can do that we'll"
+    },
+    {
+      "startSeconds": 780.72,
+      "text": "type in"
+    },
+    {
+      "startSeconds": 783,
+      "text": "export TF bars again because this is"
+    },
+    {
+      "startSeconds": 786.12,
+      "text": "going to be a"
+    },
+    {
+      "startSeconds": 787.639,
+      "text": "terraform uh data field that we can"
+    },
+    {
+      "startSeconds": 792.12,
+      "text": "read Vault unor"
+    },
+    {
+      "startSeconds": 796.12,
+      "text": "token which is what we've named it"
+    },
+    {
+      "startSeconds": 799.199,
+      "text": "here and then this is going to be that"
+    },
+    {
+      "startSeconds": 801.639,
+      "text": "root token that we saw in our other"
+    },
+    {
+      "startSeconds": 804.44,
+      "text": "screen we scroll up here here's the root"
+    },
+    {
+      "startSeconds": 807.959,
+      "text": "token this this is going to be the value"
+    },
+    {
+      "startSeconds": 810.6,
+      "text": "that we store as an environment"
+    },
+    {
+      "startSeconds": 820.88,
+      "text": "variable there now terraform will be"
+    },
+    {
+      "startSeconds": 824.399,
+      "text": "able to look at variables TF and say hey"
+    },
+    {
+      "startSeconds": 827,
+      "text": "I need this Vault token I'll get the"
+    },
+    {
+      "startSeconds": 828.32,
+      "text": "Vault token from our environment"
+    },
+    {
+      "startSeconds": 831.399,
+      "text": "variables and then it's going to use it"
+    },
+    {
+      "startSeconds": 841.8,
+      "text": "so the last thing we need to do is in"
+    },
+    {
+      "startSeconds": 844.199,
+      "text": "order to fetch them from"
+    },
+    {
+      "startSeconds": 847.48,
+      "text": "vault is we need to"
+    },
+    {
+      "startSeconds": 852.759,
+      "text": "add this here so we've we've created The"
+    },
+    {
+      "startSeconds": 856.12,
+      "text": "Vault provider now we need to tell uh"
+    },
+    {
+      "startSeconds": 859.399,
+      "text": "terraform where in Vault this stuff is"
+    },
+    {
+      "startSeconds": 861.8,
+      "text": "stored and it's stored in secret my app"
+    },
+    {
+      "startSeconds": 863.959,
+      "text": "database which we created"
+    },
+    {
+      "startSeconds": 865.959,
+      "text": "earlier so now if we run this it won't"
+    },
+    {
+      "startSeconds": 869.199,
+      "text": "quite work right because it's still"
+    },
+    {
+      "startSeconds": 870.88,
+      "text": "looking for those old variables so let's"
+    },
+    {
+      "startSeconds": 873.72,
+      "text": "change"
+    },
+    {
+      "startSeconds": 878.47,
+      "text": "[Music]"
+    },
+    {
+      "startSeconds": 880.279,
+      "text": "this now instead of looking for"
+    },
+    {
+      "startSeconds": 882.44,
+      "text": "terraform variables you can see here"
+    },
+    {
+      "startSeconds": 884.56,
+      "text": "it's going into data which we've"
+    },
+    {
+      "startSeconds": 886.759,
+      "text": "specified up here Vault generic secret."
+    },
+    {
+      "startSeconds": 889.68,
+      "text": "database data and it's looking for my"
+    },
+    {
+      "startSeconds": 891.8,
+      "text": "SQL username and MySQL password so if we"
+    },
+    {
+      "startSeconds": 895.16,
+      "text": "were using this in our terraform plan to"
+    },
+    {
+      "startSeconds": 896.88,
+      "text": "connect to a mySQL database this this is"
+    },
+    {
+      "startSeconds": 899.24,
+      "text": "how we would grab these values but"
+    },
+    {
+      "startSeconds": 901.6,
+      "text": "instead we're writing it to the file for"
+    },
+    {
+      "startSeconds": 903.32,
+      "text": "demonstration purposes so now I'm going"
+    },
+    {
+      "startSeconds": 905.56,
+      "text": "to type in terraform AIT"
+    },
+    {
+      "startSeconds": 912.48,
+      "text": "again and we can see here that we have a"
+    },
+    {
+      "startSeconds": 915.759,
+      "text": "problem I made a"
+    },
+    {
+      "startSeconds": 917.44,
+      "text": "typo I'm leaving it in the"
+    },
+    {
+      "startSeconds": 921.32,
+      "text": "video we'll run terraform a"
+    },
+    {
+      "startSeconds": 924.68,
+      "text": "knit everything looks good we'll do a"
+    },
+    {
+      "startSeconds": 927.56,
+      "text": "terraform plan"
+    },
+    {
+      "startSeconds": 931.56,
+      "text": "and it says Vault token for"
+    },
+    {
+      "startSeconds": 933.639,
+      "text": "authentication what that means is we've"
+    },
+    {
+      "startSeconds": 935.8,
+      "text": "done something wrong here because here"
+    },
+    {
+      "startSeconds": 938.519,
+      "text": "in variables it's saying we need a vault"
+    },
+    {
+      "startSeconds": 941.8,
+      "text": "token right we've we've declared it in"
+    },
+    {
+      "startSeconds": 944.279,
+      "text": "variables. TF however terraform is not"
+    },
+    {
+      "startSeconds": 947,
+      "text": "able to find that data in here so we"
+    },
+    {
+      "startSeconds": 950.04,
+      "text": "will click out of"
+    },
+    {
+      "startSeconds": 952.48,
+      "text": "here and we are once again going to"
+    },
+    {
+      "startSeconds": 955.44,
+      "text": "establish that Vault token"
+    },
+    {
+      "startSeconds": 964.92,
+      "text": "and maybe I put it in wrong so we have"
+    },
+    {
+      "startSeconds": 968.079,
+      "text": "it in here under TF uncore Vore Vault"
+    },
+    {
+      "startSeconds": 971.519,
+      "text": "uncore token and then I'm going to grab"
+    },
+    {
+      "startSeconds": 973.959,
+      "text": "that"
+    },
+    {
+      "startSeconds": 975.36,
+      "text": "token from"
+    },
+    {
+      "startSeconds": 980.319,
+      "text": "here we go back"
+    },
+    {
+      "startSeconds": 987.079,
+      "text": "here and we'll do Terra for form plan"
+    },
+    {
+      "startSeconds": 991.959,
+      "text": "again okay and this time it doesn't ask"
+    },
+    {
+      "startSeconds": 994.279,
+      "text": "for it so there probably was a typo or"
+    },
+    {
+      "startSeconds": 997.44,
+      "text": "something in how I set that"
+    },
+    {
+      "startSeconds": 1000.839,
+      "text": "up just remember you need to put in"
+    },
+    {
+      "startSeconds": 1004.04,
+      "text": "uppercase"
+    },
+    {
+      "startSeconds": 1005.279,
+      "text": "TF underscore uppercase V underscore"
+    },
+    {
+      "startSeconds": 1010.04,
+      "text": "before that for it to be recognized by"
+    },
+    {
+      "startSeconds": 1012.12,
+      "text": "terraform now it looks"
+    },
+    {
+      "startSeconds": 1015,
+      "text": "like we are ready to go terraform plan"
+    },
+    {
+      "startSeconds": 1017.959,
+      "text": "goes so we'll do ter form"
+    },
+    {
+      "startSeconds": 1021.88,
+      "text": "apply and now the only thing it's"
+    },
+    {
+      "startSeconds": 1023.759,
+      "text": "prompting us for is the actions we'll"
+    },
+    {
+      "startSeconds": 1026.88,
+      "text": "put yes and it says"
+    },
+    {
+      "startSeconds": 1030.6,
+      "text": "complete and here we are we've got the"
+    },
+    {
+      "startSeconds": 1033.199,
+      "text": "values from Hashi cor Vault we've got"
+    },
+    {
+      "startSeconds": 1035.439,
+      "text": "Bob 123 password super secret and we're"
+    },
+    {
+      "startSeconds": 1039.16,
+      "text": "ready to"
+    },
+    {
+      "startSeconds": 1044,
+      "text": "go so it's now pulling our values from"
+    },
+    {
+      "startSeconds": 1046.76,
+      "text": "the Vault and we can verify that by"
+    },
+    {
+      "startSeconds": 1049.24,
+      "text": "looking at this file that we're writing"
+    },
+    {
+      "startSeconds": 1051.44,
+      "text": "to let's break down why this is so"
+    },
+    {
+      "startSeconds": 1053.799,
+      "text": "powerful you have centralized Secrets"
+    },
+    {
+      "startSeconds": 1056.12,
+      "text": "management F grained Access Control you"
+    },
+    {
+      "startSeconds": 1058.96,
+      "text": "can configure automatic secret rotation"
+    },
+    {
+      "startSeconds": 1061.6,
+      "text": "audit logging and much much"
+    },
+    {
+      "startSeconds": 1064.36,
+      "text": "more before we wrap up let's cover some"
+    },
+    {
+      "startSeconds": 1067.08,
+      "text": "essential security practices always"
+    },
+    {
+      "startSeconds": 1069.44,
+      "text": "encrypt your terraform State files"
+    },
+    {
+      "startSeconds": 1072.28,
+      "text": "always use Version Control but never"
+    },
+    {
+      "startSeconds": 1074.28,
+      "text": "commit secrets into that version control"
+    },
+    {
+      "startSeconds": 1077.159,
+      "text": "and Implement least privilege access"
+    },
+    {
+      "startSeconds": 1079.48,
+      "text": "when possible regularly rotate your"
+    },
+    {
+      "startSeconds": 1082.48,
+      "text": "secrets and enable audit logging and"
+    },
+    {
+      "startSeconds": 1085.84,
+      "text": "there you have it you now have three"
+    },
+    {
+      "startSeconds": 1087.96,
+      "text": "solid approaches to managing secrets in"
+    },
+    {
+      "startSeconds": 1089.76,
+      "text": "terraform from basic variable files to"
+    },
+    {
+      "startSeconds": 1092.159,
+      "text": "full-fledged Vault integration now if"
+    },
+    {
+      "startSeconds": 1094.48,
+      "text": "you found this helpful don't forget to"
+    },
+    {
+      "startSeconds": 1096.24,
+      "text": "hit that like button and subscribe for"
+    },
+    {
+      "startSeconds": 1097.919,
+      "text": "more infrastructures code content from"
+    },
+    {
+      "startSeconds": 1099.96,
+      "text": "code Cloud drop a comment below with"
+    },
+    {
+      "startSeconds": 1102.159,
+      "text": "your favorite Secrets management"
+    },
+    {
+      "startSeconds": 1103.72,
+      "text": "approach now if you found this helpful"
+    },
+    {
+      "startSeconds": 1106.039,
+      "text": "don't forget to hit that like button and"
+    },
+    {
+      "startSeconds": 1107.64,
+      "text": "subscribe for more structures code"
+    },
+    {
+      "startSeconds": 1109.679,
+      "text": "content from code Cloud drop a comment"
+    },
+    {
+      "startSeconds": 1112.2,
+      "text": "below with your favorite Secrets"
+    },
+    {
+      "startSeconds": 1113.6,
+      "text": "management approach"
+    },
+    {
+      "startSeconds": 1120.9,
+      "text": "[Music]"
+    }
+  ]
+}

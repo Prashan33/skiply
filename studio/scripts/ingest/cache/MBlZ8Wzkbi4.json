@@ -1,8 +1,950 @@
 {
   "id": "MBlZ8Wzkbi4",
   "url": "https://www.youtube.com/watch?v=MBlZ8Wzkbi4",
-  "fetchedAt": "2026-08-31T05:15:04.884Z",
-  "captionKind": "empty",
-  "chapters": [],
-  "cues": []
+  "fetchedAt": "2026-09-01T04:05:36.260Z",
+  "captionKind": "manual",
+  "chapters": [
+    {
+      "startSeconds": 0,
+      "label": "Intro"
+    },
+    {
+      "startSeconds": 52,
+      "label": "The Naive Way"
+    },
+    {
+      "startSeconds": 258,
+      "label": "The Better Way"
+    },
+    {
+      "startSeconds": 981,
+      "label": "Outro"
+    }
+  ],
+  "cues": [
+    {
+      "startSeconds": 0.04,
+      "text": "In this video, you're going to learn everything that there is to know about data fetching"
+    },
+    {
+      "startSeconds": 3.56,
+      "text": "in React, the modern way, which honestly is really important because as a React developer,"
+    },
+    {
+      "startSeconds": 8.2,
+      "text": "you're going to be fetching data a lot in your applications. Now, before we get into that,"
+    },
+    {
+      "startSeconds": 11.96,
+      "text": "there's two things that I want to mention. The first one is that if you didn't know, I also"
+    },
+    {
+      "startSeconds": 15.48,
+      "text": "have a course. It's called Project React, and it teaches you way more than I teach in this video,"
+    },
+    {
+      "startSeconds": 19.88,
+      "text": "and honestly, all of my other videos. It's going to show you how to build a real project"
+    },
+    {
+      "startSeconds": 23.8,
+      "text": "with React, a big and complex project, and it's going to teach you all of the things that you"
+    },
+    {
+      "startSeconds": 27.84,
+      "text": "would need to become a good React developer. You can find it in the first link in the description."
+    },
+    {
+      "startSeconds": 32.2,
+      "text": "The second thing is that I also have a newsletter that's all about React. It's called Import React,"
+    },
+    {
+      "startSeconds": 36.52,
+      "text": "and it's completely free, and it's delivered to your inbox every single week. You're also"
+    },
+    {
+      "startSeconds": 40.04,
+      "text": "going to be able to find that in the description. Cool. So now with those things being mentioned,"
+    },
+    {
+      "startSeconds": 44.4,
+      "text": "let's now dive into data fetching in React and learn how to do it the modern way. All right,"
+    },
+    {
+      "startSeconds": 52.12,
+      "text": "cool. So let's begin. Now, I already have a video on data fetching on this channel that"
+    },
+    {
+      "startSeconds": 56.12,
+      "text": "I did last year, and this code actually that you're seeing here is the code from that video,"
+    },
+    {
+      "startSeconds": 60.28,
+      "text": "just slightly modified a little bit. What we're going to do in this video is we're going to take"
+    },
+    {
+      "startSeconds": 63.96,
+      "text": "the code from that previous video, and we're going to bring it in the modern day and age,"
+    },
+    {
+      "startSeconds": 67.56,
+      "text": "and I'm going to show you better ways to fetch data, ways that I would actually recommend"
+    },
+    {
+      "startSeconds": 71.24,
+      "text": "that you do in your projects today. Because as you're going to see, the code that we have here,"
+    },
+    {
+      "startSeconds": 75.2,
+      "text": "the code that's also in my previous video is something that I like to call the naive way"
+    },
+    {
+      "startSeconds": 78.92,
+      "text": "of fetching data, and I would not recommend that you do this in a project today. However,"
+    },
+    {
+      "startSeconds": 83.24,
+      "text": "you need to know and understand how to do this, because it's very important to know how to get"
+    },
+    {
+      "startSeconds": 86.92,
+      "text": "from this to the actual recommended way to fetch data. So this is the code that we have, right, we"
+    },
+    {
+      "startSeconds": 91.6,
+      "text": "have a base URL over here, which is basically the place that we're actually getting our data from."
+    },
+    {
+      "startSeconds": 96.08,
+      "text": "And then we have a couple of state variables here that essentially handle everything that we would"
+    },
+    {
+      "startSeconds": 100.04,
+      "text": "need for data fetching, right, we have error, we have loading, we have posts, which is our actual"
+    },
+    {
+      "startSeconds": 104.36,
+      "text": "data that we're getting from the base URL. And then we also have a state variable for the page."
+    },
+    {
+      "startSeconds": 108.56,
+      "text": "And then all of the work happens inside of this use effect over here. So we have one use effect,"
+    },
+    {
+      "startSeconds": 113.24,
+      "text": "we have this fetch post functions, and it does everything. It handles the loading state,"
+    },
+    {
+      "startSeconds": 117.52,
+      "text": "it actually calls the fetch request to actually get the data, it then sets the data in the state,"
+    },
+    {
+      "startSeconds": 122.2,
+      "text": "it also handles the loading state by sending it here to true and then to false, also handles"
+    },
+    {
+      "startSeconds": 126.44,
+      "text": "errors. And even as a bonus, also has the abort control over here that handles race conditions."
+    },
+    {
+      "startSeconds": 131.52,
+      "text": "Now, if you're a React developer, you've probably already seen code like this, right, the thing"
+    },
+    {
+      "startSeconds": 134.92,
+      "text": "that we all have. And if you're a junior React developer, you might be tempted to do this in your"
+    },
+    {
+      "startSeconds": 139.04,
+      "text": "application. But I would recommend that you don't do this. Because although this is functional, and"
+    },
+    {
+      "startSeconds": 143.32,
+      "text": "this is going to work, right, it is going to fetch the actual data as you expect and set all the"
+    },
+    {
+      "startSeconds": 147.44,
+      "text": "states correctly. This is not the efficient way of doing things. And here's why the first reason"
+    },
+    {
+      "startSeconds": 152.28,
+      "text": "is that you have to do all of this yourself, you have to write all of the code yourself, you have"
+    },
+    {
+      "startSeconds": 156.28,
+      "text": "to create and manage your own states for error and loading and all of that. And then you have to"
+    },
+    {
+      "startSeconds": 160.44,
+      "text": "manage this use effect over here to actually fetch the data and make sure that you're updating the"
+    },
+    {
+      "startSeconds": 164.8,
+      "text": "states at the correct place at the correct time. And more importantly, not to forget anything. This"
+    },
+    {
+      "startSeconds": 169.24,
+      "text": "is super easy to introduce bugs, I can guarantee you that you're going to forget something if you"
+    },
+    {
+      "startSeconds": 173.16,
+      "text": "do this a lot. And you're going to introduce bugs and you're putting a lot of work on yourself when"
+    },
+    {
+      "startSeconds": 177.04,
+      "text": "you don't actually have to do it. And then another reason why I wouldn't recommend that you do this"
+    },
+    {
+      "startSeconds": 180.8,
+      "text": "in your project, one that might not be so obvious is that this is actually missing functionality"
+    },
+    {
+      "startSeconds": 185.36,
+      "text": "that you would typically expect from data fetching in any application, right? For example, caching,"
+    },
+    {
+      "startSeconds": 190.12,
+      "text": "we have no caching at all here. If we're fetching the first page of the posts, and then we're going"
+    },
+    {
+      "startSeconds": 194.52,
+      "text": "to change to page one and go back to the first page, we're going to hit the back end again,"
+    },
+    {
+      "startSeconds": 198.68,
+      "text": "even though we've just fetched the first page again, and we should have cached that data and"
+    },
+    {
+      "startSeconds": 202.72,
+      "text": "we should have returned the results from the cache instead of hitting the back end again,"
+    },
+    {
+      "startSeconds": 206.04,
+      "text": "right, that's something that you would want to do in an application, right? That's a sign of a good"
+    },
+    {
+      "startSeconds": 209.36,
+      "text": "application, you cache your data, and you don't hit the back end unnecessarily. With this code,"
+    },
+    {
+      "startSeconds": 213.6,
+      "text": "we don't have this. And if we wanted to implement this, we would have to implement"
+    },
+    {
+      "startSeconds": 216.88,
+      "text": "caching ourselves, which I hope that you know that it's very difficult. But then even if you were to"
+    },
+    {
+      "startSeconds": 221.36,
+      "text": "implement the cache yourself, you're still missing functionality, for example, background refetching,"
+    },
+    {
+      "startSeconds": 226.04,
+      "text": "right, let's say that you do have the data in the cache, and you're showing that to the user,"
+    },
+    {
+      "startSeconds": 229.76,
+      "text": "ideally, what you will want to do is at the same time, trigger a request in the background,"
+    },
+    {
+      "startSeconds": 234.28,
+      "text": "the user doesn't see that to just refresh the data in case that there's new data to be found,"
+    },
+    {
+      "startSeconds": 238.84,
+      "text": "right? That's another functionality that if you want to have, you would have to implement"
+    },
+    {
+      "startSeconds": 242.4,
+      "text": "yourself. And there's so many more things and doing it this way, you're going to have to"
+    },
+    {
+      "startSeconds": 246,
+      "text": "write all of that code yourself, you're going to introduce a lot of bugs. And if you want to have"
+    },
+    {
+      "startSeconds": 249.88,
+      "text": "this in any other components, or even share the data in other components, you're not going to be"
+    },
+    {
+      "startSeconds": 254.08,
+      "text": "able to or it's going to be very difficult to do yourself, especially as a junior, right, so"
+    },
+    {
+      "startSeconds": 258.52,
+      "text": "I wouldn't recommend that you do this in a React project. However, there's one exception, there's"
+    },
+    {
+      "startSeconds": 262.6,
+      "text": "one time where I would actually strongly recommend that you do this. And that is if you've never"
+    },
+    {
+      "startSeconds": 266.72,
+      "text": "worked with React before, you're just learning React. And you've never done data fetching in"
+    },
+    {
+      "startSeconds": 270.84,
+      "text": "React before, I would in that case, have you do this, because this is going to teach you a lot,"
+    },
+    {
+      "startSeconds": 275.64,
+      "text": "first of all about React and how it works, it's going to teach you about data fetching and all"
+    },
+    {
+      "startSeconds": 279.84,
+      "text": "the different pieces that you need to know and think about to actually fetch data successfully."
+    },
+    {
+      "startSeconds": 284,
+      "text": "And it's also going to teach you a lot about use effect, right, you have to do all of this"
+    },
+    {
+      "startSeconds": 287.72,
+      "text": "using use effect. And you have to learn about the lifecycle of use effect, which is very important"
+    },
+    {
+      "startSeconds": 292.32,
+      "text": "and seem a crucial as a React developer. So only in that case, if you're learning React, if you've"
+    },
+    {
+      "startSeconds": 297.04,
+      "text": "never seen this before, I would have you learn this, understand this, and then you can move on to"
+    },
+    {
+      "startSeconds": 301.28,
+      "text": "doing something better. And this is exactly what I do in project react in my course. That's why"
+    },
+    {
+      "startSeconds": 305.44,
+      "text": "I push this so much. And that's why I recommend it because it literally has everything that you"
+    },
+    {
+      "startSeconds": 308.84,
+      "text": "need to be a good React developer. Now, let me show you the recommended way, the better way,"
+    },
+    {
+      "startSeconds": 313.48,
+      "text": "the improvement way to actually fetch your data in React, if you're fetching data on the client here,"
+    },
+    {
+      "startSeconds": 317.96,
+      "text": "we're going to go to fetch example number two. And here we have something very similar,"
+    },
+    {
+      "startSeconds": 321.56,
+      "text": "we have the same base URL fetching data from the same place as before. But we have a lot less code,"
+    },
+    {
+      "startSeconds": 326.72,
+      "text": "as you can see over here, we still have one state variable for the page over here, that's fine. But"
+    },
+    {
+      "startSeconds": 331.04,
+      "text": "then we only have this piece of code that actually has all of the functionality that we had before"
+    },
+    {
+      "startSeconds": 335.88,
+      "text": "in this first example, and even more, but only with this amount of code. And that is because"
+    },
+    {
+      "startSeconds": 340.84,
+      "text": "over here, we're using React query. So if you don't know, React query is an asynchronous state"
+    },
+    {
+      "startSeconds": 345.12,
+      "text": "management solution, which happens to fit very well with the data fetching. And this the benefit"
+    },
+    {
+      "startSeconds": 350.12,
+      "text": "of doing this is that it does all of the work for you. It does everything that we've done here and"
+    },
+    {
+      "startSeconds": 355,
+      "text": "more. And it does it for you. And you don't have to do it yourself. That's the whole point of using"
+    },
+    {
+      "startSeconds": 359.72,
+      "text": "something. And that's the whole point of not doing this yourself is because there are solutions out"
+    },
+    {
+      "startSeconds": 363.8,
+      "text": "there that are tested that are well maintained that do all of this and more for you. So why"
+    },
+    {
+      "startSeconds": 368.48,
+      "text": "wouldn't you use them, right, as you can see here, we have a data variable, which I alias to post,"
+    },
+    {
+      "startSeconds": 372.88,
+      "text": "this is the same as our post over here, we don't have to manage it, React query is doing it for us,"
+    },
+    {
+      "startSeconds": 377.08,
+      "text": "then we have is error, right, which is the same as our error over here, we have a spending and then"
+    },
+    {
+      "startSeconds": 381.52,
+      "text": "we have a bunch more we have is loading, we have let's see is fetched is fetched after mount is"
+    },
+    {
+      "startSeconds": 386.48,
+      "text": "loading is loading error is paused, you have more variables in here that you would honestly know"
+    },
+    {
+      "startSeconds": 390.96,
+      "text": "what to do with them. And that's a good thing. And to get this to work, all that you have to do"
+    },
+    {
+      "startSeconds": 394.64,
+      "text": "is just pass it here a query key, which I'll get to in just a moment to actually define what query"
+    },
+    {
+      "startSeconds": 399.12,
+      "text": "you're actually fetching. And then you pass it a query function, which is the same thing that we"
+    },
+    {
+      "startSeconds": 403.24,
+      "text": "had before we're fetching the same URL passing the same properties. And then you just return data,"
+    },
+    {
+      "startSeconds": 407.96,
+      "text": "whatever data you return in here, react query is going to put it here in this data property."
+    },
+    {
+      "startSeconds": 412.4,
+      "text": "And it's automatically going to handle the error states if this stores an error, for any reason,"
+    },
+    {
+      "startSeconds": 416.32,
+      "text": "it handles it, you're going to get a spending to know if this is loading or not. And you're going"
+    },
+    {
+      "startSeconds": 420.4,
+      "text": "to be able to use it in the actual JSX in the same way that you would do it in here. But again,"
+    },
+    {
+      "startSeconds": 425.04,
+      "text": "with a lot less code, and you're not doing this yourself. And more importantly, this is tested,"
+    },
+    {
+      "startSeconds": 429.32,
+      "text": "and this doesn't have bugs, right. So this makes a lot of sense. And then you also have other"
+    },
+    {
+      "startSeconds": 433.4,
+      "text": "benefits, for example, the cache, right. In the first example, you had to implement your own cache"
+    },
+    {
+      "startSeconds": 437.52,
+      "text": "yourself. In this example, with react query, you don't have to do that by this query key over here,"
+    },
+    {
+      "startSeconds": 442.72,
+      "text": "react query is actually going to identify what query this is here, we gave it posts."
+    },
+    {
+      "startSeconds": 447.04,
+      "text": "And we also gave it the page, if we give it the page here, it's going to know that, hey,"
+    },
+    {
+      "startSeconds": 451.04,
+      "text": "I'm going to have page zero. So I'm going to fetch the data of page zero. But then if I ever need"
+    },
+    {
+      "startSeconds": 455.28,
+      "text": "to fetch the data of page zero, again, I'm just going to return the results from the cache instead"
+    },
+    {
+      "startSeconds": 459.44,
+      "text": "of hitting the back end again, which again, is a performance optimization. And it's something that"
+    },
+    {
+      "startSeconds": 463.44,
+      "text": "you would want in your application, you don't have to do that yourself, it's automatically"
+    },
+    {
+      "startSeconds": 466.64,
+      "text": "managed. And you can even configure it, you can do here, for example, stale time, you can configure"
+    },
+    {
+      "startSeconds": 471.04,
+      "text": "how long the cache is actually valid, you can put any value here, you can put the GC time,"
+    },
+    {
+      "startSeconds": 475.76,
+      "text": "which is how long the garbage collection time is going to be, you can look at the documentation"
+    },
+    {
+      "startSeconds": 479.72,
+      "text": "of react query to like really understand these. But you can completely customize this,"
+    },
+    {
+      "startSeconds": 483.72,
+      "text": "and it's all done for you. And you just have to use this. And you're good to go. And another"
+    },
+    {
+      "startSeconds": 488.16,
+      "text": "benefit that again, is not so obvious, you can even use the same query in a different component"
+    },
+    {
+      "startSeconds": 493.12,
+      "text": "and get access to the same data, because you're going to be pulling it from the cache instead"
+    },
+    {
+      "startSeconds": 497.12,
+      "text": "of hitting the back end. With this example, if I put the same code in a different component,"
+    },
+    {
+      "startSeconds": 501.68,
+      "text": "we would have two requests hitting the same back end with the same data in two components"
+    },
+    {
+      "startSeconds": 505.96,
+      "text": "that is inefficient, right. So there's a lot of benefits to using something like react query,"
+    },
+    {
+      "startSeconds": 510.16,
+      "text": "because it does all of the work for you. And you don't have to do it. And it's such little codes to"
+    },
+    {
+      "startSeconds": 514.32,
+      "text": "actually get this working, right. So if you're working in a project, and you're fetching data"
+    },
+    {
+      "startSeconds": 517.76,
+      "text": "in a client component right here at the top, let me remind you, we're in the client environment,"
+    },
+    {
+      "startSeconds": 521.72,
+      "text": "I will get to server at example number three, in just a moment, I would highly recommend and"
+    },
+    {
+      "startSeconds": 526.2,
+      "text": "this is the standard nowadays to use react query, or something similar for all of the reasons that"
+    },
+    {
+      "startSeconds": 530.84,
+      "text": "I've just mentioned. And honestly, you don't even have to specifically use react query, you can use"
+    },
+    {
+      "startSeconds": 535,
+      "text": "something that is similar. For example, a lot of people use SWR, right, it's pretty similar."
+    },
+    {
+      "startSeconds": 540,
+      "text": "It also gives you access to hook over here with similar data variables that you can also use,"
+    },
+    {
+      "startSeconds": 544.36,
+      "text": "right, this is the same principle. If you're using, for example, I don't know GraphQL, you're"
+    },
+    {
+      "startSeconds": 548.16,
+      "text": "probably going to use Apollo GraphQL, right, they also have something like a use query over here,"
+    },
+    {
+      "startSeconds": 553.28,
+      "text": "there you go, you get your GraphQL query, and then you pass it to use query, which is very similar to"
+    },
+    {
+      "startSeconds": 558,
+      "text": "react, right, it's the same hook practically, and you get access to the same variables over here,"
+    },
+    {
+      "startSeconds": 562.48,
+      "text": "no matter what you're using, if it's GraphQL, if it's react query, if it's SWR, if it's TRPC,"
+    },
+    {
+      "startSeconds": 567.56,
+      "text": "you want to use something like this that does the work for you, because the same principle applies,"
+    },
+    {
+      "startSeconds": 571.76,
+      "text": "don't write the code that's already written, use something that's tested that works. And"
+    },
+    {
+      "startSeconds": 576.08,
+      "text": "that does the work for you. Now, let's move on to example number three. And this one is a little"
+    },
+    {
+      "startSeconds": 580.08,
+      "text": "bit different, because in here, we're going to be working within a server environment. So in react,"
+    },
+    {
+      "startSeconds": 584.48,
+      "text": "nowadays, in modern react, you can also do things on the server, you can have something that is"
+    },
+    {
+      "startSeconds": 588.8,
+      "text": "called server components. I also have a tutorial video on server components that you can watch to"
+    },
+    {
+      "startSeconds": 592.76,
+      "text": "understand what they are. Server components, as their name implies, they actually run entirely"
+    },
+    {
+      "startSeconds": 597.08,
+      "text": "on the server, they never make it to the client, the only thingAnd here's what data fetching would"
+    },
+    {
+      "startSeconds": 614.6,
+      "text": "look like in that environment. So here, because we're running this component on the server,"
+    },
+    {
+      "startSeconds": 618.64,
+      "text": "we actually get another benefit, which is that we can make this an asynchronous component. We can"
+    },
+    {
+      "startSeconds": 623.12,
+      "text": "have this component be asynchronous, which means that we no longer need to worry about rendering,"
+    },
+    {
+      "startSeconds": 627.52,
+      "text": "about different states, about loading states. We can just have this asynchronous and literally"
+    },
+    {
+      "startSeconds": 631.72,
+      "text": "fetch the data in the body of the component. You cannot do this with a client component. This only"
+    },
+    {
+      "startSeconds": 636.64,
+      "text": "works because this runs on the server. And then we're getting right the response over here from"
+    },
+    {
+      "startSeconds": 640.52,
+      "text": "our fetch. We're doing the same exact thing. Here, I just put a await promise to just make"
+    },
+    {
+      "startSeconds": 644.68,
+      "text": "it a little bit slower. You're going to see why in just a moment. Then we're checking the response if"
+    },
+    {
+      "startSeconds": 648.64,
+      "text": "the response is okay. If it's not, we can throw an error or we can redirect to somewhere else or we"
+    },
+    {
+      "startSeconds": 653.16,
+      "text": "can show some other UI to let the user know that something went wrong. If the response is okay,"
+    },
+    {
+      "startSeconds": 657.84,
+      "text": "we get our post over here by doing another await, the response.json. Again, this is the"
+    },
+    {
+      "startSeconds": 662.68,
+      "text": "same code that we had in the client component. It's the same code as we have here, but we're"
+    },
+    {
+      "startSeconds": 666.64,
+      "text": "putting it directly in the body of the component because this is an asynchronous server component."
+    },
+    {
+      "startSeconds": 671.04,
+      "text": "And then we can just create some HTML, some JSX over here, and just directly render out our post."
+    },
+    {
+      "startSeconds": 676.28,
+      "text": "There's no loading, there's no pending, there's no anything else. It's simple and you don't have to"
+    },
+    {
+      "startSeconds": 680.52,
+      "text": "use literally any dependency. So this is a huge benefit of using server components if you can,"
+    },
+    {
+      "startSeconds": 685.56,
+      "text": "because it reduces a lot of the complexity and you're doing things with a lot less code"
+    },
+    {
+      "startSeconds": 689.36,
+      "text": "and a lot less dependencies. Now granted, you are losing a little bit of functionality, you have no"
+    },
+    {
+      "startSeconds": 693.76,
+      "text": "loading state. So in here, for example, while this fetch request is happening, this component"
+    },
+    {
+      "startSeconds": 698.08,
+      "text": "is not going to get rendered because it doesn't have data, it's awaiting the data, it's not going"
+    },
+    {
+      "startSeconds": 702,
+      "text": "to get rendered. I'm going to show you now how to get around this, but it's something that you"
+    },
+    {
+      "startSeconds": 705.8,
+      "text": "have to know. You're in a different environment, you're in the server environment, so things will"
+    },
+    {
+      "startSeconds": 709.4,
+      "text": "work a little bit differently. So you're losing some complexity in one way, and you're adding"
+    },
+    {
+      "startSeconds": 713.4,
+      "text": "a little bit of complexity in the other way. But honestly, it's a net positive. So let me now show"
+    },
+    {
+      "startSeconds": 717.6,
+      "text": "you all of these examples. So we can see how they all behave, right. So I have all my components"
+    },
+    {
+      "startSeconds": 721.64,
+      "text": "over here. And let's start with fetch example number one. So we're going to put this here,"
+    },
+    {
+      "startSeconds": 725.08,
+      "text": "we're going to go back to our application, we're going to make things a little bit simpler, and"
+    },
+    {
+      "startSeconds": 728.56,
+      "text": "we're going to reload and see what happens. So you see, we have loading for a split second, if I can"
+    },
+    {
+      "startSeconds": 733.24,
+      "text": "just maybe, let's see, go to my network over here, and then make it fast 3g to make things a little"
+    },
+    {
+      "startSeconds": 738.36,
+      "text": "bit slower, we're going to see that I mean, it's mostly the same, but fair enough, we have loading,"
+    },
+    {
+      "startSeconds": 742.96,
+      "text": "and then we have our data, if I increase the page, it's going to load again, if I increase the page,"
+    },
+    {
+      "startSeconds": 746.96,
+      "text": "it's going to load again. But if I go back to a page that everyone to one or three, actually,"
+    },
+    {
+      "startSeconds": 752.08,
+      "text": "there's a bug, let me just fix this one second, this should not be plus one, this should be minus"
+    },
+    {
+      "startSeconds": 756.72,
+      "text": "one, there we go, we're going to refresh. So we're going to increase the page from zero to one, we're"
+    },
+    {
+      "startSeconds": 761.36,
+      "text": "going to be in one, then I'm going to go back to zero. And we're still fetching the same data"
+    },
+    {
+      "startSeconds": 765.6,
+      "text": "over again, right, there's no caching, as I've mentioned, so this is fetch example number one,"
+    },
+    {
+      "startSeconds": 769.52,
+      "text": "then if we comment this out, we comment fetch example number two, we go back here, we refresh,"
+    },
+    {
+      "startSeconds": 773.84,
+      "text": "we have the same URL. Now I'm going to go here to page one, I'm going to go back to page zero,"
+    },
+    {
+      "startSeconds": 778.68,
+      "text": "and the results are much faster. I know it's a little bit harder to see over here. Wait,"
+    },
+    {
+      "startSeconds": 782.52,
+      "text": "no, that was wrong. That was wrong. We're still incrementing the page, I have the same bug in both"
+    },
+    {
+      "startSeconds": 786.8,
+      "text": "components. That's really funny. Let's save. And let's start over again, ignore that this happened,"
+    },
+    {
+      "startSeconds": 790.96,
+      "text": "I'm going to leave this in. So we're on page zero, we're going to press increment, we're page one,"
+    },
+    {
+      "startSeconds": 795.72,
+      "text": "then we go to page zero. And you see, there was no loading, nothing flickered, we go back"
+    },
+    {
+      "startSeconds": 799.92,
+      "text": "to page one. And now I can change the pages. And we're getting the results from the cache, this"
+    },
+    {
+      "startSeconds": 804.28,
+      "text": "is better, this is a better user experience, it's better for our back end. And it's better overall."
+    },
+    {
+      "startSeconds": 808.52,
+      "text": "But then if I go to page two, we haven't fetched that page yet. So we're going to get the data."
+    },
+    {
+      "startSeconds": 812.68,
+      "text": "But then I go back to one, go back to two, two is also cached, right? This is how fetch example"
+    },
+    {
+      "startSeconds": 817.24,
+      "text": "number two works. And finally, let's try fetch example number three, this is the asynchronous"
+    },
+    {
+      "startSeconds": 821.48,
+      "text": "server component. So we're going to come here and refresh, right? And now this is going to"
+    },
+    {
+      "startSeconds": 825.64,
+      "text": "take a little bit longer. But you're going to see there's no loading, there's no flickering,"
+    },
+    {
+      "startSeconds": 829.56,
+      "text": "our actual entire page is waiting, you see here at the top, it's loading, it's loading until we get"
+    },
+    {
+      "startSeconds": 834.92,
+      "text": "the data back from a server component, right? So server component, again, doesn't have rendering,"
+    },
+    {
+      "startSeconds": 839.36,
+      "text": "it's not actually running on the client, all that we get is the HTML once the server component"
+    },
+    {
+      "startSeconds": 843.84,
+      "text": "actually finished running, right? So that's how it works by default without doing anything"
+    },
+    {
+      "startSeconds": 847.56,
+      "text": "else to it. Now, if you want to add loading to this component, which honestly you would write,"
+    },
+    {
+      "startSeconds": 851.4,
+      "text": "because we don't want to have less functionality than we had before, then what you would do is"
+    },
+    {
+      "startSeconds": 855.16,
+      "text": "you would use suspense. So I can comment this out over here, I can comment the suspense. And"
+    },
+    {
+      "startSeconds": 859.36,
+      "text": "suspense is a component in react that essentially creates a boundary around a component, and then"
+    },
+    {
+      "startSeconds": 864.36,
+      "text": "will actually not prevent the entire component, everything else of this home component over here"
+    },
+    {
+      "startSeconds": 869.6,
+      "text": "to block while it's waiting for that it is going to create a boundary, and only this part is going"
+    },
+    {
+      "startSeconds": 874.36,
+      "text": "to block while the rendering of fetch example three happens. And one of the cool things is"
+    },
+    {
+      "startSeconds": 878.32,
+      "text": "you can provide a fallback to display while that is happening. And you can show here the loading"
+    },
+    {
+      "startSeconds": 882.72,
+      "text": "indicator, right? So let's see how that looks like. So now with this code, if I reload the page,"
+    },
+    {
+      "startSeconds": 886.36,
+      "text": "you're going to see loading while the page is actually loading. And once the component renders,"
+    },
+    {
+      "startSeconds": 890.36,
+      "text": "and it actually does everything that it needs to do, we're going to see our data, right,"
+    },
+    {
+      "startSeconds": 893.72,
+      "text": "we have the same functionality as we had before, but we're doing things a little bit differently,"
+    },
+    {
+      "startSeconds": 898.04,
+      "text": "right? So this is what data fetching looks like in a server component. Now, one important thing"
+    },
+    {
+      "startSeconds": 901.92,
+      "text": "about fetching data in server components is, as you can see here, we no longer have a state"
+    },
+    {
+      "startSeconds": 905.92,
+      "text": "variable for the page, we're no longer refetching things when the page changes. That's because we're"
+    },
+    {
+      "startSeconds": 909.96,
+      "text": "in a server component, there is no state, there is no re rendering the page, if we want to have"
+    },
+    {
+      "startSeconds": 914.08,
+      "text": "the same functionality, we'll now have to go in the URL. And based on the URL, we will actually"
+    },
+    {
+      "startSeconds": 918.52,
+      "text": "get the page to fetch in the server component. And then the caching over here, we also don't have it,"
+    },
+    {
+      "startSeconds": 922.84,
+      "text": "the caching will no longer be have to implemented by a library they're using, but rather by the"
+    },
+    {
+      "startSeconds": 927.72,
+      "text": "framework of choice they're using to run your server components. Most probably nowadays,"
+    },
+    {
+      "startSeconds": 931.96,
+      "text": "Next.js Next.js has a lot of caching, and they do this based on the URL, right? So these are small"
+    },
+    {
+      "startSeconds": 936.76,
+      "text": "details. But really, it's ultimately the same thing. It's just a different way, a more efficient"
+    },
+    {
+      "startSeconds": 941.28,
+      "text": "way of doing the same thing. We're fetching the same data using the same properties, we're"
+    },
+    {
+      "startSeconds": 945.04,
+      "text": "just doing it in a slightly different way. And honestly, I mean, this is really all they need to"
+    },
+    {
+      "startSeconds": 949.32,
+      "text": "be able to fetch data in your react applications. And now you know how to do it all, you know how to"
+    },
+    {
+      "startSeconds": 953.48,
+      "text": "fetch data in a server component, you know how to fetch data correctly in a client component"
+    },
+    {
+      "startSeconds": 957.64,
+      "text": "by using react query or something similar. And you also know how to not fetch data, how to not"
+    },
+    {
+      "startSeconds": 962.32,
+      "text": "fetch it incorrectly in a client component. And more importantly, you also know why not to do"
+    },
+    {
+      "startSeconds": 967.4,
+      "text": "this and why you should do this instead. So now no matter what project you're working on, no matter"
+    },
+    {
+      "startSeconds": 971.64,
+      "text": "what they use to actually fetch the data, you know the best practices, you know what to do what not"
+    },
+    {
+      "startSeconds": 975.72,
+      "text": "to do. And you're hopefully a better developer. And now you know everything that there is to know"
+    },
+    {
+      "startSeconds": 980.12,
+      "text": "about data fetching in react, you enjoyed this video and you want to see more videos just like"
+    },
+    {
+      "startSeconds": 984.28,
+      "text": "this one, make sure to leave this video a big thumbs up. You can also click here to subscribe"
+    },
+    {
+      "startSeconds": 988.2,
+      "text": "or you can click here to watch a different video of mine that YouTube seems to think that you're"
+    },
+    {
+      "startSeconds": 991.8,
+      "text": "really going to enjoy. And with that being said, my name has been Darius Cosden, this is Cosden"
+    },
+    {
+      "startSeconds": 996,
+      "text": "Solutions. Thank you so much for watching and I will see you in the next video. Ciao, ciao."
+    }
+  ]
 }

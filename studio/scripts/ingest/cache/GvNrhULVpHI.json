@@ -1,0 +1,642 @@
+{
+  "id": "GvNrhULVpHI",
+  "url": "https://www.youtube.com/watch?v=GvNrhULVpHI",
+  "fetchedAt": "2026-09-01T04:06:46.522Z",
+  "captionKind": "asr",
+  "chapters": [
+    {
+      "startSeconds": 0,
+      "label": "Why AI needs guardrails in production"
+    },
+    {
+      "startSeconds": 35,
+      "label": "What we’re building: self-correcting local AI"
+    },
+    {
+      "startSeconds": 80,
+      "label": "The stack: LangChain + LCEL + Streamlit + Llama 3 (Ollama)"
+    },
+    {
+      "startSeconds": 130,
+      "label": "Designing the 3-stage flow (Generate → Evaluate → Repair)"
+    },
+    {
+      "startSeconds": 205,
+      "label": "Writing evaluation criteria (what “good” looks like)"
+    },
+    {
+      "startSeconds": 280,
+      "label": "Building the evaluator chain in LCEL"
+    },
+    {
+      "startSeconds": 345,
+      "label": "Designing the repair prompt (fix + upgrade output)"
+    },
+    {
+      "startSeconds": 415,
+      "label": "Wiring evaluator → repair into a reusable guardrails workflow"
+    }
+  ],
+  "cues": [
+    {
+      "startSeconds": 1.964,
+      "text": "[music]"
+    },
+    {
+      "startSeconds": 5.92,
+      "text": "All right. Hey everyone, welcome back to"
+    },
+    {
+      "startSeconds": 7.68,
+      "text": "the lang chain by project series. And"
+    },
+    {
+      "startSeconds": 10,
+      "text": "today we're building something that"
+    },
+    {
+      "startSeconds": 11.599,
+      "text": "feels genuinely smart. An AI that"
+    },
+    {
+      "startSeconds": 14.559,
+      "text": "doesn't just answer your question. It"
+    },
+    {
+      "startSeconds": 16.88,
+      "text": "actually checks its own answer, judges"
+    },
+    {
+      "startSeconds": 19.6,
+      "text": "the quality, and fixes itself if it's"
+    },
+    {
+      "startSeconds": 22.4,
+      "text": "wrong."
+    },
+    {
+      "startSeconds": 24,
+      "text": "This is one of those projects where you"
+    },
+    {
+      "startSeconds": 26,
+      "text": "immediately understand the power of"
+    },
+    {
+      "startSeconds": 27.519,
+      "text": "Langchain. You ask a question, the AI"
+    },
+    {
+      "startSeconds": 30.72,
+      "text": "responds. Another part of the AI reviews"
+    },
+    {
+      "startSeconds": 33.44,
+      "text": "the response. And if it fails the check,"
+    },
+    {
+      "startSeconds": 36.32,
+      "text": "a third step improves it automatically."
+    },
+    {
+      "startSeconds": 39.44,
+      "text": "All three steps, generation, evaluation,"
+    },
+    {
+      "startSeconds": 42.719,
+      "text": "and repair, run right on your laptop"
+    },
+    {
+      "startSeconds": 45.28,
+      "text": "through Llama and Streamlit. So, let's"
+    },
+    {
+      "startSeconds": 48.16,
+      "text": "jump straight into the code and see how"
+    },
+    {
+      "startSeconds": 50.239,
+      "text": "this entire self-correcting system is"
+    },
+    {
+      "startSeconds": 52.32,
+      "text": "built. We start with the imports. We"
+    },
+    {
+      "startSeconds": 54.8,
+      "text": "import Streamlit because that's the UI"
+    },
+    {
+      "startSeconds": 57.039,
+      "text": "layer. We import optional from typing"
+    },
+    {
+      "startSeconds": 59.92,
+      "text": "for a helper function later. Then we"
+    },
+    {
+      "startSeconds": 62.8,
+      "text": "bring in chat Olama from the lang chain"
+    },
+    {
+      "startSeconds": 65.36,
+      "text": "community package. This is what connects"
+    },
+    {
+      "startSeconds": 68.159,
+      "text": "us to the local llama model running in"
+    },
+    {
+      "startSeconds": 70.799,
+      "text": "Olama. We also import chat prompt"
+    },
+    {
+      "startSeconds": 74.32,
+      "text": "template to build prompts and stream"
+    },
+    {
+      "startSeconds": 77.28,
+      "text": "output parser to convert the model's"
+    },
+    {
+      "startSeconds": 79.84,
+      "text": "responses into plain text."
+    },
+    {
+      "startSeconds": 82.88,
+      "text": "Next, we define the model name. Here we"
+    },
+    {
+      "startSeconds": 86.159,
+      "text": "are using Llama 3.23B."
+    },
+    {
+      "startSeconds": 89.68,
+      "text": "This must match a model that already"
+    },
+    {
+      "startSeconds": 92,
+      "text": "exists in your Olama installation."
+    },
+    {
+      "startSeconds": 95.28,
+      "text": "Then we configure the streamlit page"
+    },
+    {
+      "startSeconds": 97.2,
+      "text": "with a title and a wide layout. After"
+    },
+    {
+      "startSeconds": 100.4,
+      "text": "that, we set up the model. We create the"
+    },
+    {
+      "startSeconds": 103.439,
+      "text": "LLM object using chatma passing the"
+    },
+    {
+      "startSeconds": 106.64,
+      "text": "model name and a temperature of 0.4."
+    },
+    {
+      "startSeconds": 110.56,
+      "text": "Lower temperature means cleaner, more"
+    },
+    {
+      "startSeconds": 113.28,
+      "text": "controlled answers."
+    },
+    {
+      "startSeconds": 115.2,
+      "text": "We also create the parser object using"
+    },
+    {
+      "startSeconds": 117.84,
+      "text": "stream output parser which converts the"
+    },
+    {
+      "startSeconds": 120.799,
+      "text": "output into simple text."
+    },
+    {
+      "startSeconds": 123.68,
+      "text": "Now we create the prompts for the three"
+    },
+    {
+      "startSeconds": 125.68,
+      "text": "stages of our pipeline. The first one is"
+    },
+    {
+      "startSeconds": 128.72,
+      "text": "the generation prompt. This prompt tells"
+    },
+    {
+      "startSeconds": 131.84,
+      "text": "the AI to be helpful, answer clearly and"
+    },
+    {
+      "startSeconds": 135.52,
+      "text": "respond to whatever input the user"
+    },
+    {
+      "startSeconds": 137.68,
+      "text": "provides. It has one placeholder called"
+    },
+    {
+      "startSeconds": 140.8,
+      "text": "input where the user's question will go."
+    },
+    {
+      "startSeconds": 144.72,
+      "text": "The second prompt is the evaluation"
+    },
+    {
+      "startSeconds": 146.8,
+      "text": "prompt. This part of the AI acts like a"
+    },
+    {
+      "startSeconds": 150.08,
+      "text": "reviewer. We give it the original"
+    },
+    {
+      "startSeconds": 152.64,
+      "text": "question and the AI's answer. Then we"
+    },
+    {
+      "startSeconds": 155.92,
+      "text": "ask it to judge the answer on"
+    },
+    {
+      "startSeconds": 157.92,
+      "text": "correctness, clarity, and completeness."
+    },
+    {
+      "startSeconds": 161.28,
+      "text": "And most importantly, it must reply in a"
+    },
+    {
+      "startSeconds": 164.48,
+      "text": "fixed format. It either says pass"
+    },
+    {
+      "startSeconds": 168,
+      "text": "followed by a short explanation or fail"
+    },
+    {
+      "startSeconds": 171.599,
+      "text": "followed by what is wrong and why. This"
+    },
+    {
+      "startSeconds": 174.879,
+      "text": "strict format is important because the"
+    },
+    {
+      "startSeconds": 177.599,
+      "text": "rest of the pipeline depends on it."
+    },
+    {
+      "startSeconds": 180.8,
+      "text": "The third prompt is the repair prompt."
+    },
+    {
+      "startSeconds": 183.68,
+      "text": "This one only runs if the evaluation"
+    },
+    {
+      "startSeconds": 186.08,
+      "text": "step fails. It gets the original"
+    },
+    {
+      "startSeconds": 189.2,
+      "text": "question, the incorrect response, and"
+    },
+    {
+      "startSeconds": 192.08,
+      "text": "the reviewer's feedback. and its job is"
+    },
+    {
+      "startSeconds": 195.2,
+      "text": "simple. Rewrite the answer so it becomes"
+    },
+    {
+      "startSeconds": 198.319,
+      "text": "correct, clear, and complete."
+    },
+    {
+      "startSeconds": 201.599,
+      "text": "Once the prompts are ready, we turn each"
+    },
+    {
+      "startSeconds": 204.4,
+      "text": "one into a chain by piping the prompt"
+    },
+    {
+      "startSeconds": 206.879,
+      "text": "into the model and then into the parser."
+    },
+    {
+      "startSeconds": 210.48,
+      "text": "So, we end up with a generation chain,"
+    },
+    {
+      "startSeconds": 213.04,
+      "text": "an evaluation chain, and a repair chain."
+    },
+    {
+      "startSeconds": 217.2,
+      "text": "Next, we define a small helper function"
+    },
+    {
+      "startSeconds": 220.159,
+      "text": "called get text. This function makes"
+    },
+    {
+      "startSeconds": 223.44,
+      "text": "sure that no matter what shape the model"
+    },
+    {
+      "startSeconds": 226,
+      "text": "returns, whether it returns an object or"
+    },
+    {
+      "startSeconds": 229.12,
+      "text": "just a string, we extract clean text"
+    },
+    {
+      "startSeconds": 232.319,
+      "text": "from it. It checks if the response has a"
+    },
+    {
+      "startSeconds": 235.519,
+      "text": "content attribute. If it does, we return"
+    },
+    {
+      "startSeconds": 238.879,
+      "text": "that content. If not, we convert the"
+    },
+    {
+      "startSeconds": 241.92,
+      "text": "entire object to text. This keeps"
+    },
+    {
+      "startSeconds": 245.04,
+      "text": "everything safe and predictable."
+    },
+    {
+      "startSeconds": 248,
+      "text": "Then we create the sidebar. The sidebar"
+    },
+    {
+      "startSeconds": 251.2,
+      "text": "has a title that says guardrail"
+    },
+    {
+      "startSeconds": 253.76,
+      "text": "controls. It has a checkbox that lets"
+    },
+    {
+      "startSeconds": 256.799,
+      "text": "the user choose whether the system"
+    },
+    {
+      "startSeconds": 259.44,
+      "text": "should automatically repair failed"
+    },
+    {
+      "startSeconds": 261.68,
+      "text": "answers. By default, auto repair is"
+    },
+    {
+      "startSeconds": 265.12,
+      "text": "turned on."
+    },
+    {
+      "startSeconds": 266.96,
+      "text": "Below that, we show a small info box"
+    },
+    {
+      "startSeconds": 270.08,
+      "text": "explaining that this episode"
+    },
+    {
+      "startSeconds": 272,
+      "text": "demonstrates self- evaluation,"
+    },
+    {
+      "startSeconds": 274.8,
+      "text": "guardrails, and conditional repair, all"
+    },
+    {
+      "startSeconds": 278,
+      "text": "running locally."
+    },
+    {
+      "startSeconds": 280.16,
+      "text": "Now we move to the main interface. We"
+    },
+    {
+      "startSeconds": 283.28,
+      "text": "set the main title to episode 11"
+    },
+    {
+      "startSeconds": 286.639,
+      "text": "self-correcting AI system."
+    },
+    {
+      "startSeconds": 289.6,
+      "text": "Then we add a caption that shows the"
+    },
+    {
+      "startSeconds": 291.68,
+      "text": "pipeline in simple words generation"
+    },
+    {
+      "startSeconds": 295.199,
+      "text": "evaluation repair."
+    },
+    {
+      "startSeconds": 298,
+      "text": "Below that we add a horizontal line."
+    },
+    {
+      "startSeconds": 301.199,
+      "text": "Then we add a text area where the user"
+    },
+    {
+      "startSeconds": 303.84,
+      "text": "can type any question they want. And"
+    },
+    {
+      "startSeconds": 306.88,
+      "text": "finally we add a button called run AI"
+    },
+    {
+      "startSeconds": 310,
+      "text": "pipeline."
+    },
+    {
+      "startSeconds": 311.759,
+      "text": "Now for the execution section. When the"
+    },
+    {
+      "startSeconds": 314.88,
+      "text": "user clicks the run button we first"
+    },
+    {
+      "startSeconds": 317.52,
+      "text": "check if the input text is empty. If it"
+    },
+    {
+      "startSeconds": 320.8,
+      "text": "is we show a warning. If not we begin"
+    },
+    {
+      "startSeconds": 324.479,
+      "text": "the three-step process. Step one is the"
+    },
+    {
+      "startSeconds": 327.68,
+      "text": "generation step. Inside a loading"
+    },
+    {
+      "startSeconds": 330.56,
+      "text": "spinner. We call the generation chain"
+    },
+    {
+      "startSeconds": 333.039,
+      "text": "with the user's input. We extract the"
+    },
+    {
+      "startSeconds": 336.16,
+      "text": "clean text using our get text helper."
+    },
+    {
+      "startSeconds": 339.919,
+      "text": "Then we display it under a heading"
+    },
+    {
+      "startSeconds": 341.919,
+      "text": "called initial response."
+    },
+    {
+      "startSeconds": 344.96,
+      "text": "Step two is evaluation."
+    },
+    {
+      "startSeconds": 347.52,
+      "text": "We show another spinner. Run the"
+    },
+    {
+      "startSeconds": 350,
+      "text": "evaluation chain by passing the question"
+    },
+    {
+      "startSeconds": 352.479,
+      "text": "and the answer and extract the feedback."
+    },
+    {
+      "startSeconds": 356.16,
+      "text": "We display the feedback under evaluation"
+    },
+    {
+      "startSeconds": 359.12,
+      "text": "result. The first line of that feedback"
+    },
+    {
+      "startSeconds": 362.32,
+      "text": "will either be the word pass or the word"
+    },
+    {
+      "startSeconds": 365.199,
+      "text": "fail. We store that first line in a"
+    },
+    {
+      "startSeconds": 368.639,
+      "text": "variable called verdict. If the verdict"
+    },
+    {
+      "startSeconds": 371.919,
+      "text": "is fail and the auto repair checkbox is"
+    },
+    {
+      "startSeconds": 374.8,
+      "text": "enabled, we run the repair step. Inside"
+    },
+    {
+      "startSeconds": 378.56,
+      "text": "a spinner, we call the repair chain"
+    },
+    {
+      "startSeconds": 381.44,
+      "text": "passing the original question, the"
+    },
+    {
+      "startSeconds": 383.759,
+      "text": "incorrect response and the reviewer"
+    },
+    {
+      "startSeconds": 386.08,
+      "text": "feedback. We extract the text and"
+    },
+    {
+      "startSeconds": 389.199,
+      "text": "display it under repaired response."
+    },
+    {
+      "startSeconds": 392.72,
+      "text": "If the verdict is fail but auto repair"
+    },
+    {
+      "startSeconds": 395.28,
+      "text": "is turned off, we simply show a warning"
+    },
+    {
+      "startSeconds": 398.8,
+      "text": "saying that the response failed review"
+    },
+    {
+      "startSeconds": 401.199,
+      "text": "but repair is disabled."
+    },
+    {
+      "startSeconds": 403.759,
+      "text": "If the word it is pass then everything"
+    },
+    {
+      "startSeconds": 406.24,
+      "text": "is good and we show a success message"
+    },
+    {
+      "startSeconds": 409.68,
+      "text": "saying the response passed quality"
+    },
+    {
+      "startSeconds": 411.84,
+      "text": "checks."
+    },
+    {
+      "startSeconds": 413.68,
+      "text": "Finally, at the bottom of the page, we"
+    },
+    {
+      "startSeconds": 416.24,
+      "text": "show a footer that says episode 11 lang"
+    },
+    {
+      "startSeconds": 420.319,
+      "text": "chain lce guardrails."
+    },
+    {
+      "startSeconds": 424.8,
+      "text": "And that completes the full walkthrough"
+    },
+    {
+      "startSeconds": 426.96,
+      "text": "of the code exactly as it's written."
+    },
+    {
+      "startSeconds": 434.269,
+      "text": ">> [music]"
+    }
+  ]
+}

@@ -1,0 +1,1201 @@
+{
+  "id": "hOAAg1WaZh8",
+  "url": "https://www.youtube.com/watch?v=hOAAg1WaZh8",
+  "fetchedAt": "2026-09-01T04:06:49.809Z",
+  "captionKind": "asr",
+  "chapters": [],
+  "cues": [
+    {
+      "startSeconds": 0.08,
+      "text": "Hello everyone. Uh I welcome you all to"
+    },
+    {
+      "startSeconds": 2.639,
+      "text": "this new tutorial. I know it's after a"
+    },
+    {
+      "startSeconds": 4.56,
+      "text": "long long time. I was actually enrolled"
+    },
+    {
+      "startSeconds": 6.24,
+      "text": "into a master's program in machine"
+    },
+    {
+      "startSeconds": 7.6,
+      "text": "learning and artificial intelligence. Uh"
+    },
+    {
+      "startSeconds": 9.679,
+      "text": "but yeah, I just get got done with my"
+    },
+    {
+      "startSeconds": 11.44,
+      "text": "final semester and now I'll be sharing a"
+    },
+    {
+      "startSeconds": 13.759,
+      "text": "lot of things with you. So this video is"
+    },
+    {
+      "startSeconds": 15.92,
+      "text": "all about consuming serverside events in"
+    },
+    {
+      "startSeconds": 17.6,
+      "text": "React and what's the need and how to"
+    },
+    {
+      "startSeconds": 19.52,
+      "text": "implement it at a very core level and"
+    },
+    {
+      "startSeconds": 21.359,
+      "text": "then there are other utilities that we"
+    },
+    {
+      "startSeconds": 23.039,
+      "text": "can explore using MDN docs. Uh so the"
+    },
+    {
+      "startSeconds": 25.76,
+      "text": "first question that might be coming to"
+    },
+    {
+      "startSeconds": 26.96,
+      "text": "your mind is that why serverside events"
+    },
+    {
+      "startSeconds": 28.88,
+      "text": "when we already have rest graphql and"
+    },
+    {
+      "startSeconds": 31.039,
+      "text": "websockets right there are a lot of"
+    },
+    {
+      "startSeconds": 32.32,
+      "text": "communication frameworks in case if"
+    },
+    {
+      "startSeconds": 34.079,
+      "text": "you're um I mean not frameworks but"
+    },
+    {
+      "startSeconds": 36.079,
+      "text": "protocols in case you're not familiar"
+    },
+    {
+      "startSeconds": 37.68,
+      "text": "with these I have talked about these in"
+    },
+    {
+      "startSeconds": 39.92,
+      "text": "my previous videos you can check them"
+    },
+    {
+      "startSeconds": 41.52,
+      "text": "out but yeah I mean technology is"
+    },
+    {
+      "startSeconds": 44.32,
+      "text": "evolving pretty quickly and restful"
+    },
+    {
+      "startSeconds": 46.8,
+      "text": "services which were once ruled out by"
+    },
+    {
+      "startSeconds": 48.64,
+      "text": "graphql and then we have uh duplex"
+    },
+    {
+      "startSeconds": 51.12,
+      "text": "communication meaning both sides"
+    },
+    {
+      "startSeconds": 52.559,
+      "text": "websockets and web RPC then what is need"
+    },
+    {
+      "startSeconds": 55.039,
+      "text": "for what is the need for this new"
+    },
+    {
+      "startSeconds": 56.32,
+      "text": "serverside events and that's what we're"
+    },
+    {
+      "startSeconds": 58,
+      "text": "going to talk about. So think of this in"
+    },
+    {
+      "startSeconds": 60.64,
+      "text": "a way you know like how these modern LLM"
+    },
+    {
+      "startSeconds": 62.8,
+      "text": "powered applications run. I hope you all"
+    },
+    {
+      "startSeconds": 65.04,
+      "text": "are using AI extensively because if"
+    },
+    {
+      "startSeconds": 66.88,
+      "text": "you're not I would highly recommend and"
+    },
+    {
+      "startSeconds": 68.32,
+      "text": "yeah I'll be coming up with more"
+    },
+    {
+      "startSeconds": 69.439,
+      "text": "tutorials on working with AI agent"
+    },
+    {
+      "startSeconds": 71.76,
+      "text": "development frameworks etc etc. But just"
+    },
+    {
+      "startSeconds": 74.32,
+      "text": "to give you a contrast uh these machines"
+    },
+    {
+      "startSeconds": 77.28,
+      "text": "do a lot of heavy computation multi-step"
+    },
+    {
+      "startSeconds": 79.6,
+      "text": "agent reasoning resource intensive tasks"
+    },
+    {
+      "startSeconds": 81.52,
+      "text": "you know these could take times and"
+    },
+    {
+      "startSeconds": 83.439,
+      "text": "unlike traditional APIs which had a"
+    },
+    {
+      "startSeconds": 85.2,
+      "text": "specific task to do like update the"
+    },
+    {
+      "startSeconds": 86.64,
+      "text": "database fetch some records these tasks"
+    },
+    {
+      "startSeconds": 88.64,
+      "text": "can take a longer longer time and you"
+    },
+    {
+      "startSeconds": 90.799,
+      "text": "know the way we used to handle these"
+    },
+    {
+      "startSeconds": 92.4,
+      "text": "things earlier was to just show a"
+    },
+    {
+      "startSeconds": 93.6,
+      "text": "spinner in front end UI you just get the"
+    },
+    {
+      "startSeconds": 95.439,
+      "text": "response however since we already see"
+    },
+    {
+      "startSeconds": 97.52,
+      "text": "that you know there's lot of challenge"
+    },
+    {
+      "startSeconds": 99.36,
+      "text": "uh to be very specific um like if if if"
+    },
+    {
+      "startSeconds": 102.159,
+      "text": "it's taking a long In those cases, it"
+    },
+    {
+      "startSeconds": 105.28,
+      "text": "actually makes the user experience"
+    },
+    {
+      "startSeconds": 107.2,
+      "text": "non-intuitive and that is where server"
+    },
+    {
+      "startSeconds": 108.64,
+      "text": "side events come into the place. I would"
+    },
+    {
+      "startSeconds": 110.159,
+      "text": "say it's more to improve user experience"
+    },
+    {
+      "startSeconds": 111.92,
+      "text": "but at the same time also to cut off the"
+    },
+    {
+      "startSeconds": 113.6,
+      "text": "huge payload. You can get humongous"
+    },
+    {
+      "startSeconds": 115.439,
+      "text": "amount of API response and you want to"
+    },
+    {
+      "startSeconds": 117.439,
+      "text": "make sure that you don't want to have"
+    },
+    {
+      "startSeconds": 118.88,
+      "text": "all of that in a single call rather join"
+    },
+    {
+      "startSeconds": 120.799,
+      "text": "it incrementally. So if you see this is"
+    },
+    {
+      "startSeconds": 122.079,
+      "text": "the flowchart whenever user submits a"
+    },
+    {
+      "startSeconds": 123.84,
+      "text": "query to your front-end application. It"
+    },
+    {
+      "startSeconds": 125.52,
+      "text": "sends a request to LM server. It starts"
+    },
+    {
+      "startSeconds": 127.52,
+      "text": "its processing and the way these are"
+    },
+    {
+      "startSeconds": 129.2,
+      "text": "designed is that they stream out the"
+    },
+    {
+      "startSeconds": 130.479,
+      "text": "partial responses which are loaded"
+    },
+    {
+      "startSeconds": 131.84,
+      "text": "immediately in the UI and once they are"
+    },
+    {
+      "startSeconds": 133.76,
+      "text": "done responding they stream the final"
+    },
+    {
+      "startSeconds": 135.2,
+      "text": "response with some signal like uh it's"
+    },
+    {
+      "startSeconds": 136.959,
+      "text": "closed and it's done which basically"
+    },
+    {
+      "startSeconds": 138.56,
+      "text": "shows into the UI. So I hope this"
+    },
+    {
+      "startSeconds": 140.48,
+      "text": "diagram makes sense. So in very short uh"
+    },
+    {
+      "startSeconds": 143.28,
+      "text": "server side events are required because"
+    },
+    {
+      "startSeconds": 145.36,
+      "text": "number one you don't want to send huge"
+    },
+    {
+      "startSeconds": 146.56,
+      "text": "amount of data as part of single uh"
+    },
+    {
+      "startSeconds": 148.959,
+      "text": "request. Now you will cause network"
+    },
+    {
+      "startSeconds": 150.08,
+      "text": "latency and sometimes due to u unstable"
+    },
+    {
+      "startSeconds": 152.4,
+      "text": "connections you may not give the best"
+    },
+    {
+      "startSeconds": 153.92,
+      "text": "experience in with the help of streaming"
+    },
+    {
+      "startSeconds": 155.36,
+      "text": "you give partial experience and then the"
+    },
+    {
+      "startSeconds": 156.959,
+      "text": "last chunk can be sent and resent you"
+    },
+    {
+      "startSeconds": 158.8,
+      "text": "know based on the configurations. Uh but"
+    },
+    {
+      "startSeconds": 160.4,
+      "text": "yeah that's one reason and another"
+    },
+    {
+      "startSeconds": 161.519,
+      "text": "reason is that these LM servers are"
+    },
+    {
+      "startSeconds": 162.8,
+      "text": "going to take a lot of time. Now there"
+    },
+    {
+      "startSeconds": 164.319,
+      "text": "will be one more question is that you"
+    },
+    {
+      "startSeconds": 165.599,
+      "text": "know why not websockets rather than uh"
+    },
+    {
+      "startSeconds": 168.08,
+      "text": "serverside events. So the major"
+    },
+    {
+      "startSeconds": 169.519,
+      "text": "difference between a web soocket and a"
+    },
+    {
+      "startSeconds": 170.959,
+      "text": "serverside event is that you know it's"
+    },
+    {
+      "startSeconds": 172.8,
+      "text": "designed for birectional communication"
+    },
+    {
+      "startSeconds": 174.239,
+      "text": "that is server to client. However,"
+    },
+    {
+      "startSeconds": 175.84,
+      "text": "serverside events are designed for"
+    },
+    {
+      "startSeconds": 177.04,
+      "text": "unidirectional communication that is"
+    },
+    {
+      "startSeconds": 178.56,
+      "text": "always from server to client. So like"
+    },
+    {
+      "startSeconds": 180.8,
+      "text": "restful API calls, it does not close the"
+    },
+    {
+      "startSeconds": 182.879,
+      "text": "connection immediately. It keeps"
+    },
+    {
+      "startSeconds": 183.92,
+      "text": "receiving those stream chunks and once"
+    },
+    {
+      "startSeconds": 185.84,
+      "text": "it's done then only it closes the"
+    },
+    {
+      "startSeconds": 187.28,
+      "text": "connection. We don't need a birectional"
+    },
+    {
+      "startSeconds": 188.959,
+      "text": "call in this case. And just to give you"
+    },
+    {
+      "startSeconds": 190.959,
+      "text": "an understanding, this is how it goes"
+    },
+    {
+      "startSeconds": 192.48,
+      "text": "like request go uh to the server LM"
+    },
+    {
+      "startSeconds": 194.879,
+      "text": "engine and keep on streaming the um"
+    },
+    {
+      "startSeconds": 196.879,
+      "text": "response. And this is why it's a"
+    },
+    {
+      "startSeconds": 198.239,
+      "text": "lightweight built-in to HTTP uh perfect"
+    },
+    {
+      "startSeconds": 200.56,
+      "text": "for LM streaming and fallback friendly"
+    },
+    {
+      "startSeconds": 202.56,
+      "text": "uh with firewalls and proxies compared"
+    },
+    {
+      "startSeconds": 204.08,
+      "text": "to websockets. Okay, so let's go and"
+    },
+    {
+      "startSeconds": 206.8,
+      "text": "check out how do we do the streaming in"
+    },
+    {
+      "startSeconds": 208.72,
+      "text": "React. So before we start with the front"
+    },
+    {
+      "startSeconds": 210.879,
+      "text": "end side, I have just created a dummy"
+    },
+    {
+      "startSeconds": 212.56,
+      "text": "you know stream example endpoint. So I'm"
+    },
+    {
+      "startSeconds": 214.72,
+      "text": "using Python fast API. You're free to"
+    },
+    {
+      "startSeconds": 216.4,
+      "text": "use any other service. So this is a"
+    },
+    {
+      "startSeconds": 218,
+      "text": "streaming payload. Currently it's just"
+    },
+    {
+      "startSeconds": 219.599,
+      "text": "like here uh there are five sets of"
+    },
+    {
+      "startSeconds": 221.04,
+      "text": "message but assume these to be you know"
+    },
+    {
+      "startSeconds": 223.12,
+      "text": "very big messages. So like big chunks of"
+    },
+    {
+      "startSeconds": 225.92,
+      "text": "let's say 5 10 KBs etc. they are sent"
+    },
+    {
+      "startSeconds": 228,
+      "text": "one by one. And this is the event"
+    },
+    {
+      "startSeconds": 229.44,
+      "text": "generator. So if it is disconnected we"
+    },
+    {
+      "startSeconds": 231.28,
+      "text": "break it otherwise we keep on yielding."
+    },
+    {
+      "startSeconds": 232.799,
+      "text": "I hope you're familiar with keyword."
+    },
+    {
+      "startSeconds": 234.159,
+      "text": "This is very important um you know in"
+    },
+    {
+      "startSeconds": 236,
+      "text": "understanding these cases like unlike a"
+    },
+    {
+      "startSeconds": 238.08,
+      "text": "proper response yield keeps on you know"
+    },
+    {
+      "startSeconds": 239.92,
+      "text": "yielding until a specific condition is"
+    },
+    {
+      "startSeconds": 241.439,
+      "text": "met. So this this is how it goes. So for"
+    },
+    {
+      "startSeconds": 243.68,
+      "text": "every chunk it sends that payload and"
+    },
+    {
+      "startSeconds": 245.68,
+      "text": "once that is done it sends it as done."
+    },
+    {
+      "startSeconds": 247.519,
+      "text": "Okay. And this is like the streaming"
+    },
+    {
+      "startSeconds": 250.08,
+      "text": "response event source response the"
+    },
+    {
+      "startSeconds": 251.76,
+      "text": "decorator for SSC. So this is a very"
+    },
+    {
+      "startSeconds": 253.36,
+      "text": "simple code. Um if I show you how this"
+    },
+    {
+      "startSeconds": 255.04,
+      "text": "works in postman. Okay. So let me just"
+    },
+    {
+      "startSeconds": 256.88,
+      "text": "try to hit this end point and then you"
+    },
+    {
+      "startSeconds": 258.959,
+      "text": "can see every once again it's sending me"
+    },
+    {
+      "startSeconds": 261.04,
+      "text": "stream messages and once it's done it"
+    },
+    {
+      "startSeconds": 262.479,
+      "text": "says connection closed. Okay. And if you"
+    },
+    {
+      "startSeconds": 264.8,
+      "text": "see that's what we are doing. So we are"
+    },
+    {
+      "startSeconds": 266.4,
+      "text": "just uh sleeping for one second and uh"
+    },
+    {
+      "startSeconds": 268.32,
+      "text": "we are sending the stream data. Okay. So"
+    },
+    {
+      "startSeconds": 270.479,
+      "text": "I hope you got a understanding of uh how"
+    },
+    {
+      "startSeconds": 272.72,
+      "text": "the streaming works based on the back"
+    },
+    {
+      "startSeconds": 274.24,
+      "text": "end setup. Now let's see how we can"
+    },
+    {
+      "startSeconds": 276.32,
+      "text": "implement this in React using very"
+    },
+    {
+      "startSeconds": 277.919,
+      "text": "simple web API event source. Uh note"
+    },
+    {
+      "startSeconds": 280,
+      "text": "that this is a very simple example just"
+    },
+    {
+      "startSeconds": 281.6,
+      "text": "to make you understand how it works. If"
+    },
+    {
+      "startSeconds": 283.44,
+      "text": "you're familiar with websockets, uh you"
+    },
+    {
+      "startSeconds": 285.84,
+      "text": "can actually understand this very well"
+    },
+    {
+      "startSeconds": 287.44,
+      "text": "what's happening and everything. So I"
+    },
+    {
+      "startSeconds": 289.44,
+      "text": "kept it simple for the sake of"
+    },
+    {
+      "startSeconds": 290.56,
+      "text": "understanding but you can make it even"
+    },
+    {
+      "startSeconds": 291.68,
+      "text": "more complex like based on the data that"
+    },
+    {
+      "startSeconds": 293.12,
+      "text": "you are getting from the stream you can"
+    },
+    {
+      "startSeconds": 294.8,
+      "text": "perform different actions etc etc. Okay."
+    },
+    {
+      "startSeconds": 297.28,
+      "text": "So this is my message which I'm storing"
+    },
+    {
+      "startSeconds": 299.199,
+      "text": "and then this is my loading state and"
+    },
+    {
+      "startSeconds": 300.8,
+      "text": "this this is just a progress info"
+    },
+    {
+      "startSeconds": 302.32,
+      "text": "because as the process goes we want to"
+    },
+    {
+      "startSeconds": 303.759,
+      "text": "make it more intuitive. Again we can"
+    },
+    {
+      "startSeconds": 305.36,
+      "text": "have more progress kind of thing like"
+    },
+    {
+      "startSeconds": 306.88,
+      "text": "how many chunks it's going to emit etc"
+    },
+    {
+      "startSeconds": 308.4,
+      "text": "etc. Okay. Um so what we do is we use"
+    },
+    {
+      "startSeconds": 310.56,
+      "text": "this event source again uh this is an"
+    },
+    {
+      "startSeconds": 312.08,
+      "text": "MDN API. You can always look into the"
+    },
+    {
+      "startSeconds": 314.08,
+      "text": "reference. It has much more than just"
+    },
+    {
+      "startSeconds": 315.68,
+      "text": "creating a stream source. You have"
+    },
+    {
+      "startSeconds": 316.8,
+      "text": "credentials and other details also. Uh"
+    },
+    {
+      "startSeconds": 318.639,
+      "text": "but here just to keep things simple and"
+    },
+    {
+      "startSeconds": 320.4,
+      "text": "you set the loading to true meaning that"
+    },
+    {
+      "startSeconds": 321.919,
+      "text": "now streaming has begun and on every"
+    },
+    {
+      "startSeconds": 324.08,
+      "text": "action uh look carefully how this is"
+    },
+    {
+      "startSeconds": 325.919,
+      "text": "similar to websockets on every message"
+    },
+    {
+      "startSeconds": 327.52,
+      "text": "that you capture you just pass the"
+    },
+    {
+      "startSeconds": 328.8,
+      "text": "message and if the par message if the"
+    },
+    {
+      "startSeconds": 330.88,
+      "text": "past message contains a message"
+    },
+    {
+      "startSeconds": 332.24,
+      "text": "attribute that was being sent from the"
+    },
+    {
+      "startSeconds": 334,
+      "text": "back end. If you look here carefully uh"
+    },
+    {
+      "startSeconds": 335.919,
+      "text": "this one so if if that attribute is"
+    },
+    {
+      "startSeconds": 338.08,
+      "text": "present then we append that to the"
+    },
+    {
+      "startSeconds": 339.68,
+      "text": "messages and keep doing this. Um if any"
+    },
+    {
+      "startSeconds": 342.4,
+      "text": "error happens we are just logging the"
+    },
+    {
+      "startSeconds": 343.759,
+      "text": "error and um connection closed and all"
+    },
+    {
+      "startSeconds": 346.08,
+      "text": "these things. Uh this will only be"
+    },
+    {
+      "startSeconds": 348.08,
+      "text": "required if you don't have this. So"
+    },
+    {
+      "startSeconds": 349.44,
+      "text": "let's say if you don't have any event"
+    },
+    {
+      "startSeconds": 350.479,
+      "text": "listener on end then it will uh come and"
+    },
+    {
+      "startSeconds": 352.4,
+      "text": "fall back to on error. But if you have"
+    },
+    {
+      "startSeconds": 354,
+      "text": "this then we won't see these logs. This"
+    },
+    {
+      "startSeconds": 355.6,
+      "text": "will only on error will only trigger if"
+    },
+    {
+      "startSeconds": 357.199,
+      "text": "there's a genuine error and not when the"
+    },
+    {
+      "startSeconds": 358.479,
+      "text": "connection is closed. When the"
+    },
+    {
+      "startSeconds": 359.68,
+      "text": "connection is closed it will set the"
+    },
+    {
+      "startSeconds": 361.12,
+      "text": "progress to stream ended all these"
+    },
+    {
+      "startSeconds": 362.4,
+      "text": "things and log the details and set"
+    },
+    {
+      "startSeconds": 363.6,
+      "text": "loading to the false. And whenever the"
+    },
+    {
+      "startSeconds": 365.12,
+      "text": "connection is open if you want to"
+    },
+    {
+      "startSeconds": 366.08,
+      "text": "perform any actions you can set the"
+    },
+    {
+      "startSeconds": 367.36,
+      "text": "progress info and all those things. And"
+    },
+    {
+      "startSeconds": 368.96,
+      "text": "here is our JSX. So just a H1 and then"
+    },
+    {
+      "startSeconds": 371.44,
+      "text": "if it is not loading then get the"
+    },
+    {
+      "startSeconds": 372.96,
+      "text": "messages. If it is loading the stream is"
+    },
+    {
+      "startSeconds": 374.479,
+      "text": "already going on. Uh then the progress"
+    },
+    {
+      "startSeconds": 376.08,
+      "text": "info what is happening? How is server"
+    },
+    {
+      "startSeconds": 377.759,
+      "text": "responding? This is just an example and"
+    },
+    {
+      "startSeconds": 379.52,
+      "text": "the messages that are being streamed."
+    },
+    {
+      "startSeconds": 380.8,
+      "text": "Okay. So now let's go to the browser and"
+    },
+    {
+      "startSeconds": 382.319,
+      "text": "see how this all works."
+    },
+    {
+      "startSeconds": 385.36,
+      "text": "So this is our UI as we saw. Uh so let"
+    },
+    {
+      "startSeconds": 388.24,
+      "text": "me just open the console also and clean"
+    },
+    {
+      "startSeconds": 390.8,
+      "text": "it up. And now if I just click on this"
+    },
+    {
+      "startSeconds": 393.919,
+      "text": "get messages. So you can see that these"
+    },
+    {
+      "startSeconds": 396.479,
+      "text": "uh if I go to network tab let me just"
+    },
+    {
+      "startSeconds": 398.479,
+      "text": "quickly uh yeah let me clear it off and"
+    },
+    {
+      "startSeconds": 401.68,
+      "text": "then do it again. Okay, so if you see"
+    },
+    {
+      "startSeconds": 403.84,
+      "text": "that this is um event stream as you can"
+    },
+    {
+      "startSeconds": 406.24,
+      "text": "see there's no response header but yeah"
+    },
+    {
+      "startSeconds": 408.16,
+      "text": "this is how it's coming in. So the data"
+    },
+    {
+      "startSeconds": 409.919,
+      "text": "is being streamed in form of a"
+    },
+    {
+      "startSeconds": 411.44,
+      "text": "serverside event and this keeps on going"
+    },
+    {
+      "startSeconds": 412.88,
+      "text": "to the UI and yeah I mean that's that's"
+    },
+    {
+      "startSeconds": 414.96,
+      "text": "the core of this logic. So assume that"
+    },
+    {
+      "startSeconds": 416.479,
+      "text": "these payloads are too big then in that"
+    },
+    {
+      "startSeconds": 418.08,
+      "text": "case you can break it down into multiple"
+    },
+    {
+      "startSeconds": 419.36,
+      "text": "payloads and stream it out. Okay and if"
+    },
+    {
+      "startSeconds": 421.36,
+      "text": "you see the console we see that stream"
+    },
+    {
+      "startSeconds": 422.72,
+      "text": "ended."
+    },
+    {
+      "startSeconds": 424.24,
+      "text": "If you carefully look at this one uh"
+    },
+    {
+      "startSeconds": 427.36,
+      "text": "event source failed this is not showing"
+    },
+    {
+      "startSeconds": 428.72,
+      "text": "up. This is basically stream is ending"
+    },
+    {
+      "startSeconds": 430.56,
+      "text": "from here. Right? So if I just"
+    },
+    {
+      "startSeconds": 433.759,
+      "text": "so if you see like this stream ended"
+    },
+    {
+      "startSeconds": 435.68,
+      "text": "okay but let's say if I just comment"
+    },
+    {
+      "startSeconds": 437.84,
+      "text": "this part out then see what happens"
+    },
+    {
+      "startSeconds": 439.44,
+      "text": "since now now there's no event listener"
+    },
+    {
+      "startSeconds": 441.12,
+      "text": "to listen to the end of the stream it"
+    },
+    {
+      "startSeconds": 442.24,
+      "text": "will fall back to this error state okay"
+    },
+    {
+      "startSeconds": 443.68,
+      "text": "and let's see what happens so if I"
+    },
+    {
+      "startSeconds": 444.88,
+      "text": "reload it clear this get messages so now"
+    },
+    {
+      "startSeconds": 448.24,
+      "text": "everything is behaving as expected but"
+    },
+    {
+      "startSeconds": 449.919,
+      "text": "once the stream ends you will see that"
+    },
+    {
+      "startSeconds": 451.84,
+      "text": "event source fail right so that is the"
+    },
+    {
+      "startSeconds": 453.84,
+      "text": "thing if you keep this one in place then"
+    },
+    {
+      "startSeconds": 455.68,
+      "text": "it will always go once the event end"
+    },
+    {
+      "startSeconds": 457.039,
+      "text": "it's always going to end come in here"
+    },
+    {
+      "startSeconds": 458.56,
+      "text": "but otherwise it will go to event source"
+    },
+    {
+      "startSeconds": 460,
+      "text": "fail uh and that is important because"
+    },
+    {
+      "startSeconds": 461.599,
+      "text": "otherwise uh if you don't have this then"
+    },
+    {
+      "startSeconds": 463.039,
+      "text": "in that case you know it will be"
+    },
+    {
+      "startSeconds": 464.08,
+      "text": "confusing to know like you can see that"
+    },
+    {
+      "startSeconds": 465.599,
+      "text": "this is this is going this way. So it's"
+    },
+    {
+      "startSeconds": 467.52,
+      "text": "important because otherwise you will"
+    },
+    {
+      "startSeconds": 468.8,
+      "text": "never know whether it is a genuine error"
+    },
+    {
+      "startSeconds": 470.319,
+      "text": "from the back end or if it the stream"
+    },
+    {
+      "startSeconds": 471.68,
+      "text": "ended for some other reason and yeah you"
+    },
+    {
+      "startSeconds": 473.52,
+      "text": "can do a lot of these customizations and"
+    },
+    {
+      "startSeconds": 475.039,
+      "text": "if I just um where is that event source"
+    },
+    {
+      "startSeconds": 477.039,
+      "text": "and go to the MDN reference you will see"
+    },
+    {
+      "startSeconds": 478.8,
+      "text": "that"
+    },
+    {
+      "startSeconds": 480.319,
+      "text": "uh the docs are there I mean I would"
+    },
+    {
+      "startSeconds": 481.68,
+      "text": "highly recommend you to go through these"
+    },
+    {
+      "startSeconds": 482.8,
+      "text": "docs it's very good actually you know"
+    },
+    {
+      "startSeconds": 484.4,
+      "text": "things like uh with with credentials and"
+    },
+    {
+      "startSeconds": 486.479,
+      "text": "all those things. So it it gives you a"
+    },
+    {
+      "startSeconds": 488.479,
+      "text": "descriptive like uh there are what are"
+    },
+    {
+      "startSeconds": 489.919,
+      "text": "the events that are supported and yeah"
+    },
+    {
+      "startSeconds": 491.28,
+      "text": "one good thing is that it's compatible"
+    },
+    {
+      "startSeconds": 492.56,
+      "text": "with all these modern browsers which is"
+    },
+    {
+      "startSeconds": 494,
+      "text": "a very good news. So you don't have to"
+    },
+    {
+      "startSeconds": 495.36,
+      "text": "face any issues while doing the stream"
+    },
+    {
+      "startSeconds": 497.28,
+      "text": "and um yeah I mean uh what is there?"
+    },
+    {
+      "startSeconds": 501.28,
+      "text": "Yeah like uh read only credentials and"
+    },
+    {
+      "startSeconds": 502.96,
+      "text": "all these things if you want to set it"
+    },
+    {
+      "startSeconds": 504.16,
+      "text": "to true or false uh to you know send it"
+    },
+    {
+      "startSeconds": 506.479,
+      "text": "uh and then it also gives you the state"
+    },
+    {
+      "startSeconds": 508.4,
+      "text": "and all these details. So worth looking"
+    },
+    {
+      "startSeconds": 510.16,
+      "text": "at the actual MDN docs but this is on a"
+    },
+    {
+      "startSeconds": 512.32,
+      "text": "high level how this all works. Uh I hope"
+    },
+    {
+      "startSeconds": 514.08,
+      "text": "you like this tutorial. Um please let me"
+    },
+    {
+      "startSeconds": 516,
+      "text": "know if you want to know more about"
+    },
+    {
+      "startSeconds": 517.12,
+      "text": "these. Um yeah I'll be creating more"
+    },
+    {
+      "startSeconds": 519.039,
+      "text": "such tutorials. I'll be focusing on the"
+    },
+    {
+      "startSeconds": 520.32,
+      "text": "back end side of things. How you can"
+    },
+    {
+      "startSeconds": 521.68,
+      "text": "work with agents, how you can develop"
+    },
+    {
+      "startSeconds": 523.36,
+      "text": "agents quickly and you know how you can"
+    },
+    {
+      "startSeconds": 525.2,
+      "text": "deploy those agents and what is the best"
+    },
+    {
+      "startSeconds": 526.88,
+      "text": "practices that are supposed to be"
+    },
+    {
+      "startSeconds": 528,
+      "text": "followed um on top of these videos. Uh"
+    },
+    {
+      "startSeconds": 530.48,
+      "text": "but yeah, if you have any specific thing"
+    },
+    {
+      "startSeconds": 531.92,
+      "text": "in mind, feel free to drop down in"
+    },
+    {
+      "startSeconds": 533.2,
+      "text": "comments. Maybe we can cover it in the"
+    },
+    {
+      "startSeconds": 534.32,
+      "text": "next video. Until then, bye-bye."
+    }
+  ]
+}

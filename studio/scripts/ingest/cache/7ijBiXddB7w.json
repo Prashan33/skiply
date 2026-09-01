@@ -1,0 +1,449 @@
+{
+  "id": "7ijBiXddB7w",
+  "url": "https://www.youtube.com/watch?v=7ijBiXddB7w",
+  "fetchedAt": "2026-09-01T04:10:00.667Z",
+  "captionKind": "asr",
+  "chapters": [],
+  "cues": [
+    {
+      "startSeconds": 0,
+      "text": "let's understand authentication with a"
+    },
+    {
+      "startSeconds": 1.979,
+      "text": "cool example imagine you have a secret"
+    },
+    {
+      "startSeconds": 4.08,
+      "text": "club and you want to make sure only"
+    },
+    {
+      "startSeconds": 6,
+      "text": "members can enter to do that you need a"
+    },
+    {
+      "startSeconds": 8.58,
+      "text": "way to verify who they are that's what"
+    },
+    {
+      "startSeconds": 10.679,
+      "text": "authentication does in the back end"
+    },
+    {
+      "startSeconds": 12.179,
+      "text": "authentication is the process of"
+    },
+    {
+      "startSeconds": 13.86,
+      "text": "checking if someone is who they say they"
+    },
+    {
+      "startSeconds": 16.199,
+      "text": "are it's like when you enter a password"
+    },
+    {
+      "startSeconds": 17.88,
+      "text": "or use your fingerprint to unlock your"
+    },
+    {
+      "startSeconds": 19.92,
+      "text": "phone in the digital world the backend"
+    },
+    {
+      "startSeconds": 22.199,
+      "text": "is like the bouncer at the club checking"
+    },
+    {
+      "startSeconds": 24.359,
+      "text": "your credentials to make sure you're a"
+    },
+    {
+      "startSeconds": 26.039,
+      "text": "member when you want to access a website"
+    },
+    {
+      "startSeconds": 27.96,
+      "text": "or app the backend server asks you to"
+    },
+    {
+      "startSeconds": 30.119,
+      "text": "provide some information like a username"
+    },
+    {
+      "startSeconds": 32.22,
+      "text": "and password it's like showing your"
+    },
+    {
+      "startSeconds": 34.02,
+      "text": "membership card to the bouncer the"
+    },
+    {
+      "startSeconds": 35.88,
+      "text": "backend server then checks this"
+    },
+    {
+      "startSeconds": 37.2,
+      "text": "information against a list of authorized"
+    },
+    {
+      "startSeconds": 39.12,
+      "text": "users it has just like the bouncer"
+    },
+    {
+      "startSeconds": 41.219,
+      "text": "checking your name against the club's"
+    },
+    {
+      "startSeconds": 42.78,
+      "text": "membership list if the username and"
+    },
+    {
+      "startSeconds": 44.76,
+      "text": "password you provide match with the"
+    },
+    {
+      "startSeconds": 46.26,
+      "text": "backend server has stored it means"
+    },
+    {
+      "startSeconds": 48.18,
+      "text": "you're a trusted user and the server"
+    },
+    {
+      "startSeconds": 50.28,
+      "text": "lets you in if there's a mismatch it"
+    },
+    {
+      "startSeconds": 52.62,
+      "text": "means you're not authenticated and"
+    },
+    {
+      "startSeconds": 54.48,
+      "text": "access may be denied authentication is"
+    },
+    {
+      "startSeconds": 56.64,
+      "text": "essential for security because it"
+    },
+    {
+      "startSeconds": 58.26,
+      "text": "ensures that only authorized people can"
+    },
+    {
+      "startSeconds": 59.94,
+      "text": "access certain parts of a website or app"
+    },
+    {
+      "startSeconds": 62.52,
+      "text": "it helps predict your personal"
+    },
+    {
+      "startSeconds": 64.08,
+      "text": "information and keep sensitive data safe"
+    },
+    {
+      "startSeconds": 66.479,
+      "text": "so in simple terms back-end"
+    },
+    {
+      "startSeconds": 68.28,
+      "text": "authentication is like the bouncer at a"
+    },
+    {
+      "startSeconds": 70.14,
+      "text": "club checking your membership card to"
+    },
+    {
+      "startSeconds": 72.06,
+      "text": "make sure you're allowed to enter it's"
+    },
+    {
+      "startSeconds": 73.68,
+      "text": "the backend server verifying your"
+    },
+    {
+      "startSeconds": 75.299,
+      "text": "credentials to make sure you're a"
+    },
+    {
+      "startSeconds": 76.979,
+      "text": "trusted user before granting you access"
+    },
+    {
+      "startSeconds": 78.84,
+      "text": "to a website or app now continuing with"
+    },
+    {
+      "startSeconds": 81.36,
+      "text": "the bouncer example let's understand"
+    },
+    {
+      "startSeconds": 83.159,
+      "text": "authorization so once you have passed"
+    },
+    {
+      "startSeconds": 85.619,
+      "text": "the authentication and proved that"
+    },
+    {
+      "startSeconds": 87,
+      "text": "you're a member of the club"
+    },
+    {
+      "startSeconds": 88.02,
+      "text": "authorization comes into play"
+    },
+    {
+      "startSeconds": 89.7,
+      "text": "authorization is like getting a special"
+    },
+    {
+      "startSeconds": 91.74,
+      "text": "stamp on your hand that determines what"
+    },
+    {
+      "startSeconds": 94.08,
+      "text": "you're allowed to do inside the club it"
+    },
+    {
+      "startSeconds": 96.18,
+      "text": "sets the boundaries and permissions for"
+    },
+    {
+      "startSeconds": 97.86,
+      "text": "your access in the digital world"
+    },
+    {
+      "startSeconds": 99.72,
+      "text": "authorization is the process of"
+    },
+    {
+      "startSeconds": 101.52,
+      "text": "determining what actions or parts of a"
+    },
+    {
+      "startSeconds": 103.74,
+      "text": "website or app you're allowed to access"
+    },
+    {
+      "startSeconds": 105.6,
+      "text": "after you have been authenticated it's"
+    },
+    {
+      "startSeconds": 107.939,
+      "text": "like the club's rules that specify which"
+    },
+    {
+      "startSeconds": 109.979,
+      "text": "areas are off limits or what activities"
+    },
+    {
+      "startSeconds": 112.14,
+      "text": "you can participate in once you're"
+    },
+    {
+      "startSeconds": 114,
+      "text": "inside the backend server acting as the"
+    },
+    {
+      "startSeconds": 116.399,
+      "text": "club's rule enforcer checks your"
+    },
+    {
+      "startSeconds": 118.32,
+      "text": "authenticated identity and looks inside"
+    },
+    {
+      "startSeconds": 120.18,
+      "text": "your access permissions it decides what"
+    },
+    {
+      "startSeconds": 122.52,
+      "text": "you can or cannot do within the website"
+    },
+    {
+      "startSeconds": 124.259,
+      "text": "or app based on your role or level of"
+    },
+    {
+      "startSeconds": 126.18,
+      "text": "Authority for example imagine the club"
+    },
+    {
+      "startSeconds": 128.58,
+      "text": "has different areas like the dance floor"
+    },
+    {
+      "startSeconds": 130.259,
+      "text": "VIP lounge and kitchen authorization"
+    },
+    {
+      "startSeconds": 132.84,
+      "text": "ensures that only certain members have"
+    },
+    {
+      "startSeconds": 134.7,
+      "text": "access to specific areas the bouncer"
+    },
+    {
+      "startSeconds": 137.22,
+      "text": "based on your membership level or role"
+    },
+    {
+      "startSeconds": 139.26,
+      "text": "will allow you into certain sections and"
+    },
+    {
+      "startSeconds": 141.66,
+      "text": "restrict access to others in the back"
+    },
+    {
+      "startSeconds": 143.94,
+      "text": "end authorization Works similarly once"
+    },
+    {
+      "startSeconds": 146.58,
+      "text": "you're authenticated the server checks"
+    },
+    {
+      "startSeconds": 148.319,
+      "text": "your assigned roles permissions or"
+    },
+    {
+      "startSeconds": 150.239,
+      "text": "access levels it then determines what"
+    },
+    {
+      "startSeconds": 152.4,
+      "text": "parts of the website or app you're"
+    },
+    {
+      "startSeconds": 153.78,
+      "text": "allowed to visit and what actions you"
+    },
+    {
+      "startSeconds": 155.76,
+      "text": "can perform for instance if you're a"
+    },
+    {
+      "startSeconds": 158.099,
+      "text": "regular member you might have access to"
+    },
+    {
+      "startSeconds": 160.02,
+      "text": "General features like viewing event"
+    },
+    {
+      "startSeconds": 161.7,
+      "text": "schedules and making reservations"
+    },
+    {
+      "startSeconds": 163.739,
+      "text": "however if you are a VIP member you"
+    },
+    {
+      "startSeconds": 166.62,
+      "text": "might have additional privileges like"
+    },
+    {
+      "startSeconds": 168.12,
+      "text": "accessing exclusive content or making"
+    },
+    {
+      "startSeconds": 170.519,
+      "text": "special requests authorization ensures"
+    },
+    {
+      "startSeconds": 172.92,
+      "text": "that users can only do what they are"
+    },
+    {
+      "startSeconds": 174.72,
+      "text": "permitted to do within the website or"
+    },
+    {
+      "startSeconds": 176.459,
+      "text": "app it helps predict sensitive data and"
+    },
+    {
+      "startSeconds": 178.92,
+      "text": "Resources by resting creating access to"
+    },
+    {
+      "startSeconds": 180.959,
+      "text": "authorized individuals in simple terms"
+    },
+    {
+      "startSeconds": 183.42,
+      "text": "authorization in the backend is like the"
+    },
+    {
+      "startSeconds": 185.34,
+      "text": "bouncer giving you a special stamp or"
+    },
+    {
+      "startSeconds": 187.2,
+      "text": "access level after you have proven your"
+    },
+    {
+      "startSeconds": 189.48,
+      "text": "identity it determines which areas or"
+    },
+    {
+      "startSeconds": 191.519,
+      "text": "actions you're allowed to access within"
+    },
+    {
+      "startSeconds": 193.26,
+      "text": "a website or app based on your role or"
+    },
+    {
+      "startSeconds": 195.42,
+      "text": "permissions now on a side note there are"
+    },
+    {
+      "startSeconds": 198.18,
+      "text": "various authentication methods you can"
+    },
+    {
+      "startSeconds": 199.8,
+      "text": "use in your application such as username"
+    },
+    {
+      "startSeconds": 202.14,
+      "text": "and password token based authentication"
+    },
+    {
+      "startSeconds": 204.44,
+      "text": "single sign-on multi-factor"
+    },
+    {
+      "startSeconds": 206.819,
+      "text": "authentication and more I will certainly"
+    },
+    {
+      "startSeconds": 209.159,
+      "text": "make a video explaining these different"
+    },
+    {
+      "startSeconds": 210.78,
+      "text": "types of authentication methods in the"
+    },
+    {
+      "startSeconds": 212.64,
+      "text": "future so stay tuned for that so that's"
+    },
+    {
+      "startSeconds": 214.98,
+      "text": "all for the video if you found it"
+    },
+    {
+      "startSeconds": 216.659,
+      "text": "insightful don't forget to like And"
+    },
+    {
+      "startSeconds": 218.34,
+      "text": "subscribe and stay tuned for more"
+    }
+  ]
+}

@@ -1,0 +1,1750 @@
+{
+  "id": "GErEgIOMy_4",
+  "url": "https://www.youtube.com/watch?v=GErEgIOMy_4",
+  "fetchedAt": "2026-09-01T04:06:44.193Z",
+  "captionKind": "asr",
+  "chapters": [
+    {
+      "startSeconds": 0,
+      "label": "Demo – Agent writes and runs Hello World"
+    },
+    {
+      "startSeconds": 22,
+      "label": "What is OpenClaw?"
+    },
+    {
+      "startSeconds": 114,
+      "label": "Overview of today’s build"
+    },
+    {
+      "startSeconds": 160,
+      "label": "The Agent Loop explained"
+    },
+    {
+      "startSeconds": 259,
+      "label": "Code walkthrough (loop.py)"
+    },
+    {
+      "startSeconds": 489,
+      "label": "Tools architecture"
+    },
+    {
+      "startSeconds": 667,
+      "label": "Session storage (JSONL)"
+    },
+    {
+      "startSeconds": 720,
+      "label": "Live CLI demo"
+    },
+    {
+      "startSeconds": 871,
+      "label": "File system + session inspection"
+    },
+    {
+      "startSeconds": 915,
+      "label": "What’s next (Personality)"
+    }
+  ],
+  "cues": [
+    {
+      "startSeconds": 1.12,
+      "text": "Please write a hello world Python"
+    },
+    {
+      "startSeconds": 2.879,
+      "text": "script."
+    },
+    {
+      "startSeconds": 4.72,
+      "text": "All right, look at that. Our agent did"
+    },
+    {
+      "startSeconds": 6.16,
+      "text": "that. Created hello world Python script."
+    },
+    {
+      "startSeconds": 8.639,
+      "text": "Here it is. Look at that. Now run it."
+    },
+    {
+      "startSeconds": 12.48,
+      "text": "Let's see. It just ran the exact tool."
+    },
+    {
+      "startSeconds": 16.32,
+      "text": "Hello world. There it is. Hello world."
+    },
+    {
+      "startSeconds": 18.24,
+      "text": "Perfect. The script ran successfully and"
+    },
+    {
+      "startSeconds": 19.52,
+      "text": "printed hello world. Nice."
+    },
+    {
+      "startSeconds": 22.48,
+      "text": "Hey folks, uh OpenClaw. Uh if you"
+    },
+    {
+      "startSeconds": 24.88,
+      "text": "haven't heard of it, go check it out. Um"
+    },
+    {
+      "startSeconds": 26.96,
+      "text": "look it up online. Uh watch some YouTube"
+    },
+    {
+      "startSeconds": 28.88,
+      "text": "videos. Uh, but it's this AI agent that"
+    },
+    {
+      "startSeconds": 31.359,
+      "text": "lives on a personal machine. Um, and can"
+    },
+    {
+      "startSeconds": 33.6,
+      "text": "do some pretty cool things. Um, I played"
+    },
+    {
+      "startSeconds": 36.079,
+      "text": "around with it. It's pretty cool. Uh,"
+    },
+    {
+      "startSeconds": 37.6,
+      "text": "but I've been having even more fun"
+    },
+    {
+      "startSeconds": 39.6,
+      "text": "trying to rebuild my own version of"
+    },
+    {
+      "startSeconds": 41.36,
+      "text": "OpenClaw. Um, and so I wanted to kind of"
+    },
+    {
+      "startSeconds": 43.44,
+      "text": "share my process, what I've been doing."
+    },
+    {
+      "startSeconds": 45.52,
+      "text": "Um, because I think it's cool. Uh, I"
+    },
+    {
+      "startSeconds": 48.399,
+      "text": "think it's pretty easy to be able to do"
+    },
+    {
+      "startSeconds": 50.48,
+      "text": "that with when you have a coding agent"
+    },
+    {
+      "startSeconds": 51.92,
+      "text": "like Cloud Code. Um, and I think it's a"
+    },
+    {
+      "startSeconds": 55.039,
+      "text": "good learning experience. So, I'm going"
+    },
+    {
+      "startSeconds": 56.48,
+      "text": "to cover that over the next four videos."
+    },
+    {
+      "startSeconds": 58.399,
+      "text": "I'm going to cover four major concepts"
+    },
+    {
+      "startSeconds": 61.039,
+      "text": "um that kind of make OpenClaw unique."
+    },
+    {
+      "startSeconds": 63.12,
+      "text": "The first is the agent loop. Um we're"
+    },
+    {
+      "startSeconds": 65.6,
+      "text": "going to cover that this video. The next"
+    },
+    {
+      "startSeconds": 67.04,
+      "text": "is personality. OpenClaw has"
+    },
+    {
+      "startSeconds": 68.64,
+      "text": "personality. Um it knows who it is. It"
+    },
+    {
+      "startSeconds": 71.04,
+      "text": "knows who you are and that can change."
+    },
+    {
+      "startSeconds": 73.04,
+      "text": "Um the third is access anywhere. So you"
+    },
+    {
+      "startSeconds": 75.68,
+      "text": "can text this thing uh via Telegram,"
+    },
+    {
+      "startSeconds": 77.68,
+      "text": "iMessage, etc. I'm going to cover"
+    },
+    {
+      "startSeconds": 79.36,
+      "text": "implementing with Telegram. And fourth,"
+    },
+    {
+      "startSeconds": 81.36,
+      "text": "OpenClaw is proactive, right? And so it"
+    },
+    {
+      "startSeconds": 83.6,
+      "text": "has this thing, this idea called a"
+    },
+    {
+      "startSeconds": 85.28,
+      "text": "heartbeat where it checks in kind of"
+    },
+    {
+      "startSeconds": 86.96,
+      "text": "with itself every 30 minutes, maybe does"
+    },
+    {
+      "startSeconds": 89.2,
+      "text": "some work, then reaches out to you if it"
+    },
+    {
+      "startSeconds": 90.64,
+      "text": "if it deems necessary, and then cron aka"
+    },
+    {
+      "startSeconds": 93.439,
+      "text": "scheduling. Um, you can tell OpenClaw,"
+    },
+    {
+      "startSeconds": 95.6,
+      "text": "hey, uh, will you do a daily briefing"
+    },
+    {
+      "startSeconds": 98.079,
+      "text": "for me every every morning at 9:00 a.m."
+    },
+    {
+      "startSeconds": 100.159,
+      "text": "Check my emails, do these other things."
+    },
+    {
+      "startSeconds": 101.6,
+      "text": "And so I'm going to cover um all four of"
+    },
+    {
+      "startSeconds": 103.68,
+      "text": "those concepts over the next four"
+    },
+    {
+      "startSeconds": 104.799,
+      "text": "videos, kind of building them in my own"
+    },
+    {
+      "startSeconds": 106.56,
+      "text": "implementation. Um, when I say me, I'm"
+    },
+    {
+      "startSeconds": 109.68,
+      "text": "building it with Claude. Um, and it's"
+    },
+    {
+      "startSeconds": 111.28,
+      "text": "been a lot of fun. So hopefully you find"
+    },
+    {
+      "startSeconds": 112.96,
+      "text": "this useful. Uh let's jump in. Okay, so"
+    },
+    {
+      "startSeconds": 115.52,
+      "text": "there's three main things that we want"
+    },
+    {
+      "startSeconds": 116.72,
+      "text": "to cover today. The first is the agent"
+    },
+    {
+      "startSeconds": 119.36,
+      "text": "loop. This is a central part of any"
+    },
+    {
+      "startSeconds": 122,
+      "text": "agentic system and it's also true for"
+    },
+    {
+      "startSeconds": 124.56,
+      "text": "open claw. So this is how the LLM"
+    },
+    {
+      "startSeconds": 127.119,
+      "text": "reasons how it calls tools and decides"
+    },
+    {
+      "startSeconds": 129.599,
+      "text": "when it's done. So we're going to talk"
+    },
+    {
+      "startSeconds": 131.92,
+      "text": "through this. I have a diagram I'm going"
+    },
+    {
+      "startSeconds": 133.12,
+      "text": "to show you in a minute. Um we'll"
+    },
+    {
+      "startSeconds": 135.2,
+      "text": "briefly spend a little bit of time work"
+    },
+    {
+      "startSeconds": 136.8,
+      "text": "talking about tools. Tools are the"
+    },
+    {
+      "startSeconds": 138.56,
+      "text": "things that lets the LLM actually do"
+    },
+    {
+      "startSeconds": 140.239,
+      "text": "things. In this case, it's reading a"
+    },
+    {
+      "startSeconds": 141.76,
+      "text": "file, writing a file, and running shell"
+    },
+    {
+      "startSeconds": 143.52,
+      "text": "commands. Those are, I think, the three"
+    },
+    {
+      "startSeconds": 144.959,
+      "text": "basic ones that we really need to make"
+    },
+    {
+      "startSeconds": 146.48,
+      "text": "an agent like this work. And thirdly,"
+    },
+    {
+      "startSeconds": 149.04,
+      "text": "um, session storage. This is kind of"
+    },
+    {
+      "startSeconds": 150.72,
+      "text": "just like a gimme. We're not going to"
+    },
+    {
+      "startSeconds": 152,
+      "text": "spend much time on it, but it's like how"
+    },
+    {
+      "startSeconds": 153.599,
+      "text": "do we persist the conversation history"
+    },
+    {
+      "startSeconds": 155.36,
+      "text": "and then like make sure we load it back"
+    },
+    {
+      "startSeconds": 156.72,
+      "text": "in. Um, but yeah, but most of the time"
+    },
+    {
+      "startSeconds": 158.8,
+      "text": "we're going to spend on the agent loop."
+    },
+    {
+      "startSeconds": 160.72,
+      "text": "Before we jump into code, I do want to"
+    },
+    {
+      "startSeconds": 162.64,
+      "text": "go over the agent loop because this is"
+    },
+    {
+      "startSeconds": 164.16,
+      "text": "like the core system of any AI agent."
+    },
+    {
+      "startSeconds": 166.64,
+      "text": "Um, right? So cloud code, codeex, um"
+    },
+    {
+      "startSeconds": 169.28,
+      "text": "even chatgpt um this is kind of the the"
+    },
+    {
+      "startSeconds": 172,
+      "text": "harness that is happening. Um it's not"
+    },
+    {
+      "startSeconds": 174.16,
+      "text": "just the LLM, right? So up at the top"
+    },
+    {
+      "startSeconds": 176.319,
+      "text": "here, we'll receive a user message. And"
+    },
+    {
+      "startSeconds": 178.239,
+      "text": "when we receive that user message, we're"
+    },
+    {
+      "startSeconds": 180.08,
+      "text": "going to build this initial prompt. And"
+    },
+    {
+      "startSeconds": 181.68,
+      "text": "this prompt actually consists of three"
+    },
+    {
+      "startSeconds": 183.519,
+      "text": "things. You know, oversimplifying our"
+    },
+    {
+      "startSeconds": 186.239,
+      "text": "system prompt, which basically defines"
+    },
+    {
+      "startSeconds": 187.84,
+      "text": "what it is um and how it's supposed to"
+    },
+    {
+      "startSeconds": 189.68,
+      "text": "respond and what it's supposed to do."
+    },
+    {
+      "startSeconds": 190.959,
+      "text": "The history, so those are previous"
+    },
+    {
+      "startSeconds": 192.64,
+      "text": "messages um that may be in the system."
+    },
+    {
+      "startSeconds": 194.959,
+      "text": "Um, so if you sent multiple messages to"
+    },
+    {
+      "startSeconds": 197.04,
+      "text": "chat GBT, it would load all of those in."
+    },
+    {
+      "startSeconds": 199.28,
+      "text": "And then we have the user message. Once"
+    },
+    {
+      "startSeconds": 201.76,
+      "text": "we have all of those things, we then"
+    },
+    {
+      "startSeconds": 203.2,
+      "text": "call the LLM. The LLM then gives us a"
+    },
+    {
+      "startSeconds": 206.159,
+      "text": "response. And remember, the LM has"
+    },
+    {
+      "startSeconds": 208.319,
+      "text": "access to tools. And so if there is a"
+    },
+    {
+      "startSeconds": 210.4,
+      "text": "tool call, um, we'll [clears throat]"
+    },
+    {
+      "startSeconds": 212.4,
+      "text": "then execute that tool, add the result"
+    },
+    {
+      "startSeconds": 215.28,
+      "text": "to the prompt, and then call the LLM"
+    },
+    {
+      "startSeconds": 217.44,
+      "text": "again. Um, and we'll keep doing this"
+    },
+    {
+      "startSeconds": 220.239,
+      "text": "until we have no tool tool calls, at"
+    },
+    {
+      "startSeconds": 223.84,
+      "text": "which point we can assume that the agent"
+    },
+    {
+      "startSeconds": 226.48,
+      "text": "is done. Um, or at least asking for more"
+    },
+    {
+      "startSeconds": 228.799,
+      "text": "input from the user, in which case we"
+    },
+    {
+      "startSeconds": 230.72,
+      "text": "will then return to the user. And so"
+    },
+    {
+      "startSeconds": 232.64,
+      "text": "this is the loop that is central to"
+    },
+    {
+      "startSeconds": 235.12,
+      "text": "almost every AI agent out there. We"
+    },
+    {
+      "startSeconds": 238.08,
+      "text": "there are many SDKs that like kind of"
+    },
+    {
+      "startSeconds": 239.76,
+      "text": "have this already built in. We're going"
+    },
+    {
+      "startSeconds": 241.04,
+      "text": "to kind of build this from scratch um"
+    },
+    {
+      "startSeconds": 242.879,
+      "text": "just to kind of see how it works. Um,"
+    },
+    {
+      "startSeconds": 244.72,
+      "text": "but there's plenty of SDKs out there"
+    },
+    {
+      "startSeconds": 246.08,
+      "text": "like the a the cloud agent SDK. Open AAI"
+    },
+    {
+      "startSeconds": 248.64,
+      "text": "has an agent SDK. There's"
+    },
+    {
+      "startSeconds": 250.867,
+      "text": "[clears throat] Pyantic which has their"
+    },
+    {
+      "startSeconds": 252.239,
+      "text": "own agent SDK. Um, and plenty of others."
+    },
+    {
+      "startSeconds": 254.799,
+      "text": "Um, but this is conceptually how it"
+    },
+    {
+      "startSeconds": 258,
+      "text": "works. So, there's only six files and"
+    },
+    {
+      "startSeconds": 261.759,
+      "text": "around 150 lines that handle all of"
+    },
+    {
+      "startSeconds": 263.759,
+      "text": "this. Here's an overview of these files."
+    },
+    {
+      "startSeconds": 266.479,
+      "text": "The main ones that we're going to be"
+    },
+    {
+      "startSeconds": 267.6,
+      "text": "looking in is this loop.py file, um,"
+    },
+    {
+      "startSeconds": 269.919,
+      "text": "which is the agent loop. We'll take a"
+    },
+    {
+      "startSeconds": 271.84,
+      "text": "peek at some of these tools over here,"
+    },
+    {
+      "startSeconds": 273.68,
+      "text": "including the base class for the tools."
+    },
+    {
+      "startSeconds": 275.759,
+      "text": "Um, and then we'll briefly touch on the"
+    },
+    {
+      "startSeconds": 277.28,
+      "text": "session manager. All right, so let's"
+    },
+    {
+      "startSeconds": 280.56,
+      "text": "look at the code. This run agent"
+    },
+    {
+      "startSeconds": 282.72,
+      "text": "function is that agent loop that I"
+    },
+    {
+      "startSeconds": 284.479,
+      "text": "showed you earlier. So looking here,"
+    },
+    {
+      "startSeconds": 287.199,
+      "text": "this whole loop of calling the LM,"
+    },
+    {
+      "startSeconds": 289.12,
+      "text": "checking for tool calls, adding it back"
+    },
+    {
+      "startSeconds": 290.72,
+      "text": "to the prompt, that is all represented"
+    },
+    {
+      "startSeconds": 292.8,
+      "text": "here. Um, this build prompt part here,"
+    },
+    {
+      "startSeconds": 296.16,
+      "text": "I'm going to show you that too. we"
+    },
+    {
+      "startSeconds": 298,
+      "text": "actually pass in the system prompt and"
+    },
+    {
+      "startSeconds": 300.16,
+      "text": "then we pass in the user message. So"
+    },
+    {
+      "startSeconds": 302.32,
+      "text": "this user message is then used to to"
+    },
+    {
+      "startSeconds": 304.56,
+      "text": "build the system prompt. And we can"
+    },
+    {
+      "startSeconds": 306.72,
+      "text": "actually see where this is called in the"
+    },
+    {
+      "startSeconds": 308.479,
+      "text": "main PI function. Um it's called down"
+    },
+    {
+      "startSeconds": 310.96,
+      "text": "here. We're not going to get too deep"
+    },
+    {
+      "startSeconds": 312.32,
+      "text": "into that, but here's the the system"
+    },
+    {
+      "startSeconds": 314.32,
+      "text": "prompt. You are personal AI assistant."
+    },
+    {
+      "startSeconds": 316.56,
+      "text": "Current date time, current working"
+    },
+    {
+      "startSeconds": 318.16,
+      "text": "directory. When writing files, always"
+    },
+    {
+      "startSeconds": 320,
+      "text": "use absolute path, etc., etc. There's"
+    },
+    {
+      "startSeconds": 321.759,
+      "text": "just a couple things that I've needed to"
+    },
+    {
+      "startSeconds": 322.88,
+      "text": "add here to make this work. Um in the"
+    },
+    {
+      "startSeconds": 325.12,
+      "text": "future we'll see the sole um markdown"
+    },
+    {
+      "startSeconds": 327.759,
+      "text": "file kind of added in here and a few"
+    },
+    {
+      "startSeconds": 329.36,
+      "text": "other things. Um but this is the system"
+    },
+    {
+      "startSeconds": 331.6,
+      "text": "prompt and it is passed in here. We then"
+    },
+    {
+      "startSeconds": 334.72,
+      "text": "see that the system prompt is passed"
+    },
+    {
+      "startSeconds": 336.479,
+      "text": "along to the LLM or at least it's passed"
+    },
+    {
+      "startSeconds": 338.88,
+      "text": "along into this array of messages and"
+    },
+    {
+      "startSeconds": 341.039,
+      "text": "then we have our user message here. So"
+    },
+    {
+      "startSeconds": 342.8,
+      "text": "that's building the the system prompt um"
+    },
+    {
+      "startSeconds": 345.199,
+      "text": "or building the full prompt that we"
+    },
+    {
+      "startSeconds": 346.639,
+      "text": "talked about here. Then we get into this"
+    },
+    {
+      "startSeconds": 348.32,
+      "text": "loop of calling the LM"
+    },
+    {
+      "startSeconds": 350.8,
+      "text": "that's happening down here in this for"
+    },
+    {
+      "startSeconds": 352.24,
+      "text": "loop. we have a maximum iteration so we"
+    },
+    {
+      "startSeconds": 354.88,
+      "text": "don't you know infinitely loop I think"
+    },
+    {
+      "startSeconds": 356.56,
+      "text": "in this case it's 20 and you'll see here"
+    },
+    {
+      "startSeconds": 358.56,
+      "text": "we call the LM right that's the next"
+    },
+    {
+      "startSeconds": 360.4,
+      "text": "step call LLM and so we're calling the"
+    },
+    {
+      "startSeconds": 363.199,
+      "text": "LLM here um light LLM is a Python API to"
+    },
+    {
+      "startSeconds": 368.08,
+      "text": "let you to make it easy so you can call"
+    },
+    {
+      "startSeconds": 369.919,
+      "text": "any provider in this case I'm calling um"
+    },
+    {
+      "startSeconds": 372.96,
+      "text": "uh sonnet um or Claude's sonnet model"
+    },
+    {
+      "startSeconds": 376.16,
+      "text": "and so we call the lm and then we have"
+    },
+    {
+      "startSeconds": 379.28,
+      "text": "this if statement if there's tool calls"
+    },
+    {
+      "startSeconds": 381.759,
+      "text": "and then if there's not tool calls."
+    },
+    {
+      "startSeconds": 384.8,
+      "text": "Um here this is let's see this is"
+    },
+    {
+      "startSeconds": 387.759,
+      "text": "actually this is actually just"
+    },
+    {
+      "startSeconds": 388.96,
+      "text": "converting it to text for um for storage"
+    },
+    {
+      "startSeconds": 391.68,
+      "text": "later. The real um kind of if statement"
+    },
+    {
+      "startSeconds": 394.16,
+      "text": "down here that we want to look into is"
+    },
+    {
+      "startSeconds": 395.68,
+      "text": "here. Uh if there's not a tool call, so"
+    },
+    {
+      "startSeconds": 399.84,
+      "text": "we're following this path, we will"
+    },
+    {
+      "startSeconds": 401.759,
+      "text": "return an answer, right? And so this is"
+    },
+    {
+      "startSeconds": 404.639,
+      "text": "the final message. we will print it out"
+    },
+    {
+      "startSeconds": 407.6,
+      "text": "um with a border of green, render any"
+    },
+    {
+      "startSeconds": 410.72,
+      "text": "markdown text, etc. Um but if there are"
+    },
+    {
+      "startSeconds": 414.8,
+      "text": "tool calls, this path over here, we have"
+    },
+    {
+      "startSeconds": 418.4,
+      "text": "this loop here, right? And so what we're"
+    },
+    {
+      "startSeconds": 419.84,
+      "text": "actually doing is like for tool call in"
+    },
+    {
+      "startSeconds": 422.479,
+      "text": "message.tool call. So if there's no tool"
+    },
+    {
+      "startSeconds": 424.16,
+      "text": "calls, this isn't going to do anything."
+    },
+    {
+      "startSeconds": 426.16,
+      "text": "Um which we shouldn't get here because"
+    },
+    {
+      "startSeconds": 428.319,
+      "text": "if if there's no tool calls, we would"
+    },
+    {
+      "startSeconds": 430,
+      "text": "have run this this uh this branch here."
+    },
+    {
+      "startSeconds": 432.8,
+      "text": "But assuming there are tool calls, we"
+    },
+    {
+      "startSeconds": 434.479,
+      "text": "will run them. Um, in most cases it's"
+    },
+    {
+      "startSeconds": 436.16,
+      "text": "probably just going to be one tool call."
+    },
+    {
+      "startSeconds": 437.52,
+      "text": "And what happens is we grab the tool"
+    },
+    {
+      "startSeconds": 439.36,
+      "text": "call name. Uh, the CLI prints out like"
+    },
+    {
+      "startSeconds": 443.199,
+      "text": "I'm going to run this tool call. And"
+    },
+    {
+      "startSeconds": 444.88,
+      "text": "then we grab the actual tool. Uh, we run"
+    },
+    {
+      "startSeconds": 448.24,
+      "text": "the tool by calling execute on it."
+    },
+    {
+      "startSeconds": 451.28,
+      "text": "And then we grab the result um, this"
+    },
+    {
+      "startSeconds": 454,
+      "text": "preview result so we can send it out to"
+    },
+    {
+      "startSeconds": 455.52,
+      "text": "the CLI. Um, and then we pass the result"
+    },
+    {
+      "startSeconds": 460.96,
+      "text": "back to the end of the messages. Right?"
+    },
+    {
+      "startSeconds": 462.96,
+      "text": "So this add to prompt and so it's"
+    },
+    {
+      "startSeconds": 465.36,
+      "text": "appended to messages. We've done this"
+    },
+    {
+      "startSeconds": 467.84,
+      "text": "step here and then we loop back because"
+    },
+    {
+      "startSeconds": 469.759,
+      "text": "we're at the end of our loop because"
+    },
+    {
+      "startSeconds": 472.24,
+      "text": "remember we're inside of this loop here."
+    },
+    {
+      "startSeconds": 474.16,
+      "text": "We get back to here calling the LLM"
+    },
+    {
+      "startSeconds": 476.4,
+      "text": "again and you can see we're passing the"
+    },
+    {
+      "startSeconds": 478,
+      "text": "messages in which now contain the result"
+    },
+    {
+      "startSeconds": 480.08,
+      "text": "of that tool call. And so we'll just"
+    },
+    {
+      "startSeconds": 481.68,
+      "text": "keep looping around until we get um to"
+    },
+    {
+      "startSeconds": 484.96,
+      "text": "this end case here. So that's the agent"
+    },
+    {
+      "startSeconds": 487.84,
+      "text": "loop. Now that we've talked about the"
+    },
+    {
+      "startSeconds": 489.919,
+      "text": "agent loop, I want to talk a little bit"
+    },
+    {
+      "startSeconds": 491.44,
+      "text": "more about tools. So, I'm going to go"
+    },
+    {
+      "startSeconds": 493.84,
+      "text": "over here to this tool package. We have"
+    },
+    {
+      "startSeconds": 495.28,
+      "text": "these three files. We have this base"
+    },
+    {
+      "startSeconds": 497.84,
+      "text": "file uh to basically represent what a"
+    },
+    {
+      "startSeconds": 500.24,
+      "text": "tool should look like. So, um if you're"
+    },
+    {
+      "startSeconds": 503.199,
+      "text": "not familiar with coding, a base class"
+    },
+    {
+      "startSeconds": 504.72,
+      "text": "is basically like a cookie cutter. Um"
+    },
+    {
+      "startSeconds": 507.52,
+      "text": "and when you stamp the cookie down and"
+    },
+    {
+      "startSeconds": 511.36,
+      "text": "you actually make the cookie, that's"
+    },
+    {
+      "startSeconds": 512.719,
+      "text": "kind of like the um the actual tools."
+    },
+    {
+      "startSeconds": 515.12,
+      "text": "And so, the the cookie cutter kind of"
+    },
+    {
+      "startSeconds": 516.56,
+      "text": "defines what it looks like, but it's not"
+    },
+    {
+      "startSeconds": 518,
+      "text": "actually the thing. itself. [snorts]"
+    },
+    {
+      "startSeconds": 520.64,
+      "text": "Um, so here's tools. Uh, each tool is"
+    },
+    {
+      "startSeconds": 523.44,
+      "text": "going to have an execute method and then"
+    },
+    {
+      "startSeconds": 524.72,
+      "text": "it's also going to have a schema. And"
+    },
+    {
+      "startSeconds": 525.839,
+      "text": "this schema needs to get passed into the"
+    },
+    {
+      "startSeconds": 527.279,
+      "text": "LLM because the LM needs to know what"
+    },
+    {
+      "startSeconds": 529.12,
+      "text": "parameters to give the tool because the"
+    },
+    {
+      "startSeconds": 530.8,
+      "text": "LM isn't actually calling the tool. It's"
+    },
+    {
+      "startSeconds": 533.12,
+      "text": "asking whoever it's it's it's indicating"
+    },
+    {
+      "startSeconds": 535.6,
+      "text": "that it wants to be called, but our"
+    },
+    {
+      "startSeconds": 537.279,
+      "text": "agent loop is the thing that's actually"
+    },
+    {
+      "startSeconds": 538.8,
+      "text": "doing the calling. Um, and so that's our"
+    },
+    {
+      "startSeconds": 541.36,
+      "text": "cookie cutter. Um, we have let's first"
+    },
+    {
+      "startSeconds": 543.76,
+      "text": "look at the file system. We have two"
+    },
+    {
+      "startSeconds": 545.12,
+      "text": "tools here. We have the read file tool."
+    },
+    {
+      "startSeconds": 547.04,
+      "text": "We kind of define our schema here,"
+    },
+    {
+      "startSeconds": 548.56,
+      "text": "right? Read file description and then"
+    },
+    {
+      "startSeconds": 550.399,
+      "text": "parameters. Um, and then we actually"
+    },
+    {
+      "startSeconds": 552.8,
+      "text": "have this execute method um that takes"
+    },
+    {
+      "startSeconds": 555.76,
+      "text": "this path from the arguments and then it"
+    },
+    {
+      "startSeconds": 558.399,
+      "text": "opens the path and it returns it as a"
+    },
+    {
+      "startSeconds": 560.32,
+      "text": "string. Pretty simple. Then we have this"
+    },
+    {
+      "startSeconds": 562.56,
+      "text": "write file tool which uh you know takes"
+    },
+    {
+      "startSeconds": 565.12,
+      "text": "in it's it's this base class of a tool."
+    },
+    {
+      "startSeconds": 567.891,
+      "text": "[clears throat]"
+    },
+    {
+      "startSeconds": 569.12,
+      "text": "And then we have uh our schema here"
+    },
+    {
+      "startSeconds": 571.2,
+      "text": "which is kind of defined here. And then"
+    },
+    {
+      "startSeconds": 573.36,
+      "text": "we have our execute method which uh you"
+    },
+    {
+      "startSeconds": 576.32,
+      "text": "know takes in the path and the content"
+    },
+    {
+      "startSeconds": 578.48,
+      "text": "and then it writes it to the file. So"
+    },
+    {
+      "startSeconds": 581.279,
+      "text": "this writes um all the output to the"
+    },
+    {
+      "startSeconds": 583.2,
+      "text": "system. These are our two file system"
+    },
+    {
+      "startSeconds": 585.36,
+      "text": "tools. And then we have this exec tool"
+    },
+    {
+      "startSeconds": 588.32,
+      "text": "here um which is to run uh a shell"
+    },
+    {
+      "startSeconds": 591.12,
+      "text": "script or bash script. And we have our"
+    },
+    {
+      "startSeconds": 593.36,
+      "text": "schema which talks about like the"
+    },
+    {
+      "startSeconds": 595.2,
+      "text": "parameters it needs uh the command. I"
+    },
+    {
+      "startSeconds": 598.72,
+      "text": "think that's the only thing here the"
+    },
+    {
+      "startSeconds": 600.08,
+      "text": "shell command to execute. Um so this"
+    },
+    {
+      "startSeconds": 602.32,
+      "text": "could be like ls like list uh list um"
+    },
+    {
+      "startSeconds": 605.519,
+      "text": "the current directory cd you know move"
+    },
+    {
+      "startSeconds": 607.839,
+      "text": "to a different directory um or even like"
+    },
+    {
+      "startSeconds": 610.16,
+      "text": "running a python script um and so that's"
+    },
+    {
+      "startSeconds": 613.279,
+      "text": "the shell command and then we have an"
+    },
+    {
+      "startSeconds": 616.079,
+      "text": "execute uh function here which uses this"
+    },
+    {
+      "startSeconds": 619.6,
+      "text": "library in python called async io which"
+    },
+    {
+      "startSeconds": 622.16,
+      "text": "actually handles the whole creating a"
+    },
+    {
+      "startSeconds": 623.6,
+      "text": "subprocess shell behind the scenes to"
+    },
+    {
+      "startSeconds": 625.36,
+      "text": "run and so when the LM indicates it"
+    },
+    {
+      "startSeconds": 627.519,
+      "text": "wants to run a shell tool uh this tool"
+    },
+    {
+      "startSeconds": 629.92,
+      "text": "is called um with the command that the"
+    },
+    {
+      "startSeconds": 632.32,
+      "text": "LM passes to it and it's actually run"
+    },
+    {
+      "startSeconds": 634.24,
+      "text": "here. And so kind of like uh going back"
+    },
+    {
+      "startSeconds": 637.44,
+      "text": "to the agent loop here to to show you"
+    },
+    {
+      "startSeconds": 639.68,
+      "text": "exactly where that happens."
+    },
+    {
+      "startSeconds": 641.907,
+      "text": "[gasps and sighs]"
+    },
+    {
+      "startSeconds": 642.56,
+      "text": "Let's see. We'll scroll down here for"
+    },
+    {
+      "startSeconds": 644.64,
+      "text": "tool call and the message tool calls."
+    },
+    {
+      "startSeconds": 646.56,
+      "text": "You'll see here that we we have this map"
+    },
+    {
+      "startSeconds": 648.64,
+      "text": "of tool calls. I think it's a map of the"
+    },
+    {
+      "startSeconds": 650.32,
+      "text": "name to the actual like function or to"
+    },
+    {
+      "startSeconds": 653.36,
+      "text": "the actual like class that has it in it."
+    },
+    {
+      "startSeconds": 655.68,
+      "text": "And so we then call tool call.execute."
+    },
+    {
+      "startSeconds": 658.56,
+      "text": "Hopefully you now understand that this"
+    },
+    {
+      "startSeconds": 660,
+      "text": "is actually executing the tool and we"
+    },
+    {
+      "startSeconds": 661.92,
+      "text": "get the results and then we pass that"
+    },
+    {
+      "startSeconds": 663.36,
+      "text": "results here. So that's tool calls."
+    },
+    {
+      "startSeconds": 667.92,
+      "text": "Now I'm just going to touch a little bit"
+    },
+    {
+      "startSeconds": 669.279,
+      "text": "on the session manager here. We're in"
+    },
+    {
+      "startSeconds": 671.12,
+      "text": "the session package um manager. I'm not"
+    },
+    {
+      "startSeconds": 674,
+      "text": "going to go through most of this, but it"
+    },
+    {
+      "startSeconds": 675.279,
+      "text": "has a load um and append method. And so"
+    },
+    {
+      "startSeconds": 678.8,
+      "text": "this connects kind of to our file"
+    },
+    {
+      "startSeconds": 680.48,
+      "text": "system. We're storing all of our"
+    },
+    {
+      "startSeconds": 682.399,
+      "text": "sessions in this hidden folder at the"
+    },
+    {
+      "startSeconds": 684.32,
+      "text": "root directory. AI assistant, that's"
+    },
+    {
+      "startSeconds": 685.92,
+      "text": "what I have called it. and then a"
+    },
+    {
+      "startSeconds": 687.279,
+      "text": "sessions folder and then we're storing"
+    },
+    {
+      "startSeconds": 689.279,
+      "text": "in a JSON L file which is basically"
+    },
+    {
+      "startSeconds": 691.6,
+      "text": "where a file that consists of a bunch of"
+    },
+    {
+      "startSeconds": 694.399,
+      "text": "JSON lines"
+    },
+    {
+      "startSeconds": 696.56,
+      "text": "and so for uh loading we pull all of"
+    },
+    {
+      "startSeconds": 700.48,
+      "text": "those JSON lines from the file into"
+    },
+    {
+      "startSeconds": 702.64,
+      "text": "memory and then so we can then like uh"
+    },
+    {
+      "startSeconds": 704.8,
+      "text": "access this so the agent can access this"
+    },
+    {
+      "startSeconds": 706.959,
+      "text": "and then whenever we call append we add"
+    },
+    {
+      "startSeconds": 708.88,
+      "text": "a new message to that that session so"
+    },
+    {
+      "startSeconds": 711.519,
+      "text": "whenever there's a result whenever"
+    },
+    {
+      "startSeconds": 712.959,
+      "text": "there's a new user message we just kind"
+    },
+    {
+      "startSeconds": 714.399,
+      "text": "of append it on and this handles storing"
+    },
+    {
+      "startSeconds": 716.48,
+      "text": "ing it to file, etc. But we're not going"
+    },
+    {
+      "startSeconds": 718.88,
+      "text": "to spend much more time on this. So now"
+    },
+    {
+      "startSeconds": 721.2,
+      "text": "let's actually use this agent loop that"
+    },
+    {
+      "startSeconds": 723.04,
+      "text": "we've built. So um this is our main PI"
+    },
+    {
+      "startSeconds": 725.44,
+      "text": "file. I'm going to show it to you real"
+    },
+    {
+      "startSeconds": 726.88,
+      "text": "quick. Um this is our interactive loop."
+    },
+    {
+      "startSeconds": 728.8,
+      "text": "It's just a while loop that accepts"
+    },
+    {
+      "startSeconds": 730.32,
+      "text": "input from us in the terminal and then"
+    },
+    {
+      "startSeconds": 732.24,
+      "text": "once it has it, it passes it along to"
+    },
+    {
+      "startSeconds": 734.399,
+      "text": "the uh the agent loop. The agent loop"
+    },
+    {
+      "startSeconds": 736.48,
+      "text": "does its thing, returns an output, and"
+    },
+    {
+      "startSeconds": 738.079,
+      "text": "then it loops back around waiting for"
+    },
+    {
+      "startSeconds": 739.519,
+      "text": "more output. So, if I flip over here to"
+    },
+    {
+      "startSeconds": 741.92,
+      "text": "terminal, um I am going to uh run I"
+    },
+    {
+      "startSeconds": 746.079,
+      "text": "think it's Python 3 and then main.py."
+    },
+    {
+      "startSeconds": 750.24,
+      "text": "I'm going to run this and then it says"
+    },
+    {
+      "startSeconds": 752.399,
+      "text": "AI assistant type exit or quit to stop."
+    },
+    {
+      "startSeconds": 754.56,
+      "text": "Hello,"
+    },
+    {
+      "startSeconds": 756.56,
+      "text": "who are you? So, I just pass that along."
+    },
+    {
+      "startSeconds": 761.44,
+      "text": "Now, we get this nice rendered text"
+    },
+    {
+      "startSeconds": 763.12,
+      "text": "here. Hi, I'm your personal AI"
+    },
+    {
+      "startSeconds": 764.32,
+      "text": "assistant. I'm here to help you with"
+    },
+    {
+      "startSeconds": 765.2,
+      "text": "various tasks like reading and writing"
+    },
+    {
+      "startSeconds": 767.279,
+      "text": "files, running shell scripts, etc. I can"
+    },
+    {
+      "startSeconds": 769.519,
+      "text": "see your current working direct. Okay,"
+    },
+    {
+      "startSeconds": 770.88,
+      "text": "cool. So, it's seeing everything. How"
+    },
+    {
+      "startSeconds": 772.639,
+      "text": "can it help me today? Nice. Can"
+    },
+    {
+      "startSeconds": 778.56,
+      "text": "Can you write and run a hello world"
+    },
+    {
+      "startSeconds": 782.399,
+      "text": "Python script?"
+    },
+    {
+      "startSeconds": 786.24,
+      "text": "Let's see what happens. So, you'll see"
+    },
+    {
+      "startSeconds": 788.399,
+      "text": "here it just wrote a file here, hello"
+    },
+    {
+      "startSeconds": 791.6,
+      "text": "world with [snorts]"
+    },
+    {
+      "startSeconds": 793.92,
+      "text": "uh this content,"
+    },
+    {
+      "startSeconds": 796.24,
+      "text": "hello world. It wrote it and then it ran"
+    },
+    {
+      "startSeconds": 799.44,
+      "text": "it. Python 3 hello world.py and then"
+    },
+    {
+      "startSeconds": 802.56,
+      "text": "this is the output. So very simple but"
+    },
+    {
+      "startSeconds": 805.04,
+      "text": "it just ran this whole thing here. Um"
+    },
+    {
+      "startSeconds": 808.32,
+      "text": "let's see. Do you have memory?"
+    },
+    {
+      "startSeconds": 818.959,
+      "text": "Great question. Based on my current"
+    },
+    {
+      "startSeconds": 820.32,
+      "text": "setup, I have conversational me memory"
+    },
+    {
+      "startSeconds": 822.32,
+      "text": "within this session. I can remember what"
+    },
+    {
+      "startSeconds": 824.88,
+      "text": "we've discussed so far. However, I don't"
+    },
+    {
+      "startSeconds": 826.48,
+      "text": "have persistent memory across sessions."
+    },
+    {
+      "startSeconds": 828.16,
+      "text": "So, this is true. Um, it's cool that it"
+    },
+    {
+      "startSeconds": 830.399,
+      "text": "knows this. That's going to be something"
+    },
+    {
+      "startSeconds": 831.68,
+      "text": "we're working on the future. But, as you"
+    },
+    {
+      "startSeconds": 833.839,
+      "text": "can see, right now, we have a functional"
+    },
+    {
+      "startSeconds": 836.16,
+      "text": "agent with just 150 lines of code. Um,"
+    },
+    {
+      "startSeconds": 839.6,
+      "text": "it's not quite claude code or open claw,"
+    },
+    {
+      "startSeconds": 843.839,
+      "text": "but it resembles something that you"
+    },
+    {
+      "startSeconds": 845.839,
+      "text": "would get with some with cloud code. And"
+    },
+    {
+      "startSeconds": 847.76,
+      "text": "right, we only have three tools. Read"
+    },
+    {
+      "startSeconds": 851.279,
+      "text": "file, write file, and then uh shell"
+    },
+    {
+      "startSeconds": 854.24,
+      "text": "command. And that's really powerful. Um,"
+    },
+    {
+      "startSeconds": 856.8,
+      "text": "and so just with with these simple 150"
+    },
+    {
+      "startSeconds": 859.44,
+      "text": "lines of code in these six different"
+    },
+    {
+      "startSeconds": 861.12,
+      "text": "files, we have a really functional"
+    },
+    {
+      "startSeconds": 862.399,
+      "text": "agent. So we're going to build on this"
+    },
+    {
+      "startSeconds": 863.839,
+      "text": "in the coming um, episodes to kind of"
+    },
+    {
+      "startSeconds": 866.079,
+      "text": "turn this into something that's more"
+    },
+    {
+      "startSeconds": 867.76,
+      "text": "like open claw. One quick final thing"
+    },
+    {
+      "startSeconds": 870.079,
+      "text": "that I forgot to mention. Here's the"
+    },
+    {
+      "startSeconds": 871.92,
+      "text": "folder um that we created for our"
+    },
+    {
+      "startSeconds": 873.68,
+      "text": "sessions. Um, you can see here we have"
+    },
+    {
+      "startSeconds": 876.32,
+      "text": "JSON lines uh that kind of display all"
+    },
+    {
+      "startSeconds": 879.68,
+      "text": "of our messages that we just went"
+    },
+    {
+      "startSeconds": 881.04,
+      "text": "through. Hey, uh, who are you? We have"
+    },
+    {
+      "startSeconds": 883.04,
+      "text": "the time stamp and then we have the"
+    },
+    {
+      "startSeconds": 884.32,
+      "text": "response here. User assistant and then"
+    },
+    {
+      "startSeconds": 886.639,
+      "text": "we have um when I asked it to write a"
+    },
+    {
+      "startSeconds": 888.56,
+      "text": "Python script, we now have this tool"
+    },
+    {
+      "startSeconds": 890.079,
+      "text": "call ID. I think this is generated by"
+    },
+    {
+      "startSeconds": 891.68,
+      "text": "the underlying LLM. And then we have the"
+    },
+    {
+      "startSeconds": 894.079,
+      "text": "content of it um and the time stamp. And"
+    },
+    {
+      "startSeconds": 897.04,
+      "text": "then we can actually flip over here and"
+    },
+    {
+      "startSeconds": 899.199,
+      "text": "see the workspace. We can actually see"
+    },
+    {
+      "startSeconds": 900.56,
+      "text": "the hello world um file that was"
+    },
+    {
+      "startSeconds": 902.48,
+      "text": "generated. So just wanted to show that"
+    },
+    {
+      "startSeconds": 904.32,
+      "text": "this is actually affecting the file"
+    },
+    {
+      "startSeconds": 905.76,
+      "text": "system behind the scenes um and show you"
+    },
+    {
+      "startSeconds": 907.76,
+      "text": "this hello world uh file. And then here"
+    },
+    {
+      "startSeconds": 909.76,
+      "text": "to show you the sessions um that we have"
+    },
+    {
+      "startSeconds": 912,
+      "text": "here that is stored to disk. Thanks so"
+    },
+    {
+      "startSeconds": 914.72,
+      "text": "much for watching. Uh the next episode"
+    },
+    {
+      "startSeconds": 916.639,
+      "text": "is going to be all about personality. Um"
+    },
+    {
+      "startSeconds": 918.72,
+      "text": "we're going to create a soul.md file uh"
+    },
+    {
+      "startSeconds": 922,
+      "text": "so that the agent can have its own"
+    },
+    {
+      "startSeconds": 923.519,
+      "text": "identity. We're probably going to add a"
+    },
+    {
+      "startSeconds": 924.48,
+      "text": "user file. We might add a couple other"
+    },
+    {
+      "startSeconds": 925.839,
+      "text": "ones. Um we're also going to set up I I"
+    },
+    {
+      "startSeconds": 928.56,
+      "text": "think it's like a bootstrap.md so the"
+    },
+    {
+      "startSeconds": 930.32,
+      "text": "agent actually prompts you um to say,"
+    },
+    {
+      "startSeconds": 932.88,
+      "text": "\"Hey, who am I? Who are you?\" Um and"
+    },
+    {
+      "startSeconds": 935.76,
+      "text": "then it will kind of fill out those"
+    },
+    {
+      "startSeconds": 937.279,
+      "text": "files from there. So, uh, yeah. Uh, stay"
+    },
+    {
+      "startSeconds": 940.56,
+      "text": "tuned. Um, if you're interested, please"
+    },
+    {
+      "startSeconds": 942.24,
+      "text": "subscribe. Uh, like this video. It helps"
+    },
+    {
+      "startSeconds": 944.079,
+      "text": "me. Um, yeah. Looking forward to the"
+    },
+    {
+      "startSeconds": 945.839,
+      "text": "next video. Thanks. Bye."
+    }
+  ]
+}

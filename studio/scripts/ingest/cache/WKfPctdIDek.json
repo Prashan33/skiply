@@ -1,8 +1,446 @@
 {
   "id": "WKfPctdIDek",
   "url": "https://www.youtube.com/watch?v=WKfPctdIDek",
-  "fetchedAt": "2026-08-31T05:14:49.420Z",
-  "captionKind": "empty",
-  "chapters": [],
-  "cues": []
+  "fetchedAt": "2026-09-01T04:04:52.670Z",
+  "captionKind": "asr",
+  "chapters": [
+    {
+      "startSeconds": 0,
+      "label": "Introduction to Server-Side Data Fetching"
+    },
+    {
+      "startSeconds": 37,
+      "label": "Setting Up the Project"
+    },
+    {
+      "startSeconds": 57,
+      "label": "Defining Types and Creating Components"
+    },
+    {
+      "startSeconds": 93,
+      "label": "Fetching and Displaying Data"
+    },
+    {
+      "startSeconds": 180,
+      "label": "Handling Multiple Fetch Requests Efficiently"
+    },
+    {
+      "startSeconds": 243,
+      "label": "Conclusion and Next Steps"
+    }
+  ],
+  "cues": [
+    {
+      "startSeconds": 0.399,
+      "text": "previously we learned how to fetch data"
+    },
+    {
+      "startSeconds": 2.2,
+      "text": "in client components now let's learn how"
+    },
+    {
+      "startSeconds": 4.56,
+      "text": "to fetch data in server components one"
+    },
+    {
+      "startSeconds": 7.16,
+      "text": "of the coolest things about the RSC"
+    },
+    {
+      "startSeconds": 8.8,
+      "text": "architecture is that it supports esync"
+    },
+    {
+      "startSeconds": 11.24,
+      "text": "and a keywords in server components this"
+    },
+    {
+      "startSeconds": 13.88,
+      "text": "means we can write our data fetching"
+    },
+    {
+      "startSeconds": 15.519,
+      "text": "code just like regular JavaScript using"
+    },
+    {
+      "startSeconds": 18.08,
+      "text": "Asing functions coupled with the await"
+    },
+    {
+      "startSeconds": 20,
+      "text": "keyword let me show you how this works"
+    },
+    {
+      "startSeconds": 22,
+      "text": "with an example we will once again use"
+    },
+    {
+      "startSeconds": 24.84,
+      "text": "the slash users in point from Json"
+    },
+    {
+      "startSeconds": 27.24,
+      "text": "placeholder for our mock API we're going"
+    },
+    {
+      "startSeconds": 30.4,
+      "text": "to fetch this users data and display"
+    },
+    {
+      "startSeconds": 32.48,
+      "text": "each user's name username email and"
+    },
+    {
+      "startSeconds": 34.48,
+      "text": "phone number in our next shs server"
+    },
+    {
+      "startSeconds": 37.04,
+      "text": "component let's jump into vs code and"
+    },
+    {
+      "startSeconds": 39.239,
+      "text": "get started inside your app folder"
+    },
+    {
+      "startSeconds": 42.12,
+      "text": "create a new folder called users hyphen"
+    },
+    {
+      "startSeconds": 45.079,
+      "text": "server and add a page. TSX file inside"
+    },
+    {
+      "startSeconds": 49.239,
+      "text": "it I chose the name users hyphen server"
+    },
+    {
+      "startSeconds": 52.44,
+      "text": "since we're handling user data in a"
+    },
+    {
+      "startSeconds": 54.079,
+      "text": "server component but feel free to name"
+    },
+    {
+      "startSeconds": 55.92,
+      "text": "it as you see Fed first let's define our"
+    },
+    {
+      "startSeconds": 59.199,
+      "text": "typescript type for the users we will"
+    },
+    {
+      "startSeconds": 61.76,
+      "text": "keep it simple and just include the"
+    },
+    {
+      "startSeconds": 63.199,
+      "text": "fields we care about ID name username"
+    },
+    {
+      "startSeconds": 66.4,
+      "text": "email and phone similar to data fetching"
+    },
+    {
+      "startSeconds": 68.88,
+      "text": "in client components so I'm going to"
+    },
+    {
+      "startSeconds": 71.4,
+      "text": "Copy Type user and paste it in the new"
+    },
+    {
+      "startSeconds": 75.08,
+      "text": "page. TSX file for our component we will"
+    },
+    {
+      "startSeconds": 78.56,
+      "text": "call it users server so export default"
+    },
+    {
+      "startSeconds": 82.52,
+      "text": "function users server make this"
+    },
+    {
+      "startSeconds": 85.92,
+      "text": "component"
+    },
+    {
+      "startSeconds": 87.6,
+      "text": "async since server components support"
+    },
+    {
+      "startSeconds": 90.24,
+      "text": "async"
+    },
+    {
+      "startSeconds": 91.439,
+      "text": "operations now here is where it gets"
+    },
+    {
+      "startSeconds": 93.96,
+      "text": "really simple to fetch our users data we"
+    },
+    {
+      "startSeconds": 97.2,
+      "text": "just need to make a get request to the"
+    },
+    {
+      "startSeconds": 98.84,
+      "text": "user's endpoint using the fetch API so"
+    },
+    {
+      "startSeconds": 101.56,
+      "text": "const response is equal to await Fetch"
+    },
+    {
+      "startSeconds": 105.68,
+      "text": "and the URL is Jason pleas holder. typy"
+    },
+    {
+      "startSeconds": 108.439,
+      "text": "code.com"
+    },
+    {
+      "startSeconds": 110,
+      "text": "users in the next line const users of"
+    },
+    {
+      "startSeconds": 114.04,
+      "text": "type user array is equal to await"
+    },
+    {
+      "startSeconds": 117.56,
+      "text": "response. Json and let's console log the"
+    },
+    {
+      "startSeconds": 120.68,
+      "text": "value users when you save this and check"
+    },
+    {
+      "startSeconds": 124.24,
+      "text": "out/ users server in the browser users"
+    },
+    {
+      "startSeconds": 128.239,
+      "text": "hyphen server take a look at the"
+    },
+    {
+      "startSeconds": 132,
+      "text": "console you'll see the user list"
+    },
+    {
+      "startSeconds": 134.12,
+      "text": "consisting of 10 users our data fetching"
+    },
+    {
+      "startSeconds": 136.879,
+      "text": "is working all there is left to do is"
+    },
+    {
+      "startSeconds": 139.599,
+      "text": "display the users on the screen simply"
+    },
+    {
+      "startSeconds": 142.72,
+      "text": "copy the return return statement from"
+    },
+    {
+      "startSeconds": 144.2,
+      "text": "the client component we previously"
+    },
+    {
+      "startSeconds": 146.239,
+      "text": "created and paste it in the server"
+    },
+    {
+      "startSeconds": 148.8,
+      "text": "component"
+    },
+    {
+      "startSeconds": 150.72,
+      "text": "delete the console lock statement we map"
+    },
+    {
+      "startSeconds": 153.76,
+      "text": "over the list of users where each user"
+    },
+    {
+      "startSeconds": 156.319,
+      "text": "is defined by the user type we render"
+    },
+    {
+      "startSeconds": 158.879,
+      "text": "the users's name username email and"
+    },
+    {
+      "startSeconds": 161.519,
+      "text": "phone number the classes are primarily"
+    },
+    {
+      "startSeconds": 164.48,
+      "text": "for styling so don't stress too much"
+    },
+    {
+      "startSeconds": 166.68,
+      "text": "about achieving this exact layout and UI"
+    },
+    {
+      "startSeconds": 169.48,
+      "text": "save the file and you should see all 10"
+    },
+    {
+      "startSeconds": 172.159,
+      "text": "users being displayed the route is/"
+    },
+    {
+      "startSeconds": 175.08,
+      "text": "users hyen server we have successfully"
+    },
+    {
+      "startSeconds": 177.72,
+      "text": "fetched data in server components"
+    },
+    {
+      "startSeconds": 180.84,
+      "text": "now here is something really cool you"
+    },
+    {
+      "startSeconds": 182.36,
+      "text": "should know about when building Nexus"
+    },
+    {
+      "startSeconds": 184.319,
+      "text": "applications you'll often end up"
+    },
+    {
+      "startSeconds": 185.84,
+      "text": "fetching the same data in multiple"
+    },
+    {
+      "startSeconds": 187.48,
+      "text": "places like how request B appears across"
+    },
+    {
+      "startSeconds": 190.64,
+      "text": "six different components in our tree to"
+    },
+    {
+      "startSeconds": 192.56,
+      "text": "load a single route you might think this"
+    },
+    {
+      "startSeconds": 195.12,
+      "text": "would trigger multiple Network requests"
+    },
+    {
+      "startSeconds": 196.879,
+      "text": "for the same data but react cleverly"
+    },
+    {
+      "startSeconds": 199.2,
+      "text": "handles this through a feature called"
+    },
+    {
+      "startSeconds": 200.92,
+      "text": "request"
+    },
+    {
+      "startSeconds": 201.84,
+      "text": "memorization react will duplicate fetch"
+    },
+    {
+      "startSeconds": 204.519,
+      "text": "requests with the same URL and options"
+    },
+    {
+      "startSeconds": 207.12,
+      "text": "this means you can fetch data wherever"
+    },
+    {
+      "startSeconds": 209.439,
+      "text": "you need in your component tree without"
+    },
+    {
+      "startSeconds": 211.56,
+      "text": "worrying about duplicate Network"
+    },
+    {
+      "startSeconds": 213.36,
+      "text": "requests react will only make the actual"
+    },
+    {
+      "startSeconds": 215.879,
+      "text": "fetch once and reuse the result for"
+    },
+    {
+      "startSeconds": 218.319,
+      "text": "subsequent calls during the same render"
+    },
+    {
+      "startSeconds": 220.28,
+      "text": "pass it's a react feature and thereby"
+    },
+    {
+      "startSeconds": 222.84,
+      "text": "included in XS letting you write data"
+    },
+    {
+      "startSeconds": 225.239,
+      "text": "fetching code exactly where you need it"
+    },
+    {
+      "startSeconds": 227.519,
+      "text": "rather than having to centralize fetches"
+    },
+    {
+      "startSeconds": 229.239,
+      "text": "and pass data down through props notice"
+    },
+    {
+      "startSeconds": 232.2,
+      "text": "how simple data fetching is with server"
+    },
+    {
+      "startSeconds": 234.159,
+      "text": "components just eing await with the"
+    },
+    {
+      "startSeconds": 236.439,
+      "text": "fetch API no use State no use effect"
+    },
+    {
+      "startSeconds": 239.319,
+      "text": "none of such State Management complexity"
+    },
+    {
+      "startSeconds": 241.48,
+      "text": "we usually deal with speaking of State"
+    },
+    {
+      "startSeconds": 244.64,
+      "text": "though you might be wondering about"
+    },
+    {
+      "startSeconds": 246.4,
+      "text": "handling loading and error States in"
+    },
+    {
+      "startSeconds": 248.519,
+      "text": "server components well that is exactly"
+    },
+    {
+      "startSeconds": 251.239,
+      "text": "what we will explore"
+    },
+    {
+      "startSeconds": 253.64,
+      "text": "next supporting the channel is free"
+    },
+    {
+      "startSeconds": 256.199,
+      "text": "please like And subscribe it helps a lot"
+    }
+  ]
 }

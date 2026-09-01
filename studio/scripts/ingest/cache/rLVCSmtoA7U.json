@@ -1,0 +1,3834 @@
+{
+  "id": "rLVCSmtoA7U",
+  "url": "https://www.youtube.com/watch?v=rLVCSmtoA7U",
+  "fetchedAt": "2026-09-01T04:07:50.760Z",
+  "captionKind": "asr",
+  "chapters": [
+    {
+      "startSeconds": 0,
+      "label": "Intro"
+    },
+    {
+      "startSeconds": 34,
+      "label": "Environment Setup"
+    },
+    {
+      "startSeconds": 181,
+      "label": "Themes & Color Palettes"
+    },
+    {
+      "startSeconds": 393,
+      "label": "Loading Datasets"
+    },
+    {
+      "startSeconds": 496,
+      "label": "Relational Plots, Scatterplot, Lineplot"
+    },
+    {
+      "startSeconds": 840,
+      "label": "Distribution Plots, Histograms, KDE Plots"
+    },
+    {
+      "startSeconds": 1155,
+      "label": "Categorical Plots, Boxplot, Barplot, Swarmplot"
+    },
+    {
+      "startSeconds": 1460,
+      "label": "Jointplot, Pairplot"
+    },
+    {
+      "startSeconds": 1548,
+      "label": "Heatmap"
+    },
+    {
+      "startSeconds": 1806,
+      "label": "Clustermap"
+    },
+    {
+      "startSeconds": 2024,
+      "label": "Regression Plots"
+    },
+    {
+      "startSeconds": 2105,
+      "label": "Outro"
+    }
+  ],
+  "cues": [
+    {
+      "startSeconds": 0.08,
+      "text": "Today we're going to do a crash course"
+    },
+    {
+      "startSeconds": 1.68,
+      "text": "on Seabor, a data visualization package"
+    },
+    {
+      "startSeconds": 4.08,
+      "text": "in Python which makes it super simple"
+    },
+    {
+      "startSeconds": 6,
+      "text": "and easy to create statistical graphics."
+    },
+    {
+      "startSeconds": 8.32,
+      "text": "It's based on Mattplot Lib but much"
+    },
+    {
+      "startSeconds": 9.92,
+      "text": "easier to use and it's much easier to"
+    },
+    {
+      "startSeconds": 11.679,
+      "text": "create complex looking and advanced"
+    },
+    {
+      "startSeconds": 13.599,
+      "text": "graphs. In this video, we're going to"
+    },
+    {
+      "startSeconds": 14.88,
+      "text": "mostly cover the different plot types."
+    },
+    {
+      "startSeconds": 16.48,
+      "text": "I'm going to explain how they work and"
+    },
+    {
+      "startSeconds": 17.92,
+      "text": "how to customize them. And we're going"
+    },
+    {
+      "startSeconds": 19.439,
+      "text": "to look at some styling options. If you"
+    },
+    {
+      "startSeconds": 21.279,
+      "text": "like this video, let me know by hitting"
+    },
+    {
+      "startSeconds": 22.48,
+      "text": "a like button and subscribing. But now,"
+    },
+    {
+      "startSeconds": 24.24,
+      "text": "let us get right into it."
+    },
+    {
+      "startSeconds": 29.475,
+      "text": ">> [music]"
+    },
+    {
+      "startSeconds": 34.32,
+      "text": ">> All right, so we're going to do a crash"
+    },
+    {
+      "startSeconds": 35.68,
+      "text": "course on Seabour and I want to get"
+    },
+    {
+      "startSeconds": 37.04,
+      "text": "started right away. As I already"
+    },
+    {
+      "startSeconds": 38.48,
+      "text": "mentioned, Seabour is a data"
+    },
+    {
+      "startSeconds": 39.84,
+      "text": "visualization library for Python built"
+    },
+    {
+      "startSeconds": 41.84,
+      "text": "on top of Mattplot Lib and it makes it"
+    },
+    {
+      "startSeconds": 43.84,
+      "text": "super easy to create statistical"
+    },
+    {
+      "startSeconds": 45.6,
+      "text": "visualizations of data sets or of data"
+    },
+    {
+      "startSeconds": 48,
+      "text": "in general. Now, in this video today, I"
+    },
+    {
+      "startSeconds": 49.92,
+      "text": "want to cover as much as possible in a"
+    },
+    {
+      "startSeconds": 51.52,
+      "text": "short amount of time, which is why I"
+    },
+    {
+      "startSeconds": 53.039,
+      "text": "want to get started right away with the"
+    },
+    {
+      "startSeconds": 54.64,
+      "text": "environment setup. For this, open up"
+    },
+    {
+      "startSeconds": 56.719,
+      "text": "your terminal. Navigate to a directory"
+    },
+    {
+      "startSeconds": 58.8,
+      "text": "of your choice where you want to be"
+    },
+    {
+      "startSeconds": 60.64,
+      "text": "working in. In my case here, that is"
+    },
+    {
+      "startSeconds": 62.8,
+      "text": "going to be the tutorial directory. And"
+    },
+    {
+      "startSeconds": 65.04,
+      "text": "here now, make sure you have seabor on"
+    },
+    {
+      "startSeconds": 66.96,
+      "text": "your system. You can do that with your"
+    },
+    {
+      "startSeconds": 68.479,
+      "text": "basic Python installation by just doing"
+    },
+    {
+      "startSeconds": 70.24,
+      "text": "pip or pip 3 install seabor. And we're"
+    },
+    {
+      "startSeconds": 73.68,
+      "text": "also going to need a second package"
+    },
+    {
+      "startSeconds": 75.439,
+      "text": "called Jupiter Lab. This is going to be"
+    },
+    {
+      "startSeconds": 78,
+      "text": "our development environment. This is"
+    },
+    {
+      "startSeconds": 79.6,
+      "text": "what we're going to use to work with"
+    },
+    {
+      "startSeconds": 80.88,
+      "text": "interactive Python notebooks. And in my"
+    },
+    {
+      "startSeconds": 83.28,
+      "text": "case, since I'm not using the system"
+    },
+    {
+      "startSeconds": 85.439,
+      "text": "level Python installation, I'm going to"
+    },
+    {
+      "startSeconds": 87.36,
+      "text": "say UV init. And then I'm going to"
+    },
+    {
+      "startSeconds": 89.84,
+      "text": "install these packages with UV add. But"
+    },
+    {
+      "startSeconds": 92.079,
+      "text": "in your case, if you're just using your"
+    },
+    {
+      "startSeconds": 93.759,
+      "text": "basic Python version, pip or pip 3,"
+    },
+    {
+      "startSeconds": 96.159,
+      "text": "install these packages. So UV init, and"
+    },
+    {
+      "startSeconds": 98.479,
+      "text": "then UV add, the same packages, seabour"
+    },
+    {
+      "startSeconds": 101.36,
+      "text": "Jupyter lab in my case. If you want to,"
+    },
+    {
+      "startSeconds": 103.68,
+      "text": "you can also use uv. Once you have this,"
+    },
+    {
+      "startSeconds": 106.479,
+      "text": "you can just run Jupiter lab. And in my"
+    },
+    {
+      "startSeconds": 109.36,
+      "text": "case, I have to do UV run Jupyter Lab to"
+    },
+    {
+      "startSeconds": 111.52,
+      "text": "make sure I'm using the version of this"
+    },
+    {
+      "startSeconds": 113.2,
+      "text": "particular uh environment here. And then"
+    },
+    {
+      "startSeconds": 116.159,
+      "text": "this opens up Jupyter Lab in my browser."
+    },
+    {
+      "startSeconds": 119.04,
+      "text": "So you can move the terminal somewhere"
+    },
+    {
+      "startSeconds": 120.56,
+      "text": "else. Don't close it. And now we can get"
+    },
+    {
+      "startSeconds": 123.119,
+      "text": "started by creating a new IPython"
+    },
+    {
+      "startSeconds": 125.28,
+      "text": "notebook. So just click on this button"
+    },
+    {
+      "startSeconds": 126.96,
+      "text": "here. You can save this. I'm going to"
+    },
+    {
+      "startSeconds": 128.879,
+      "text": "call this main.ipb."
+    },
+    {
+      "startSeconds": 130.8,
+      "text": "I'm going to make it full screen. Zoom"
+    },
+    {
+      "startSeconds": 132.72,
+      "text": "in a little bit. And for those of you"
+    },
+    {
+      "startSeconds": 134.48,
+      "text": "who have never worked with interactive"
+    },
+    {
+      "startSeconds": 135.84,
+      "text": "Python notebooks before, the idea is"
+    },
+    {
+      "startSeconds": 137.76,
+      "text": "quite simple. Instead of having one"
+    },
+    {
+      "startSeconds": 139.68,
+      "text": "Python file where you run everything"
+    },
+    {
+      "startSeconds": 141.2,
+      "text": "from top to bottom every time, you can"
+    },
+    {
+      "startSeconds": 143.2,
+      "text": "run individual cells of code. So I can"
+    },
+    {
+      "startSeconds": 145.52,
+      "text": "say here A= 10. Then I can say print A"
+    },
+    {
+      "startSeconds": 148.72,
+      "text": "as a separate cell. And then I can say"
+    },
+    {
+      "startSeconds": 150.879,
+      "text": "A= 20. And then I can go back and just"
+    },
+    {
+      "startSeconds": 153.68,
+      "text": "run this cell here. And then I have 20."
+    },
+    {
+      "startSeconds": 156,
+      "text": "I don't have to run everything from"
+    },
+    {
+      "startSeconds": 157.519,
+      "text": "scratch every time. The reason this is"
+    },
+    {
+      "startSeconds": 159.76,
+      "text": "useful is or the reason it's useful in"
+    },
+    {
+      "startSeconds": 162.64,
+      "text": "machine learning in data visualization"
+    },
+    {
+      "startSeconds": 164.48,
+      "text": "data analysis context is because often"
+    },
+    {
+      "startSeconds": 166.959,
+      "text": "times we do something like loading the"
+    },
+    {
+      "startSeconds": 168.64,
+      "text": "data, pre-processing the data, training"
+    },
+    {
+      "startSeconds": 170.72,
+      "text": "a model, evaluating a model and then you"
+    },
+    {
+      "startSeconds": 172.959,
+      "text": "want to just do some small thing in"
+    },
+    {
+      "startSeconds": 174.8,
+      "text": "addition to what you already have. You"
+    },
+    {
+      "startSeconds": 176.08,
+      "text": "want to add an additional graph or"
+    },
+    {
+      "startSeconds": 177.519,
+      "text": "something and then of course you don't"
+    },
+    {
+      "startSeconds": 179.2,
+      "text": "want to have to rerun everything from"
+    },
+    {
+      "startSeconds": 181.44,
+      "text": "scratch. So what we're going to do here"
+    },
+    {
+      "startSeconds": 184.239,
+      "text": "first is we're going to say import"
+    },
+    {
+      "startSeconds": 185.92,
+      "text": "seabor as SNS. This is the go-to alias."
+    },
+    {
+      "startSeconds": 190.56,
+      "text": "This is the alias that is used in the"
+    },
+    {
+      "startSeconds": 192.64,
+      "text": "documentation and all of the code"
+    },
+    {
+      "startSeconds": 194,
+      "text": "examples. This is just seabour imported"
+    },
+    {
+      "startSeconds": 196,
+      "text": "in a shorter way. And the first thing I"
+    },
+    {
+      "startSeconds": 198.239,
+      "text": "want to cover now is how to set the"
+    },
+    {
+      "startSeconds": 200,
+      "text": "theme, what the different color pletes"
+    },
+    {
+      "startSeconds": 202.72,
+      "text": "look like and how we can choose the"
+    },
+    {
+      "startSeconds": 204.959,
+      "text": "styling of our plot. Then we're going to"
+    },
+    {
+      "startSeconds": 206.8,
+      "text": "go into loading data sets and then we're"
+    },
+    {
+      "startSeconds": 208.64,
+      "text": "going to cover the different plot types."
+    },
+    {
+      "startSeconds": 210.239,
+      "text": "This is going to be the structure of"
+    },
+    {
+      "startSeconds": 211.84,
+      "text": "this crash course today. So the first"
+    },
+    {
+      "startSeconds": 213.84,
+      "text": "thing is we can say snss.et"
+    },
+    {
+      "startSeconds": 216.72,
+      "text": "theme and then we can choose a theme"
+    },
+    {
+      "startSeconds": 219.04,
+      "text": "name by saying style equals and whatever"
+    },
+    {
+      "startSeconds": 221.2,
+      "text": "the theme is that we want to choose. Now"
+    },
+    {
+      "startSeconds": 223.84,
+      "text": "the full list of available themes is"
+    },
+    {
+      "startSeconds": 225.68,
+      "text": "available in the documentation. You will"
+    },
+    {
+      "startSeconds": 227.28,
+      "text": "find a link to it in the description"
+    },
+    {
+      "startSeconds": 228.64,
+      "text": "down below. But first of all let's see"
+    },
+    {
+      "startSeconds": 230.4,
+      "text": "what a graph looks like without setting"
+    },
+    {
+      "startSeconds": 232.4,
+      "text": "a particular theme. So I can do"
+    },
+    {
+      "startSeconds": 234,
+      "text": "something simple like sns.catterplot"
+    },
+    {
+      "startSeconds": 236.48,
+      "text": "scatter plot and then I can provide the"
+    },
+    {
+      "startSeconds": 238.56,
+      "text": "x values one two three and the y values"
+    },
+    {
+      "startSeconds": 242.08,
+      "text": "one two three nothing too fancy here"
+    },
+    {
+      "startSeconds": 244,
+      "text": "very basic stuff and if I do this you"
+    },
+    {
+      "startSeconds": 247.599,
+      "text": "can see we have a very basic mattpot"
+    },
+    {
+      "startSeconds": 250.08,
+      "text": "lip- like looking graph like a scatter"
+    },
+    {
+      "startSeconds": 252.799,
+      "text": "plot basically um but if I say here now"
+    },
+    {
+      "startSeconds": 256.4,
+      "text": "style is equal to dark grit which is my"
+    },
+    {
+      "startSeconds": 259.12,
+      "text": "favorite from the defaults then I can"
+    },
+    {
+      "startSeconds": 261.519,
+      "text": "rerun this and you can see we have a"
+    },
+    {
+      "startSeconds": 263.52,
+      "text": "different layout a different style here"
+    },
+    {
+      "startSeconds": 266.08,
+      "text": "So you can play around with that. You"
+    },
+    {
+      "startSeconds": 267.68,
+      "text": "can try the different styles that are"
+    },
+    {
+      "startSeconds": 268.96,
+      "text": "available. This one is my favorite. It"
+    },
+    {
+      "startSeconds": 270.72,
+      "text": "has a light gray background here with a"
+    },
+    {
+      "startSeconds": 273.28,
+      "text": "grid and that's I think more uh pleasant"
+    },
+    {
+      "startSeconds": 277.759,
+      "text": "for the eye."
+    },
+    {
+      "startSeconds": 279.759,
+      "text": "So in addition to that, we also have"
+    },
+    {
+      "startSeconds": 282.08,
+      "text": "so-called color palletes. So I can go"
+    },
+    {
+      "startSeconds": 284.639,
+      "text": "and say sns.col"
+    },
+    {
+      "startSeconds": 288.639,
+      "text": "plet. And if I just run it like this, we"
+    },
+    {
+      "startSeconds": 291.12,
+      "text": "will see the default plet which is blue,"
+    },
+    {
+      "startSeconds": 293.52,
+      "text": "orange, green, red, and so on. But we"
+    },
+    {
+      "startSeconds": 295.68,
+      "text": "can also provide a specific name if we"
+    },
+    {
+      "startSeconds": 298,
+      "text": "want to. So I can go and say for example"
+    },
+    {
+      "startSeconds": 301.12,
+      "text": "uh one of them is called set two as far"
+    },
+    {
+      "startSeconds": 303.199,
+      "text": "as I know. So we have set two. I'm not"
+    },
+    {
+      "startSeconds": 304.8,
+      "text": "sure if we have set one. Yeah, we do"
+    },
+    {
+      "startSeconds": 306.4,
+      "text": "have set one, set two, then set three."
+    },
+    {
+      "startSeconds": 310.88,
+      "text": "And you can play around with this and"
+    },
+    {
+      "startSeconds": 312.479,
+      "text": "see which one you like. There's also um"
+    },
+    {
+      "startSeconds": 315.36,
+      "text": "I think one is called paired."
+    },
+    {
+      "startSeconds": 318.639,
+      "text": "This is this one. Then we also have"
+    },
+    {
+      "startSeconds": 320,
+      "text": "stuff like hls and then you can provide"
+    },
+    {
+      "startSeconds": 322.88,
+      "text": "a number. So that is a color spectrum"
+    },
+    {
+      "startSeconds": 325.44,
+      "text": "and you can provide a number to specify"
+    },
+    {
+      "startSeconds": 327.44,
+      "text": "how many colors you want to have. So"
+    },
+    {
+      "startSeconds": 329.44,
+      "text": "that's also kind of interesting. Um and"
+    },
+    {
+      "startSeconds": 332.16,
+      "text": "then we also have stuff like rocket for"
+    },
+    {
+      "startSeconds": 334,
+      "text": "example. So you have different names"
+    },
+    {
+      "startSeconds": 336,
+      "text": "also something you can look up in the"
+    },
+    {
+      "startSeconds": 337.36,
+      "text": "documentation. The cool thing is you can"
+    },
+    {
+      "startSeconds": 339.36,
+      "text": "also make this continuous. So you can"
+    },
+    {
+      "startSeconds": 341.12,
+      "text": "say here uh that this is the plet you"
+    },
+    {
+      "startSeconds": 343.919,
+      "text": "want to use and then you can say cmap"
+    },
+    {
+      "startSeconds": 345.6,
+      "text": "equals true or I think it's called as"
+    },
+    {
+      "startSeconds": 347.6,
+      "text": "cap equals true. And now you have"
+    },
+    {
+      "startSeconds": 350,
+      "text": "essentially this as a spectrum instead"
+    },
+    {
+      "startSeconds": 352.8,
+      "text": "of just having distinct colors, discrete"
+    },
+    {
+      "startSeconds": 354.96,
+      "text": "colors. Now the interesting thing"
+    },
+    {
+      "startSeconds": 356.88,
+      "text": "happens when you set it. So what you can"
+    },
+    {
+      "startSeconds": 358.24,
+      "text": "do is you can just say SNS set and then"
+    },
+    {
+      "startSeconds": 362.08,
+      "text": "plet"
+    },
+    {
+      "startSeconds": 363.68,
+      "text": "and then you can choose to use one of"
+    },
+    {
+      "startSeconds": 366.16,
+      "text": "these schemes. I personally am going to"
+    },
+    {
+      "startSeconds": 368.16,
+      "text": "go with the default one. I just prefer"
+    },
+    {
+      "startSeconds": 370.4,
+      "text": "the most. But what you would do here is"
+    },
+    {
+      "startSeconds": 371.68,
+      "text": "you would either provide the string or"
+    },
+    {
+      "startSeconds": 373.44,
+      "text": "you would provide the plet object. So"
+    },
+    {
+      "startSeconds": 375.84,
+      "text": "you could do SNS color plet and then you"
+    },
+    {
+      "startSeconds": 378.56,
+      "text": "could define it here and then you can"
+    },
+    {
+      "startSeconds": 380.08,
+      "text": "pass it to set plet if you want to. I'm"
+    },
+    {
+      "startSeconds": 382.479,
+      "text": "not going to do that. I'm going to go"
+    },
+    {
+      "startSeconds": 383.6,
+      "text": "with the default and this is what we're"
+    },
+    {
+      "startSeconds": 386,
+      "text": "going to use for our plotting. And by"
+    },
+    {
+      "startSeconds": 387.44,
+      "text": "the way, I think the default is called"
+    },
+    {
+      "startSeconds": 389.36,
+      "text": "deep. So I think if we do that, we"
+    },
+    {
+      "startSeconds": 391.36,
+      "text": "should not change anything. All right."
+    },
+    {
+      "startSeconds": 393.6,
+      "text": "So that's the initial style setup. Then"
+    },
+    {
+      "startSeconds": 395.6,
+      "text": "we're going to also load the data sets"
+    },
+    {
+      "startSeconds": 397.199,
+      "text": "that we're going to use today from"
+    },
+    {
+      "startSeconds": 398.56,
+      "text": "seabboard. Now this is not mandatory."
+    },
+    {
+      "startSeconds": 400.72,
+      "text": "You can use a pandas data set from"
+    },
+    {
+      "startSeconds": 402.72,
+      "text": "anywhere. You can load it from a CSV"
+    },
+    {
+      "startSeconds": 404.479,
+      "text": "file. You can get it from the web. You"
+    },
+    {
+      "startSeconds": 406.08,
+      "text": "can uh load it from scikitlearn from"
+    },
+    {
+      "startSeconds": 408.16,
+      "text": "TensorFlow. We're just going to keep it"
+    },
+    {
+      "startSeconds": 409.68,
+      "text": "simple today and we're going to load"
+    },
+    {
+      "startSeconds": 411.039,
+      "text": "them directly from Seabor. So these are"
+    },
+    {
+      "startSeconds": 414.08,
+      "text": "mostly basic data sets that you probably"
+    },
+    {
+      "startSeconds": 416.24,
+      "text": "already know if you did some data"
+    },
+    {
+      "startSeconds": 418,
+      "text": "science in the past. But you can do"
+    },
+    {
+      "startSeconds": 420.639,
+      "text": "SNS.load"
+    },
+    {
+      "startSeconds": 422.72,
+      "text": "data set and then you can just provide"
+    },
+    {
+      "startSeconds": 424.16,
+      "text": "the name of the data set. Now if you"
+    },
+    {
+      "startSeconds": 425.759,
+      "text": "don't know what data sets are available,"
+    },
+    {
+      "startSeconds": 427.28,
+      "text": "you can just say SNS.get"
+    },
+    {
+      "startSeconds": 430.479,
+      "text": "data set names. This is going to list"
+    },
+    {
+      "startSeconds": 432.639,
+      "text": "all the data sets that are available."
+    },
+    {
+      "startSeconds": 434.96,
+      "text": "But for the most part today, we're going"
+    },
+    {
+      "startSeconds": 436.479,
+      "text": "to use the tips data set. So, this is"
+    },
+    {
+      "startSeconds": 438.72,
+      "text": "basically how much people are tipping in"
+    },
+    {
+      "startSeconds": 440.96,
+      "text": "a restaurant depending on what the total"
+    },
+    {
+      "startSeconds": 443.52,
+      "text": "bill is and the gender and whether"
+    },
+    {
+      "startSeconds": 446,
+      "text": "they're smokers or not and the day that"
+    },
+    {
+      "startSeconds": 448.08,
+      "text": "they went for dinner and the daytime"
+    },
+    {
+      "startSeconds": 450.4,
+      "text": "also. So, that is the data set"
+    },
+    {
+      "startSeconds": 453.12,
+      "text": "essentially and we can do some"
+    },
+    {
+      "startSeconds": 454.24,
+      "text": "visualization stuff with this data set."
+    },
+    {
+      "startSeconds": 456.4,
+      "text": "So now we can move on to the core part"
+    },
+    {
+      "startSeconds": 457.84,
+      "text": "of this crash course which is the"
+    },
+    {
+      "startSeconds": 459.44,
+      "text": "different plot types and how to do"
+    },
+    {
+      "startSeconds": 460.8,
+      "text": "plotting using Seabor in general because"
+    },
+    {
+      "startSeconds": 462.88,
+      "text": "the approach is a little bit different"
+    },
+    {
+      "startSeconds": 464.24,
+      "text": "to that of Mattplut. In Mattplot Lib a"
+    },
+    {
+      "startSeconds": 466.96,
+      "text": "lot of stuff has to be done manually. We"
+    },
+    {
+      "startSeconds": 468.639,
+      "text": "need to say I want a legend. I want to"
+    },
+    {
+      "startSeconds": 470.88,
+      "text": "display this feature in this way with"
+    },
+    {
+      "startSeconds": 473.039,
+      "text": "this color and this styling and this"
+    },
+    {
+      "startSeconds": 474.72,
+      "text": "extra visualization. In Seabor we can"
+    },
+    {
+      "startSeconds": 477.44,
+      "text": "also style a lot manually but most of"
+    },
+    {
+      "startSeconds": 479.599,
+      "text": "the stuff is done for us automatically"
+    },
+    {
+      "startSeconds": 481.36,
+      "text": "by just providing the features that"
+    },
+    {
+      "startSeconds": 483.44,
+      "text": "we're interested in. So let me show you"
+    },
+    {
+      "startSeconds": 485.12,
+      "text": "how this works. Let's go and say tips"
+    },
+    {
+      "startSeconds": 487.759,
+      "text": "data. I'm going to save this now in a"
+    },
+    {
+      "startSeconds": 489.68,
+      "text": "variable is going to be equal to SNS"
+    },
+    {
+      "startSeconds": 492.56,
+      "text": "load data set. And it's just going to be"
+    },
+    {
+      "startSeconds": 495.44,
+      "text": "tips. And now let's go with a simple"
+    },
+    {
+      "startSeconds": 498.24,
+      "text": "scatter plot. So I'm going to say here"
+    },
+    {
+      "startSeconds": 499.919,
+      "text": "plt dot or not plt sorry snss dot"
+    },
+    {
+      "startSeconds": 504.16,
+      "text": "scatterplot. And we're going to provide"
+    },
+    {
+      "startSeconds": 506.639,
+      "text": "in this case here just the data set."
+    },
+    {
+      "startSeconds": 509.84,
+      "text": "And now we're going to say on the x-axis"
+    },
+    {
+      "startSeconds": 512.159,
+      "text": "I want to have a certain feature and on"
+    },
+    {
+      "startSeconds": 514.159,
+      "text": "the y-axis I want to have a certain"
+    },
+    {
+      "startSeconds": 515.919,
+      "text": "feature. So I'm going to say on the"
+    },
+    {
+      "startSeconds": 517.76,
+      "text": "x-axis I want to have the total amount"
+    },
+    {
+      "startSeconds": 520.64,
+      "text": "of the bill and on the y-axis I want to"
+    },
+    {
+      "startSeconds": 524.08,
+      "text": "have the tip. So if I do that I will get"
+    },
+    {
+      "startSeconds": 526.72,
+      "text": "a scatter plot that looks like this. The"
+    },
+    {
+      "startSeconds": 528.56,
+      "text": "more money you spend the more you tip"
+    },
+    {
+      "startSeconds": 530.08,
+      "text": "usually makes sense. This is a positive"
+    },
+    {
+      "startSeconds": 532.32,
+      "text": "trend and that is a simple scatter plot."
+    },
+    {
+      "startSeconds": 535.12,
+      "text": "Now what we can do with Seabor that is"
+    },
+    {
+      "startSeconds": 536.959,
+      "text": "not so easily done with Mattplot lip is"
+    },
+    {
+      "startSeconds": 539.36,
+      "text": "I can say that I want to vary aspects of"
+    },
+    {
+      "startSeconds": 541.68,
+      "text": "this visualization based on certain"
+    },
+    {
+      "startSeconds": 543.92,
+      "text": "features. For example, I might want to"
+    },
+    {
+      "startSeconds": 546.08,
+      "text": "say that the gender should color the"
+    },
+    {
+      "startSeconds": 547.76,
+      "text": "points differently. So if it's male, I"
+    },
+    {
+      "startSeconds": 550.399,
+      "text": "want to have a certain color. If it's"
+    },
+    {
+      "startSeconds": 551.76,
+      "text": "female, I want to have another color."
+    },
+    {
+      "startSeconds": 553.92,
+      "text": "Now, how do I do that? Without doing any"
+    },
+    {
+      "startSeconds": 555.68,
+      "text": "fancy color codes, I can just say"
+    },
+    {
+      "startSeconds": 559.04,
+      "text": "hue is equal to and then the name of the"
+    },
+    {
+      "startSeconds": 562,
+      "text": "variable, in this case, sex. And if I do"
+    },
+    {
+      "startSeconds": 564.56,
+      "text": "that, you can see I automatically get"
+    },
+    {
+      "startSeconds": 566.8,
+      "text": "this visualization here with a legend"
+    },
+    {
+      "startSeconds": 569.12,
+      "text": "male female and the colors represent"
+    },
+    {
+      "startSeconds": 572.48,
+      "text": "this particular feature. Now I can also"
+    },
+    {
+      "startSeconds": 574.88,
+      "text": "do the same thing with the size. I can"
+    },
+    {
+      "startSeconds": 576.72,
+      "text": "say that the size of the group should"
+    },
+    {
+      "startSeconds": 578.56,
+      "text": "determine the size of the data point. So"
+    },
+    {
+      "startSeconds": 580.64,
+      "text": "I can go and I can say size is equal to"
+    },
+    {
+      "startSeconds": 583.36,
+      "text": "size. Run this. And now I have"
+    },
+    {
+      "startSeconds": 585.68,
+      "text": "differently sized points just by"
+    },
+    {
+      "startSeconds": 587.44,
+      "text": "providing the name of the feature here."
+    },
+    {
+      "startSeconds": 589.76,
+      "text": "All based of course on the data set"
+    },
+    {
+      "startSeconds": 591.6,
+      "text": "being present as a data frame. Um and I"
+    },
+    {
+      "startSeconds": 594.72,
+      "text": "can do that with different things as"
+    },
+    {
+      "startSeconds": 596.16,
+      "text": "well. So what else do we have? Maybe we"
+    },
+    {
+      "startSeconds": 598.08,
+      "text": "can say that the smoker should determine"
+    },
+    {
+      "startSeconds": 600.08,
+      "text": "the style. So I can say style is equal"
+    },
+    {
+      "startSeconds": 602.24,
+      "text": "to smoker. Is it a smoker or not?"
+    },
+    {
+      "startSeconds": 606.48,
+      "text": "And if it's a smoker I get a circle. If"
+    },
+    {
+      "startSeconds": 609.04,
+      "text": "it's not a smoker I get an X across"
+    },
+    {
+      "startSeconds": 611.2,
+      "text": "basically. So that is also a"
+    },
+    {
+      "startSeconds": 613.44,
+      "text": "customization option. And that is how"
+    },
+    {
+      "startSeconds": 615.839,
+      "text": "Seabour works in a nutshell. We have the"
+    },
+    {
+      "startSeconds": 618.399,
+      "text": "different plotting functions and there"
+    },
+    {
+      "startSeconds": 619.76,
+      "text": "are a lot of different uh plotting"
+    },
+    {
+      "startSeconds": 621.44,
+      "text": "functions and the aspect that we want to"
+    },
+    {
+      "startSeconds": 624.399,
+      "text": "link to a certain variable. We just have"
+    },
+    {
+      "startSeconds": 626.16,
+      "text": "to provide the variable name for that"
+    },
+    {
+      "startSeconds": 628.48,
+      "text": "specific aspect. This is super"
+    },
+    {
+      "startSeconds": 630.24,
+      "text": "convenient and it's not possible like"
+    },
+    {
+      "startSeconds": 632,
+      "text": "this in mattplot lip. Now another thing"
+    },
+    {
+      "startSeconds": 634.16,
+      "text": "that's interesting is we have figure"
+    },
+    {
+      "startSeconds": 636.399,
+      "text": "level functions and axis level"
+    },
+    {
+      "startSeconds": 638.32,
+      "text": "functions. Scatter plot is an access"
+    },
+    {
+      "startSeconds": 640.56,
+      "text": "level function. We just do one axis"
+    },
+    {
+      "startSeconds": 642.399,
+      "text": "here, one visualization and that's it."
+    },
+    {
+      "startSeconds": 644.959,
+      "text": "We can do the exact same thing that we"
+    },
+    {
+      "startSeconds": 646.8,
+      "text": "did with the scatter plot function with"
+    },
+    {
+      "startSeconds": 649.279,
+      "text": "a different function called real plot."
+    },
+    {
+      "startSeconds": 651.839,
+      "text": "And real plot basically does the same"
+    },
+    {
+      "startSeconds": 653.839,
+      "text": "thing but we can use it with multiple"
+    },
+    {
+      "startSeconds": 656.16,
+      "text": "different modes. So I can say or"
+    },
+    {
+      "startSeconds": 658.32,
+      "text": "different kinds I should say. So kind is"
+    },
+    {
+      "startSeconds": 660.8,
+      "text": "equal to scatter for example. This is"
+    },
+    {
+      "startSeconds": 664.32,
+      "text": "going to result in basically the same"
+    },
+    {
+      "startSeconds": 666,
+      "text": "plot. We do have some differences here"
+    },
+    {
+      "startSeconds": 667.839,
+      "text": "like the legend is outside of the actual"
+    },
+    {
+      "startSeconds": 670.16,
+      "text": "visualization here but essentially it's"
+    },
+    {
+      "startSeconds": 672.64,
+      "text": "the same effect. We have a scatter plot"
+    },
+    {
+      "startSeconds": 674.399,
+      "text": "with all the same parameters just that"
+    },
+    {
+      "startSeconds": 676.72,
+      "text": "we have to provide the kind scatter"
+    },
+    {
+      "startSeconds": 678.32,
+      "text": "which also implies there's other kinds"
+    },
+    {
+      "startSeconds": 680.64,
+      "text": "of visualizations that we can use here."
+    },
+    {
+      "startSeconds": 682.88,
+      "text": "But one thing that we can do with such a"
+    },
+    {
+      "startSeconds": 684.959,
+      "text": "relational plot here and which is not"
+    },
+    {
+      "startSeconds": 687.2,
+      "text": "possible with the scatter plot is we can"
+    },
+    {
+      "startSeconds": 689.6,
+      "text": "have multiple axes here multiple plots"
+    },
+    {
+      "startSeconds": 692.88,
+      "text": "so to say in one figure and not only"
+    },
+    {
+      "startSeconds": 695.68,
+      "text": "that we can also say that the split into"
+    },
+    {
+      "startSeconds": 698.16,
+      "text": "different graphs should happen based on"
+    },
+    {
+      "startSeconds": 700.8,
+      "text": "a feature. So for example, I also have"
+    },
+    {
+      "startSeconds": 703.279,
+      "text": "the feature day here. We have Thursday,"
+    },
+    {
+      "startSeconds": 705.6,
+      "text": "Friday, Saturday and Sunday. And I could"
+    },
+    {
+      "startSeconds": 707.68,
+      "text": "say that I want to have four different"
+    },
+    {
+      "startSeconds": 709.04,
+      "text": "graphs for these days. How do I do that?"
+    },
+    {
+      "startSeconds": 711.68,
+      "text": "All I have to do in the real plot"
+    },
+    {
+      "startSeconds": 713.04,
+      "text": "function is I have to say column is"
+    },
+    {
+      "startSeconds": 715.6,
+      "text": "equal to or call is equal to day. This"
+    },
+    {
+      "startSeconds": 719.519,
+      "text": "is now going to take this and make four"
+    },
+    {
+      "startSeconds": 722,
+      "text": "different plots that represent the same"
+    },
+    {
+      "startSeconds": 724.48,
+      "text": "graphic as before but split into four"
+    },
+    {
+      "startSeconds": 727.12,
+      "text": "different days. Now if this is not what"
+    },
+    {
+      "startSeconds": 730,
+      "text": "I want, I can also go and say column"
+    },
+    {
+      "startSeconds": 732.24,
+      "text": "wrap is equal to two. Then I would have"
+    },
+    {
+      "startSeconds": 734.72,
+      "text": "a 2x two grid and I can see this a lot"
+    },
+    {
+      "startSeconds": 738.48,
+      "text": "easier. And I can of course exchange all"
+    },
+    {
+      "startSeconds": 741.04,
+      "text": "of this. So I can say for example that"
+    },
+    {
+      "startSeconds": 742.88,
+      "text": "the color should be based on the day and"
+    },
+    {
+      "startSeconds": 745.68,
+      "text": "the column should be based on sex. And"
+    },
+    {
+      "startSeconds": 748.639,
+      "text": "then I would have two graphs and many"
+    },
+    {
+      "startSeconds": 751.2,
+      "text": "more colors. So that is the basic idea"
+    },
+    {
+      "startSeconds": 753.839,
+      "text": "of working with real plot versus scatter"
+    },
+    {
+      "startSeconds": 756.8,
+      "text": "plot. There's also line plot which has"
+    },
+    {
+      "startSeconds": 758.72,
+      "text": "the same effect as um as calling real"
+    },
+    {
+      "startSeconds": 762.399,
+      "text": "plot with kind line. I'm going to show"
+    },
+    {
+      "startSeconds": 763.92,
+      "text": "you that now. So if I say let me use a"
+    },
+    {
+      "startSeconds": 766.88,
+      "text": "different data set for this Dow data."
+    },
+    {
+      "startSeconds": 768.72,
+      "text": "For the Dow Jones data I'm going to say"
+    },
+    {
+      "startSeconds": 771.2,
+      "text": "SNS load data set Dow Jones. This is"
+    },
+    {
+      "startSeconds": 775.839,
+      "text": "just a stock index. Uh so we can take a"
+    },
+    {
+      "startSeconds": 778.88,
+      "text": "look at this data as well. Dow data"
+    },
+    {
+      "startSeconds": 782.8,
+      "text": "that is just a stock price or the index"
+    },
+    {
+      "startSeconds": 784.88,
+      "text": "price I should say. And now I can go say"
+    },
+    {
+      "startSeconds": 788.32,
+      "text": "SNS line plot dow data"
+    },
+    {
+      "startSeconds": 793.12,
+      "text": "and I can say X is equal to date and Y"
+    },
+    {
+      "startSeconds": 796.8,
+      "text": "is equal to price. That's basically it."
+    },
+    {
+      "startSeconds": 800.24,
+      "text": "We get this line chart. Same thing"
+    },
+    {
+      "startSeconds": 802.56,
+      "text": "happens if I do this with real plot"
+    },
+    {
+      "startSeconds": 808.079,
+      "text": "and kind line. So real plot"
+    },
+    {
+      "startSeconds": 812.32,
+      "text": "kind line has the exact same effect as"
+    },
+    {
+      "startSeconds": 815.44,
+      "text": "this. again looks slightly different but"
+    },
+    {
+      "startSeconds": 818.16,
+      "text": "I can also do the same thing with"
+    },
+    {
+      "startSeconds": 819.68,
+      "text": "scatter of course which doesn't make a"
+    },
+    {
+      "startSeconds": 821.279,
+      "text": "lot of sense in this case but it's"
+    },
+    {
+      "startSeconds": 822.8,
+      "text": "possible so rail plot can be multiple"
+    },
+    {
+      "startSeconds": 825.839,
+      "text": "plots line plot and scatter plot but we"
+    },
+    {
+      "startSeconds": 828.56,
+      "text": "can also split by column and um or split"
+    },
+    {
+      "startSeconds": 832.24,
+      "text": "column-wise based on a feature which is"
+    },
+    {
+      "startSeconds": 834.8,
+      "text": "quite convenient and this also exists"
+    },
+    {
+      "startSeconds": 836.56,
+      "text": "now for different plot types real plot"
+    },
+    {
+      "startSeconds": 838.639,
+      "text": "includes scatter and line but we also"
+    },
+    {
+      "startSeconds": 840.399,
+      "text": "have for example this plot so"
+    },
+    {
+      "startSeconds": 842.639,
+      "text": "distribution plot I can go and say sns s"
+    },
+    {
+      "startSeconds": 845.76,
+      "text": "do.isplot."
+    },
+    {
+      "startSeconds": 847.36,
+      "text": "This is not dist so without a t. It's"
+    },
+    {
+      "startSeconds": 849.839,
+      "text": "displot."
+    },
+    {
+      "startSeconds": 851.44,
+      "text": "And I can say I'm interested in the tips"
+    },
+    {
+      "startSeconds": 853.76,
+      "text": "data and I'm just interested in the"
+    },
+    {
+      "startSeconds": 856.48,
+      "text": "distribution of the tips. So I can do"
+    },
+    {
+      "startSeconds": 858.8,
+      "text": "that and I immediately get a histogram"
+    },
+    {
+      "startSeconds": 861.199,
+      "text": "without even providing the kind because"
+    },
+    {
+      "startSeconds": 862.88,
+      "text": "that's the default. I can say kind is"
+    },
+    {
+      "startSeconds": 864.639,
+      "text": "equal to hist which will have the same"
+    },
+    {
+      "startSeconds": 866.8,
+      "text": "effect. And of course you guessed it I"
+    },
+    {
+      "startSeconds": 868.959,
+      "text": "can also go and just do histplot"
+    },
+    {
+      "startSeconds": 871.279,
+      "text": "directly. So I can say hist plot like"
+    },
+    {
+      "startSeconds": 873.76,
+      "text": "this without the kind parameter and it's"
+    },
+    {
+      "startSeconds": 876.24,
+      "text": "going to be roughly the same"
+    },
+    {
+      "startSeconds": 877.6,
+      "text": "visualization just a different figure"
+    },
+    {
+      "startSeconds": 879.519,
+      "text": "size. So we have this plot hist plot but"
+    },
+    {
+      "startSeconds": 882.88,
+      "text": "of course what can I do with this plot"
+    },
+    {
+      "startSeconds": 884.8,
+      "text": "that I cannot do with histplot? I can"
+    },
+    {
+      "startSeconds": 887.279,
+      "text": "split um based on a feature into"
+    },
+    {
+      "startSeconds": 890.32,
+      "text": "multiple plots. So I can say here that"
+    },
+    {
+      "startSeconds": 894.079,
+      "text": "the column should represent the"
+    },
+    {
+      "startSeconds": 896.48,
+      "text": "different genders. And now I have two"
+    },
+    {
+      "startSeconds": 898.32,
+      "text": "histograms which is not possible with"
+    },
+    {
+      "startSeconds": 900.56,
+      "text": "the hist plot. However, what I can also"
+    },
+    {
+      "startSeconds": 902.48,
+      "text": "do in the his plot is I can say that the"
+    },
+    {
+      "startSeconds": 905.839,
+      "text": "color"
+    },
+    {
+      "startSeconds": 907.36,
+      "text": "should be based on sex and then I would"
+    },
+    {
+      "startSeconds": 909.279,
+      "text": "have the two histograms uh yeah in front"
+    },
+    {
+      "startSeconds": 912,
+      "text": "of one another with some transparency."
+    },
+    {
+      "startSeconds": 914.48,
+      "text": "This is something that I can do. And"
+    },
+    {
+      "startSeconds": 916.56,
+      "text": "this displot function also now contains"
+    },
+    {
+      "startSeconds": 919.12,
+      "text": "more kinds than the real plot function."
+    },
+    {
+      "startSeconds": 921.12,
+      "text": "So another plot that I can do is I can"
+    },
+    {
+      "startSeconds": 922.959,
+      "text": "say SNS KDE plot. Not even sure what KDE"
+    },
+    {
+      "startSeconds": 926.399,
+      "text": "stands for. I knew it once. But"
+    },
+    {
+      "startSeconds": 928.56,
+      "text": "basically it's like a histogram but as a"
+    },
+    {
+      "startSeconds": 931.279,
+      "text": "continuous line. So I can say tips data"
+    },
+    {
+      "startSeconds": 933.519,
+      "text": "x is equal to tip and then we get"
+    },
+    {
+      "startSeconds": 936.56,
+      "text": "something like this. But the cool thing"
+    },
+    {
+      "startSeconds": 938.16,
+      "text": "is it's not just that I can do this with"
+    },
+    {
+      "startSeconds": 940.72,
+      "text": "one variable like a histogram. I can"
+    },
+    {
+      "startSeconds": 942.88,
+      "text": "also turn this into a kind of contour"
+    },
+    {
+      "startSeconds": 945.279,
+      "text": "plot by providing a second variable. So"
+    },
+    {
+      "startSeconds": 947.44,
+      "text": "I can say that the total bill should"
+    },
+    {
+      "startSeconds": 950.399,
+      "text": "also be um represented here and I can"
+    },
+    {
+      "startSeconds": 953.759,
+      "text": "say plot then I'm going to get it like"
+    },
+    {
+      "startSeconds": 956.8,
+      "text": "this. And theoretically, I could also"
+    },
+    {
+      "startSeconds": 958.959,
+      "text": "say that the color should be determined"
+    },
+    {
+      "startSeconds": 961.279,
+      "text": "by gender. And then I would have two of"
+    },
+    {
+      "startSeconds": 963.6,
+      "text": "these plots on top of one another. And"
+    },
+    {
+      "startSeconds": 966.32,
+      "text": "depending on what you're trying to show"
+    },
+    {
+      "startSeconds": 967.759,
+      "text": "here, you can of course play around and"
+    },
+    {
+      "startSeconds": 969.36,
+      "text": "do different things. Uh what we can also"
+    },
+    {
+      "startSeconds": 971.6,
+      "text": "do here, I think there's a parameter"
+    },
+    {
+      "startSeconds": 973.199,
+      "text": "called fill. Then this looks a little"
+    },
+    {
+      "startSeconds": 975.839,
+      "text": "bit more professional if you do it like"
+    },
+    {
+      "startSeconds": 978.079,
+      "text": "this. Uh we could also say maybe that"
+    },
+    {
+      "startSeconds": 980.399,
+      "text": "the color represents the days."
+    },
+    {
+      "startSeconds": 983.12,
+      "text": "This is also possible. But then of"
+    },
+    {
+      "startSeconds": 984.639,
+      "text": "course maybe you need to work with some"
+    },
+    {
+      "startSeconds": 987.199,
+      "text": "transparency here manually. But you get"
+    },
+    {
+      "startSeconds": 988.959,
+      "text": "the idea. With all these plots we have"
+    },
+    {
+      "startSeconds": 991.12,
+      "text": "the data and we have different"
+    },
+    {
+      "startSeconds": 992.72,
+      "text": "parameters and all we have to do is we"
+    },
+    {
+      "startSeconds": 994.24,
+      "text": "have to pass feature names and then we"
+    },
+    {
+      "startSeconds": 996.16,
+      "text": "can do some custom stuff. I recommend"
+    },
+    {
+      "startSeconds": 997.92,
+      "text": "with all of these functions if you want"
+    },
+    {
+      "startSeconds": 999.36,
+      "text": "to go deep into one of them if you want"
+    },
+    {
+      "startSeconds": 1001.199,
+      "text": "to style very specific aspects of them."
+    },
+    {
+      "startSeconds": 1004.399,
+      "text": "You either need to go onto the mattplot"
+    },
+    {
+      "startSeconds": 1006.56,
+      "text": "level. So you can use Mattplutlib in"
+    },
+    {
+      "startSeconds": 1008.48,
+      "text": "combination with Seabor since Seabour is"
+    },
+    {
+      "startSeconds": 1010.56,
+      "text": "built on top of Mattplot Lib, but also"
+    },
+    {
+      "startSeconds": 1012.24,
+      "text": "you can go to the documentation and see"
+    },
+    {
+      "startSeconds": 1013.68,
+      "text": "what parameters there are. I'm not going"
+    },
+    {
+      "startSeconds": 1015.279,
+      "text": "to cover all of these functions in"
+    },
+    {
+      "startSeconds": 1016.959,
+      "text": "detail, but I'm going to show you how"
+    },
+    {
+      "startSeconds": 1019.36,
+      "text": "they work, what you can do with them on"
+    },
+    {
+      "startSeconds": 1020.72,
+      "text": "a basic level. And then you can go"
+    },
+    {
+      "startSeconds": 1022.16,
+      "text": "deeper into them if you want to. And of"
+    },
+    {
+      "startSeconds": 1024.4,
+      "text": "course, what you can do here with a KDE"
+    },
+    {
+      "startSeconds": 1026.319,
+      "text": "plot, you can also go again and do it"
+    },
+    {
+      "startSeconds": 1028.64,
+      "text": "using this plot. And then you can just"
+    },
+    {
+      "startSeconds": 1031.12,
+      "text": "say kind KDE."
+    },
+    {
+      "startSeconds": 1034,
+      "text": "same result but you can also now split"
+    },
+    {
+      "startSeconds": 1036.16,
+      "text": "by column and say for example column is"
+    },
+    {
+      "startSeconds": 1040.88,
+      "text": "sex and then you would have two plots"
+    },
+    {
+      "startSeconds": 1043.679,
+      "text": "side by side that is again the"
+    },
+    {
+      "startSeconds": 1046.24,
+      "text": "difference between this plot and the"
+    },
+    {
+      "startSeconds": 1047.919,
+      "text": "child functions or I should say the axis"
+    },
+    {
+      "startSeconds": 1050,
+      "text": "level functions so another function that"
+    },
+    {
+      "startSeconds": 1052.88,
+      "text": "we can plot or use here is the ECDF"
+    },
+    {
+      "startSeconds": 1057.2,
+      "text": "plot which is like a cumulative uh"
+    },
+    {
+      "startSeconds": 1060,
+      "text": "density so I can or cumulative"
+    },
+    {
+      "startSeconds": 1062.559,
+      "text": "probability I can Say again tips data"
+    },
+    {
+      "startSeconds": 1064.96,
+      "text": "and then X is equal to tip. That is"
+    },
+    {
+      "startSeconds": 1068.64,
+      "text": "basically not the histogram but the"
+    },
+    {
+      "startSeconds": 1070.72,
+      "text": "cumulative probability which essentially"
+    },
+    {
+      "startSeconds": 1072.88,
+      "text": "means that the probability that a tip um"
+    },
+    {
+      "startSeconds": 1076.72,
+      "text": "like this or lower has been given is"
+    },
+    {
+      "startSeconds": 1079.76,
+      "text": "this probability and the probability"
+    },
+    {
+      "startSeconds": 1082.16,
+      "text": "that the tip was $6 or more or less is"
+    },
+    {
+      "startSeconds": 1086.4,
+      "text": "like 97%."
+    },
+    {
+      "startSeconds": 1088.96,
+      "text": "The probability that the tip was $10 or"
+    },
+    {
+      "startSeconds": 1091.44,
+      "text": "less is one. So 100%."
+    },
+    {
+      "startSeconds": 1095.28,
+      "text": "Um, and of course this also works with"
+    },
+    {
+      "startSeconds": 1097.2,
+      "text": "this plot and kind ECDF. Now there's"
+    },
+    {
+      "startSeconds": 1100,
+      "text": "also one additional plot type which"
+    },
+    {
+      "startSeconds": 1101.84,
+      "text": "doesn't work on its own. You add it to a"
+    },
+    {
+      "startSeconds": 1104.08,
+      "text": "histogram for example. So we can maybe"
+    },
+    {
+      "startSeconds": 1106.72,
+      "text": "go up here, copy this and in addition to"
+    },
+    {
+      "startSeconds": 1110.16,
+      "text": "that we can also now call an additional"
+    },
+    {
+      "startSeconds": 1112.88,
+      "text": "function called rockplot. So that would"
+    },
+    {
+      "startSeconds": 1115.52,
+      "text": "be SNS.Ruckplot."
+    },
+    {
+      "startSeconds": 1118.48,
+      "text": "You do that in addition to histograms."
+    },
+    {
+      "startSeconds": 1120.64,
+      "text": "And then you can say uh tips data x is"
+    },
+    {
+      "startSeconds": 1123.76,
+      "text": "equal to tip and color could be"
+    },
+    {
+      "startSeconds": 1126.799,
+      "text": "something like orange for example. And"
+    },
+    {
+      "startSeconds": 1129.039,
+      "text": "what this is going to do now is it's"
+    },
+    {
+      "startSeconds": 1130.72,
+      "text": "going to plot and of course this now"
+    },
+    {
+      "startSeconds": 1132.559,
+      "text": "doesn't work if I'm splitting on a"
+    },
+    {
+      "startSeconds": 1134,
+      "text": "column basis. So let me do it like this."
+    },
+    {
+      "startSeconds": 1136.16,
+      "text": "This now plots the individual data"
+    },
+    {
+      "startSeconds": 1138.08,
+      "text": "points um onto the histogram. So it's"
+    },
+    {
+      "startSeconds": 1140.799,
+      "text": "not just the density, it also shows you"
+    },
+    {
+      "startSeconds": 1143.84,
+      "text": "the actual values. So it's not just"
+    },
+    {
+      "startSeconds": 1146.48,
+      "text": "between two and I don't know what the"
+    },
+    {
+      "startSeconds": 1148.88,
+      "text": "boundary is here 2.3 or something. It's"
+    },
+    {
+      "startSeconds": 1151.44,
+      "text": "actually you see the individual data"
+    },
+    {
+      "startSeconds": 1153.44,
+      "text": "points here. Now then the next figure"
+    },
+    {
+      "startSeconds": 1155.28,
+      "text": "level function is catplot. So"
+    },
+    {
+      "startSeconds": 1157.36,
+      "text": "categorical plot for this we can do"
+    },
+    {
+      "startSeconds": 1160.24,
+      "text": "sns.catplot."
+    },
+    {
+      "startSeconds": 1162,
+      "text": "We can go again with the tips data. And"
+    },
+    {
+      "startSeconds": 1164.64,
+      "text": "here now I can do for example tip on the"
+    },
+    {
+      "startSeconds": 1168.559,
+      "text": "different days. So the y is the day and"
+    },
+    {
+      "startSeconds": 1173.12,
+      "text": "I can say kind is equal to a strip plot."
+    },
+    {
+      "startSeconds": 1177.679,
+      "text": "So that basically shows me the different"
+    },
+    {
+      "startSeconds": 1179.76,
+      "text": "tip values. It's a little bit like the"
+    },
+    {
+      "startSeconds": 1181.36,
+      "text": "ruck plot but in a different way"
+    },
+    {
+      "startSeconds": 1183.2,
+      "text": "visualized in a different way. So we"
+    },
+    {
+      "startSeconds": 1185.12,
+      "text": "have the different tip values on the"
+    },
+    {
+      "startSeconds": 1187.12,
+      "text": "different days of the week. Um and then"
+    },
+    {
+      "startSeconds": 1190.32,
+      "text": "we can also say again"
+    },
+    {
+      "startSeconds": 1192.88,
+      "text": "hu is based on male female"
+    },
+    {
+      "startSeconds": 1195.919,
+      "text": "if we want to do that. And I think it"
+    },
+    {
+      "startSeconds": 1197.76,
+      "text": "goes without saying that this is the"
+    },
+    {
+      "startSeconds": 1199.44,
+      "text": "exact same thing as just calling strip"
+    },
+    {
+      "startSeconds": 1201.6,
+      "text": "plot directly. So if I say SNS strip"
+    },
+    {
+      "startSeconds": 1205.2,
+      "text": "plot, I just have to remove the kind."
+    },
+    {
+      "startSeconds": 1208.08,
+      "text": "But besides that, it's going to be the"
+    },
+    {
+      "startSeconds": 1209.919,
+      "text": "same thing with a double P. Of course,"
+    },
+    {
+      "startSeconds": 1213.039,
+      "text": "an alternative plot to that would be the"
+    },
+    {
+      "startSeconds": 1215.039,
+      "text": "swarm plot. It's quite similar, but a"
+    },
+    {
+      "startSeconds": 1218,
+      "text": "little bit different because there we"
+    },
+    {
+      "startSeconds": 1219.919,
+      "text": "have the values more like vertically"
+    },
+    {
+      "startSeconds": 1222.48,
+      "text": "lined up. Um but of course that also"
+    },
+    {
+      "startSeconds": 1225.36,
+      "text": "works with cat plot and then with kind"
+    },
+    {
+      "startSeconds": 1228.4,
+      "text": "uh swarm. Then one of the plots that"
+    },
+    {
+      "startSeconds": 1230.24,
+      "text": "probably most of you guys know from"
+    },
+    {
+      "startSeconds": 1232.24,
+      "text": "school is the box plot. You can either"
+    },
+    {
+      "startSeconds": 1234.88,
+      "text": "call this using the box plot function or"
+    },
+    {
+      "startSeconds": 1237.039,
+      "text": "by saying uh cat plot kind box. That's"
+    },
+    {
+      "startSeconds": 1240.4,
+      "text": "also possible. There we can say just use"
+    },
+    {
+      "startSeconds": 1243.36,
+      "text": "the tip as the value then you get one"
+    },
+    {
+      "startSeconds": 1245.2,
+      "text": "box plot. Then you can also say okay use"
+    },
+    {
+      "startSeconds": 1247.44,
+      "text": "it based on or split it based on the day"
+    },
+    {
+      "startSeconds": 1252.4,
+      "text": "like this. And basically a box plot"
+    },
+    {
+      "startSeconds": 1254.32,
+      "text": "shows you the median, the different"
+    },
+    {
+      "startSeconds": 1256.159,
+      "text": "quantiles and also some outliers, the"
+    },
+    {
+      "startSeconds": 1258.24,
+      "text": "min and max that are not outliers. Um"
+    },
+    {
+      "startSeconds": 1260.96,
+      "text": "yeah, if you don't know how to read"
+    },
+    {
+      "startSeconds": 1262.08,
+      "text": "this, you can Google it. The basic idea"
+    },
+    {
+      "startSeconds": 1264,
+      "text": "is this is the minimum value. This is"
+    },
+    {
+      "startSeconds": 1265.52,
+      "text": "the maximum value. Then you have some"
+    },
+    {
+      "startSeconds": 1267.52,
+      "text": "outliers which are not considered to be"
+    },
+    {
+      "startSeconds": 1269.28,
+      "text": "part of minimum and maximum. Then you"
+    },
+    {
+      "startSeconds": 1271.52,
+      "text": "have like the first quartile, the second"
+    },
+    {
+      "startSeconds": 1274.159,
+      "text": "quartile which is the median and then"
+    },
+    {
+      "startSeconds": 1276.159,
+      "text": "the third quartile. And then you can see"
+    },
+    {
+      "startSeconds": 1278.08,
+      "text": "the range of the individual"
+    },
+    {
+      "startSeconds": 1280.64,
+      "text": "um yeah of the individual segments here."
+    },
+    {
+      "startSeconds": 1283.36,
+      "text": "And an alternative to this plot type is"
+    },
+    {
+      "startSeconds": 1285.6,
+      "text": "also the violin plot that shows you the"
+    },
+    {
+      "startSeconds": 1288.96,
+      "text": "distribution in this curvature. And you"
+    },
+    {
+      "startSeconds": 1290.96,
+      "text": "can also see here the median. Another"
+    },
+    {
+      "startSeconds": 1293.12,
+      "text": "one would be the boxen plot which uh"
+    },
+    {
+      "startSeconds": 1296.32,
+      "text": "shows different size of boxes here. So,"
+    },
+    {
+      "startSeconds": 1298.4,
+      "text": "as far as I remember it, it's like you"
+    },
+    {
+      "startSeconds": 1300.08,
+      "text": "start with the median here and then each"
+    },
+    {
+      "startSeconds": 1303.12,
+      "text": "portion. So, each next line is like half"
+    },
+    {
+      "startSeconds": 1305.76,
+      "text": "of the remaining data. Not sure if"
+    },
+    {
+      "startSeconds": 1307.919,
+      "text": "that's um precisely correct, but it's"
+    },
+    {
+      "startSeconds": 1310.24,
+      "text": "usually something that you use for"
+    },
+    {
+      "startSeconds": 1311.52,
+      "text": "larger data sets. I'm not really I've"
+    },
+    {
+      "startSeconds": 1313.76,
+      "text": "never used this for data analysis"
+    },
+    {
+      "startSeconds": 1315.2,
+      "text": "myself, but doesn't mean that it's"
+    },
+    {
+      "startSeconds": 1316.48,
+      "text": "useless. It's probably quite useful if"
+    },
+    {
+      "startSeconds": 1318.24,
+      "text": "you know what you're doing. Then there's"
+    },
+    {
+      "startSeconds": 1319.919,
+      "text": "also the classic bar plot. So, a bar"
+    },
+    {
+      "startSeconds": 1323.039,
+      "text": "plot is just bars. You can either have"
+    },
+    {
+      "startSeconds": 1325.6,
+      "text": "horizontal or vertical bars. But for"
+    },
+    {
+      "startSeconds": 1328,
+      "text": "example, we could do something like X is"
+    },
+    {
+      "startSeconds": 1330,
+      "text": "the day"
+    },
+    {
+      "startSeconds": 1331.919,
+      "text": "and Y is the tip."
+    },
+    {
+      "startSeconds": 1335.12,
+      "text": "That would be now a vertical bar chart."
+    },
+    {
+      "startSeconds": 1337.679,
+      "text": "Then you can also say easily"
+    },
+    {
+      "startSeconds": 1340.559,
+      "text": "that the color is based on the gender."
+    },
+    {
+      "startSeconds": 1344.48,
+      "text": "And this is the beauty of Seabor. You"
+    },
+    {
+      "startSeconds": 1347.039,
+      "text": "don't have to take care of the alignment"
+    },
+    {
+      "startSeconds": 1349.679,
+      "text": "here. You don't have to think about how"
+    },
+    {
+      "startSeconds": 1351.12,
+      "text": "to structure this. You don't need to"
+    },
+    {
+      "startSeconds": 1352.799,
+      "text": "invent color codes. You just say I want"
+    },
+    {
+      "startSeconds": 1354.72,
+      "text": "to have an additional factor here. There"
+    },
+    {
+      "startSeconds": 1356.72,
+      "text": "you go. You have it. And since we have"
+    },
+    {
+      "startSeconds": 1358.48,
+      "text": "more than one value here for the tip per"
+    },
+    {
+      "startSeconds": 1360.32,
+      "text": "day, this is shown as a range. And this"
+    },
+    {
+      "startSeconds": 1362.799,
+      "text": "is basically always the middle of this"
+    },
+    {
+      "startSeconds": 1364.559,
+      "text": "range. That's that's how you do a bar"
+    },
+    {
+      "startSeconds": 1366.48,
+      "text": "plot if you don't have just one value"
+    },
+    {
+      "startSeconds": 1368.159,
+      "text": "per uh day in this case or per per x"
+    },
+    {
+      "startSeconds": 1371.28,
+      "text": "value. An alternative to that would be"
+    },
+    {
+      "startSeconds": 1373.2,
+      "text": "the count plot. With a count plot, we"
+    },
+    {
+      "startSeconds": 1375.2,
+      "text": "don't get a lot of information. But"
+    },
+    {
+      "startSeconds": 1376.64,
+      "text": "basically, if I just say x is equal day,"
+    },
+    {
+      "startSeconds": 1378.88,
+      "text": "we see how many instances we have per"
+    },
+    {
+      "startSeconds": 1381.52,
+      "text": "day. We can also say for example that"
+    },
+    {
+      "startSeconds": 1383.6,
+      "text": "the color should again represent"
+    },
+    {
+      "startSeconds": 1385.28,
+      "text": "something like uh sex for example. And"
+    },
+    {
+      "startSeconds": 1388.159,
+      "text": "then you can see that this is also split"
+    },
+    {
+      "startSeconds": 1390.88,
+      "text": "to be counted correctly to split the"
+    },
+    {
+      "startSeconds": 1392.72,
+      "text": "count up into the different genders. And"
+    },
+    {
+      "startSeconds": 1395.52,
+      "text": "the last categorical function that I"
+    },
+    {
+      "startSeconds": 1397.2,
+      "text": "would like to show is the point plot."
+    },
+    {
+      "startSeconds": 1399.12,
+      "text": "The point plot is also showing a"
+    },
+    {
+      "startSeconds": 1401.84,
+      "text": "distribution or also showing a range I"
+    },
+    {
+      "startSeconds": 1403.76,
+      "text": "should say. So we can say x is equal to"
+    },
+    {
+      "startSeconds": 1407.12,
+      "text": "the tip and y is equal"
+    },
+    {
+      "startSeconds": 1410.799,
+      "text": "to the day. And then basically we can"
+    },
+    {
+      "startSeconds": 1413.919,
+      "text": "see on Thursday that is the range of"
+    },
+    {
+      "startSeconds": 1417.039,
+      "text": "tips. On Friday that's the range of"
+    },
+    {
+      "startSeconds": 1419.36,
+      "text": "tips. And yeah that that's basically how"
+    },
+    {
+      "startSeconds": 1421.28,
+      "text": "you can do that. You can also of course"
+    },
+    {
+      "startSeconds": 1423.2,
+      "text": "again add colors based on the different"
+    },
+    {
+      "startSeconds": 1425.36,
+      "text": "features and see how they overlap, see"
+    },
+    {
+      "startSeconds": 1427.919,
+      "text": "how they uh change or how they differ."
+    },
+    {
+      "startSeconds": 1430.24,
+      "text": "If I may for a second, I would like to"
+    },
+    {
+      "startSeconds": 1431.84,
+      "text": "plug myself in as the sponsor of my own"
+    },
+    {
+      "startSeconds": 1434.159,
+      "text": "video. If you go to my website,"
+    },
+    {
+      "startSeconds": 1435.76,
+      "text": "neural9.com, you will find a tab"
+    },
+    {
+      "startSeconds": 1437.919,
+      "text": "services and a tab tutoring. Here you"
+    },
+    {
+      "startSeconds": 1440.4,
+      "text": "can hire me for all sorts of stuff like"
+    },
+    {
+      "startSeconds": 1442.24,
+      "text": "data science, machine learning, web"
+    },
+    {
+      "startSeconds": 1443.76,
+      "text": "development, if you need help with"
+    },
+    {
+      "startSeconds": 1445.2,
+      "text": "something in a project. Here you can"
+    },
+    {
+      "startSeconds": 1447.039,
+      "text": "book me for one-on-one tutoring if you"
+    },
+    {
+      "startSeconds": 1448.88,
+      "text": "want me to teach you personally"
+    },
+    {
+      "startSeconds": 1450.48,
+      "text": "something that you don't understand, if"
+    },
+    {
+      "startSeconds": 1452,
+      "text": "you like my teaching style. On both"
+    },
+    {
+      "startSeconds": 1453.76,
+      "text": "pages at the bottom, you can contact me"
+    },
+    {
+      "startSeconds": 1455.52,
+      "text": "via mail and also via LinkedIn. Just"
+    },
+    {
+      "startSeconds": 1458.48,
+      "text": "wanted to let you know about this. Now"
+    },
+    {
+      "startSeconds": 1460.08,
+      "text": "we move on to something more exotic"
+    },
+    {
+      "startSeconds": 1461.76,
+      "text": "which is a joint plot. So we can say"
+    },
+    {
+      "startSeconds": 1463.84,
+      "text": "snss.jint"
+    },
+    {
+      "startSeconds": 1465.679,
+      "text": "plot and what this is going to do is"
+    },
+    {
+      "startSeconds": 1467.84,
+      "text": "we're going to provide the tips data set"
+    },
+    {
+      "startSeconds": 1469.52,
+      "text": "again. Uh let's say x is tip and y is"
+    },
+    {
+      "startSeconds": 1473.2,
+      "text": "total bill."
+    },
+    {
+      "startSeconds": 1475.2,
+      "text": "Then we can see first of all we get a"
+    },
+    {
+      "startSeconds": 1476.96,
+      "text": "scatter plot like in the beginning but"
+    },
+    {
+      "startSeconds": 1479.039,
+      "text": "now we also get a histogram for the"
+    },
+    {
+      "startSeconds": 1481.12,
+      "text": "respective feature here. And this is"
+    },
+    {
+      "startSeconds": 1483.36,
+      "text": "also aligned with the point. So we can"
+    },
+    {
+      "startSeconds": 1484.96,
+      "text": "see the tip or actually I think maybe we"
+    },
+    {
+      "startSeconds": 1486.72,
+      "text": "should do it the other way around"
+    },
+    {
+      "startSeconds": 1487.679,
+      "text": "because that's how we had it in the"
+    },
+    {
+      "startSeconds": 1489.12,
+      "text": "beginning. Total bill and then y is"
+    },
+    {
+      "startSeconds": 1492.08,
+      "text": "equal to tip. We can see that here the"
+    },
+    {
+      "startSeconds": 1495.36,
+      "text": "total bill is spread like this and we"
+    },
+    {
+      "startSeconds": 1497.919,
+      "text": "have a lot of points here which is also"
+    },
+    {
+      "startSeconds": 1499.679,
+      "text": "represented in the histogram. Same thing"
+    },
+    {
+      "startSeconds": 1501.679,
+      "text": "here for the tip. We have a lot of tips"
+    },
+    {
+      "startSeconds": 1503.679,
+      "text": "down here. So here we get the highest"
+    },
+    {
+      "startSeconds": 1505.679,
+      "text": "activation in the histogram. That is"
+    },
+    {
+      "startSeconds": 1508,
+      "text": "quite useful for data exploration. Now"
+    },
+    {
+      "startSeconds": 1510.799,
+      "text": "even more exotic than that is the pair"
+    },
+    {
+      "startSeconds": 1512.88,
+      "text": "plot. So I can just say SNS pair plot"
+    },
+    {
+      "startSeconds": 1516.24,
+      "text": "and provide the entire data set tips"
+    },
+    {
+      "startSeconds": 1518.88,
+      "text": "data. And this is now going to plot all"
+    },
+    {
+      "startSeconds": 1520.96,
+      "text": "the numerical feature against one"
+    },
+    {
+      "startSeconds": 1522.96,
+      "text": "another. If they're not pre-processed,"
+    },
+    {
+      "startSeconds": 1524.799,
+      "text": "they're not going to be used. So if"
+    },
+    {
+      "startSeconds": 1526.08,
+      "text": "you're not using um if you don't somehow"
+    },
+    {
+      "startSeconds": 1529.12,
+      "text": "encode day as 1 2 3 4 or if you don't"
+    },
+    {
+      "startSeconds": 1532.72,
+      "text": "encode smoker as 0 and one, it's not"
+    },
+    {
+      "startSeconds": 1535.2,
+      "text": "going to be used. But we can see that"
+    },
+    {
+      "startSeconds": 1538.32,
+      "text": "size, tip, and total bill are used"
+    },
+    {
+      "startSeconds": 1540,
+      "text": "because they're numbers and they're"
+    },
+    {
+      "startSeconds": 1541.279,
+      "text": "plotted against one another. If it's the"
+    },
+    {
+      "startSeconds": 1543.44,
+      "text": "feature plotted against itself, we see"
+    },
+    {
+      "startSeconds": 1545.12,
+      "text": "the histogram. Otherwise, we see a"
+    },
+    {
+      "startSeconds": 1547.12,
+      "text": "scatter plot. But one of my favorite use"
+    },
+    {
+      "startSeconds": 1549.039,
+      "text": "cases when it comes to Seabor is the"
+    },
+    {
+      "startSeconds": 1551.2,
+      "text": "heat map. The heat map can be used for a"
+    },
+    {
+      "startSeconds": 1553.52,
+      "text": "number of different things. And one of"
+    },
+    {
+      "startSeconds": 1555.12,
+      "text": "the favorite use cases for me is"
+    },
+    {
+      "startSeconds": 1556.799,
+      "text": "plotting correlations. So when I do data"
+    },
+    {
+      "startSeconds": 1559.12,
+      "text": "exploration, often times I want to know"
+    },
+    {
+      "startSeconds": 1560.96,
+      "text": "how uh certain features correlate,"
+    },
+    {
+      "startSeconds": 1563.12,
+      "text": "especially if I plan to do machine"
+    },
+    {
+      "startSeconds": 1564.48,
+      "text": "learning on them. And for this I'm going"
+    },
+    {
+      "startSeconds": 1566.72,
+      "text": "to use a different data set now to show"
+    },
+    {
+      "startSeconds": 1568.159,
+      "text": "you how I usually do that. I'm going to"
+    },
+    {
+      "startSeconds": 1569.84,
+      "text": "use the Titanic data set. Titanic is"
+    },
+    {
+      "startSeconds": 1572.88,
+      "text": "equal to SNS load data set Titanic"
+    },
+    {
+      "startSeconds": 1577.52,
+      "text": "and in order to calculate the"
+    },
+    {
+      "startSeconds": 1579.84,
+      "text": "correlation between the features they"
+    },
+    {
+      "startSeconds": 1581.84,
+      "text": "need to be numeric like for the pair"
+    },
+    {
+      "startSeconds": 1583.679,
+      "text": "pair plot they need to be numeric but"
+    },
+    {
+      "startSeconds": 1585.52,
+      "text": "it's not possible to do the correlation"
+    },
+    {
+      "startSeconds": 1587.36,
+      "text": "between age and embarked for example if"
+    },
+    {
+      "startSeconds": 1590,
+      "text": "you don't encode embarked or class or um"
+    },
+    {
+      "startSeconds": 1593.84,
+      "text": "adult male and whatever you want to use"
+    },
+    {
+      "startSeconds": 1595.679,
+      "text": "here so I'm going to pre-process some of"
+    },
+    {
+      "startSeconds": 1597.6,
+      "text": "the features here this is now not seabor"
+    },
+    {
+      "startSeconds": 1599.44,
+      "text": "this is more like pandas pre-processing"
+    },
+    {
+      "startSeconds": 1601.279,
+      "text": "but it's going to be necessary to"
+    },
+    {
+      "startSeconds": 1602.96,
+      "text": "calculate the correlation which is what"
+    },
+    {
+      "startSeconds": 1604.64,
+      "text": "we're going to visualize with a heat"
+    },
+    {
+      "startSeconds": 1606,
+      "text": "map. Now, since this is not a central"
+    },
+    {
+      "startSeconds": 1607.6,
+      "text": "part of the tutorial, I'm going to copy"
+    },
+    {
+      "startSeconds": 1609.52,
+      "text": "paste this to not waste too much time"
+    },
+    {
+      "startSeconds": 1611.039,
+      "text": "here. I'm basically encoding the binary"
+    },
+    {
+      "startSeconds": 1612.96,
+      "text": "features. So, we have sex is either male"
+    },
+    {
+      "startSeconds": 1614.88,
+      "text": "or female, so one or zero. A life is"
+    },
+    {
+      "startSeconds": 1617.36,
+      "text": "either yes or no, so it's going to be"
+    },
+    {
+      "startSeconds": 1618.96,
+      "text": "one or zero. And alone is going to be"
+    },
+    {
+      "startSeconds": 1621.36,
+      "text": "either true or false. So, we're mapping"
+    },
+    {
+      "startSeconds": 1623.36,
+      "text": "a boolean to the integer world. And then"
+    },
+    {
+      "startSeconds": 1625.52,
+      "text": "we do two more things. We encode the"
+    },
+    {
+      "startSeconds": 1628,
+      "text": "class from first, second, third by using"
+    },
+    {
+      "startSeconds": 1630.88,
+      "text": "the categorical DT type from pandas."
+    },
+    {
+      "startSeconds": 1633.2,
+      "text": "We're encoding this to be 1 2 3"
+    },
+    {
+      "startSeconds": 1635.36,
+      "text": "essentially or 012 actually. And then"
+    },
+    {
+      "startSeconds": 1637.919,
+      "text": "we're dropping all the other features by"
+    },
+    {
+      "startSeconds": 1640,
+      "text": "doing that. And of course, I need to"
+    },
+    {
+      "startSeconds": 1641.679,
+      "text": "call this Titanic data. By doing that"
+    },
+    {
+      "startSeconds": 1644.88,
+      "text": "and also by importing pandas PD,"
+    },
+    {
+      "startSeconds": 1649.12,
+      "text": "we get a Titanic data frame that"
+    },
+    {
+      "startSeconds": 1652.32,
+      "text": "contains only numbers. And what we can"
+    },
+    {
+      "startSeconds": 1655.36,
+      "text": "do now is we can calculate the"
+    },
+    {
+      "startSeconds": 1657.279,
+      "text": "correlation. So for this we're just"
+    },
+    {
+      "startSeconds": 1658.88,
+      "text": "going to say Titanic data.core."
+    },
+    {
+      "startSeconds": 1662.559,
+      "text": "So dotcorrelation. And now we can see"
+    },
+    {
+      "startSeconds": 1664.88,
+      "text": "how the features correlate with one"
+    },
+    {
+      "startSeconds": 1666.799,
+      "text": "another. We have one always on the"
+    },
+    {
+      "startSeconds": 1668.64,
+      "text": "diagonal because the feature is exactly"
+    },
+    {
+      "startSeconds": 1670.32,
+      "text": "the feature itself when it's compared to"
+    },
+    {
+      "startSeconds": 1672.48,
+      "text": "itself. But other than that we get"
+    },
+    {
+      "startSeconds": 1674.24,
+      "text": "values between negative 1 and one. Uh I"
+    },
+    {
+      "startSeconds": 1676.799,
+      "text": "think you know how correlation works."
+    },
+    {
+      "startSeconds": 1678.24,
+      "text": "But it's not clear to me. I don't see"
+    },
+    {
+      "startSeconds": 1679.76,
+      "text": "immediately here um very strong"
+    },
+    {
+      "startSeconds": 1682.159,
+      "text": "correlations with my eyes unless I"
+    },
+    {
+      "startSeconds": 1684.24,
+      "text": "really look for them. I can see maybe"
+    },
+    {
+      "startSeconds": 1685.919,
+      "text": "that this is quite high negative or"
+    },
+    {
+      "startSeconds": 1688.159,
+      "text": "strong negative correlation but it's"
+    },
+    {
+      "startSeconds": 1690.48,
+      "text": "difficult to spot the correlation. So"
+    },
+    {
+      "startSeconds": 1692.159,
+      "text": "what I like to do is I like to use the"
+    },
+    {
+      "startSeconds": 1694.159,
+      "text": "heat map from Seabor which is SNS heat"
+    },
+    {
+      "startSeconds": 1698,
+      "text": "mapap and then I just pass Titanic"
+    },
+    {
+      "startSeconds": 1701.12,
+      "text": "data.correlation for example. And by the"
+    },
+    {
+      "startSeconds": 1703.279,
+      "text": "way this can be used for any uh table"
+    },
+    {
+      "startSeconds": 1705.84,
+      "text": "data that you have. It doesn't have to"
+    },
+    {
+      "startSeconds": 1707.279,
+      "text": "be a correlation table, but I can do it"
+    },
+    {
+      "startSeconds": 1710.08,
+      "text": "like this and it immediately gives me a"
+    },
+    {
+      "startSeconds": 1712.64,
+      "text": "heat map. Now with this heat map, I have"
+    },
+    {
+      "startSeconds": 1714.96,
+      "text": "the colors and I can read the colors and"
+    },
+    {
+      "startSeconds": 1716.799,
+      "text": "easily spot certain values, but I don't"
+    },
+    {
+      "startSeconds": 1719.039,
+      "text": "know the actual values. So what I can"
+    },
+    {
+      "startSeconds": 1721.12,
+      "text": "also do here is I can provide annotation"
+    },
+    {
+      "startSeconds": 1724,
+      "text": "is equal to true. So not is equal to"
+    },
+    {
+      "startSeconds": 1726.72,
+      "text": "true. That is now going to also give me"
+    },
+    {
+      "startSeconds": 1729.52,
+      "text": "the numbers. And since this is not"
+    },
+    {
+      "startSeconds": 1731.84,
+      "text": "easily readable, we can also now include"
+    },
+    {
+      "startSeconds": 1734.32,
+      "text": "math lip here. I can say import mattplot"
+    },
+    {
+      "startSeconds": 1737.279,
+      "text": "lip.pipplot"
+    },
+    {
+      "startSeconds": 1738.88,
+      "text": "piplot as plt and I can say plt figure"
+    },
+    {
+      "startSeconds": 1744.159,
+      "text": "figure size is equal to 128 for example"
+    },
+    {
+      "startSeconds": 1747.76,
+      "text": "just to make it a little bit larger and"
+    },
+    {
+      "startSeconds": 1749.6,
+      "text": "now I have this proper heat map now"
+    },
+    {
+      "startSeconds": 1752.399,
+      "text": "maybe it's confusing to you because you"
+    },
+    {
+      "startSeconds": 1754.24,
+      "text": "don't like the colors it's not clear to"
+    },
+    {
+      "startSeconds": 1755.919,
+      "text": "you what is high what is low and you"
+    },
+    {
+      "startSeconds": 1758,
+      "text": "always have to look at this legend it's"
+    },
+    {
+      "startSeconds": 1759.84,
+      "text": "more intuitive maybe to use a different"
+    },
+    {
+      "startSeconds": 1761.44,
+      "text": "color map for example we can say cap is"
+    },
+    {
+      "startSeconds": 1764.399,
+      "text": "equal to and this is something that you"
+    },
+    {
+      "startSeconds": 1766.48,
+      "text": "can also find in the documentation"
+    },
+    {
+      "startSeconds": 1768.64,
+      "text": "You can just say cool warm. That would"
+    },
+    {
+      "startSeconds": 1771.12,
+      "text": "be from red, very strong positive"
+    },
+    {
+      "startSeconds": 1773.52,
+      "text": "correlation to blue, very strong"
+    },
+    {
+      "startSeconds": 1775.679,
+      "text": "negative correlation. And in the middle"
+    },
+    {
+      "startSeconds": 1777.6,
+      "text": "you have like gray which is kind of"
+    },
+    {
+      "startSeconds": 1779.039,
+      "text": "neutral. So if something is very blue, I"
+    },
+    {
+      "startSeconds": 1781.12,
+      "text": "can see okay there's a lot of negative"
+    },
+    {
+      "startSeconds": 1782.72,
+      "text": "correlation. If something is very red I"
+    },
+    {
+      "startSeconds": 1785.039,
+      "text": "can see a very positive correlation. And"
+    },
+    {
+      "startSeconds": 1787.52,
+      "text": "by the way by doing this I can see that"
+    },
+    {
+      "startSeconds": 1789.44,
+      "text": "I made a mistake in the pre-processing"
+    },
+    {
+      "startSeconds": 1791.279,
+      "text": "because alive and a loan have a"
+    },
+    {
+      "startSeconds": 1792.64,
+      "text": "correlation of one. This is not"
+    },
+    {
+      "startSeconds": 1793.84,
+      "text": "possible. they would be the same feature"
+    },
+    {
+      "startSeconds": 1795.679,
+      "text": "and they are because I didn't um"
+    },
+    {
+      "startSeconds": 1797.84,
+      "text": "correctly change the code. So let's do"
+    },
+    {
+      "startSeconds": 1799.76,
+      "text": "all of this again alone"
+    },
+    {
+      "startSeconds": 1802.88,
+      "text": "and now I should get a different"
+    },
+    {
+      "startSeconds": 1804.24,
+      "text": "correlation there. There you go. Now"
+    },
+    {
+      "startSeconds": 1806.32,
+      "text": "there's also another plot type which I"
+    },
+    {
+      "startSeconds": 1808.08,
+      "text": "think is quite exotic called a cluster"
+    },
+    {
+      "startSeconds": 1810,
+      "text": "map. And for this I want to use a"
+    },
+    {
+      "startSeconds": 1811.52,
+      "text": "different data set the iris data set."
+    },
+    {
+      "startSeconds": 1813.919,
+      "text": "Probably you know it if you have done"
+    },
+    {
+      "startSeconds": 1815.12,
+      "text": "machine learning before. Basically just"
+    },
+    {
+      "startSeconds": 1817.039,
+      "text": "a data set with flowers. They have"
+    },
+    {
+      "startSeconds": 1818.72,
+      "text": "different species and different lengths"
+    },
+    {
+      "startSeconds": 1820.559,
+      "text": "and widths of certain features. uh sele"
+    },
+    {
+      "startSeconds": 1823.44,
+      "text": "length, pto length, pedal length, I'm"
+    },
+    {
+      "startSeconds": 1825.36,
+      "text": "not sure how it's pronounced. Uh but"
+    },
+    {
+      "startSeconds": 1827.279,
+      "text": "basically we can say sns load data set"
+    },
+    {
+      "startSeconds": 1830.159,
+      "text": "iris"
+    },
+    {
+      "startSeconds": 1831.919,
+      "text": "and then we can do a cluster map of the"
+    },
+    {
+      "startSeconds": 1834.799,
+      "text": "iris data set. So let's take a look at"
+    },
+    {
+      "startSeconds": 1836.88,
+      "text": "the iris data set. We have these four"
+    },
+    {
+      "startSeconds": 1838.32,
+      "text": "features, different lengths and widths"
+    },
+    {
+      "startSeconds": 1840.24,
+      "text": "and then we have the species. What kind"
+    },
+    {
+      "startSeconds": 1841.919,
+      "text": "of species is this? And what I can do"
+    },
+    {
+      "startSeconds": 1844.559,
+      "text": "now is I can say SNS cluster map. But of"
+    },
+    {
+      "startSeconds": 1847.2,
+      "text": "course since I'm clustering I'm not"
+    },
+    {
+      "startSeconds": 1849.039,
+      "text": "interested in the species because these"
+    },
+    {
+      "startSeconds": 1851.039,
+      "text": "would already be classes. And clustering"
+    },
+    {
+      "startSeconds": 1852.799,
+      "text": "is always like unsupervised. Uh so what"
+    },
+    {
+      "startSeconds": 1855.52,
+      "text": "we're going to do is we're going to"
+    },
+    {
+      "startSeconds": 1856.64,
+      "text": "actually take Iris and we're going to"
+    },
+    {
+      "startSeconds": 1858.399,
+      "text": "drop the species. So I'm going to say"
+    },
+    {
+      "startSeconds": 1861.679,
+      "text": "species"
+    },
+    {
+      "startSeconds": 1864.24,
+      "text": "drop an axis equals 1. Now this requires"
+    },
+    {
+      "startSeconds": 1868.48,
+      "text": "scypi to be available. So I think for"
+    },
+    {
+      "startSeconds": 1870.88,
+      "text": "this one we need to actually install sub"
+    },
+    {
+      "startSeconds": 1873.12,
+      "text": "scypi. So let's go to the tutorial"
+    },
+    {
+      "startSeconds": 1875.36,
+      "text": "directory uv scypi like this and then"
+    },
+    {
+      "startSeconds": 1880.159,
+      "text": "run this again. probably we need to"
+    },
+    {
+      "startSeconds": 1882,
+      "text": "restart the kernel for this. So let's go"
+    },
+    {
+      "startSeconds": 1884,
+      "text": "to the very bottom. Let's import again."
+    },
+    {
+      "startSeconds": 1886.48,
+      "text": "Let's go down again and let's run this."
+    },
+    {
+      "startSeconds": 1888.48,
+      "text": "And for this of course I need to load"
+    },
+    {
+      "startSeconds": 1890.32,
+      "text": "Iris again. But there you go. Now we"
+    },
+    {
+      "startSeconds": 1892.88,
+      "text": "have this fancy cluster map. And in the"
+    },
+    {
+      "startSeconds": 1897.039,
+      "text": "beginning it might be a little bit"
+    },
+    {
+      "startSeconds": 1898.24,
+      "text": "difficult to understand what is"
+    },
+    {
+      "startSeconds": 1899.6,
+      "text": "happening here. So I'm going to try to"
+    },
+    {
+      "startSeconds": 1900.88,
+      "text": "explain it. On the right you just see"
+    },
+    {
+      "startSeconds": 1902.799,
+      "text": "ID. So you can for the most part ignore"
+    },
+    {
+      "startSeconds": 1904.64,
+      "text": "these. These are not very important."
+    },
+    {
+      "startSeconds": 1906.72,
+      "text": "What you have here on the x-axis is the"
+    },
+    {
+      "startSeconds": 1909.519,
+      "text": "four different features and what you"
+    },
+    {
+      "startSeconds": 1911.039,
+      "text": "have on the y ais is all the different"
+    },
+    {
+      "startSeconds": 1914,
+      "text": "individual rows of that data frame. So"
+    },
+    {
+      "startSeconds": 1916.08,
+      "text": "everything you see here every line no"
+    },
+    {
+      "startSeconds": 1918,
+      "text": "matter how thin it is is a row which is"
+    },
+    {
+      "startSeconds": 1921.039,
+      "text": "one specific uh flower or one specific"
+    },
+    {
+      "startSeconds": 1924.159,
+      "text": "measurement and every column is the"
+    },
+    {
+      "startSeconds": 1927.76,
+      "text": "feature. So basically in one row you"
+    },
+    {
+      "startSeconds": 1929.84,
+      "text": "have the four different features and one"
+    },
+    {
+      "startSeconds": 1932.399,
+      "text": "cell is an activation for that specific"
+    },
+    {
+      "startSeconds": 1935.12,
+      "text": "feature of that specific row. And here"
+    },
+    {
+      "startSeconds": 1937.679,
+      "text": "you can see what the activation actually"
+    },
+    {
+      "startSeconds": 1939.44,
+      "text": "means. But I think this is actually"
+    },
+    {
+      "startSeconds": 1940.72,
+      "text": "scaled so that the features do not"
+    },
+    {
+      "startSeconds": 1942.96,
+      "text": "differ too much from one another if I'm"
+    },
+    {
+      "startSeconds": 1944.64,
+      "text": "not mistaken. But the basic idea is that"
+    },
+    {
+      "startSeconds": 1947.679,
+      "text": "you have clustering which basically"
+    },
+    {
+      "startSeconds": 1949.44,
+      "text": "means the things that are closer"
+    },
+    {
+      "startSeconds": 1952.159,
+      "text": "together are more similar. So in the"
+    },
+    {
+      "startSeconds": 1954.399,
+      "text": "beginning you have this split here. You"
+    },
+    {
+      "startSeconds": 1956.64,
+      "text": "have all the data from here to here."
+    },
+    {
+      "startSeconds": 1960.24,
+      "text": "That is one group. So from here to here"
+    },
+    {
+      "startSeconds": 1962.159,
+      "text": "is one group and the other group is from"
+    },
+    {
+      "startSeconds": 1964.24,
+      "text": "here to here. Then you have a second"
+    },
+    {
+      "startSeconds": 1966.399,
+      "text": "split here which is into this and into"
+    },
+    {
+      "startSeconds": 1969.039,
+      "text": "this. And you can go to lowest level to"
+    },
+    {
+      "startSeconds": 1970.799,
+      "text": "see that this is basically from here to"
+    },
+    {
+      "startSeconds": 1973.039,
+      "text": "here and then also from here to the very"
+    },
+    {
+      "startSeconds": 1975.6,
+      "text": "bottom. So the first cluster is actually"
+    },
+    {
+      "startSeconds": 1978.48,
+      "text": "this one here which is orange, black, uh"
+    },
+    {
+      "startSeconds": 1981.279,
+      "text": "pink and dark purple I would say. And"
+    },
+    {
+      "startSeconds": 1984.799,
+      "text": "then the second cluster is like"
+    },
+    {
+      "startSeconds": 1986.72,
+      "text": "orangeish,"
+    },
+    {
+      "startSeconds": 1988.32,
+      "text": "dark purple, pink again, and like orange"
+    },
+    {
+      "startSeconds": 1991.2,
+      "text": "purple mixed. And then within these"
+    },
+    {
+      "startSeconds": 1993.279,
+      "text": "clusters, you have other separations."
+    },
+    {
+      "startSeconds": 1995.6,
+      "text": "And this basically just means that"
+    },
+    {
+      "startSeconds": 1998.559,
+      "text": "this is what the data looks like if you"
+    },
+    {
+      "startSeconds": 2000.32,
+      "text": "split it into similar groups. Now, how"
+    },
+    {
+      "startSeconds": 2002.159,
+      "text": "deep you want to go with the split is up"
+    },
+    {
+      "startSeconds": 2003.6,
+      "text": "to you, but you can see what the data"
+    },
+    {
+      "startSeconds": 2005.279,
+      "text": "looks like if you cluster it into"
+    },
+    {
+      "startSeconds": 2006.88,
+      "text": "similar instances. And for the features,"
+    },
+    {
+      "startSeconds": 2009.279,
+      "text": "you can also see that basically these"
+    },
+    {
+      "startSeconds": 2010.96,
+      "text": "two features here are the closest to one"
+    },
+    {
+      "startSeconds": 2013.36,
+      "text": "another, the most similar in terms of"
+    },
+    {
+      "startSeconds": 2015.519,
+      "text": "the patterns that appear in the"
+    },
+    {
+      "startSeconds": 2016.88,
+      "text": "different instances. And um these two"
+    },
+    {
+      "startSeconds": 2020.559,
+      "text": "like this length and this length are"
+    },
+    {
+      "startSeconds": 2022.399,
+      "text": "basically the most dissimilar. And now"
+    },
+    {
+      "startSeconds": 2024.24,
+      "text": "finally the last thing I want to show"
+    },
+    {
+      "startSeconds": 2025.519,
+      "text": "you about seabor is the two functions"
+    },
+    {
+      "startSeconds": 2027.679,
+      "text": "lmplot and recck plot. Basically the"
+    },
+    {
+      "startSeconds": 2030.08,
+      "text": "same functions again one is figure"
+    },
+    {
+      "startSeconds": 2032,
+      "text": "level, one is axis level. But if we do"
+    },
+    {
+      "startSeconds": 2034.72,
+      "text": "sns.lmmp lm plot and then we provide"
+    },
+    {
+      "startSeconds": 2038.399,
+      "text": "let's say tips data and I think I need"
+    },
+    {
+      "startSeconds": 2040.159,
+      "text": "to uh load this again since I restarted"
+    },
+    {
+      "startSeconds": 2043.2,
+      "text": "the kernel. So let's go and do that."
+    },
+    {
+      "startSeconds": 2046.799,
+      "text": "But basically this lm plot uh performs a"
+    },
+    {
+      "startSeconds": 2050,
+      "text": "linear regression. So I can say that I"
+    },
+    {
+      "startSeconds": 2052.8,
+      "text": "want to look at total bill again and the"
+    },
+    {
+      "startSeconds": 2056.24,
+      "text": "tip and that is going to now fit"
+    },
+    {
+      "startSeconds": 2059.28,
+      "text": "automatically a regression line. I can"
+    },
+    {
+      "startSeconds": 2061.52,
+      "text": "still go and separate the color by"
+    },
+    {
+      "startSeconds": 2064.159,
+      "text": "gender for example that is possible."
+    },
+    {
+      "startSeconds": 2066.72,
+      "text": "Then I get two lines and two two"
+    },
+    {
+      "startSeconds": 2068.639,
+      "text": "regression fits which we can see the"
+    },
+    {
+      "startSeconds": 2070.639,
+      "text": "trend is pretty much the same but that"
+    },
+    {
+      "startSeconds": 2073.599,
+      "text": "is also possible to do linear regression"
+    },
+    {
+      "startSeconds": 2075.919,
+      "text": "automatically with seabor and we can"
+    },
+    {
+      "startSeconds": 2078.24,
+      "text": "also do the same thing as I said with"
+    },
+    {
+      "startSeconds": 2080.159,
+      "text": "the recck plot function. The lm plot is"
+    },
+    {
+      "startSeconds": 2083.119,
+      "text": "the figure level function. So actually"
+    },
+    {
+      "startSeconds": 2086.48,
+      "text": "okay actually this is interesting. And I"
+    },
+    {
+      "startSeconds": 2087.919,
+      "text": "didn't know that the direct plot"
+    },
+    {
+      "startSeconds": 2089.359,
+      "text": "function doesn't offer the hue argument."
+    },
+    {
+      "startSeconds": 2091.52,
+      "text": "So that's also a limitation. But with"
+    },
+    {
+      "startSeconds": 2093.599,
+      "text": "the lm plot function, we can do hue and"
+    },
+    {
+      "startSeconds": 2096,
+      "text": "we can also do column day for example."
+    },
+    {
+      "startSeconds": 2099.04,
+      "text": "That is also possible. And then we have"
+    },
+    {
+      "startSeconds": 2100.88,
+      "text": "four different regression line uh or two"
+    },
+    {
+      "startSeconds": 2103.92,
+      "text": "times four different regression lines."
+    },
+    {
+      "startSeconds": 2105.839,
+      "text": "So that's it for this video today. I"
+    },
+    {
+      "startSeconds": 2107.44,
+      "text": "hope you enjoyed it and I hope you"
+    },
+    {
+      "startSeconds": 2108.64,
+      "text": "learned something. If so, let me know by"
+    },
+    {
+      "startSeconds": 2110.16,
+      "text": "hitting a like button and leaving a"
+    },
+    {
+      "startSeconds": 2111.44,
+      "text": "comment in the comment section down"
+    },
+    {
+      "startSeconds": 2112.64,
+      "text": "below. Also, in case you're interested"
+    },
+    {
+      "startSeconds": 2114.4,
+      "text": "in any freelancing services or tutoring"
+    },
+    {
+      "startSeconds": 2116.72,
+      "text": "on my website, you can find a tab for"
+    },
+    {
+      "startSeconds": 2118.56,
+      "text": "services and for tutoring then you can"
+    },
+    {
+      "startSeconds": 2120.8,
+      "text": "contact me for projects that you need"
+    },
+    {
+      "startSeconds": 2122.8,
+      "text": "help with for tutoring if you want to be"
+    },
+    {
+      "startSeconds": 2124.48,
+      "text": "taught one- on-one. And you can contact"
+    },
+    {
+      "startSeconds": 2127.2,
+      "text": "me via LinkedIn or email. At the bottom,"
+    },
+    {
+      "startSeconds": 2129.359,
+      "text": "you will find the two buttons. Besides"
+    },
+    {
+      "startSeconds": 2131.04,
+      "text": "that, don't forget to subscribe to this"
+    },
+    {
+      "startSeconds": 2132.4,
+      "text": "channel and hit the notification bell to"
+    },
+    {
+      "startSeconds": 2134,
+      "text": "not miss a single future video for free."
+    },
+    {
+      "startSeconds": 2136,
+      "text": "Other than that, thank you much for"
+    },
+    {
+      "startSeconds": 2137.2,
+      "text": "watching. See you in the next video and"
+    },
+    {
+      "startSeconds": 2138.88,
+      "text": "bye."
+    }
+  ]
+}
