@@ -7,6 +7,7 @@ import { Container } from "@/components/ui/Container";
 import { TopNav } from "@/components/ui/Navigation";
 import { Badge } from "@/components/ui/Badge";
 import { LessonVideo } from "@/components/lesson/LessonVideo";
+import { LessonVideoGate } from "@/components/lesson/LessonVideoGate";
 import { LessonTabs } from "@/components/lesson/LessonTabs";
 import { LessonNotesContent } from "@/components/lesson/LessonNotesContent";
 import {
@@ -300,19 +301,28 @@ export default async function LessonPage({
               )}
             </div>
 
-            {/* Video */}
-            <LessonVideo
-              videoUrl={lesson.videoUrl}
-              startSeconds={startSeconds}
-              title={lesson.title ?? "Lesson video"}
-              poster={poster}
-              monogram={monogram}
-              lessonSlug={slug}
-              courseSlug={course?.slug ?? null}
-              lessonId={lesson._id}
-              initialSecondsWatched={currentEntry?.secondsWatched ?? 0}
-              initialCompleted={currentEntry?.completed ?? false}
-            />
+            {/* Video — playback is gated (AGENTS.md §5); the rest of the page
+                stays public. */}
+            {userId ? (
+              <LessonVideo
+                videoUrl={lesson.videoUrl}
+                startSeconds={startSeconds}
+                title={lesson.title ?? "Lesson video"}
+                poster={poster}
+                monogram={monogram}
+                lessonSlug={slug}
+                courseSlug={course?.slug ?? null}
+                lessonId={lesson._id}
+                initialSecondsWatched={currentEntry?.secondsWatched ?? 0}
+                initialCompleted={currentEntry?.completed ?? false}
+              />
+            ) : (
+              <LessonVideoGate
+                poster={poster}
+                monogram={monogram}
+                title={lesson.title ?? "Lesson video"}
+              />
+            )}
 
             {/* Tabs */}
             <div className="mt-8">

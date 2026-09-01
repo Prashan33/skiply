@@ -227,7 +227,14 @@ export async function POST(request: Request) {
   }
 
   const { userId } = await auth();
-  const distinctId = userId ?? "anonymous";
+
+  // Search is gated (AGENTS.md §5). `/search` is protected in middleware; this
+  // check makes a direct API hit return a clean 401 instead of doing any work.
+  if (!userId) {
+    return Response.json({ error: "unauthorized" }, { status: 401 });
+  }
+
+  const distinctId = userId;
 
   // The search action executes here — capture it server-side, once per POST.
   const posthog = getPostHogClient();

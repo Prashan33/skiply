@@ -86,6 +86,9 @@ export function SearchResults({
   );
 
   const errored = Boolean(error);
+  // Middleware normally keeps signed-out users off /search; this only shows if
+  // the API is hit directly without a session.
+  const authErrored = errored && /401|unauthor/i.test(error?.message ?? "");
 
   function runSearch(raw: string) {
     const q = raw.trim().slice(0, 200);
@@ -146,7 +149,9 @@ export function SearchResults({
           )}
         </h1>
         <p className="mx-auto mt-3 max-w-xl text-body-lg text-neutral-500">
-          {errored
+          {authErrored
+            ? "Please sign in to search."
+            : errored
             ? "Search is unavailable right now."
             : !hasSubmitted
               ? "Find the exact lesson across every course."
@@ -202,13 +207,20 @@ export function SearchResults({
         {errored ? (
           <div className="rounded-[var(--radius-md)] border border-neutral-200 bg-white p-8 text-center shadow-[var(--shadow-sm)]">
             <p className="text-body font-medium text-neutral-900">
-              Search is unavailable right now.
+              {authErrored
+                ? "Please sign in to search."
+                : "Search is unavailable right now."}
             </p>
             <p className="mt-1 text-small text-neutral-500">
-              Please try again in a moment, or browse the full catalog.
+              {authErrored
+                ? "Searching your learning needs an account."
+                : "Please try again in a moment, or browse the full catalog."}
             </p>
-            <Link href="/courses" className={`${SECONDARY_LINK} mt-4`}>
-              Browse all courses
+            <Link
+              href={authErrored ? "/sign-in?redirect_url=/search" : "/courses"}
+              className={`${SECONDARY_LINK} mt-4`}
+            >
+              {authErrored ? "Sign in" : "Browse all courses"}
               <ArrowRight className="h-4 w-4" strokeWidth={2} />
             </Link>
           </div>
