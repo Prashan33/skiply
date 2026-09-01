@@ -1,0 +1,609 @@
+{
+  "id": "YLtlz88zrLg",
+  "url": "https://www.youtube.com/watch?v=YLtlz88zrLg",
+  "fetchedAt": "2026-09-01T15:57:45.748Z",
+  "captionKind": "manual",
+  "chapters": [],
+  "cues": [
+    {
+      "startSeconds": 0,
+      "text": "nine out of ten people hate this developer."
+    },
+    {
+      "startSeconds": 2.44,
+      "text": "The one that doesn't automate anything."
+    },
+    {
+      "startSeconds": 4,
+      "text": "And if you're watching this, the likelihood is that you're that developer."
+    },
+    {
+      "startSeconds": 7.24,
+      "text": "So how can you automate your deployments"
+    },
+    {
+      "startSeconds": 9.16,
+      "text": "so that you never have to deal with another deployment error ever again?"
+    },
+    {
+      "startSeconds": 12.6,
+      "text": "CI/CD, or continuous integration and continuous delivery is the practice"
+    },
+    {
+      "startSeconds": 16.4,
+      "text": "of automating the manual tasks that us mere mortals usually have to do"
+    },
+    {
+      "startSeconds": 20.08,
+      "text": "when we're deploying our code to production."
+    },
+    {
+      "startSeconds": 21.8,
+      "text": "Things like compiling our code, or running tests"
+    },
+    {
+      "startSeconds": 24.4,
+      "text": "or uploading our code to our cloud infrastructure."
+    },
+    {
+      "startSeconds": 26.8,
+      "text": "Automating things not only helps to save a lot of time,"
+    },
+    {
+      "startSeconds": 29.36,
+      "text": "it also removes the possibility of human error causing your entire system"
+    },
+    {
+      "startSeconds": 33.2,
+      "text": "to burn to the ground."
+    },
+    {
+      "startSeconds": 34.32,
+      "text": "There are a bunch of tools out there that can help you get started with CI/CD,"
+    },
+    {
+      "startSeconds": 37.68,
+      "text": "and I've used a few of them."
+    },
+    {
+      "startSeconds": 39.04,
+      "text": "All of them are great at what they do."
+    },
+    {
+      "startSeconds": 40.4,
+      "text": "However, in this video we're going to be focusing specifically on GitHub Actions."
+    },
+    {
+      "startSeconds": 44.36,
+      "text": "Let's get started."
+    },
+    {
+      "startSeconds": 45.6,
+      "text": "Ultimately, all you need to get started is a GitHub Repository."
+    },
+    {
+      "startSeconds": 48.68,
+      "text": "If you don't have one, I'm going"
+    },
+    {
+      "startSeconds": 49.8,
+      "text": "to leave a link in the description below to the one I'm using for this video."
+    },
+    {
+      "startSeconds": 53.2,
+      "text": "At the top of your repository page, you should see the “Actions” tab."
+    },
+    {
+      "startSeconds": 56.16,
+      "text": "Once you have some automations running on your repository,"
+    },
+    {
+      "startSeconds": 58.8,
+      "text": "this is where you can keep track of the logs for each workflow"
+    },
+    {
+      "startSeconds": 61.88,
+      "text": "every time they are run."
+    },
+    {
+      "startSeconds": 63.16,
+      "text": "When it's running,"
+    },
+    {
+      "startSeconds": 63.72,
+      "text": "we can see the progress of each step in the GitHub Actions workflow."
+    },
+    {
+      "startSeconds": 66.8,
+      "text": "So if the workflow fails during some tests we know that the code is broken"
+    },
+    {
+      "startSeconds": 70.28,
+      "text": "and therefore we don't want to deploy it to our server."
+    },
+    {
+      "startSeconds": 73.08,
+      "text": "If the workflow is successful, we're going to see a big green checkmark"
+    },
+    {
+      "startSeconds": 75.76,
+      "text": "telling us that everything is working within our code base."
+    },
+    {
+      "startSeconds": 78.24,
+      "text": "One of the great things that developers"
+    },
+    {
+      "startSeconds": 79.56,
+      "text": "really like about GitHub Actions is that it"
+    },
+    {
+      "startSeconds": 81.36,
+      "text": "comes with a bunch of different templates that you can use"
+    },
+    {
+      "startSeconds": 83.8,
+      "text": "to easily run specific actions."
+    },
+    {
+      "startSeconds": 85.76,
+      "text": "However, for this video, we're going to create our own from scratch."
+    },
+    {
+      "startSeconds": 88.48,
+      "text": "To do this, you can create a new Yaml file"
+    },
+    {
+      "startSeconds": 90.28,
+      "text": "inside of the GitHub workflows directory of your project."
+    },
+    {
+      "startSeconds": 93.44,
+      "text": "We're going to give our workflow a name and create our trigger,"
+    },
+    {
+      "startSeconds": 95.76,
+      "text": "which is going to tell GitHub Actions when we want to run our workflow."
+    },
+    {
+      "startSeconds": 99.12,
+      "text": "You can run workflows using a variety of triggers."
+    },
+    {
+      "startSeconds": 101.52,
+      "text": "For example, every time we push code to our main branch,"
+    },
+    {
+      "startSeconds": 104.08,
+      "text": "we might want to deploy it"
+    },
+    {
+      "startSeconds": 105.16,
+      "text": "to our production server automatically so that we don't have to do it ourselves."
+    },
+    {
+      "startSeconds": 108.48,
+      "text": "Or every time we create a new pull request,"
+    },
+    {
+      "startSeconds": 110.12,
+      "text": "we might want to test the code to make sure that everything is working"
+    },
+    {
+      "startSeconds": 113.04,
+      "text": "before we merge that code into our main branch."
+    },
+    {
+      "startSeconds": 115.6,
+      "text": "These are actually the two examples that we're going to build today."
+    },
+    {
+      "startSeconds": 118.08,
+      "text": "There's a huge list of different triggers that you can use within GitHub Actions."
+    },
+    {
+      "startSeconds": 121.16,
+      "text": "So if you want to find out more about them, I'd recommend"
+    },
+    {
+      "startSeconds": 123.64,
+      "text": "visiting this page on the GitHub documentation."
+    },
+    {
+      "startSeconds": 126.24,
+      "text": "Anyway, because this workflow is going to be used to test our code,"
+    },
+    {
+      "startSeconds": 128.72,
+      "text": "we're going to run it every time a pull request to the main branch is created."
+    },
+    {
+      "startSeconds": 132.52,
+      "text": "So let's say I've got this really cool feature"
+    },
+    {
+      "startSeconds": 134.12,
+      "text": "that I want to merge into my main branch."
+    },
+    {
+      "startSeconds": 135.92,
+      "text": "I'd create a pull request which would trigger this workflow."
+    },
+    {
+      "startSeconds": 138.44,
+      "text": "Next, we can create a list of jobs that we want to include in our workflow."
+    },
+    {
+      "startSeconds": 141.28,
+      "text": "We're going to call our job “test” and then we're going"
+    },
+    {
+      "startSeconds": 143.04,
+      "text": "to define the operating system that we want the job to run on."
+    },
+    {
+      "startSeconds": 145.76,
+      "text": "There are other options that you can use."
+    },
+    {
+      "startSeconds": 147.28,
+      "text": "But realistically, Ubuntu is the most common one"
+    },
+    {
+      "startSeconds": 149.36,
+      "text": "that people will use within GitHub Actions."
+    },
+    {
+      "startSeconds": 151.4,
+      "text": "And we're going to use a Node.js container"
+    },
+    {
+      "startSeconds": 153.2,
+      "text": "because in this example we're using Node.js for our project."
+    },
+    {
+      "startSeconds": 156.28,
+      "text": "That will automatically install Node.js for us"
+    },
+    {
+      "startSeconds": 158.48,
+      "text": "so that we don't have to do it manually through the command line using Ubuntu."
+    },
+    {
+      "startSeconds": 161.56,
+      "text": "It just saves a bit of time."
+    },
+    {
+      "startSeconds": 162.6,
+      "text": "The first step is going to be adding"
+    },
+    {
+      "startSeconds": 164,
+      "text": "our code to our virtual environments using the checkout action."
+    },
+    {
+      "startSeconds": 167.16,
+      "text": "Now I want you to have a think"
+    },
+    {
+      "startSeconds": 168.28,
+      "text": "about the steps that you would take if you were testing your code manually."
+    },
+    {
+      "startSeconds": 171.32,
+      "text": "Firstly, you’d want to make sure that all of your dependencies"
+    },
+    {
+      "startSeconds": 173.6,
+      "text": "have been installed for your project."
+    },
+    {
+      "startSeconds": 175.04,
+      "text": "We can do this by running “npm ci” which is going to run a clean install."
+    },
+    {
+      "startSeconds": 178.72,
+      "text": "Once your dependencies have been installed,"
+    },
+    {
+      "startSeconds": 180.12,
+      "text": "you can run your tests using whatever library you're using in your project."
+    },
+    {
+      "startSeconds": 183.52,
+      "text": "I tend to use Jest when I'm working with a JavaScript project."
+    },
+    {
+      "startSeconds": 186.28,
+      "text": "And then finally I'm going to run the build script,"
+    },
+    {
+      "startSeconds": 188.12,
+      "text": "which is going to compile our project."
+    },
+    {
+      "startSeconds": 189.72,
+      "text": "We can commit this code to our repository."
+    },
+    {
+      "startSeconds": 191.44,
+      "text": "And then I'm going to create an example pull request"
+    },
+    {
+      "startSeconds": 193.56,
+      "text": "for this really cool feature that I've just built."
+    },
+    {
+      "startSeconds": 195.48,
+      "text": "As you can see, the GitHub Actions"
+    },
+    {
+      "startSeconds": 196.76,
+      "text": "workflow is going to spin up a virtual environment, run our tests"
+    },
+    {
+      "startSeconds": 199.8,
+      "text": "and then confirm that our code is working as expected."
+    },
+    {
+      "startSeconds": 202.32,
+      "text": "So automatically, I know the code is working without having to pull"
+    },
+    {
+      "startSeconds": 205.16,
+      "text": "the pull request onto my local machine and then running the test manually."
+    },
+    {
+      "startSeconds": 208.56,
+      "text": "Now that we know that our code is going to be working,"
+    },
+    {
+      "startSeconds": 210.4,
+      "text": "when we merge it into the main branch, we want to figure out how we can use"
+    },
+    {
+      "startSeconds": 213.32,
+      "text": "GitHub Actions to automatically deploy our code to our production infrastructure."
+    },
+    {
+      "startSeconds": 217.44,
+      "text": "This is the continuous delivery or CD part of the process."
+    },
+    {
+      "startSeconds": 220.8,
+      "text": "If we weren't automating anything,"
+    },
+    {
+      "startSeconds": 222.28,
+      "text": "your deployment process may look a little like this."
+    },
+    {
+      "startSeconds": 224.8,
+      "text": "First I'm going to run “git pull”"
+    },
+    {
+      "startSeconds": 226.08,
+      "text": "to get the latest version of my code from our repository."
+    },
+    {
+      "startSeconds": 228.6,
+      "text": "Then I'm going to run “git checkout” to make sure that I'm in my main branch."
+    },
+    {
+      "startSeconds": 231.56,
+      "text": "Run “npm install”, “npm run build”, and then deploy my code to the server"
+    },
+    {
+      "startSeconds": 236.2,
+      "text": "using this long command, which I might get wrong."
+    },
+    {
+      "startSeconds": 238.36,
+      "text": "Oh, and then ssh into the server to install the dependencies"
+    },
+    {
+      "startSeconds": 241.36,
+      "text": "and restart the Node.js process."
+    },
+    {
+      "startSeconds": 243.28,
+      "text": "Okay, as you can see, this took a long time"
+    },
+    {
+      "startSeconds": 245.2,
+      "text": "and it was pretty complicated for such a small project."
+    },
+    {
+      "startSeconds": 248.36,
+      "text": "So let's automate this."
+    },
+    {
+      "startSeconds": 249.6,
+      "text": "We're going to create another Yaml file inside of our GitHub workflows directory,"
+    },
+    {
+      "startSeconds": 252.84,
+      "text": "which is going to be triggered every time some code gets pushed to our main branch."
+    },
+    {
+      "startSeconds": 256.28,
+      "text": "Inside of this workflow, we're going to run a job"
+    },
+    {
+      "startSeconds": 258.24,
+      "text": "which is going to build our project and then deploy it to our server."
+    },
+    {
+      "startSeconds": 261.16,
+      "text": "Like we did with our testing workflow,"
+    },
+    {
+      "startSeconds": 262.72,
+      "text": "we're going to run our job on Ubuntu, checkout the code and install Node.js."
+    },
+    {
+      "startSeconds": 266.8,
+      "text": "We're going to run “npm ci” to do a clean install of the project's dependencies,"
+    },
+    {
+      "startSeconds": 270.4,
+      "text": "and then run the build script."
+    },
+    {
+      "startSeconds": 271.76,
+      "text": "Once the build is completed, we're going to deploy our code using SCP,"
+    },
+    {
+      "startSeconds": 275.2,
+      "text": "which is going to upload all of our files to the server."
+    },
+    {
+      "startSeconds": 278.08,
+      "text": "Because access to our server is protected using SSH keys,"
+    },
+    {
+      "startSeconds": 281.04,
+      "text": "we need to take an SSH key that has access to our server"
+    },
+    {
+      "startSeconds": 284.04,
+      "text": "and add the content of it to our GitHub Actions secrets."
+    },
+    {
+      "startSeconds": 286.64,
+      "text": "This is where you can store sensitive credentials"
+    },
+    {
+      "startSeconds": 288.4,
+      "text": "that need to be used within your GitHub Actions,"
+    },
+    {
+      "startSeconds": 290.56,
+      "text": "but can't be stored within your repository for security reasons."
+    },
+    {
+      "startSeconds": 293.84,
+      "text": "For example your Stripe or OpenAI keys."
+    },
+    {
+      "startSeconds": 296.36,
+      "text": "You wouldn't want to put them in your repository."
+    },
+    {
+      "startSeconds": 298.24,
+      "text": "I've also added the address of the server that we're going to be deploying our code"
+    },
+    {
+      "startSeconds": 300.88,
+      "text": "to, as well as the username that I have on the server."
+    },
+    {
+      "startSeconds": 303.6,
+      "text": "We can then access our secrets within our GitHub Actions"
+    },
+    {
+      "startSeconds": 305.88,
+      "text": "workflow and add our SSH key to our virtual environment."
+    },
+    {
+      "startSeconds": 308.96,
+      "text": "Now we can upload our files to our server using SCP in the exact"
+    },
+    {
+      "startSeconds": 312.24,
+      "text": "same way that we would have done it using the command line."
+    },
+    {
+      "startSeconds": 314.6,
+      "text": "The final step in our deployment process is to SSH enter the server,"
+    },
+    {
+      "startSeconds": 318.16,
+      "text": "install the dependencies, and then restart the Node.js process."
+    },
+    {
+      "startSeconds": 321.6,
+      "text": "In this case I'm using PM2 to manage the Node.js process."
+    },
+    {
+      "startSeconds": 324.76,
+      "text": "You can test your workflow using Act which allows you to run GitHub"
+    },
+    {
+      "startSeconds": 327.72,
+      "text": "Action scripts offline."
+    },
+    {
+      "startSeconds": 329.12,
+      "text": "To do this, you need to have Docker running on your local machine"
+    },
+    {
+      "startSeconds": 331.8,
+      "text": "as well as create a “.secrets” file within your project directory."
+    },
+    {
+      "startSeconds": 335.08,
+      "text": "That secrets file is"
+    },
+    {
+      "startSeconds": 335.88,
+      "text": "then going to be used to replace what would be GitHub Actions secrets."
+    },
+    {
+      "startSeconds": 339.48,
+      "text": "So make sure you don't actually put your deployment secrets in that file."
+    },
+    {
+      "startSeconds": 343.2,
+      "text": "You need to put some test ones in that you're"
+    },
+    {
+      "startSeconds": 344.64,
+      "text": "maybe deploying to different infrastructure."
+    },
+    {
+      "startSeconds": 346.44,
+      "text": "Because you wouldn't want to run a test on actual production infrastructure."
+    },
+    {
+      "startSeconds": 349.32,
+      "text": "You can then run the “act” command to test your workflow"
+    },
+    {
+      "startSeconds": 351.88,
+      "text": "and make sure that everything is working correctly."
+    },
+    {
+      "startSeconds": 353.92,
+      "text": "Once you're happy with your workflow,"
+    },
+    {
+      "startSeconds": 355.4,
+      "text": "you can publish it to your GitHub repository."
+    },
+    {
+      "startSeconds": 357.32,
+      "text": "Now, if we merge that super cool feature that we were testing earlier,"
+    },
+    {
+      "startSeconds": 360.12,
+      "text": "you can see that we've triggered this automated workflow"
+    },
+    {
+      "startSeconds": 362.4,
+      "text": "which is going to deploy our code to our production server."
+    },
+    {
+      "startSeconds": 365.24,
+      "text": "So now you can say that you understand CI/CD."
+    },
+    {
+      "startSeconds": 367.88,
+      "text": "If you learned something in today's video, please do leave a like down below"
+    },
+    {
+      "startSeconds": 370.6,
+      "text": "and subscribe for more coding videos."
+    }
+  ]
+}

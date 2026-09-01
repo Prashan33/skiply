@@ -1,8 +1,301 @@
 {
   "id": "2o5m1ovfl3c",
   "url": "https://www.youtube.com/watch?v=2o5m1ovfl3c",
-  "fetchedAt": "2026-08-31T05:14:51.320Z",
-  "captionKind": "empty",
+  "fetchedAt": "2026-09-01T15:57:27.985Z",
+  "captionKind": "manual",
   "chapters": [],
-  "cues": []
+  "cues": [
+    {
+      "startSeconds": 0,
+      "text": "Next.js 13 makes it super easy to show instant feedback"
+    },
+    {
+      "startSeconds": 3.4,
+      "text": "when navigating to server-rendered pages. Let me show you how"
+    },
+    {
+      "startSeconds": 6.6,
+      "text": "Here we're looking at a Next.js 12 app with two"
+    },
+    {
+      "startSeconds": 9.6,
+      "text": "routes – a home route and a post route – and this post,"
+    },
+    {
+      "startSeconds": 13,
+      "text": "uses getServerSideProps."
+    },
+    {
+      "startSeconds": 14.7,
+      "text": "So when we click the post link,"
+    },
+    {
+      "startSeconds": 17,
+      "text": "we're not going to see any feedback until getServerSideProps"
+    },
+    {
+      "startSeconds": 20.5,
+      "text": "runs and the new page renders and this"
+    },
+    {
+      "startSeconds": 23.6,
+      "text": "can be a little confusing to users who don't know whether the app"
+    },
+    {
+      "startSeconds": 26.4,
+      "text": "is responding or it's loading data and if we"
+    },
+    {
+      "startSeconds": 29.7,
+      "text": "copy this and paste,"
+    },
+    {
+      "startSeconds": 31.3,
+      "text": "this dynamic route into a new tab,"
+    },
+    {
+      "startSeconds": 33.4,
+      "text": "we do see the browser loading spinner, but that's only"
+    },
+    {
+      "startSeconds": 37,
+      "text": "if the initial render is from the server and there's not"
+    },
+    {
+      "startSeconds": 39.4,
+      "text": "much else we can do to improve this."
+    },
+    {
+      "startSeconds": 41.1,
+      "text": "So let's see how the Next.js 13 makes this a"
+    },
+    {
+      "startSeconds": 44.1,
+      "text": "lot better."
+    },
+    {
+      "startSeconds": 44.6,
+      "text": "I've got the same app here in Next.js 13, and"
+    },
+    {
+      "startSeconds": 49.1,
+      "text": "if we open up app/posts/page.tsx"
+    },
+    {
+      "startSeconds": 51.8,
+      "text": "will see the exact same page, except for loading"
+    },
+    {
+      "startSeconds": 55.2,
+      "text": "data directly inside of our server component."
+    },
+    {
+      "startSeconds": 58.8,
+      "text": "So if we come over to our app, we'll see"
+    },
+    {
+      "startSeconds": 61.2,
+      "text": "exactly the same behavior when we click on posts and"
+    },
+    {
+      "startSeconds": 64.8,
+      "text": "if we open the server rendered page in a new"
+    },
+    {
+      "startSeconds": 66.8,
+      "text": "tab,"
+    },
+    {
+      "startSeconds": 67.3,
+      "text": "we'll also see the browser loading spinner."
+    },
+    {
+      "startSeconds": 72.2,
+      "text": "But if we come back to our home page,"
+    },
+    {
+      "startSeconds": 74.1,
+      "text": "refresh and click again."
+    },
+    {
+      "startSeconds": 77.8,
+      "text": "We'll notice that on subsequent navigations rendering is actually"
+    },
+    {
+      "startSeconds": 82.9,
+      "text": "instant and that's also true when we use the back"
+    },
+    {
+      "startSeconds": 85.6,
+      "text": "and forward button of the browser."
+    },
+    {
+      "startSeconds": 87.8,
+      "text": "So this is already a huge improvement over Next.js 12..."
+    },
+    {
+      "startSeconds": 91,
+      "text": "Thanks the Next.js 13's router cache, but we can do"
+    },
+    {
+      "startSeconds": 94,
+      "text": "even better than this."
+    },
+    {
+      "startSeconds": 94.7,
+      "text": "If we come over to our app and add a"
+    },
+    {
+      "startSeconds": 98.3,
+      "text": "new file,"
+    },
+    {
+      "startSeconds": 98.8,
+      "text": "right under our post,"
+    },
+    {
+      "startSeconds": 100,
+      "text": "directory called loading.tsx"
+    },
+    {
+      "startSeconds": 102.84,
+      "text": "and we paste in a React component."
+    },
+    {
+      "startSeconds": 105.7,
+      "text": "Let's come back to our app."
+    },
+    {
+      "startSeconds": 107.2,
+      "text": "Go home and reload and check out the new behavior."
+    },
+    {
+      "startSeconds": 113.4,
+      "text": "So right,"
+    },
+    {
+      "startSeconds": 114.4,
+      "text": "when I click posts,"
+    },
+    {
+      "startSeconds": 115.7,
+      "text": "we actually see our loading template being rendered."
+    },
+    {
+      "startSeconds": 119.7,
+      "text": "Let's do that again."
+    },
+    {
+      "startSeconds": 120.4,
+      "text": "As soon as I press,"
+    },
+    {
+      "startSeconds": 122.4,
+      "text": "we get an instant loading state,"
+    },
+    {
+      "startSeconds": 124.6,
+      "text": "so our users know our app is responding."
+    },
+    {
+      "startSeconds": 127.1,
+      "text": "And of course,"
+    },
+    {
+      "startSeconds": 128.1,
+      "text": "we can come over here and get a little bit"
+    },
+    {
+      "startSeconds": 130,
+      "text": "Fancy with our loading state so that the whole experience"
+    },
+    {
+      "startSeconds": 133,
+      "text": "is even more seamless."
+    },
+    {
+      "startSeconds": 137.5,
+      "text": "And of course,"
+    },
+    {
+      "startSeconds": 138.2,
+      "text": "even with the loading templates our router cache is"
+    },
+    {
+      "startSeconds": 140.8,
+      "text": "still working for us."
+    },
+    {
+      "startSeconds": 141.8,
+      "text": "So subsequent navigations are instant."
+    },
+    {
+      "startSeconds": 144.6,
+      "text": "Now,"
+    },
+    {
+      "startSeconds": 145.5,
+      "text": "the cool thing about these loading templates is that they're"
+    },
+    {
+      "startSeconds": 147.7,
+      "text": "actually server components that are stringed up from our backend"
+    },
+    {
+      "startSeconds": 151.1,
+      "text": "via suspense and because suspense and streaming work on"
+    },
+    {
+      "startSeconds": 155.8,
+      "text": "the server-side now,"
+    },
+    {
+      "startSeconds": 157.61,
+      "text": "if we're to grab this URL and open a"
+    },
+    {
+      "startSeconds": 159.5,
+      "text": "new tab and paste it in,"
+    },
+    {
+      "startSeconds": 163.5,
+      "text": "We're actually going to see our new loading template stream"
+    },
+    {
+      "startSeconds": 166.9,
+      "text": "up instantly,"
+    },
+    {
+      "startSeconds": 167.7,
+      "text": "as soon as our page loads,"
+    },
+    {
+      "startSeconds": 169.8,
+      "text": "and then the data will be fetched on the"
+    },
+    {
+      "startSeconds": 171.9,
+      "text": "server."
+    },
+    {
+      "startSeconds": 172.3,
+      "text": "And then the app will re-render once that data is ready."
+    },
+    {
+      "startSeconds": 175.5,
+      "text": "And I think it's just so cool to see all"
+    },
+    {
+      "startSeconds": 177.8,
+      "text": "these layers come together to give our users instant"
+    },
+    {
+      "startSeconds": 180.2,
+      "text": "feedback,"
+    },
+    {
+      "startSeconds": 180.7,
+      "text": "whether they're navigating on the server or on the client."
+    }
+  ]
 }

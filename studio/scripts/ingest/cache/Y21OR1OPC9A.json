@@ -1,0 +1,1654 @@
+{
+  "id": "Y21OR1OPC9A",
+  "url": "https://www.youtube.com/watch?v=Y21OR1OPC9A",
+  "fetchedAt": "2026-09-01T04:39:07.867Z",
+  "captionKind": "manual",
+  "chapters": [
+    {
+      "startSeconds": 0,
+      "label": "What Are Virtual Environments?"
+    },
+    {
+      "startSeconds": 47,
+      "label": "Creating a Virtual Environment"
+    },
+    {
+      "startSeconds": 197,
+      "label": "Installing Packages"
+    },
+    {
+      "startSeconds": 269,
+      "label": "Saving Dependencies"
+    },
+    {
+      "startSeconds": 325,
+      "label": "Example Work Flow"
+    },
+    {
+      "startSeconds": 427,
+      "label": "Virtual Environment Tips"
+    }
+  ],
+  "cues": [
+    {
+      "startSeconds": 0,
+      "text": "What is a virtual environment?"
+    },
+    {
+      "startSeconds": 1.833,
+      "text": "Well this is simply"
+    },
+    {
+      "startSeconds": 2.966,
+      "text": "a self-contained location"
+    },
+    {
+      "startSeconds": 4.466,
+      "text": "that enables you"
+    },
+    {
+      "startSeconds": 5.066,
+      "text": "to maintain separate"
+    },
+    {
+      "startSeconds": 6.2,
+      "text": "and isolated environments"
+    },
+    {
+      "startSeconds": 7.633,
+      "text": "for your Python projects"
+    },
+    {
+      "startSeconds": 9.366,
+      "text": "This isolation"
+    },
+    {
+      "startSeconds": 10.233,
+      "text": "lets you manage dependencies"
+    },
+    {
+      "startSeconds": 11.8,
+      "text": "versions and packages"
+    },
+    {
+      "startSeconds": 13.233,
+      "text": "without conflicts"
+    },
+    {
+      "startSeconds": 14.2,
+      "text": "across different projects"
+    },
+    {
+      "startSeconds": 16.033,
+      "text": "When you work on"
+    },
+    {
+      "startSeconds": 16.7,
+      "text": "multiple Python projects"
+    },
+    {
+      "startSeconds": 18.1,
+      "text": "it's likely that some of them depend"
+    },
+    {
+      "startSeconds": 19.566,
+      "text": "on different versions"
+    },
+    {
+      "startSeconds": 20.533,
+      "text": "of external libraries"
+    },
+    {
+      "startSeconds": 21.9,
+      "text": "or even Python itself"
+    },
+    {
+      "startSeconds": 23.633,
+      "text": "Without virtual environments"
+    },
+    {
+      "startSeconds": 24.933,
+      "text": "if you were to install"
+    },
+    {
+      "startSeconds": 25.766,
+      "text": "every dependency globally"
+    },
+    {
+      "startSeconds": 27.366,
+      "text": "you might run into issues"
+    },
+    {
+      "startSeconds": 28.466,
+      "text": "where one project"
+    },
+    {
+      "startSeconds": 29.333,
+      "text": "needs a different version"
+    },
+    {
+      "startSeconds": 30.3,
+      "text": "of a library than another project"
+    },
+    {
+      "startSeconds": 32.266,
+      "text": "This can lead to compatibility issues"
+    },
+    {
+      "startSeconds": 34.566,
+      "text": "Virtual environment solved"
+    },
+    {
+      "startSeconds": 35.866,
+      "text": "this issue by allowing each project"
+    },
+    {
+      "startSeconds": 37.6,
+      "text": "to have its own set"
+    },
+    {
+      "startSeconds": 38.6,
+      "text": "of installed packages"
+    },
+    {
+      "startSeconds": 39.9,
+      "text": "independent of what's installed"
+    },
+    {
+      "startSeconds": 41.4,
+      "text": "globally or in other environments"
+    },
+    {
+      "startSeconds": 43.6,
+      "text": "So now let's look at how you create"
+    },
+    {
+      "startSeconds": 45.533,
+      "text": "virtual environments"
+    },
+    {
+      "startSeconds": 46.9,
+      "text": "So to begin"
+    },
+    {
+      "startSeconds": 47.566,
+      "text": "we need to open up a terminal"
+    },
+    {
+      "startSeconds": 49.066,
+      "text": "or a command prompt"
+    },
+    {
+      "startSeconds": 50.133,
+      "text": "If you're a mac or Linux"
+    },
+    {
+      "startSeconds": 51.266,
+      "text": "open up your terminal"
+    },
+    {
+      "startSeconds": 52.266,
+      "text": "If you're on Windows open up"
+    },
+    {
+      "startSeconds": 53.5,
+      "text": "a command prompt"
+    },
+    {
+      "startSeconds": 54.2,
+      "text": "or a PowerShell instance"
+    },
+    {
+      "startSeconds": 56.1,
+      "text": "From here"
+    },
+    {
+      "startSeconds": 56.6,
+      "text": "we're going to navigate"
+    },
+    {
+      "startSeconds": 57.433,
+      "text": "into the directory"
+    },
+    {
+      "startSeconds": 58.5,
+      "text": "where we want to create"
+    },
+    {
+      "startSeconds": 59.333,
+      "text": "a new virtual environment"
+    },
+    {
+      "startSeconds": 61,
+      "text": "It's worth noting"
+    },
+    {
+      "startSeconds": 61.8,
+      "text": "that virtual environments"
+    },
+    {
+      "startSeconds": 62.8,
+      "text": "are simply directories on your system"
+    },
+    {
+      "startSeconds": 64.933,
+      "text": "so you want to put them in a place"
+    },
+    {
+      "startSeconds": 66.1,
+      "text": "that's logical"
+    },
+    {
+      "startSeconds": 66.966,
+      "text": "like the location of a Python project"
+    },
+    {
+      "startSeconds": 69.033,
+      "text": "that requires this environment"
+    },
+    {
+      "startSeconds": 70.833,
+      "text": "In my case"
+    },
+    {
+      "startSeconds": 71.433,
+      "text": "you can see that"
+    },
+    {
+      "startSeconds": 72,
+      "text": "I'm in the example directory"
+    },
+    {
+      "startSeconds": 73.8,
+      "text": "which is on my desktop"
+    },
+    {
+      "startSeconds": 75.366,
+      "text": "So simply go to a directory"
+    },
+    {
+      "startSeconds": 76.666,
+      "text": "where you want to create"
+    },
+    {
+      "startSeconds": 77.4,
+      "text": "your virtual environment From here"
+    },
+    {
+      "startSeconds": 79.3,
+      "text": "we're going to create"
+    },
+    {
+      "startSeconds": 79.833,
+      "text": "a new environment"
+    },
+    {
+      "startSeconds": 80.7,
+      "text": "using the built in vent"
+    },
+    {
+      "startSeconds": 82.166,
+      "text": "v Command or VPN V"
+    },
+    {
+      "startSeconds": 84.3,
+      "text": "Now it's worth"
+    },
+    {
+      "startSeconds": 84.9,
+      "text": "noting that there are other tools"
+    },
+    {
+      "startSeconds": 86.266,
+      "text": "that can do this"
+    },
+    {
+      "startSeconds": 87.166,
+      "text": "Like Conda virtual envy"
+    },
+    {
+      "startSeconds": 89.266,
+      "text": "pip envy and poetry"
+    },
+    {
+      "startSeconds": 91.1,
+      "text": "But V envy is built into Python"
+    },
+    {
+      "startSeconds": 93.3,
+      "text": "and it's the most common one"
+    },
+    {
+      "startSeconds": 95.066,
+      "text": "Now the commands for creating"
+    },
+    {
+      "startSeconds": 96.4,
+      "text": "and activating"
+    },
+    {
+      "startSeconds": 97.2,
+      "text": "the virtual environment"
+    },
+    {
+      "startSeconds": 98.1,
+      "text": "are slightly different"
+    },
+    {
+      "startSeconds": 99,
+      "text": "for Mac or Windows"
+    },
+    {
+      "startSeconds": 100.333,
+      "text": "but I'll run through both sets"
+    },
+    {
+      "startSeconds": 102.066,
+      "text": "So if you're on Windows"
+    },
+    {
+      "startSeconds": 103,
+      "text": "you're going to use this command"
+    },
+    {
+      "startSeconds": 104.033,
+      "text": "which is Python"
+    },
+    {
+      "startSeconds": 105.066,
+      "text": "hyphen M then V and then envy"
+    },
+    {
+      "startSeconds": 107.933,
+      "text": "Now the envy part here at the end"
+    },
+    {
+      "startSeconds": 109.633,
+      "text": "is the name of the environment"
+    },
+    {
+      "startSeconds": 111.1,
+      "text": "You can name this"
+    },
+    {
+      "startSeconds": 111.9,
+      "text": "anything that you like"
+    },
+    {
+      "startSeconds": 113.1,
+      "text": "but it's convention to name it envy"
+    },
+    {
+      "startSeconds": 115.266,
+      "text": "Now if you're on Mac or Linux"
+    },
+    {
+      "startSeconds": 116.933,
+      "text": "you'll simply change the command"
+    },
+    {
+      "startSeconds": 118.133,
+      "text": "to be Python three"
+    },
+    {
+      "startSeconds": 119.5,
+      "text": "So in my case I'm a mac"
+    },
+    {
+      "startSeconds": 120.7,
+      "text": "so I'm going to run Python 3-m"
+    },
+    {
+      "startSeconds": 122.833,
+      "text": "the envy"
+    },
+    {
+      "startSeconds": 123.866,
+      "text": "envy Now at this point"
+    },
+    {
+      "startSeconds": 125.5,
+      "text": "it will create a new directory for us"
+    },
+    {
+      "startSeconds": 127.466,
+      "text": "So if we type LS"
+    },
+    {
+      "startSeconds": 128.566,
+      "text": "you'll see that"
+    },
+    {
+      "startSeconds": 129,
+      "text": "we have the environment"
+    },
+    {
+      "startSeconds": 129.933,
+      "text": "envy in this directory"
+    },
+    {
+      "startSeconds": 132.066,
+      "text": "Now what we need to do"
+    },
+    {
+      "startSeconds": 132.866,
+      "text": "is activate the virtual environment"
+    },
+    {
+      "startSeconds": 134.6,
+      "text": "and to do that again"
+    },
+    {
+      "startSeconds": 135.666,
+      "text": "the command will be"
+    },
+    {
+      "startSeconds": 136.3,
+      "text": "slightly different depending"
+    },
+    {
+      "startSeconds": 137.5,
+      "text": "if you're on Mac or Windows"
+    },
+    {
+      "startSeconds": 139.166,
+      "text": "If you're on windows"
+    },
+    {
+      "startSeconds": 140.133,
+      "text": "you're going to run"
+    },
+    {
+      "startSeconds": 140.6,
+      "text": "the following command"
+    },
+    {
+      "startSeconds": 141.766,
+      "text": "Now the command"
+    },
+    {
+      "startSeconds": 142.466,
+      "text": "is this the name of your environment"
+    },
+    {
+      "startSeconds": 144.366,
+      "text": "which in this case is envy"
+    },
+    {
+      "startSeconds": 146.033,
+      "text": "slash scripts slash activate DOT B8"
+    },
+    {
+      "startSeconds": 148.866,
+      "text": "Now for some reason that doesn't work"
+    },
+    {
+      "startSeconds": 150.6,
+      "text": "You can try just slash activates"
+    },
+    {
+      "startSeconds": 152.566,
+      "text": "or remove that by extension"
+    },
+    {
+      "startSeconds": 154.8,
+      "text": "Now if you are on Mac or Linux"
+    },
+    {
+      "startSeconds": 156.433,
+      "text": "the command is a little bit different"
+    },
+    {
+      "startSeconds": 157.8,
+      "text": "This is going to be source"
+    },
+    {
+      "startSeconds": 159.766,
+      "text": "envy slash bin"
+    },
+    {
+      "startSeconds": 162.533,
+      "text": "and then slash activate like that"
+    },
+    {
+      "startSeconds": 164.9,
+      "text": "And once you've activated"
+    },
+    {
+      "startSeconds": 166.033,
+      "text": "the environment"
+    },
+    {
+      "startSeconds": 166.766,
+      "text": "you should see that"
+    },
+    {
+      "startSeconds": 167.533,
+      "text": "you get a prefix"
+    },
+    {
+      "startSeconds": 168.433,
+      "text": "with the name of the environment"
+    },
+    {
+      "startSeconds": 169.9,
+      "text": "appearing before the normal line"
+    },
+    {
+      "startSeconds": 171.866,
+      "text": "in your terminal"
+    },
+    {
+      "startSeconds": 172.6,
+      "text": "So whether you're on"
+    },
+    {
+      "startSeconds": 173.3,
+      "text": "Mac Windows or Linux"
+    },
+    {
+      "startSeconds": 174.366,
+      "text": "you'll know this is working"
+    },
+    {
+      "startSeconds": 175.466,
+      "text": "Once you see the"
+    },
+    {
+      "startSeconds": 176.3,
+      "text": "parentheses version"
+    },
+    {
+      "startSeconds": 177.233,
+      "text": "of your environment name"
+    },
+    {
+      "startSeconds": 178.3,
+      "text": "before your main terminal line"
+    },
+    {
+      "startSeconds": 180.633,
+      "text": "Now that we're here"
+    },
+    {
+      "startSeconds": 181.533,
+      "text": "I'll show you how"
+    },
+    {
+      "startSeconds": 182.1,
+      "text": "we deactivate the environment"
+    },
+    {
+      "startSeconds": 183.566,
+      "text": "So to go back into our global"
+    },
+    {
+      "startSeconds": 184.966,
+      "text": "Python installation"
+    },
+    {
+      "startSeconds": 186.333,
+      "text": "To do that"
+    },
+    {
+      "startSeconds": 186.9,
+      "text": "you simply type deactivate"
+    },
+    {
+      "startSeconds": 188.4,
+      "text": "The command will be the same"
+    },
+    {
+      "startSeconds": 189.466,
+      "text": "Whether you're on Mac"
+    },
+    {
+      "startSeconds": 190.5,
+      "text": "Windows or Linux"
+    },
+    {
+      "startSeconds": 191.766,
+      "text": "Then we can reactivate"
+    },
+    {
+      "startSeconds": 192.9,
+      "text": "by using the"
+    },
+    {
+      "startSeconds": 193.4,
+      "text": "source command again"
+    },
+    {
+      "startSeconds": 194.366,
+      "text": "Or that activate script"
+    },
+    {
+      "startSeconds": 195.6,
+      "text": "that I showed you on Windows"
+    },
+    {
+      "startSeconds": 197.266,
+      "text": "So now that the environment"
+    },
+    {
+      "startSeconds": 198.3,
+      "text": "is created and activated"
+    },
+    {
+      "startSeconds": 199.733,
+      "text": "we can go ahead"
+    },
+    {
+      "startSeconds": 200.4,
+      "text": "and install some packages into it"
+    },
+    {
+      "startSeconds": 202.5,
+      "text": "Now to do this"
+    },
+    {
+      "startSeconds": 203.2,
+      "text": "we're going to use the PIP command"
+    },
+    {
+      "startSeconds": 204.533,
+      "text": "which stands"
+    },
+    {
+      "startSeconds": 205.066,
+      "text": "for the preferred installer program"
+    },
+    {
+      "startSeconds": 207.1,
+      "text": "or the RECURSIVE acronym"
+    },
+    {
+      "startSeconds": 208.266,
+      "text": "which is PIP installs packages"
+    },
+    {
+      "startSeconds": 210.3,
+      "text": "Now if we want to view the packages"
+    },
+    {
+      "startSeconds": 211.866,
+      "text": "that are in the current environment"
+    },
+    {
+      "startSeconds": 213.1,
+      "text": "we can start by typing PIP list"
+    },
+    {
+      "startSeconds": 215.366,
+      "text": "and it will show us"
+    },
+    {
+      "startSeconds": 216,
+      "text": "that we can actually upgrade PIP"
+    },
+    {
+      "startSeconds": 217.5,
+      "text": "if we'd like to"
+    },
+    {
+      "startSeconds": 218.133,
+      "text": "We don't need to do that right now"
+    },
+    {
+      "startSeconds": 219.866,
+      "text": "but we can see that"
+    },
+    {
+      "startSeconds": 220.5,
+      "text": "we just have two packages"
+    },
+    {
+      "startSeconds": 221.666,
+      "text": "PIP and set setup tools"
+    },
+    {
+      "startSeconds": 223.066,
+      "text": "The reason we don't see"
+    },
+    {
+      "startSeconds": 223.866,
+      "text": "any other ones"
+    },
+    {
+      "startSeconds": 224.5,
+      "text": "is because"
+    },
+    {
+      "startSeconds": 224.9,
+      "text": "we're in the virtual environment now"
+    },
+    {
+      "startSeconds": 226.666,
+      "text": "not in our global version of Python"
+    },
+    {
+      "startSeconds": 228.766,
+      "text": "If we were to deactivate this"
+    },
+    {
+      "startSeconds": 230.033,
+      "text": "and run the command again"
+    },
+    {
+      "startSeconds": 231.3,
+      "text": "we'd see any packages"
+    },
+    {
+      "startSeconds": 232.533,
+      "text": "in our global environment"
+    },
+    {
+      "startSeconds": 233.833,
+      "text": "But here we're in the virtual one"
+    },
+    {
+      "startSeconds": 235.933,
+      "text": "Now that we've done that"
+    },
+    {
+      "startSeconds": 236.7,
+      "text": "we can install a package"
+    },
+    {
+      "startSeconds": 237.9,
+      "text": "So one"
+    },
+    {
+      "startSeconds": 238.5,
+      "text": "some of us have probably used"
+    },
+    {
+      "startSeconds": 239.566,
+      "text": "before is the request package"
+    },
+    {
+      "startSeconds": 241.9,
+      "text": "So let's go PIP install requests"
+    },
+    {
+      "startSeconds": 244.1,
+      "text": "When we do that"
+    },
+    {
+      "startSeconds": 244.933,
+      "text": "it should install everything"
+    },
+    {
+      "startSeconds": 246.266,
+      "text": "And if we type PIP list"
+    },
+    {
+      "startSeconds": 247.933,
+      "text": "you'll see"
+    },
+    {
+      "startSeconds": 248.333,
+      "text": "now that we get"
+    },
+    {
+      "startSeconds": 248.9,
+      "text": "all of the dependencies for requests"
+    },
+    {
+      "startSeconds": 250.4,
+      "text": "as well as the request package itself"
+    },
+    {
+      "startSeconds": 252.3,
+      "text": "You'll notice"
+    },
+    {
+      "startSeconds": 252.866,
+      "text": "now if I deactivate the environment"
+    },
+    {
+      "startSeconds": 254.7,
+      "text": "and I type PIP list"
+    },
+    {
+      "startSeconds": 256.6,
+      "text": "it's actually needs to be Pip"
+    },
+    {
+      "startSeconds": 257.6,
+      "text": "three here"
+    },
+    {
+      "startSeconds": 258.333,
+      "text": "I'll get a huge long list"
+    },
+    {
+      "startSeconds": 259.766,
+      "text": "of a bunch of other packages"
+    },
+    {
+      "startSeconds": 261,
+      "text": "that are installed globally"
+    },
+    {
+      "startSeconds": 262.3,
+      "text": "Whereas if I go back"
+    },
+    {
+      "startSeconds": 263.366,
+      "text": "into the environment here"
+    },
+    {
+      "startSeconds": 265.233,
+      "text": "and I type PIP list"
+    },
+    {
+      "startSeconds": 266.566,
+      "text": "we just see the ones that are"
+    },
+    {
+      "startSeconds": 267.666,
+      "text": "part of this environment"
+    },
+    {
+      "startSeconds": 269.1,
+      "text": "So now at this point let's imagine"
+    },
+    {
+      "startSeconds": 270.6,
+      "text": "we've done some intense"
+    },
+    {
+      "startSeconds": 271.6,
+      "text": "Python development"
+    },
+    {
+      "startSeconds": 272.6,
+      "text": "and we're ready"
+    },
+    {
+      "startSeconds": 273.066,
+      "text": "to push this to GitHub"
+    },
+    {
+      "startSeconds": 274.3,
+      "text": "or share a project with someone else"
+    },
+    {
+      "startSeconds": 276.1,
+      "text": "Now in order for them"
+    },
+    {
+      "startSeconds": 277.066,
+      "text": "to run this code"
+    },
+    {
+      "startSeconds": 278,
+      "text": "they'll likely need"
+    },
+    {
+      "startSeconds": 278.7,
+      "text": "the same requirements as us"
+    },
+    {
+      "startSeconds": 280.166,
+      "text": "Now rather than exporting"
+    },
+    {
+      "startSeconds": 281.666,
+      "text": "our entire environment"
+    },
+    {
+      "startSeconds": 283.066,
+      "text": "we can simply save a list"
+    },
+    {
+      "startSeconds": 284.4,
+      "text": "of all of the dependencies"
+    },
+    {
+      "startSeconds": 285.566,
+      "text": "we used into a requirement"
+    },
+    {
+      "startSeconds": 287.266,
+      "text": "The text file"
+    },
+    {
+      "startSeconds": 288.566,
+      "text": "Now to do that"
+    },
+    {
+      "startSeconds": 289.6,
+      "text": "we're going to use"
+    },
+    {
+      "startSeconds": 290.2,
+      "text": "the following command"
+    },
+    {
+      "startSeconds": 291.333,
+      "text": "which is Pip frees"
+    },
+    {
+      "startSeconds": 293.033,
+      "text": "We're going to use"
+    },
+    {
+      "startSeconds": 293.666,
+      "text": "the greater than sign"
+    },
+    {
+      "startSeconds": 295,
+      "text": "and then we're going to type"
+    },
+    {
+      "startSeconds": 296.3,
+      "text": "requirements dot text"
+    },
+    {
+      "startSeconds": 298.6,
+      "text": "if I spell that correctly"
+    },
+    {
+      "startSeconds": 300.3,
+      "text": "And what this will do is"
+    },
+    {
+      "startSeconds": 301.266,
+      "text": "take the output of PIP frees"
+    },
+    {
+      "startSeconds": 302.8,
+      "text": "which gives us"
+    },
+    {
+      "startSeconds": 303.333,
+      "text": "all of the different packages"
+    },
+    {
+      "startSeconds": 304.633,
+      "text": "and their version"
+    },
+    {
+      "startSeconds": 305.533,
+      "text": "and save it in this file"
+    },
+    {
+      "startSeconds": 307.2,
+      "text": "So when I do that and I type LS"
+    },
+    {
+      "startSeconds": 309.033,
+      "text": "you'll see that"
+    },
+    {
+      "startSeconds": 309.533,
+      "text": "now we get a requirement"
+    },
+    {
+      "startSeconds": 310.633,
+      "text": "start text file"
+    },
+    {
+      "startSeconds": 312,
+      "text": "if we have a look at requirements"
+    },
+    {
+      "startSeconds": 313.466,
+      "text": "dot text"
+    },
+    {
+      "startSeconds": 314.2,
+      "text": "it has the output of PIP list"
+    },
+    {
+      "startSeconds": 316.333,
+      "text": "that we looked at before"
+    },
+    {
+      "startSeconds": 318,
+      "text": "Now let's get out of this here"
+    },
+    {
+      "startSeconds": 319.366,
+      "text": "and let's see how we could use"
+    },
+    {
+      "startSeconds": 321.133,
+      "text": "the requirements of text file"
+    },
+    {
+      "startSeconds": 322.966,
+      "text": "to actually"
+    },
+    {
+      "startSeconds": 323.533,
+      "text": "install these various packages"
+    },
+    {
+      "startSeconds": 325.366,
+      "text": "So let's imagine"
+    },
+    {
+      "startSeconds": 326.1,
+      "text": "we're someone else We've now"
+    },
+    {
+      "startSeconds": 327.133,
+      "text": "got access to this code"
+    },
+    {
+      "startSeconds": 328.8,
+      "text": "We want to start working in it"
+    },
+    {
+      "startSeconds": 330,
+      "text": "and we have a requirement"
+    },
+    {
+      "startSeconds": 331.166,
+      "text": "start text file"
+    },
+    {
+      "startSeconds": 332.333,
+      "text": "Well first"
+    },
+    {
+      "startSeconds": 333.066,
+      "text": "we'll make sure that we're"
+    },
+    {
+      "startSeconds": 333.766,
+      "text": "out of this environment"
+    },
+    {
+      "startSeconds": 334.866,
+      "text": "and we'll probably end"
+    },
+    {
+      "startSeconds": 335.766,
+      "text": "up creating a new one"
+    },
+    {
+      "startSeconds": 336.866,
+      "text": "So we'll start again"
+    },
+    {
+      "startSeconds": 337.733,
+      "text": "and we'll type"
+    },
+    {
+      "startSeconds": 338.233,
+      "text": "the commands In this case"
+    },
+    {
+      "startSeconds": 339.366,
+      "text": "Python three hyphen M"
+    },
+    {
+      "startSeconds": 340.833,
+      "text": "Then we will just call this"
+    },
+    {
+      "startSeconds": 342.233,
+      "text": "my underscore"
+    },
+    {
+      "startSeconds": 343.333,
+      "text": "and we will create a new environment"
+    },
+    {
+      "startSeconds": 345.8,
+      "text": "We will then activate it"
+    },
+    {
+      "startSeconds": 346.933,
+      "text": "So this will be source"
+    },
+    {
+      "startSeconds": 348.3,
+      "text": "and then my envy slash bean slash"
+    },
+    {
+      "startSeconds": 351.533,
+      "text": "activate again on windows"
+    },
+    {
+      "startSeconds": 353.266,
+      "text": "is going to be a different command"
+    },
+    {
+      "startSeconds": 354.366,
+      "text": "for activation"
+    },
+    {
+      "startSeconds": 355.5,
+      "text": "Now we're inside of this environment"
+    },
+    {
+      "startSeconds": 356.966,
+      "text": "This is a new environment"
+    },
+    {
+      "startSeconds": 358.566,
+      "text": "and you'll notice that"
+    },
+    {
+      "startSeconds": 359.333,
+      "text": "now we have"
+    },
+    {
+      "startSeconds": 360.1,
+      "text": "envy might envy our requirements"
+    },
+    {
+      "startSeconds": 362.666,
+      "text": "Dot text"
+    },
+    {
+      "startSeconds": 364.066,
+      "text": "If I pip list inside of here"
+    },
+    {
+      "startSeconds": 365.966,
+      "text": "you'll see that"
+    },
+    {
+      "startSeconds": 366.366,
+      "text": "we don't have those requirements"
+    },
+    {
+      "startSeconds": 368.033,
+      "text": "So the request module that we need"
+    },
+    {
+      "startSeconds": 370.1,
+      "text": "but we can install them"
+    },
+    {
+      "startSeconds": 371.533,
+      "text": "using this requirements"
+    },
+    {
+      "startSeconds": 372.833,
+      "text": "dot text file"
+    },
+    {
+      "startSeconds": 374.366,
+      "text": "To do that"
+    },
+    {
+      "startSeconds": 375,
+      "text": "we very simply just type pip"
+    },
+    {
+      "startSeconds": 377.2,
+      "text": "install dash ah and then requirements"
+    },
+    {
+      "startSeconds": 380.733,
+      "text": "dot text"
+    },
+    {
+      "startSeconds": 381.933,
+      "text": "the dash"
+    },
+    {
+      "startSeconds": 382.466,
+      "text": "our stands for install from a file"
+    },
+    {
+      "startSeconds": 385.066,
+      "text": "So we specify the file name"
+    },
+    {
+      "startSeconds": 386.533,
+      "text": "which is requirements start text"
+    },
+    {
+      "startSeconds": 388.366,
+      "text": "And now what pip will do"
+    },
+    {
+      "startSeconds": 389.4,
+      "text": "is read this file"
+    },
+    {
+      "startSeconds": 390.833,
+      "text": "find all of the requirements"
+    },
+    {
+      "startSeconds": 392.233,
+      "text": "and install it in this environment"
+    },
+    {
+      "startSeconds": 394.733,
+      "text": "So when I hit enter here it's"
+    },
+    {
+      "startSeconds": 395.9,
+      "text": "going to go ahead and install that"
+    },
+    {
+      "startSeconds": 397.5,
+      "text": "And now if we type PIP list"
+    },
+    {
+      "startSeconds": 399.466,
+      "text": "you'll see that we get a list"
+    },
+    {
+      "startSeconds": 400.733,
+      "text": "of all of the different packages"
+    },
+    {
+      "startSeconds": 402.466,
+      "text": "that were from our requirements"
+    },
+    {
+      "startSeconds": 404.1,
+      "text": "dot text file"
+    },
+    {
+      "startSeconds": 405.5,
+      "text": "So this is very common practice"
+    },
+    {
+      "startSeconds": 407.1,
+      "text": "You'll actually download"
+    },
+    {
+      "startSeconds": 408.2,
+      "text": "a python project"
+    },
+    {
+      "startSeconds": 409.433,
+      "text": "you'll see a requirements"
+    },
+    {
+      "startSeconds": 410.433,
+      "text": "dot text file"
+    },
+    {
+      "startSeconds": 411.733,
+      "text": "What's expected"
+    },
+    {
+      "startSeconds": 412.5,
+      "text": "from that point forward"
+    },
+    {
+      "startSeconds": 413.4,
+      "text": "is you're going to create"
+    },
+    {
+      "startSeconds": 414.033,
+      "text": "a new virtual environment"
+    },
+    {
+      "startSeconds": 415.5,
+      "text": "you're going to activate it"
+    },
+    {
+      "startSeconds": 416.566,
+      "text": "You're then going to install"
+    },
+    {
+      "startSeconds": 417.666,
+      "text": "all of the different packages"
+    },
+    {
+      "startSeconds": 419,
+      "text": "using the requirements"
+    },
+    {
+      "startSeconds": 420.133,
+      "text": "dot text file Again"
+    },
+    {
+      "startSeconds": 422.233,
+      "text": "that command was pip install hyphen"
+    },
+    {
+      "startSeconds": 424.366,
+      "text": "ah requirements dot text"
+    },
+    {
+      "startSeconds": 427,
+      "text": "Now at this point you've learned"
+    },
+    {
+      "startSeconds": 428.1,
+      "text": "how to create an environment"
+    },
+    {
+      "startSeconds": 429.5,
+      "text": "activate it"
+    },
+    {
+      "startSeconds": 430.266,
+      "text": "install individual packages"
+    },
+    {
+      "startSeconds": 432.066,
+      "text": "install packages from a file"
+    },
+    {
+      "startSeconds": 433.9,
+      "text": "and save your packages"
+    },
+    {
+      "startSeconds": 435.166,
+      "text": "or dependencies"
+    },
+    {
+      "startSeconds": 436.033,
+      "text": "into a requirements done text file"
+    },
+    {
+      "startSeconds": 438.466,
+      "text": "You pretty much know everything"
+    },
+    {
+      "startSeconds": 439.633,
+      "text": "you need"
+    },
+    {
+      "startSeconds": 439.966,
+      "text": "to about virtual environments"
+    },
+    {
+      "startSeconds": 441.6,
+      "text": "but I'll share with you"
+    },
+    {
+      "startSeconds": 442.266,
+      "text": "a few last helpful tips"
+    },
+    {
+      "startSeconds": 443.966,
+      "text": "that you'll probably want to know"
+    },
+    {
+      "startSeconds": 445.766,
+      "text": "So first of all it's common practice"
+    },
+    {
+      "startSeconds": 447.4,
+      "text": "to create a virtual environment"
+    },
+    {
+      "startSeconds": 448.9,
+      "text": "folder inside of the directory"
+    },
+    {
+      "startSeconds": 451.066,
+      "text": "where your Python files exist"
+    },
+    {
+      "startSeconds": 453.2,
+      "text": "So for example"
+    },
+    {
+      "startSeconds": 454,
+      "text": "maybe I'll make"
+    },
+    {
+      "startSeconds": 454.466,
+      "text": "a new directory called project"
+    },
+    {
+      "startSeconds": 456,
+      "text": "and this is where"
+    },
+    {
+      "startSeconds": 456.633,
+      "text": "I'm going to have all of my code"
+    },
+    {
+      "startSeconds": 458.133,
+      "text": "so CD into project"
+    },
+    {
+      "startSeconds": 459.766,
+      "text": "and maybe I have a python file"
+    },
+    {
+      "startSeconds": 461.433,
+      "text": "so I can say"
+    },
+    {
+      "startSeconds": 462.6,
+      "text": "maybe just touch main dot p y"
+    },
+    {
+      "startSeconds": 466.366,
+      "text": "Now what I would do is create"
+    },
+    {
+      "startSeconds": 467.866,
+      "text": "my virtual environment"
+    },
+    {
+      "startSeconds": 469.066,
+      "text": "inside of this directory"
+    },
+    {
+      "startSeconds": 470.933,
+      "text": "So it's alongside my python"
+    },
+    {
+      "startSeconds": 472.5,
+      "text": "files in all of my source code"
+    },
+    {
+      "startSeconds": 474.433,
+      "text": "Now it's common practice"
+    },
+    {
+      "startSeconds": 475.4,
+      "text": "that we call this envy or VM envy"
+    },
+    {
+      "startSeconds": 477.966,
+      "text": "You can call it"
+    },
+    {
+      "startSeconds": 478.533,
+      "text": "whatever you want"
+    },
+    {
+      "startSeconds": 479.2,
+      "text": "but typically this is"
+    },
+    {
+      "startSeconds": 480.233,
+      "text": "what it will be nicked"
+    },
+    {
+      "startSeconds": 481.333,
+      "text": "Now once we create"
+    },
+    {
+      "startSeconds": 482.333,
+      "text": "and activate the environment"
+    },
+    {
+      "startSeconds": 483.833,
+      "text": "we want to make sure"
+    },
+    {
+      "startSeconds": 484.566,
+      "text": "we don't save any of our source code"
+    },
+    {
+      "startSeconds": 486.766,
+      "text": "inside of that directory"
+    },
+    {
+      "startSeconds": 488.5,
+      "text": "So I'm not going to do it right now"
+    },
+    {
+      "startSeconds": 489.6,
+      "text": "But let's say that we have"
+    },
+    {
+      "startSeconds": 490.933,
+      "text": "this event V folder right?"
+    },
+    {
+      "startSeconds": 492.366,
+      "text": "So it may end up high"
+    },
+    {
+      "startSeconds": 493.366,
+      "text": "And then V"
+    },
+    {
+      "startSeconds": 494.1,
+      "text": "where our virtual environment is"
+    },
+    {
+      "startSeconds": 495.433,
+      "text": "we're not going"
+    },
+    {
+      "startSeconds": 495.866,
+      "text": "to put any of our custom"
+    },
+    {
+      "startSeconds": 497.166,
+      "text": "python code inside of here"
+    },
+    {
+      "startSeconds": 498.866,
+      "text": "It's just going to sit"
+    },
+    {
+      "startSeconds": 499.633,
+      "text": "inside of the main directory"
+    },
+    {
+      "startSeconds": 501.166,
+      "text": "This folder is"
+    },
+    {
+      "startSeconds": 501.933,
+      "text": "only used for"
+    },
+    {
+      "startSeconds": 502.766,
+      "text": "storing the things related"
+    },
+    {
+      "startSeconds": 504.133,
+      "text": "to our virtual environment"
+    },
+    {
+      "startSeconds": 505.8,
+      "text": "That's about it"
+    },
+    {
+      "startSeconds": 506.566,
+      "text": "If you're finished"
+    },
+    {
+      "startSeconds": 507.333,
+      "text": "with the virtual environment"
+    },
+    {
+      "startSeconds": 508.366,
+      "text": "and for some reason"
+    },
+    {
+      "startSeconds": 509.1,
+      "text": "you don't need it anymore"
+    },
+    {
+      "startSeconds": 510.133,
+      "text": "you can simply delete this folder"
+    },
+    {
+      "startSeconds": 511.933,
+      "text": "and that's all you have to do"
+    },
+    {
+      "startSeconds": 513.433,
+      "text": "So if you're on Mac"
+    },
+    {
+      "startSeconds": 514.166,
+      "text": "you can type something like Ram"
+    },
+    {
+      "startSeconds": 515.366,
+      "text": "Dash r v Envy"
+    },
+    {
+      "startSeconds": 517.4,
+      "text": "that's going to delete the directory"
+    },
+    {
+      "startSeconds": 519.3,
+      "text": "You also can just simply find it"
+    },
+    {
+      "startSeconds": 520.9,
+      "text": "and delete it So"
+    },
+    {
+      "startSeconds": 521.766,
+      "text": "right click it move it to trash"
+    },
+    {
+      "startSeconds": 523.266,
+      "text": "whatever you want"
+    },
+    {
+      "startSeconds": 524.133,
+      "text": "Now that's it"
+    },
+    {
+      "startSeconds": 524.766,
+      "text": "That's all I have for you"
+    },
+    {
+      "startSeconds": 525.833,
+      "text": "If you enjoy my teaching style"
+    },
+    {
+      "startSeconds": 527.3,
+      "text": "and you want to become a developer"
+    },
+    {
+      "startSeconds": 528.666,
+      "text": "then consider"
+    },
+    {
+      "startSeconds": 529.2,
+      "text": "checking out my software development"
+    },
+    {
+      "startSeconds": 530.633,
+      "text": "course from the link"
+    },
+    {
+      "startSeconds": 531.6,
+      "text": "in the description"
+    },
+    {
+      "startSeconds": 532.633,
+      "text": "Leave a like on this video"
+    },
+    {
+      "startSeconds": 533.9,
+      "text": "Subscribe to the channel"
+    },
+    {
+      "startSeconds": 534.966,
+      "text": "and I will see you in the next one"
+    }
+  ]
+}
