@@ -56,10 +56,15 @@ export function parseVideoUrl(url: string | null | undefined): ParsedVideo | nul
 
 /**
  * Build the provider embed URL, starting playback at `startSeconds` via each
- * provider's own start parameter.
+ * provider's own start parameter. When `startSeconds > 0` the learner has jumped
+ * to a specific moment (a search "watch from" result or a shared deep link), so
+ * we also request autoplay via each provider's own flag — the result click is
+ * the user gesture. A browser that still blocks it just shows the player ready
+ * at that second (AGENTS §7: the action watches from that second).
  */
 export function embedSrc(parsed: ParsedVideo, startSeconds = 0): string {
   const start = Math.max(0, Math.floor(startSeconds || 0));
+  const autoplay = start > 0;
   switch (parsed.provider) {
     case "youtube": {
       const params = new URLSearchParams({
@@ -69,14 +74,20 @@ export function embedSrc(parsed: ParsedVideo, startSeconds = 0): string {
         enablejsapi: "1",
       });
       if (start > 0) params.set("start", String(start));
+      if (autoplay) params.set("autoplay", "1");
       return `https://www.youtube-nocookie.com/embed/${parsed.id}?${params.toString()}`;
     }
     case "vimeo": {
+      const params = new URLSearchParams({ title: "0", byline: "0", portrait: "0" });
+      if (autoplay) params.set("autoplay", "1");
       const hash = start > 0 ? `#t=${start}s` : "";
-      return `https://player.vimeo.com/video/${parsed.id}?title=0&byline=0&portrait=0${hash}`;
+      return `https://player.vimeo.com/video/${parsed.id}?${params.toString()}${hash}`;
     }
     case "bunny": {
-      const params = new URLSearchParams({ autoplay: "false", preload: "true" });
+      const params = new URLSearchParams({
+        autoplay: autoplay ? "true" : "false",
+        preload: "true",
+      });
       if (start > 0) params.set("t", String(start));
       return `https://iframe.mediadelivery.net/embed/${parsed.libraryId}/${parsed.guid}?${params.toString()}`;
     }
