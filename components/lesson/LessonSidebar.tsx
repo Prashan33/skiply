@@ -20,16 +20,15 @@ export type SidebarModule = {
   title: string;
   durationLabel: string;
   lessons: SidebarLesson[];
-  /** Every lesson before the active one → the module is complete (placeholder). */
+  /** Every lesson in the module is completed in the learner's progress record. */
   completed: boolean;
   hasActive: boolean;
 };
 
 /**
- * Presentational course outline for the lesson page. Completion marks and the
- * "% complete" figure are a placeholder derived from the lesson's position —
- * per-learner progress has no backend yet (same convention as
- * `components/course/CourseProgressBar.tsx`).
+ * Presentational course outline for the lesson page. `status`, `completed`, and
+ * `percentComplete` are computed by the page from the learner's real progress
+ * record (watch-gated via `POST /api/progress`, AGENTS.md §7).
  */
 export function LessonSidebar({
   courseTitle,

@@ -2,11 +2,18 @@
 
 import { SignInButton, SignUpButton, Show, UserButton } from "@clerk/nextjs";
 import { Bell, ChevronRight } from "lucide-react";
+import Link from "next/link";
 import posthog from "posthog-js";
 import { cn } from "@/lib/cn";
 import { Button } from "./Button";
 import { Container } from "./Container";
 import { Logo } from "./Logo";
+
+/** Where each navbar label points. Unlisted labels render as inert `#`. */
+const LINK_HREFS: Record<string, string> = {
+  Courses: "/courses",
+  "My Learning": "/my-learning",
+};
 
 export function TopNav({
   links = ["Courses", "My Learning"],
@@ -25,9 +32,9 @@ export function TopNav({
           <Logo />
           <div className="flex items-center gap-6">
             {links.map((link) => (
-              <a
+              <Link
                 key={link}
-                href="#"
+                href={LINK_HREFS[link] ?? "#"}
                 className={cn(
                   "text-body font-medium hover:text-neutral-900",
                   link === activeLink
@@ -36,7 +43,7 @@ export function TopNav({
                 )}
               >
                 {link}
-              </a>
+              </Link>
             ))}
           </div>
         </div>

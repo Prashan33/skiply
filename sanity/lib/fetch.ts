@@ -1,7 +1,13 @@
 import 'server-only'
 
 import { client } from './client'
-import { CATALOG_COURSES_QUERY, SEARCH_INDEX_QUERY } from './queries'
+import {
+  BOOKMARKED_COURSES_QUERY,
+  CATALOG_COURSES_QUERY,
+  PROGRESS_BY_USER_QUERY,
+  SEARCH_INDEX_QUERY,
+  VIDEO_MOMENTS_QUERY,
+} from './queries'
 import { requireToken } from './token'
 
 export { sanityFetch, SanityLive } from './live'
@@ -36,5 +42,45 @@ export function getSearchIndex() {
     SEARCH_INDEX_QUERY,
     {},
     { next: { revalidate: 300, tags: ['course', 'lesson'] } }
+  )
+}
+
+/**
+ * Chapter/transcript rows of the matched lessons' videos that match the query
+ * tokens, for two-stage timestamp resolution in the search route. Query-specific
+ * and cheap, so it is not cached. `tokens` are wildcarded (`["*data*"]`).
+ */
+export function getVideoMoments(slugs: string[], tokens: string[]) {
+  return getReadClient().fetch(VIDEO_MOMENTS_QUERY, { slugs, tokens })
+}
+
+/**
+ * A learner's progress record, keyed by the Clerk user id. Per-user and mutable,
+ * so it is never statically cached; the `progress:<userId>` tag lets the write
+ * route revalidate it. Callers already opt into dynamic rendering via `auth()`.
+ */
+export function getProgressForUser(userId: string) {
+  return getReadClient().fetch(
+    PROGRESS_BY_USER_QUERY,
+    { userId },
+    { next: { revalidate: 0, tags: [`progress:${userId}`] } }
+  )
+}
+
+/**
+ * Catalog cards for the My Learning page: the courses a learner has bookmarked
+ * directly plus the parent course of every bookmarked lesson. Depends on
+ * per-user input, so it is never statically cached and is revalidated by the
+ * bookmark write route via the `progress:<userId>` tag.
+ */
+export function getBookmarkedCourses(
+  userId: string,
+  courseIds: string[],
+  lessonIds: string[]
+) {
+  return getReadClient().fetch(
+    BOOKMARKED_COURSES_QUERY,
+    { courseIds, lessonIds },
+    { next: { revalidate: 0, tags: [`progress:${userId}`] } }
   )
 }

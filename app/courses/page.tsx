@@ -27,7 +27,7 @@ export default async function CoursesPage() {
 
   return (
     <div className="flex flex-1 flex-col bg-neutral-50">
-      <TopNav showActions />
+      <TopNav showActions activeLink="Courses" />
 
       <Container as="main" className="flex-1 pt-10 pb-16">
         <div className="mb-6 flex items-end justify-between gap-4">
