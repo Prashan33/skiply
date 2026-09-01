@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import {
-  CheckCircle2,
+  Check,
   ChevronRight,
   ExternalLink,
   FileText,
@@ -27,12 +27,12 @@ function CourseRow({
   return (
     <div className="flex items-center justify-between gap-3">
       <span className="inline-flex min-w-0 items-center gap-2">
-        <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-[var(--radius-xs)] bg-neutral-900 text-[11px] font-semibold text-white">
+        <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-[var(--radius-xs)] border border-neutral-200 bg-white text-[11px] font-semibold text-neutral-900">
           {monogram}
         </span>
         <span className="truncate text-small text-neutral-500">{courseTitle}</span>
       </span>
-      <Badge variant="lesson" className="shrink-0">
+      <Badge variant={kind === "video" ? "videoTag" : "lessonTag"} className="shrink-0">
         {kind === "video" ? "Video" : "Lesson"}
       </Badge>
     </div>
@@ -48,7 +48,7 @@ export function ResultCard({
 }) {
   const start = result.startSeconds > 0 ? result.startSeconds : 0;
   const href = start > 0
-    ? `/lessons/${result.lessonSlug}?t=${start}`
+    ? `/lessons/${result.lessonSlug}?t=${start}&ref=search`
     : `/lessons/${result.lessonSlug}`;
 
   const isVideo = result.kind === "video";
@@ -57,10 +57,10 @@ export function ResultCard({
     <Link
       href={href}
       onClick={onSelect}
-      className="group flex flex-col gap-4 rounded-[var(--radius-md)] border border-neutral-200 bg-white p-4 shadow-[var(--shadow-sm)] transition-colors hover:border-neutral-300 sm:flex-row"
+      className="group flex flex-col gap-5 rounded-[var(--radius-md)] border border-neutral-200 bg-white p-5 shadow-[var(--shadow-sm)] transition-colors hover:border-neutral-300 sm:flex-row"
     >
       {isVideo ? (
-        <div className="relative aspect-video w-full shrink-0 overflow-hidden rounded-[var(--radius-sm)] bg-neutral-900 sm:w-60">
+        <div className="relative aspect-video w-full shrink-0 overflow-hidden rounded-[var(--radius-sm)] bg-neutral-900 sm:w-64">
           {result.posterUrl ? (
             <Image
               src={result.posterUrl}
@@ -85,7 +85,7 @@ export function ResultCard({
           </span>
         </div>
       ) : (
-        <div className="relative w-full shrink-0 rounded-[var(--radius-sm)] border border-neutral-200 bg-neutral-50 p-4 sm:w-60">
+        <div className="relative w-full shrink-0 rounded-[var(--radius-sm)] border border-neutral-200 bg-neutral-50 p-4 sm:w-64">
           <ul className="space-y-1.5">
             {result.keyPoints.length > 0 ? (
               result.keyPoints.map((point, i) => (
@@ -93,7 +93,7 @@ export function ResultCard({
                   key={i}
                   className="flex items-start gap-2 text-small text-neutral-700"
                 >
-                  <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary-500" />
+                  <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-neutral-300" />
                   <span className="line-clamp-1">{point}</span>
                 </li>
               ))
@@ -103,10 +103,9 @@ export function ResultCard({
           </ul>
           {/* Presentational only — per-learner progress has no backend yet
               (same convention as CourseProgressBar / LessonSidebar). */}
-          <CheckCircle2
-            className="absolute bottom-3 right-3 h-5 w-5 text-neutral-900"
-            strokeWidth={2}
-          />
+          <span className="absolute bottom-3 right-3 flex h-5 w-5 items-center justify-center rounded-full bg-neutral-900">
+            <Check className="h-3 w-3 text-white" strokeWidth={3} />
+          </span>
         </div>
       )}
 
@@ -117,7 +116,7 @@ export function ResultCard({
           kind={result.kind}
         />
 
-        <h3 className="font-display text-heading-3 text-neutral-900">
+        <h3 className="text-heading-3 font-medium text-neutral-900">
           {result.lessonTitle}
         </h3>
 
@@ -128,16 +127,20 @@ export function ResultCard({
         ) : null}
 
         <div className="mt-auto flex flex-wrap items-center justify-between gap-x-4 gap-y-2 pt-1">
-          <span className="inline-flex items-center gap-x-3 text-small text-neutral-500">
-            <span className="inline-flex items-center gap-1.5">
-              <FileText className="h-3.5 w-3.5" strokeWidth={2} />
-              {result.lessonLabel}
+          {isVideo ? (
+            <span className="inline-flex items-center gap-x-3 text-small text-neutral-500">
+              <span className="inline-flex items-center gap-1.5">
+                <FileText className="h-3.5 w-3.5" strokeWidth={2} />
+                {result.lessonLabel}
+              </span>
+              <span className="inline-flex items-center gap-1.5">
+                <Folder className="h-3.5 w-3.5" strokeWidth={2} />
+                {result.moduleTitle}
+              </span>
             </span>
-            <span className="inline-flex items-center gap-1.5">
-              <Folder className="h-3.5 w-3.5" strokeWidth={2} />
-              {isVideo ? result.moduleTitle : result.moduleLabel}
-            </span>
-          </span>
+          ) : (
+            <span className="text-small text-neutral-500">{result.moduleLabel}</span>
+          )}
 
           <span className="inline-flex items-center gap-1 text-body font-medium text-primary-500">
             {isVideo

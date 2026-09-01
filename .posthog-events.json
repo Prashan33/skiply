@@ -1,0 +1,52 @@
+[
+  {
+    "event_name": "search_performed",
+    "event_description": "A learner ran a search; captured server-side in the search route with the query and its length.",
+    "file": "app/api/search/route.ts"
+  },
+  {
+    "event_name": "search_results_returned",
+    "event_description": "The streamed search response settled; records the grounded result count and how many courses it spans.",
+    "file": "components/search/SearchResults.tsx"
+  },
+  {
+    "event_name": "search_result_opened",
+    "event_description": "A learner clicked a search result card; records the result type (video or lesson), rank, and relevance.",
+    "file": "components/search/SearchResults.tsx"
+  },
+  {
+    "event_name": "video_played",
+    "event_description": "The lesson video started playing for the first time, for any provider (YouTube, Vimeo, Bunny).",
+    "file": "components/lesson/LessonVideo.tsx"
+  },
+  {
+    "event_name": "video_watched",
+    "event_description": "Playback crossed a 25/50/75/95 percent watch-depth milestone.",
+    "file": "components/lesson/LessonVideo.tsx"
+  },
+  {
+    "event_name": "video_watch_depth",
+    "event_description": "Emitted when the video unmounts, carrying the furthest percent and second reached in the session.",
+    "file": "components/lesson/LessonVideo.tsx"
+  },
+  {
+    "event_name": "lesson_completed",
+    "event_description": "Playback passed 95 percent of the lesson video, marking the lesson complete.",
+    "file": "components/lesson/LessonVideo.tsx"
+  },
+  {
+    "event_name": "lesson_resumed",
+    "event_description": "The lesson page loaded at a specific second via a search jump or a shared deep link.",
+    "file": "app/lessons/[slug]/page.tsx"
+  },
+  {
+    "event_name": "lesson_resource_clicked",
+    "event_description": "A learner opened a resource link in the lesson notes; records only the resource type.",
+    "file": "components/lesson/ResourceLink.tsx"
+  },
+  {
+    "event_name": "catalog_viewed",
+    "event_description": "The course catalog page rendered; funnel-top counterpart to course_viewed.",
+    "file": "app/courses/page.tsx"
+  }
+]

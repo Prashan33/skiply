@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react";
 import Image from "next/image";
 import posthog from "posthog-js";
 import { embedSrc, parseVideoUrl } from "@/lib/video";
+import { attachVideoTracker } from "@/lib/video-tracking";
 
 type Props = {
   videoUrl: string | null;
@@ -16,51 +17,9 @@ type Props = {
   courseSlug: string | null;
 };
 
-/* Minimal YouTube IFrame Player API surface we rely on. */
-type YTPlayer = {
-  getCurrentTime: () => number;
-  getDuration: () => number;
-  destroy: () => void;
-};
-type YTNamespace = {
-  Player: new (
-    el: HTMLElement | string,
-    opts: {
-      events?: {
-        onStateChange?: (e: { data: number }) => void;
-      };
-    },
-  ) => YTPlayer;
-  PlayerState: { PLAYING: number };
-};
-declare global {
-  interface Window {
-    YT?: YTNamespace;
-    onYouTubeIframeAPIReady?: () => void;
-  }
-}
-
-let apiPromise: Promise<YTNamespace> | null = null;
-
-function loadYouTubeApi(): Promise<YTNamespace> {
-  if (typeof window === "undefined") return Promise.reject(new Error("no window"));
-  if (window.YT?.Player) return Promise.resolve(window.YT);
-  if (apiPromise) return apiPromise;
-
-  apiPromise = new Promise<YTNamespace>((resolve) => {
-    const prev = window.onYouTubeIframeAPIReady;
-    window.onYouTubeIframeAPIReady = () => {
-      prev?.();
-      if (window.YT) resolve(window.YT);
-    };
-    if (!document.querySelector('script[src="https://www.youtube.com/iframe_api"]')) {
-      const s = document.createElement("script");
-      s.src = "https://www.youtube.com/iframe_api";
-      document.head.appendChild(s);
-    }
-  });
-  return apiPromise;
-}
+/** Watch-depth milestones (%). Crossing 95 also marks the lesson completed. */
+const MILESTONES = [25, 50, 75, 95] as const;
+const COMPLETE_AT = 95;
 
 export function LessonVideo({
   videoUrl,
@@ -72,83 +31,76 @@ export function LessonVideo({
   courseSlug,
 }: Props) {
   const parsed = parseVideoUrl(videoUrl);
+  const provider = parsed?.provider ?? null;
   const frameRef = useRef<HTMLIFrameElement>(null);
-  const playerRef = useRef<YTPlayer | null>(null);
-  const firedRef = useRef<{ played: boolean; milestones: Set<number>; completed: boolean }>({
+  const fired = useRef({
     played: false,
-    milestones: new Set(),
+    milestones: new Set<number>(),
     completed: false,
+    maxPercent: 0,
+    furthestSeconds: 0,
   });
 
   useEffect(() => {
-    if (parsed?.provider !== "youtube") return;
     const frame = frameRef.current;
-    if (!frame) return;
+    if (!frame || !provider) return;
 
-    let interval: ReturnType<typeof setInterval> | undefined;
-    let cancelled = false;
+    // Stable for the life of the effect — `fired` is a ref that is never reassigned.
+    const state = fired.current;
 
-    const track = () => {
-      const player = playerRef.current;
-      if (!player) return;
-      const duration = player.getDuration();
-      const current = player.getCurrentTime();
-      if (!duration || !Number.isFinite(duration)) return;
-      const percent = Math.floor((current / duration) * 100);
-      const fired = firedRef.current;
-      for (const milestone of [25, 50, 75]) {
-        if (percent >= milestone && !fired.milestones.has(milestone)) {
-          fired.milestones.add(milestone);
-          posthog.capture("video_progress", { lesson_slug: lessonSlug, percent: milestone });
-        }
-      }
-      if (percent >= 95 && !fired.completed) {
-        fired.completed = true;
-        posthog.capture("lesson_completed", {
+    const cleanup = attachVideoTracker(frame, provider, {
+      onPlay: () => {
+        if (state.played) return;
+        state.played = true;
+        posthog.capture("video_played", {
           lesson_slug: lessonSlug,
+          lesson_title: title,
           course_slug: courseSlug,
+          provider,
+          start_seconds: startSeconds,
         });
-      }
-    };
+      },
+      onProgress: ({ percent, currentSeconds }) => {
+        if (percent > state.maxPercent) state.maxPercent = percent;
+        if (currentSeconds > state.furthestSeconds) state.furthestSeconds = currentSeconds;
 
-    loadYouTubeApi()
-      .then((YT) => {
-        if (cancelled || !frameRef.current) return;
-        playerRef.current = new YT.Player(frameRef.current, {
-          events: {
-            onStateChange: (e) => {
-              if (e.data === YT.PlayerState.PLAYING) {
-                if (!firedRef.current.played) {
-                  firedRef.current.played = true;
-                  posthog.capture("video_played", {
-                    lesson_slug: lessonSlug,
-                    lesson_title: title,
-                    course_slug: courseSlug,
-                    provider: "youtube",
-                    start_seconds: startSeconds,
-                  });
-                }
-                if (!interval) interval = setInterval(track, 5000);
-              }
-            },
-          },
-        });
-      })
-      .catch(() => {
-        /* API blocked — embed still plays, just no analytics. */
-      });
+        for (const milestone of MILESTONES) {
+          if (percent >= milestone && !state.milestones.has(milestone)) {
+            state.milestones.add(milestone);
+            posthog.capture("video_watched", {
+              lesson_slug: lessonSlug,
+              course_slug: courseSlug,
+              provider,
+              percent: milestone,
+            });
+          }
+        }
+
+        if (percent >= COMPLETE_AT && !state.completed) {
+          state.completed = true;
+          posthog.capture("lesson_completed", {
+            lesson_slug: lessonSlug,
+            course_slug: courseSlug,
+            completion_trigger: "video",
+            percent,
+          });
+        }
+      },
+    });
 
     return () => {
-      cancelled = true;
-      if (interval) clearInterval(interval);
-      try {
-        playerRef.current?.destroy();
-      } catch {
-        /* noop */
+      cleanup();
+      if (state.played) {
+        posthog.capture("video_watch_depth", {
+          lesson_slug: lessonSlug,
+          course_slug: courseSlug,
+          provider,
+          percent: state.maxPercent,
+          seconds_watched: Math.round(state.furthestSeconds),
+        });
       }
-      playerRef.current = null;
     };
-  }, [parsed?.provider, lessonSlug, courseSlug, title, startSeconds]);
+  }, [provider, lessonSlug, courseSlug, title, startSeconds]);
 
   if (!parsed) {
     return (

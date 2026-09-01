@@ -355,6 +355,15 @@ export default function Home() {
                 <p className="mb-1 text-small text-neutral-500">Popular</p>
                 <Badge variant="popular">Popular</Badge>
               </div>
+              <div>
+                <p className="mb-1 text-small text-neutral-500">
+                  Search result tags
+                </p>
+                <div className="flex gap-2">
+                  <Badge variant="videoTag">Video</Badge>
+                  <Badge variant="lessonTag">Lesson</Badge>
+                </div>
+              </div>
             </div>
           </Section>
 

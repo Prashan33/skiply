@@ -13,6 +13,7 @@ import {
   Link2,
 } from "lucide-react";
 import { urlFor } from "@/sanity/lib/image";
+import { ResourceLink } from "@/components/lesson/ResourceLink";
 import type { LESSON_BY_SLUG_QUERY_RESULT } from "@/sanity.types";
 
 type Lesson = NonNullable<LESSON_BY_SLUG_QUERY_RESULT>;
@@ -114,11 +115,13 @@ export function LessonNotesContent({
   keyPoints,
   proTip,
   resources,
+  lessonSlug,
 }: {
   notes: Notes | null;
   keyPoints: string[] | null;
   proTip: string | null;
   resources: Resource[] | null;
+  lessonSlug: string;
 }) {
   const points = keyPoints ?? [];
   const items = (resources ?? []).filter((r) => r.url);
@@ -169,11 +172,11 @@ export function LessonNotesContent({
             {items.map((resource) => {
               const Icon = resourceIcon(resource.type);
               return (
-                <a
+                <ResourceLink
                   key={resource._key}
                   href={resource.url ?? undefined}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  resourceType={resource.type}
+                  lessonSlug={lessonSlug}
                   className="group flex flex-col rounded-[var(--radius-md)] border border-neutral-200 bg-white p-4 shadow-[var(--shadow-sm)] transition-colors hover:border-neutral-300"
                 >
                   <div className="mb-3 flex items-start justify-between gap-2">
@@ -193,7 +196,7 @@ export function LessonNotesContent({
                       {resource.description}
                     </p>
                   )}
-                </a>
+                </ResourceLink>
               );
             })}
           </div>

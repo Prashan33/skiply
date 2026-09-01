@@ -1,12 +1,10 @@
 import type { Metadata } from "next";
-import { auth } from "@clerk/nextjs/server";
 
 import { Container } from "@/components/ui/Container";
 import { TopNav } from "@/components/ui/Navigation";
 import { SearchResults } from "@/components/search/SearchResults";
 import { getSearchIndex } from "@/sanity/lib/fetch";
 import { urlFor } from "@/sanity/lib/image";
-import { getPostHogClient } from "@/lib/posthog-server";
 import { formatClock } from "@/lib/format";
 import type { SearchIndex, SearchIndexLesson } from "@/lib/search";
 
@@ -77,27 +75,16 @@ export default async function SearchPage({
 }: {
   searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 }) {
-  const [sp, courses, { userId }] = await Promise.all([
-    searchParams,
-    getSearchIndex(),
-    auth(),
-  ]);
+  const [sp, courses] = await Promise.all([searchParams, getSearchIndex()]);
   const query = normalizeQuery(sp.q);
   const index = buildIndex(courses);
 
-  const posthog = getPostHogClient();
-  if (posthog) {
-    posthog.capture({
-      distinctId: userId ?? "anonymous",
-      event: "search_page_viewed",
-      properties: { query: query || null },
-    });
-    await posthog.flush();
-  }
+  // The search itself is captured server-side in app/api/search/route.ts
+  // (`search_performed`); a bare /search visit is covered by autocaptured $pageview.
 
   return (
     <div className="flex flex-1 flex-col bg-neutral-50">
-      <TopNav showActions />
+      <TopNav showActions activeLink="Courses" />
       <Container as="main" className="flex-1 pt-10 pb-16">
         <SearchResults initialQuery={query} index={index} />
       </Container>

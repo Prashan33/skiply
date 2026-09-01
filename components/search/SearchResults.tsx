@@ -4,13 +4,14 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { useObject } from "@ai-sdk/react";
-import { Search, SearchX } from "lucide-react";
+import { ArrowRight, Search, SearchX } from "lucide-react";
 import posthog from "posthog-js";
 
 import { Input } from "@/components/ui/Input";
 import { Select } from "@/components/ui/Select";
 import { ResultCard } from "@/components/search/ResultCard";
 import {
+  groundResults,
   searchResponseSchema,
   type GroundedResult,
   type SearchIndex,
@@ -18,8 +19,8 @@ import {
 
 type SortKey = "relevant" | "course" | "lesson";
 
-const PRIMARY_LINK =
-  "inline-flex h-11 shrink-0 items-center justify-center gap-1.5 rounded-[var(--radius-md)] bg-primary-500 px-4 text-body font-medium text-white transition-colors hover:bg-primary-400";
+const SECONDARY_LINK =
+  "inline-flex h-11 shrink-0 items-center justify-center gap-1.5 rounded-[var(--radius-md)] border border-primary-500 bg-white px-4 text-body font-medium text-primary-500 transition-colors hover:bg-primary-100";
 
 export function SearchResults({
   initialQuery,
@@ -36,36 +37,32 @@ export function SearchResults({
   const [hasSubmitted, setHasSubmitted] = useState(Boolean(initialQuery.trim()));
   const [sort, setSort] = useState<SortKey>("relevant");
 
+  // The query of the request currently in flight — read inside `onFinish`, which
+  // must not depend on render-time state.
+  const inFlightQueryRef = useRef<string>(initialQuery.trim());
+
   const { object, submit, isLoading, error } = useObject({
     api: "/api/search",
     schema: searchResponseSchema,
+    onFinish({ object: finalObject, error: finishError }) {
+      if (finishError) return;
+      const results = groundResults(finalObject?.results, index);
+      const courses = new Set(results.map((r) => r.courseSlug)).size;
+      posthog.capture("search_results_returned", {
+        query: inFlightQueryRef.current,
+        result_count: results.length,
+        course_count: courses,
+        has_results: results.length > 0,
+      });
+    },
   });
 
   // Join the model's slugs against the Sanity-derived index. Anything not in the
   // index (a hallucinated or stale slug) is dropped here.
-  const grounded = useMemo<GroundedResult[]>(() => {
-    const out: GroundedResult[] = [];
-    const seen = new Set<string>();
-    for (const item of object?.results ?? []) {
-      const slug = item?.lessonSlug;
-      if (!slug || seen.has(slug)) continue;
-      const entry = index[slug];
-      if (!entry) continue;
-      seen.add(slug);
-      out.push({
-        ...entry,
-        kind: item?.kind === "video" ? "video" : "lesson",
-        lessonSlug: slug,
-        description: typeof item?.description === "string" ? item.description : "",
-        startSeconds:
-          typeof item?.startSeconds === "number" && item.startSeconds > 0
-            ? Math.floor(item.startSeconds)
-            : 0,
-        relevance: typeof item?.relevance === "number" ? item.relevance : 0,
-      });
-    }
-    return out;
-  }, [object, index]);
+  const grounded = useMemo<GroundedResult[]>(
+    () => groundResults(object?.results, index),
+    [object, index],
+  );
 
   const sorted = useMemo(() => {
     if (sort === "relevant") return grounded;
@@ -95,15 +92,19 @@ export function SearchResults({
     if (!q) return;
     setSubmittedQuery(q);
     setHasSubmitted(true);
+    inFlightQueryRef.current = q;
     router.replace(`/search?q=${encodeURIComponent(q)}`, { scroll: false });
-    submit({ query: q });
+    submit({ query: q, source: "new_search" });
   }
 
   // Run once on load when arriving with ?q= (state is already seeded from the
   // prop; this only kicks off the request).
   useEffect(() => {
     const q = initialQuery.trim().slice(0, 200);
-    if (q) submit({ query: q });
+    if (q) {
+      inFlightQueryRef.current = q;
+      submit({ query: q, source: "initial_load" });
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -120,21 +121,8 @@ export function SearchResults({
     return () => window.removeEventListener("keydown", onKey);
   }, []);
 
-  // One analytics event per settled search.
-  const reportedRef = useRef<string>("");
-  useEffect(() => {
-    if (isLoading || !submittedQuery || reportedRef.current === submittedQuery) return;
-    if (errored) {
-      reportedRef.current = submittedQuery;
-      return;
-    }
-    reportedRef.current = submittedQuery;
-    posthog.capture("search_performed", {
-      query: submittedQuery,
-      result_count: count,
-      course_count: courseCount,
-    });
-  }, [isLoading, submittedQuery, errored, count, courseCount]);
+  // `search_performed` is captured server-side (app/api/search/route.ts).
+  // `search_results_returned` is captured in `useObject`'s `onFinish` above.
 
   const showToolbar = hasSubmitted && !errored;
   const showSkeleton = isLoading && count === 0;
@@ -147,7 +135,7 @@ export function SearchResults({
         <span className="text-small font-semibold uppercase tracking-wide text-primary-500">
           Search Results
         </span>
-        <h1 className="mt-3 font-display text-display-1 text-neutral-900">
+        <h1 className="mt-3 font-display text-display-2 text-neutral-900 sm:text-display-1">
           {submittedQuery ? (
             <>
               Results for{" "}
@@ -179,7 +167,7 @@ export function SearchResults({
         <Input
           ref={inputRef}
           icon
-          shortcut="⌘K"
+          shortcut="⌘ K"
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
           placeholder="Ask anything about your learning..."
@@ -195,7 +183,7 @@ export function SearchResults({
             {count} {count === 1 ? "result" : "results"}
           </span>
           <label className="flex items-center gap-2 text-small text-neutral-500">
-            <span className="sr-only sm:not-sr-only">Sort by</span>
+            <span className="sr-only">Sort by</span>
             <Select
               value={sort}
               onChange={(e) => setSort(e.target.value as SortKey)}
@@ -219,8 +207,9 @@ export function SearchResults({
             <p className="mt-1 text-small text-neutral-500">
               Please try again in a moment, or browse the full catalog.
             </p>
-            <Link href="/courses" className={`${PRIMARY_LINK} mt-4`}>
+            <Link href="/courses" className={`${SECONDARY_LINK} mt-4`}>
               Browse all courses
+              <ArrowRight className="h-4 w-4" strokeWidth={2} />
             </Link>
           </div>
         ) : showSkeleton ? (
@@ -249,11 +238,15 @@ export function SearchResults({
               key={result.lessonSlug}
               result={result}
               onSelect={() =>
-                posthog.capture("search_result_clicked", {
+                posthog.capture("search_result_opened", {
                   query: submittedQuery,
+                  result_type: result.kind,
                   lesson_slug: result.lessonSlug,
-                  kind: result.kind,
+                  course_slug: result.courseSlug,
                   rank: i + 1,
+                  relevance: result.relevance,
+                  start_seconds: result.startSeconds,
+                  result_count: count,
                 })
               }
             />
@@ -276,8 +269,9 @@ export function SearchResults({
             </p>
           </div>
         </div>
-        <Link href="/courses" className={PRIMARY_LINK}>
+        <Link href="/courses" className={SECONDARY_LINK}>
           Browse all courses
+          <ArrowRight className="h-4 w-4" strokeWidth={2} />
         </Link>
       </div>
     </div>

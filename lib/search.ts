@@ -30,8 +30,10 @@ export const searchResultSchema = z.object({
   /**
    * Second to start playback from. Always 0 for now — `video.chapters` /
    * `video.chunks` are empty and there is no ingestion pipeline yet.
+   * No `.default()`: OpenAI strict structured output requires every property in
+   * `required`. The model is told to send 0; the client also coerces it.
    */
-  startSeconds: z.number().int().min(0).default(0),
+  startSeconds: z.number().int().min(0),
   /** The model's own ranking score, 0–1, higher = better. Used as the tiebreak for the default sort. */
   relevance: z.number().min(0).max(1),
 });
@@ -69,3 +71,36 @@ export type SearchIndex = Record<string, SearchIndexLesson>;
 export type GroundedResult = SearchResult & SearchIndexLesson;
 
 export const SEARCH_QUERY_MAX_LENGTH = 200;
+
+/**
+ * Join the model's raw results against the Sanity-derived index, dropping any
+ * slug not in the index (hallucinated or stale) and de-duplicating. Shared by
+ * the results list and the `search_results_returned` analytics event so both see
+ * the same grounded set.
+ */
+export function groundResults(
+  results: ReadonlyArray<Partial<SearchResult> | undefined> | undefined,
+  index: SearchIndex,
+): GroundedResult[] {
+  const out: GroundedResult[] = [];
+  const seen = new Set<string>();
+  for (const item of results ?? []) {
+    const slug = item?.lessonSlug;
+    if (!slug || seen.has(slug)) continue;
+    const entry = index[slug];
+    if (!entry) continue;
+    seen.add(slug);
+    out.push({
+      ...entry,
+      kind: item?.kind === "video" ? "video" : "lesson",
+      lessonSlug: slug,
+      description: typeof item?.description === "string" ? item.description : "",
+      startSeconds:
+        typeof item?.startSeconds === "number" && item.startSeconds > 0
+          ? Math.floor(item.startSeconds)
+          : 0,
+      relevance: typeof item?.relevance === "number" ? item.relevance : 0,
+    });
+  }
+  return out;
+}
