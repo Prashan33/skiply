@@ -1,8 +1,1865 @@
 {
   "id": "fZ4zKgVXOP4",
   "url": "https://www.youtube.com/watch?v=fZ4zKgVXOP4",
-  "fetchedAt": "2026-08-31T05:15:11.848Z",
-  "captionKind": "empty",
+  "fetchedAt": "2026-09-01T04:05:42.338Z",
+  "captionKind": "asr",
   "chapters": [],
-  "cues": []
+  "cues": [
+    {
+      "startSeconds": 0.16,
+      "text": "You have probably heard these terms"
+    },
+    {
+      "startSeconds": 2.08,
+      "text": "before. Preload, prefetch, lazy load and"
+    },
+    {
+      "startSeconds": 5.359,
+      "text": "so on so forth. This sounds familiar and"
+    },
+    {
+      "startSeconds": 8.32,
+      "text": "in different places uh browser, HTML,"
+    },
+    {
+      "startSeconds": 11.679,
+      "text": "JavaScript libraries or frameworks like"
+    },
+    {
+      "startSeconds": 13.84,
+      "text": "a relay, they show up again and again."
+    },
+    {
+      "startSeconds": 17.119,
+      "text": "But what do they actually do? And more"
+    },
+    {
+      "startSeconds": 20,
+      "text": "importantly, how do they help you design"
+    },
+    {
+      "startSeconds": 23.119,
+      "text": "a faster, smoother front-end UI? In this"
+    },
+    {
+      "startSeconds": 27.439,
+      "text": "episode, I will walk you through the"
+    },
+    {
+      "startSeconds": 29.599,
+      "text": "difference between those terms preload,"
+    },
+    {
+      "startSeconds": 32.399,
+      "text": "free fetch, DNS prefetch, how tools like"
+    },
+    {
+      "startSeconds": 35.6,
+      "text": "react query, SWR or relay preload data"
+    },
+    {
+      "startSeconds": 39.92,
+      "text": "and real world examples like hover"
+    },
+    {
+      "startSeconds": 42.719,
+      "text": "trigger dialogue and pre-file cards. By"
+    },
+    {
+      "startSeconds": 46.32,
+      "text": "the end, you will know what to use, when"
+    },
+    {
+      "startSeconds": 49.28,
+      "text": "to use it, and why it matters. Not just"
+    },
+    {
+      "startSeconds": 52.399,
+      "text": "in theory, but in practice. You will see"
+    },
+    {
+      "startSeconds": 55.199,
+      "text": "how preloading the right code or data at"
+    },
+    {
+      "startSeconds": 58.64,
+      "text": "the right time can make your application"
+    },
+    {
+      "startSeconds": 60.879,
+      "text": "fails instant, reduce the number of"
+    },
+    {
+      "startSeconds": 63.76,
+      "text": "spinners, and avoid costly delays."
+    },
+    {
+      "startSeconds": 69.52,
+      "text": "So, modern front-end apps are often"
+    },
+    {
+      "startSeconds": 72.08,
+      "text": "break down into many JavaScript bundles."
+    },
+    {
+      "startSeconds": 74.56,
+      "text": "Your main application logic, third party"
+    },
+    {
+      "startSeconds": 76.88,
+      "text": "libraries, feature modules, and more."
+    },
+    {
+      "startSeconds": 79.68,
+      "text": "This helps keep initial load time low."
+    },
+    {
+      "startSeconds": 82.24,
+      "text": "But it also means that when a user click"
+    },
+    {
+      "startSeconds": 85.04,
+      "text": "a button or popup open a model dialogue,"
+    },
+    {
+      "startSeconds": 88.799,
+      "text": "there might be visible delay as the"
+    },
+    {
+      "startSeconds": 91.36,
+      "text": "browser started to loading everything."
+    },
+    {
+      "startSeconds": 94.32,
+      "text": "But what if we could shift that loading"
+    },
+    {
+      "startSeconds": 97.52,
+      "text": "earlier? What if we could tell the"
+    },
+    {
+      "startSeconds": 99.759,
+      "text": "browser, hey, this is a JavaScript file,"
+    },
+    {
+      "startSeconds": 102,
+      "text": "this font or this API call is likely to"
+    },
+    {
+      "startSeconds": 104.96,
+      "text": "be needed very soon. Start getting it"
+    },
+    {
+      "startSeconds": 108.799,
+      "text": "ready now. That's what preload prefetch"
+    },
+    {
+      "startSeconds": 111.84,
+      "text": "and lid load aim to resolve. Whether"
+    },
+    {
+      "startSeconds": 114.479,
+      "text": "it's using declarative browser hands"
+    },
+    {
+      "startSeconds": 117.2,
+      "text": "like uh the link tag with a preload or"
+    },
+    {
+      "startSeconds": 120.56,
+      "text": "javascript based preload functions in"
+    },
+    {
+      "startSeconds": 122.719,
+      "text": "libraries like sr uh react query and"
+    },
+    {
+      "startSeconds": 125.92,
+      "text": "relay. Those tools help reduce perceived"
+    },
+    {
+      "startSeconds": 129.2,
+      "text": "uh latency and create the snappier"
+    },
+    {
+      "startSeconds": 131.44,
+      "text": "interactions. In this video, we will"
+    },
+    {
+      "startSeconds": 134,
+      "text": "work through the different types of"
+    },
+    {
+      "startSeconds": 135.44,
+      "text": "preloading, how they work under the hood"
+    },
+    {
+      "startSeconds": 138.64,
+      "text": "and when to use each uh so you can build"
+    },
+    {
+      "startSeconds": 142.319,
+      "text": "faster, smarter front-end systems. Let's"
+    },
+    {
+      "startSeconds": 145.68,
+      "text": "start with declarative preloading in"
+    },
+    {
+      "startSeconds": 148.239,
+      "text": "native approach in browser. Modern"
+    },
+    {
+      "startSeconds": 150.56,
+      "text": "borders allows you to express your"
+    },
+    {
+      "startSeconds": 152.48,
+      "text": "intent directly in HTML using tags like"
+    },
+    {
+      "startSeconds": 156.239,
+      "text": "link uh real equals to pre fetch or"
+    },
+    {
+      "startSeconds": 159.76,
+      "text": "preload and the browser decide the"
+    },
+    {
+      "startSeconds": 162.879,
+      "text": "optimal weight and time to act on it."
+    },
+    {
+      "startSeconds": 166.08,
+      "text": "They complement JavaScript based"
+    },
+    {
+      "startSeconds": 168.08,
+      "text": "solution and uh help the browser act"
+    },
+    {
+      "startSeconds": 170.879,
+      "text": "earlier even before any javascript"
+    },
+    {
+      "startSeconds": 173.04,
+      "text": "executes. placing them in header in the"
+    },
+    {
+      "startSeconds": 176.64,
+      "text": "HTML document and give the browser a"
+    },
+    {
+      "startSeconds": 179.28,
+      "text": "head uh start to warm up critical"
+    },
+    {
+      "startSeconds": 181.68,
+      "text": "resources while passing the HTML. Let's"
+    },
+    {
+      "startSeconds": 184.879,
+      "text": "start with the link with a preload as a"
+    },
+    {
+      "startSeconds": 187.599,
+      "text": "real attribute value. So this tells the"
+    },
+    {
+      "startSeconds": 190.56,
+      "text": "browser to start downloading earlier"
+    },
+    {
+      "startSeconds": 192.64,
+      "text": "even before the actual script tag"
+    },
+    {
+      "startSeconds": 194.64,
+      "text": "appears. Use this when you are loading"
+    },
+    {
+      "startSeconds": 196.959,
+      "text": "classic JavaScript uh scripts or fonts"
+    },
+    {
+      "startSeconds": 201.12,
+      "text": "images you know will be needed soon. And"
+    },
+    {
+      "startSeconds": 204.319,
+      "text": "there's a related um value for the real"
+    },
+    {
+      "startSeconds": 207.28,
+      "text": "uh on the link tag uh which is a"
+    },
+    {
+      "startSeconds": 209.2,
+      "text": "profetch. This tell the browser to fetch"
+    },
+    {
+      "startSeconds": 212.239,
+      "text": "the resources when it's idle without"
+    },
+    {
+      "startSeconds": 214.799,
+      "text": "blocking critical tasks. Use this for"
+    },
+    {
+      "startSeconds": 217.92,
+      "text": "resources that might be needed soon like"
+    },
+    {
+      "startSeconds": 221.68,
+      "text": "the next page script or a component but"
+    },
+    {
+      "startSeconds": 225.44,
+      "text": "not immediately. And there is a DNS per"
+    },
+    {
+      "startSeconds": 228.4,
+      "text": "fetch uh value as well. This will start"
+    },
+    {
+      "startSeconds": 231.68,
+      "text": "DNS resolution earlier before any"
+    },
+    {
+      "startSeconds": 234,
+      "text": "JavaScript uh initiates the request. Uh"
+    },
+    {
+      "startSeconds": 237.2,
+      "text": "this is useful when your app needs to"
+    },
+    {
+      "startSeconds": 239.599,
+      "text": "contact a third party API or separate"
+    },
+    {
+      "startSeconds": 242.239,
+      "text": "domain for data so that the as solution"
+    },
+    {
+      "startSeconds": 245.599,
+      "text": "is out of the way when the actual"
+    },
+    {
+      "startSeconds": 248.4,
+      "text": "request happens. Let's dive into it. So"
+    },
+    {
+      "startSeconds": 252.159,
+      "text": "the application we are going to use uh"
+    },
+    {
+      "startSeconds": 254.4,
+      "text": "for demonstrate these ideas is a profile"
+    },
+    {
+      "startSeconds": 258.16,
+      "text": "page. Um basically there is a user uh"
+    },
+    {
+      "startSeconds": 262,
+      "text": "section and there's a friends of this"
+    },
+    {
+      "startSeconds": 264.639,
+      "text": "user section and when you hover on this"
+    },
+    {
+      "startSeconds": 268.08,
+      "text": "um there will be a popup and then at the"
+    },
+    {
+      "startSeconds": 271.759,
+      "text": "end of the page there is also a list of"
+    },
+    {
+      "startSeconds": 273.84,
+      "text": "feeds um you can think of that is um a"
+    },
+    {
+      "startSeconds": 277.36,
+      "text": "feed list or something like that. A user"
+    },
+    {
+      "startSeconds": 279.28,
+      "text": "might interesting in that profile or"
+    },
+    {
+      "startSeconds": 280.96,
+      "text": "like a homepage or timeline page and u"
+    },
+    {
+      "startSeconds": 284.479,
+      "text": "there a few network request for fetching"
+    },
+    {
+      "startSeconds": 287.36,
+      "text": "this information on the showing on the"
+    },
+    {
+      "startSeconds": 289.12,
+      "text": "page and at the moment the if we go to"
+    },
+    {
+      "startSeconds": 292.16,
+      "text": "the code uh actually I have implemented"
+    },
+    {
+      "startSeconds": 295.28,
+      "text": "several uh versions of this uh profile"
+    },
+    {
+      "startSeconds": 298.24,
+      "text": "and we're using the fifth version of it."
+    },
+    {
+      "startSeconds": 300.24,
+      "text": "Uh if we open up the profile uh you can"
+    },
+    {
+      "startSeconds": 304,
+      "text": "see there is a use effect block that"
+    },
+    {
+      "startSeconds": 306.72,
+      "text": "will fetch the user and the friends um"
+    },
+    {
+      "startSeconds": 310.16,
+      "text": "in the use effect block. Um it will send"
+    },
+    {
+      "startSeconds": 313.919,
+      "text": "two request uh simultaneously to get uh"
+    },
+    {
+      "startSeconds": 317.919,
+      "text": "the user by ID and also the friends of"
+    },
+    {
+      "startSeconds": 320.56,
+      "text": "that user by ID as well. And during the"
+    },
+    {
+      "startSeconds": 323.44,
+      "text": "loading status it will showing a user"
+    },
+    {
+      "startSeconds": 325.6,
+      "text": "info skeleton and if something went"
+    },
+    {
+      "startSeconds": 327.759,
+      "text": "wrong it will show the error message."
+    },
+    {
+      "startSeconds": 330.16,
+      "text": "And then once we have that um user info"
+    },
+    {
+      "startSeconds": 332.96,
+      "text": "it will use pass the user to a about um"
+    },
+    {
+      "startSeconds": 336.88,
+      "text": "section which is essentially this name"
+    },
+    {
+      "startSeconds": 340.08,
+      "text": "and description and the avatar. And then"
+    },
+    {
+      "startSeconds": 343.36,
+      "text": "there's a friends list uh that will use"
+    },
+    {
+      "startSeconds": 346.08,
+      "text": "a friends uh array. uh it will show"
+    },
+    {
+      "startSeconds": 349.28,
+      "text": "these three um frames and uh then at the"
+    },
+    {
+      "startSeconds": 355.039,
+      "text": "bottom there's a feeds uh which is"
+    },
+    {
+      "startSeconds": 358.32,
+      "text": "corresponding to this section and I have"
+    },
+    {
+      "startSeconds": 360.56,
+      "text": "add a few uh fixed delays for this a API"
+    },
+    {
+      "startSeconds": 364,
+      "text": "endpoint so when we are uh heading to"
+    },
+    {
+      "startSeconds": 367.44,
+      "text": "this API it will have um a few seconds"
+    },
+    {
+      "startSeconds": 370.88,
+      "text": "delay that's pretty much about the setup"
+    },
+    {
+      "startSeconds": 373.84,
+      "text": "and if we now go to the page and do a"
+    },
+    {
+      "startSeconds": 376.88,
+      "text": "refresh"
+    },
+    {
+      "startSeconds": 377.919,
+      "text": "You can see that some skeleton shows up"
+    },
+    {
+      "startSeconds": 380.72,
+      "text": "uh first on these user and friends and"
+    },
+    {
+      "startSeconds": 383.6,
+      "text": "then your feed list. Um let's do it"
+    },
+    {
+      "startSeconds": 386,
+      "text": "again. Uh if I inspect the network and"
+    },
+    {
+      "startSeconds": 390.4,
+      "text": "do a refresh of the page. Um and you can"
+    },
+    {
+      "startSeconds": 393.36,
+      "text": "see that the local host is a HTML"
+    },
+    {
+      "startSeconds": 396.319,
+      "text": "document is loaded first"
+    },
+    {
+      "startSeconds": 399.199,
+      "text": "and then in it it has the reference to"
+    },
+    {
+      "startSeconds": 401.919,
+      "text": "the script. The index uh JS is loaded"
+    },
+    {
+      "startSeconds": 405.52,
+      "text": "and the index. CSS is loaded as well."
+    },
+    {
+      "startSeconds": 408.479,
+      "text": "And later on uh as we have the"
+    },
+    {
+      "startSeconds": 410.72,
+      "text": "JavaScript uh the U user API and also"
+    },
+    {
+      "startSeconds": 414.96,
+      "text": "the user friends API are kicked off uh"
+    },
+    {
+      "startSeconds": 418.4,
+      "text": "and simultaneously and then there will"
+    },
+    {
+      "startSeconds": 420.56,
+      "text": "be some other resources loaded um as"
+    },
+    {
+      "startSeconds": 423.28,
+      "text": "well. Uh but you can see that there is a"
+    },
+    {
+      "startSeconds": 425.919,
+      "text": "clear um timeline here. If I use the"
+    },
+    {
+      "startSeconds": 429.759,
+      "text": "performance tab instead, let's do"
+    },
+    {
+      "startSeconds": 432,
+      "text": "another refresh"
+    },
+    {
+      "startSeconds": 434.24,
+      "text": "um to profile the current uh"
+    },
+    {
+      "startSeconds": 437.12,
+      "text": "implementation. We can see that"
+    },
+    {
+      "startSeconds": 440.56,
+      "text": "uh if I zoom in the network here."
+    },
+    {
+      "startSeconds": 444.16,
+      "text": "Um so you can see the"
+    },
+    {
+      "startSeconds": 447.36,
+      "text": "uh HTML document is kicked off at this"
+    },
+    {
+      "startSeconds": 449.599,
+      "text": "point and then index.js JS and uh CSS"
+    },
+    {
+      "startSeconds": 454.319,
+      "text": "and there's some passing work here and"
+    },
+    {
+      "startSeconds": 458.479,
+      "text": "then the user and the friends uh request"
+    },
+    {
+      "startSeconds": 462.16,
+      "text": "are kicked off. So there's some gap"
+    },
+    {
+      "startSeconds": 464.16,
+      "text": "here. You can see there's some delay."
+    },
+    {
+      "startSeconds": 466.479,
+      "text": "It's not very obvious when you refresh"
+    },
+    {
+      "startSeconds": 468.479,
+      "text": "the page to see that delay. But uh when"
+    },
+    {
+      "startSeconds": 471.039,
+      "text": "you profile it, you can see that much"
+    },
+    {
+      "startSeconds": 472.72,
+      "text": "cleaner uh in here because the API call"
+    },
+    {
+      "startSeconds": 475.84,
+      "text": "is time consuming. It's it has some"
+    },
+    {
+      "startSeconds": 478.24,
+      "text": "significant delay. What if we can make"
+    },
+    {
+      "startSeconds": 480.879,
+      "text": "that happen earlier on the timeline? So"
+    },
+    {
+      "startSeconds": 484.879,
+      "text": "that's where the preload tag come in. So"
+    },
+    {
+      "startSeconds": 487.52,
+      "text": "if we go to the index.html"
+    },
+    {
+      "startSeconds": 490.479,
+      "text": "and in here, so before the script and"
+    },
+    {
+      "startSeconds": 493.84,
+      "text": "every other resources, we can ask the"
+    },
+    {
+      "startSeconds": 496.319,
+      "text": "browser to preload um the API. So"
+    },
+    {
+      "startSeconds": 500.319,
+      "text": "basically we'll do a link um tag with a"
+    },
+    {
+      "startSeconds": 503.68,
+      "text": "real equals to uh preload and we want to"
+    },
+    {
+      "startSeconds": 507.28,
+      "text": "treat this preload as a simple uh fetch"
+    },
+    {
+      "startSeconds": 510.8,
+      "text": "and for the cross original we just put"
+    },
+    {
+      "startSeconds": 513.279,
+      "text": "that an anonymous and the reference for"
+    },
+    {
+      "startSeconds": 515.839,
+      "text": "this uh will be the URL we are sending"
+    },
+    {
+      "startSeconds": 518.719,
+      "text": "the request to and we want to send the"
+    },
+    {
+      "startSeconds": 521.44,
+      "text": "request to this uh endpoint uh at very"
+    },
+    {
+      "startSeconds": 525.6,
+      "text": "earlier stage in here like so. So this"
+    },
+    {
+      "startSeconds": 528.72,
+      "text": "basically tell the browser to preload"
+    },
+    {
+      "startSeconds": 530.48,
+      "text": "this resource as early as possible even"
+    },
+    {
+      "startSeconds": 533.36,
+      "text": "before the script uh or the u CSS and"
+    },
+    {
+      "startSeconds": 537.76,
+      "text": "also we want to load the friends for"
+    },
+    {
+      "startSeconds": 540.48,
+      "text": "this user"
+    },
+    {
+      "startSeconds": 542.8,
+      "text": "as early as possible and with this tags"
+    },
+    {
+      "startSeconds": 545.36,
+      "text": "if now we go back to our browser and do"
+    },
+    {
+      "startSeconds": 548.24,
+      "text": "another refresh"
+    },
+    {
+      "startSeconds": 550.64,
+      "text": "uh to fulfilling the current uh change."
+    },
+    {
+      "startSeconds": 553.68,
+      "text": "So you will notice here that the as we"
+    },
+    {
+      "startSeconds": 556.72,
+      "text": "are sending the request for the uh uh"
+    },
+    {
+      "startSeconds": 559.12,
+      "text": "HTML document the user API and the"
+    },
+    {
+      "startSeconds": 564,
+      "text": "friends API are kicked off uh instantly"
+    },
+    {
+      "startSeconds": 567.04,
+      "text": "along with the index.js and index CSS"
+    },
+    {
+      "startSeconds": 571.6,
+      "text": "that move the load much earlier so that"
+    },
+    {
+      "startSeconds": 575.04,
+      "text": "will be resolved earlier so we have a"
+    },
+    {
+      "startSeconds": 577.76,
+      "text": "faster UI alternately. And if we go back"
+    },
+    {
+      "startSeconds": 580.72,
+      "text": "to our application doing a refresh, uh"
+    },
+    {
+      "startSeconds": 583.76,
+      "text": "we can see some slightly faster UI here."
+    },
+    {
+      "startSeconds": 588.08,
+      "text": "And in the network tab, we can see that"
+    },
+    {
+      "startSeconds": 589.92,
+      "text": "the user and friends request are sending"
+    },
+    {
+      "startSeconds": 592.8,
+      "text": "out very earlier after the uh document"
+    },
+    {
+      "startSeconds": 596.08,
+      "text": "right away. We have this user and"
+    },
+    {
+      "startSeconds": 598.72,
+      "text": "friends sending out. And if we inspect"
+    },
+    {
+      "startSeconds": 601.04,
+      "text": "this column here, um, open up the"
+    },
+    {
+      "startSeconds": 604.72,
+      "text": "priority,"
+    },
+    {
+      "startSeconds": 606.24,
+      "text": "uh, you can see that the HTML document"
+    },
+    {
+      "startSeconds": 608.48,
+      "text": "has a highest priority. And then we have"
+    },
+    {
+      "startSeconds": 610.959,
+      "text": "this user with a high priority. And also"
+    },
+    {
+      "startSeconds": 614.399,
+      "text": "the friends has a high priority. And"
+    },
+    {
+      "startSeconds": 616.48,
+      "text": "also you can see that the uh, HTTP"
+    },
+    {
+      "startSeconds": 619.279,
+      "text": "request happened much earlier than the"
+    },
+    {
+      "startSeconds": 621.36,
+      "text": "index.js and the CSS. That's why it will"
+    },
+    {
+      "startSeconds": 624.88,
+      "text": "uh, render much faster. So why not use"
+    },
+    {
+      "startSeconds": 627.36,
+      "text": "preload for everything if it's that"
+    },
+    {
+      "startSeconds": 629.76,
+      "text": "good? Because the preload is treated as"
+    },
+    {
+      "startSeconds": 633.04,
+      "text": "high priority by the browser. It starts"
+    },
+    {
+      "startSeconds": 636.079,
+      "text": "uh downloading immediately competing"
+    },
+    {
+      "startSeconds": 638.64,
+      "text": "with critical script and assets. If the"
+    },
+    {
+      "startSeconds": 641.92,
+      "text": "preloaded resource is not used soon, it"
+    },
+    {
+      "startSeconds": 645.2,
+      "text": "can hurt uh initial performance. Use"
+    },
+    {
+      "startSeconds": 647.6,
+      "text": "wisely to strike the right balance. And"
+    },
+    {
+      "startSeconds": 650.959,
+      "text": "also we notice that there are some uh"
+    },
+    {
+      "startSeconds": 653.36,
+      "text": "third party um domains we are accessing"
+    },
+    {
+      "startSeconds": 656.72,
+      "text": "for the user avatar. These images are"
+    },
+    {
+      "startSeconds": 659.68,
+      "text": "from the u pr avatar.cc this domain. And"
+    },
+    {
+      "startSeconds": 664.72,
+      "text": "if you want this happen earlier"
+    },
+    {
+      "startSeconds": 668,
+      "text": "um we can put this DNS um into a link um"
+    },
+    {
+      "startSeconds": 672.88,
+      "text": "as well. So basically we can implement"
+    },
+    {
+      "startSeconds": 675.04,
+      "text": "that by saying link um the real is DNI"
+    },
+    {
+      "startSeconds": 679.519,
+      "text": "prefetch u and we want to provide that h"
+    },
+    {
+      "startSeconds": 683.68,
+      "text": "ref to uh this domain. So what it does"
+    },
+    {
+      "startSeconds": 687.44,
+      "text": "is it will try to resolve this uh DNS"
+    },
+    {
+      "startSeconds": 691.519,
+      "text": "name to the IP address as early as"
+    },
+    {
+      "startSeconds": 694.48,
+      "text": "possible. So when we actually accessing"
+    },
+    {
+      "startSeconds": 697.44,
+      "text": "these uh images or loading the images in"
+    },
+    {
+      "startSeconds": 700.56,
+      "text": "a user avatar they'll be much faster"
+    },
+    {
+      "startSeconds": 703.36,
+      "text": "because the DNS is has already been"
+    },
+    {
+      "startSeconds": 706,
+      "text": "resolved. So this is where you use a DNS"
+    },
+    {
+      "startSeconds": 708.48,
+      "text": "prefetch. Um it might not very uh"
+    },
+    {
+      "startSeconds": 712.48,
+      "text": "noticeable in our keys here because we"
+    },
+    {
+      "startSeconds": 715.44,
+      "text": "have already have cache the DNS has"
+    },
+    {
+      "startSeconds": 717.68,
+      "text": "already been activated as we are"
+    },
+    {
+      "startSeconds": 720.32,
+      "text": "accessing but you got the idea"
+    },
+    {
+      "startSeconds": 722.399,
+      "text": "especially for the first time when user"
+    },
+    {
+      "startSeconds": 724.16,
+      "text": "accessing your application well your"
+    },
+    {
+      "startSeconds": 726,
+      "text": "application is accessing some third"
+    },
+    {
+      "startSeconds": 727.6,
+      "text": "party um domain which you haven't in"
+    },
+    {
+      "startSeconds": 731.04,
+      "text": "your browser accessed before and that"
+    },
+    {
+      "startSeconds": 733.44,
+      "text": "DNS prefetch will make your application"
+    },
+    {
+      "startSeconds": 735.36,
+      "text": "much faster. This is a declarative way"
+    },
+    {
+      "startSeconds": 737.92,
+      "text": "to implement the preload and we call it"
+    },
+    {
+      "startSeconds": 740.8,
+      "text": "a declarative."
+    },
+    {
+      "startSeconds": 742.56,
+      "text": "Um what does that mean is that you"
+    },
+    {
+      "startSeconds": 745.519,
+      "text": "describe uh what should happen not how."
+    },
+    {
+      "startSeconds": 749.279,
+      "text": "In HTML you say I want this resource"
+    },
+    {
+      "startSeconds": 752.639,
+      "text": "loaded earlier and the browser figure"
+    },
+    {
+      "startSeconds": 755.44,
+      "text": "out how and when to do it. Same in React"
+    },
+    {
+      "startSeconds": 759.76,
+      "text": "you declare the UI reactive figure out"
+    },
+    {
+      "startSeconds": 762.88,
+      "text": "what to render. This model makes the"
+    },
+    {
+      "startSeconds": 765.279,
+      "text": "code uh easier to reason about and give"
+    },
+    {
+      "startSeconds": 768.48,
+      "text": "the browser or framework flexibility to"
+    },
+    {
+      "startSeconds": 771.6,
+      "text": "optimize under the hood. You should"
+    },
+    {
+      "startSeconds": 773.839,
+      "text": "consider using the native browser based"
+    },
+    {
+      "startSeconds": 776.639,
+      "text": "uh approach uh whenever possible. It's"
+    },
+    {
+      "startSeconds": 779.6,
+      "text": "simple, reliable and give you uh"
+    },
+    {
+      "startSeconds": 782.639,
+      "text": "performance benefit out of the box"
+    },
+    {
+      "startSeconds": 784.88,
+      "text": "without worrying about um polyfills or"
+    },
+    {
+      "startSeconds": 788.24,
+      "text": "compatibility problems. But when native"
+    },
+    {
+      "startSeconds": 791.519,
+      "text": "option don't quite fit like when you"
+    },
+    {
+      "startSeconds": 794.32,
+      "text": "want to preload resources conditionally"
+    },
+    {
+      "startSeconds": 797.279,
+      "text": "based on uh user behavior this is where"
+    },
+    {
+      "startSeconds": 800.56,
+      "text": "JavaScript based solution come in."
+    },
+    {
+      "startSeconds": 803.519,
+      "text": "Libraries like SWR react query or relay"
+    },
+    {
+      "startSeconds": 807.36,
+      "text": "let you preload dynamically uh in"
+    },
+    {
+      "startSeconds": 809.76,
+      "text": "response to uh user interactions like"
+    },
+    {
+      "startSeconds": 812.56,
+      "text": "hover or scroll. Those tools give you"
+    },
+    {
+      "startSeconds": 815.279,
+      "text": "more control and the flexibilities to uh"
+    },
+    {
+      "startSeconds": 818.24,
+      "text": "optimize performance precisely where it"
+    },
+    {
+      "startSeconds": 821.6,
+      "text": "matters. Let's now have a look at this"
+    },
+    {
+      "startSeconds": 824.399,
+      "text": "in action. So for example in the friends"
+    },
+    {
+      "startSeconds": 827.12,
+      "text": "list avatar there there is a avatar here"
+    },
+    {
+      "startSeconds": 830.32,
+      "text": "when you hover on it we want to load the"
+    },
+    {
+      "startSeconds": 833.68,
+      "text": "data for this user detail and when you"
+    },
+    {
+      "startSeconds": 836.24,
+      "text": "click it it will open the model dialogue"
+    },
+    {
+      "startSeconds": 840.32,
+      "text": "uh to show this user's detail"
+    },
+    {
+      "startSeconds": 842.88,
+      "text": "information and for such case we cannot"
+    },
+    {
+      "startSeconds": 845.519,
+      "text": "like predict the user will click that"
+    },
+    {
+      "startSeconds": 848.56,
+      "text": "because they may or may not click the uh"
+    },
+    {
+      "startSeconds": 851.6,
+      "text": "particular friend at all. So we want to"
+    },
+    {
+      "startSeconds": 855.839,
+      "text": "uh dynamically at the this point to load"
+    },
+    {
+      "startSeconds": 860,
+      "text": "this um data and the javascript bundle"
+    },
+    {
+      "startSeconds": 862.88,
+      "text": "for this uh model dialogue or this"
+    },
+    {
+      "startSeconds": 865.12,
+      "text": "popup. So that can be implemented in a"
+    },
+    {
+      "startSeconds": 867.68,
+      "text": "different approach uh with the"
+    },
+    {
+      "startSeconds": 869.76,
+      "text": "javascript uh per loading. React"
+    },
+    {
+      "startSeconds": 872.32,
+      "text": "provides a built-in API for code"
+    },
+    {
+      "startSeconds": 875.12,
+      "text": "splitting with react lazy and suspense."
+    },
+    {
+      "startSeconds": 878.16,
+      "text": "It allows you to load components only"
+    },
+    {
+      "startSeconds": 881.199,
+      "text": "when they are needed and show a fullback"
+    },
+    {
+      "startSeconds": 883.92,
+      "text": "like a spinner or skeleton component"
+    },
+    {
+      "startSeconds": 886.959,
+      "text": "while uh they are doing the fetch. Uh if"
+    },
+    {
+      "startSeconds": 889.76,
+      "text": "you're new to this pattern, I actually"
+    },
+    {
+      "startSeconds": 892.079,
+      "text": "had a whole video covering the rack lazy"
+    },
+    {
+      "startSeconds": 894.8,
+      "text": "and suspense in depth. Uh check them out"
+    },
+    {
+      "startSeconds": 897.279,
+      "text": "uh first if you would like a refresher."
+    },
+    {
+      "startSeconds": 899.76,
+      "text": "Uh let's forget the declarative approach"
+    },
+    {
+      "startSeconds": 902.24,
+      "text": "for a little bit and go to our"
+    },
+    {
+      "startSeconds": 904.16,
+      "text": "application and the profile. And now if"
+    },
+    {
+      "startSeconds": 907.519,
+      "text": "we go to a friends list"
+    },
+    {
+      "startSeconds": 911.199,
+      "text": "and we can see that in here I'm using"
+    },
+    {
+      "startSeconds": 914.079,
+      "text": "rec lazy and suspense API uh combination"
+    },
+    {
+      "startSeconds": 918.079,
+      "text": "to make this a lazy loading. So"
+    },
+    {
+      "startSeconds": 921.04,
+      "text": "basically uh we are importing this"
+    },
+    {
+      "startSeconds": 923.6,
+      "text": "friend.tsx tsx. Uh so that will be"
+    },
+    {
+      "startSeconds": 925.92,
+      "text": "bundled in a separate uh bundle and um"
+    },
+    {
+      "startSeconds": 929.92,
+      "text": "the suspense API will work with this uh"
+    },
+    {
+      "startSeconds": 932.88,
+      "text": "lazy bundle and during the loading"
+    },
+    {
+      "startSeconds": 935.92,
+      "text": "experience it can show a skeleton and"
+    },
+    {
+      "startSeconds": 938.72,
+      "text": "once the friends is loaded it can"
+    },
+    {
+      "startSeconds": 941.44,
+      "text": "finally use data. So if you go to the"
+    },
+    {
+      "startSeconds": 944.079,
+      "text": "friend uh component there's a popover um"
+    },
+    {
+      "startSeconds": 947.92,
+      "text": "component that has a trigger and a"
+    },
+    {
+      "startSeconds": 950.24,
+      "text": "content. So basically this trigger is"
+    },
+    {
+      "startSeconds": 952.32,
+      "text": "like a button we click and then it will"
+    },
+    {
+      "startSeconds": 955.36,
+      "text": "show up the content uh of this um user"
+    },
+    {
+      "startSeconds": 960.48,
+      "text": "detail. So in here we have a brief"
+    },
+    {
+      "startSeconds": 963.199,
+      "text": "component that is using the user that is"
+    },
+    {
+      "startSeconds": 966,
+      "text": "wrapped uh inside a button a headless"
+    },
+    {
+      "startSeconds": 968.88,
+      "text": "button. So we have defined a on mouse"
+    },
+    {
+      "startSeconds": 971.279,
+      "text": "enter uh here basically it will like"
+    },
+    {
+      "startSeconds": 975.04,
+      "text": "trigger the most enter uh handler"
+    },
+    {
+      "startSeconds": 978.8,
+      "text": "whenever a user hover onto this uh"
+    },
+    {
+      "startSeconds": 981.839,
+      "text": "trigger which is the user avatar here."
+    },
+    {
+      "startSeconds": 984.399,
+      "text": "So if we inspect the component let me"
+    },
+    {
+      "startSeconds": 987.12,
+      "text": "put this into the bottom of the page"
+    },
+    {
+      "startSeconds": 991.04,
+      "text": "like so and do a refresh and let me"
+    },
+    {
+      "startSeconds": 994.959,
+      "text": "clean the network. So if I hover on the"
+    },
+    {
+      "startSeconds": 998.399,
+      "text": "avatar immediately you can see a details"
+    },
+    {
+      "startSeconds": 1002.32,
+      "text": "API is triggered. So that will load the"
+    },
+    {
+      "startSeconds": 1006.079,
+      "text": "details for the user two. And if I hover"
+    },
+    {
+      "startSeconds": 1009.759,
+      "text": "on the other one the Bob Smith it will"
+    },
+    {
+      "startSeconds": 1013.68,
+      "text": "uh load the user three. This happens"
+    },
+    {
+      "startSeconds": 1016.88,
+      "text": "because we have a preload from SWR which"
+    },
+    {
+      "startSeconds": 1021.6,
+      "text": "is a library that can maintain a cache"
+    },
+    {
+      "startSeconds": 1025.36,
+      "text": "that has the API u pass to data mapping."
+    },
+    {
+      "startSeconds": 1029.919,
+      "text": "You can think of that as a hashmap uh or"
+    },
+    {
+      "startSeconds": 1032.4,
+      "text": "something like that and um the key of"
+    },
+    {
+      "startSeconds": 1034.799,
+      "text": "that map is the um API um path and the"
+    },
+    {
+      "startSeconds": 1040,
+      "text": "result is the um the response from"
+    },
+    {
+      "startSeconds": 1042.959,
+      "text": "server side. So that means when uh we"
+    },
+    {
+      "startSeconds": 1045.839,
+      "text": "handle MOS enter we'll preload this"
+    },
+    {
+      "startSeconds": 1049.6,
+      "text": "cache or like refresh the cache uh under"
+    },
+    {
+      "startSeconds": 1051.919,
+      "text": "the hood uh that means that we will"
+    },
+    {
+      "startSeconds": 1054.4,
+      "text": "download the details into a uh local"
+    },
+    {
+      "startSeconds": 1058.4,
+      "text": "inmemory cache. So and inside the user"
+    },
+    {
+      "startSeconds": 1061.52,
+      "text": "detail card which is the place where we"
+    },
+    {
+      "startSeconds": 1063.76,
+      "text": "use the data. Uh if we go to the uh user"
+    },
+    {
+      "startSeconds": 1067.52,
+      "text": "detail card"
+    },
+    {
+      "startSeconds": 1069.44,
+      "text": "uh we are using the use SWR"
+    },
+    {
+      "startSeconds": 1072.72,
+      "text": "uh for this particular key uh and"
+    },
+    {
+      "startSeconds": 1075.52,
+      "text": "because the data has already been"
+    },
+    {
+      "startSeconds": 1077.6,
+      "text": "downloaded where we most enter it. So in"
+    },
+    {
+      "startSeconds": 1080.96,
+      "text": "here in the user detail card it can get"
+    },
+    {
+      "startSeconds": 1083.679,
+      "text": "this uh data right away from the cache."
+    },
+    {
+      "startSeconds": 1086.32,
+      "text": "It's already there. Um and then it can"
+    },
+    {
+      "startSeconds": 1089.6,
+      "text": "use the data as a details to show the"
+    },
+    {
+      "startSeconds": 1093.28,
+      "text": "header uh in the paragraph as well. So"
+    },
+    {
+      "startSeconds": 1095.679,
+      "text": "that's why you see that so quick. So"
+    },
+    {
+      "startSeconds": 1098.64,
+      "text": "when you click it you can see that data"
+    },
+    {
+      "startSeconds": 1100.96,
+      "text": "immediately. So that means when you"
+    },
+    {
+      "startSeconds": 1102.799,
+      "text": "hover it will download or preload the"
+    },
+    {
+      "startSeconds": 1105.76,
+      "text": "data and when you click it will open up"
+    },
+    {
+      "startSeconds": 1108.799,
+      "text": "this uh model dialogue with the data"
+    },
+    {
+      "startSeconds": 1111.28,
+      "text": "already fetched. And there is one more"
+    },
+    {
+      "startSeconds": 1113.36,
+      "text": "request sending out while we open up"
+    },
+    {
+      "startSeconds": 1115.76,
+      "text": "this uh model dialogue which is the"
+    },
+    {
+      "startSeconds": 1118.08,
+      "text": "image. Uh if we can catch the image"
+    },
+    {
+      "startSeconds": 1121.36,
+      "text": "somewhere uh in the local that will make"
+    },
+    {
+      "startSeconds": 1124.4,
+      "text": "the uh user experience even better. Uh"
+    },
+    {
+      "startSeconds": 1127.679,
+      "text": "for example at the moment when we click"
+    },
+    {
+      "startSeconds": 1130,
+      "text": "it it will always load the image uh from"
+    },
+    {
+      "startSeconds": 1132.96,
+      "text": "scratch. Um but yeah we can enhance that"
+    },
+    {
+      "startSeconds": 1136.4,
+      "text": "experience by caching this data or the"
+    },
+    {
+      "startSeconds": 1139.2,
+      "text": "image data somewhere because the cache"
+    },
+    {
+      "startSeconds": 1141.6,
+      "text": "is maintained by HWR it can handle all"
+    },
+    {
+      "startSeconds": 1144.88,
+      "text": "the dduplication"
+    },
+    {
+      "startSeconds": 1147.039,
+      "text": "the cache the cache invalidation"
+    },
+    {
+      "startSeconds": 1150.08,
+      "text": "uh all these um you know even"
+    },
+    {
+      "startSeconds": 1152.32,
+      "text": "cancellation under the hood um"
+    },
+    {
+      "startSeconds": 1154.48,
+      "text": "automatically that can save us quite a"
+    },
+    {
+      "startSeconds": 1156.64,
+      "text": "lot of effort on the um maintaining this"
+    },
+    {
+      "startSeconds": 1159.6,
+      "text": "pre-loading behavior. Similarly in react"
+    },
+    {
+      "startSeconds": 1162.08,
+      "text": "query uh in relay they have the similar"
+    },
+    {
+      "startSeconds": 1165.28,
+      "text": "implementation details. Basically, they"
+    },
+    {
+      "startSeconds": 1167.2,
+      "text": "have a big map or a hash um store in the"
+    },
+    {
+      "startSeconds": 1172.08,
+      "text": "browser memory and when you hover or"
+    },
+    {
+      "startSeconds": 1176,
+      "text": "scroll to trigger a network request, it"
+    },
+    {
+      "startSeconds": 1179.44,
+      "text": "will firstly look up in the cache first"
+    },
+    {
+      "startSeconds": 1181.919,
+      "text": "and see if there's already a data and"
+    },
+    {
+      "startSeconds": 1184.64,
+      "text": "you can use this data from the cache uh"
+    },
+    {
+      "startSeconds": 1187.2,
+      "text": "immediately to show something on the"
+    },
+    {
+      "startSeconds": 1190.4,
+      "text": "screen. Under the hood, it will send"
+    },
+    {
+      "startSeconds": 1192.72,
+      "text": "another request to invalidate the uh"
+    },
+    {
+      "startSeconds": 1195.6,
+      "text": "cache and once the response is back, the"
+    },
+    {
+      "startSeconds": 1198.16,
+      "text": "library can refresh the cache and the UI"
+    },
+    {
+      "startSeconds": 1200.559,
+      "text": "will be refreshed again automatically."
+    },
+    {
+      "startSeconds": 1203.039,
+      "text": "This is how you do the preloading um"
+    },
+    {
+      "startSeconds": 1205.919,
+      "text": "with React libraries. It's a little bit"
+    },
+    {
+      "startSeconds": 1208.32,
+      "text": "more complicated than the link"
+    },
+    {
+      "startSeconds": 1210.72,
+      "text": "declarative um way, but it also give you"
+    },
+    {
+      "startSeconds": 1214.08,
+      "text": "more uh control, more flexibility"
+    },
+    {
+      "startSeconds": 1217.44,
+      "text": "um to do that with code. And if you want"
+    },
+    {
+      "startSeconds": 1219.84,
+      "text": "to look into the every uh code"
+    },
+    {
+      "startSeconds": 1222.16,
+      "text": "implementation details, I have already"
+    },
+    {
+      "startSeconds": 1224.16,
+      "text": "published a tutorial in my website"
+    },
+    {
+      "startSeconds": 1226.88,
+      "text": "icodit.com.eu"
+    },
+    {
+      "startSeconds": 1228.88,
+      "text": "and there is a tutorial here uh which is"
+    },
+    {
+      "startSeconds": 1233.44,
+      "text": "talking about the advanced data fetching"
+    },
+    {
+      "startSeconds": 1235.679,
+      "text": "patterns in react uh and you can uh see"
+    },
+    {
+      "startSeconds": 1239.919,
+      "text": "the profetching techniques in react"
+    },
+    {
+      "startSeconds": 1243.039,
+      "text": "applications. It has more detailed"
+    },
+    {
+      "startSeconds": 1245.36,
+      "text": "explanation in articular. Please feel"
+    },
+    {
+      "startSeconds": 1247.76,
+      "text": "free to have a look and let me know if"
+    },
+    {
+      "startSeconds": 1249.84,
+      "text": "you have any following up questions."
+    },
+    {
+      "startSeconds": 1256.559,
+      "text": "So those techniques are most useful when"
+    },
+    {
+      "startSeconds": 1258.96,
+      "text": "you can confidently predict the users's"
+    },
+    {
+      "startSeconds": 1262.72,
+      "text": "next step model uh or dialogue that"
+    },
+    {
+      "startSeconds": 1266,
+      "text": "opens on user in interactions. uh the"
+    },
+    {
+      "startSeconds": 1269.52,
+      "text": "product card with a quick review um or"
+    },
+    {
+      "startSeconds": 1272.96,
+      "text": "preview uh router transitions between uh"
+    },
+    {
+      "startSeconds": 1276.88,
+      "text": "large pages. They can significantly"
+    },
+    {
+      "startSeconds": 1279.52,
+      "text": "improve the uh perceived performance by"
+    },
+    {
+      "startSeconds": 1282.48,
+      "text": "getting resource earlier before the user"
+    },
+    {
+      "startSeconds": 1285.52,
+      "text": "even notice a delay. And uh on the other"
+    },
+    {
+      "startSeconds": 1288.159,
+      "text": "hand uh there are cases you shouldn't"
+    },
+    {
+      "startSeconds": 1290.559,
+      "text": "use them. U so be cautious uh in this"
+    },
+    {
+      "startSeconds": 1294,
+      "text": "situations. Uh for example, if you have"
+    },
+    {
+      "startSeconds": 1296.159,
+      "text": "a heavy date and a large JavaScript"
+    },
+    {
+      "startSeconds": 1298.32,
+      "text": "chunks that user might never use but you"
+    },
+    {
+      "startSeconds": 1301.6,
+      "text": "decide to preload it or some mobile"
+    },
+    {
+      "startSeconds": 1303.919,
+      "text": "devices u on a slow network and"
+    },
+    {
+      "startSeconds": 1307.039,
+      "text": "unpredictable user pathies will peret"
+    },
+    {
+      "startSeconds": 1309.84,
+      "text": "guess work uh goes wrong overusing"
+    },
+    {
+      "startSeconds": 1313.039,
+      "text": "profetch or preload can backfire uh"
+    },
+    {
+      "startSeconds": 1316.159,
+      "text": "wasting bandwise or even slower down the"
+    },
+    {
+      "startSeconds": 1319.52,
+      "text": "critical path. So they are not just like"
+    },
+    {
+      "startSeconds": 1322.24,
+      "text": "a technical terms uh fancy words. They"
+    },
+    {
+      "startSeconds": 1325.2,
+      "text": "are your performance levels tools that"
+    },
+    {
+      "startSeconds": 1328,
+      "text": "let you take control of the user"
+    },
+    {
+      "startSeconds": 1330.159,
+      "text": "experience by reducing perceived uh"
+    },
+    {
+      "startSeconds": 1332.96,
+      "text": "waiting times uh minimize the layout"
+    },
+    {
+      "startSeconds": 1335.12,
+      "text": "shift and improving responsiveness."
+    },
+    {
+      "startSeconds": 1338.08,
+      "text": "If you done that right, they make your"
+    },
+    {
+      "startSeconds": 1340.48,
+      "text": "UI feel faster. They help you and"
+    },
+    {
+      "startSeconds": 1343.52,
+      "text": "anticipate what the user might do and"
+    },
+    {
+      "startSeconds": 1346.159,
+      "text": "made them there before they even click."
+    },
+    {
+      "startSeconds": 1349.76,
+      "text": "If you learned something today, leave a"
+    },
+    {
+      "startSeconds": 1351.679,
+      "text": "comment below and I'd love to hear uh"
+    },
+    {
+      "startSeconds": 1354.72,
+      "text": "how you are using these techniques. And"
+    },
+    {
+      "startSeconds": 1356.559,
+      "text": "if you are into building faster,"
+    },
+    {
+      "startSeconds": 1358.64,
+      "text": "scalable uh front-end systems, hit"
+    },
+    {
+      "startSeconds": 1361.28,
+      "text": "subscribe. I have got more practical"
+    },
+    {
+      "startSeconds": 1363.919,
+      "text": "episodes coming soon. Thanks for"
+    },
+    {
+      "startSeconds": 1366.08,
+      "text": "watching and I will see you in next"
+    },
+    {
+      "startSeconds": 1367.84,
+      "text": "time."
+    }
+  ]
 }

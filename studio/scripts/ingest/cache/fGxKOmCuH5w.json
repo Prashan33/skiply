@@ -1,8 +1,1174 @@
 {
   "id": "fGxKOmCuH5w",
   "url": "https://www.youtube.com/watch?v=fGxKOmCuH5w",
-  "fetchedAt": "2026-08-31T05:15:01.834Z",
-  "captionKind": "empty",
-  "chapters": [],
-  "cues": []
+  "fetchedAt": "2026-09-01T04:05:28.488Z",
+  "captionKind": "asr",
+  "chapters": [
+    {
+      "startSeconds": 0,
+      "label": "Intro"
+    },
+    {
+      "startSeconds": 17,
+      "label": "Demo"
+    },
+    {
+      "startSeconds": 147,
+      "label": "What are Keys"
+    },
+    {
+      "startSeconds": 366,
+      "label": "What Makes a Good Key"
+    },
+    {
+      "startSeconds": 540,
+      "label": "Outro"
+    }
+  ],
+  "cues": [
+    {
+      "startSeconds": 0,
+      "text": "what's up guys there's cousin here"
+    },
+    {
+      "startSeconds": 1.8,
+      "text": "welcome back to the last and the best"
+    },
+    {
+      "startSeconds": 4.02,
+      "text": "react keys and list tutorial you're ever"
+    },
+    {
+      "startSeconds": 6.66,
+      "text": "gonna have to watch I promise you if you"
+    },
+    {
+      "startSeconds": 8.519,
+      "text": "watch this video and you watch it until"
+    },
+    {
+      "startSeconds": 10.2,
+      "text": "the end you're not gonna have to watch"
+    },
+    {
+      "startSeconds": 12.059,
+      "text": "another video on Keys ever again because"
+    },
+    {
+      "startSeconds": 14.099,
+      "text": "you will completely understand what they"
+    },
+    {
+      "startSeconds": 16.02,
+      "text": "are and how they are used cool let's"
+    },
+    {
+      "startSeconds": 18.18,
+      "text": "begin I have here as usual a very very"
+    },
+    {
+      "startSeconds": 21.24,
+      "text": "simple application we have here a list"
+    },
+    {
+      "startSeconds": 23.279,
+      "text": "of users from zero to nine and what I"
+    },
+    {
+      "startSeconds": 25.74,
+      "text": "want to do first is I want to show you"
+    },
+    {
+      "startSeconds": 27.599,
+      "text": "what happens if you don't put your keys"
+    },
+    {
+      "startSeconds": 29.699,
+      "text": "properly and then talk about keys and"
+    },
+    {
+      "startSeconds": 32.04,
+      "text": "why you should actually even do them so"
+    },
+    {
+      "startSeconds": 33.719,
+      "text": "the first thing that I'm going to do is"
+    },
+    {
+      "startSeconds": 34.86,
+      "text": "I'm going to open up this console here"
+    },
+    {
+      "startSeconds": 36.42,
+      "text": "and I'm going to go and find the HTML"
+    },
+    {
+      "startSeconds": 39.54,
+      "text": "elements that represents our users here"
+    },
+    {
+      "startSeconds": 41.76,
+      "text": "and here they are they are a bunch of"
+    },
+    {
+      "startSeconds": 43.68,
+      "text": "buttons because I have an on click event"
+    },
+    {
+      "startSeconds": 45.78,
+      "text": "listener to them when I click them this"
+    },
+    {
+      "startSeconds": 48.12,
+      "text": "user is going to get deleted I want you"
+    },
+    {
+      "startSeconds": 49.98,
+      "text": "to focus your attention here at the"
+    },
+    {
+      "startSeconds": 51.539,
+      "text": "bottom and see what happens to these"
+    },
+    {
+      "startSeconds": 53.52,
+      "text": "elements whenever I delete the user what"
+    },
+    {
+      "startSeconds": 55.92,
+      "text": "Chrome is going to do is whenever"
+    },
+    {
+      "startSeconds": 57.6,
+      "text": "there's a change to any element it's"
+    },
+    {
+      "startSeconds": 59.52,
+      "text": "going to high highlight that element"
+    },
+    {
+      "startSeconds": 60.96,
+      "text": "indicating to us that something has"
+    },
+    {
+      "startSeconds": 63,
+      "text": "changed so watch what happens when I"
+    },
+    {
+      "startSeconds": 64.68,
+      "text": "delete user 0. I delete and every single"
+    },
+    {
+      "startSeconds": 67.68,
+      "text": "element has highlighted I delete user 1"
+    },
+    {
+      "startSeconds": 70.38,
+      "text": "and every single element has highlighted"
+    },
+    {
+      "startSeconds": 72.6,
+      "text": "again if I now go and look at the code"
+    },
+    {
+      "startSeconds": 74.52,
+      "text": "for this you're going to see that it's"
+    },
+    {
+      "startSeconds": 75.96,
+      "text": "really simple we have here our state"
+    },
+    {
+      "startSeconds": 77.64,
+      "text": "with our users it's getting initialized"
+    },
+    {
+      "startSeconds": 79.68,
+      "text": "by this default users here if I open"
+    },
+    {
+      "startSeconds": 81.78,
+      "text": "that it's just a list of static users"
+    },
+    {
+      "startSeconds": 84.299,
+      "text": "with an ID and a name property so I"
+    },
+    {
+      "startSeconds": 86.4,
+      "text": "wouldn't worry too much about that then"
+    },
+    {
+      "startSeconds": 88.2,
+      "text": "we have this handle remove function"
+    },
+    {
+      "startSeconds": 89.88,
+      "text": "which handles our deletion of a user and"
+    },
+    {
+      "startSeconds": 92.4,
+      "text": "then we have the code here that renders"
+    },
+    {
+      "startSeconds": 94.02,
+      "text": "each individual user one by one"
+    },
+    {
+      "startSeconds": 95.7,
+      "text": "obviously you're going to see that we"
+    },
+    {
+      "startSeconds": 97.38,
+      "text": "have an error here it's saying that"
+    },
+    {
+      "startSeconds": 99,
+      "text": "we're missing a key prop for the element"
+    },
+    {
+      "startSeconds": 100.979,
+      "text": "in an iterator and actually if we go"
+    },
+    {
+      "startSeconds": 103.38,
+      "text": "back to our code and go to our console"
+    },
+    {
+      "startSeconds": 104.939,
+      "text": "we're going to see a similar error in"
+    },
+    {
+      "startSeconds": 106.92,
+      "text": "our console warning each child in a list"
+    },
+    {
+      "startSeconds": 109.56,
+      "text": "should have a unique key prop so now"
+    },
+    {
+      "startSeconds": 111.78,
+      "text": "let's see what happens if I add a proper"
+    },
+    {
+      "startSeconds": 113.88,
+      "text": "key to this button so I'll do key and"
+    },
+    {
+      "startSeconds": 115.74,
+      "text": "then I'll do user.id go back to our"
+    },
+    {
+      "startSeconds": 118.259,
+      "text": "application refresh go back to our"
+    },
+    {
+      "startSeconds": 120.6,
+      "text": "elements again and open up the buttons"
+    },
+    {
+      "startSeconds": 122.399,
+      "text": "and now pay attention to what is"
+    },
+    {
+      "startSeconds": 124.799,
+      "text": "highlighted when I delete every user so"
+    },
+    {
+      "startSeconds": 127.14,
+      "text": "I delete user 0 nothing is highlighted"
+    },
+    {
+      "startSeconds": 130.14,
+      "text": "only only this first div here right I"
+    },
+    {
+      "startSeconds": 132.48,
+      "text": "delete user one nothing again is"
+    },
+    {
+      "startSeconds": 134.459,
+      "text": "highlighted only this div because"
+    },
+    {
+      "startSeconds": 136.2,
+      "text": "something is changing in a div right a"
+    },
+    {
+      "startSeconds": 137.94,
+      "text": "user is getting removed so what's really"
+    },
+    {
+      "startSeconds": 139.68,
+      "text": "going on here why is it that whenever"
+    },
+    {
+      "startSeconds": 141.66,
+      "text": "we're providing a key nothing is being"
+    },
+    {
+      "startSeconds": 143.64,
+      "text": "highlighted but when we don't provide a"
+    },
+    {
+      "startSeconds": 145.5,
+      "text": "key everything is highlighted well for"
+    },
+    {
+      "startSeconds": 147.9,
+      "text": "this you have to understand how Keys"
+    },
+    {
+      "startSeconds": 149.76,
+      "text": "work in react and what they actually are"
+    },
+    {
+      "startSeconds": 151.56,
+      "text": "so from reacts perspective keys are"
+    },
+    {
+      "startSeconds": 153.9,
+      "text": "identifiers they are a way to uniquely"
+    },
+    {
+      "startSeconds": 156.599,
+      "text": "identify every single element in your"
+    },
+    {
+      "startSeconds": 158.94,
+      "text": "code to then be able to make efficient"
+    },
+    {
+      "startSeconds": 161.4,
+      "text": "updates whenever react has to so"
+    },
+    {
+      "startSeconds": 163.44,
+      "text": "whenever we make a change such as"
+    },
+    {
+      "startSeconds": 164.94,
+      "text": "deleting a user having a unique key will"
+    },
+    {
+      "startSeconds": 167.7,
+      "text": "allow react to identify each element and"
+    },
+    {
+      "startSeconds": 170.34,
+      "text": "make that change as efficiently as"
+    },
+    {
+      "startSeconds": 171.9,
+      "text": "possible now in our case what does it"
+    },
+    {
+      "startSeconds": 174,
+      "text": "mean to be efficient right well we have"
+    },
+    {
+      "startSeconds": 175.92,
+      "text": "to think about what is the work required"
+    },
+    {
+      "startSeconds": 177.84,
+      "text": "for react to do to efficiently delete"
+    },
+    {
+      "startSeconds": 179.819,
+      "text": "with a user so if we're deleting a user"
+    },
+    {
+      "startSeconds": 182.22,
+      "text": "we just deleted user 0 really the only"
+    },
+    {
+      "startSeconds": 185.16,
+      "text": "thing that react would have to do is"
+    },
+    {
+      "startSeconds": 187.44,
+      "text": "delete this user 0 from this list and"
+    },
+    {
+      "startSeconds": 190.26,
+      "text": "then leave everything else untouched"
+    },
+    {
+      "startSeconds": 191.94,
+      "text": "because user one two three and so on"
+    },
+    {
+      "startSeconds": 194.22,
+      "text": "they haven't changed they're the same"
+    },
+    {
+      "startSeconds": 196.44,
+      "text": "they have no new props they have no new"
+    },
+    {
+      "startSeconds": 198.18,
+      "text": "text no new state they are exactly the"
+    },
+    {
+      "startSeconds": 200.519,
+      "text": "same so react doesn't need to do"
+    },
+    {
+      "startSeconds": 202.319,
+      "text": "anything to them now when we have a key"
+    },
+    {
+      "startSeconds": 204.48,
+      "text": "we delete this and you see that nothing"
+    },
+    {
+      "startSeconds": 206.459,
+      "text": "is being done to those Elements which is"
+    },
+    {
+      "startSeconds": 208.14,
+      "text": "great it's exactly what we want but then"
+    },
+    {
+      "startSeconds": 209.879,
+      "text": "if I come to the code and I delete the"
+    },
+    {
+      "startSeconds": 211.739,
+      "text": "key that is no longer happening I'll"
+    },
+    {
+      "startSeconds": 213.84,
+      "text": "refresh I'll open up the elements again"
+    },
+    {
+      "startSeconds": 215.7,
+      "text": "I delete user 0 and everything is being"
+    },
+    {
+      "startSeconds": 218.7,
+      "text": "updated well that's because react when"
+    },
+    {
+      "startSeconds": 220.739,
+      "text": "you don't provide a key it's actually"
+    },
+    {
+      "startSeconds": 222.54,
+      "text": "not going to not provide a key it's"
+    },
+    {
+      "startSeconds": 224.7,
+      "text": "going to apply one behind the scenes"
+    },
+    {
+      "startSeconds": 226.68,
+      "text": "without you knowing it's going to apply"
+    },
+    {
+      "startSeconds": 228.48,
+      "text": "the index of the element as a key which"
+    },
+    {
+      "startSeconds": 231.18,
+      "text": "means that that is exactly equivalent if"
+    },
+    {
+      "startSeconds": 233.28,
+      "text": "I were to do something like user and"
+    },
+    {
+      "startSeconds": 235.019,
+      "text": "then index here and then manually"
+    },
+    {
+      "startSeconds": 237,
+      "text": "provide key Index this would be the same"
+    },
+    {
+      "startSeconds": 240.9,
+      "text": "in reacts perspective as not providing a"
+    },
+    {
+      "startSeconds": 243.42,
+      "text": "key and we can prove this by going back"
+    },
+    {
+      "startSeconds": 245.34,
+      "text": "to our application reloading again"
+    },
+    {
+      "startSeconds": 247.019,
+      "text": "opening up our elements again and then"
+    },
+    {
+      "startSeconds": 249.12,
+      "text": "deleting a user and you're going to see"
+    },
+    {
+      "startSeconds": 251.04,
+      "text": "that even with the key of index"
+    },
+    {
+      "startSeconds": 252.959,
+      "text": "everything is being highlighted as I"
+    },
+    {
+      "startSeconds": 254.879,
+      "text": "delete I delete and everything is"
+    },
+    {
+      "startSeconds": 256.739,
+      "text": "highlighted so why is that what's really"
+    },
+    {
+      "startSeconds": 258.72,
+      "text": "going on well we said that react uses"
+    },
+    {
+      "startSeconds": 261,
+      "text": "these keys to uniquely identify every"
+    },
+    {
+      "startSeconds": 263.28,
+      "text": "single item when making an update and we"
+    },
+    {
+      "startSeconds": 265.56,
+      "text": "also said that the most efficient update"
+    },
+    {
+      "startSeconds": 267.54,
+      "text": "for this when deleting a user is to just"
+    },
+    {
+      "startSeconds": 270,
+      "text": "remove that user and leave everything"
+    },
+    {
+      "startSeconds": 271.8,
+      "text": "else untouched but if we have the index"
+    },
+    {
+      "startSeconds": 273.84,
+      "text": "as a key which we have now in our code"
+    },
+    {
+      "startSeconds": 275.88,
+      "text": "when we delete the user actually before"
+    },
+    {
+      "startSeconds": 278.04,
+      "text": "we delete a user user 0 has the key of"
+    },
+    {
+      "startSeconds": 281.46,
+      "text": "zero because that is index 0 it is the"
+    },
+    {
+      "startSeconds": 283.74,
+      "text": "first element in the array user 1 has a"
+    },
+    {
+      "startSeconds": 286.199,
+      "text": "key of one user 2 has a key of two and"
+    },
+    {
+      "startSeconds": 288.3,
+      "text": "so on but now when I click delete user 0"
+    },
+    {
+      "startSeconds": 291.36,
+      "text": "react is going to make that deletion and"
+    },
+    {
+      "startSeconds": 293.58,
+      "text": "when it comes time to make those updates"
+    },
+    {
+      "startSeconds": 295.259,
+      "text": "what you're gonna see is that user 1 is"
+    },
+    {
+      "startSeconds": 298.199,
+      "text": "now in the first position of the array"
+    },
+    {
+      "startSeconds": 300.479,
+      "text": "which if it has the index as a key that"
+    },
+    {
+      "startSeconds": 303.6,
+      "text": "means that it's now receiving the key of"
+    },
+    {
+      "startSeconds": 305.46,
+      "text": "0 which is a different key than it had"
+    },
+    {
+      "startSeconds": 307.62,
+      "text": "on the previous render user 2 has now a"
+    },
+    {
+      "startSeconds": 310.44,
+      "text": "key of 1 because it's the first element"
+    },
+    {
+      "startSeconds": 312.06,
+      "text": "well the second element in the array"
+    },
+    {
+      "startSeconds": 313.86,
+      "text": "user 3 has a key of two and so on from"
+    },
+    {
+      "startSeconds": 316.979,
+      "text": "reacts perspective every single one of"
+    },
+    {
+      "startSeconds": 319.44,
+      "text": "these users now has a different key"
+    },
+    {
+      "startSeconds": 321.36,
+      "text": "which means that react is going to"
+    },
+    {
+      "startSeconds": 323.58,
+      "text": "consider that a whole new element so"
+    },
+    {
+      "startSeconds": 325.74,
+      "text": "that's what you're seeing here I delete"
+    },
+    {
+      "startSeconds": 327.36,
+      "text": "user 1 every user is offset by one every"
+    },
+    {
+      "startSeconds": 330.539,
+      "text": "user has a different key react sees"
+    },
+    {
+      "startSeconds": 332.58,
+      "text": "those as a different element and so it"
+    },
+    {
+      "startSeconds": 334.919,
+      "text": "will recreate and remount the entire"
+    },
+    {
+      "startSeconds": 336.9,
+      "text": "element which is why everything is"
+    },
+    {
+      "startSeconds": 338.699,
+      "text": "highlighting as I delete a user but now"
+    },
+    {
+      "startSeconds": 340.8,
+      "text": "if I come back to my code and instead of"
+    },
+    {
+      "startSeconds": 342.9,
+      "text": "index I remove this and I put user"
+    },
+    {
+      "startSeconds": 345.96,
+      "text": "dot ID like we had before and then I"
+    },
+    {
+      "startSeconds": 348.66,
+      "text": "refresh and do the same things again the"
+    },
+    {
+      "startSeconds": 351.12,
+      "text": "reason why nothing is highlighting is"
+    },
+    {
+      "startSeconds": 352.979,
+      "text": "because even though we've deleted user 0"
+    },
+    {
+      "startSeconds": 355.16,
+      "text": "user 1 still has the same ID that it has"
+    },
+    {
+      "startSeconds": 358.139,
+      "text": "before user 2 has the same ID every"
+    },
+    {
+      "startSeconds": 360.84,
+      "text": "single user has the same ID because that"
+    },
+    {
+      "startSeconds": 363.12,
+      "text": "ID is not dependent on the order that"
+    },
+    {
+      "startSeconds": 365.699,
+      "text": "they are in the array so that's what"
+    },
+    {
+      "startSeconds": 367.44,
+      "text": "keys are and that's why they are always"
+    },
+    {
+      "startSeconds": 369.36,
+      "text": "required and really important whenever"
+    },
+    {
+      "startSeconds": 371.28,
+      "text": "you're mapping over things in your code"
+    },
+    {
+      "startSeconds": 372.9,
+      "text": "and that is why if you don't provide a"
+    },
+    {
+      "startSeconds": 374.88,
+      "text": "key react is going to be very obvious"
+    },
+    {
+      "startSeconds": 377.28,
+      "text": "about it and it's going to scream at you"
+    },
+    {
+      "startSeconds": 379.139,
+      "text": "that hey provide a key because otherwise"
+    },
+    {
+      "startSeconds": 381.479,
+      "text": "you're throwing every single performance"
+    },
+    {
+      "startSeconds": 383.639,
+      "text": "optimization that I try to do out the"
+    },
+    {
+      "startSeconds": 385.8,
+      "text": "window and even though that you can do"
+    },
+    {
+      "startSeconds": 387.72,
+      "text": "the index here right and you can do this"
+    },
+    {
+      "startSeconds": 389.58,
+      "text": "and then index right react is no longer"
+    },
+    {
+      "startSeconds": 392.039,
+      "text": "going to complain it's no longer going"
+    },
+    {
+      "startSeconds": 393.78,
+      "text": "to throw an error even though this is"
+    },
+    {
+      "startSeconds": 395.759,
+      "text": "equivalent to not having a key which"
+    },
+    {
+      "startSeconds": 397.8,
+      "text": "might be confusing why is react allowing"
+    },
+    {
+      "startSeconds": 399.66,
+      "text": "this it's because react doesn't really"
+    },
+    {
+      "startSeconds": 401.88,
+      "text": "care what key you're actually giving it"
+    },
+    {
+      "startSeconds": 403.979,
+      "text": "it actually has no way to really know if"
+    },
+    {
+      "startSeconds": 405.72,
+      "text": "it's good key or not all that it cares"
+    },
+    {
+      "startSeconds": 408.24,
+      "text": "about is that you explicitly provide a"
+    },
+    {
+      "startSeconds": 410.28,
+      "text": "key as long as you provide any key it"
+    },
+    {
+      "startSeconds": 412.38,
+      "text": "could really be a string of like one or"
+    },
+    {
+      "startSeconds": 414.24,
+      "text": "something or even just one"
+    },
+    {
+      "startSeconds": 416.34,
+      "text": "react is going to be happy because from"
+    },
+    {
+      "startSeconds": 418.68,
+      "text": "its perspective you've provided a key"
+    },
+    {
+      "startSeconds": 420.539,
+      "text": "and the responsibility to find a good"
+    },
+    {
+      "startSeconds": 422.639,
+      "text": "key is solely on you so now the question"
+    },
+    {
+      "startSeconds": 424.86,
+      "text": "is what makes a good key we've seen that"
+    },
+    {
+      "startSeconds": 427.319,
+      "text": "if you provide the index that's not good"
+    },
+    {
+      "startSeconds": 429.06,
+      "text": "so then what should you do what you"
+    },
+    {
+      "startSeconds": 430.8,
+      "text": "should really think about finding"
+    },
+    {
+      "startSeconds": 432.36,
+      "text": "something that is unique across your"
+    },
+    {
+      "startSeconds": 434.4,
+      "text": "array something that no two elements are"
+    },
+    {
+      "startSeconds": 436.68,
+      "text": "going to have that is going to be the"
+    },
+    {
+      "startSeconds": 438,
+      "text": "same for example here in our default"
+    },
+    {
+      "startSeconds": 439.979,
+      "text": "users right if I go to this definition"
+    },
+    {
+      "startSeconds": 441.479,
+      "text": "we have an ID property and although in"
+    },
+    {
+      "startSeconds": 444.539,
+      "text": "this case it is the index this user's"
+    },
+    {
+      "startSeconds": 447.06,
+      "text": "array is never going to change so this"
+    },
+    {
+      "startSeconds": 449.46,
+      "text": "ID here this index is always going to be"
+    },
+    {
+      "startSeconds": 451.979,
+      "text": "the same we have it here in the state"
+    },
+    {
+      "startSeconds": 453.96,
+      "text": "and it's actually the state that is"
+    },
+    {
+      "startSeconds": 455.639,
+      "text": "going to change so this users here is"
+    },
+    {
+      "startSeconds": 457.8,
+      "text": "going to change so that's why we can't"
+    },
+    {
+      "startSeconds": 459.539,
+      "text": "use the index of this array but this"
+    },
+    {
+      "startSeconds": 462.3,
+      "text": "users here is static it'll never change"
+    },
+    {
+      "startSeconds": 464.34,
+      "text": "and so this ID is always going to be the"
+    },
+    {
+      "startSeconds": 467.039,
+      "text": "same we could have also used the name"
+    },
+    {
+      "startSeconds": 468.539,
+      "text": "property here in our case because here"
+    },
+    {
+      "startSeconds": 470.52,
+      "text": "we can guarantee that no two users are"
+    },
+    {
+      "startSeconds": 472.56,
+      "text": "going to have the same name but this"
+    },
+    {
+      "startSeconds": 474.12,
+      "text": "will differ in your case so be sure to"
+    },
+    {
+      "startSeconds": 475.919,
+      "text": "pick a prop property that is unique but"
+    },
+    {
+      "startSeconds": 477.599,
+      "text": "we could have just as easily come here"
+    },
+    {
+      "startSeconds": 479.099,
+      "text": "and instead of ID we could have done"
+    },
+    {
+      "startSeconds": 481.74,
+      "text": "name and this would have been exactly"
+    },
+    {
+      "startSeconds": 483.78,
+      "text": "the same the point is for you to pick"
+    },
+    {
+      "startSeconds": 485.759,
+      "text": "something that you can guarantee will be"
+    },
+    {
+      "startSeconds": 487.74,
+      "text": "unique in that array if you're dealing"
+    },
+    {
+      "startSeconds": 489.479,
+      "text": "with entities that come from a database"
+    },
+    {
+      "startSeconds": 491.22,
+      "text": "usually they will have an ID that is"
+    },
+    {
+      "startSeconds": 493.5,
+      "text": "already unique so it's as easy as using"
+    },
+    {
+      "startSeconds": 495.539,
+      "text": "that ID if you're dealing with something"
+    },
+    {
+      "startSeconds": 497.28,
+      "text": "that doesn't really have something you"
+    },
+    {
+      "startSeconds": 499.139,
+      "text": "have to get creative and make sure that"
+    },
+    {
+      "startSeconds": 500.94,
+      "text": "you give some sort of unique identifier"
+    },
+    {
+      "startSeconds": 502.919,
+      "text": "as your key now if you don't do this if"
+    },
+    {
+      "startSeconds": 505.139,
+      "text": "you don't provide a unique key you're"
+    },
+    {
+      "startSeconds": 506.819,
+      "text": "going to have some very strange bugs"
+    },
+    {
+      "startSeconds": 508.44,
+      "text": "because again react uses those keys to"
+    },
+    {
+      "startSeconds": 510.78,
+      "text": "identify unique items and if two items"
+    },
+    {
+      "startSeconds": 513.18,
+      "text": "have the same key in reacts perspective"
+    },
+    {
+      "startSeconds": 515.279,
+      "text": "they are the same item so if you delete"
+    },
+    {
+      "startSeconds": 517.26,
+      "text": "a user that has the same key it's going"
+    },
+    {
+      "startSeconds": 519.36,
+      "text": "to delete both users because they both"
+    },
+    {
+      "startSeconds": 521.399,
+      "text": "have the same key right so this is"
+    },
+    {
+      "startSeconds": 522.839,
+      "text": "really important so make sure that you"
+    },
+    {
+      "startSeconds": 524.339,
+      "text": "spend all of the time that you need to"
+    },
+    {
+      "startSeconds": 526.02,
+      "text": "really understand this take this quote"
+    },
+    {
+      "startSeconds": 528,
+      "text": "play around with it on your own really"
+    },
+    {
+      "startSeconds": 529.8,
+      "text": "understand and try to put different"
+    },
+    {
+      "startSeconds": 531.12,
+      "text": "values for the keys and see what kind of"
+    },
+    {
+      "startSeconds": 533.16,
+      "text": "results you get this is a really really"
+    },
+    {
+      "startSeconds": 535.38,
+      "text": "important Concept in react and it's"
+    },
+    {
+      "startSeconds": 537.3,
+      "text": "actually one of the fundamental concepts"
+    },
+    {
+      "startSeconds": 539.16,
+      "text": "of react and how it's used cool so there"
+    },
+    {
+      "startSeconds": 541.2,
+      "text": "you go that was a tutorial on react keys"
+    },
+    {
+      "startSeconds": 543.899,
+      "text": "and lists if you've enjoyed this video"
+    },
+    {
+      "startSeconds": 545.279,
+      "text": "if you got any value from it whatsoever"
+    },
+    {
+      "startSeconds": 547.2,
+      "text": "please do consider giving it a big"
+    },
+    {
+      "startSeconds": 548.7,
+      "text": "thumbs up making sure to subscribe"
+    },
+    {
+      "startSeconds": 550.2,
+      "text": "because honestly it really does help me"
+    },
+    {
+      "startSeconds": 552.24,
+      "text": "out a lot and it shows me that you enjoy"
+    },
+    {
+      "startSeconds": 553.86,
+      "text": "my content and that you want to see more"
+    },
+    {
+      "startSeconds": 555.12,
+      "text": "future videos if for some reason you"
+    },
+    {
+      "startSeconds": 557.339,
+      "text": "still haven't joined the Discord"
+    },
+    {
+      "startSeconds": 558.54,
+      "text": "honestly what are you doing you are"
+    },
+    {
+      "startSeconds": 560.64,
+      "text": "missing out on the biggest value if"
+    },
+    {
+      "startSeconds": 562.92,
+      "text": "you're trying to learn react ever"
+    },
+    {
+      "startSeconds": 564.18,
+      "text": "available I post about things like this"
+    },
+    {
+      "startSeconds": 566.459,
+      "text": "and way more every single day and"
+    },
+    {
+      "startSeconds": 568.5,
+      "text": "honestly if you're a react developer or"
+    },
+    {
+      "startSeconds": 570.48,
+      "text": "looking to learn to become a react"
+    },
+    {
+      "startSeconds": 571.92,
+      "text": "developer which I can only assume you"
+    },
+    {
+      "startSeconds": 573.779,
+      "text": "are since you're watching this video"
+    },
+    {
+      "startSeconds": 574.98,
+      "text": "this is the best resource available to"
+    },
+    {
+      "startSeconds": 577.44,
+      "text": "you on the internet hands down if you"
+    },
+    {
+      "startSeconds": 579.48,
+      "text": "want to join I highly recommend it it's"
+    },
+    {
+      "startSeconds": 581.58,
+      "text": "the first link in the description down"
+    },
+    {
+      "startSeconds": 583.2,
+      "text": "below with that being said my name has"
+    },
+    {
+      "startSeconds": 584.88,
+      "text": "been nurse cousin this is cousin"
+    },
+    {
+      "startSeconds": 586.38,
+      "text": "Solutions thank you so much for watching"
+    },
+    {
+      "startSeconds": 588.06,
+      "text": "and I will see you all in the next video"
+    },
+    {
+      "startSeconds": 589.68,
+      "text": "ciao"
+    }
+  ]
 }

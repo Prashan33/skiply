@@ -1,8 +1,2170 @@
 {
   "id": "rGPpQdbDbwo",
   "url": "https://www.youtube.com/watch?v=rGPpQdbDbwo",
-  "fetchedAt": "2026-08-31T05:14:45.359Z",
-  "captionKind": "empty",
-  "chapters": [],
-  "cues": []
+  "fetchedAt": "2026-09-01T04:04:44.891Z",
+  "captionKind": "asr",
+  "chapters": [
+    {
+      "startSeconds": 0,
+      "label": "Introduction"
+    },
+    {
+      "startSeconds": 45,
+      "label": "Basic Differences"
+    },
+    {
+      "startSeconds": 203,
+      "label": "Server Component Benefit #1"
+    },
+    {
+      "startSeconds": 322,
+      "label": "Server Component Benefit #2"
+    },
+    {
+      "startSeconds": 392,
+      "label": "Server Component Benefit #3"
+    },
+    {
+      "startSeconds": 478,
+      "label": "Server Component Benefit #4"
+    },
+    {
+      "startSeconds": 505,
+      "label": "Server Component Benefit #5"
+    },
+    {
+      "startSeconds": 538,
+      "label": "Server Component Downside #1"
+    },
+    {
+      "startSeconds": 625,
+      "label": "Server Component Downside #2"
+    },
+    {
+      "startSeconds": 645,
+      "label": "How To Nest Server And Client Components"
+    }
+  ],
+  "cues": [
+    {
+      "startSeconds": 0,
+      "text": "If you've ever written any react code,"
+    },
+    {
+      "startSeconds": 2.12,
+      "text": "you know the pain that is this left side"
+    },
+    {
+      "startSeconds": 3.92,
+      "text": "pain with all of these long use effects"
+    },
+    {
+      "startSeconds": 5.88,
+      "text": "with fetch requests and state management"
+    },
+    {
+      "startSeconds": 7.72,
+      "text": "other complicated stuff just to be able"
+    },
+    {
+      "startSeconds": 9.64,
+      "text": "to fetch data to render your actual"
+    },
+    {
+      "startSeconds": 11.32,
+      "text": "page. Now, this is luckily going to be a"
+    },
+    {
+      "startSeconds": 13.44,
+      "text": "thing of the past with the new ideology"
+    },
+    {
+      "startSeconds": 15.68,
+      "text": "of server components which react is"
+    },
+    {
+      "startSeconds": 17.36,
+      "text": "really pushing which allows you to write"
+    },
+    {
+      "startSeconds": 18.96,
+      "text": "this really simple file you see on the"
+    },
+    {
+      "startSeconds": 20.44,
+      "text": "right hand side here which uses modern"
+    },
+    {
+      "startSeconds": 22.36,
+      "text": "JavaScript concepts and completely"
+    },
+    {
+      "startSeconds": 24.12,
+      "text": "replaces everything you see on the left"
+    },
+    {
+      "startSeconds": 25.72,
+      "text": "in a much simpler way. So, in this video"
+    },
+    {
+      "startSeconds": 27.68,
+      "text": "I'm going to explain exactly what server"
+    },
+    {
+      "startSeconds": 29.16,
+      "text": "components are and compare them to"
+    },
+    {
+      "startSeconds": 30.72,
+      "text": "client components inside of react."
+    },
+    {
+      "startSeconds": 35.72,
+      "text": "Welcome back to WebDevSimplified. My"
+    },
+    {
+      "startSeconds": 37.68,
+      "text": "name is Kyle and my job is to simplify"
+    },
+    {
+      "startSeconds": 39.36,
+      "text": "the web for you so you can start"
+    },
+    {
+      "startSeconds": 40.6,
+      "text": "building your dream project sooner and"
+    },
+    {
+      "startSeconds": 42.24,
+      "text": "today I really want to talk all about"
+    },
+    {
+      "startSeconds": 43.8,
+      "text": "client versus server components. Now, if"
+    },
+    {
+      "startSeconds": 46.12,
+      "text": "you've heard about client and server"
+    },
+    {
+      "startSeconds": 47.32,
+      "text": "components before, you may think that"
+    },
+    {
+      "startSeconds": 48.8,
+      "text": "they are a Next.js feature, but actually"
+    },
+    {
+      "startSeconds": 51.52,
+      "text": "client and server components"
+    },
+    {
+      "startSeconds": 52.84,
+      "text": "specifically are actually a react"
+    },
+    {
+      "startSeconds": 54.8,
+      "text": "feature and Next.js just happens to"
+    },
+    {
+      "startSeconds": 56.72,
+      "text": "implement them in their own Next.js"
+    },
+    {
+      "startSeconds": 58.8,
+      "text": "specific way. Now, in this video I'm"
+    },
+    {
+      "startSeconds": 60.96,
+      "text": "going to be using server components in"
+    },
+    {
+      "startSeconds": 62.72,
+      "text": "the ideology of Next.js and within a"
+    },
+    {
+      "startSeconds": 65.4,
+      "text": "Next.js project as you can see over here"
+    },
+    {
+      "startSeconds": 67.52,
+      "text": "on the left side side of my screen, but"
+    },
+    {
+      "startSeconds": 69.84,
+      "text": "in the future this is something that you"
+    },
+    {
+      "startSeconds": 71.12,
+      "text": "can use in many different front end"
+    },
+    {
+      "startSeconds": 72.8,
+      "text": "frameworks, but right now Next.js has"
+    },
+    {
+      "startSeconds": 74.72,
+      "text": "the most robust support for server"
+    },
+    {
+      "startSeconds": 76.68,
+      "text": "components. Also, if you prefer a"
+    },
+    {
+      "startSeconds": 78.48,
+      "text": "written tutorial, I have a full blog"
+    },
+    {
+      "startSeconds": 80.12,
+      "text": "article on this exact same topic. I'll"
+    },
+    {
+      "startSeconds": 81.76,
+      "text": "link in the description below for you."
+    },
+    {
+      "startSeconds": 83.28,
+      "text": "There's over 100 articles on that blog,"
+    },
+    {
+      "startSeconds": 84.88,
+      "text": "so I'd highly recommend checking it out."
+    },
+    {
+      "startSeconds": 86.36,
+      "text": "Now, the entire idea behind a server"
+    },
+    {
+      "startSeconds": 88.24,
+      "text": "components is that generally with client"
+    },
+    {
+      "startSeconds": 90.08,
+      "text": "components you need to run all of your"
+    },
+    {
+      "startSeconds": 91.56,
+      "text": "code on the client. It all renders on"
+    },
+    {
+      "startSeconds": 93.4,
+      "text": "the client which means you need to do"
+    },
+    {
+      "startSeconds": 94.92,
+      "text": "these really long and convoluted use"
+    },
+    {
+      "startSeconds": 96.92,
+      "text": "effects in order to get all of the data"
+    },
+    {
+      "startSeconds": 98.64,
+      "text": "you want from some other API. So, now"
+    },
+    {
+      "startSeconds": 100.72,
+      "text": "you need to develop an API and a front"
+    },
+    {
+      "startSeconds": 102.44,
+      "text": "end and it gets rather complicated. The"
+    },
+    {
+      "startSeconds": 104.4,
+      "text": "idea behind server components is we can"
+    },
+    {
+      "startSeconds": 106.12,
+      "text": "just run our code on the server which"
+    },
+    {
+      "startSeconds": 108,
+      "text": "means we can directly do fetch request"
+    },
+    {
+      "startSeconds": 109.68,
+      "text": "inline and then just return the data"
+    },
+    {
+      "startSeconds": 111.44,
+      "text": "that we want instead of doing this thing"
+    },
+    {
+      "startSeconds": 112.96,
+      "text": "where we send down HTML and JavaScript"
+    },
+    {
+      "startSeconds": 115,
+      "text": "and then do another request to the API"
+    },
+    {
+      "startSeconds": 116.52,
+      "text": "and then get that data, where we have"
+    },
+    {
+      "startSeconds": 117.68,
+      "text": "this like two-step process. Server"
+    },
+    {
+      "startSeconds": 119.44,
+      "text": "components does this all in one step."
+    },
+    {
+      "startSeconds": 121.56,
+      "text": "And the way that this works is that"
+    },
+    {
+      "startSeconds": 122.64,
+      "text": "server components run only on the"
+    },
+    {
+      "startSeconds": 124.68,
+      "text": "server. They never run on the client at"
+    },
+    {
+      "startSeconds": 126.64,
+      "text": "all. This is really easy to see if we"
+    },
+    {
+      "startSeconds": 128.399,
+      "text": "just come in here and we put a simple"
+    },
+    {
+      "startSeconds": 129.92,
+      "text": "console log that says server, and then"
+    },
+    {
+      "startSeconds": 132.24,
+      "text": "up here we're going to put a simple"
+    },
+    {
+      "startSeconds": 133.64,
+      "text": "console log that says client. And we can"
+    },
+    {
+      "startSeconds": 135.72,
+      "text": "see exactly where we see these different"
+    },
+    {
+      "startSeconds": 137.52,
+      "text": "console logs. So, I'm going to refresh"
+    },
+    {
+      "startSeconds": 139.2,
+      "text": "my page over here, and this is on the"
+    },
+    {
+      "startSeconds": 140.88,
+      "text": "client page, and if I inspect my page,"
+    },
+    {
+      "startSeconds": 143.28,
+      "text": "and I go over to the console, you can"
+    },
+    {
+      "startSeconds": 144.64,
+      "text": "see that it's printing out client a"
+    },
+    {
+      "startSeconds": 146,
+      "text": "bunch of times inside of my log. You can"
+    },
+    {
+      "startSeconds": 147.959,
+      "text": "see right here. Now, if I go over to my"
+    },
+    {
+      "startSeconds": 149.88,
+      "text": "server page, and I just refresh this a"
+    },
+    {
+      "startSeconds": 151.68,
+      "text": "bunch of times, you'll notice nothing is"
+    },
+    {
+      "startSeconds": 153.36,
+      "text": "being printed out inside of the console"
+    },
+    {
+      "startSeconds": 154.959,
+      "text": "right here. But, if I open up the"
+    },
+    {
+      "startSeconds": 156.6,
+      "text": "console for my actual project, you'll"
+    },
+    {
+      "startSeconds": 158.08,
+      "text": "notice that if I refresh this page every"
+    },
+    {
+      "startSeconds": 159.88,
+      "text": "single time, you can see it's printing"
+    },
+    {
+      "startSeconds": 161.32,
+      "text": "out server. And that means that this"
+    },
+    {
+      "startSeconds": 162.72,
+      "text": "server component is running only on the"
+    },
+    {
+      "startSeconds": 164.84,
+      "text": "server. And again, if I inspect the page"
+    },
+    {
+      "startSeconds": 166.6,
+      "text": "and look at it on the client, you'll"
+    },
+    {
+      "startSeconds": 167.92,
+      "text": "notice no matter how many times I"
+    },
+    {
+      "startSeconds": 169.04,
+      "text": "refresh, nothing shows up in that"
+    },
+    {
+      "startSeconds": 170.68,
+      "text": "console. The one interesting thing"
+    },
+    {
+      "startSeconds": 172.36,
+      "text": "you'll notice though is when I navigate"
+    },
+    {
+      "startSeconds": 173.8,
+      "text": "to my client page, nothing actually"
+    },
+    {
+      "startSeconds": 175.4,
+      "text": "re-renders. But, when I do a hard"
+    },
+    {
+      "startSeconds": 176.6,
+      "text": "refresh on this page, it does actually"
+    },
+    {
+      "startSeconds": 178.48,
+      "text": "render my client component on the"
+    },
+    {
+      "startSeconds": 180.16,
+      "text": "server. This is something specific to"
+    },
+    {
+      "startSeconds": 182.08,
+      "text": "how Next.js implements client"
+    },
+    {
+      "startSeconds": 183.68,
+      "text": "components, and that the first time that"
+    },
+    {
+      "startSeconds": 185.36,
+      "text": "you hard navigate to one, for example,"
+    },
+    {
+      "startSeconds": 187.08,
+      "text": "you load up a page that's a client"
+    },
+    {
+      "startSeconds": 188.4,
+      "text": "component, it's going to run that on the"
+    },
+    {
+      "startSeconds": 190,
+      "text": "server for SEO specific purposes. But"
+    },
+    {
+      "startSeconds": 192.28,
+      "text": "again, this is a Next.js specific"
+    },
+    {
+      "startSeconds": 193.92,
+      "text": "feature, and not something related to"
+    },
+    {
+      "startSeconds": 195.64,
+      "text": "React. So, this is the big difference"
+    },
+    {
+      "startSeconds": 197.28,
+      "text": "between these two components. By"
+    },
+    {
+      "startSeconds": 198.64,
+      "text": "guaranteeing that our server component"
+    },
+    {
+      "startSeconds": 200.48,
+      "text": "never actually runs on the client, we"
+    },
+    {
+      "startSeconds": 202.32,
+      "text": "can do a few really interesting things."
+    },
+    {
+      "startSeconds": 204.239,
+      "text": "The very first thing is that we can"
+    },
+    {
+      "startSeconds": 205.4,
+      "text": "actually make this an async component."
+    },
+    {
+      "startSeconds": 207.12,
+      "text": "As you can see here, I've made this an"
+    },
+    {
+      "startSeconds": 208.28,
+      "text": "async function, which means I can just"
+    },
+    {
+      "startSeconds": 210.239,
+      "text": "directly await my fetch request, or"
+    },
+    {
+      "startSeconds": 212.12,
+      "text": "database request, or anything else that"
+    },
+    {
+      "startSeconds": 213.8,
+      "text": "is time consuming inside of here, and I"
+    },
+    {
+      "startSeconds": 216.12,
+      "text": "can just make sure I render out my code"
+    },
+    {
+      "startSeconds": 217.68,
+      "text": "afterwards. So, I don't have to worry"
+    },
+    {
+      "startSeconds": 218.959,
+      "text": "about loading states, error states,"
+    },
+    {
+      "startSeconds": 220.959,
+      "text": "doing my use effects for my fetches,"
+    },
+    {
+      "startSeconds": 222.72,
+      "text": "state management. All of that is handled"
+    },
+    {
+      "startSeconds": 224.28,
+      "text": "by just a simple async await, just like"
+    },
+    {
+      "startSeconds": 225.959,
+      "text": "you would do in any normal JavaScript"
+    },
+    {
+      "startSeconds": 227.76,
+      "text": "code. And this makes it much more"
+    },
+    {
+      "startSeconds": 229.28,
+      "text": "aligned with normal JavaScript, and it"
+    },
+    {
+      "startSeconds": 231.08,
+      "text": "makes the actual process of"
+    },
+    {
+      "startSeconds": 232.4,
+      "text": "understanding the code and reading it"
+    },
+    {
+      "startSeconds": 233.84,
+      "text": "much easier. Now, you can still handle"
+    },
+    {
+      "startSeconds": 235.64,
+      "text": "loading and error states doing that in"
+    },
+    {
+      "startSeconds": 237.44,
+      "text": "Next.js, you just need to create"
+    },
+    {
+      "startSeconds": 238.88,
+      "text": "essentially a loading file inside of"
+    },
+    {
+      "startSeconds": 240.52,
+      "text": "here, or you would create an error file."
+    },
+    {
+      "startSeconds": 242.48,
+      "text": "And if you want to learn more about the"
+    },
+    {
+      "startSeconds": 243.84,
+      "text": "Next.js specific ways of handling those"
+    },
+    {
+      "startSeconds": 245.76,
+      "text": "things, I have a full crash course video"
+    },
+    {
+      "startSeconds": 247.64,
+      "text": "on Next.js. I'll link in the cards and"
+    },
+    {
+      "startSeconds": 249.24,
+      "text": "description for you. But, for the"
+    },
+    {
+      "startSeconds": 250.6,
+      "text": "purposes of this video, that doesn't"
+    },
+    {
+      "startSeconds": 252.16,
+      "text": "really matter because we're really"
+    },
+    {
+      "startSeconds": 253.36,
+      "text": "focusing on server components"
+    },
+    {
+      "startSeconds": 254.84,
+      "text": "themselves. So, the benefits of doing"
+    },
+    {
+      "startSeconds": 256.84,
+      "text": "all this just on the server means that"
+    },
+    {
+      "startSeconds": 258.56,
+      "text": "you have extra levels of security. And"
+    },
+    {
+      "startSeconds": 260.68,
+      "text": "that's because none of the code inside"
+    },
+    {
+      "startSeconds": 262.64,
+      "text": "my server component that relies on"
+    },
+    {
+      "startSeconds": 264.16,
+      "text": "things like database calls or certain"
+    },
+    {
+      "startSeconds": 266.08,
+      "text": "API credentials will actually be passed"
+    },
+    {
+      "startSeconds": 268.28,
+      "text": "down to the client. For example, if"
+    },
+    {
+      "startSeconds": 270.24,
+      "text": "inside of this fetch request, I needed"
+    },
+    {
+      "startSeconds": 271.64,
+      "text": "to pass along some really sensitive API"
+    },
+    {
+      "startSeconds": 273.919,
+      "text": "information, I could come in here and"
+    },
+    {
+      "startSeconds": 275.6,
+      "text": "let's just say that I have something"
+    },
+    {
+      "startSeconds": 276.76,
+      "text": "that I pass along in like the body, and"
+    },
+    {
+      "startSeconds": 278.64,
+      "text": "that body is just going to be like"
+    },
+    {
+      "startSeconds": 280.52,
+      "text": "secret data, and I pass it along"
+    },
+    {
+      "startSeconds": 283,
+      "text": "whatever my secret data is. Now, this"
+    },
+    {
+      "startSeconds": 285.24,
+      "text": "secret data is not ever going to be seen"
+    },
+    {
+      "startSeconds": 287.88,
+      "text": "on the client of my page. And that's"
+    },
+    {
+      "startSeconds": 289.68,
+      "text": "because all of this code runs in the"
+    },
+    {
+      "startSeconds": 291.44,
+      "text": "server, and the only thing that actually"
+    },
+    {
+      "startSeconds": 293.44,
+      "text": "gets sent down to the client is whatever"
+    },
+    {
+      "startSeconds": 295.48,
+      "text": "I return inside of here. So, it just"
+    },
+    {
+      "startSeconds": 297.04,
+      "text": "sends down raw HTML, and it doesn't"
+    },
+    {
+      "startSeconds": 299.4,
+      "text": "actually send down the code to actually"
+    },
+    {
+      "startSeconds": 301.12,
+      "text": "do those fetch request. That means if I"
+    },
+    {
+      "startSeconds": 303.04,
+      "text": "wanted to replace this with, for"
+    },
+    {
+      "startSeconds": 304.28,
+      "text": "example, like db.to do's.get or some"
+    },
+    {
+      "startSeconds": 307.4,
+      "text": "other way to actually get my to do's"
+    },
+    {
+      "startSeconds": 309.48,
+      "text": "from a database, I could do this instead"
+    },
+    {
+      "startSeconds": 311.64,
+      "text": "as well, and all of my database"
+    },
+    {
+      "startSeconds": 313.36,
+      "text": "credentials and everything like that"
+    },
+    {
+      "startSeconds": 314.68,
+      "text": "stays on the server, and the client only"
+    },
+    {
+      "startSeconds": 317.12,
+      "text": "gets the actual information that's"
+    },
+    {
+      "startSeconds": 318.84,
+      "text": "returned from it, so whatever these to"
+    },
+    {
+      "startSeconds": 320.28,
+      "text": "do's are and whatever this HTML down"
+    },
+    {
+      "startSeconds": 322.12,
+      "text": "here is. The next massive benefit to"
+    },
+    {
+      "startSeconds": 324.4,
+      "text": "server components is going to be"
+    },
+    {
+      "startSeconds": 325.919,
+      "text": "performance-based, and there's actually"
+    },
+    {
+      "startSeconds": 327.72,
+      "text": "three different ways that it improves"
+    },
+    {
+      "startSeconds": 329.44,
+      "text": "the performance of your application."
+    },
+    {
+      "startSeconds": 331.4,
+      "text": "We'll just bring this back to where we"
+    },
+    {
+      "startSeconds": 332.56,
+      "text": "had our fetching before. We'll get rid"
+    },
+    {
+      "startSeconds": 333.88,
+      "text": "of all this secret data stuff just so we"
+    },
+    {
+      "startSeconds": 335.16,
+      "text": "have code that's actually working. And"
+    },
+    {
+      "startSeconds": 337.08,
+      "text": "one giant thing that we can do, which is"
+    },
+    {
+      "startSeconds": 338.36,
+      "text": "really nice, is we can do some caching."
+    },
+    {
+      "startSeconds": 340.48,
+      "text": "Next.js has a bunch of caching by"
+    },
+    {
+      "startSeconds": 342,
+      "text": "default, but even without Next.js, you"
+    },
+    {
+      "startSeconds": 343.88,
+      "text": "can do caching on your own. And since"
+    },
+    {
+      "startSeconds": 345.6,
+      "text": "this cache lives on your server, that"
+    },
+    {
+      "startSeconds": 347.8,
+      "text": "means it's available to every single"
+    },
+    {
+      "startSeconds": 349.8,
+      "text": "user that accesses your website. So that"
+    },
+    {
+      "startSeconds": 352.08,
+      "text": "means that you can directly cache"
+    },
+    {
+      "startSeconds": 353.36,
+      "text": "whatever HTML this page needs based on"
+    },
+    {
+      "startSeconds": 355.64,
+      "text": "my to-do's, and every single user that"
+    },
+    {
+      "startSeconds": 357.8,
+      "text": "accesses my page will be able to access"
+    },
+    {
+      "startSeconds": 359.52,
+      "text": "that same cache, which means it's going"
+    },
+    {
+      "startSeconds": 361.08,
+      "text": "to be incredibly quick for all of them."
+    },
+    {
+      "startSeconds": 362.92,
+      "text": "If you're using a client component and"
+    },
+    {
+      "startSeconds": 364.48,
+      "text": "you wanted to cache something on the"
+    },
+    {
+      "startSeconds": 365.8,
+      "text": "client, it would only be cached for that"
+    },
+    {
+      "startSeconds": 367.84,
+      "text": "one individual user. So instead, you"
+    },
+    {
+      "startSeconds": 370.08,
+      "text": "would need to do your caching at the API"
+    },
+    {
+      "startSeconds": 371.84,
+      "text": "level, so making your cache wherever"
+    },
+    {
+      "startSeconds": 373.28,
+      "text": "your fetch request is requested from."
+    },
+    {
+      "startSeconds": 375.32,
+      "text": "And then you essentially send down some"
+    },
+    {
+      "startSeconds": 376.72,
+      "text": "blank HTML. They then need to make a"
+    },
+    {
+      "startSeconds": 378.6,
+      "text": "request to that cache and get the"
+    },
+    {
+      "startSeconds": 379.919,
+      "text": "information. While in the case of here"
+    },
+    {
+      "startSeconds": 381.72,
+      "text": "where we have a server component, we're"
+    },
+    {
+      "startSeconds": 383.28,
+      "text": "doing everything inside of one single"
+    },
+    {
+      "startSeconds": 385.2,
+      "text": "step, which means instead of sending"
+    },
+    {
+      "startSeconds": 386.84,
+      "text": "down raw blank information and then"
+    },
+    {
+      "startSeconds": 388.48,
+      "text": "doing a fetch request, all we're doing"
+    },
+    {
+      "startSeconds": 390,
+      "text": "is we're just sending down the HTML."
+    },
+    {
+      "startSeconds": 391.52,
+      "text": "It's just one single process. Now the"
+    },
+    {
+      "startSeconds": 393.24,
+      "text": "next great thing is going to be that"
+    },
+    {
+      "startSeconds": 394.6,
+      "text": "with server components, if you have code"
+    },
+    {
+      "startSeconds": 396.72,
+      "text": "that is running on your server and"
+    },
+    {
+      "startSeconds": 398.08,
+      "text": "imported from like libraries for example"
+    },
+    {
+      "startSeconds": 399.919,
+      "text": "that are really massive, that code is"
+    },
+    {
+      "startSeconds": 401.88,
+      "text": "only going to live on your server, which"
+    },
+    {
+      "startSeconds": 403.36,
+      "text": "means the bundle size of your Java"
+    },
+    {
+      "startSeconds": 405.08,
+      "text": "script that gets sent to the client is"
+    },
+    {
+      "startSeconds": 406.4,
+      "text": "much smaller. Let's for example take a"
+    },
+    {
+      "startSeconds": 408.28,
+      "text": "look at this library. Let's say we have"
+    },
+    {
+      "startSeconds": 409.56,
+      "text": "a really big file in here. Obviously,"
+    },
+    {
+      "startSeconds": 411.04,
+      "text": "it's not very big, but imagine this is a"
+    },
+    {
+      "startSeconds": 412.44,
+      "text": "massive library that's like 3 or 4"
+    },
+    {
+      "startSeconds": 414.56,
+      "text": "megabytes of code. It's huge. And we"
+    },
+    {
+      "startSeconds": 416.64,
+      "text": "want to use that inside of our server"
+    },
+    {
+      "startSeconds": 418.08,
+      "text": "and client component. So I'm going to"
+    },
+    {
+      "startSeconds": 419.52,
+      "text": "come in here and I'm going to import"
+    },
+    {
+      "startSeconds": 421.04,
+      "text": "that function. I just called it big"
+    },
+    {
+      "startSeconds": 422.48,
+      "text": "funk."
+    },
+    {
+      "startSeconds": 424.56,
+      "text": "There we go. So we're importing that"
+    },
+    {
+      "startSeconds": 425.56,
+      "text": "into here. And we're going to do the"
+    },
+    {
+      "startSeconds": 426.48,
+      "text": "exact same thing inside of our client"
+    },
+    {
+      "startSeconds": 428.28,
+      "text": "just like that. Now if I were to go to"
+    },
+    {
+      "startSeconds": 430.2,
+      "text": "my client page and I actually inspect"
+    },
+    {
+      "startSeconds": 431.68,
+      "text": "what this looks like, make sure I"
+    },
+    {
+      "startSeconds": 432.84,
+      "text": "refresh what this page is, and you'll"
+    },
+    {
+      "startSeconds": 434.56,
+      "text": "notice that if I go over to my source"
+    },
+    {
+      "startSeconds": 436.04,
+      "text": "code and I look through my source code"
+    },
+    {
+      "startSeconds": 437.64,
+      "text": "for example, I just do a control shift F"
+    },
+    {
+      "startSeconds": 439.84,
+      "text": "to actually search for that big funk,"
+    },
+    {
+      "startSeconds": 442.16,
+      "text": "and I search, you'll notice all over in"
+    },
+    {
+      "startSeconds": 443.8,
+      "text": "my code I find this big funk because"
+    },
+    {
+      "startSeconds": 445.68,
+      "text": "that is inside of the code that's being"
+    },
+    {
+      "startSeconds": 447.12,
+      "text": "outputted for my client component. Now"
+    },
+    {
+      "startSeconds": 449.76,
+      "text": "if I go ahead and I go to my server page"
+    },
+    {
+      "startSeconds": 451.72,
+      "text": "instead, and I do a quick hard refresh,"
+    },
+    {
+      "startSeconds": 453.52,
+      "text": "and I do that exact same search, so I go"
+    },
+    {
+      "startSeconds": 455.24,
+      "text": "to the source, I search for big funk,"
+    },
+    {
+      "startSeconds": 458,
+      "text": "and I click search, no matches found."
+    },
+    {
+      "startSeconds": 460.2,
+      "text": "And that's because this code is being"
+    },
+    {
+      "startSeconds": 462.12,
+      "text": "only run on the server, which means all"
+    },
+    {
+      "startSeconds": 464.24,
+      "text": "of this import for this giant file never"
+    },
+    {
+      "startSeconds": 466.52,
+      "text": "actually makes it to the client, which"
+    },
+    {
+      "startSeconds": 468.16,
+      "text": "drastically reduces the amount of code I"
+    },
+    {
+      "startSeconds": 469.88,
+      "text": "send to the client. While when I'm using"
+    },
+    {
+      "startSeconds": 471.6,
+      "text": "a client component, the normal React way"
+    },
+    {
+      "startSeconds": 473.52,
+      "text": "of doing things, everything I import"
+    },
+    {
+      "startSeconds": 475.2,
+      "text": "inside of here actually needs to get"
+    },
+    {
+      "startSeconds": 476.56,
+      "text": "sent to the client. And then the last"
+    },
+    {
+      "startSeconds": 478,
+      "text": "performance gain is probably the most"
+    },
+    {
+      "startSeconds": 479.56,
+      "text": "obvious, and that is just generally your"
+    },
+    {
+      "startSeconds": 481.12,
+      "text": "page is going to load faster. And that's"
+    },
+    {
+      "startSeconds": 482.96,
+      "text": "because instead of sending down my"
+    },
+    {
+      "startSeconds": 484.68,
+      "text": "client component, and then making a"
+    },
+    {
+      "startSeconds": 486.32,
+      "text": "fetch request, and then processing all"
+    },
+    {
+      "startSeconds": 487.96,
+      "text": "that information on the client, I'm"
+    },
+    {
+      "startSeconds": 489.4,
+      "text": "doing all of that in one step on the"
+    },
+    {
+      "startSeconds": 490.88,
+      "text": "server. The client makes a request, the"
+    },
+    {
+      "startSeconds": 492.76,
+      "text": "server makes that fetch, and it sends"
+    },
+    {
+      "startSeconds": 494.36,
+      "text": "down one set of HTML, which has all of"
+    },
+    {
+      "startSeconds": 496.48,
+      "text": "my data. So, you never have to worry"
+    },
+    {
+      "startSeconds": 498.12,
+      "text": "about having incomplete data on the"
+    },
+    {
+      "startSeconds": 499.8,
+      "text": "client and different things like that."
+    },
+    {
+      "startSeconds": 501.32,
+      "text": "You just have everything sent down"
+    },
+    {
+      "startSeconds": 502.56,
+      "text": "immediately, which is really nice, and"
+    },
+    {
+      "startSeconds": 503.88,
+      "text": "it's generally going to be quicker. Now,"
+    },
+    {
+      "startSeconds": 505.32,
+      "text": "the final big benefit to server"
+    },
+    {
+      "startSeconds": 506.919,
+      "text": "components over client components is"
+    },
+    {
+      "startSeconds": 509.08,
+      "text": "that server components are generally"
+    },
+    {
+      "startSeconds": 510.64,
+      "text": "going to be better at SEO. The reason"
+    },
+    {
+      "startSeconds": 512.76,
+      "text": "for that is because it's going to be"
+    },
+    {
+      "startSeconds": 514.039,
+      "text": "sending down actual HTML that is fully"
+    },
+    {
+      "startSeconds": 516.919,
+      "text": "populated with all of your information,"
+    },
+    {
+      "startSeconds": 518.88,
+      "text": "while a client component on the other"
+    },
+    {
+      "startSeconds": 520.44,
+      "text": "hand is going to be sending down"
+    },
+    {
+      "startSeconds": 521.96,
+      "text": "partially implemented HTML, and then it"
+    },
+    {
+      "startSeconds": 524.2,
+      "text": "needs to use things like a use effect to"
+    },
+    {
+      "startSeconds": 526,
+      "text": "actually fill in the rest of that"
+    },
+    {
+      "startSeconds": 527.32,
+      "text": "information. Now, obviously, search"
+    },
+    {
+      "startSeconds": 529.32,
+      "text": "engines have gotten better at dealing"
+    },
+    {
+      "startSeconds": 530.68,
+      "text": "with this, and you can do certain server"
+    },
+    {
+      "startSeconds": 532.36,
+      "text": "rendering tools inside of React. But,"
+    },
+    {
+      "startSeconds": 534.2,
+      "text": "with server components, all of this is"
+    },
+    {
+      "startSeconds": 535.72,
+      "text": "super easy and automatically baked in"
+    },
+    {
+      "startSeconds": 537.56,
+      "text": "for you. Now, with all these amazing"
+    },
+    {
+      "startSeconds": 539.24,
+      "text": "benefits, you may just think, \"Why not"
+    },
+    {
+      "startSeconds": 540.839,
+      "text": "make everything a server component?\" And"
+    },
+    {
+      "startSeconds": 543.04,
+      "text": "the reason you can't do that is because"
+    },
+    {
+      "startSeconds": 544.48,
+      "text": "since your code never runs on the"
+    },
+    {
+      "startSeconds": 545.839,
+      "text": "client, you have no way to add"
+    },
+    {
+      "startSeconds": 547.52,
+      "text": "interactivity to the page. For example,"
+    },
+    {
+      "startSeconds": 549.96,
+      "text": "let's just say I wanted to add an on"
+    },
+    {
+      "startSeconds": 551.28,
+      "text": "click event listener onto here. I could"
+    },
+    {
+      "startSeconds": 553.16,
+      "text": "say on click"
+    },
+    {
+      "startSeconds": 555.56,
+      "text": "console.log"
+    },
+    {
+      "startSeconds": 558.08,
+      "text": "Hi. There we go. And immediately, I'm"
+    },
+    {
+      "startSeconds": 560.04,
+      "text": "getting a bunch of different errors. And"
+    },
+    {
+      "startSeconds": 561.52,
+      "text": "that's because I can't do interactivity."
+    },
+    {
+      "startSeconds": 563.28,
+      "text": "I can't have on click event listeners or"
+    },
+    {
+      "startSeconds": 565.12,
+      "text": "any other style of event listener. I"
+    },
+    {
+      "startSeconds": 567,
+      "text": "can't use, for example, a use effect"
+    },
+    {
+      "startSeconds": 568.96,
+      "text": "hook. So, here we go. If I add in the"
+    },
+    {
+      "startSeconds": 571.4,
+      "text": "use"
+    },
+    {
+      "startSeconds": 572.88,
+      "text": "effect hook"
+    },
+    {
+      "startSeconds": 575.2,
+      "text": "There we go."
+    },
+    {
+      "startSeconds": 576.56,
+      "text": "And I just try to make this run"
+    },
+    {
+      "startSeconds": 578.44,
+      "text": "immediately. If I try to import that"
+    },
+    {
+      "startSeconds": 583.12,
+      "text": "effect"
+    },
+    {
+      "startSeconds": 584.6,
+      "text": "from React, and I give that a save. I'm"
+    },
+    {
+      "startSeconds": 586.8,
+      "text": "again going to get an error cuz I can't"
+    },
+    {
+      "startSeconds": 588.28,
+      "text": "use use effect. I can't use like use"
+    },
+    {
+      "startSeconds": 590.12,
+      "text": "state. You pretty much can't use any"
+    },
+    {
+      "startSeconds": 591.72,
+      "text": "hook at all inside of a server"
+    },
+    {
+      "startSeconds": 593.8,
+      "text": "component. And that's again because you"
+    },
+    {
+      "startSeconds": 595.2,
+      "text": "cannot do interactivity. So, it's really"
+    },
+    {
+      "startSeconds": 597.6,
+      "text": "important that if you have any type of"
+    },
+    {
+      "startSeconds": 599.48,
+      "text": "interactivity on your page, that must go"
+    },
+    {
+      "startSeconds": 601.64,
+      "text": "inside of a client component. But"
+    },
+    {
+      "startSeconds": 603.4,
+      "text": "because of the amazing benefits you get"
+    },
+    {
+      "startSeconds": 605,
+      "text": "with server components, generally what I"
+    },
+    {
+      "startSeconds": 606.68,
+      "text": "try to do is make as many of my"
+    },
+    {
+      "startSeconds": 608.28,
+      "text": "components as possible server"
+    },
+    {
+      "startSeconds": 609.64,
+      "text": "components, and then only the few places"
+    },
+    {
+      "startSeconds": 611.84,
+      "text": "where I actually need interactivity do I"
+    },
+    {
+      "startSeconds": 613.68,
+      "text": "use client components. And I just make"
+    },
+    {
+      "startSeconds": 615.68,
+      "text": "sure all the data I need, for example,"
+    },
+    {
+      "startSeconds": 617.52,
+      "text": "any to-dos I need to fetch, for example,"
+    },
+    {
+      "startSeconds": 619.48,
+      "text": "come from a server component and get"
+    },
+    {
+      "startSeconds": 621.12,
+      "text": "passed into that client component as"
+    },
+    {
+      "startSeconds": 623.4,
+      "text": "like a prop like this."
+    },
+    {
+      "startSeconds": 625.16,
+      "text": "The other big downside, since your"
+    },
+    {
+      "startSeconds": 626.6,
+      "text": "server component never actually renders"
+    },
+    {
+      "startSeconds": 628.68,
+      "text": "on the client, you can't use things like"
+    },
+    {
+      "startSeconds": 630.72,
+      "text": "local storage or anything else that is"
+    },
+    {
+      "startSeconds": 632.6,
+      "text": "inside the window object because this"
+    },
+    {
+      "startSeconds": 634.44,
+      "text": "just obviously does not exist in the"
+    },
+    {
+      "startSeconds": 636.24,
+      "text": "server environment, and it never runs on"
+    },
+    {
+      "startSeconds": 638.04,
+      "text": "the client. So, things like local"
+    },
+    {
+      "startSeconds": 639.6,
+      "text": "storage, the navigator, or any other"
+    },
+    {
+      "startSeconds": 641.52,
+      "text": "browser-based API you cannot use inside"
+    },
+    {
+      "startSeconds": 643.96,
+      "text": "of a server component. Those are pretty"
+    },
+    {
+      "startSeconds": 645.36,
+      "text": "much all of the downsides of server"
+    },
+    {
+      "startSeconds": 647.4,
+      "text": "components, though. The only other thing"
+    },
+    {
+      "startSeconds": 649.2,
+      "text": "that's important to talk about is how do"
+    },
+    {
+      "startSeconds": 650.72,
+      "text": "you nest server components and client"
+    },
+    {
+      "startSeconds": 652.76,
+      "text": "components? Because right now, if I"
+    },
+    {
+      "startSeconds": 654.4,
+      "text": "wanted to inside my server component, I"
+    },
+    {
+      "startSeconds": 656.72,
+      "text": "could come down here, and I could render"
+    },
+    {
+      "startSeconds": 658.4,
+      "text": "out some type of client component. It"
+    },
+    {
+      "startSeconds": 660.24,
+      "text": "doesn't matter what it is, and it's"
+    },
+    {
+      "startSeconds": 661.6,
+      "text": "going to work just fine. All of this"
+    },
+    {
+      "startSeconds": 663.32,
+      "text": "code is going to be rendered on the"
+    },
+    {
+      "startSeconds": 664.52,
+      "text": "server, and then this specific component"
+    },
+    {
+      "startSeconds": 666.6,
+      "text": "that is a client component will be"
+    },
+    {
+      "startSeconds": 668.16,
+      "text": "rendered on the client. Now, the way"
+    },
+    {
+      "startSeconds": 670.12,
+      "text": "that you specify a component is a client"
+    },
+    {
+      "startSeconds": 672.32,
+      "text": "component in Next.js, at least, is you"
+    },
+    {
+      "startSeconds": 674.24,
+      "text": "just add this string use client at the"
+    },
+    {
+      "startSeconds": 675.96,
+      "text": "very top of the file. And that's the"
+    },
+    {
+      "startSeconds": 677.44,
+      "text": "Next.js way of saying that this is going"
+    },
+    {
+      "startSeconds": 679.32,
+      "text": "to be a client component. So, I can put"
+    },
+    {
+      "startSeconds": 681.52,
+      "text": "client components inside server"
+    },
+    {
+      "startSeconds": 682.96,
+      "text": "components with no problem at all. But"
+    },
+    {
+      "startSeconds": 685.32,
+      "text": "as soon as I have a client component,"
+    },
+    {
+      "startSeconds": 687.08,
+      "text": "for example, I have a client component"
+    },
+    {
+      "startSeconds": 689.04,
+      "text": "like this, all of the children of this"
+    },
+    {
+      "startSeconds": 691.24,
+      "text": "component are also going to be client"
+    },
+    {
+      "startSeconds": 693.28,
+      "text": "components no matter what, even if I"
+    },
+    {
+      "startSeconds": 695.04,
+      "text": "didn't mark them as a client component,"
+    },
+    {
+      "startSeconds": 697.16,
+      "text": "they will be rendered only on the client"
+    },
+    {
+      "startSeconds": 699.04,
+      "text": "and not on the server. So, you"
+    },
+    {
+      "startSeconds": 700.52,
+      "text": "essentially get one chance to go from"
+    },
+    {
+      "startSeconds": 702.32,
+      "text": "server to client and you can never go"
+    },
+    {
+      "startSeconds": 704.52,
+      "text": "back after that. For example, in this"
+    },
+    {
+      "startSeconds": 706.36,
+      "text": "client component, I could never render a"
+    },
+    {
+      "startSeconds": 708.32,
+      "text": "server component and that's because I've"
+    },
+    {
+      "startSeconds": 710.36,
+      "text": "already jumped over to the client, so I"
+    },
+    {
+      "startSeconds": 712.16,
+      "text": "no longer am able to go back to the"
+    },
+    {
+      "startSeconds": 713.92,
+      "text": "server. It's essentially a one-way pass."
+    },
+    {
+      "startSeconds": 716.2,
+      "text": "But, there is one way that you can get"
+    },
+    {
+      "startSeconds": 717.72,
+      "text": "around this. To show you what I'm"
+    },
+    {
+      "startSeconds": 719,
+      "text": "talking about, I'm just going to create"
+    },
+    {
+      "startSeconds": 720.24,
+      "text": "a brand new file. So, we'll put it in"
+    },
+    {
+      "startSeconds": 721.8,
+      "text": "this components folder. We'll create"
+    },
+    {
+      "startSeconds": 723.56,
+      "text": "this file and we'll call it client.tsx."
+    },
+    {
+      "startSeconds": 726.4,
+      "text": "Export function client."
+    },
+    {
+      "startSeconds": 729.12,
+      "text": "Just like that. And this is going to"
+    },
+    {
+      "startSeconds": 730.84,
+      "text": "return an H1 that says client, so we"
+    },
+    {
+      "startSeconds": 732.6,
+      "text": "know that this renders on the client."
+    },
+    {
+      "startSeconds": 734.2,
+      "text": "And inside of here, I'm just going to"
+    },
+    {
+      "startSeconds": 735.24,
+      "text": "drastically simplify this by rendering"
+    },
+    {
+      "startSeconds": 737.08,
+      "text": "out that client component. And the"
+    },
+    {
+      "startSeconds": 738.84,
+      "text": "important thing inside of here is I'm"
+    },
+    {
+      "startSeconds": 740.12,
+      "text": "going to make sure that this runs on the"
+    },
+    {
+      "startSeconds": 741.36,
+      "text": "client by putting use client at the very"
+    },
+    {
+      "startSeconds": 743.24,
+      "text": "top. So, now this code is rendering on"
+    },
+    {
+      "startSeconds": 745.24,
+      "text": "the client and this code is rendering on"
+    },
+    {
+      "startSeconds": 747.36,
+      "text": "the server, which means if I put a"
+    },
+    {
+      "startSeconds": 749.16,
+      "text": "console log in here"
+    },
+    {
+      "startSeconds": 750.84,
+      "text": "that says client, you'll notice when we"
+    },
+    {
+      "startSeconds": 752.68,
+      "text": "inspect and we go over to our console,"
+    },
+    {
+      "startSeconds": 754.08,
+      "text": "you can see it's printing out client"
+    },
+    {
+      "startSeconds": 755.24,
+      "text": "right there. So, from this point onward,"
+    },
+    {
+      "startSeconds": 757.04,
+      "text": "everything inside of here is going to be"
+    },
+    {
+      "startSeconds": 758.4,
+      "text": "a client component and even if I render"
+    },
+    {
+      "startSeconds": 760.52,
+      "text": "another component, this component is"
+    },
+    {
+      "startSeconds": 763.08,
+      "text": "also going to be rendered on the client."
+    },
+    {
+      "startSeconds": 765.12,
+      "text": "But, what happens if I want to render"
+    },
+    {
+      "startSeconds": 766.32,
+      "text": "something inside of the server and I"
+    },
+    {
+      "startSeconds": 768.16,
+      "text": "want to render it inside this component?"
+    },
+    {
+      "startSeconds": 770.08,
+      "text": "Well, what I would need to do is"
+    },
+    {
+      "startSeconds": 771.08,
+      "text": "actually pass it in as a prop from a"
+    },
+    {
+      "startSeconds": 773.24,
+      "text": "server component. So, let me create"
+    },
+    {
+      "startSeconds": 774.88,
+      "text": "another component inside of here. I'll"
+    },
+    {
+      "startSeconds": 776.36,
+      "text": "call this one server.tsx."
+    },
+    {
+      "startSeconds": 778.56,
+      "text": "So, we're going to export function"
+    },
+    {
+      "startSeconds": 780.6,
+      "text": "server."
+    },
+    {
+      "startSeconds": 782.56,
+      "text": "And this is pretty much going to look"
+    },
+    {
+      "startSeconds": 783.52,
+      "text": "exactly the same. I'll just copy this"
+    },
+    {
+      "startSeconds": 785.12,
+      "text": "code, paste it inside of there, and I'll"
+    },
+    {
+      "startSeconds": 787.6,
+      "text": "change this to say server instead of"
+    },
+    {
+      "startSeconds": 789.32,
+      "text": "client. So, you will notice immediately"
+    },
+    {
+      "startSeconds": 791.12,
+      "text": "if I refresh my page and I actually"
+    },
+    {
+      "startSeconds": 792.6,
+      "text": "render this component inside of here."
+    },
+    {
+      "startSeconds": 795.88,
+      "text": "There we go."
+    },
+    {
+      "startSeconds": 800.44,
+      "text": "Make sure I import that component. Give"
+    },
+    {
+      "startSeconds": 802.28,
+      "text": "it a quick save. You can see we have our"
+    },
+    {
+      "startSeconds": 803.6,
+      "text": "client and server being rendered. And"
+    },
+    {
+      "startSeconds": 805.12,
+      "text": "crucially, since this client component"
+    },
+    {
+      "startSeconds": 807.24,
+      "text": "is being rendered on the client,"
+    },
+    {
+      "startSeconds": 808.64,
+      "text": "everything inside of it, including this"
+    },
+    {
+      "startSeconds": 810,
+      "text": "component we called server, is also"
+    },
+    {
+      "startSeconds": 811.76,
+      "text": "rendered on the client, which means you"
+    },
+    {
+      "startSeconds": 813.12,
+      "text": "can see inside of my console log, it's"
+    },
+    {
+      "startSeconds": 815.04,
+      "text": "rendering out server on the client."
+    },
+    {
+      "startSeconds": 817.56,
+      "text": "Now, what happens though if this server"
+    },
+    {
+      "startSeconds": 819.12,
+      "text": "component was doing some type of data"
+    },
+    {
+      "startSeconds": 820.8,
+      "text": "fetching? For example, it was getting"
+    },
+    {
+      "startSeconds": 822.16,
+      "text": "all of these different to-dos inside of"
+    },
+    {
+      "startSeconds": 824,
+      "text": "here, and I wanted to render this as"
+    },
+    {
+      "startSeconds": 825.64,
+      "text": "like an async component like that, and I"
+    },
+    {
+      "startSeconds": 827.52,
+      "text": "wanted this to occur on the actual"
+    },
+    {
+      "startSeconds": 829.68,
+      "text": "server. Well, to do that and to get"
+    },
+    {
+      "startSeconds": 831.6,
+      "text": "around that, I need to pass this"
+    },
+    {
+      "startSeconds": 833.08,
+      "text": "component into my client component as a"
+    },
+    {
+      "startSeconds": 835.4,
+      "text": "prop. So, inside of here, I could pass"
+    },
+    {
+      "startSeconds": 837.52,
+      "text": "along a child, however I want. I could"
+    },
+    {
+      "startSeconds": 839.88,
+      "text": "pass it along as a child like this, or I"
+    },
+    {
+      "startSeconds": 842.24,
+      "text": "could just say that I render out that"
+    },
+    {
+      "startSeconds": 844.04,
+      "text": "server,"
+    },
+    {
+      "startSeconds": 845.56,
+      "text": "and I could import that just like that."
+    },
+    {
+      "startSeconds": 847.6,
+      "text": "So, this is going to be passing it along"
+    },
+    {
+      "startSeconds": 849.24,
+      "text": "as a prop. So, inside of here, I can get"
+    },
+    {
+      "startSeconds": 851.28,
+      "text": "those children just like that, and I can"
+    },
+    {
+      "startSeconds": 853.88,
+      "text": "render out those children. And you can"
+    },
+    {
+      "startSeconds": 855.88,
+      "text": "just ignore the errors. This is just"
+    },
+    {
+      "startSeconds": 857.16,
+      "text": "because I'm using TypeScript. So, we'll"
+    },
+    {
+      "startSeconds": 858.76,
+      "text": "type this as any. There we go. And now"
+    },
+    {
+      "startSeconds": 861.4,
+      "text": "if I give everything a quick save, and I"
+    },
+    {
+      "startSeconds": 863.44,
+      "text": "just do a refresh of my page over here,"
+    },
+    {
+      "startSeconds": 865.12,
+      "text": "you'll notice no longer in the console"
+    },
+    {
+      "startSeconds": 866.84,
+      "text": "is it printing out server, and that's"
+    },
+    {
+      "startSeconds": 868.6,
+      "text": "because now this file is being rendered"
+    },
+    {
+      "startSeconds": 870.8,
+      "text": "on the server. And that's because"
+    },
+    {
+      "startSeconds": 872.52,
+      "text": "wherever you import the file is where it"
+    },
+    {
+      "startSeconds": 874.44,
+      "text": "runs. So, in our case, we're importing"
+    },
+    {
+      "startSeconds": 876,
+      "text": "this file in the server component here,"
+    },
+    {
+      "startSeconds": 878.64,
+      "text": "so it's running on the server. While in"
+    },
+    {
+      "startSeconds": 880.92,
+      "text": "the other case, we were importing it"
+    },
+    {
+      "startSeconds": 882.4,
+      "text": "here inside the client file, which is"
+    },
+    {
+      "startSeconds": 884.24,
+      "text": "why it was running on the client. So,"
+    },
+    {
+      "startSeconds": 886.08,
+      "text": "since we're importing it inside here, it"
+    },
+    {
+      "startSeconds": 887.96,
+      "text": "actually runs this entire server"
+    },
+    {
+      "startSeconds": 889.52,
+      "text": "component, and then passes down the"
+    },
+    {
+      "startSeconds": 891.16,
+      "text": "results to this client component here."
+    },
+    {
+      "startSeconds": 893.32,
+      "text": "So, if you want to be able to go from"
+    },
+    {
+      "startSeconds": 894.6,
+      "text": "server to client and then back to"
+    },
+    {
+      "startSeconds": 896.48,
+      "text": "server, this is the only way that you"
+    },
+    {
+      "startSeconds": 898.32,
+      "text": "can do it. But honestly, there's not too"
+    },
+    {
+      "startSeconds": 900.28,
+      "text": "many times where you want to do that,"
+    },
+    {
+      "startSeconds": 901.92,
+      "text": "and when you do, this is not a huge"
+    },
+    {
+      "startSeconds": 903.32,
+      "text": "inconvenience. The one thing to watch"
+    },
+    {
+      "startSeconds": 905.12,
+      "text": "out for though is that other frameworks"
+    },
+    {
+      "startSeconds": 906.6,
+      "text": "may do this slightly differently. This"
+    },
+    {
+      "startSeconds": 908.28,
+      "text": "is the Next.js way of doing things, and"
+    },
+    {
+      "startSeconds": 910.4,
+      "text": "a lot of this is overlapping with the"
+    },
+    {
+      "startSeconds": 912,
+      "text": "React way of doing things, but at this"
+    },
+    {
+      "startSeconds": 913.68,
+      "text": "current time, it's very blurred the"
+    },
+    {
+      "startSeconds": 915.32,
+      "text": "lines between Next.js and React, so it's"
+    },
+    {
+      "startSeconds": 917.32,
+      "text": "a little bit difficult to say if every"
+    },
+    {
+      "startSeconds": 918.839,
+      "text": "framework will do it this way or or they"
+    },
+    {
+      "startSeconds": 920.28,
+      "text": "have their own ways of doing this, but"
+    },
+    {
+      "startSeconds": 922.16,
+      "text": "this is more so specifically for"
+    },
+    {
+      "startSeconds": 923.76,
+      "text": "Next.js."
+    },
+    {
+      "startSeconds": 925.32,
+      "text": "Now, I know this was a lot to cover. So,"
+    },
+    {
+      "startSeconds": 927.16,
+      "text": "if you're interested in taking this to"
+    },
+    {
+      "startSeconds": 928.48,
+      "text": "the next level and actually learning"
+    },
+    {
+      "startSeconds": 930.04,
+      "text": "Next.js, which is built on top of this,"
+    },
+    {
+      "startSeconds": 932,
+      "text": "I have a full crash course I'll link on"
+    },
+    {
+      "startSeconds": 933.68,
+      "text": "the screen right over here. And also,"
+    },
+    {
+      "startSeconds": 935.76,
+      "text": "you can check out my complete Next.js"
+    },
+    {
+      "startSeconds": 937.76,
+      "text": "course. It's going to be linked down in"
+    },
+    {
+      "startSeconds": 939.2,
+      "text": "the description. It covers literally"
+    },
+    {
+      "startSeconds": 940.88,
+      "text": "everything you need to know about"
+    },
+    {
+      "startSeconds": 942,
+      "text": "Next.js to be an expert-level Next.js"
+    },
+    {
+      "startSeconds": 944.08,
+      "text": "developer. With that said, thank you"
+    },
+    {
+      "startSeconds": 945.76,
+      "text": "very much for watching and have a good"
+    },
+    {
+      "startSeconds": 947,
+      "text": "day."
+    }
+  ]
 }

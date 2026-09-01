@@ -1,0 +1,906 @@
+{
+  "id": "rIcB4zMYMas",
+  "url": "https://www.youtube.com/watch?v=rIcB4zMYMas",
+  "fetchedAt": "2026-09-01T04:08:48.288Z",
+  "captionKind": "asr",
+  "chapters": [
+    {
+      "startSeconds": 0,
+      "label": "Intro"
+    },
+    {
+      "startSeconds": 9,
+      "label": "View the table"
+    },
+    {
+      "startSeconds": 28,
+      "label": "ORDER BY"
+    },
+    {
+      "startSeconds": 78,
+      "label": "Window function with ROW_NUMBER"
+    },
+    {
+      "startSeconds": 100,
+      "label": "OVER"
+    },
+    {
+      "startSeconds": 156,
+      "label": "Breaking down the window function"
+    },
+    {
+      "startSeconds": 208,
+      "label": "ROW_NUMBER vs RANK vs DENSE_RANK"
+    },
+    {
+      "startSeconds": 313,
+      "label": "PARTITION BY"
+    },
+    {
+      "startSeconds": 412,
+      "label": "Window function in a subquery"
+    }
+  ],
+  "cues": [
+    {
+      "startSeconds": 0.199,
+      "text": "the number one question I get from SQL"
+    },
+    {
+      "startSeconds": 2.12,
+      "text": "students is what are window functions in"
+    },
+    {
+      "startSeconds": 4.96,
+      "text": "this video I'm going to break down each"
+    },
+    {
+      "startSeconds": 6.879,
+      "text": "part of a window function step by step"
+    },
+    {
+      "startSeconds": 9.719,
+      "text": "let's start by taking a look at our"
+    },
+    {
+      "startSeconds": 11.16,
+      "text": "table the baby names table you can see"
+    },
+    {
+      "startSeconds": 13.519,
+      "text": "that there are 10 rows of data here and"
+    },
+    {
+      "startSeconds": 15.679,
+      "text": "the way to read this first row is that"
+    },
+    {
+      "startSeconds": 17.8,
+      "text": "there were 95 baby girls given the name"
+    },
+    {
+      "startSeconds": 20.119,
+      "text": "Ava now let's order this data by"
+    },
+    {
+      "startSeconds": 22.32,
+      "text": "popularity so you can see here that Noah"
+    },
+    {
+      "startSeconds": 24.64,
+      "text": "was the most popular boy name with 120"
+    },
+    {
+      "startSeconds": 27.24,
+      "text": "baby boys given that name now let's"
+    },
+    {
+      "startSeconds": 29.4,
+      "text": "order this column here this total column"
+    },
+    {
+      "startSeconds": 32.079,
+      "text": "now to do that I'm going to take this"
+    },
+    {
+      "startSeconds": 33.64,
+      "text": "code here and paste it down here now I'm"
+    },
+    {
+      "startSeconds": 36.36,
+      "text": "just going to add in an order by clause"
+    },
+    {
+      "startSeconds": 38.64,
+      "text": "and I'm going to say order by total"
+    },
+    {
+      "startSeconds": 41.039,
+      "text": "descending now if I run that you can see"
+    },
+    {
+      "startSeconds": 43.719,
+      "text": "now that this column is ordered from"
+    },
+    {
+      "startSeconds": 45.96,
+      "text": "most popular name to least popular name"
+    },
+    {
+      "startSeconds": 48.28,
+      "text": "now from here let's add a popularity"
+    },
+    {
+      "startSeconds": 50.719,
+      "text": "column and in this column I want to say"
+    },
+    {
+      "startSeconds": 53.28,
+      "text": "that this is the first most popular name"
+    },
+    {
+      "startSeconds": 55.359,
+      "text": "the second most popular name and so on"
+    },
+    {
+      "startSeconds": 57.719,
+      "text": "so I want this column to contain the"
+    },
+    {
+      "startSeconds": 59.359,
+      "text": "values one 1 all the way to 10 now the"
+    },
+    {
+      "startSeconds": 61.719,
+      "text": "way that I can do that is by taking this"
+    },
+    {
+      "startSeconds": 63.64,
+      "text": "query here and pasting it down here and"
+    },
+    {
+      "startSeconds": 66.28,
+      "text": "now I'm going to select each column on"
+    },
+    {
+      "startSeconds": 68.119,
+      "text": "its own so I'm going to select the"
+    },
+    {
+      "startSeconds": 69.56,
+      "text": "gender column the name column and the"
+    },
+    {
+      "startSeconds": 71.92,
+      "text": "total column so that's what I have so"
+    },
+    {
+      "startSeconds": 73.759,
+      "text": "far and now I'm going to add one more"
+    },
+    {
+      "startSeconds": 75.96,
+      "text": "column here and I'm going to call it"
+    },
+    {
+      "startSeconds": 77.88,
+      "text": "popularity now to define the popularity"
+    },
+    {
+      "startSeconds": 80.159,
+      "text": "column I'm going to use a window"
+    },
+    {
+      "startSeconds": 82.159,
+      "text": "function and what it's going to do is"
+    },
+    {
+      "startSeconds": 84.04,
+      "text": "fill in the values 1 2 3 and so on"
+    },
+    {
+      "startSeconds": 87.04,
+      "text": "within this popularity column so to do"
+    },
+    {
+      "startSeconds": 89.4,
+      "text": "this I'm going to first say that I want"
+    },
+    {
+      "startSeconds": 91.52,
+      "text": "to fill in the row numbers and then if I"
+    },
+    {
+      "startSeconds": 93.96,
+      "text": "do that then this will output a row"
+    },
+    {
+      "startSeconds": 96.159,
+      "text": "number of one for the first row of row"
+    },
+    {
+      "startSeconds": 98.079,
+      "text": "number of two for the second row and so"
+    },
+    {
+      "startSeconds": 99.84,
+      "text": "on now the thing with the row number"
+    },
+    {
+      "startSeconds": 101.64,
+      "text": "function is that I can't just list it on"
+    },
+    {
+      "startSeconds": 103.72,
+      "text": "its own here it always has to be coupled"
+    },
+    {
+      "startSeconds": 106.119,
+      "text": "with this Over clause and the way the"
+    },
+    {
+      "startSeconds": 108.2,
+      "text": "Over clause works is basically what do I"
+    },
+    {
+      "startSeconds": 110.799,
+      "text": "want to be looking at in my table when"
+    },
+    {
+      "startSeconds": 112.799,
+      "text": "I'm labeling all the row numbers so in"
+    },
+    {
+      "startSeconds": 115.04,
+      "text": "this case I want my table to look like"
+    },
+    {
+      "startSeconds": 117.24,
+      "text": "this when I'm putting in the row numbers"
+    },
+    {
+      "startSeconds": 119.52,
+      "text": "now this table here isn't our original"
+    },
+    {
+      "startSeconds": 121.92,
+      "text": "baby names table it's the original baby"
+    },
+    {
+      "startSeconds": 124.119,
+      "text": "names table but the total column is"
+    },
+    {
+      "startSeconds": 126.52,
+      "text": "ordered descending so that's what we're"
+    },
+    {
+      "startSeconds": 128.759,
+      "text": "going to have to input into this over"
+    },
+    {
+      "startSeconds": 130.399,
+      "text": "Clause right here so I'm going to take"
+    },
+    {
+      "startSeconds": 131.879,
+      "text": "this order bu and I'm going to cut it"
+    },
+    {
+      "startSeconds": 134.239,
+      "text": "and paste it into this over section now"
+    },
+    {
+      "startSeconds": 136.64,
+      "text": "if I run this you can see here what I've"
+    },
+    {
+      "startSeconds": 138.959,
+      "text": "done with this query is I've added this"
+    },
+    {
+      "startSeconds": 141,
+      "text": "popularity column so this tells me that"
+    },
+    {
+      "startSeconds": 143.56,
+      "text": "Noah is the most popular name and then"
+    },
+    {
+      "startSeconds": 145.84,
+      "text": "down here Logan is the least popular"
+    },
+    {
+      "startSeconds": 148.2,
+      "text": "name and I was able to do that using"
+    },
+    {
+      "startSeconds": 151,
+      "text": "this line of code here and this line of"
+    },
+    {
+      "startSeconds": 153.319,
+      "text": "code is your window function now I want"
+    },
+    {
+      "startSeconds": 156.28,
+      "text": "to pause here and just break down this"
+    },
+    {
+      "startSeconds": 158.2,
+      "text": "window function so a window function"
+    },
+    {
+      "startSeconds": 160.56,
+      "text": "always has two components this second"
+    },
+    {
+      "startSeconds": 162.72,
+      "text": "part here defines your window and this"
+    },
+    {
+      "startSeconds": 164.76,
+      "text": "first part here is called your function"
+    },
+    {
+      "startSeconds": 166.959,
+      "text": "so the way to think about it is that"
+    },
+    {
+      "startSeconds": 168.44,
+      "text": "your window here is how you want to be"
+    },
+    {
+      "startSeconds": 170.72,
+      "text": "viewing your data when you're applying"
+    },
+    {
+      "startSeconds": 172.56,
+      "text": "your function so in this case what we've"
+    },
+    {
+      "startSeconds": 175,
+      "text": "done is we've taken our original baby"
+    },
+    {
+      "startSeconds": 176.959,
+      "text": "names table and then we've ordered that"
+    },
+    {
+      "startSeconds": 179,
+      "text": "total column descending right here now"
+    },
+    {
+      "startSeconds": 181.519,
+      "text": "all these rows here this is our window"
+    },
+    {
+      "startSeconds": 184.64,
+      "text": "this is how we want to be viewing our"
+    },
+    {
+      "startSeconds": 185.959,
+      "text": "data as we're applying our function"
+    },
+    {
+      "startSeconds": 188.48,
+      "text": "which in this case is row number so what"
+    },
+    {
+      "startSeconds": 190.92,
+      "text": "it's going to do is look at each row in"
+    },
+    {
+      "startSeconds": 192.76,
+      "text": "this window or this View and it's going"
+    },
+    {
+      "startSeconds": 194.68,
+      "text": "to label it 1 2 3 4 and so on now let's"
+    },
+    {
+      "startSeconds": 197.799,
+      "text": "vary things up a bit we're going to"
+    },
+    {
+      "startSeconds": 199.56,
+      "text": "change up these functions and we're also"
+    },
+    {
+      "startSeconds": 201.48,
+      "text": "going to change up this window part here"
+    },
+    {
+      "startSeconds": 203.519,
+      "text": "so that you can see how the outputs"
+    },
+    {
+      "startSeconds": 205.2,
+      "text": "change as you modify them so going down"
+    },
+    {
+      "startSeconds": 208.08,
+      "text": "here the first thing we're going to do"
+    },
+    {
+      "startSeconds": 210.12,
+      "text": "is try a few different functions so I'm"
+    },
+    {
+      "startSeconds": 212.239,
+      "text": "going to copy this code here and paste"
+    },
+    {
+      "startSeconds": 214.239,
+      "text": "it down here and instead of just the row"
+    },
+    {
+      "startSeconds": 216.4,
+      "text": "number function I'm going to add a few"
+    },
+    {
+      "startSeconds": 218.64,
+      "text": "more functions so first I'm going to put"
+    },
+    {
+      "startSeconds": 220.959,
+      "text": "rank here and then in this next line I'm"
+    },
+    {
+      "startSeconds": 223.959,
+      "text": "going to put dense rank here so these"
+    },
+    {
+      "startSeconds": 225.92,
+      "text": "are all different functions that we can"
+    },
+    {
+      "startSeconds": 227.799,
+      "text": "use as our window function now if I run"
+    },
+    {
+      "startSeconds": 230.239,
+      "text": "this code here you can see what I've"
+    },
+    {
+      "startSeconds": 232.079,
+      "text": "done is I've created three columns of"
+    },
+    {
+      "startSeconds": 234.12,
+      "text": "data this one has my row number"
+    },
+    {
+      "startSeconds": 236.12,
+      "text": "calculation then my rank calculation and"
+    },
+    {
+      "startSeconds": 238.439,
+      "text": "my dense rank calculation and in this"
+    },
+    {
+      "startSeconds": 240.439,
+      "text": "case you can see that there are slight"
+    },
+    {
+      "startSeconds": 242.519,
+      "text": "differences between the three functions"
+    },
+    {
+      "startSeconds": 244.239,
+      "text": "or the three calculations in the"
+    },
+    {
+      "startSeconds": 246.2,
+      "text": "ordering for rank you can see that"
+    },
+    {
+      "startSeconds": 248,
+      "text": "there's a tie here between Isabella and"
+    },
+    {
+      "startSeconds": 249.959,
+      "text": "Olivia and they both show that five and"
+    },
+    {
+      "startSeconds": 252.799,
+      "text": "then for D rink it goes from 1 to 9 and"
+    },
+    {
+      "startSeconds": 255.439,
+      "text": "it also includes that tie but then it"
+    },
+    {
+      "startSeconds": 257.479,
+      "text": "goes right to six instead of skipping"
+    },
+    {
+      "startSeconds": 259.28,
+      "text": "over it so this was an example of three"
+    },
+    {
+      "startSeconds": 261.88,
+      "text": "different functions that you can use"
+    },
+    {
+      "startSeconds": 263.24,
+      "text": "with window functions and you can see"
+    },
+    {
+      "startSeconds": 265.24,
+      "text": "that all that's happening here is that"
+    },
+    {
+      "startSeconds": 267.32,
+      "text": "these are three different calculations"
+    },
+    {
+      "startSeconds": 269.039,
+      "text": "you can use to label each row of your"
+    },
+    {
+      "startSeconds": 270.96,
+      "text": "data and these are just some of the many"
+    },
+    {
+      "startSeconds": 273,
+      "text": "functions that are out there some other"
+    },
+    {
+      "startSeconds": 274.84,
+      "text": "ones include first value and nth value"
+    },
+    {
+      "startSeconds": 277.28,
+      "text": "which return the first or nth value of"
+    },
+    {
+      "startSeconds": 279.08,
+      "text": "each window there's also lead and lag"
+    },
+    {
+      "startSeconds": 281.4,
+      "text": "that will return the next or previous"
+    },
+    {
+      "startSeconds": 282.96,
+      "text": "rows values within each window and many"
+    },
+    {
+      "startSeconds": 285.28,
+      "text": "others as well but just remember that"
+    },
+    {
+      "startSeconds": 287.199,
+      "text": "the whole goal of this function is just"
+    },
+    {
+      "startSeconds": 289.16,
+      "text": "to make some calculation for each row of"
+    },
+    {
+      "startSeconds": 291.24,
+      "text": "your data so that is the function piece"
+    },
+    {
+      "startSeconds": 293.68,
+      "text": "of a window function let's try modifying"
+    },
+    {
+      "startSeconds": 296,
+      "text": "our window as well so I'm going to copy"
+    },
+    {
+      "startSeconds": 298.4,
+      "text": "our original code up here and paste it"
+    },
+    {
+      "startSeconds": 300.639,
+      "text": "down here and if we run this code then"
+    },
+    {
+      "startSeconds": 302.96,
+      "text": "you can see that this was our original"
+    },
+    {
+      "startSeconds": 304.919,
+      "text": "output for our first window function we"
+    },
+    {
+      "startSeconds": 307.24,
+      "text": "have the values one all the way down to"
+    },
+    {
+      "startSeconds": 309.32,
+      "text": "10 here now with this let's modify this"
+    },
+    {
+      "startSeconds": 312.16,
+      "text": "window section so let's say that instead"
+    },
+    {
+      "startSeconds": 314.4,
+      "text": "of looking at the overall popularity of"
+    },
+    {
+      "startSeconds": 316.4,
+      "text": "all the baby names we wanted the"
+    },
+    {
+      "startSeconds": 318.24,
+      "text": "popularity of the boy names and the girl"
+    },
+    {
+      "startSeconds": 320.199,
+      "text": "names separately so what we need to do"
+    },
+    {
+      "startSeconds": 322.319,
+      "text": "now is group this gender column into a"
+    },
+    {
+      "startSeconds": 324.72,
+      "text": "boy group and a girl group now the way"
+    },
+    {
+      "startSeconds": 327.08,
+      "text": "to do this split within window functions"
+    },
+    {
+      "startSeconds": 329.479,
+      "text": "is is to use a partition by and in this"
+    },
+    {
+      "startSeconds": 331.759,
+      "text": "case we want to Partition by gender So"
+    },
+    {
+      "startSeconds": 334.6,
+      "text": "within this gender column we want to"
+    },
+    {
+      "startSeconds": 336.4,
+      "text": "split the rows into a boy group and a"
+    },
+    {
+      "startSeconds": 338.52,
+      "text": "girl group now if I run this you can see"
+    },
+    {
+      "startSeconds": 341.12,
+      "text": "that now I have the popularity values of"
+    },
+    {
+      "startSeconds": 343.4,
+      "text": "1 to five for all the boy names and also"
+    },
+    {
+      "startSeconds": 346.08,
+      "text": "that same one to five ranking for all"
+    },
+    {
+      "startSeconds": 347.96,
+      "text": "the girl names and I was able to do that"
+    },
+    {
+      "startSeconds": 350.319,
+      "text": "by modifying my window so just to recap"
+    },
+    {
+      "startSeconds": 352.8,
+      "text": "what we covered here this Over clause"
+    },
+    {
+      "startSeconds": 355.039,
+      "text": "specifies the window portion of my"
+    },
+    {
+      "startSeconds": 357.12,
+      "text": "window function and that window is"
+    },
+    {
+      "startSeconds": 359.24,
+      "text": "essentially the view of the table that I"
+    },
+    {
+      "startSeconds": 361.24,
+      "text": "want when I'm applying my row number"
+    },
+    {
+      "startSeconds": 363.319,
+      "text": "function so in this case when I"
+    },
+    {
+      "startSeconds": 365.08,
+      "text": "partitioned by gender the first thing I"
+    },
+    {
+      "startSeconds": 367.24,
+      "text": "did was I split my data into a boy group"
+    },
+    {
+      "startSeconds": 369.56,
+      "text": "and then a girl group and then within"
+    },
+    {
+      "startSeconds": 371.24,
+      "text": "the Over clause I also did an order by"
+    },
+    {
+      "startSeconds": 373.639,
+      "text": "total descending so for all those boy"
+    },
+    {
+      "startSeconds": 376,
+      "text": "names I then had the descending totals"
+    },
+    {
+      "startSeconds": 378.96,
+      "text": "and then I added that row number"
+    },
+    {
+      "startSeconds": 380.479,
+      "text": "function and then for all the girl names"
+    },
+    {
+      "startSeconds": 382.96,
+      "text": "I again had the descending total values"
+    },
+    {
+      "startSeconds": 385.44,
+      "text": "and then I added on those row numbers so"
+    },
+    {
+      "startSeconds": 387.84,
+      "text": "again if you want to change the window"
+    },
+    {
+      "startSeconds": 389.8,
+      "text": "that you're looking at when you apply"
+    },
+    {
+      "startSeconds": 391.199,
+      "text": "your function you can change what's in"
+    },
+    {
+      "startSeconds": 393.16,
+      "text": "this Over clause you can either"
+    },
+    {
+      "startSeconds": 394.8,
+      "text": "partition your data in different ways or"
+    },
+    {
+      "startSeconds": 396.56,
+      "text": "order your data in different ways and"
+    },
+    {
+      "startSeconds": 398.44,
+      "text": "then for each window or split of your"
+    },
+    {
+      "startSeconds": 400.24,
+      "text": "data whatever function you specify will"
+    },
+    {
+      "startSeconds": 402.96,
+      "text": "be applied to that window now the last"
+    },
+    {
+      "startSeconds": 405.12,
+      "text": "thing I'd like to do to wrap up this"
+    },
+    {
+      "startSeconds": 406.639,
+      "text": "video is just show you how you can use"
+    },
+    {
+      "startSeconds": 408.759,
+      "text": "this output to answer a question so the"
+    },
+    {
+      "startSeconds": 411,
+      "text": "question here is what are the top three"
+    },
+    {
+      "startSeconds": 413.12,
+      "text": "most popular names for each gender and"
+    },
+    {
+      "startSeconds": 415.36,
+      "text": "to do that we can use this window"
+    },
+    {
+      "startSeconds": 417.4,
+      "text": "function that we just wrote so I'm going"
+    },
+    {
+      "startSeconds": 419,
+      "text": "to paste that down here so now what I"
+    },
+    {
+      "startSeconds": 420.96,
+      "text": "can do is take this table turn it into a"
+    },
+    {
+      "startSeconds": 423.56,
+      "text": "subquery and I'm going to only return"
+    },
+    {
+      "startSeconds": 425.599,
+      "text": "the cases where the popularity is 1 2 or"
+    },
+    {
+      "startSeconds": 428.56,
+      "text": "three so I'm going to take this here and"
+    },
+    {
+      "startSeconds": 430.68,
+      "text": "save it as popularity and now I can"
+    },
+    {
+      "startSeconds": 432.84,
+      "text": "treat everything within the parentheses"
+    },
+    {
+      "startSeconds": 434.72,
+      "text": "as its own table and I can do a select"
+    },
+    {
+      "startSeconds": 437.16,
+      "text": "all from and I'm only going to look at"
+    },
+    {
+      "startSeconds": 439.84,
+      "text": "the cases where the popularity is less"
+    },
+    {
+      "startSeconds": 442.12,
+      "text": "than or equal to three and now if I run"
+    },
+    {
+      "startSeconds": 444.36,
+      "text": "that now I have both the most popular"
+    },
+    {
+      "startSeconds": 446.68,
+      "text": "boy names and the most popular girl"
+    },
+    {
+      "startSeconds": 448.479,
+      "text": "names if you you'd like to learn more"
+    },
+    {
+      "startSeconds": 450.52,
+      "text": "check out our award-winning self-paced"
+    },
+    {
+      "startSeconds": 452.36,
+      "text": "courses and guided projects for analysts"
+    },
+    {
+      "startSeconds": 454.319,
+      "text": "and data scientists at Maven analytics"
+    },
+    {
+      "startSeconds": 456.879,
+      "text": "thanks for watching and as always make"
+    },
+    {
+      "startSeconds": 458.8,
+      "text": "sure to like And subscribe for more data"
+    },
+    {
+      "startSeconds": 460.8,
+      "text": "content just like this I'll see you in"
+    },
+    {
+      "startSeconds": 462.759,
+      "text": "the next one"
+    },
+    {
+      "startSeconds": 466.73,
+      "text": "[Music]"
+    }
+  ]
+}

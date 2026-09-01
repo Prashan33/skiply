@@ -1,8 +1,1734 @@
 {
   "id": "EcCTIExsqmI",
   "url": "https://www.youtube.com/watch?v=EcCTIExsqmI",
-  "fetchedAt": "2026-08-31T05:15:17.202Z",
-  "captionKind": "empty",
-  "chapters": [],
-  "cues": []
+  "fetchedAt": "2026-09-01T04:05:57.392Z",
+  "captionKind": "asr",
+  "chapters": [
+    {
+      "startSeconds": 0,
+      "label": "Introduction"
+    },
+    {
+      "startSeconds": 49,
+      "label": "When To Use Generics"
+    },
+    {
+      "startSeconds": 124,
+      "label": "Generic Function Basics"
+    },
+    {
+      "startSeconds": 400,
+      "label": "Generic Type Basics"
+    },
+    {
+      "startSeconds": 564,
+      "label": "Advanced Generic Features"
+    }
+  ],
+  "cues": [
+    {
+      "startSeconds": 0,
+      "text": "By far the scariest part about learning"
+    },
+    {
+      "startSeconds": 2.04,
+      "text": "TypeScript is generics. I mean, there's"
+    },
+    {
+      "startSeconds": 4.2,
+      "text": "angle brackets everywhere, there's these"
+    },
+    {
+      "startSeconds": 5.68,
+      "text": "T, K, V variables, nothing really makes"
+    },
+    {
+      "startSeconds": 8.52,
+      "text": "sense, and it's so much different than"
+    },
+    {
+      "startSeconds": 10.32,
+      "text": "everything else up to that point. Well,"
+    },
+    {
+      "startSeconds": 12.76,
+      "text": "after this video, you'll no longer have"
+    },
+    {
+      "startSeconds": 14.6,
+      "text": "to worry about generics because in this"
+    },
+    {
+      "startSeconds": 16.16,
+      "text": "video, I'm going to teach you every"
+    },
+    {
+      "startSeconds": 17.56,
+      "text": "single thing you are going to ever need"
+    },
+    {
+      "startSeconds": 19.12,
+      "text": "to know about generics in a really easy"
+    },
+    {
+      "startSeconds": 21.08,
+      "text": "and concise format. So, you're going to"
+    },
+    {
+      "startSeconds": 22.68,
+      "text": "be mastering and using them by the end"
+    },
+    {
+      "startSeconds": 24.36,
+      "text": "of this video. If you enjoy this video"
+    },
+    {
+      "startSeconds": 26.36,
+      "text": "and my simplified approach to learning"
+    },
+    {
+      "startSeconds": 27.96,
+      "text": "TypeScript, I really recommend checking"
+    },
+    {
+      "startSeconds": 29.6,
+      "text": "out my full TypeScript simplified"
+    },
+    {
+      "startSeconds": 31.04,
+      "text": "course. It'll be linked in the"
+    },
+    {
+      "startSeconds": 32.16,
+      "text": "description below. It's less than 5"
+    },
+    {
+      "startSeconds": 33.92,
+      "text": "hours long and teaches you everything"
+    },
+    {
+      "startSeconds": 35.52,
+      "text": "you're ever going to need to know about"
+    },
+    {
+      "startSeconds": 36.84,
+      "text": "TypeScript to start writing it in your"
+    },
+    {
+      "startSeconds": 38.48,
+      "text": "own applications."
+    },
+    {
+      "startSeconds": 43,
+      "text": "Welcome back to Web Dev Simplified. My"
+    },
+    {
+      "startSeconds": 44.76,
+      "text": "name's Kyle, and my job is to simplify"
+    },
+    {
+      "startSeconds": 46.48,
+      "text": "the web for you so you can start"
+    },
+    {
+      "startSeconds": 47.68,
+      "text": "building your dream project sooner. And"
+    },
+    {
+      "startSeconds": 49.44,
+      "text": "this is probably the first instance"
+    },
+    {
+      "startSeconds": 50.8,
+      "text": "where people start to run into the need"
+    },
+    {
+      "startSeconds": 52.52,
+      "text": "for generics. As you can see, we have a"
+    },
+    {
+      "startSeconds": 54.44,
+      "text": "really simple function that gets the"
+    },
+    {
+      "startSeconds": 55.92,
+      "text": "first element of an array. It takes in"
+    },
+    {
+      "startSeconds": 58.16,
+      "text": "an array of numbers, and as you can see,"
+    },
+    {
+      "startSeconds": 59.56,
+      "text": "it returns the very first element. So,"
+    },
+    {
+      "startSeconds": 61.36,
+      "text": "if we pass it this array called numbers"
+    },
+    {
+      "startSeconds": 63.08,
+      "text": "down to it, you can see that it's"
+    },
+    {
+      "startSeconds": 64.64,
+      "text": "properly returning us to a number. This"
+    },
+    {
+      "startSeconds": 66.44,
+      "text": "first num variable is typed as a number,"
+    },
+    {
+      "startSeconds": 68.88,
+      "text": "and there's no errors at all. Now, let's"
+    },
+    {
+      "startSeconds": 70.92,
+      "text": "say that we want to do the exact same"
+    },
+    {
+      "startSeconds": 72.32,
+      "text": "thing as we're doing here, but instead"
+    },
+    {
+      "startSeconds": 73.96,
+      "text": "of passing along a number, we want to"
+    },
+    {
+      "startSeconds": 75.36,
+      "text": "pass along some strings. So, this array"
+    },
+    {
+      "startSeconds": 77.48,
+      "text": "is going to be some strings. It doesn't"
+    },
+    {
+      "startSeconds": 79,
+      "text": "really matter what these values are. You"
+    },
+    {
+      "startSeconds": 81.04,
+      "text": "can see this is going to be our first"
+    },
+    {
+      "startSeconds": 82.56,
+      "text": "string, and we're going to pass along"
+    },
+    {
+      "startSeconds": 84.28,
+      "text": "the strings into this get first element."
+    },
+    {
+      "startSeconds": 86.36,
+      "text": "But, of course, we're getting an error,"
+    },
+    {
+      "startSeconds": 87.88,
+      "text": "and that's because this is accepting a"
+    },
+    {
+      "startSeconds": 89.56,
+      "text": "number array and not a string array. So,"
+    },
+    {
+      "startSeconds": 92.2,
+      "text": "there's a bit of a problem here. We want"
+    },
+    {
+      "startSeconds": 93.56,
+      "text": "this to be able to take in any array and"
+    },
+    {
+      "startSeconds": 95.32,
+      "text": "return the first element of it. But, if"
+    },
+    {
+      "startSeconds": 97.24,
+      "text": "we type this as an array of any, you're"
+    },
+    {
+      "startSeconds": 100.08,
+      "text": "going to notice that the return type we"
+    },
+    {
+      "startSeconds": 101.52,
+      "text": "get is of type any. It's not of type"
+    },
+    {
+      "startSeconds": 103.76,
+      "text": "number or string. It's just any, which"
+    },
+    {
+      "startSeconds": 105.44,
+      "text": "is obviously not very useful. And if we"
+    },
+    {
+      "startSeconds": 107.56,
+      "text": "tried to type this as like number"
+    },
+    {
+      "startSeconds": 110.08,
+      "text": "or string, for example, like this,"
+    },
+    {
+      "startSeconds": 112.92,
+      "text": "now you're going to see our return type"
+    },
+    {
+      "startSeconds": 114.24,
+      "text": "is either a string or a number, even"
+    },
+    {
+      "startSeconds": 116.08,
+      "text": "though we know in this first case it"
+    },
+    {
+      "startSeconds": 117.64,
+      "text": "should be a number, and we know in this"
+    },
+    {
+      "startSeconds": 119.08,
+      "text": "second case it should be a string. But"
+    },
+    {
+      "startSeconds": 120.96,
+      "text": "TypeScript's not smart enough to know"
+    },
+    {
+      "startSeconds": 122.32,
+      "text": "that. This is where the idea of a"
+    },
+    {
+      "startSeconds": 124,
+      "text": "generic type comes in. Anytime that you"
+    },
+    {
+      "startSeconds": 126.36,
+      "text": "have a function that you know has some"
+    },
+    {
+      "startSeconds": 128.72,
+      "text": "type of data inside of it where you want"
+    },
+    {
+      "startSeconds": 130.52,
+      "text": "that data to be changing its type based"
+    },
+    {
+      "startSeconds": 132.56,
+      "text": "on what you pass in or based on what you"
+    },
+    {
+      "startSeconds": 134.12,
+      "text": "return, that is the perfect case for a"
+    },
+    {
+      "startSeconds": 136.2,
+      "text": "generic. So here, instead of typing out"
+    },
+    {
+      "startSeconds": 138.56,
+      "text": "the type, we're just going to put any"
+    },
+    {
+      "startSeconds": 139.68,
+      "text": "for now, but we're going to replace this"
+    },
+    {
+      "startSeconds": 141.2,
+      "text": "with a generic type, which is based on"
+    },
+    {
+      "startSeconds": 142.76,
+      "text": "whatever we pass in. So to define a"
+    },
+    {
+      "startSeconds": 145.12,
+      "text": "function as a generic function, you put"
+    },
+    {
+      "startSeconds": 146.72,
+      "text": "two sets of angle brackets afterwards,"
+    },
+    {
+      "startSeconds": 148.36,
+      "text": "an opening and closing angle bracket."
+    },
+    {
+      "startSeconds": 150.16,
+      "text": "And in here, you just give it the name"
+    },
+    {
+      "startSeconds": 151.92,
+      "text": "of what you want this generic type to"
+    },
+    {
+      "startSeconds": 153.2,
+      "text": "be. It can be anything. You often see"
+    },
+    {
+      "startSeconds": 155.16,
+      "text": "this called T, but we can call it like"
+    },
+    {
+      "startSeconds": 157.36,
+      "text": "element type or something like that to"
+    },
+    {
+      "startSeconds": 159.2,
+      "text": "really describe what this is. And I'd"
+    },
+    {
+      "startSeconds": 161.12,
+      "text": "recommend being as descriptive as you"
+    },
+    {
+      "startSeconds": 162.52,
+      "text": "can, especially when you're getting"
+    },
+    {
+      "startSeconds": 163.8,
+      "text": "started. So now we have a special type."
+    },
+    {
+      "startSeconds": 165.959,
+      "text": "This type can be literally anything, but"
+    },
+    {
+      "startSeconds": 167.959,
+      "text": "it's going to be that exact same thing"
+    },
+    {
+      "startSeconds": 169.72,
+      "text": "everywhere inside this function. So we"
+    },
+    {
+      "startSeconds": 171.68,
+      "text": "know this element type is going to be"
+    },
+    {
+      "startSeconds": 173.32,
+      "text": "for our array. So our array is of this"
+    },
+    {
+      "startSeconds": 175.24,
+      "text": "element type. Now you'll notice just by"
+    },
+    {
+      "startSeconds": 177.12,
+      "text": "doing that, we have no more errors in"
+    },
+    {
+      "startSeconds": 178.8,
+      "text": "our code, which is great. And when I"
+    },
+    {
+      "startSeconds": 179.92,
+      "text": "hover over my first number here, you can"
+    },
+    {
+      "startSeconds": 181.6,
+      "text": "see that it actually returns the type of"
+    },
+    {
+      "startSeconds": 183.48,
+      "text": "number. And when I hover over my first"
+    },
+    {
+      "startSeconds": 185.08,
+      "text": "string here, it returns the type of"
+    },
+    {
+      "startSeconds": 186.92,
+      "text": "string. And the reason why that works,"
+    },
+    {
+      "startSeconds": 188.6,
+      "text": "if we hover over this function, as you"
+    },
+    {
+      "startSeconds": 190.2,
+      "text": "can see what happens, is when we call"
+    },
+    {
+      "startSeconds": 191.92,
+      "text": "this function, it's replacing that"
+    },
+    {
+      "startSeconds": 193.72,
+      "text": "section in the angle brackets with the"
+    },
+    {
+      "startSeconds": 195.6,
+      "text": "type of number. So our array is of a"
+    },
+    {
+      "startSeconds": 198.12,
+      "text": "number array. Same thing here. Down"
+    },
+    {
+      "startSeconds": 200.32,
+      "text": "here, it's replacing that with a string,"
+    },
+    {
+      "startSeconds": 202.2,
+      "text": "which means we have a string array"
+    },
+    {
+      "startSeconds": 203.84,
+      "text": "instead of a number array. So whenever"
+    },
+    {
+      "startSeconds": 205.48,
+      "text": "you have a type that needs to conform to"
+    },
+    {
+      "startSeconds": 207.2,
+      "text": "the data being passed in or the data"
+    },
+    {
+      "startSeconds": 208.959,
+      "text": "being returned or just used in some way"
+    },
+    {
+      "startSeconds": 210.959,
+      "text": "in that function, you use a generic type"
+    },
+    {
+      "startSeconds": 213.2,
+      "text": "like this. And you can pass along"
+    },
+    {
+      "startSeconds": 214.8,
+      "text": "multiple generic types. For example, you"
+    },
+    {
+      "startSeconds": 216.88,
+      "text": "could have element type two inside of"
+    },
+    {
+      "startSeconds": 218.6,
+      "text": "here, and this would be a second generic"
+    },
+    {
+      "startSeconds": 220.4,
+      "text": "type that you could use somewhere else,"
+    },
+    {
+      "startSeconds": 221.68,
+      "text": "maybe for a second variable. For our"
+    },
+    {
+      "startSeconds": 223.44,
+      "text": "case, we just have one single generic"
+    },
+    {
+      "startSeconds": 225.08,
+      "text": "type cuz that's the most common and"
+    },
+    {
+      "startSeconds": 226.44,
+      "text": "simple use case. And the way that this"
+    },
+    {
+      "startSeconds": 228.08,
+      "text": "is working is that TypeScript is smart"
+    },
+    {
+      "startSeconds": 229.84,
+      "text": "enough to know, okay, this numbers"
+    },
+    {
+      "startSeconds": 231.04,
+      "text": "object is a number array, and we know"
+    },
+    {
+      "startSeconds": 232.88,
+      "text": "this array is of some type, and it's an"
+    },
+    {
+      "startSeconds": 234.84,
+      "text": "array, so TypeScript is smart enough to"
+    },
+    {
+      "startSeconds": 236.6,
+      "text": "know that this element type should be a"
+    },
+    {
+      "startSeconds": 238.08,
+      "text": "number. If it's not smart enough to know"
+    },
+    {
+      "startSeconds": 239.96,
+      "text": "that, you can actually manually pass"
+    },
+    {
+      "startSeconds": 241.76,
+      "text": "this in when you call a function. So, if"
+    },
+    {
+      "startSeconds": 243.28,
+      "text": "you call a generic function, you can"
+    },
+    {
+      "startSeconds": 244.96,
+      "text": "actually pass in what the generic value"
+    },
+    {
+      "startSeconds": 246.6,
+      "text": "should be to help TypeScript infer those"
+    },
+    {
+      "startSeconds": 248.76,
+      "text": "values if it can't, and you just put"
+    },
+    {
+      "startSeconds": 250.24,
+      "text": "these angle brackets directly after the"
+    },
+    {
+      "startSeconds": 252.08,
+      "text": "function name. This is actually"
+    },
+    {
+      "startSeconds": 253.72,
+      "text": "something that you probably even done"
+    },
+    {
+      "startSeconds": 255.48,
+      "text": "before if you've ever used something"
+    },
+    {
+      "startSeconds": 257.16,
+      "text": "like document.queryselector."
+    },
+    {
+      "startSeconds": 259.799,
+      "text": "For example, if I want to query selector"
+    },
+    {
+      "startSeconds": 261.519,
+      "text": "all of my input elements that just have"
+    },
+    {
+      "startSeconds": 263.56,
+      "text": "a class of input, and I know these are"
+    },
+    {
+      "startSeconds": 265.24,
+      "text": "HTML input elements, I could say const"
+    },
+    {
+      "startSeconds": 268.32,
+      "text": "input is equal to that. And if I try to"
+    },
+    {
+      "startSeconds": 270.44,
+      "text": "get the value from my input, you notice"
+    },
+    {
+      "startSeconds": 272.16,
+      "text": "I get an error because input doesn't"
+    },
+    {
+      "startSeconds": 273.919,
+      "text": "have a value property on it because by"
+    },
+    {
+      "startSeconds": 276,
+      "text": "default input is just an element. Well,"
+    },
+    {
+      "startSeconds": 278.08,
+      "text": "I know that this is an input element, so"
+    },
+    {
+      "startSeconds": 280.28,
+      "text": "I can actually use this query selector,"
+    },
+    {
+      "startSeconds": 282.28,
+      "text": "which is a generic, as you can see, and"
+    },
+    {
+      "startSeconds": 284.48,
+      "text": "I can pass in HTML input element as that"
+    },
+    {
+      "startSeconds": 287.4,
+      "text": "generic type, and now you can see my"
+    },
+    {
+      "startSeconds": 288.88,
+      "text": "input here isn't HTML input element,"
+    },
+    {
+      "startSeconds": 291.12,
+      "text": "which does have that value property,"
+    },
+    {
+      "startSeconds": 292.64,
+      "text": "which is why I no longer get any errors."
+    },
+    {
+      "startSeconds": 294.48,
+      "text": "So, generics are all over the place"
+    },
+    {
+      "startSeconds": 296.24,
+      "text": "inside of TypeScript, and you've used"
+    },
+    {
+      "startSeconds": 298.04,
+      "text": "them without even realizing them many"
+    },
+    {
+      "startSeconds": 299.6,
+      "text": "times. Again, for example, the array.map"
+    },
+    {
+      "startSeconds": 302.16,
+      "text": "function. So, if I just say const a"
+    },
+    {
+      "startSeconds": 304.44,
+      "text": "equals, and I have an array with like 1"
+    },
+    {
+      "startSeconds": 306.32,
+      "text": "2 3, for example, and I say a.map, and I"
+    },
+    {
+      "startSeconds": 310,
+      "text": "just want to map over these, whatever"
+    },
+    {
+      "startSeconds": 311.36,
+      "text": "that function is going to do, it really"
+    },
+    {
+      "startSeconds": 312.56,
+      "text": "doesn't matter. When I hover over map,"
+    },
+    {
+      "startSeconds": 314.32,
+      "text": "you'll notice that this is actually a"
+    },
+    {
+      "startSeconds": 316.12,
+      "text": "generic function that takes in a value,"
+    },
+    {
+      "startSeconds": 318.36,
+      "text": "but TypeScript is smart enough to infer"
+    },
+    {
+      "startSeconds": 320.04,
+      "text": "that, so you almost never have to"
+    },
+    {
+      "startSeconds": 321.6,
+      "text": "actually pass in what that generic value"
+    },
+    {
+      "startSeconds": 323.4,
+      "text": "is going to be. For example, if I just"
+    },
+    {
+      "startSeconds": 325.8,
+      "text": "take in, and I return a string from"
+    },
+    {
+      "startSeconds": 327.64,
+      "text": "here, and I hover over this map, you can"
+    },
+    {
+      "startSeconds": 329.4,
+      "text": "see it properly inferred that this is"
+    },
+    {
+      "startSeconds": 331.68,
+      "text": "returning a string as that generic"
+    },
+    {
+      "startSeconds": 333.36,
+      "text": "value. Another really common place"
+    },
+    {
+      "startSeconds": 334.919,
+      "text": "you're going to see generics is inside"
+    },
+    {
+      "startSeconds": 336.64,
+      "text": "of like maps and sets. So, I could say"
+    },
+    {
+      "startSeconds": 338.56,
+      "text": "const map equals new map, just like"
+    },
+    {
+      "startSeconds": 341.08,
+      "text": "this, and this map is actually a"
+    },
+    {
+      "startSeconds": 342.56,
+      "text": "generic, so I could pass it in. For"
+    },
+    {
+      "startSeconds": 343.84,
+      "text": "example, it's going to be a string"
+    },
+    {
+      "startSeconds": 345.24,
+      "text": "number map, and that just means that the"
+    },
+    {
+      "startSeconds": 347.08,
+      "text": "very first value for this, if I try to"
+    },
+    {
+      "startSeconds": 348.92,
+      "text": "like set something inside of here, so I"
+    },
+    {
+      "startSeconds": 350.64,
+      "text": "come in here and I say set, I can set"
+    },
+    {
+      "startSeconds": 352.84,
+      "text": "and it first needs to take a string and"
+    },
+    {
+      "startSeconds": 354.56,
+      "text": "then secondly is going to take a number"
+    },
+    {
+      "startSeconds": 356.08,
+      "text": "as the value. That's what this typing"
+    },
+    {
+      "startSeconds": 357.76,
+      "text": "right here is doing. But if I pass this"
+    },
+    {
+      "startSeconds": 359.68,
+      "text": "a default value, it's smart enough to"
+    },
+    {
+      "startSeconds": 361.36,
+      "text": "actually infer, if I pass it a string"
+    },
+    {
+      "startSeconds": 363.64,
+      "text": "and a number, that this map is of the"
+    },
+    {
+      "startSeconds": 366.08,
+      "text": "string number generic type. So again,"
+    },
+    {
+      "startSeconds": 368.4,
+      "text": "that inference is really powerful. And"
+    },
+    {
+      "startSeconds": 370.16,
+      "text": "this is how you would actually pass"
+    },
+    {
+      "startSeconds": 371.28,
+      "text": "among multiple generics as you can see"
+    },
+    {
+      "startSeconds": 373.2,
+      "text": "here. I just put a comma between it and"
+    },
+    {
+      "startSeconds": 375.4,
+      "text": "everything is working just fine. You can"
+    },
+    {
+      "startSeconds": 377.12,
+      "text": "even nest generics inside of each other."
+    },
+    {
+      "startSeconds": 378.76,
+      "text": "For example, let's say I wanted to have"
+    },
+    {
+      "startSeconds": 380,
+      "text": "a map where the string is the value and"
+    },
+    {
+      "startSeconds": 381.68,
+      "text": "it actually maps to another map and that"
+    },
+    {
+      "startSeconds": 384.08,
+      "text": "map is just a string number map as well."
+    },
+    {
+      "startSeconds": 386.56,
+      "text": "As you can see, I have these two levels"
+    },
+    {
+      "startSeconds": 388.24,
+      "text": "of nesting and if I remove this code to"
+    },
+    {
+      "startSeconds": 389.919,
+      "text": "get rid of those errors, you can see"
+    },
+    {
+      "startSeconds": 391.36,
+      "text": "that this map is just properly being"
+    },
+    {
+      "startSeconds": 392.96,
+      "text": "nested inside of each other. So you can"
+    },
+    {
+      "startSeconds": 394.36,
+      "text": "pass generics to generics as complicated"
+    },
+    {
+      "startSeconds": 396.44,
+      "text": "as you want to get it. Now this is going"
+    },
+    {
+      "startSeconds": 397.919,
+      "text": "a little bit off the deep end into"
+    },
+    {
+      "startSeconds": 399.12,
+      "text": "probably more confusing territory than"
+    },
+    {
+      "startSeconds": 400.64,
+      "text": "you need. So let's take a step back and"
+    },
+    {
+      "startSeconds": 402.12,
+      "text": "talk about generic types in the form of"
+    },
+    {
+      "startSeconds": 404.16,
+      "text": "types. We talked about generic"
+    },
+    {
+      "startSeconds": 405.72,
+      "text": "functions, but you can also make a type"
+    },
+    {
+      "startSeconds": 407.52,
+      "text": "that is generic as well. This is really"
+    },
+    {
+      "startSeconds": 409.44,
+      "text": "common with things like an API response."
+    },
+    {
+      "startSeconds": 411.68,
+      "text": "So let's say that we have a type called"
+    },
+    {
+      "startSeconds": 412.919,
+      "text": "API response."
+    },
+    {
+      "startSeconds": 414.919,
+      "text": "And here we have this type and it has"
+    },
+    {
+      "startSeconds": 416.2,
+      "text": "some data. We don't really know what"
+    },
+    {
+      "startSeconds": 417.4,
+      "text": "that data is. For now, I'll just say"
+    },
+    {
+      "startSeconds": 418.72,
+      "text": "any. And let's just say that we have"
+    },
+    {
+      "startSeconds": 420.32,
+      "text": "like an is error and this is going to be"
+    },
+    {
+      "startSeconds": 422.04,
+      "text": "a boolean. So what I can do is I can say"
+    },
+    {
+      "startSeconds": 424.32,
+      "text": "I can say my response here is equal to"
+    },
+    {
+      "startSeconds": 426.96,
+      "text": "and I have data, which is just"
+    },
+    {
+      "startSeconds": 428.4,
+      "text": "something, I don't know what it is, and"
+    },
+    {
+      "startSeconds": 429.72,
+      "text": "then I have an is error,"
+    },
+    {
+      "startSeconds": 432.52,
+      "text": "which is going to be false."
+    },
+    {
+      "startSeconds": 434.52,
+      "text": "There we go. And if I properly type this"
+    },
+    {
+      "startSeconds": 436.56,
+      "text": "as an API response, you can see that"
+    },
+    {
+      "startSeconds": 438.28,
+      "text": "this is all working fine with no errors."
+    },
+    {
+      "startSeconds": 440.28,
+      "text": "And let's say that this is returning to"
+    },
+    {
+      "startSeconds": 441.52,
+      "text": "me a user. So we're going to give them a"
+    },
+    {
+      "startSeconds": 442.68,
+      "text": "name"
+    },
+    {
+      "startSeconds": 444.08,
+      "text": "and we're going to give them an age."
+    },
+    {
+      "startSeconds": 445.2,
+      "text": "Let's just say 28. There we go. So this"
+    },
+    {
+      "startSeconds": 446.76,
+      "text": "is returning to me a user. But the"
+    },
+    {
+      "startSeconds": 448.08,
+      "text": "problem is my response, this data is"
+    },
+    {
+      "startSeconds": 450.04,
+      "text": "just any. No matter what, it's always"
+    },
+    {
+      "startSeconds": 451.52,
+      "text": "going to be that any type, which is"
+    },
+    {
+      "startSeconds": 453.04,
+      "text": "obviously not ideal. Instead, I want"
+    },
+    {
+      "startSeconds": 455.16,
+      "text": "this to be a specific type. So we can"
+    },
+    {
+      "startSeconds": 457.6,
+      "text": "make this a generic type. Again, you"
+    },
+    {
+      "startSeconds": 459.44,
+      "text": "just put the angle brackets after"
+    },
+    {
+      "startSeconds": 461.2,
+      "text": "whatever your type is and then you give"
+    },
+    {
+      "startSeconds": 462.84,
+      "text": "it whatever you want that generic type"
+    },
+    {
+      "startSeconds": 464.12,
+      "text": "to be called. In our case, we'll just"
+    },
+    {
+      "startSeconds": 465.44,
+      "text": "call this data. And then what I can do"
+    },
+    {
+      "startSeconds": 467.2,
+      "text": "is I can replace that any with data. And"
+    },
+    {
+      "startSeconds": 469.12,
+      "text": "now I'm saying that my data is of the"
+    },
+    {
+      "startSeconds": 470.84,
+      "text": "type data. And immediately I'm getting"
+    },
+    {
+      "startSeconds": 472.72,
+      "text": "an error down here because my API"
+    },
+    {
+      "startSeconds": 474.12,
+      "text": "response is accepting a type parameter"
+    },
+    {
+      "startSeconds": 476.72,
+      "text": "that generic, and I haven't passed in a"
+    },
+    {
+      "startSeconds": 478.6,
+      "text": "generic. So, I need to give it a generic"
+    },
+    {
+      "startSeconds": 480.32,
+      "text": "cuz it can't infer what the generic is."
+    },
+    {
+      "startSeconds": 481.88,
+      "text": "It's not smart enough to do that. So,"
+    },
+    {
+      "startSeconds": 483.56,
+      "text": "what I can do is I can say this generic"
+    },
+    {
+      "startSeconds": 484.92,
+      "text": "is going to be a name,"
+    },
+    {
+      "startSeconds": 486.92,
+      "text": "which is a string,"
+    },
+    {
+      "startSeconds": 490.12,
+      "text": "there we go, and an age, which is a"
+    },
+    {
+      "startSeconds": 492.48,
+      "text": "number."
+    },
+    {
+      "startSeconds": 493.72,
+      "text": "And now if I close all that off and"
+    },
+    {
+      "startSeconds": 494.919,
+      "text": "save, you can see now everything is"
+    },
+    {
+      "startSeconds": 496.52,
+      "text": "working. And when I hover over my"
+    },
+    {
+      "startSeconds": 497.6,
+      "text": "response, you can see it's an API"
+    },
+    {
+      "startSeconds": 498.84,
+      "text": "response where the name is a string and"
+    },
+    {
+      "startSeconds": 500.52,
+      "text": "the age is a number. So, it has all the"
+    },
+    {
+      "startSeconds": 502.52,
+      "text": "properties for is error, and then this"
+    },
+    {
+      "startSeconds": 504.16,
+      "text": "data type is just inferred from this"
+    },
+    {
+      "startSeconds": 506.64,
+      "text": "generic that I passed in. And I had to"
+    },
+    {
+      "startSeconds": 508.32,
+      "text": "manually pass it in cuz it can't do that"
+    },
+    {
+      "startSeconds": 510.36,
+      "text": "crazy inference. Now, oftentimes you may"
+    },
+    {
+      "startSeconds": 512.32,
+      "text": "want to make this a little bit easier to"
+    },
+    {
+      "startSeconds": 513.56,
+      "text": "read, so I can actually take this and"
+    },
+    {
+      "startSeconds": 515,
+      "text": "turn it into its own type, such as user"
+    },
+    {
+      "startSeconds": 517,
+      "text": "response."
+    },
+    {
+      "startSeconds": 518.44,
+      "text": "I can say type user response is equal to"
+    },
+    {
+      "startSeconds": 520.919,
+      "text": "this type right here, and it's just"
+    },
+    {
+      "startSeconds": 522.4,
+      "text": "allowing me to create an alias for that"
+    },
+    {
+      "startSeconds": 524.039,
+      "text": "type, which makes my code a little bit"
+    },
+    {
+      "startSeconds": 525.48,
+      "text": "easier to read. Now, the reason this is"
+    },
+    {
+      "startSeconds": 527.04,
+      "text": "so powerful is because if I wanted, I"
+    },
+    {
+      "startSeconds": 528.56,
+      "text": "could create a brand new type. For"
+    },
+    {
+      "startSeconds": 530.08,
+      "text": "example, if I have a blog that returns"
+    },
+    {
+      "startSeconds": 531.56,
+      "text": "some data, I could get a blog response."
+    },
+    {
+      "startSeconds": 533.68,
+      "text": "And if I copy this down and make sure"
+    },
+    {
+      "startSeconds": 535.44,
+      "text": "that this blog response, for example, is"
+    },
+    {
+      "startSeconds": 536.92,
+      "text": "just a title with a string, you can now"
+    },
+    {
+      "startSeconds": 539.28,
+      "text": "see that in this response for my blog,"
+    },
+    {
+      "startSeconds": 541.96,
+      "text": "if I make this a blog response, my data"
+    },
+    {
+      "startSeconds": 544.8,
+      "text": "right here will now give me an error"
+    },
+    {
+      "startSeconds": 546.36,
+      "text": "until I give it a title, which is a"
+    },
+    {
+      "startSeconds": 548.08,
+      "text": "string, and then my errors go away. This"
+    },
+    {
+      "startSeconds": 550.28,
+      "text": "is a really great way for me to expand"
+    },
+    {
+      "startSeconds": 552,
+      "text": "upon this. I have a generic API response"
+    },
+    {
+      "startSeconds": 554.16,
+      "text": "that takes in this data, and then I can"
+    },
+    {
+      "startSeconds": 555.76,
+      "text": "make specific versions, such as a user"
+    },
+    {
+      "startSeconds": 557.8,
+      "text": "response or a blog response, and so on,"
+    },
+    {
+      "startSeconds": 560,
+      "text": "that really narrow down what the type of"
+    },
+    {
+      "startSeconds": 561.96,
+      "text": "that data is going to be. Now, let's"
+    },
+    {
+      "startSeconds": 563.48,
+      "text": "just assume a lot of the API endpoints I"
+    },
+    {
+      "startSeconds": 565.48,
+      "text": "have don't really have very complicated"
+    },
+    {
+      "startSeconds": 567.56,
+      "text": "data, and instead the data is just a"
+    },
+    {
+      "startSeconds": 569.28,
+      "text": "status. So, for example, I have a"
+    },
+    {
+      "startSeconds": 571.08,
+      "text": "response that looks like this, where I"
+    },
+    {
+      "startSeconds": 572.48,
+      "text": "have a status,"
+    },
+    {
+      "startSeconds": 573.92,
+      "text": "which is just a number, like that. And I"
+    },
+    {
+      "startSeconds": 576.2,
+      "text": "have a lot of API responses that look"
+    },
+    {
+      "startSeconds": 577.76,
+      "text": "like that, and by default they all look"
+    },
+    {
+      "startSeconds": 579.48,
+      "text": "like that unless I specify something"
+    },
+    {
+      "startSeconds": 581.12,
+      "text": "specific. What I can do is I can"
+    },
+    {
+      "startSeconds": 582.88,
+      "text": "actually give this a default value. So,"
+    },
+    {
+      "startSeconds": 584.8,
+      "text": "if I just say equals here, status"
+    },
+    {
+      "startSeconds": 587.84,
+      "text": "number, I'm now saying that by default,"
+    },
+    {
+      "startSeconds": 590.04,
+      "text": "if I don't pass anything inside these"
+    },
+    {
+      "startSeconds": 592,
+      "text": "angle brackets, my data is going to be"
+    },
+    {
+      "startSeconds": 594.04,
+      "text": "of the type an object with the status"
+    },
+    {
+      "startSeconds": 595.92,
+      "text": "property that is a value of number. So,"
+    },
+    {
+      "startSeconds": 598,
+      "text": "now what I can do is I can just clean up"
+    },
+    {
+      "startSeconds": 599.96,
+      "text": "my code quite a bit. Let's just get rid"
+    },
+    {
+      "startSeconds": 601.32,
+      "text": "of everything except for this one"
+    },
+    {
+      "startSeconds": 603.2,
+      "text": "response that we have right here."
+    },
+    {
+      "startSeconds": 604.8,
+      "text": "Instead of making this a specific"
+    },
+    {
+      "startSeconds": 606.12,
+      "text": "response, I'm going to make it an API"
+    },
+    {
+      "startSeconds": 607.52,
+      "text": "response. And this API response expects"
+    },
+    {
+      "startSeconds": 610.08,
+      "text": "a status property which is a number to"
+    },
+    {
+      "startSeconds": 612,
+      "text": "be passed along by default. So, since I"
+    },
+    {
+      "startSeconds": 614.44,
+      "text": "didn't pass along a generic, it used"
+    },
+    {
+      "startSeconds": 616.44,
+      "text": "this default value right here. But if I"
+    },
+    {
+      "startSeconds": 618.44,
+      "text": "want, I could override that by saying,"
+    },
+    {
+      "startSeconds": 620.2,
+      "text": "for example, name string. And now I need"
+    },
+    {
+      "startSeconds": 622.2,
+      "text": "to pass along a name which is a string"
+    },
+    {
+      "startSeconds": 624.24,
+      "text": "in order to make TypeScript happy. And"
+    },
+    {
+      "startSeconds": 626.04,
+      "text": "of course, clean up my code. There we"
+    },
+    {
+      "startSeconds": 627.32,
+      "text": "go. Now, the final kind of major thing"
+    },
+    {
+      "startSeconds": 629.08,
+      "text": "you can do with generics is you can"
+    },
+    {
+      "startSeconds": 630.64,
+      "text": "actually give them a type that they must"
+    },
+    {
+      "startSeconds": 632.84,
+      "text": "adhere to. For example, what I could do"
+    },
+    {
+      "startSeconds": 635,
+      "text": "is I could say, \"You know what? I want"
+    },
+    {
+      "startSeconds": 636.12,
+      "text": "my data to be a string.\" And this is"
+    },
+    {
+      "startSeconds": 637.76,
+      "text": "going to work just fine. So, for"
+    },
+    {
+      "startSeconds": 639.12,
+      "text": "example, I can pass along a string and"
+    },
+    {
+      "startSeconds": 640.92,
+      "text": "everything's working just fine. But I"
+    },
+    {
+      "startSeconds": 643,
+      "text": "know for a fact that my API response"
+    },
+    {
+      "startSeconds": 645.24,
+      "text": "data must always be an object. It can't"
+    },
+    {
+      "startSeconds": 647.6,
+      "text": "be a string or a number, it must always"
+    },
+    {
+      "startSeconds": 649.44,
+      "text": "be an object. Well, to get around that,"
+    },
+    {
+      "startSeconds": 651.48,
+      "text": "what I can do here is I can say that"
+    },
+    {
+      "startSeconds": 653.24,
+      "text": "this actually extends a specific type."
+    },
+    {
+      "startSeconds": 655.6,
+      "text": "In my case, object. You could make it"
+    },
+    {
+      "startSeconds": 657.08,
+      "text": "more specific, less specific, but I'm"
+    },
+    {
+      "startSeconds": 658.6,
+      "text": "saying that this data must always be an"
+    },
+    {
+      "startSeconds": 660.8,
+      "text": "object. Now, we get an error here"
+    },
+    {
+      "startSeconds": 662.4,
+      "text": "because string does not extend object."
+    },
+    {
+      "startSeconds": 664.64,
+      "text": "This must be an object. For example, a"
+    },
+    {
+      "startSeconds": 666.92,
+      "text": "name that has string. And now you can"
+    },
+    {
+      "startSeconds": 669.04,
+      "text": "see that if I type in the name that's a"
+    },
+    {
+      "startSeconds": 670.92,
+      "text": "string, that is now working just fine. I"
+    },
+    {
+      "startSeconds": 673.28,
+      "text": "can even combine this together with a"
+    },
+    {
+      "startSeconds": 674.8,
+      "text": "default value by just coming in here and"
+    },
+    {
+      "startSeconds": 676.52,
+      "text": "putting an equal sign for status, which"
+    },
+    {
+      "startSeconds": 678.52,
+      "text": "is a number. And now if I don't pass"
+    },
+    {
+      "startSeconds": 681.28,
+      "text": "anything in here at all, it defaults to"
+    },
+    {
+      "startSeconds": 683.12,
+      "text": "this status number. So, if I change this"
+    },
+    {
+      "startSeconds": 685.12,
+      "text": "to"
+    },
+    {
+      "startSeconds": 686.16,
+      "text": "status of 200, you can see I no longer"
+    },
+    {
+      "startSeconds": 688.64,
+      "text": "have any errors. Now, these last few"
+    },
+    {
+      "startSeconds": 690.28,
+      "text": "things that I covered are really some of"
+    },
+    {
+      "startSeconds": 691.56,
+      "text": "the more complicated use cases for a"
+    },
+    {
+      "startSeconds": 693.52,
+      "text": "generic. In 90% of your cases, you're"
+    },
+    {
+      "startSeconds": 695.76,
+      "text": "not going to deal with extending, you're"
+    },
+    {
+      "startSeconds": 697.16,
+      "text": "not going to deal with default values."
+    },
+    {
+      "startSeconds": 698.56,
+      "text": "You're just going to have a single"
+    },
+    {
+      "startSeconds": 699.8,
+      "text": "generic, maybe two generics, and you're"
+    },
+    {
+      "startSeconds": 701.88,
+      "text": "just going to use them in a couple very"
+    },
+    {
+      "startSeconds": 703.68,
+      "text": "sparingly places. You may use them in"
+    },
+    {
+      "startSeconds": 705.72,
+      "text": "types, but most often you're probably"
+    },
+    {
+      "startSeconds": 707.2,
+      "text": "going to be using them in functions, in"
+    },
+    {
+      "startSeconds": 708.92,
+      "text": "which case you generally don't even have"
+    },
+    {
+      "startSeconds": 710.72,
+      "text": "to pass along the actual generic itself"
+    },
+    {
+      "startSeconds": 713,
+      "text": "because inside of functions it's almost"
+    },
+    {
+      "startSeconds": 714.6,
+      "text": "always smart enough to infer what that"
+    },
+    {
+      "startSeconds": 716.36,
+      "text": "generic type is based on the inputs and"
+    },
+    {
+      "startSeconds": 718.56,
+      "text": "outputs of that function. And I know"
+    },
+    {
+      "startSeconds": 720.32,
+      "text": "I've covered a ton in a really short"
+    },
+    {
+      "startSeconds": 722.08,
+      "text": "time, so if you need to rewatch this"
+    },
+    {
+      "startSeconds": 723.4,
+      "text": "video, I 100% recommend it. But the key"
+    },
+    {
+      "startSeconds": 725.76,
+      "text": "to take away with generics is when you"
+    },
+    {
+      "startSeconds": 727.2,
+      "text": "want to create a function or a type"
+    },
+    {
+      "startSeconds": 729.32,
+      "text": "where some piece of data inside of it"
+    },
+    {
+      "startSeconds": 731.32,
+      "text": "could be multiple different types, but"
+    },
+    {
+      "startSeconds": 733.44,
+      "text": "during the entire iteration of that type"
+    },
+    {
+      "startSeconds": 735.12,
+      "text": "or function you want it to be the same"
+    },
+    {
+      "startSeconds": 736.4,
+      "text": "thing. But for example, it could be a"
+    },
+    {
+      "startSeconds": 737.76,
+      "text": "number one time or a string the next"
+    },
+    {
+      "startSeconds": 739.6,
+      "text": "time depending on what array you pass it"
+    },
+    {
+      "startSeconds": 741.04,
+      "text": "like in our first example, that is the"
+    },
+    {
+      "startSeconds": 742.68,
+      "text": "perfect use case for a generic. And if"
+    },
+    {
+      "startSeconds": 745.16,
+      "text": "you enjoyed this video and you'd like"
+    },
+    {
+      "startSeconds": 746.4,
+      "text": "this short, simple, concise, to the"
+    },
+    {
+      "startSeconds": 748.36,
+      "text": "point explanation of everything"
+    },
+    {
+      "startSeconds": 749.8,
+      "text": "important about generics, you're going"
+    },
+    {
+      "startSeconds": 751.32,
+      "text": "to love my TypeScript Simplified course"
+    },
+    {
+      "startSeconds": 753.28,
+      "text": "cuz I do this exact same thing for every"
+    },
+    {
+      "startSeconds": 755.24,
+      "text": "single TypeScript concept out there,"
+    },
+    {
+      "startSeconds": 757.08,
+      "text": "giving you everything you need to know"
+    },
+    {
+      "startSeconds": 758.4,
+      "text": "about TypeScript in less than 5 hours."
+    },
+    {
+      "startSeconds": 760.64,
+      "text": "So, if you want to check that out, it's"
+    },
+    {
+      "startSeconds": 761.72,
+      "text": "going to be linked down in the"
+    },
+    {
+      "startSeconds": 762.44,
+      "text": "description below. And if you take that"
+    },
+    {
+      "startSeconds": 763.96,
+      "text": "course, you're going to be able to use"
+    },
+    {
+      "startSeconds": 765,
+      "text": "TypeScript by the end of today, which is"
+    },
+    {
+      "startSeconds": 766.6,
+      "text": "just absolutely amazing. So, with that"
+    },
+    {
+      "startSeconds": 768.64,
+      "text": "said, thank you very much for watching"
+    },
+    {
+      "startSeconds": 770.16,
+      "text": "and have a good day."
+    }
+  ]
 }

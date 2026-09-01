@@ -1,0 +1,377 @@
+{
+  "id": "nzeKH7moGfo",
+  "url": "https://www.youtube.com/watch?v=nzeKH7moGfo",
+  "fetchedAt": "2026-09-01T04:08:36.619Z",
+  "captionKind": "asr",
+  "chapters": [],
+  "cues": [
+    {
+      "startSeconds": 0.16,
+      "text": "Have you ever clicked pay now on an app"
+    },
+    {
+      "startSeconds": 2.639,
+      "text": "and nothing happens? This page keeps"
+    },
+    {
+      "startSeconds": 5.359,
+      "text": "loading 5 seconds, 10 seconds, then an"
+    },
+    {
+      "startSeconds": 8.24,
+      "text": "error message. Frustrating, right? This"
+    },
+    {
+      "startSeconds": 11.28,
+      "text": "usually happens when one service in the"
+    },
+    {
+      "startSeconds": 13.44,
+      "text": "back end fails or respond slowly. In a"
+    },
+    {
+      "startSeconds": 17.119,
+      "text": "micros service system, everything is"
+    },
+    {
+      "startSeconds": 19.279,
+      "text": "connected. If one service breaks, other"
+    },
+    {
+      "startSeconds": 22.08,
+      "text": "can fail too. So how do we stop that"
+    },
+    {
+      "startSeconds": 25.439,
+      "text": "from happening? In this video, I will"
+    },
+    {
+      "startSeconds": 28.4,
+      "text": "show you three smart ways to make your"
+    },
+    {
+      "startSeconds": 30.48,
+      "text": "microservices more reliable. Retry,"
+    },
+    {
+      "startSeconds": 33.92,
+      "text": "circuit breaker, time out. Let's start"
+    },
+    {
+      "startSeconds": 36.96,
+      "text": "with the first one. Sometimes a service"
+    },
+    {
+      "startSeconds": 39.68,
+      "text": "fails once but works fine if you try"
+    },
+    {
+      "startSeconds": 42.399,
+      "text": "again. This might be because of a small"
+    },
+    {
+      "startSeconds": 45.12,
+      "text": "network issue or a temporary error. This"
+    },
+    {
+      "startSeconds": 48.32,
+      "text": "is where retry helps. It means if the"
+    },
+    {
+      "startSeconds": 51.44,
+      "text": "first try fails, try again"
+    },
+    {
+      "startSeconds": 52.96,
+      "text": "automatically. Let's say your service"
+    },
+    {
+      "startSeconds": 55.199,
+      "text": "calls a payment API. If it fails the"
+    },
+    {
+      "startSeconds": 58.16,
+      "text": "first time, retry will try again maybe"
+    },
+    {
+      "startSeconds": 60.559,
+      "text": "two or three times before giving up."
+    },
+    {
+      "startSeconds": 63.039,
+      "text": "Here we are using the retry annotation"
+    },
+    {
+      "startSeconds": 65.36,
+      "text": "from resilience. This method call"
+    },
+    {
+      "startSeconds": 67.52,
+      "text": "payment calls the payment service using"
+    },
+    {
+      "startSeconds": 69.68,
+      "text": "rest template. If this call fails,"
+    },
+    {
+      "startSeconds": 72.88,
+      "text": "Spring Boot will retry it automatically"
+    },
+    {
+      "startSeconds": 75.36,
+      "text": "based on the default settings, usually"
+    },
+    {
+      "startSeconds": 77.92,
+      "text": "three times. If all retries fail, it"
+    },
+    {
+      "startSeconds": 81.119,
+      "text": "will go back to the fallback method and"
+    },
+    {
+      "startSeconds": 83.28,
+      "text": "return a simple error message instead of"
+    },
+    {
+      "startSeconds": 85.439,
+      "text": "crashing. Now imagine the payment"
+    },
+    {
+      "startSeconds": 88.56,
+      "text": "service is not just failing once. It's"
+    },
+    {
+      "startSeconds": 91.28,
+      "text": "broken for a while. Retry again and"
+    },
+    {
+      "startSeconds": 93.759,
+      "text": "again won't help. It will just waste"
+    },
+    {
+      "startSeconds": 96.159,
+      "text": "time and overload the system. This is"
+    },
+    {
+      "startSeconds": 98.96,
+      "text": "where circuit breaker comes in. A"
+    },
+    {
+      "startSeconds": 101.439,
+      "text": "circuit breaker watches for repeated"
+    },
+    {
+      "startSeconds": 103.2,
+      "text": "failures. If a service keeps failing,"
+    },
+    {
+      "startSeconds": 106.399,
+      "text": "the breaker opens and blocks all future"
+    },
+    {
+      "startSeconds": 109.2,
+      "text": "calls for some time. After waiting a few"
+    },
+    {
+      "startSeconds": 112.079,
+      "text": "seconds, it tries one request. If it"
+    },
+    {
+      "startSeconds": 115.2,
+      "text": "works, the circuit closes and traffic"
+    },
+    {
+      "startSeconds": 117.84,
+      "text": "starts again. It just like an electric"
+    },
+    {
+      "startSeconds": 120.479,
+      "text": "circuit breaker at home. It trips when"
+    },
+    {
+      "startSeconds": 123.119,
+      "text": "there is a too much load, then resets."
+    },
+    {
+      "startSeconds": 126.159,
+      "text": "This code uses the circuit breaker"
+    },
+    {
+      "startSeconds": 128.319,
+      "text": "annotation. If the call payment method"
+    },
+    {
+      "startSeconds": 130.879,
+      "text": "fails too many times in a row, let's say"
+    },
+    {
+      "startSeconds": 133.68,
+      "text": "five out of 10, this circuit opens and"
+    },
+    {
+      "startSeconds": 137.04,
+      "text": "for a short period, no more calls will"
+    },
+    {
+      "startSeconds": 139.52,
+      "text": "be made to the payment service. During"
+    },
+    {
+      "startSeconds": 142.4,
+      "text": "this time, any new calls go straight to"
+    },
+    {
+      "startSeconds": 144.8,
+      "text": "the fallback method. After a while, it"
+    },
+    {
+      "startSeconds": 147.92,
+      "text": "will retry one request again. If it"
+    },
+    {
+      "startSeconds": 150.239,
+      "text": "succeeds, the circuit closes. This helps"
+    },
+    {
+      "startSeconds": 153.2,
+      "text": "your app avoid calling broken services"
+    },
+    {
+      "startSeconds": 155.92,
+      "text": "again and again."
+    },
+    {
+      "startSeconds": 158,
+      "text": "Now, let's say this service isn't"
+    },
+    {
+      "startSeconds": 160.08,
+      "text": "failing. It's just very slow. Waiting"
+    },
+    {
+      "startSeconds": 162.959,
+      "text": "too long can block your app and waste"
+    },
+    {
+      "startSeconds": 165.28,
+      "text": "resources."
+    },
+    {
+      "startSeconds": 167.12,
+      "text": "That's where timeout comes in. It sets a"
+    },
+    {
+      "startSeconds": 170,
+      "text": "time limit. If a service doesn't respond"
+    },
+    {
+      "startSeconds": 172.56,
+      "text": "in time, the call is stopped. Imagine"
+    },
+    {
+      "startSeconds": 175.68,
+      "text": "calling customer care. If no one picks"
+    },
+    {
+      "startSeconds": 177.92,
+      "text": "up in 30 seconds, you hang up. That's a"
+    },
+    {
+      "startSeconds": 180.879,
+      "text": "timeout. In code, we set this using a"
+    },
+    {
+      "startSeconds": 183.519,
+      "text": "config file and annotation. Here we"
+    },
+    {
+      "startSeconds": 187.2,
+      "text": "configure 2 seconds timeout for the user"
+    },
+    {
+      "startSeconds": 189.84,
+      "text": "service in the EML file. That means if"
+    },
+    {
+      "startSeconds": 193.44,
+      "text": "the service takes more than 2 seconds to"
+    },
+    {
+      "startSeconds": 195.44,
+      "text": "respond, the call is canled. The method"
+    },
+    {
+      "startSeconds": 198.319,
+      "text": "returns a completable future which is"
+    },
+    {
+      "startSeconds": 200.879,
+      "text": "required by the time limiter to support"
+    },
+    {
+      "startSeconds": 203.12,
+      "text": "a sync timeouts. This protects your app"
+    },
+    {
+      "startSeconds": 205.92,
+      "text": "from getting stuck due to slow"
+    },
+    {
+      "startSeconds": 207.76,
+      "text": "responses. So let's quickly review. Use"
+    },
+    {
+      "startSeconds": 211.84,
+      "text": "retry when you expect temporary issues."
+    },
+    {
+      "startSeconds": 215.36,
+      "text": "Use circuit breaker when a service keeps"
+    },
+    {
+      "startSeconds": 217.84,
+      "text": "failing and use timeout to stop long"
+    },
+    {
+      "startSeconds": 222.159,
+      "text": "slow calls. These three patterns make"
+    },
+    {
+      "startSeconds": 225.44,
+      "text": "your microservices stronger, faster, and"
+    },
+    {
+      "startSeconds": 228.64,
+      "text": "more reliable. Instead of crashing or"
+    },
+    {
+      "startSeconds": 231.599,
+      "text": "freezing, they help your app recover and"
+    },
+    {
+      "startSeconds": 234.4,
+      "text": "respond smartly. That's it. You have"
+    },
+    {
+      "startSeconds": 236.879,
+      "text": "just learned how to build resilient"
+    },
+    {
+      "startSeconds": 238.879,
+      "text": "microservices using retry, circuit"
+    },
+    {
+      "startSeconds": 241.599,
+      "text": "breaker, and time out. If you want more"
+    },
+    {
+      "startSeconds": 244.64,
+      "text": "Spring Boot examples or a full demo app"
+    },
+    {
+      "startSeconds": 247.439,
+      "text": "using these features, comment below."
+    }
+  ]
+}

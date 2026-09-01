@@ -1,0 +1,2406 @@
+{
+  "id": "7Lc2AxiM17o",
+  "url": "https://www.youtube.com/watch?v=7Lc2AxiM17o",
+  "fetchedAt": "2026-09-01T04:10:58.846Z",
+  "captionKind": "manual",
+  "chapters": [
+    {
+      "startSeconds": 0,
+      "label": "What is Matplotlib?"
+    },
+    {
+      "startSeconds": 110,
+      "label": "Setup/Install"
+    },
+    {
+      "startSeconds": 238,
+      "label": "Imports"
+    },
+    {
+      "startSeconds": 303,
+      "label": "Matplotlib Architecture"
+    },
+    {
+      "startSeconds": 511,
+      "label": "Basic Line Plot"
+    },
+    {
+      "startSeconds": 617,
+      "label": "Customizing Styles"
+    },
+    {
+      "startSeconds": 777,
+      "label": "Scatter Plot"
+    },
+    {
+      "startSeconds": 936,
+      "label": "Bar Chart"
+    },
+    {
+      "startSeconds": 1172,
+      "label": "Histograms"
+    },
+    {
+      "startSeconds": 1249,
+      "label": "Subplots"
+    },
+    {
+      "startSeconds": 1330,
+      "label": "Working with Pandas"
+    },
+    {
+      "startSeconds": 1431,
+      "label": "Advanced Customization"
+    },
+    {
+      "startSeconds": 1600,
+      "label": "Plot Styles"
+    },
+    {
+      "startSeconds": 1638,
+      "label": "Pie Charts"
+    },
+    {
+      "startSeconds": 1701,
+      "label": "Saving Plots"
+    },
+    {
+      "startSeconds": 1740,
+      "label": "Cheat Sheet"
+    }
+  ],
+  "cues": [
+    {
+      "startSeconds": 0.266,
+      "text": "In this video, you'll learn how to use the matplotlib library in Python."
+    },
+    {
+      "startSeconds": 4.55,
+      "text": "If you're interested at all in data science, AI, machine"
+    },
+    {
+      "startSeconds": 8.066,
+      "text": "learning, or scientific computing, then matplotlib is a must learn."
+    },
+    {
+      "startSeconds": 12.083,
+      "text": "And fortunately, in just a short video like this, I can teach you all of the fundamentals"
+    },
+    {
+      "startSeconds": 16.55,
+      "text": "that will get you quite far."
+    },
+    {
+      "startSeconds": 18.2,
+      "text": "So with that said, let's go on to the computer and let me teach you matplotlib in Python."
+    },
+    {
+      "startSeconds": 22.65,
+      "text": "All right."
+    },
+    {
+      "startSeconds": 22.95,
+      "text": "So I'm on the computer."
+    },
+    {
+      "startSeconds": 23.866,
+      "text": "And what I have open here is a Jupyter notebook."
+    },
+    {
+      "startSeconds": 26.033,
+      "text": "It contains all of the code that I'm going to cover in this video."
+    },
+    {
+      "startSeconds": 28.85,
+      "text": "And you can directly run all of the code inside of it to see all of the different plots."
+    },
+    {
+      "startSeconds": 33.016,
+      "text": "If you want access to this Jupyter notebook, you can sign up for my email"
+    },
+    {
+      "startSeconds": 36.6,
+      "text": "list and I will send it to you for free linked in the description."
+    },
+    {
+      "startSeconds": 39.75,
+      "text": "Otherwise, feel free just to watch the video and see all of the code samples that I go through."
+    },
+    {
+      "startSeconds": 44.3,
+      "text": "Now with that in mind, let's start by discussing what matplotlib is."
+    },
+    {
+      "startSeconds": 47.6,
+      "text": "Then I'll show you"
+    },
+    {
+      "startSeconds": 48.266,
+      "text": "how to make your own Jupyter Notebook, which is the easiest way to play around with it."
+    },
+    {
+      "startSeconds": 52.2,
+      "text": "And we'll start going through various different types of charts graphs, bar charts, pie charts,"
+    },
+    {
+      "startSeconds": 56.266,
+      "text": "all of that kind of stuff that you can create with it."
+    },
+    {
+      "startSeconds": 58.2,
+      "text": "So matplotlib is a comprehensive library for creating static and interactive visualizations in Python."
+    },
+    {
+      "startSeconds": 64.133,
+      "text": "Like it says here, it provides a Matlab like interface for plotting data."
+    },
+    {
+      "startSeconds": 68.216,
+      "text": "And if you do anything with data visualization or data analysis, it is absolutely essential."
+    },
+    {
+      "startSeconds": 73.85,
+      "text": "Now a lot of times you'll see that matplotlib is used in combination with numpy and pandas."
+    },
+    {
+      "startSeconds": 78.75,
+      "text": "And if you'd like to learn either of those topics, I have short videos on them as well,"
+    },
+    {
+      "startSeconds": 82.4,
+      "text": "so I'll put them on screen right now."
+    },
+    {
+      "startSeconds": 84.166,
+      "text": "However, it is not a prerequisite."
+    },
+    {
+      "startSeconds": 86.483,
+      "text": "Okay, so that's matplotlib."
+    },
+    {
+      "startSeconds": 87.866,
+      "text": "Essentially it's a plotting library."
+    },
+    {
+      "startSeconds": 89.866,
+      "text": "It's very easy to use."
+    },
+    {
+      "startSeconds": 91.616,
+      "text": "And you can see that you can create all kinds of charts."
+    },
+    {
+      "startSeconds": 93.766,
+      "text": "I'm just kind of scrolling through them."
+    },
+    {
+      "startSeconds": 94.883,
+      "text": "So you get a sense of kind of what you can do here with practically unlimited customization."
+    },
+    {
+      "startSeconds": 99.833,
+      "text": "And this video will not cover absolutely everything, but it will give you a really solid base"
+    },
+    {
+      "startSeconds": 104.566,
+      "text": "to be able to start using this library and have a sense of what it's capable of."
+    },
+    {
+      "startSeconds": 108.35,
+      "text": "Okay."
+    },
+    {
+      "startSeconds": 108.683,
+      "text": "So in order to use this, the first thing that I will recommend that you do is install it."
+    },
+    {
+      "startSeconds": 113.216,
+      "text": "So you need to open up your terminal or command prompt depending if you're on Mac or Linux."
+    },
+    {
+      "startSeconds": 117.05,
+      "text": "And what you'll do is type the command pip install and then matplotlib."
+    },
+    {
+      "startSeconds": 121.666,
+      "text": "And I also recommend you install numpy and pandas while you're at it."
+    },
+    {
+      "startSeconds": 125.75,
+      "text": "Now, if you're on Mac or Linux, you can use the command pip three."
+    },
+    {
+      "startSeconds": 128.866,
+      "text": "So pip three install."
+    },
+    {
+      "startSeconds": 130.016,
+      "text": "If you're on windows,"
+    },
+    {
+      "startSeconds": 130.766,
+      "text": "you can simply use pip and this will install it into your global Python installation."
+    },
+    {
+      "startSeconds": 135.566,
+      "text": "So we're going to go ahead and press enter."
+    },
+    {
+      "startSeconds": 137.516,
+      "text": "And you'll see that it's going to download and install for me."
+    },
+    {
+      "startSeconds": 139.883,
+      "text": "Now once this is installed you're going to want to do is open up a Jupyter notebook."
+    },
+    {
+      "startSeconds": 143.366,
+      "text": "You don't need to use this inside of a Jupyter notebook, but it's just the easiest way to test it."
+    },
+    {
+      "startSeconds": 147.5,
+      "text": "And it's typically what you'll use if you're working in"
+    },
+    {
+      "startSeconds": 149.933,
+      "text": "like a data science type environment where this is used quite frequently."
+    },
+    {
+      "startSeconds": 153.75,
+      "text": "And in order to open a Jupyter notebook, you can do this in any major IDE."
+    },
+    {
+      "startSeconds": 158.116,
+      "text": "So in my case I'm using cursor right now, which is very similar to something like VSCode or windsurf."
+    },
+    {
+      "startSeconds": 163.466,
+      "text": "You can also do this in PyCharm. It's really up to you."
+    },
+    {
+      "startSeconds": 166.466,
+      "text": "Now if you're working inside of cursor or inside of something like VS code or VS code fork,"
+    },
+    {
+      "startSeconds": 171.45,
+      "text": "you can hit the keyboard shortcut Ctrl, shift P or Command Shift"
+    },
+    {
+      "startSeconds": 176.716,
+      "text": "P depending on the operating system you're on, and you can type the command Jupiter like this."
+    },
+    {
+      "startSeconds": 182,
+      "text": "And you'll see a bunch of options."
+    },
+    {
+      "startSeconds": 183.5,
+      "text": "One of them is to create a new Jupyter notebook, and if you do that,"
+    },
+    {
+      "startSeconds": 187.35,
+      "text": "it should create a new notebook for you, which is untitled one dot ipynb."
+    },
+    {
+      "startSeconds": 192.9,
+      "text": "Now I p m B is the extension for a Jupyter notebook, and a Jupyter notebook"
+    },
+    {
+      "startSeconds": 197.183,
+      "text": "gives you these different cells, which allows you to execute code directly in line."
+    },
+    {
+      "startSeconds": 201.383,
+      "text": "So I can do something like print hello and then just run the cell."
+    },
+    {
+      "startSeconds": 205.433,
+      "text": "Just pick the kernel right here and you see the output directly in the notebook."
+    },
+    {
+      "startSeconds": 209.416,
+      "text": "So that's what it's kind of called a notebook where you're like sketching stuff."
+    },
+    {
+      "startSeconds": 212.116,
+      "text": "You can change stuff really quickly."
+    },
+    {
+      "startSeconds": 213.716,
+      "text": "And it's a lot easier to experiment with code rather than just writing it in like a normal Python file."
+    },
+    {
+      "startSeconds": 218.85,
+      "text": "You also can have markdown so you can have like, you know, a title or something."
+    },
+    {
+      "startSeconds": 222.9,
+      "text": "Let's just,"
+    },
+    {
+      "startSeconds": 224.116,
+      "text": "what is it like, run this and you can see that it shows up kind of nicely formatted, which is how"
+    },
+    {
+      "startSeconds": 228.166,
+      "text": "I've created this notebook here, which again, you can get from the link in the description."
+    },
+    {
+      "startSeconds": 232.4,
+      "text": "Okay."
+    },
+    {
+      "startSeconds": 232.7,
+      "text": "So hopefully at this point you understand how to open a Jupyter notebook."
+    },
+    {
+      "startSeconds": 235.916,
+      "text": "Now we're going to start going through the tutorial."
+    },
+    {
+      "startSeconds": 238.133,
+      "text": "So in order to use matplotlib"
+    },
+    {
+      "startSeconds": 239.633,
+      "text": "you do need to import it in whatever Python file or notebook you're going to be using."
+    },
+    {
+      "startSeconds": 243.65,
+      "text": "So you can see the first cell that I've written here imports"
+    },
+    {
+      "startSeconds": 246.5,
+      "text": "matplotlib.pyplot as plt."
+    },
+    {
+      "startSeconds": 249.75,
+      "text": "Now this is the standard import."
+    },
+    {
+      "startSeconds": 251.183,
+      "text": "This is what you're almost always going to see."
+    },
+    {
+      "startSeconds": 253.283,
+      "text": "And by putting this as PLT you're creating what's known as an alias, which makes it a lot faster"
+    },
+    {
+      "startSeconds": 258.45,
+      "text": "and easier to type out matplotlib essentially, or just type plt instead to access this module."
+    },
+    {
+      "startSeconds": 264.233,
+      "text": "So you import matplotlib.pyplot as plt."
+    },
+    {
+      "startSeconds": 266.75,
+      "text": "And then I've also imported numpy and pandas because again these are very frequently used with"
+    },
+    {
+      "startSeconds": 271.4,
+      "text": "this module to graph data from numpy or graph a pandas dataframe, which I'll show you later."
+    },
+    {
+      "startSeconds": 276.866,
+      "text": "Now you also are going to want to run this command, which will make it so that Jupyter notebook"
+    },
+    {
+      "startSeconds": 281.516,
+      "text": "automatically displays the graph in line without you"
+    },
+    {
+      "startSeconds": 285.316,
+      "text": "having to actually manually trigger it, which I'll show you in one second."
+    },
+    {
+      "startSeconds": 289.7,
+      "text": "And then you can set the default style that you want to use for your plots."
+    },
+    {
+      "startSeconds": 293.933,
+      "text": "So for the graphs essentially that you're going to be showing."
+    },
+    {
+      "startSeconds": 296.516,
+      "text": "In this case I'll just use default, but you can change it to something like seaborn ggplot."
+    },
+    {
+      "startSeconds": 301.216,
+      "text": "And you get like a better looking style."
+    },
+    {
+      "startSeconds": 302.966,
+      "text": "Okay."
+    },
+    {
+      "startSeconds": 303.266,
+      "text": "So with that in mind, let's get into the matplotlib architecture."
+    },
+    {
+      "startSeconds": 306.333,
+      "text": "Now there's a few concepts you need to understand."
+    },
+    {
+      "startSeconds": 308.483,
+      "text": "The more you see them, the more clear it will be."
+    },
+    {
+      "startSeconds": 310.7,
+      "text": "But we have a figure now."
+    },
+    {
+      "startSeconds": 312.416,
+      "text": "A figure, as it says, is the top level container."
+    },
+    {
+      "startSeconds": 315.383,
+      "text": "This is like the entire window or the entire page that's going to show up on your screen."
+    },
+    {
+      "startSeconds": 320.366,
+      "text": "Next you have axis or axes."
+    },
+    {
+      "startSeconds": 322.516,
+      "text": "It's kind of hard for me to pronounce these because they're spelt very similarly"
+    },
+    {
+      "startSeconds": 325.85,
+      "text": "and pretty much sound the same, but the one with the E is the actual plot area."
+    },
+    {
+      "startSeconds": 330.75,
+      "text": "So this is where you draw a specific piece of data,"
+    },
+    {
+      "startSeconds": 333.8,
+      "text": "and you can have multiple axes on one figure."
+    },
+    {
+      "startSeconds": 336.8,
+      "text": "So I can have multiple graphs or charts on one kind of draw area."
+    },
+    {
+      "startSeconds": 341.633,
+      "text": "And then we have an axis."
+    },
+    {
+      "startSeconds": 342.983,
+      "text": "Now this would be like an x axis or a y axis like you might be familiar with from math class."
+    },
+    {
+      "startSeconds": 347.933,
+      "text": "So on one of the axes, which is again like one of the plots"
+    },
+    {
+      "startSeconds": 352.05,
+      "text": "that we're going to have, you could have multiple axes like a y axis and x axis."
+    },
+    {
+      "startSeconds": 356.55,
+      "text": "And then these axes can be on a figure."
+    },
+    {
+      "startSeconds": 358.466,
+      "text": "So you could have multiple kind of graphs showing up."
+    },
+    {
+      "startSeconds": 360.766,
+      "text": "So you can think of a figure like a canvas an axis as an individual painting on that canvas."
+    },
+    {
+      "startSeconds": 364.683,
+      "text": "And then the axes as like the data on that canvas, if that makes sense, or on that painting."
+    },
+    {
+      "startSeconds": 370.85,
+      "text": "Okay."
+    },
+    {
+      "startSeconds": 371.45,
+      "text": "So let's have a look at a very simple graph."
+    },
+    {
+      "startSeconds": 374,
+      "text": "You can see that I've already just kind of ran the cell."
+    },
+    {
+      "startSeconds": 376.133,
+      "text": "So it's showing right here."
+    },
+    {
+      "startSeconds": 377.516,
+      "text": "But we have x is equal to 12345Y2468 ten."
+    },
+    {
+      "startSeconds": 382.4,
+      "text": "This data is correlated together where these are like x y kind of value pairs."
+    },
+    {
+      "startSeconds": 387.083,
+      "text": "And we want to do something like a line graph."
+    },
+    {
+      "startSeconds": 389.816,
+      "text": "Well in order to do that we start by writing plt."
+    },
+    {
+      "startSeconds": 392.816,
+      "text": "Remember we imported that from up here dot plot."
+    },
+    {
+      "startSeconds": 396.683,
+      "text": "And we simply plot x against y."
+    },
+    {
+      "startSeconds": 399.15,
+      "text": "So that's kind of the syntax here."
+    },
+    {
+      "startSeconds": 400.966,
+      "text": "We have the x data and the y data."
+    },
+    {
+      "startSeconds": 403.133,
+      "text": "We plot it like that."
+    },
+    {
+      "startSeconds": 404.45,
+      "text": "We can then set labels for the x and y axis."
+    },
+    {
+      "startSeconds": 407.666,
+      "text": "So x axis y axis."
+    },
+    {
+      "startSeconds": 409.55,
+      "text": "We can set a title for the plot."
+    },
+    {
+      "startSeconds": 411.8,
+      "text": "And then we can run this plt dot show method."
+    },
+    {
+      "startSeconds": 414.75,
+      "text": "And this will show the graph."
+    },
+    {
+      "startSeconds": 416.416,
+      "text": "Now you don't need this"
+    },
+    {
+      "startSeconds": 417.35,
+      "text": "when you work inside of the Jupyter notebook because it will automatically display it."
+    },
+    {
+      "startSeconds": 421.016,
+      "text": "However, if you are working in a standard Python file and you actually want to see the plot,"
+    },
+    {
+      "startSeconds": 425.366,
+      "text": "then you need to run this command plt dot show."
+    },
+    {
+      "startSeconds": 428.266,
+      "text": "So you can see this is what we get. Very simple data."
+    },
+    {
+      "startSeconds": 430.583,
+      "text": "We have the kind of legend down below or like all of the ticks."
+    },
+    {
+      "startSeconds": 434.4,
+      "text": "We have the x axis, the y axis and our line."
+    },
+    {
+      "startSeconds": 437.25,
+      "text": "Now while we're at it, if we wanted to plot another line, we could just simply do this"
+    },
+    {
+      "startSeconds": 441.3,
+      "text": "and we could plot, maybe say y against X and then run this."
+    },
+    {
+      "startSeconds": 445.966,
+      "text": "And you can see now that we have two lines showing up and you can see the legend"
+    },
+    {
+      "startSeconds": 449.416,
+      "text": "or kind of the Texas change a little bit because of the data that we're showing."
+    },
+    {
+      "startSeconds": 453.65,
+      "text": "Perfect. Let's scroll down."
+    },
+    {
+      "startSeconds": 455.116,
+      "text": "Let's have a look at a different approach of doing this."
+    },
+    {
+      "startSeconds": 457.433,
+      "text": "So as well as using the global PLT object"
+    },
+    {
+      "startSeconds": 461.25,
+      "text": "as we've kind of seen here, you can create what's called a subplot."
+    },
+    {
+      "startSeconds": 464.866,
+      "text": "And this makes it a little bit easier to organize different charts"
+    },
+    {
+      "startSeconds": 468.266,
+      "text": "and graphs, because sometimes you have multiple of them that you want to show."
+    },
+    {
+      "startSeconds": 471.466,
+      "text": "So you can see method two object oriented more control recommended for complex plots."
+    },
+    {
+      "startSeconds": 475.55,
+      "text": "You can say your figure and your axis is equal to plt dot subplots."
+    },
+    {
+      "startSeconds": 480.266,
+      "text": "This will create a new object for you."
+    },
+    {
+      "startSeconds": 482.966,
+      "text": "And then, rather than using the PLT kind of global object,"
+    },
+    {
+      "startSeconds": 486.566,
+      "text": "you can directly reference one of these kind of paintings."
+    },
+    {
+      "startSeconds": 489.616,
+      "text": "Right?"
+    },
+    {
+      "startSeconds": 489.983,
+      "text": "That we were talking about where we can now make a plot and we just reference this object."
+    },
+    {
+      "startSeconds": 494.1,
+      "text": "And then I could make another one of these"
+    },
+    {
+      "startSeconds": 495.866,
+      "text": "and have a different graph, different chart, and decide which ones I want to show."
+    },
+    {
+      "startSeconds": 500.116,
+      "text": "So I know it's a little bit weird to see this approach, or I can use it too much,"
+    },
+    {
+      "startSeconds": 503.116,
+      "text": "but I just wanted to show you that this exists in case you see it."
+    },
+    {
+      "startSeconds": 506.6,
+      "text": "In you know, in the wild, effectively."
+    },
+    {
+      "startSeconds": 509.15,
+      "text": "Okay."
+    },
+    {
+      "startSeconds": 509.933,
+      "text": "Let's continue and let's move on to basic line plots."
+    },
+    {
+      "startSeconds": 513.316,
+      "text": "Okay."
+    },
+    {
+      "startSeconds": 514.366,
+      "text": "So just like we looked at already, kind of line plots or line"
+    },
+    {
+      "startSeconds": 517.466,
+      "text": "graphs are the simplest type and the one that you're going to see most frequently inside of matplotlib."
+    },
+    {
+      "startSeconds": 522.166,
+      "text": "So what I've done here is just created this kind of linear data using numpy."
+    },
+    {
+      "startSeconds": 526.166,
+      "text": "You can see we get 100 points from 0 to 10."
+    },
+    {
+      "startSeconds": 529.066,
+      "text": "We then have used the sine function on all of this data."
+    },
+    {
+      "startSeconds": 532.35,
+      "text": "So we get this kind of sinusoidal graph."
+    },
+    {
+      "startSeconds": 534.75,
+      "text": "Then what I've done down here is I have configured the size of the figure."
+    },
+    {
+      "startSeconds": 539.033,
+      "text": "Now again the figure is like the whole drawable area."
+    },
+    {
+      "startSeconds": 541.666,
+      "text": "And what you can do is set the height and width in inches as it specifies right here."
+    },
+    {
+      "startSeconds": 545.9,
+      "text": "So I have a width of eight a height of five inches"
+    },
+    {
+      "startSeconds": 549.45,
+      "text": "which will correspond to some pixel value that I don't know the exact math for."
+    },
+    {
+      "startSeconds": 553.433,
+      "text": "We can then plot the x and y data, right?"
+    },
+    {
+      "startSeconds": 555.833,
+      "text": "This is just how you do a line."
+    },
+    {
+      "startSeconds": 557.483,
+      "text": "We can set the labels, set the title."
+    },
+    {
+      "startSeconds": 560.066,
+      "text": "We can enable a grid view."
+    },
+    {
+      "startSeconds": 561.716,
+      "text": "So we have kind of these grid lines showing up. And there you go."
+    },
+    {
+      "startSeconds": 564.3,
+      "text": "We get a sine wave now appearing in our line chart or in our whatever line."
+    },
+    {
+      "startSeconds": 569.1,
+      "text": "What did I call this basic line plot. Okay."
+    },
+    {
+      "startSeconds": 572.3,
+      "text": "Now let's have a"
+    },
+    {
+      "startSeconds": 572.783,
+      "text": "look at an example of multiple lines as I showed you before."
+    },
+    {
+      "startSeconds": 575.966,
+      "text": "So you can see I have my X data."
+    },
+    {
+      "startSeconds": 577.366,
+      "text": "And then I used multiple trigonometry functions here."
+    },
+    {
+      "startSeconds": 580.133,
+      "text": "So Y1Y2Y3."
+    },
+    {
+      "startSeconds": 582.116,
+      "text": "You can see that I plotted all of them."
+    },
+    {
+      "startSeconds": 584.116,
+      "text": "And I also added a label field."
+    },
+    {
+      "startSeconds": 586.05,
+      "text": "When I add the label field that's going to give me a nice legend down"
+    },
+    {
+      "startSeconds": 589.016,
+      "text": "here, which will show me different colors."
+    },
+    {
+      "startSeconds": 590.716,
+      "text": "It will automatically select the colors for you and set the labels."
+    },
+    {
+      "startSeconds": 594.266,
+      "text": "You know what line is what."
+    },
+    {
+      "startSeconds": 596.25,
+      "text": "Very cool, very easy to use."
+    },
+    {
+      "startSeconds": 598.35,
+      "text": "And then you can see that I actually had to enable the legend."
+    },
+    {
+      "startSeconds": 600.9,
+      "text": "So sorry,"
+    },
+    {
+      "startSeconds": 601.5,
+      "text": "I had to manually add that because if you don't have that, it's not going to show you the legend."
+    },
+    {
+      "startSeconds": 605.966,
+      "text": "And then I set a transparency value on my grid lines so they're not as harsh as the ones up here."
+    },
+    {
+      "startSeconds": 610.733,
+      "text": "You can maybe see the difference, but probably not from my recording,"
+    },
+    {
+      "startSeconds": 614.55,
+      "text": "but these ones are a little bit more faint than the ones above."
+    },
+    {
+      "startSeconds": 617.25,
+      "text": "Okay, so now let's look at a few customizations that you can make."
+    },
+    {
+      "startSeconds": 619.7,
+      "text": "And then we'll look at a bunch of different types of plots like a pie"
+    },
+    {
+      "startSeconds": 623.066,
+      "text": "chart for example a histogram, all of the other stuff that you can do."
+    },
+    {
+      "startSeconds": 626.45,
+      "text": "So as it says here, matplotlib offers extensive customization."
+    },
+    {
+      "startSeconds": 630.3,
+      "text": "So similarly to before, I've just created a bunch of different points."
+    },
+    {
+      "startSeconds": 633.5,
+      "text": "I set the figure size."
+    },
+    {
+      "startSeconds": 634.65,
+      "text": "So this time it's a little bit larger. 12 by six."
+    },
+    {
+      "startSeconds": 637.55,
+      "text": "And I've just plotted a bunch of different lines."
+    },
+    {
+      "startSeconds": 639.8,
+      "text": "So I have my x data against my x data x x plus 1XX plus two."
+    },
+    {
+      "startSeconds": 643.966,
+      "text": "Just so that we have them set apart a little bit."
+    },
+    {
+      "startSeconds": 646.466,
+      "text": "And what I'm doing here is I'm specifying with this kind of code that you see,"
+    },
+    {
+      "startSeconds": 650.333,
+      "text": "which looks a little bit weird, the color as well as the markers and the line type"
+    },
+    {
+      "startSeconds": 655.55,
+      "text": "that I want to use for this particular, I guess, what data, right."
+    },
+    {
+      "startSeconds": 660.233,
+      "text": "I then I'm able to set a label,"
+    },
+    {
+      "startSeconds": 661.65,
+      "text": "and I can also set the line width or kind of like the thickness of the line."
+    },
+    {
+      "startSeconds": 665.75,
+      "text": "So when I do b and then I do a dash,"
+    },
+    {
+      "startSeconds": 668.55,
+      "text": "if we look at the formats down here that stands for blue and then solid line."
+    },
+    {
+      "startSeconds": 673.283,
+      "text": "So a dash means solid."
+    },
+    {
+      "startSeconds": 674.85,
+      "text": "Now if I do r and then I do two dashes that stands for red."
+    },
+    {
+      "startSeconds": 678.683,
+      "text": "And then a dashed line."
+    },
+    {
+      "startSeconds": 680.033,
+      "text": "If I do g and then a dash and a dot, that's the dash dotted line."
+    },
+    {
+      "startSeconds": 683.9,
+      "text": "As you're going to see in a second that is green."
+    },
+    {
+      "startSeconds": 686.1,
+      "text": "M stands for magenta."
+    },
+    {
+      "startSeconds": 687.75,
+      "text": "And then the colon is dotted right."
+    },
+    {
+      "startSeconds": 690.266,
+      "text": "And then we also have different markers that we can set."
+    },
+    {
+      "startSeconds": 692.4,
+      "text": "So I did C0. And then this is a circle."
+    },
+    {
+      "startSeconds": 695.416,
+      "text": "And then this is a solid line."
+    },
+    {
+      "startSeconds": 697.166,
+      "text": "So if I go down here you can see all of the different examples"
+    },
+    {
+      "startSeconds": 700.25,
+      "text": "where we have circles squares triangles dotted lines and the markers are my marking."
+    },
+    {
+      "startSeconds": 705.166,
+      "text": "Sorry."
+    },
+    {
+      "startSeconds": 705.416,
+      "text": "The different points are the data points on this line."
+    },
+    {
+      "startSeconds": 708.6,
+      "text": "There's a few other styles"
+    },
+    {
+      "startSeconds": 709.666,
+      "text": "as you can see here, and obviously a lot more that I just haven't included in this notebook."
+    },
+    {
+      "startSeconds": 713.45,
+      "text": "But point is, you can fully customize pretty much all of the stuff that you're doing here"
+    },
+    {
+      "startSeconds": 717.05,
+      "text": "with the plots."
+    },
+    {
+      "startSeconds": 718.166,
+      "text": "Now just having a look at another example of using hexadecimal colors, because that's"
+    },
+    {
+      "startSeconds": 721.65,
+      "text": "something else that you're able to do, and also just manually specifying some of the values."
+    },
+    {
+      "startSeconds": 725.85,
+      "text": "So you saw before, let me just scroll up here."
+    },
+    {
+      "startSeconds": 728.216,
+      "text": "It's a little bit laggy that I was just using this kind of ambiguous,"
+    },
+    {
+      "startSeconds": 732.016,
+      "text": "like I don't know, code right, to set what they look like."
+    },
+    {
+      "startSeconds": 735.416,
+      "text": "Now you can do that, but you also can just manually"
+    },
+    {
+      "startSeconds": 738.166,
+      "text": "pass all of the different values by using the parameters."
+    },
+    {
+      "startSeconds": 741.2,
+      "text": "So I can use line with line style."
+    },
+    {
+      "startSeconds": 744.266,
+      "text": "Right."
+    },
+    {
+      "startSeconds": 744.683,
+      "text": "And I can just set all of those kind of codes in their own parameter,"
+    },
+    {
+      "startSeconds": 748.1,
+      "text": "rather than just passing it as that kind of weird looking string."
+    },
+    {
+      "startSeconds": 751.433,
+      "text": "So in this case, what I've done is again, I've created some data, set the figure size,"
+    },
+    {
+      "startSeconds": 755.566,
+      "text": "and then I've plotted three different lines and then same thing."
+    },
+    {
+      "startSeconds": 758.7,
+      "text": "I've showed the legend."
+    },
+    {
+      "startSeconds": 759.6,
+      "text": "This time I just added some more customization by changing the font size"
+    },
+    {
+      "startSeconds": 763.2,
+      "text": "and also for the title, changing the font size and the font weight."
+    },
+    {
+      "startSeconds": 766.433,
+      "text": "And you can see that we get kind of like these bold custom colors."
+    },
+    {
+      "startSeconds": 769.85,
+      "text": "And this looks again a little bit unique and different than the other graph because of the"
+    },
+    {
+      "startSeconds": 773.9,
+      "text": "customizations that we added."
+    },
+    {
+      "startSeconds": 776.25,
+      "text": "Okay,"
+    },
+    {
+      "startSeconds": 776.85,
+      "text": "let's continue now and have a look at scatter plots."
+    },
+    {
+      "startSeconds": 779.716,
+      "text": "So you've probably seen these before if you've done math class."
+    },
+    {
+      "startSeconds": 782,
+      "text": "But they look something like this"
+    },
+    {
+      "startSeconds": 783.466,
+      "text": "where you're just scattering all of the data and it doesn't have like a direct correlation."
+    },
+    {
+      "startSeconds": 787.55,
+      "text": "And in order to create a scatter plot is pretty straightforward."
+    },
+    {
+      "startSeconds": 790.516,
+      "text": "What we can do is create some random data, which we've done here with numpy,"
+    },
+    {
+      "startSeconds": 794,
+      "text": "and then what we've done is we've set the figure and we've now done a scatter."
+    },
+    {
+      "startSeconds": 797.866,
+      "text": "So rather than plotting, because when you do PLT dot plot, that's just going to make a line."
+    },
+    {
+      "startSeconds": 802.733,
+      "text": "When you do scatter this is going to create a scatter plot"
+    },
+    {
+      "startSeconds": 805.2,
+      "text": "and just put all of the different values directly on the axis without"
+    },
+    {
+      "startSeconds": 809.183,
+      "text": "having kind of like double line going through them."
+    },
+    {
+      "startSeconds": 811.366,
+      "text": "So you can see that's all I've done."
+    },
+    {
+      "startSeconds": 812.633,
+      "text": "I've just used scatter."
+    },
+    {
+      "startSeconds": 813.466,
+      "text": "I also set the alpha, which is the transparency."
+    },
+    {
+      "startSeconds": 816.233,
+      "text": "So if I made this one it would be fully solid."
+    },
+    {
+      "startSeconds": 818.333,
+      "text": "But I wanted some transparency."
+    },
+    {
+      "startSeconds": 819.866,
+      "text": "So you can see the dots kind of intersecting with each other."
+    },
+    {
+      "startSeconds": 823.066,
+      "text": "And you get them showing up right here like that okay."
+    },
+    {
+      "startSeconds": 826.65,
+      "text": "Now let's continue and have a look at"
+    },
+    {
+      "startSeconds": 827.866,
+      "text": "how to create something like this, which looks pretty cool in my opinion."
+    },
+    {
+      "startSeconds": 831.05,
+      "text": "Very similar to before we create a bunch of random, data."
+    },
+    {
+      "startSeconds": 835.05,
+      "text": "This time though, we create some random colors as well as some random sizes."
+    },
+    {
+      "startSeconds": 838.766,
+      "text": "So now when I scatter my data, I'm able to apply a color."
+    },
+    {
+      "startSeconds": 842.75,
+      "text": "So I pass the colors as well as the sizes."
+    },
+    {
+      "startSeconds": 845.066,
+      "text": "And all of these are corresponding, right?"
+    },
+    {
+      "startSeconds": 846.8,
+      "text": "So for example, if I have like my x data which is equal to one, two, three"
+    },
+    {
+      "startSeconds": 851.25,
+      "text": "and my y data, you know, one two, three and then I have a color."
+    },
+    {
+      "startSeconds": 854.666,
+      "text": "And a color is like red blue, green."
+    },
+    {
+      "startSeconds": 858.416,
+      "text": "Then the point that's at one one is going to be red."
+    },
+    {
+      "startSeconds": 862.583,
+      "text": "The point at two two"
+    },
+    {
+      "startSeconds": 863.85,
+      "text": "is going to be green because they're the same index in the list, same thing with the size."
+    },
+    {
+      "startSeconds": 868.316,
+      "text": "Hopefully that makes sense."
+    },
+    {
+      "startSeconds": 870.266,
+      "text": "Okay."
+    },
+    {
+      "startSeconds": 870.5,
+      "text": "So you can see I have XY color."
+    },
+    {
+      "startSeconds": 872.45,
+      "text": "Size is then an alpha and also a color mapping."
+    },
+    {
+      "startSeconds": 875.55,
+      "text": "And the way this works is when I've chosen the colors I've just choose chosen random numbers."
+    },
+    {
+      "startSeconds": 879.9,
+      "text": "Or for all of the colors 100 random numbers."
+    },
+    {
+      "startSeconds": 883.066,
+      "text": "Now those numbers can correspond with a color mapping."
+    },
+    {
+      "startSeconds": 886.466,
+      "text": "So in this case the mapping I put was viridis."
+    },
+    {
+      "startSeconds": 889.1,
+      "text": "But if I put like plasma for example."
+    },
+    {
+      "startSeconds": 892.366,
+      "text": "And then let's just run this cell, you see that the color changes."
+    },
+    {
+      "startSeconds": 896.45,
+      "text": "Right."
+    },
+    {
+      "startSeconds": 896.933,
+      "text": "And I believe if I remember correctly, that this generates a number between 0 and 1."
+    },
+    {
+      "startSeconds": 901.966,
+      "text": "So based on that number it corresponds with this color map which then gives me these different colors."
+    },
+    {
+      "startSeconds": 907.2,
+      "text": "Let's just try another one because I'm curious what it actually looks like."
+    },
+    {
+      "startSeconds": 910.55,
+      "text": "Let's see if set one is a valid one."
+    },
+    {
+      "startSeconds": 912.533,
+      "text": "And when I run that you can see we get a different set of colors."
+    },
+    {
+      "startSeconds": 915.266,
+      "text": "And then we even have the legend on the other side showing me the intensity."
+    },
+    {
+      "startSeconds": 918.533,
+      "text": "And yeah, as you can see we have from 0 to 1."
+    },
+    {
+      "startSeconds": 921.116,
+      "text": "So gray is the most intense and red is the least intense."
+    },
+    {
+      "startSeconds": 924.416,
+      "text": "And you could have your own custom color mapping there if you want."
+    },
+    {
+      "startSeconds": 927,
+      "text": "Now notice I'm showing the color bar right."
+    },
+    {
+      "startSeconds": 929.183,
+      "text": "So that's why I'm seeing this bar on the right hand side."
+    },
+    {
+      "startSeconds": 931.883,
+      "text": "If I didn't show that, it wouldn't, show up. Okay."
+    },
+    {
+      "startSeconds": 935.416,
+      "text": "Next let's look at bar charts."
+    },
+    {
+      "startSeconds": 937.05,
+      "text": "Very useful again for showing data."
+    },
+    {
+      "startSeconds": 939.5,
+      "text": "So we have some categories."
+    },
+    {
+      "startSeconds": 941.25,
+      "text": "We have some values."
+    },
+    {
+      "startSeconds": 942.316,
+      "text": "And to create a bar chart we simply use bar right."
+    },
+    {
+      "startSeconds": 944.966,
+      "text": "So everything else pretty much stays exactly the same."
+    },
+    {
+      "startSeconds": 947.516,
+      "text": "The only difference is that we're plotting our bar data."
+    },
+    {
+      "startSeconds": 950.25,
+      "text": "So categories and values."
+    },
+    {
+      "startSeconds": 951.866,
+      "text": "We specify a color for the bars that we are drawing."
+    },
+    {
+      "startSeconds": 954.95,
+      "text": "We also specify the edge color."
+    },
+    {
+      "startSeconds": 956.716,
+      "text": "This case is black and the line width."
+    },
+    {
+      "startSeconds": 959.55,
+      "text": "When I run that you can see that I get a very simple bar chart, very customizable."
+    },
+    {
+      "startSeconds": 963.916,
+      "text": "And I'm going to show you a much more complex bar chart right now okay."
+    },
+    {
+      "startSeconds": 968.066,
+      "text": "So next we have a horizontal bar chart."
+    },
+    {
+      "startSeconds": 970.516,
+      "text": "So if you want to have the bars going in horizontal direction,"
+    },
+    {
+      "startSeconds": 972.95,
+      "text": "the only change you need to make is adding this h here."
+    },
+    {
+      "startSeconds": 975.65,
+      "text": "So rather than just bar you do bar"
+    },
+    {
+      "startSeconds": 977.45,
+      "text": "h, everything else stays exactly the same and it just flips the orientation."
+    },
+    {
+      "startSeconds": 981.616,
+      "text": "As promised though, let's have a look at the next one,"
+    },
+    {
+      "startSeconds": 984.083,
+      "text": "which looks something like this, where we have multiple bars combined together."
+    },
+    {
+      "startSeconds": 988.366,
+      "text": "So in order to do something like that, you can see that I have categories,"
+    },
+    {
+      "startSeconds": 991.666,
+      "text": "I have three sets of products."
+    },
+    {
+      "startSeconds": 993.533,
+      "text": "And what we want to do is compare the products or compare the quarter, sorry."
+    },
+    {
+      "startSeconds": 998.216,
+      "text": "And like the product sales or something across each quarter."
+    },
+    {
+      "startSeconds": 1001.183,
+      "text": "So what I can do is I can have multiple bars"
+    },
+    {
+      "startSeconds": 1004.3,
+      "text": "and I can make those bars go beside each other, which is effectively"
+    },
+    {
+      "startSeconds": 1008.95,
+      "text": "what I'm kind of setting here and why I have this complex comment explaining what's going on."
+    },
+    {
+      "startSeconds": 1013.15,
+      "text": "So what I've done is I've created the data."
+    },
+    {
+      "startSeconds": 1015.316,
+      "text": "I've also created an X value, which is the number of categories that I have,"
+    },
+    {
+      "startSeconds": 1018.666,
+      "text": "and then how wide I want each bar to be."
+    },
+    {
+      "startSeconds": 1021.966,
+      "text": "And then what I've done is I've said, okay, I'm going to set the figure right."
+    },
+    {
+      "startSeconds": 1025.066,
+      "text": "So it's ten by six."
+    },
+    {
+      "startSeconds": 1026.533,
+      "text": "And then I explain all of the parameters right here."
+    },
+    {
+      "startSeconds": 1028.866,
+      "text": "So for my first bar I can specify the x value where I want this bar to appear."
+    },
+    {
+      "startSeconds": 1033.466,
+      "text": "And then the height width all of that kind of stuff."
+    },
+    {
+      "startSeconds": 1036.433,
+      "text": "So what I've done is I've said okay, well the x value that I want for"
+    },
+    {
+      "startSeconds": 1039.666,
+      "text": "this particular bar is going to be minus the width."
+    },
+    {
+      "startSeconds": 1043.116,
+      "text": "Okay."
+    },
+    {
+      "startSeconds": 1043.366,
+      "text": "So x position shift left by one bar with to position the first group."
+    },
+    {
+      "startSeconds": 1047.75,
+      "text": "So that's what I'm doing right."
+    },
+    {
+      "startSeconds": 1049.183,
+      "text": "And then I'm graphing the product a data."
+    },
+    {
+      "startSeconds": 1052.083,
+      "text": "And then I have the actual width of the bar."
+    },
+    {
+      "startSeconds": 1054.316,
+      "text": "And I'm the label and the color."
+    },
+    {
+      "startSeconds": 1056.266,
+      "text": "Now for the next bar for the x value."
+    },
+    {
+      "startSeconds": 1058.416,
+      "text": "Because again the x values are like kind of Q1, q2, Q3, Q4 down here."
+    },
+    {
+      "startSeconds": 1063.966,
+      "text": "What I'm doing is I'm just plotting x, so when I just plot X,"
+    },
+    {
+      "startSeconds": 1067.366,
+      "text": "that's going to put these bars in the middle for me, and then I'm plotting the X plus width."
+    },
+    {
+      "startSeconds": 1072.216,
+      "text": "Now I know it looks a little bit confusing because we have kind of arrays of data here."
+    },
+    {
+      "startSeconds": 1076.066,
+      "text": "And when I do x minus for example 0.25 when I use numpy, what happens"
+    },
+    {
+      "startSeconds": 1081.616,
+      "text": "is it subtracts, sorry 0.25 from every single value here."
+    },
+    {
+      "startSeconds": 1086.566,
+      "text": "So you have to kind of imagine that I have this x data"
+    },
+    {
+      "startSeconds": 1089.716,
+      "text": "associated with my product, a, B and C data."
+    },
+    {
+      "startSeconds": 1093.216,
+      "text": "But I'm slightly adjusting the x values to be either to the left, to the middle, or to the right,"
+    },
+    {
+      "startSeconds": 1098.716,
+      "text": "so that I can have three bars that go beside each other when I plot them."
+    },
+    {
+      "startSeconds": 1103.183,
+      "text": "So what I've done right is I've plotted the left bar by subtracting 0.25 from every x value."
+    },
+    {
+      "startSeconds": 1108.583,
+      "text": "So rather than being at one, which is where Q1 is, it's at 0.75."
+    },
+    {
+      "startSeconds": 1113.316,
+      "text": "Then I plot at one, then I plot at 1.25."
+    },
+    {
+      "startSeconds": 1116.5,
+      "text": "Then I have a gap of 0.25, and then I continue."
+    },
+    {
+      "startSeconds": 1119.416,
+      "text": "So this whole axis is representing four values."
+    },
+    {
+      "startSeconds": 1122.5,
+      "text": "So like Q1 is one, Q2 is two, Q3 is three, Q4 is four."
+    },
+    {
+      "startSeconds": 1126.666,
+      "text": "And then I'm shifting the different positions of the bars along that x axis."
+    },
+    {
+      "startSeconds": 1131.233,
+      "text": "Then what I do to make this Q1, Q2, Q3, Q4 show up, let me scroll up."
+    },
+    {
+      "startSeconds": 1136.483,
+      "text": "Here is I change the X ticks so that they align with the category."
+    },
+    {
+      "startSeconds": 1140.833,
+      "text": "So I say okay x ticks."
+    },
+    {
+      "startSeconds": 1142.266,
+      "text": "And then I'm going to have x associated with categories."
+    },
+    {
+      "startSeconds": 1145.633,
+      "text": "So the ticks are at these positions right 1234."
+    },
+    {
+      "startSeconds": 1148.6,
+      "text": "But I want to label them as these categories."
+    },
+    {
+      "startSeconds": 1151.9,
+      "text": "Then I show the grid the legend all of that stuff."
+    },
+    {
+      "startSeconds": 1154.483,
+      "text": "And we have the different labels."
+    },
+    {
+      "startSeconds": 1156.7,
+      "text": "Hopefully that makes sense."
+    },
+    {
+      "startSeconds": 1157.483,
+      "text": "You might have to study this one a little bit to get all of the details there,"
+    },
+    {
+      "startSeconds": 1160.4,
+      "text": "but that's how I can have these multiple bars beside each other"
+    },
+    {
+      "startSeconds": 1163.4,
+      "text": "by doing a little bit of clever math with the X axis when I am plotting them."
+    },
+    {
+      "startSeconds": 1167.95,
+      "text": "Okay, let's continue now and move to histograms."
+    },
+    {
+      "startSeconds": 1171.85,
+      "text": "Histograms show the distribution of numerical data by grouping values into bins."
+    },
+    {
+      "startSeconds": 1176.716,
+      "text": "So what I've done is I've created a thousand points here."
+    },
+    {
+      "startSeconds": 1179.6,
+      "text": "And then I want to do a histogram."
+    },
+    {
+      "startSeconds": 1181.3,
+      "text": "So I'm saying okay I mean have a histogram going I have some data I want 30 bins."
+    },
+    {
+      "startSeconds": 1185.3,
+      "text": "This is my color edge color whatever."
+    },
+    {
+      "startSeconds": 1187.15,
+      "text": "The histogram automatically groups the data into the bins, trying to figure out"
+    },
+    {
+      "startSeconds": 1190.15,
+      "text": "how many things are there and then creates the distribution."
+    },
+    {
+      "startSeconds": 1193.183,
+      "text": "Like this."
+    },
+    {
+      "startSeconds": 1193.966,
+      "text": "Now let's continue."
+    },
+    {
+      "startSeconds": 1195.05,
+      "text": "And you can see that I can do multiple histograms."
+    },
+    {
+      "startSeconds": 1197.5,
+      "text": "So something that looks like this"
+    },
+    {
+      "startSeconds": 1198.8,
+      "text": "so very easy for me to do that I have this histogram and this histogram."
+    },
+    {
+      "startSeconds": 1202.75,
+      "text": "And then because these histograms overlap with each other I get this kind of one in the middle"
+    },
+    {
+      "startSeconds": 1207.166,
+      "text": "which is just the combination of the blue and the red being drawn."
+    },
+    {
+      "startSeconds": 1210.166,
+      "text": "So it looks like I'm plotting three, but really I'm just plotting two."
+    },
+    {
+      "startSeconds": 1213.7,
+      "text": "And again, because of that overlap, we get kind of that different color"
+    },
+    {
+      "startSeconds": 1216.966,
+      "text": "that's appearing here, which I think is pretty cool because we have the alpha set."
+    },
+    {
+      "startSeconds": 1221.116,
+      "text": "Now, if we didn't want to have that, we could just set the alpha as one."
+    },
+    {
+      "startSeconds": 1224.566,
+      "text": "And now if we do that, actually let's set the alpha as one on both of them."
+    },
+    {
+      "startSeconds": 1228.583,
+      "text": "You can see that this one is going to overlap the blue one because of the way that it was plotted."
+    },
+    {
+      "startSeconds": 1233.316,
+      "text": "So we plotted it afterwards."
+    },
+    {
+      "startSeconds": 1234.766,
+      "text": "So it appeared on top."
+    },
+    {
+      "startSeconds": 1236.383,
+      "text": "If we change the order then it would appear behind."
+    },
+    {
+      "startSeconds": 1239.016,
+      "text": "And then same thing."
+    },
+    {
+      "startSeconds": 1239.65,
+      "text": "If we go back to the transparency you can see that now it's transparent."
+    },
+    {
+      "startSeconds": 1243.85,
+      "text": "We get different colors because of how that works okay."
+    },
+    {
+      "startSeconds": 1247.366,
+      "text": "So let's continue now and let's talk about subplots."
+    },
+    {
+      "startSeconds": 1250.666,
+      "text": "So this is creating multiple plots in one figure"
+    },
+    {
+      "startSeconds": 1253.7,
+      "text": "which is of course useful if you want to analyze different types of data."
+    },
+    {
+      "startSeconds": 1257.233,
+      "text": "So what we can do is we can create a two by two subplot."
+    },
+    {
+      "startSeconds": 1260.916,
+      "text": "Now in order to do that, I have to say my figure and my axis is equal to PLT dot subplots."
+    },
+    {
+      "startSeconds": 1266.35,
+      "text": "You saw that I did this before."
+    },
+    {
+      "startSeconds": 1268.183,
+      "text": "When I did it, however, I didn't specify the number of plots that I wanted."
+    },
+    {
+      "startSeconds": 1272.233,
+      "text": "When I create the subplot, what I'm able to do is paths, the width and the height,"
+    },
+    {
+      "startSeconds": 1275.833,
+      "text": "or essentially the number of rows and the number of columns of subplots that I want."
+    },
+    {
+      "startSeconds": 1279.7,
+      "text": "In this case, when I go two by two, that will create four subplots for me"
+    },
+    {
+      "startSeconds": 1283.933,
+      "text": "and allow me to access them by using this kind of index system."
+    },
+    {
+      "startSeconds": 1288.366,
+      "text": "As you can see here, where zero zero is the top left,"
+    },
+    {
+      "startSeconds": 1291.55,
+      "text": "zero one is the top right, one zero bottom left and one one bottom right."
+    },
+    {
+      "startSeconds": 1296.166,
+      "text": "Okay, just like a standard index in Python."
+    },
+    {
+      "startSeconds": 1299.016,
+      "text": "Then what I'm able to do is set up all of the different plots here and do whatever I want on them."
+    },
+    {
+      "startSeconds": 1304.1,
+      "text": "So I created a line plot, a cosine plot, a scatter plot, and then a bar chart."
+    },
+    {
+      "startSeconds": 1309.283,
+      "text": "And now I do plt dot tight layout,"
+    },
+    {
+      "startSeconds": 1311.9,
+      "text": "which just combines all these together and reduces the spacing between the plots."
+    },
+    {
+      "startSeconds": 1315.816,
+      "text": "And then show them."
+    },
+    {
+      "startSeconds": 1316.666,
+      "text": "And you can see I now have four plots showing up in one."
+    },
+    {
+      "startSeconds": 1320.35,
+      "text": "So extremely useful."
+    },
+    {
+      "startSeconds": 1321.4,
+      "text": "And you can make as many as you want and have kind of like a big canvas that has,"
+    },
+    {
+      "startSeconds": 1325.566,
+      "text": "you know, 20 plots on it or whatever dimensions you want by setting it up like this."
+    },
+    {
+      "startSeconds": 1330.316,
+      "text": "So let's continue and just have a look at working directly with pandas, so you can see that"
+    },
+    {
+      "startSeconds": 1334.783,
+      "text": "if we have a pandas dataframe like oftentimes you have inside of Python,"
+    },
+    {
+      "startSeconds": 1338.983,
+      "text": "we can print it out by using the df head, which I've done right here."
+    },
+    {
+      "startSeconds": 1342.883,
+      "text": "And then we can just directly plot data from the dataframe."
+    },
+    {
+      "startSeconds": 1345.95,
+      "text": "So I just wanted to show you this that just like I plot data from numpy,"
+    },
+    {
+      "startSeconds": 1349,
+      "text": "I can just directly plot values directly referencing the dataframe."
+    },
+    {
+      "startSeconds": 1352.716,
+      "text": "So I'm looking at the date, the sales, the date, and the profit."
+    },
+    {
+      "startSeconds": 1355.183,
+      "text": "Right?"
+    },
+    {
+      "startSeconds": 1355.75,
+      "text": "And then I can set some of the different values here, set up the x ticks, tight layout, etc."
+    },
+    {
+      "startSeconds": 1360.466,
+      "text": "and you can see that I get the data and shows me the sales and profit over time."
+    },
+    {
+      "startSeconds": 1364.866,
+      "text": "Right? Very cool."
+    },
+    {
+      "startSeconds": 1366.433,
+      "text": "Let's continue."
+    },
+    {
+      "startSeconds": 1367.216,
+      "text": "Just have a look at an even easier way to do this."
+    },
+    {
+      "startSeconds": 1369.65,
+      "text": "So I actually can directly plot data from the dataframe."
+    },
+    {
+      "startSeconds": 1373.85,
+      "text": "So I can say df dot plot, and then I can have my x values being equal to some"
+    },
+    {
+      "startSeconds": 1379.3,
+      "text": "column, my y values being equal to some column, and then I can set where I want to plot that."
+    },
+    {
+      "startSeconds": 1384.666,
+      "text": "So what I've done is created a subplot and then said, okay, I'm just going to use"
+    },
+    {
+      "startSeconds": 1388.783,
+      "text": "my data frame directly to plot the data, which is possible."
+    },
+    {
+      "startSeconds": 1393.05,
+      "text": "This is where I want to plot it, and then I can specify the other values directly on this axis."
+    },
+    {
+      "startSeconds": 1398.383,
+      "text": "And then kind of similar thing down here, you can see that I can create a group using pandas."
+    },
+    {
+      "startSeconds": 1403.6,
+      "text": "Don't worry if that doesn't mean anything to you."
+    },
+    {
+      "startSeconds": 1405.433,
+      "text": "And then I can just directly plot that group by using this bar chart."
+    },
+    {
+      "startSeconds": 1409.3,
+      "text": "Right."
+    },
+    {
+      "startSeconds": 1409.716,
+      "text": "So I'm not going to go through all of the syntax in plotting the pandas data frames,"
+    },
+    {
+      "startSeconds": 1412.966,
+      "text": "but I just wanted to show you that it is kind of built directly into pandas"
+    },
+    {
+      "startSeconds": 1416.2,
+      "text": "and combines with matplotlib, where you can just plot the object itself"
+    },
+    {
+      "startSeconds": 1420.433,
+      "text": "without having to kind of parse through like we were doing up top."
+    },
+    {
+      "startSeconds": 1424.216,
+      "text": "So let's scroll down and you can see again, we get a very similar thing"
+    },
+    {
+      "startSeconds": 1427,
+      "text": "to plots here, the bar charts and the line chart."
+    },
+    {
+      "startSeconds": 1431.233,
+      "text": "Okay."
+    },
+    {
+      "startSeconds": 1431.616,
+      "text": "Let's continue and have a look at Advanced Customization."
+    },
+    {
+      "startSeconds": 1434.866,
+      "text": "So like it says here annotations text and legends I'm not going to go through every single line."
+    },
+    {
+      "startSeconds": 1439.933,
+      "text": "But let me just quickly show you what this looks like."
+    },
+    {
+      "startSeconds": 1441.95,
+      "text": "You can see that we have this annotated plot where we have like a vertical line going down the middle,"
+    },
+    {
+      "startSeconds": 1446.266,
+      "text": "we have the sine wave, and we have click an arrow with this"
+    },
+    {
+      "startSeconds": 1449.233,
+      "text": "maximum value points, which is pretty cool."
+    },
+    {
+      "startSeconds": 1452.45,
+      "text": "So in order to create that, let me get the scrolling correct."
+    },
+    {
+      "startSeconds": 1455.716,
+      "text": "You would make something like this."
+    },
+    {
+      "startSeconds": 1458.983,
+      "text": "So you can"
+    },
+    {
+      "startSeconds": 1459.283,
+      "text": "see that I set up a subplot, even though I'm only going to have one plot here."
+    },
+    {
+      "startSeconds": 1463.116,
+      "text": "I then plot on this my sine curve where I'm"
+    },
+    {
+      "startSeconds": 1465.8,
+      "text": "saying, okay, I'm going to use blue, and this is going to be a solid line."
+    },
+    {
+      "startSeconds": 1468.85,
+      "text": "I then I'm going to add this kind of text annotation."
+    },
+    {
+      "startSeconds": 1472.116,
+      "text": "So I look at the maximum index that I have from my y values."
+    },
+    {
+      "startSeconds": 1475.816,
+      "text": "And I say, okay, I want to annotate."
+    },
+    {
+      "startSeconds": 1477.766,
+      "text": "So when I annotate, if we have a look at this, I need to set the following values"
+    },
+    {
+      "startSeconds": 1480.85,
+      "text": "text x, y, z text and x y coordinates."
+    },
+    {
+      "startSeconds": 1484.75,
+      "text": "So x y is going to be the position that I want to annotate."
+    },
+    {
+      "startSeconds": 1487.45,
+      "text": "So I'm saying x max index y max index"
+    },
+    {
+      "startSeconds": 1490.483,
+      "text": "to find where that actual point is I then have x y text."
+    },
+    {
+      "startSeconds": 1494.5,
+      "text": "So where do I want the text to appear relative to that position."
+    },
+    {
+      "startSeconds": 1498.233,
+      "text": "Then I need the arrow props."
+    },
+    {
+      "startSeconds": 1499.933,
+      "text": "So I'm setting the arrow style, the color and the line width."
+    },
+    {
+      "startSeconds": 1503.15,
+      "text": "Then I set the font size."
+    },
+    {
+      "startSeconds": 1504.466,
+      "text": "The color and the font weight."
+    },
+    {
+      "startSeconds": 1506.2,
+      "text": "And what this is doing is effectively drawing the arrow."
+    },
+    {
+      "startSeconds": 1508.633,
+      "text": "And this is the text that I'm going to show."
+    },
+    {
+      "startSeconds": 1511.033,
+      "text": "Okay."
+    },
+    {
+      "startSeconds": 1511.216,
+      "text": "Now to add a text box like we saw where this is a sine wave."
+    },
+    {
+      "startSeconds": 1515.05,
+      "text": "Similar thing I do the x position and the y position."
+    },
+    {
+      "startSeconds": 1518.2,
+      "text": "The text that I want to draw any other properties like transforming."
+    },
+    {
+      "startSeconds": 1522.05,
+      "text": "So in this case I'm saying I want this trans axis, the font size,"
+    },
+    {
+      "startSeconds": 1526.15,
+      "text": "vertical alignment, the box style, all of that kind of stuff."
+    },
+    {
+      "startSeconds": 1530.083,
+      "text": "Again, I know it's a little bit confusing and you would have to reference"
+    },
+    {
+      "startSeconds": 1533.566,
+      "text": "the documentation to do this, but I'm just trying to show you what's possible."
+    },
+    {
+      "startSeconds": 1537.216,
+      "text": "Then I'm adding a vertical and horizontal line so you can see we have the horizontal line"
+    },
+    {
+      "startSeconds": 1541.75,
+      "text": "and the vertical line, which is what this does right here"
+    },
+    {
+      "startSeconds": 1544.85,
+      "text": "specifying where I want to draw these, the line style, all of that kind of stuff."
+    },
+    {
+      "startSeconds": 1549.133,
+      "text": "And then setting up the X label Y label as we saw"
+    },
+    {
+      "startSeconds": 1552.016,
+      "text": "before and the title legend Grid."
+    },
+    {
+      "startSeconds": 1555.216,
+      "text": "And we are good to go."
+    },
+    {
+      "startSeconds": 1556.366,
+      "text": "So it looks a bit complicated, but honestly, fairly easy to do."
+    },
+    {
+      "startSeconds": 1559.616,
+      "text": "Just requires a bit of reference to the documentation to figure out what"
+    },
+    {
+      "startSeconds": 1562.716,
+      "text": "all of the parameters are now, as well as that, I'm not going to go through this too much in depth."
+    },
+    {
+      "startSeconds": 1566.65,
+      "text": "You can actually customize the legends that appear here as well."
+    },
+    {
+      "startSeconds": 1570.316,
+      "text": "So like you saw before, you can directly call this legend function, which will just show you"
+    },
+    {
+      "startSeconds": 1574.216,
+      "text": "a legend based on the labels that you specify for the plots or what you're plotting."
+    },
+    {
+      "startSeconds": 1578.566,
+      "text": "However, you can customize this as well with like the location if you want it to be framed."
+    },
+    {
+      "startSeconds": 1583.516,
+      "text": "If you want a box, if you want a shadow, right."
+    },
+    {
+      "startSeconds": 1585.466,
+      "text": "All of that kind of stuff."
+    },
+    {
+      "startSeconds": 1586.633,
+      "text": "And you can see now our legend looks a lot better and it's in the top right"
+    },
+    {
+      "startSeconds": 1589.483,
+      "text": "hand corner as opposed to, by default, the top left."
+    },
+    {
+      "startSeconds": 1592.866,
+      "text": "And you can see some of the values that you could use here."
+    },
+    {
+      "startSeconds": 1595.75,
+      "text": "Okay."
+    },
+    {
+      "startSeconds": 1596.083,
+      "text": "Let's keep going and look at some plot styles and themes."
+    },
+    {
+      "startSeconds": 1600.35,
+      "text": "So just so you're aware there's a bunch of different themes."
+    },
+    {
+      "startSeconds": 1603.1,
+      "text": "I just printed them all out for you here"
+    },
+    {
+      "startSeconds": 1604.933,
+      "text": "that you can use for the plots so that they look different by default."
+    },
+    {
+      "startSeconds": 1609.133,
+      "text": "And what I have is just a code sample here that runs through some of the examples."
+    },
+    {
+      "startSeconds": 1612.133,
+      "text": "So you can see the difference of what they look like."
+    },
+    {
+      "startSeconds": 1614.2,
+      "text": "So we have the default style, the seaborn style, ggplot style, dark background style."
+    },
+    {
+      "startSeconds": 1619.183,
+      "text": "Although this one doesn't seem to really be working very well because it just added the,"
+    },
+    {
+      "startSeconds": 1623.983,
+      "text": "what do you call it?"
+    },
+    {
+      "startSeconds": 1624.583,
+      "text": "Different text, which is white, but it didn't actually change the background, but you get the idea."
+    },
+    {
+      "startSeconds": 1628.75,
+      "text": "Not major in terms of the differences, but one like has a box, one doesn't have a box."
+    },
+    {
+      "startSeconds": 1633.366,
+      "text": "The textile is a little bit different, right?"
+    },
+    {
+      "startSeconds": 1635.3,
+      "text": "All of that kind of stuff. So just worth noting okay."
+    },
+    {
+      "startSeconds": 1638.45,
+      "text": "And then let's scroll down and let's now have a look at pie charts."
+    },
+    {
+      "startSeconds": 1641.983,
+      "text": "So here's an example of a pie chart."
+    },
+    {
+      "startSeconds": 1643.4,
+      "text": "You can create a matplotlib in order to do that."
+    },
+    {
+      "startSeconds": 1646.416,
+      "text": "Very straightforward. You simply use the Pie method."
+    },
+    {
+      "startSeconds": 1649.6,
+      "text": "Now when you do the pie method you need to specify the sizes right,"
+    },
+    {
+      "startSeconds": 1653.05,
+      "text": "which should add up to 100, although I believe it will handle that if they don't, you can then explode."
+    },
+    {
+      "startSeconds": 1658.266,
+      "text": "Explode just means emphasizing one of these regions and kind of like"
+    },
+    {
+      "startSeconds": 1661.266,
+      "text": "popping it out so you can specify which one you would want to do there."
+    },
+    {
+      "startSeconds": 1664.55,
+      "text": "So here I'm saying I want to explode the first value."
+    },
+    {
+      "startSeconds": 1667.7,
+      "text": "So I'm putting 0.1, which is how much I want to explode it by if I wanted to explode a different one."
+    },
+    {
+      "startSeconds": 1672.8,
+      "text": "So let's go like 0.4 or something and run that you can see."
+    },
+    {
+      "startSeconds": 1677.233,
+      "text": "Then it takes that region and explodes it that far out."
+    },
+    {
+      "startSeconds": 1680.116,
+      "text": "Right."
+    },
+    {
+      "startSeconds": 1680.383,
+      "text": "So you can specify how much you want."
+    },
+    {
+      "startSeconds": 1683.083,
+      "text": "Then you have the labels."
+    },
+    {
+      "startSeconds": 1684.516,
+      "text": "So we have some labels that we specified which are the categories."
+    },
+    {
+      "startSeconds": 1688.066,
+      "text": "Right."
+    },
+    {
+      "startSeconds": 1688.633,
+      "text": "We have the colors which we can specify as well as the sizes."
+    },
+    {
+      "startSeconds": 1692.016,
+      "text": "And then a few other parameters like shadow you know starting angle etc."
+    },
+    {
+      "startSeconds": 1696.25,
+      "text": "we can set the title and then we can show it and you get a really nice beautiful pie chart."
+    },
+    {
+      "startSeconds": 1701.35,
+      "text": "And that is almost it."
+    },
+    {
+      "startSeconds": 1702.283,
+      "text": "Pretty much the last thing I wanted to show you."
+    },
+    {
+      "startSeconds": 1704.2,
+      "text": "And let's pop open the file menu for this one, is that you can save different figures."
+    },
+    {
+      "startSeconds": 1709.116,
+      "text": "So there's these two functions right here that allow you to save the figure as something like a PNG file."
+    },
+    {
+      "startSeconds": 1714.883,
+      "text": "You can also save it as a PDF, SVG, EPS, etc.."
+    },
+    {
+      "startSeconds": 1718.483,
+      "text": "So you can use this in like a presentation PowerPoint, something like that."
+    },
+    {
+      "startSeconds": 1722.75,
+      "text": "If I run this cell here, you will see that we actually get some files now in the left hand side."
+    },
+    {
+      "startSeconds": 1727.85,
+      "text": "So we have the PNG and the PDF, both of which I can view the PDF."
+    },
+    {
+      "startSeconds": 1731.9,
+      "text": "Notice is kind of like interactive how it's popping up in here."
+    },
+    {
+      "startSeconds": 1734.566,
+      "text": "I can like zoom in, zoom out, etc."
+    },
+    {
+      "startSeconds": 1737,
+      "text": "because I have saved it. Awesome."
+    },
+    {
+      "startSeconds": 1739.75,
+      "text": "And then lastly, I just created a quick cheat sheet down here."
+    },
+    {
+      "startSeconds": 1742.066,
+      "text": "I'm not going to go through it with you, but it's in case you want to download this, notebook,"
+    },
+    {
+      "startSeconds": 1745.966,
+      "text": "which you can do for free from the link in the description and just has some of the common"
+    },
+    {
+      "startSeconds": 1750.816,
+      "text": "methods and functions that you probably want to be aware of when you are working with matplotlib."
+    },
+    {
+      "startSeconds": 1756.366,
+      "text": "So anyways, guys, that's going to wrap it up after a quick word from today's sponsor."
+    },
+    {
+      "startSeconds": 1761.083,
+      "text": "Brilliant is where you learn by doing with thousands of interactive lessons"
+    },
+    {
+      "startSeconds": 1764.9,
+      "text": "in math, data analysis, programing and AI."
+    },
+    {
+      "startSeconds": 1768.366,
+      "text": "They adopt a first principles approach, ensuring you understand the why behind each concept."
+    },
+    {
+      "startSeconds": 1773.233,
+      "text": "Every lesson is interactive, engaging."
+    },
+    {
+      "startSeconds": 1775.333,
+      "text": "You enhance on problem solving,"
+    },
+    {
+      "startSeconds": 1777.05,
+      "text": "which is proven to be six times more effective than simply watching lectures."
+    },
+    {
+      "startSeconds": 1781.266,
+      "text": "The content is developed by top notch educators, researchers"
+    },
+    {
+      "startSeconds": 1784.75,
+      "text": "and professionals from renowned institutions like MIT, Caltech, and Google."
+    },
+    {
+      "startSeconds": 1790.116,
+      "text": "Brilliant emphasizes enhancing your critical thinking abilities"
+    },
+    {
+      "startSeconds": 1793.216,
+      "text": "through active problem solving rather than memorization."
+    },
+    {
+      "startSeconds": 1796.783,
+      "text": "As you learn specific subjects, you're simultaneously training your mind to think more effectively."
+    },
+    {
+      "startSeconds": 1801.766,
+      "text": "Consistent daily learning is crucial and brilliant makes it effortless with their bite sized lessons"
+    },
+    {
+      "startSeconds": 1807.166,
+      "text": "allowing you to acquire meaningful knowledge in just a few minutes each day,"
+    },
+    {
+      "startSeconds": 1810.95,
+      "text": "which is perfect for replacing idle screen time."
+    },
+    {
+      "startSeconds": 1813.95,
+      "text": "Additionally, brilliant offers a comprehensive range of computer"
+    },
+    {
+      "startSeconds": 1817.183,
+      "text": "science and Python courses, as well as extensive AI workshops"
+    },
+    {
+      "startSeconds": 1821.233,
+      "text": "guiding you from a complete beginner to an expert through practical, hands on lessons to learn."
+    },
+    {
+      "startSeconds": 1826.55,
+      "text": "For free on Brilliant's, go to brilliant.org."
+    },
+    {
+      "startSeconds": 1828.966,
+      "text": "Slash tech with Tim, scan the QR code on screen or click the link in the description."
+    },
+    {
+      "startSeconds": 1834.05,
+      "text": "Brilliant is also giving our viewers 20% off an annual premium subscription,"
+    },
+    {
+      "startSeconds": 1838.3,
+      "text": "which gives you unlimited daily access to everything on Brilliant's."
+    }
+  ]
+}

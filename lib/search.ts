@@ -4,20 +4,28 @@
  * (client).
  *
  * AGENTS.md §7 / §11: search returns grounded *result cards*, not prose. The
- * model only decides the framing (`kind`), a short `description`, an optional
+ * model only decides the framing (`kind`), a short `description`, a copied
  * `startSeconds`, and its own `relevance` score. Everything shown on a card
  * (course, "Lesson N.M", module title, key points, thumbnail, duration) is
  * derived on the server from Sanity and keyed by `lessonSlug`, so labels and
  * counts can never be hallucinated.
+ *
+ * `startSeconds` is resolved on the server *before* the model runs (see
+ * `resolveVideoMoments` in `app/api/search/route.ts`): the query keywords are
+ * matched against the matched lesson's linked `video` document — chapters first
+ * (`chapters[].label`), transcript only as a fallback (`chunks[].text`). The
+ * model is handed the resolved integer and told to copy it verbatim; it never
+ * invents one.
  */
 
 import { z } from "zod";
 
 export const searchResultSchema = z.object({
   /**
-   * "video" when the lesson's value is mainly the video walkthrough/demo,
-   * "lesson" when it's conceptual. Both link to the lesson page. This is a
-   * heuristic until the transcript/chapter ingestion pipeline (AGENTS §9) lands.
+   * "video" when the server resolved a start moment for this lesson's video
+   * (chapters-first, transcript-fallback), or when the lesson's value is mainly
+   * a walkthrough/demo. "lesson" when it's conceptual. Both link to the lesson
+   * page.
    */
   kind: z.enum(["video", "lesson"]),
   /** `slug.current` of a lesson that appeared in the model's GROQ results. */
@@ -28,10 +36,11 @@ export const searchResultSchema = z.object({
    */
   description: z.string().max(240),
   /**
-   * Second to start playback from. Always 0 for now — `video.chapters` /
-   * `video.chunks` are empty and there is no ingestion pipeline yet.
-   * No `.default()`: OpenAI strict structured output requires every property in
-   * `required`. The model is told to send 0; the client also coerces it.
+   * Second to start playback from. Resolved on the server against the lesson's
+   * linked `video` doc and handed to the model to copy verbatim; `0` when no
+   * chapter or transcript chunk matched the query. No `.default()`: OpenAI
+   * strict structured output requires every property in `required`. The client
+   * also floors/coerces it and the lesson page clamps it to the video duration.
    */
   startSeconds: z.number().int().min(0),
   /** The model's own ranking score, 0–1, higher = better. Used as the tiebreak for the default sort. */
@@ -103,4 +112,37 @@ export function groundResults(
     });
   }
   return out;
+}
+
+/**
+ * Words too generic to help a keyword match. Kept small on purpose — this is a
+ * token filter for GROQ `match`, not an NLP stoplist.
+ */
+const STOPWORDS = new Set([
+  "the", "and", "for", "with", "how", "what", "why", "when", "your", "you",
+  "are", "get", "set", "use", "using", "vs", "into", "from", "this", "that",
+  "does", "can", "will", "should", "about", "between",
+]);
+
+/**
+ * Query -> distinct lowercased match tokens: split on non-alphanumerics, drop
+ * stopwords and anything under 3 chars, de-dupe preserving order, cap at 8.
+ * Pure so the server route can share it. Returns `[]` for an all-stopword query,
+ * in which case the caller skips moment resolution.
+ */
+export function queryTokens(query: string): string[] {
+  const seen = new Set<string>();
+  const out: string[] = [];
+  for (const raw of (query || "").toLowerCase().split(/[^a-z0-9]+/)) {
+    if (raw.length < 3 || STOPWORDS.has(raw) || seen.has(raw)) continue;
+    seen.add(raw);
+    out.push(raw);
+    if (out.length === 8) break;
+  }
+  return out;
+}
+
+/** `queryTokens` wrapped for a GROQ `match` array RHS (`data` -> `*data*`). */
+export function groqMatchTokens(query: string): string[] {
+  return queryTokens(query).map((t) => `*${t}*`);
 }

@@ -1,0 +1,1446 @@
+{
+  "id": "pIGRwMjhMaQ",
+  "url": "https://www.youtube.com/watch?v=pIGRwMjhMaQ",
+  "fetchedAt": "2026-09-01T04:07:06.651Z",
+  "captionKind": "asr",
+  "chapters": [
+    {
+      "startSeconds": 0,
+      "label": "Introduction to Chunking Strategies in RAG"
+    },
+    {
+      "startSeconds": 112,
+      "label": "Detailed Tutorial on Various Chunking Methods"
+    },
+    {
+      "startSeconds": 145,
+      "label": "Setup Instructions for Chunking Environment"
+    },
+    {
+      "startSeconds": 181,
+      "label": "Code Walkthrough for Character Text Splitting"
+    },
+    {
+      "startSeconds": 361,
+      "label": "Implementing Recursive Character Text Splitting"
+    },
+    {
+      "startSeconds": 420,
+      "label": "Exploring Document Text Splitting Techniques"
+    },
+    {
+      "startSeconds": 506,
+      "label": "Introduction to Semantic Chunking with Embeddings"
+    },
+    {
+      "startSeconds": 585,
+      "label": "Advanced Agentic Chunking for Optimised Grouping"
+    },
+    {
+      "startSeconds": 830,
+      "label": "Conclusion"
+    }
+  ],
+  "cues": [
+    {
+      "startSeconds": 0.32,
+      "text": "this is amazing now we are going to see"
+    },
+    {
+      "startSeconds": 2.879,
+      "text": "about chunking strategies in a rag"
+    },
+    {
+      "startSeconds": 5.359,
+      "text": "application from beginner to advanced"
+    },
+    {
+      "startSeconds": 7.72,
+      "text": "level and how to optimize this so what"
+    },
+    {
+      "startSeconds": 10.639,
+      "text": "is chunking so this is a basic rag"
+    },
+    {
+      "startSeconds": 13,
+      "text": "application so the first step is that"
+    },
+    {
+      "startSeconds": 15.799,
+      "text": "the data is getting divided into chunks"
+    },
+    {
+      "startSeconds": 19.84,
+      "text": "then it's converted to embeddings and"
+    },
+    {
+      "startSeconds": 22,
+      "text": "then gets stored in the database that is"
+    },
+    {
+      "startSeconds": 24.279,
+      "text": "Vector database the second step is that"
+    },
+    {
+      "startSeconds": 27.119,
+      "text": "the user is going to ask a question and"
+    },
+    {
+      "startSeconds": 29.56,
+      "text": "any relevant chunks are searched in the"
+    },
+    {
+      "startSeconds": 32.399,
+      "text": "vector database and that information is"
+    },
+    {
+      "startSeconds": 35.16,
+      "text": "fed to the Lost language model as"
+    },
+    {
+      "startSeconds": 37.44,
+      "text": "context to give a final accurate answer"
+    },
+    {
+      "startSeconds": 40.44,
+      "text": "so why chunking is very important if the"
+    },
+    {
+      "startSeconds": 43.48,
+      "text": "text got split with less relevance then"
+    },
+    {
+      "startSeconds": 48.039,
+      "text": "that is going to produce a inaccurate"
+    },
+    {
+      "startSeconds": 50.559,
+      "text": "answer high quality chunks produces high"
+    },
+    {
+      "startSeconds": 53.64,
+      "text": "quality answer for example if you have a"
+    },
+    {
+      "startSeconds": 56.559,
+      "text": "text like this and you divide this text"
+    },
+    {
+      "startSeconds": 59.519,
+      "text": "into small chunks by having a fixed size"
+    },
+    {
+      "startSeconds": 63.079,
+      "text": "chunking like after 50 characters that"
+    },
+    {
+      "startSeconds": 66.04,
+      "text": "is going to break so you can see the"
+    },
+    {
+      "startSeconds": 68.72,
+      "text": "word is not full it's supposed to be"
+    },
+    {
+      "startSeconds": 70.799,
+      "text": "mountains but it says m o similarly here"
+    },
+    {
+      "startSeconds": 74.6,
+      "text": "it should be fascinating but it says"
+    },
+    {
+      "startSeconds": 77.68,
+      "text": "Fascinate so if we divide the text with"
+    },
+    {
+      "startSeconds": 81.439,
+      "text": "fixed size chunking then our lar"
+    },
+    {
+      "startSeconds": 83.64,
+      "text": "language model is going to produce"
+    },
+    {
+      "startSeconds": 86.04,
+      "text": "irrelevant results similarly when we"
+    },
+    {
+      "startSeconds": 88.4,
+      "text": "divide the text based Bas on commas or"
+    },
+    {
+      "startSeconds": 90.72,
+      "text": "full stop even those chunks are not"
+    },
+    {
+      "startSeconds": 93.119,
+      "text": "going to give us a clear answer if we"
+    },
+    {
+      "startSeconds": 95.84,
+      "text": "divide based on full stops or paragraphs"
+    },
+    {
+      "startSeconds": 99.399,
+      "text": "we might miss the subsequent paragraph"
+    },
+    {
+      "startSeconds": 102.68,
+      "text": "if it is related so how can we fix this"
+    },
+    {
+      "startSeconds": 105.479,
+      "text": "that's exactly what we're going to see"
+    },
+    {
+      "startSeconds": 106.92,
+      "text": "today let's get"
+    },
+    {
+      "startSeconds": 108.25,
+      "text": "[Music]"
+    },
+    {
+      "startSeconds": 110.32,
+      "text": "started hi everyone I'm really excited"
+    },
+    {
+      "startSeconds": 112.6,
+      "text": "to show you about chunking strategies a"
+    },
+    {
+      "startSeconds": 115.119,
+      "text": "special thanks to Greg who came up with"
+    },
+    {
+      "startSeconds": 117.159,
+      "text": "the different levels of chunking"
+    },
+    {
+      "startSeconds": 118.56,
+      "text": "strategy in this video we we're going to"
+    },
+    {
+      "startSeconds": 120.52,
+      "text": "quickly look at that and integrate that"
+    },
+    {
+      "startSeconds": 122.92,
+      "text": "with the rag application I'm going to"
+    },
+    {
+      "startSeconds": 124.68,
+      "text": "take you through step by step on"
+    },
+    {
+      "startSeconds": 126,
+      "text": "character splitting recursive character"
+    },
+    {
+      "startSeconds": 128.319,
+      "text": "splitting document based chunking"
+    },
+    {
+      "startSeconds": 130.679,
+      "text": "sematic chunking and finally agenting"
+    },
+    {
+      "startSeconds": 133.2,
+      "text": "chunking but before that I regularly"
+    },
+    {
+      "startSeconds": 135.519,
+      "text": "created videos in regards to Artificial"
+    },
+    {
+      "startSeconds": 136.92,
+      "text": "Intelligence on my YouTube channel so do"
+    },
+    {
+      "startSeconds": 138.84,
+      "text": "subscribe and click the Bell icon to"
+    },
+    {
+      "startSeconds": 140.319,
+      "text": "stay tuned make sure you click the like"
+    },
+    {
+      "startSeconds": 142,
+      "text": "button so this video can be helpful for"
+    },
+    {
+      "startSeconds": 143.8,
+      "text": "many others like you so the first step"
+    },
+    {
+      "startSeconds": 145.8,
+      "text": "contact create hyphen and chunking"
+    },
+    {
+      "startSeconds": 147.319,
+      "text": "Python 3.11 and then click enter next"
+    },
+    {
+      "startSeconds": 150,
+      "text": "cond activate chunking and then click"
+    },
+    {
+      "startSeconds": 151.56,
+      "text": "enter next pip install chroma DB Lang"
+    },
+    {
+      "startSeconds": 154.08,
+      "text": "chain llama index Lang chain"
+    },
+    {
+      "startSeconds": 156.44,
+      "text": "experimental and Lang chain open Ai and"
+    },
+    {
+      "startSeconds": 158.44,
+      "text": "then click enter also pip install L"
+    },
+    {
+      "startSeconds": 160.68,
+      "text": "chain Hub and Rich and click enter now"
+    },
+    {
+      "startSeconds": 163.76,
+      "text": "export your open AI API key like this"
+    },
+    {
+      "startSeconds": 165.48,
+      "text": "and then click enter we are going to"
+    },
+    {
+      "startSeconds": 167.159,
+      "text": "download AMA P nomic embed text and ol P"
+    },
+    {
+      "startSeconds": 171.599,
+      "text": "mistro so nomic embed text is for"
+    },
+    {
+      "startSeconds": 173.68,
+      "text": "embedding mistal is for local Lodge"
+    },
+    {
+      "startSeconds": 176.04,
+      "text": "language model make sure you've"
+    },
+    {
+      "startSeconds": 177.48,
+      "text": "downloaded olama before doing this now"
+    },
+    {
+      "startSeconds": 180.12,
+      "text": "let's create a file called app.py and"
+    },
+    {
+      "startSeconds": 181.56,
+      "text": "let's open it first from Rich import"
+    },
+    {
+      "startSeconds": 184.239,
+      "text": "print then importing document chat olama"
+    },
+    {
+      "startSeconds": 187.92,
+      "text": "chroma embeddings runnable pass through"
+    },
+    {
+      "startSeconds": 191.28,
+      "text": "string output parser and chat prom"
+    },
+    {
+      "startSeconds": 193.72,
+      "text": "template then we are defining our local"
+    },
+    {
+      "startSeconds": 196.239,
+      "text": "Lodge language model mral using chat ol"
+    },
+    {
+      "startSeconds": 198.879,
+      "text": "next we going to set up rag so Define a"
+    },
+    {
+      "startSeconds": 201.44,
+      "text": "rag function so same like as we've seen"
+    },
+    {
+      "startSeconds": 203.519,
+      "text": "in the image first step we are loading"
+    },
+    {
+      "startSeconds": 206.08,
+      "text": "all the data that means those chunks in"
+    },
+    {
+      "startSeconds": 208.68,
+      "text": "a database called DB then when the user"
+    },
+    {
+      "startSeconds": 211.519,
+      "text": "ask a question it is going to check the"
+    },
+    {
+      "startSeconds": 214.28,
+      "text": "database using the retriever function"
+    },
+    {
+      "startSeconds": 216.68,
+      "text": "then it goes to the L language model and"
+    },
+    {
+      "startSeconds": 219.04,
+      "text": "finally we get the output that's exactly"
+    },
+    {
+      "startSeconds": 221.12,
+      "text": "what we see here first we are loading"
+    },
+    {
+      "startSeconds": 223.48,
+      "text": "the data and saving that in the vector"
+    },
+    {
+      "startSeconds": 226.08,
+      "text": "database that is chroma second when the"
+    },
+    {
+      "startSeconds": 228.599,
+      "text": "user ask a question we are using the"
+    },
+    {
+      "startSeconds": 230.56,
+      "text": "retriever to retrieve the data and then"
+    },
+    {
+      "startSeconds": 232.879,
+      "text": "passing that to the lunch language model"
+    },
+    {
+      "startSeconds": 234.519,
+      "text": "so the first step is the character text"
+    },
+    {
+      "startSeconds": 236.28,
+      "text": "splitting so we going to define the"
+    },
+    {
+      "startSeconds": 237.92,
+      "text": "number of character size and then divide"
+    },
+    {
+      "startSeconds": 240.519,
+      "text": "accordingly printing that for reference"
+    },
+    {
+      "startSeconds": 243.439,
+      "text": "and defining a text and first we are"
+    },
+    {
+      "startSeconds": 245.599,
+      "text": "going to do manual splitting so defining"
+    },
+    {
+      "startSeconds": 247.879,
+      "text": "chunks defining the chunk size next"
+    },
+    {
+      "startSeconds": 250.64,
+      "text": "going through the chunks and dividing"
+    },
+    {
+      "startSeconds": 252.12,
+      "text": "accordingly next converting those to"
+    },
+    {
+      "startSeconds": 254.4,
+      "text": "documents we are converting those to"
+    },
+    {
+      "startSeconds": 256.28,
+      "text": "documents because document is the format"
+    },
+    {
+      "startSeconds": 258.479,
+      "text": "accepted by L chain to store the"
+    },
+    {
+      "startSeconds": 260.479,
+      "text": "embeddings in chrom RB next we are"
+    },
+    {
+      "startSeconds": 262.96,
+      "text": "printing it that's it so we are dividing"
+    },
+    {
+      "startSeconds": 265.12,
+      "text": "the text based on the number of"
+    },
+    {
+      "startSeconds": 266.88,
+      "text": "characters now I'm going to run this"
+    },
+    {
+      "startSeconds": 268.72,
+      "text": "code python AB by and click enter and"
+    },
+    {
+      "startSeconds": 270.919,
+      "text": "you can see the text got split and it's"
+    },
+    {
+      "startSeconds": 273.8,
+      "text": "not even correct so instead of critical"
+    },
+    {
+      "startSeconds": 276.84,
+      "text": "it says CR and I is in a separate line"
+    },
+    {
+      "startSeconds": 280.68,
+      "text": "so even in smaller small uh it's"
+    },
+    {
+      "startSeconds": 284.12,
+      "text": "completely separate line so if we divide"
+    },
+    {
+      "startSeconds": 286.4,
+      "text": "things like this based on the number of"
+    },
+    {
+      "startSeconds": 288.36,
+      "text": "characters this is not going to give us"
+    },
+    {
+      "startSeconds": 290.6,
+      "text": "an accurate answer in this code we"
+    },
+    {
+      "startSeconds": 292.8,
+      "text": "manually split into chunks but we can"
+    },
+    {
+      "startSeconds": 295.479,
+      "text": "also do it automatically using Lang"
+    },
+    {
+      "startSeconds": 298.199,
+      "text": "chains character text split so doing the"
+    },
+    {
+      "startSeconds": 300.6,
+      "text": "same thing but with character text"
+    },
+    {
+      "startSeconds": 302.4,
+      "text": "spitter function converting those"
+    },
+    {
+      "startSeconds": 304.12,
+      "text": "documents and printing those documents"
+    },
+    {
+      "startSeconds": 306.6,
+      "text": "now if you run you'll get the same"
+    },
+    {
+      "startSeconds": 308.72,
+      "text": "response but automatically it's divided"
+    },
+    {
+      "startSeconds": 311.56,
+      "text": "one thing for you to notice that using"
+    },
+    {
+      "startSeconds": 313.6,
+      "text": "character splitter when you split like"
+    },
+    {
+      "startSeconds": 314.96,
+      "text": "this this how it's going to get divided"
+    },
+    {
+      "startSeconds": 317.6,
+      "text": "but when you give overlap for example"
+    },
+    {
+      "startSeconds": 319.6,
+      "text": "four then you can see the text getting"
+    },
+    {
+      "startSeconds": 322.8,
+      "text": "overlapped so the more the overlap then"
+    },
+    {
+      "startSeconds": 325.479,
+      "text": "the large language model can identified"
+    },
+    {
+      "startSeconds": 327.8,
+      "text": "okay this chunk and this chunk are"
+    },
+    {
+      "startSeconds": 329.84,
+      "text": "related to each other so that's when"
+    },
+    {
+      "startSeconds": 331.759,
+      "text": "overlap comes you can modify the overlap"
+    },
+    {
+      "startSeconds": 334.639,
+      "text": "here so this is not a correct choice"
+    },
+    {
+      "startSeconds": 336.4,
+      "text": "because we are not going to get a proper"
+    },
+    {
+      "startSeconds": 338.28,
+      "text": "result next is a recursive character"
+    },
+    {
+      "startSeconds": 340.28,
+      "text": "text splitting in this we provide"
+    },
+    {
+      "startSeconds": 342.12,
+      "text": "characters such as a new line then the"
+    },
+    {
+      "startSeconds": 344.88,
+      "text": "new line will automatically used as a"
+    },
+    {
+      "startSeconds": 348.08,
+      "text": "splitter so we just printing for a"
+    },
+    {
+      "startSeconds": 349.759,
+      "text": "reference and importing recursive"
+    },
+    {
+      "startSeconds": 352.4,
+      "text": "character text splitter as before we are"
+    },
+    {
+      "startSeconds": 354.52,
+      "text": "defining that next converting that to"
+    },
+    {
+      "startSeconds": 356.8,
+      "text": "documents and finally printing the"
+    },
+    {
+      "startSeconds": 358.72,
+      "text": "documents that's it now I'm going to run"
+    },
+    {
+      "startSeconds": 361.44,
+      "text": "this code Python app.py and you can see"
+    },
+    {
+      "startSeconds": 364.12,
+      "text": "the text got split but I want to provide"
+    },
+    {
+      "startSeconds": 366.12,
+      "text": "more content so I'm going to add a file"
+    },
+    {
+      "startSeconds": 369.639,
+      "text": "which is content. txt so this is"
+    },
+    {
+      "startSeconds": 372.319,
+      "text": "content. txt and it contains more"
+    },
+    {
+      "startSeconds": 374.36,
+      "text": "information about Lang chain text"
+    },
+    {
+      "startSeconds": 376.08,
+      "text": "splitting chat jpt and more now going to"
+    },
+    {
+      "startSeconds": 379.28,
+      "text": "run this code again and see the"
+    },
+    {
+      "startSeconds": 381.4,
+      "text": "difference and now you saw large amount"
+    },
+    {
+      "startSeconds": 384,
+      "text": "of data being split but still I can see"
+    },
+    {
+      "startSeconds": 387.56,
+      "text": "it is getting terminated halfway through"
+    },
+    {
+      "startSeconds": 389.919,
+      "text": "that's because we are defining the chunk"
+    },
+    {
+      "startSeconds": 391.479,
+      "text": "size 65 I'm going to increase that to"
+    },
+    {
+      "startSeconds": 393.96,
+      "text": "450 450 and going to run it and you can"
+    },
+    {
+      "startSeconds": 398.199,
+      "text": "see now it's much better than before and"
+    },
+    {
+      "startSeconds": 401.199,
+      "text": "when the chunk size is more"
+    },
+    {
+      "startSeconds": 403,
+      "text": "automatically terminates and goes to a"
+    },
+    {
+      "startSeconds": 405.52,
+      "text": "new paragraph or chunk so comparatively"
+    },
+    {
+      "startSeconds": 408.16,
+      "text": "is better but still not yet optimized so"
+    },
+    {
+      "startSeconds": 412,
+      "text": "next we are going to see is document"
+    },
+    {
+      "startSeconds": 414,
+      "text": "text splitter so number three document"
+    },
+    {
+      "startSeconds": 416.479,
+      "text": "text splitting and printing for our"
+    },
+    {
+      "startSeconds": 418.4,
+      "text": "reference so first first we are going to"
+    },
+    {
+      "startSeconds": 420.039,
+      "text": "see mckown Splitter from Lang chain."
+    },
+    {
+      "startSeconds": 423.479,
+      "text": "text splitter import mckown text"
+    },
+    {
+      "startSeconds": 425.4,
+      "text": "splitter now initializing the text"
+    },
+    {
+      "startSeconds": 427.08,
+      "text": "splitter now going to provide some"
+    },
+    {
+      "startSeconds": 429.36,
+      "text": "markdown data for it to split now"
+    },
+    {
+      "startSeconds": 432.24,
+      "text": "converting that to document and printing"
+    },
+    {
+      "startSeconds": 434.639,
+      "text": "it after splitting similarly we have"
+    },
+    {
+      "startSeconds": 437.84,
+      "text": "document splitter for python so going to"
+    },
+    {
+      "startSeconds": 439.96,
+      "text": "import that python text splitter going"
+    },
+    {
+      "startSeconds": 442.319,
+      "text": "to provide some python text initializing"
+    },
+    {
+      "startSeconds": 444.919,
+      "text": "the python code text splitter and"
+    },
+    {
+      "startSeconds": 446.96,
+      "text": "finally you're going to print after"
+    },
+    {
+      "startSeconds": 448.84,
+      "text": "splitting it so now we're going to see"
+    },
+    {
+      "startSeconds": 450.8,
+      "text": "document splitting for JavaScript same"
+    },
+    {
+      "startSeconds": 453.16,
+      "text": "as before importing recursive character"
+    },
+    {
+      "startSeconds": 455.319,
+      "text": "text splitter and language language is"
+    },
+    {
+      "startSeconds": 457.8,
+      "text": "where we are going to define the"
+    },
+    {
+      "startSeconds": 459,
+      "text": "JavaScript language next we providing"
+    },
+    {
+      "startSeconds": 461.199,
+      "text": "some JavaScript text to split now we are"
+    },
+    {
+      "startSeconds": 463.68,
+      "text": "going to initialize jsor splitter"
+    },
+    {
+      "startSeconds": 466.199,
+      "text": "recursive character text Splitter from"
+    },
+    {
+      "startSeconds": 467.919,
+      "text": "language here we are providing"
+    },
+    {
+      "startSeconds": 469.96,
+      "text": "JavaScript language next I'm going to"
+    },
+    {
+      "startSeconds": 472.56,
+      "text": "print that print Jitter doc create"
+    },
+    {
+      "startSeconds": 475.4,
+      "text": "documents closing the bracket that's it"
+    },
+    {
+      "startSeconds": 478.199,
+      "text": "simple approach we are going to split"
+    },
+    {
+      "startSeconds": 480.039,
+      "text": "based on document now I'm going to run"
+    },
+    {
+      "startSeconds": 482.12,
+      "text": "this code python app.py seems like"
+    },
+    {
+      "startSeconds": 484.4,
+      "text": "there's an error it is python code text"
+    },
+    {
+      "startSeconds": 486.84,
+      "text": "splitter that's it so going to run again"
+    },
+    {
+      "startSeconds": 489.319,
+      "text": "and you can see it got divided based on"
+    },
+    {
+      "startSeconds": 490.919,
+      "text": "document so here is markdown Python and"
+    },
+    {
+      "startSeconds": 494.199,
+      "text": "then JavaScript so I've given only chunk"
+    },
+    {
+      "startSeconds": 496.919,
+      "text": "size of 65 but you can increase that"
+    },
+    {
+      "startSeconds": 499.24,
+      "text": "based on your requirement now to improve"
+    },
+    {
+      "startSeconds": 501.44,
+      "text": "this further we going to use semantic"
+    },
+    {
+      "startSeconds": 504.039,
+      "text": "chunking before semantic chunking and"
+    },
+    {
+      "startSeconds": 506.84,
+      "text": "printing for our reference in this video"
+    },
+    {
+      "startSeconds": 509.24,
+      "text": "we going to use embeddings so embeddings"
+    },
+    {
+      "startSeconds": 512.039,
+      "text": "are nothing but numbers so when a text"
+    },
+    {
+      "startSeconds": 514.159,
+      "text": "is converted to number that means a"
+    },
+    {
+      "startSeconds": 516.32,
+      "text": "meaning is given so to identify if two"
+    },
+    {
+      "startSeconds": 518.959,
+      "text": "sentence are related to each other when"
+    },
+    {
+      "startSeconds": 521.159,
+      "text": "we convert those chunks to embeddings"
+    },
+    {
+      "startSeconds": 523.959,
+      "text": "and when we see the distance between"
+    },
+    {
+      "startSeconds": 525.68,
+      "text": "those embeddings then you can identify"
+    },
+    {
+      "startSeconds": 528.48,
+      "text": "whether it is related or not in that way"
+    },
+    {
+      "startSeconds": 531.279,
+      "text": "you can group or split accordingly"
+    },
+    {
+      "startSeconds": 533.839,
+      "text": "that's exactly what we're going to do"
+    },
+    {
+      "startSeconds": 535.399,
+      "text": "from longchain semantic chunka it's from"
+    },
+    {
+      "startSeconds": 537.92,
+      "text": "L chain experimental"
+    },
+    {
+      "startSeconds": 539.72,
+      "text": "next open AI embeddings text splitter"
+    },
+    {
+      "startSeconds": 542.88,
+      "text": "equals semantic chunka and then"
+    },
+    {
+      "startSeconds": 545.56,
+      "text": "providing the open AI embeddings model"
+    },
+    {
+      "startSeconds": 547.8,
+      "text": "and mentioning percentile so that means"
+    },
+    {
+      "startSeconds": 550.32,
+      "text": "all difference between sentence are"
+    },
+    {
+      "startSeconds": 552.32,
+      "text": "calculator you have other things like"
+    },
+    {
+      "startSeconds": 554.279,
+      "text": "standard deviation and Inter quartile So"
+    },
+    {
+      "startSeconds": 557.079,
+      "text": "based on this also you can split the"
+    },
+    {
+      "startSeconds": 559.72,
+      "text": "text next Define the documents that is"
+    },
+    {
+      "startSeconds": 562.56,
+      "text": "converting those split text documents"
+    },
+    {
+      "startSeconds": 565.16,
+      "text": "and then printing it that's it so in"
+    },
+    {
+      "startSeconds": 566.92,
+      "text": "simple terms we are using embeddings to"
+    },
+    {
+      "startSeconds": 569.32,
+      "text": "split now I'm going to run this code"
+    },
+    {
+      "startSeconds": 571.519,
+      "text": "Python app.py and here you can see the"
+    },
+    {
+      "startSeconds": 573.64,
+      "text": "chunks when you have more amount of"
+    },
+    {
+      "startSeconds": 576.079,
+      "text": "content than you can see the power"
+    },
+    {
+      "startSeconds": 578.24,
+      "text": "behind this we can even improve further"
+    },
+    {
+      "startSeconds": 580.88,
+      "text": "from here so how can we optimize further"
+    },
+    {
+      "startSeconds": 583.68,
+      "text": "that's when we have agentic chunking the"
+    },
+    {
+      "startSeconds": 585.959,
+      "text": "fifth level is Agent chunking sprinting"
+    },
+    {
+      "startSeconds": 588.76,
+      "text": "for our reference and there are two"
+    },
+    {
+      "startSeconds": 590.76,
+      "text": "types of agent chunking we can say as"
+    },
+    {
+      "startSeconds": 593.16,
+      "text": "two levels in agentic chunking the first"
+    },
+    {
+      "startSeconds": 595.48,
+      "text": "one is proportion based chunking so what"
+    },
+    {
+      "startSeconds": 597.959,
+      "text": "is proportion based chunking"
+    },
+    {
+      "startSeconds": 599.92,
+      "text": "it is based on This research I'm going"
+    },
+    {
+      "startSeconds": 601.839,
+      "text": "to open it so this is that research and"
+    },
+    {
+      "startSeconds": 604.44,
+      "text": "if you come down there you have the"
+    },
+    {
+      "startSeconds": 606.76,
+      "text": "information so if you provide a chunk"
+    },
+    {
+      "startSeconds": 609.88,
+      "text": "that will be automatically split but"
+    },
+    {
+      "startSeconds": 612.48,
+      "text": "each of this line or chunk can stand in"
+    },
+    {
+      "startSeconds": 615.36,
+      "text": "its own and can provide a complete"
+    },
+    {
+      "startSeconds": 617.8,
+      "text": "meaning so to do that we are going to"
+    },
+    {
+      "startSeconds": 619.92,
+      "text": "use a large language model so previously"
+    },
+    {
+      "startSeconds": 622.399,
+      "text": "we used embeddings for semantic chunking"
+    },
+    {
+      "startSeconds": 625.2,
+      "text": "but for agenting chunking we are going"
+    },
+    {
+      "startSeconds": 626.76,
+      "text": "to use large language model to do that"
+    },
+    {
+      "startSeconds": 628.72,
+      "text": "first I'm going to import all these"
+    },
+    {
+      "startSeconds": 630.44,
+      "text": "modules next Define the prom template so"
+    },
+    {
+      "startSeconds": 633.44,
+      "text": "this promp template is able to handle"
+    },
+    {
+      "startSeconds": 635.24,
+      "text": "the proportion base chunking so the"
+    },
+    {
+      "startSeconds": 637.44,
+      "text": "prompt contains those information and we"
+    },
+    {
+      "startSeconds": 640,
+      "text": "are importing that from Lang chain Hub"
+    },
+    {
+      "startSeconds": 642.68,
+      "text": "that's why we use hub. pull now next we"
+    },
+    {
+      "startSeconds": 646,
+      "text": "are using a lost language model that's"
+    },
+    {
+      "startSeconds": 647.56,
+      "text": "GPT 3.5 turbo next runable equals prompt"
+    },
+    {
+      "startSeconds": 651.12,
+      "text": "template and that prompt template will"
+    },
+    {
+      "startSeconds": 652.92,
+      "text": "be sent to the lar language model now"
+    },
+    {
+      "startSeconds": 654.959,
+      "text": "going to use pantic and Define the"
+    },
+    {
+      "startSeconds": 657.079,
+      "text": "sentences and extracting the senten"
+    },
+    {
+      "startSeconds": 659.68,
+      "text": "using Create extraction chain pantic"
+    },
+    {
+      "startSeconds": 661.839,
+      "text": "function next defining a function called"
+    },
+    {
+      "startSeconds": 664.6,
+      "text": "get proposition next we are splitting"
+    },
+    {
+      "startSeconds": 666.639,
+      "text": "based on paragraph that is two new lines"
+    },
+    {
+      "startSeconds": 669.56,
+      "text": "next we are going through the split"
+    },
+    {
+      "startSeconds": 671.8,
+      "text": "paragraphs and going to extend that for"
+    },
+    {
+      "startSeconds": 674.68,
+      "text": "example if the next chunk is related to"
+    },
+    {
+      "startSeconds": 677.079,
+      "text": "the previous chunk then that will be"
+    },
+    {
+      "startSeconds": 679.04,
+      "text": "considered to create a meaning for the"
+    },
+    {
+      "startSeconds": 681.12,
+      "text": "sentence or to create a meaning for the"
+    },
+    {
+      "startSeconds": 683.279,
+      "text": "chunk so that the chunk can stand on its"
+    },
+    {
+      "startSeconds": 685.639,
+      "text": "own finally we are printing out so in"
+    },
+    {
+      "startSeconds": 687.839,
+      "text": "simple terms we dividing the text into"
+    },
+    {
+      "startSeconds": 690.6,
+      "text": "smaller chunks and then passing that to"
+    },
+    {
+      "startSeconds": 692.56,
+      "text": "the large language model and making that"
+    },
+    {
+      "startSeconds": 694.76,
+      "text": "chunk stand on its own from its context"
+    },
+    {
+      "startSeconds": 697.839,
+      "text": "now I'm going to run this code python"
+    },
+    {
+      "startSeconds": 699.48,
+      "text": "app. pi and here is the response text"
+    },
+    {
+      "startSeconds": 702.079,
+      "text": "splitting in Lang chain is a critical"
+    },
+    {
+      "startSeconds": 704.079,
+      "text": "feature chat GPT was developed by open"
+    },
+    {
+      "startSeconds": 706.48,
+      "text": "AI chat GPT allows for dynamic"
+    },
+    {
+      "startSeconds": 709.079,
+      "text": "interaction so you can see each of this"
+    },
+    {
+      "startSeconds": 711.04,
+      "text": "line can stand on its own and it"
+    },
+    {
+      "startSeconds": 713.839,
+      "text": "contains a meaning now we're going to"
+    },
+    {
+      "startSeconds": 715.6,
+      "text": "take this further by grouping these"
+    },
+    {
+      "startSeconds": 718.56,
+      "text": "chunks together if we could group these"
+    },
+    {
+      "startSeconds": 720.56,
+      "text": "chunks together this will provide more"
+    },
+    {
+      "startSeconds": 722.6,
+      "text": "meaning and less likely to lose its"
+    },
+    {
+      "startSeconds": 725.399,
+      "text": "context so to group that together"
+    },
+    {
+      "startSeconds": 728.24,
+      "text": "grouping Chunk from agentic chunker"
+    },
+    {
+      "startSeconds": 730.56,
+      "text": "import agentic chunker next initializing"
+    },
+    {
+      "startSeconds": 733.32,
+      "text": "the agentic chunker now adding those"
+    },
+    {
+      "startSeconds": 736.44,
+      "text": "text propositions which we created"
+    },
+    {
+      "startSeconds": 738.32,
+      "text": "before in the previous step and passing"
+    },
+    {
+      "startSeconds": 740.519,
+      "text": "that to this agentic chunker now we"
+    },
+    {
+      "startSeconds": 743.16,
+      "text": "printing it for our reference converting"
+    },
+    {
+      "startSeconds": 745.399,
+      "text": "those to documents and finally passing"
+    },
+    {
+      "startSeconds": 748.48,
+      "text": "that to our rag application which we"
+    },
+    {
+      "startSeconds": 750.639,
+      "text": "created earlier in simple terms we are"
+    },
+    {
+      "startSeconds": 752.68,
+      "text": "just grouping those meaningful chunks"
+    },
+    {
+      "startSeconds": 755.199,
+      "text": "together now I'm going to run this code"
+    },
+    {
+      "startSeconds": 757.32,
+      "text": "one thing to note the agentic chunka is"
+    },
+    {
+      "startSeconds": 760.04,
+      "text": "a file and this is the contents of the"
+    },
+    {
+      "startSeconds": 762.92,
+      "text": "file that's where you define your large"
+    },
+    {
+      "startSeconds": 765.199,
+      "text": "language model you have your prompt this"
+    },
+    {
+      "startSeconds": 768.72,
+      "text": "prompt automatically categorize and"
+    },
+    {
+      "startSeconds": 771.36,
+      "text": "group accordingly this is also developed"
+    },
+    {
+      "startSeconds": 773.6,
+      "text": "by GRE now going to run this code Python"
+    },
+    {
+      "startSeconds": 776.16,
+      "text": "app.py and here you can see it's"
+    },
+    {
+      "startSeconds": 778.839,
+      "text": "automatically grouping those chunks so"
+    },
+    {
+      "startSeconds": 781.44,
+      "text": "first it automatically created a"
+    },
+    {
+      "startSeconds": 783.88,
+      "text": "category called Lang chain features and"
+    },
+    {
+      "startSeconds": 786.079,
+      "text": "then assigning this chunk and even on"
+    },
+    {
+      "startSeconds": 788.44,
+      "text": "the next chunk it's assigning back to"
+    },
+    {
+      "startSeconds": 791,
+      "text": "the same category then after that it"
+    },
+    {
+      "startSeconds": 794.24,
+      "text": "creates chat GPD development and"
+    },
+    {
+      "startSeconds": 796.279,
+      "text": "features and assigning relevant chunk"
+    },
+    {
+      "startSeconds": 799.36,
+      "text": "and here everything got grouped together"
+    },
+    {
+      "startSeconds": 801.76,
+      "text": "so there's a summary and all the related"
+    },
+    {
+      "startSeconds": 804.279,
+      "text": "chunks are in that group similarly we"
+    },
+    {
+      "startSeconds": 807.839,
+      "text": "have another chunk and have a quick"
+    },
+    {
+      "startSeconds": 809.839,
+      "text": "summary and all relevant chunks are in"
+    },
+    {
+      "startSeconds": 813.16,
+      "text": "that group this is exciting now when we"
+    },
+    {
+      "startSeconds": 815.959,
+      "text": "pass this information to the launch"
+    },
+    {
+      "startSeconds": 817.44,
+      "text": "language model you are more likely to"
+    },
+    {
+      "startSeconds": 819.399,
+      "text": "get a better answer this is a more"
+    },
+    {
+      "startSeconds": 821.44,
+      "text": "optimized version and finally you get a"
+    },
+    {
+      "startSeconds": 824.199,
+      "text": "response from the rag application based"
+    },
+    {
+      "startSeconds": 826.639,
+      "text": "on the question we asked I just thought"
+    },
+    {
+      "startSeconds": 828.48,
+      "text": "this will be really useful for everyone"
+    },
+    {
+      "startSeconds": 830.68,
+      "text": "to know so I made it short for you to"
+    },
+    {
+      "startSeconds": 833.839,
+      "text": "understand this is going to be amazing"
+    },
+    {
+      "startSeconds": 835.72,
+      "text": "I'm going to create more videos similar"
+    },
+    {
+      "startSeconds": 837.12,
+      "text": "to this so stay tuned I hope if you like"
+    },
+    {
+      "startSeconds": 839.079,
+      "text": "this video do like share and subscribe"
+    },
+    {
+      "startSeconds": 840.88,
+      "text": "and thanks for watching"
+    }
+  ]
+}

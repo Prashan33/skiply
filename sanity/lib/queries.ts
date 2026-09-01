@@ -23,22 +23,45 @@ const IMAGE_FRAGMENT = /* groq */ `
 
 /* ------------------------------------------------------------------ catalog */
 
+/**
+ * Shared catalog-card projection. Reused verbatim by the `/courses` catalog and
+ * by the bookmark-driven My Learning list so both feed `<CourseGrid>` with the
+ * same shape (and TypeGen produces compatible types).
+ */
+const CATALOG_COURSE_FIELDS = /* groq */ `
+  _id,
+  title,
+  "slug": slug.current,
+  summary,
+  level,
+  price,
+  popular,
+  studentCount,
+  "coverImage": coverImage{ ${IMAGE_FRAGMENT} },
+  instructor->{ name, "slug": slug.current },
+  category->{ title, "slug": slug.current },
+  "moduleCount": count(modules),
+  "lessonCount": count(modules[].lessons[]),
+  "durationSeconds": math::sum(modules[].lessons[]->duration)
+`
+
 export const CATALOG_COURSES_QUERY = defineQuery(`
   *[_type == "course" && defined(slug.current)] | order(popular desc, title asc) {
-    _id,
-    title,
-    "slug": slug.current,
-    summary,
-    level,
-    price,
-    popular,
-    studentCount,
-    "coverImage": coverImage{ ${IMAGE_FRAGMENT} },
-    instructor->{ name, "slug": slug.current },
-    category->{ title, "slug": slug.current },
-    "moduleCount": count(modules),
-    "lessonCount": count(modules[].lessons[]),
-    "durationSeconds": math::sum(modules[].lessons[]->duration)
+    ${CATALOG_COURSE_FIELDS}
+  }
+`)
+
+/**
+ * Courses surfaced on My Learning: directly bookmarked (`$courseIds`) or the
+ * parent course of any bookmarked lesson (`$lessonIds`). De-duplicated by the
+ * query itself since a course matches at most once.
+ */
+export const BOOKMARKED_COURSES_QUERY = defineQuery(`
+  *[_type == "course" && defined(slug.current) && (
+    _id in $courseIds ||
+    count((modules[].lessons[]._ref)[@ in $lessonIds]) > 0
+  )] | order(popular desc, title asc) {
+    ${CATALOG_COURSE_FIELDS}
   }
 `)
 
@@ -108,6 +131,25 @@ export const SEARCH_INDEX_QUERY = defineQuery(`
         keyPoints,
         "poster": coalesce(poster, thumbnail){ ${IMAGE_FRAGMENT} }
       }
+    }
+  }
+`)
+
+/**
+ * Two-stage timestamp resolution input (AGENTS §7): for a set of matched lesson
+ * slugs, project only the chapter/transcript rows of the linked `video` document
+ * that match the query tokens — chapters (small, a TOC) in full, transcript
+ * chunks capped so a whole transcript is never returned (AGENTS §12). The route
+ * (`resolveVideoMoments`) scores these and picks a start second, preferring a
+ * chapter hit over a transcript hit. `$tokens` is a wildcarded token array
+ * (`["*data*", "*fetch*"]`); `$slugs` is the model's own grounded output.
+ */
+export const VIDEO_MOMENTS_QUERY = defineQuery(`
+  *[_type == "lesson" && defined(videoUrl) && slug.current in $slugs]{
+    "lessonSlug": slug.current,
+    "video": *[_type == "video" && url == ^.videoUrl][0]{
+      "chapterHits": chapters[label match $tokens]{ startSeconds, label },
+      "chunkHits": chunks[text match $tokens][0...6]{ startSeconds, text }
     }
   }
 `)
@@ -229,6 +271,28 @@ export const CATEGORY_BY_SLUG_QUERY = defineQuery(`
       popular,
       "coverImage": coverImage{ ${IMAGE_FRAGMENT} },
       instructor->{ name, "slug": slug.current }
+    }
+  }
+`)
+
+/* ----------------------------------------------------------------- progress */
+
+/**
+ * Per-learner progress record (AGENTS.md §7/§8). App state, written only by
+ * `POST /api/progress`. `lessonId` is a plain string id, joined against lessons
+ * on the page when labels are needed.
+ */
+export const PROGRESS_BY_USER_QUERY = defineQuery(`
+  *[_type == "progress" && userId == $userId][0]{
+    entries[]{
+      lessonId,
+      secondsWatched,
+      completed,
+      lastPosition
+    },
+    "bookmarks": bookmarks[]{
+      kind,
+      refId
     }
   }
 `)

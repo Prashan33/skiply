@@ -1,0 +1,341 @@
+{
+  "id": "FzVCGou8SMA",
+  "url": "https://www.youtube.com/watch?v=FzVCGou8SMA",
+  "fetchedAt": "2026-09-01T04:08:50.976Z",
+  "captionKind": "asr",
+  "chapters": [],
+  "cues": [
+    {
+      "startSeconds": 0,
+      "text": "Hello and welcome to the DB Schema"
+    },
+    {
+      "startSeconds": 2.36,
+      "text": "channel."
+    },
+    {
+      "startSeconds": 4.04,
+      "text": "In this tutorial, we'll go over some"
+    },
+    {
+      "startSeconds": 5.6,
+      "text": "simple but powerful rules that help you"
+    },
+    {
+      "startSeconds": 8,
+      "text": "design better, cleaner databases."
+    },
+    {
+      "startSeconds": 12.24,
+      "text": "Normalization means organizing your data"
+    },
+    {
+      "startSeconds": 14.2,
+      "text": "in a way that removes duplication and"
+    },
+    {
+      "startSeconds": 15.92,
+      "text": "keeps it clean. It helps break down big,"
+    },
+    {
+      "startSeconds": 18.52,
+      "text": "messy tables into smaller ones where"
+    },
+    {
+      "startSeconds": 20.64,
+      "text": "each table focuses on just one thing."
+    },
+    {
+      "startSeconds": 24.24,
+      "text": "This makes the database easier to update"
+    },
+    {
+      "startSeconds": 26.88,
+      "text": "and helps avoid mistakes like storing"
+    },
+    {
+      "startSeconds": 28.52,
+      "text": "the same info in multiple places."
+    },
+    {
+      "startSeconds": 32.64,
+      "text": "There are five normal forms in database"
+    },
+    {
+      "startSeconds": 34.88,
+      "text": "normalization, but in this video, I'm"
+    },
+    {
+      "startSeconds": 37.36,
+      "text": "going to focus on the first three,"
+    },
+    {
+      "startSeconds": 39.64,
+      "text": "the ones that are most commonly used and"
+    },
+    {
+      "startSeconds": 41.52,
+      "text": "essential for a solid database design."
+    },
+    {
+      "startSeconds": 47.04,
+      "text": "Let's talk about first normal form, the"
+    },
+    {
+      "startSeconds": 49.28,
+      "text": "first rule of clean databases."
+    },
+    {
+      "startSeconds": 52.76,
+      "text": "The goal,"
+    },
+    {
+      "startSeconds": 54.08,
+      "text": "make sure each column contains only one"
+    },
+    {
+      "startSeconds": 56.28,
+      "text": "indivisible value."
+    },
+    {
+      "startSeconds": 58.24,
+      "text": "Here's a problem."
+    },
+    {
+      "startSeconds": 60.6,
+      "text": "In this table, fields like product"
+    },
+    {
+      "startSeconds": 62.56,
+      "text": "contain multiple values. This breaks"
+    },
+    {
+      "startSeconds": 65.12,
+      "text": "atomicity and makes searching or"
+    },
+    {
+      "startSeconds": 67.2,
+      "text": "updating much harder."
+    },
+    {
+      "startSeconds": 69.72,
+      "text": "The solution,"
+    },
+    {
+      "startSeconds": 71.08,
+      "text": "split those values into separate rows."
+    },
+    {
+      "startSeconds": 73.92,
+      "text": "Now, each value is atomic and your data"
+    },
+    {
+      "startSeconds": 76.56,
+      "text": "is in first normal form,"
+    },
+    {
+      "startSeconds": 78.68,
+      "text": "clean, searchable, and ready for the"
+    },
+    {
+      "startSeconds": 81.44,
+      "text": "next steps in normalization."
+    },
+    {
+      "startSeconds": 84.84,
+      "text": "Let's break down second normal form."
+    },
+    {
+      "startSeconds": 87.6,
+      "text": "The goal,"
+    },
+    {
+      "startSeconds": 88.88,
+      "text": "remove partial dependencies, which means"
+    },
+    {
+      "startSeconds": 92.08,
+      "text": "every non-key column must depend on the"
+    },
+    {
+      "startSeconds": 94.76,
+      "text": "entire primary key, not just part of it."
+    },
+    {
+      "startSeconds": 99.48,
+      "text": "Example,"
+    },
+    {
+      "startSeconds": 100.92,
+      "text": "if your table uses a composite key like"
+    },
+    {
+      "startSeconds": 103.28,
+      "text": "order ID plus product, but fields like"
+    },
+    {
+      "startSeconds": 106.04,
+      "text": "customer name and phone number depend"
+    },
+    {
+      "startSeconds": 107.76,
+      "text": "only on order ID, you have a problem."
+    },
+    {
+      "startSeconds": 112.16,
+      "text": "That causes repeated customer data,"
+    },
+    {
+      "startSeconds": 114.8,
+      "text": "violating second normal form."
+    },
+    {
+      "startSeconds": 120.12,
+      "text": "The solution, split it into two tables."
+    },
+    {
+      "startSeconds": 123.72,
+      "text": "The orders table"
+    },
+    {
+      "startSeconds": 125.16,
+      "text": "holds customer name and phone number"
+    },
+    {
+      "startSeconds": 127.6,
+      "text": "identified by order ID."
+    },
+    {
+      "startSeconds": 130.44,
+      "text": "The order details table contains product"
+    },
+    {
+      "startSeconds": 133,
+      "text": "information linked using a composite key"
+    },
+    {
+      "startSeconds": 135.92,
+      "text": "of order ID and product."
+    },
+    {
+      "startSeconds": 138.84,
+      "text": "Now, each column depends fully on its"
+    },
+    {
+      "startSeconds": 140.92,
+      "text": "table's key."
+    },
+    {
+      "startSeconds": 142.28,
+      "text": "This removes redundancy and sets you up"
+    },
+    {
+      "startSeconds": 144.36,
+      "text": "for third normal form."
+    },
+    {
+      "startSeconds": 148.68,
+      "text": "Let's simplify third normal form."
+    },
+    {
+      "startSeconds": 151.4,
+      "text": "The goal,"
+    },
+    {
+      "startSeconds": 152.8,
+      "text": "remove transitive dependencies."
+    },
+    {
+      "startSeconds": 157.92,
+      "text": "Non-key columns should depend only on"
+    },
+    {
+      "startSeconds": 160.36,
+      "text": "the primary key."
+    },
+    {
+      "startSeconds": 162.64,
+      "text": "In this table, order ID is the key,"
+    },
+    {
+      "startSeconds": 165.16,
+      "text": "but customer name and phone number"
+    },
+    {
+      "startSeconds": 166.52,
+      "text": "depend on customer ID, not directly on"
+    },
+    {
+      "startSeconds": 169.44,
+      "text": "order ID."
+    },
+    {
+      "startSeconds": 170.92,
+      "text": "That's a transitive dependency and it"
+    },
+    {
+      "startSeconds": 173.04,
+      "text": "breaks third normal form."
+    },
+    {
+      "startSeconds": 179.16,
+      "text": "The solution,"
+    },
+    {
+      "startSeconds": 180.48,
+      "text": "split the data."
+    },
+    {
+      "startSeconds": 182.16,
+      "text": "One table for orders with order ID and"
+    },
+    {
+      "startSeconds": 184.519,
+      "text": "customer ID."
+    },
+    {
+      "startSeconds": 186.56,
+      "text": "Another table for customer info linked"
+    },
+    {
+      "startSeconds": 188.4,
+      "text": "by customer ID."
+    },
+    {
+      "startSeconds": 190.44,
+      "text": "Now, each column depends directly on its"
+    },
+    {
+      "startSeconds": 193,
+      "text": "table's key."
+    },
+    {
+      "startSeconds": 194.92,
+      "text": "It keeps your data clean, avoids"
+    },
+    {
+      "startSeconds": 196.519,
+      "text": "duplication, and makes updates much"
+    },
+    {
+      "startSeconds": 198.239,
+      "text": "easier."
+    },
+    {
+      "startSeconds": 201.519,
+      "text": "Thank you for watching."
+    },
+    {
+      "startSeconds": 205.519,
+      "text": "Be sure to explore our other tutorials"
+    },
+    {
+      "startSeconds": 207.68,
+      "text": "to get the most out of your DB schema"
+    },
+    {
+      "startSeconds": 209.44,
+      "text": "experience."
+    }
+  ]
+}

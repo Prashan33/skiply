@@ -1,0 +1,1245 @@
+{
+  "id": "P7EUFtjeAmI",
+  "url": "https://www.youtube.com/watch?v=P7EUFtjeAmI",
+  "fetchedAt": "2026-09-01T04:09:01.964Z",
+  "captionKind": "asr",
+  "chapters": [],
+  "cues": [
+    {
+      "startSeconds": 0.08,
+      "text": "welcome guys today we're going to"
+    },
+    {
+      "startSeconds": 1.599,
+      "text": "explain explain"
+    },
+    {
+      "startSeconds": 4.4,
+      "text": "in postgres get it so"
+    },
+    {
+      "startSeconds": 7.68,
+      "text": "there is this command in postgres that"
+    },
+    {
+      "startSeconds": 9.84,
+      "text": "is called explain and it is used"
+    },
+    {
+      "startSeconds": 12.32,
+      "text": "to retrieve information about what query"
+    },
+    {
+      "startSeconds": 14.96,
+      "text": "plans"
+    },
+    {
+      "startSeconds": 15.759,
+      "text": "postgres will use for a given sql"
+    },
+    {
+      "startSeconds": 18.24,
+      "text": "statement"
+    },
+    {
+      "startSeconds": 19.039,
+      "text": "how about we jump into it i have a"
+    },
+    {
+      "startSeconds": 20.48,
+      "text": "beautiful table here it has to be"
+    },
+    {
+      "startSeconds": 22.08,
+      "text": "beautiful"
+    },
+    {
+      "startSeconds": 22.64,
+      "text": "if it's not beautiful i send it back"
+    },
+    {
+      "startSeconds": 24.64,
+      "text": "michael scott this table is called"
+    },
+    {
+      "startSeconds": 26.4,
+      "text": "grades and there is an id"
+    },
+    {
+      "startSeconds": 28.08,
+      "text": "and there is a grade there's a name so"
+    },
+    {
+      "startSeconds": 30,
+      "text": "it's like a bunch of students"
+    },
+    {
+      "startSeconds": 31.359,
+      "text": "there's a lot of rows here i think over"
+    },
+    {
+      "startSeconds": 34.16,
+      "text": "200 million"
+    },
+    {
+      "startSeconds": 35.6,
+      "text": "and i showed many times how to create"
+    },
+    {
+      "startSeconds": 38,
+      "text": "such table and insert this much"
+    },
+    {
+      "startSeconds": 39.84,
+      "text": "volume of rows so there's an index on"
+    },
+    {
+      "startSeconds": 42.8,
+      "text": "the"
+    },
+    {
+      "startSeconds": 43.12,
+      "text": "id there's an index on the g"
+    },
+    {
+      "startSeconds": 46.48,
+      "text": "the grade but there's no index on the"
+    },
+    {
+      "startSeconds": 48.16,
+      "text": "name of the student"
+    },
+    {
+      "startSeconds": 49.6,
+      "text": "so here's what we're going to do so"
+    },
+    {
+      "startSeconds": 50.719,
+      "text": "we're going to execute a bunch of"
+    },
+    {
+      "startSeconds": 52.079,
+      "text": "queries and we're going to explain"
+    },
+    {
+      "startSeconds": 54.16,
+      "text": "them and see what postgres will do so"
+    },
+    {
+      "startSeconds": 57.039,
+      "text": "let's start with"
+    },
+    {
+      "startSeconds": 58,
+      "text": "explaining the select star the worst"
+    },
+    {
+      "startSeconds": 60.64,
+      "text": "query you can"
+    },
+    {
+      "startSeconds": 61.68,
+      "text": "ever do when we do that we get this"
+    },
+    {
+      "startSeconds": 64.72,
+      "text": "beautiful one liner and let's explain"
+    },
+    {
+      "startSeconds": 66.96,
+      "text": "let's let's demystify what's going on"
+    },
+    {
+      "startSeconds": 68.64,
+      "text": "there"
+    },
+    {
+      "startSeconds": 69.2,
+      "text": "so the first part is usually the"
+    },
+    {
+      "startSeconds": 72.64,
+      "text": "query plan and this is called a"
+    },
+    {
+      "startSeconds": 74.88,
+      "text": "sequential scan and this is"
+    },
+    {
+      "startSeconds": 76.56,
+      "text": "equivalent to a full table scan in other"
+    },
+    {
+      "startSeconds": 78.64,
+      "text": "databases"
+    },
+    {
+      "startSeconds": 79.68,
+      "text": "essentially what what the database"
+    },
+    {
+      "startSeconds": 81.2,
+      "text": "decided to do is like okay you're"
+    },
+    {
+      "startSeconds": 82.4,
+      "text": "selecting everything and there is no"
+    },
+    {
+      "startSeconds": 84.56,
+      "text": "filter so i'm going to go directly to"
+    },
+    {
+      "startSeconds": 87.04,
+      "text": "the table"
+    },
+    {
+      "startSeconds": 87.759,
+      "text": "i'm going to go directly to the heap and"
+    },
+    {
+      "startSeconds": 89.52,
+      "text": "fetch everything that's the sequential"
+    },
+    {
+      "startSeconds": 91.52,
+      "text": "scan"
+    },
+    {
+      "startSeconds": 92.159,
+      "text": "sometimes postgres do a parallel"
+    },
+    {
+      "startSeconds": 94.799,
+      "text": "sequential scan with threading they spin"
+    },
+    {
+      "startSeconds": 96.64,
+      "text": "up multiple threads just to do the"
+    },
+    {
+      "startSeconds": 98.159,
+      "text": "scanning"
+    },
+    {
+      "startSeconds": 99.2,
+      "text": "on grades and here this the cost"
+    },
+    {
+      "startSeconds": 102.88,
+      "text": "and the cost is usually has two numbers"
+    },
+    {
+      "startSeconds": 106.72,
+      "text": "almost has two numbers separated by two"
+    },
+    {
+      "startSeconds": 109.04,
+      "text": "dots the first number and the second"
+    },
+    {
+      "startSeconds": 111.04,
+      "text": "number so let's explain what this means"
+    },
+    {
+      "startSeconds": 112.72,
+      "text": "the first number means how many"
+    },
+    {
+      "startSeconds": 115.28,
+      "text": "milliseconds"
+    },
+    {
+      "startSeconds": 116.24,
+      "text": "it took me to fetch the first"
+    },
+    {
+      "startSeconds": 119.68,
+      "text": "page right and in this case it took"
+    },
+    {
+      "startSeconds": 122.799,
+      "text": "zero why because postgres immediately"
+    },
+    {
+      "startSeconds": 125.36,
+      "text": "went to the table and"
+    },
+    {
+      "startSeconds": 126.399,
+      "text": "fetched the first row and immediately"
+    },
+    {
+      "startSeconds": 128,
+      "text": "got results so it cost you"
+    },
+    {
+      "startSeconds": 129.92,
+      "text": "almost nothing to get the first result"
+    },
+    {
+      "startSeconds": 131.68,
+      "text": "so if you're doing some sort of a limit"
+    },
+    {
+      "startSeconds": 133.52,
+      "text": "right select star from grades with limit"
+    },
+    {
+      "startSeconds": 135.36,
+      "text": "one you're going to get a result very"
+    },
+    {
+      "startSeconds": 137.04,
+      "text": "very quick"
+    },
+    {
+      "startSeconds": 138.239,
+      "text": "this number can increase the startup"
+    },
+    {
+      "startSeconds": 140.56,
+      "text": "cost can"
+    },
+    {
+      "startSeconds": 141.36,
+      "text": "increase if postgres decide if the"
+    },
+    {
+      "startSeconds": 144,
+      "text": "database decides to do"
+    },
+    {
+      "startSeconds": 145.2,
+      "text": "some work before fetching such as"
+    },
+    {
+      "startSeconds": 147.92,
+      "text": "aggregating i said order by"
+    },
+    {
+      "startSeconds": 150.08,
+      "text": "right things has nothing to do with"
+    },
+    {
+      "startSeconds": 152.16,
+      "text": "actual fishing work"
+    },
+    {
+      "startSeconds": 153.68,
+      "text": "that precedes the actual things that you"
+    },
+    {
+      "startSeconds": 156.879,
+      "text": "want to do"
+    },
+    {
+      "startSeconds": 157.599,
+      "text": "so that's you're going to see this"
+    },
+    {
+      "startSeconds": 158.8,
+      "text": "number if you see this number go up"
+    },
+    {
+      "startSeconds": 160.959,
+      "text": "that means you're doing a lot of stuff"
+    },
+    {
+      "startSeconds": 163.2,
+      "text": "before fetching"
+    },
+    {
+      "startSeconds": 164.959,
+      "text": "and this number is essentially the total"
+    },
+    {
+      "startSeconds": 167.36,
+      "text": "amount of time that"
+    },
+    {
+      "startSeconds": 168.48,
+      "text": "it thinks because remember it didn't"
+    },
+    {
+      "startSeconds": 170.48,
+      "text": "really execute the query right"
+    },
+    {
+      "startSeconds": 172.16,
+      "text": "it just tells you hey i think i'm going"
+    },
+    {
+      "startSeconds": 174,
+      "text": "to do this right"
+    },
+    {
+      "startSeconds": 175.68,
+      "text": "and this is the total amount of time"
+    },
+    {
+      "startSeconds": 177.28,
+      "text": "which in this is in milliseconds so"
+    },
+    {
+      "startSeconds": 178.72,
+      "text": "it ex it estimates that it's going to"
+    },
+    {
+      "startSeconds": 181.44,
+      "text": "finish the whole thing in 289 seconds"
+    },
+    {
+      "startSeconds": 184,
+      "text": "essentially and this is the another"
+    },
+    {
+      "startSeconds": 186.48,
+      "text": "estimation this is very valuable by the"
+    },
+    {
+      "startSeconds": 188.4,
+      "text": "way"
+    },
+    {
+      "startSeconds": 188.72,
+      "text": "right this is not an accurate number but"
+    },
+    {
+      "startSeconds": 192.319,
+      "text": "it gives you a quick number approximate"
+    },
+    {
+      "startSeconds": 195.68,
+      "text": "based on its own statistics that this is"
+    },
+    {
+      "startSeconds": 198.159,
+      "text": "the number of rows that are going to fit"
+    },
+    {
+      "startSeconds": 199.92,
+      "text": "that's what i always recommend when you"
+    },
+    {
+      "startSeconds": 201.599,
+      "text": "want to do a count"
+    },
+    {
+      "startSeconds": 203.44,
+      "text": "and you don't really care about the"
+    },
+    {
+      "startSeconds": 205.68,
+      "text": "actual number"
+    },
+    {
+      "startSeconds": 206.879,
+      "text": "like you're doing at it you know you're"
+    },
+    {
+      "startSeconds": 208.08,
+      "text": "building instagram and you you're"
+    },
+    {
+      "startSeconds": 209.76,
+      "text": "counting the number of likes"
+    },
+    {
+      "startSeconds": 211.84,
+      "text": "use this don't you don't do select count"
+    },
+    {
+      "startSeconds": 214.319,
+      "text": "the set account will"
+    },
+    {
+      "startSeconds": 215.599,
+      "text": "kill your performance it's actually go"
+    },
+    {
+      "startSeconds": 217.599,
+      "text": "and physically do the count"
+    },
+    {
+      "startSeconds": 219.599,
+      "text": "on all your rules and if you have"
+    },
+    {
+      "startSeconds": 220.879,
+      "text": "billion rows tough luck counting that"
+    },
+    {
+      "startSeconds": 222.959,
+      "text": "stuff right"
+    },
+    {
+      "startSeconds": 223.68,
+      "text": "that's why a lot of people use this"
+    },
+    {
+      "startSeconds": 225.36,
+      "text": "explain give me an estimate"
+    },
+    {
+      "startSeconds": 227.2,
+      "text": "return that and there's the width"
+    },
+    {
+      "startSeconds": 230.319,
+      "text": "the width of the row so this is the sum"
+    },
+    {
+      "startSeconds": 233.36,
+      "text": "of all the bytes for all the columns and"
+    },
+    {
+      "startSeconds": 235.28,
+      "text": "i have"
+    },
+    {
+      "startSeconds": 235.84,
+      "text": "three bytes if you sum them you're going"
+    },
+    {
+      "startSeconds": 237.439,
+      "text": "to get 31 because there is text there"
+    },
+    {
+      "startSeconds": 239.599,
+      "text": "all right so that's the first one let's"
+    },
+    {
+      "startSeconds": 241.84,
+      "text": "spice things up a little bit"
+    },
+    {
+      "startSeconds": 243.28,
+      "text": "let's do an explain select star from"
+    },
+    {
+      "startSeconds": 246.4,
+      "text": "grades and we're going to do"
+    },
+    {
+      "startSeconds": 247.92,
+      "text": "an order by this time we're going to"
+    },
+    {
+      "startSeconds": 249.68,
+      "text": "order by g and g is the grade"
+    },
+    {
+      "startSeconds": 252.799,
+      "text": "what do we do what do we get you see"
+    },
+    {
+      "startSeconds": 255.2,
+      "text": "like this number bumped up a little bit"
+    },
+    {
+      "startSeconds": 257.04,
+      "text": "it's a it's a 0.43 millisecond"
+    },
+    {
+      "startSeconds": 260.639,
+      "text": "so it it did postgres did some work or"
+    },
+    {
+      "startSeconds": 264.16,
+      "text": "it is attempting to do some work before"
+    },
+    {
+      "startSeconds": 267.919,
+      "text": "fetching the row and that work is what"
+    },
+    {
+      "startSeconds": 269.84,
+      "text": "is actually doing the sort order by g"
+    },
+    {
+      "startSeconds": 274,
+      "text": "and it's not so bad because it did use"
+    },
+    {
+      "startSeconds": 277.36,
+      "text": "the"
+    },
+    {
+      "startSeconds": 277.68,
+      "text": "index that is on g to do the sorting and"
+    },
+    {
+      "startSeconds": 280.56,
+      "text": "guess what"
+    },
+    {
+      "startSeconds": 281.52,
+      "text": "the index is already sorted so the work"
+    },
+    {
+      "startSeconds": 283.6,
+      "text": "is very very trivial"
+    },
+    {
+      "startSeconds": 285.28,
+      "text": "right but it is work none of the less"
+    },
+    {
+      "startSeconds": 288.08,
+      "text": "and that's the total number of thing"
+    },
+    {
+      "startSeconds": 289.759,
+      "text": "the rows in this day the time this is"
+    },
+    {
+      "startSeconds": 291.84,
+      "text": "almost the same number"
+    },
+    {
+      "startSeconds": 292.88,
+      "text": "should be better b and then the wealth"
+    },
+    {
+      "startSeconds": 295.919,
+      "text": "is also the same okay"
+    },
+    {
+      "startSeconds": 297.68,
+      "text": "now let's price things a little bit and"
+    },
+    {
+      "startSeconds": 299.28,
+      "text": "do explain select"
+    },
+    {
+      "startSeconds": 300.88,
+      "text": "star from grades"
+    },
+    {
+      "startSeconds": 304.88,
+      "text": "order by name something that has no"
+    },
+    {
+      "startSeconds": 308.84,
+      "text": "index and you can see"
+    },
+    {
+      "startSeconds": 312.72,
+      "text": "there's a little bit more cause in this"
+    },
+    {
+      "startSeconds": 315.919,
+      "text": "case"
+    },
+    {
+      "startSeconds": 316.72,
+      "text": "possibly says ooh you want me to sort by"
+    },
+    {
+      "startSeconds": 319.52,
+      "text": "the name the name is a column that is"
+    },
+    {
+      "startSeconds": 321.52,
+      "text": "not"
+    },
+    {
+      "startSeconds": 321.84,
+      "text": "index so i have to go to the heap and"
+    },
+    {
+      "startSeconds": 323.6,
+      "text": "guess what i'm going to"
+    },
+    {
+      "startSeconds": 325.28,
+      "text": "pull everything to in order to sort it"
+    },
+    {
+      "startSeconds": 327.44,
+      "text": "so it started to first of all it did a"
+    },
+    {
+      "startSeconds": 329.52,
+      "text": "parallel sequence scan"
+    },
+    {
+      "startSeconds": 331.759,
+      "text": "always read it from bottom going up"
+    },
+    {
+      "startSeconds": 334.24,
+      "text": "right this is how we do it"
+    },
+    {
+      "startSeconds": 335.6,
+      "text": "don't read it from up let's start from"
+    },
+    {
+      "startSeconds": 337.919,
+      "text": "the inner"
+    },
+    {
+      "startSeconds": 339.36,
+      "text": "thing going up up up up okay so the"
+    },
+    {
+      "startSeconds": 341.919,
+      "text": "parallel sequential scan on grades"
+    },
+    {
+      "startSeconds": 344,
+      "text": "it took nothing to do that because hey"
+    },
+    {
+      "startSeconds": 346.88,
+      "text": "i'm going directly stable right"
+    },
+    {
+      "startSeconds": 348.8,
+      "text": "caused nothing to go there again we"
+    },
+    {
+      "startSeconds": 351.039,
+      "text": "didn't sort yet uh this is how much time"
+    },
+    {
+      "startSeconds": 353.36,
+      "text": "we're gonna take so it's estimating that"
+    },
+    {
+      "startSeconds": 355.36,
+      "text": "it's gonna take me 200 seconds 218"
+    },
+    {
+      "startSeconds": 357.44,
+      "text": "seconds"
+    },
+    {
+      "startSeconds": 358.08,
+      "text": "and this is the number of rows that"
+    },
+    {
+      "startSeconds": 359.28,
+      "text": "we're going to get back 31"
+    },
+    {
+      "startSeconds": 361.199,
+      "text": "got it all right now we're going to sort"
+    },
+    {
+      "startSeconds": 363.52,
+      "text": "on the name"
+    },
+    {
+      "startSeconds": 364.8,
+      "text": "look at that look how much it"
+    },
+    {
+      "startSeconds": 368.24,
+      "text": "took just to get to the point to fish"
+    },
+    {
+      "startSeconds": 371.44,
+      "text": "something"
+    },
+    {
+      "startSeconds": 372.08,
+      "text": "the sorting took man that's a lot that's"
+    },
+    {
+      "startSeconds": 375.12,
+      "text": "that's a thousand seconds"
+    },
+    {
+      "startSeconds": 376.72,
+      "text": "yike c right so you can see that this"
+    },
+    {
+      "startSeconds": 380.08,
+      "text": "number is very critical"
+    },
+    {
+      "startSeconds": 381.759,
+      "text": "the first number the second number is no"
+    },
+    {
+      "startSeconds": 383.44,
+      "text": "not so much that's the last one"
+    },
+    {
+      "startSeconds": 385.52,
+      "text": "right but the first number is everything"
+    },
+    {
+      "startSeconds": 387.52,
+      "text": "that you need and then obviously"
+    },
+    {
+      "startSeconds": 389.039,
+      "text": "we plan two workers so there's two"
+    },
+    {
+      "startSeconds": 391.28,
+      "text": "parallels doing this thing"
+    },
+    {
+      "startSeconds": 392.56,
+      "text": "and since we had two threads two"
+    },
+    {
+      "startSeconds": 395.44,
+      "text": "processes doing the work"
+    },
+    {
+      "startSeconds": 397.44,
+      "text": "we're gonna merge the result at the end"
+    },
+    {
+      "startSeconds": 398.88,
+      "text": "of the day right and that's the total"
+    },
+    {
+      "startSeconds": 400.8,
+      "text": "results"
+    },
+    {
+      "startSeconds": 401.44,
+      "text": "obviously we get this number and"
+    },
+    {
+      "startSeconds": 404.96,
+      "text": "that's the final result and 31 width so"
+    },
+    {
+      "startSeconds": 407.919,
+      "text": "you see that there is more work that"
+    },
+    {
+      "startSeconds": 409.759,
+      "text": "need to happen to get"
+    },
+    {
+      "startSeconds": 411.199,
+      "text": "to get to the actual thing all right"
+    },
+    {
+      "startSeconds": 413.12,
+      "text": "let's play a little bit with the"
+    },
+    {
+      "startSeconds": 414.639,
+      "text": "other stuff guys what i'm going to do"
+    },
+    {
+      "startSeconds": 415.919,
+      "text": "here is i'm going to do explain select"
+    },
+    {
+      "startSeconds": 418.08,
+      "text": "id not just the whole thing just the id"
+    },
+    {
+      "startSeconds": 421.12,
+      "text": "from grades let's just try this thing"
+    },
+    {
+      "startSeconds": 423.36,
+      "text": "what do we get"
+    },
+    {
+      "startSeconds": 424.8,
+      "text": "obviously we get zero because it costs"
+    },
+    {
+      "startSeconds": 426.88,
+      "text": "nothing to go to the"
+    },
+    {
+      "startSeconds": 428.319,
+      "text": "table it costs nothing to go to the"
+    },
+    {
+      "startSeconds": 431.599,
+      "text": "table to fetch the first page that's"
+    },
+    {
+      "startSeconds": 433.52,
+      "text": "almost nothing zero right and the rows"
+    },
+    {
+      "startSeconds": 436.08,
+      "text": "but look at this"
+    },
+    {
+      "startSeconds": 436.96,
+      "text": "look at the width we get four y four"
+    },
+    {
+      "startSeconds": 440.16,
+      "text": "four bytes is the result you're asking"
+    },
+    {
+      "startSeconds": 442.319,
+      "text": "to return only"
+    },
+    {
+      "startSeconds": 443.599,
+      "text": "the id and the id by default is an"
+    },
+    {
+      "startSeconds": 445.599,
+      "text": "integer and the integer is four bytes"
+    },
+    {
+      "startSeconds": 447.44,
+      "text": "by the way careful don't put your primer"
+    },
+    {
+      "startSeconds": 450.8,
+      "text": "key as"
+    },
+    {
+      "startSeconds": 451.44,
+      "text": "as just integer if you're expecting this"
+    },
+    {
+      "startSeconds": 453.52,
+      "text": "law or table to grow"
+    },
+    {
+      "startSeconds": 454.56,
+      "text": "beyond 2 billion right that's what"
+    },
+    {
+      "startSeconds": 456.319,
+      "text": "happened to parlor by the way"
+    },
+    {
+      "startSeconds": 458.24,
+      "text": "they grew up beyond 2 billion"
+    },
+    {
+      "startSeconds": 460.479,
+      "text": "notification and then blew up their"
+    },
+    {
+      "startSeconds": 462.16,
+      "text": "table"
+    },
+    {
+      "startSeconds": 463.199,
+      "text": "yeah so there are four bytes in the id"
+    },
+    {
+      "startSeconds": 465.919,
+      "text": "okay"
+    },
+    {
+      "startSeconds": 467.039,
+      "text": "let's do explain select name from"
+    },
+    {
+      "startSeconds": 470.24,
+      "text": "grades you can see"
+    },
+    {
+      "startSeconds": 473.44,
+      "text": "that the i the average row size is 19"
+    },
+    {
+      "startSeconds": 477.28,
+      "text": "because the name is"
+    },
+    {
+      "startSeconds": 478.24,
+      "text": "is taxed right and depends on the name"
+    },
+    {
+      "startSeconds": 480.4,
+      "text": "of the students"
+    },
+    {
+      "startSeconds": 481.599,
+      "text": "can go 19 you just they took the average"
+    },
+    {
+      "startSeconds": 483.919,
+      "text": "and say hey we are expecting that's"
+    },
+    {
+      "startSeconds": 485.28,
+      "text": "going to be 19 but"
+    },
+    {
+      "startSeconds": 486.639,
+      "text": "so be careful with this number"
+    },
+    {
+      "startSeconds": 488.96,
+      "text": "especially if you're"
+    },
+    {
+      "startSeconds": 490,
+      "text": "returning this across the wire to your"
+    },
+    {
+      "startSeconds": 492.8,
+      "text": "backend application"
+    },
+    {
+      "startSeconds": 494.08,
+      "text": "right the largest this number the larger"
+    },
+    {
+      "startSeconds": 496.4,
+      "text": "the network you're gonna take"
+    },
+    {
+      "startSeconds": 497.759,
+      "text": "the the higher the tcp packets right"
+    },
+    {
+      "startSeconds": 501.919,
+      "text": "i mean don't put like a blob and do"
+    },
+    {
+      "startSeconds": 504.08,
+      "text": "select star when you don't use this"
+    },
+    {
+      "startSeconds": 505.84,
+      "text": "thing that's why"
+    },
+    {
+      "startSeconds": 506.639,
+      "text": "it's insulting to do a select store to"
+    },
+    {
+      "startSeconds": 508.639,
+      "text": "the database only"
+    },
+    {
+      "startSeconds": 510.08,
+      "text": "to pick one row or one column from those"
+    },
+    {
+      "startSeconds": 512.8,
+      "text": "right"
+    },
+    {
+      "startSeconds": 513.2,
+      "text": "only select what you need and you can"
+    },
+    {
+      "startSeconds": 514.8,
+      "text": "see if i do for example the g"
+    },
+    {
+      "startSeconds": 517.039,
+      "text": "it's eight that's the that's the number"
+    },
+    {
+      "startSeconds": 519.279,
+      "text": "of bytes in the double"
+    },
+    {
+      "startSeconds": 520.56,
+      "text": "value all right let's do and how was i"
+    },
+    {
+      "startSeconds": 523.2,
+      "text": "was indexing working"
+    },
+    {
+      "startSeconds": 524.399,
+      "text": "in the in postgres select star from"
+    },
+    {
+      "startSeconds": 527.6,
+      "text": "grades where id equal 10."
+    },
+    {
+      "startSeconds": 530.8,
+      "text": "so there's an obviously there is a"
+    },
+    {
+      "startSeconds": 532.88,
+      "text": "unique index on the id"
+    },
+    {
+      "startSeconds": 534.72,
+      "text": "here so we're expecting this to be fast"
+    },
+    {
+      "startSeconds": 537.519,
+      "text": "obviously we scanned the index and we"
+    },
+    {
+      "startSeconds": 539.279,
+      "text": "jumped to switch we jumped to the heap"
+    },
+    {
+      "startSeconds": 542.399,
+      "text": "to fetch some row"
+    },
+    {
+      "startSeconds": 543.6,
+      "text": "value and took us 0.43 seconds"
+    },
+    {
+      "startSeconds": 546.72,
+      "text": "and the total time to talk uh talk the"
+    },
+    {
+      "startSeconds": 549.44,
+      "text": "whole thing is"
+    },
+    {
+      "startSeconds": 550,
+      "text": "eight milliseconds again this is not"
+    },
+    {
+      "startSeconds": 551.519,
+      "text": "actual terms there is another command"
+    },
+    {
+      "startSeconds": 552.959,
+      "text": "that we're gonna explain in another"
+    },
+    {
+      "startSeconds": 554.56,
+      "text": "lesson or video where we're gonna show"
+    },
+    {
+      "startSeconds": 557.68,
+      "text": "analyze that's the actual time token"
+    },
+    {
+      "startSeconds": 560.32,
+      "text": "this is"
+    },
+    {
+      "startSeconds": 560.72,
+      "text": "this is just an estimation so we did an"
+    },
+    {
+      "startSeconds": 563.6,
+      "text": "index scan"
+    },
+    {
+      "startSeconds": 564.88,
+      "text": "and we used the index condition like"
+    },
+    {
+      "startSeconds": 567.44,
+      "text": "this one in this case"
+    },
+    {
+      "startSeconds": 569.279,
+      "text": "and you can see if we played with this a"
+    },
+    {
+      "startSeconds": 571.279,
+      "text": "little bit and say okay"
+    },
+    {
+      "startSeconds": 572.72,
+      "text": "this is a silly query but bear with me"
+    },
+    {
+      "startSeconds": 575.12,
+      "text": "here so now when i do explain select id"
+    },
+    {
+      "startSeconds": 577.44,
+      "text": "from grades where id equal 10"
+    },
+    {
+      "startSeconds": 579.279,
+      "text": "silly query of course because i you just"
+    },
+    {
+      "startSeconds": 581.36,
+      "text": "said id equal 10"
+    },
+    {
+      "startSeconds": 582.8,
+      "text": "but you can see that now we're getting"
+    },
+    {
+      "startSeconds": 584.48,
+      "text": "an index only scan which is a faster one"
+    },
+    {
+      "startSeconds": 586.399,
+      "text": "right"
+    },
+    {
+      "startSeconds": 587.04,
+      "text": "that the work we didn't even need to"
+    },
+    {
+      "startSeconds": 589.519,
+      "text": "jump to the heap to do the work right so"
+    },
+    {
+      "startSeconds": 591.36,
+      "text": "that's just another"
+    },
+    {
+      "startSeconds": 592.32,
+      "text": "type of query i i i did many videos"
+    },
+    {
+      "startSeconds": 595.04,
+      "text": "talking about that as well all right"
+    },
+    {
+      "startSeconds": 596.399,
+      "text": "guys that was a quick video explaining"
+    },
+    {
+      "startSeconds": 598.48,
+      "text": "explain and this is the very very basics"
+    },
+    {
+      "startSeconds": 601.92,
+      "text": "of the basics of the stuff right maybe"
+    },
+    {
+      "startSeconds": 604.16,
+      "text": "i'm going to make a few or"
+    },
+    {
+      "startSeconds": 605.76,
+      "text": "more lessons and more videos to explain"
+    },
+    {
+      "startSeconds": 608.64,
+      "text": "the analyze explain the buffers claim"
+    },
+    {
+      "startSeconds": 610.48,
+      "text": "the shared heads and other stuff as well"
+    },
+    {
+      "startSeconds": 612.24,
+      "text": "let's let's keep this video short and"
+    },
+    {
+      "startSeconds": 613.839,
+      "text": "sweet"
+    },
+    {
+      "startSeconds": 614.48,
+      "text": "gonna see in the next one you guys stay"
+    },
+    {
+      "startSeconds": 615.68,
+      "text": "awesome goodbye"
+    }
+  ]
+}

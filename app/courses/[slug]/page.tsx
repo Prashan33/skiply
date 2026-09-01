@@ -22,7 +22,7 @@ import {
   COURSE_BY_SLUG_QUERY,
   COURSE_SLUGS_QUERY,
 } from "@/sanity/lib/queries";
-import { getReadClient } from "@/sanity/lib/fetch";
+import { getProgressForUser, getReadClient } from "@/sanity/lib/fetch";
 import { getPostHogClient } from "@/lib/posthog-server";
 import {
   capitalize,
@@ -91,10 +91,38 @@ export default async function CoursePage({
   const totalDurationLabel = formatDurationFromSeconds(totalSeconds);
   const moduleCount = rawModules.length;
 
-  const firstLessonSlug =
-    rawModules.flatMap((m) => m.lessons ?? []).find((l) => l.slug)?.slug ?? null;
-  const continueHref = firstLessonSlug
-    ? `/lessons/${firstLessonSlug}`
+  // Real per-learner progress (AGENTS.md §7). Completion is watch-gated by
+  // `POST /api/progress` — see `components/lesson/LessonVideo.tsx`.
+  const progress = userId ? await getProgressForUser(userId) : null;
+  const progressEntries = progress?.entries ?? [];
+  const completedIds = new Set(
+    progressEntries.filter((e) => e?.completed && e.lessonId).map((e) => e.lessonId as string),
+  );
+
+  const courseBookmarked = (progress?.bookmarks ?? []).some(
+    (b) => b?.kind === "course" && b.refId === course._id,
+  );
+
+  const flatLessons = rawModules.flatMap((m) => m.lessons ?? []);
+  const completedCount = flatLessons.filter((l) => completedIds.has(l._id)).length;
+  const percentComplete =
+    flatLessons.length > 0 ? Math.round((completedCount / flatLessons.length) * 100) : 0;
+
+  // Resume at the first lesson that is not yet complete; deep-link into it if the
+  // learner has an in-progress position there.
+  const resumeLesson =
+    flatLessons.find((l) => l.slug && !completedIds.has(l._id)) ??
+    flatLessons.find((l) => l.slug) ??
+    null;
+  const resumeEntry = resumeLesson
+    ? progressEntries.find((e) => e?.lessonId === resumeLesson._id)
+    : null;
+  const resumeAt =
+    resumeEntry && !resumeEntry.completed && (resumeEntry.lastPosition ?? 0) > 0
+      ? Math.round(resumeEntry.lastPosition as number)
+      : 0;
+  const continueHref = resumeLesson?.slug
+    ? `/lessons/${resumeLesson.slug}${resumeAt > 0 ? `?t=${resumeAt}` : ""}`
     : `/courses/${slug}`;
 
   const contentModules: CourseContentModule[] = rawModules.map((m, mi) => ({
@@ -109,6 +137,7 @@ export default async function CoursePage({
       slug: l.slug,
       clock: formatClock(l.duration),
       freePreview: Boolean(l.freePreview),
+      completed: completedIds.has(l._id),
     })),
   }));
 
@@ -196,8 +225,10 @@ export default async function CoursePage({
 
             <CourseActions
               continueHref={continueHref}
+              courseId={course._id}
               courseSlug={slug}
               courseTitle={course.title ?? ""}
+              initialBookmarked={courseBookmarked}
             />
           </div>
         </div>
@@ -214,7 +245,7 @@ export default async function CoursePage({
         />
       </Container>
 
-      <CourseProgressBar continueHref={continueHref} />
+      <CourseProgressBar continueHref={continueHref} percent={percentComplete} />
     </div>
   );
 }

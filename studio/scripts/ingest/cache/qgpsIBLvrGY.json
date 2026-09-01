@@ -1,0 +1,1454 @@
+{
+  "id": "qgpsIBLvrGY",
+  "url": "https://www.youtube.com/watch?v=qgpsIBLvrGY",
+  "fetchedAt": "2026-09-01T04:10:18.452Z",
+  "captionKind": "asr",
+  "chapters": [
+    {
+      "startSeconds": 0,
+      "label": "Intro"
+    },
+    {
+      "startSeconds": 26,
+      "label": "F Tier: Plaintext"
+    },
+    {
+      "startSeconds": 55,
+      "label": "D Tier: Encryption"
+    },
+    {
+      "startSeconds": 110,
+      "label": "C Tier: Hashing"
+    },
+    {
+      "startSeconds": 322,
+      "label": "B Tier: Hashing + Salting"
+    },
+    {
+      "startSeconds": 415,
+      "label": "A Tier: Slow Hashing"
+    },
+    {
+      "startSeconds": 525,
+      "label": "S Tier: Don't Store Passwords"
+    },
+    {
+      "startSeconds": 558,
+      "label": "Recap"
+    }
+  ],
+  "cues": [
+    {
+      "startSeconds": 0.16,
+      "text": "if you're building a product that"
+    },
+    {
+      "startSeconds": 1.28,
+      "text": "requires logging in you probably have to"
+    },
+    {
+      "startSeconds": 3.52,
+      "text": "deal with storing passwords"
+    },
+    {
+      "startSeconds": 5.12,
+      "text": "but storing passwords opens you up to"
+    },
+    {
+      "startSeconds": 6.799,
+      "text": "security risks like someone breaking"
+    },
+    {
+      "startSeconds": 8.8,
+      "text": "into your database"
+    },
+    {
+      "startSeconds": 9.84,
+      "text": "stealing all your passwords and dealing"
+    },
+    {
+      "startSeconds": 11.44,
+      "text": "immense reputational damage to your"
+    },
+    {
+      "startSeconds": 13.12,
+      "text": "product"
+    },
+    {
+      "startSeconds": 13.759,
+      "text": "so how do you store passwords in a"
+    },
+    {
+      "startSeconds": 15.599,
+      "text": "secure fashion"
+    },
+    {
+      "startSeconds": 16.8,
+      "text": "let's start from the worst way and"
+    },
+    {
+      "startSeconds": 18.48,
+      "text": "steadily work our way up to something a"
+    },
+    {
+      "startSeconds": 20,
+      "text": "little more secure"
+    },
+    {
+      "startSeconds": 21.279,
+      "text": "i'm going to assume you have a little"
+    },
+    {
+      "startSeconds": 22.64,
+      "text": "bit of software engineering knowledge"
+    },
+    {
+      "startSeconds": 24.48,
+      "text": "let's go the ftr way to store your"
+    },
+    {
+      "startSeconds": 26.8,
+      "text": "passwords is like normal data"
+    },
+    {
+      "startSeconds": 28.48,
+      "text": "in a normal column perhaps with the rest"
+    },
+    {
+      "startSeconds": 30.32,
+      "text": "of your user data"
+    },
+    {
+      "startSeconds": 31.599,
+      "text": "sometimes this is called storing"
+    },
+    {
+      "startSeconds": 33.04,
+      "text": "passwords in plain text"
+    },
+    {
+      "startSeconds": 34.88,
+      "text": "this is pretty bad because if a hacker"
+    },
+    {
+      "startSeconds": 36.64,
+      "text": "gains access to your database"
+    },
+    {
+      "startSeconds": 38.16,
+      "text": "they can steal all the passwords"
+    },
+    {
+      "startSeconds": 39.76,
+      "text": "effortlessly security is all about"
+    },
+    {
+      "startSeconds": 42.079,
+      "text": "multiple lines of defense and storing"
+    },
+    {
+      "startSeconds": 43.76,
+      "text": "passwords in plain text"
+    },
+    {
+      "startSeconds": 45.28,
+      "text": "is not a defense if your database is"
+    },
+    {
+      "startSeconds": 47.76,
+      "text": "breached you're done"
+    },
+    {
+      "startSeconds": 48.96,
+      "text": "and database breaches happen quite often"
+    },
+    {
+      "startSeconds": 51.36,
+      "text": "that's why this is f-tier"
+    },
+    {
+      "startSeconds": 53.12,
+      "text": "but how can we do better if you watched"
+    },
+    {
+      "startSeconds": 55.36,
+      "text": "my encryption video"
+    },
+    {
+      "startSeconds": 56.559,
+      "text": "you might think that we should encrypt"
+    },
+    {
+      "startSeconds": 57.84,
+      "text": "these passwords that's definitely an"
+    },
+    {
+      "startSeconds": 59.68,
+      "text": "improvement"
+    },
+    {
+      "startSeconds": 60.32,
+      "text": "because if they break into your database"
+    },
+    {
+      "startSeconds": 61.84,
+      "text": "they get gibberish instead of useful"
+    },
+    {
+      "startSeconds": 63.359,
+      "text": "information"
+    },
+    {
+      "startSeconds": 64.4,
+      "text": "however if they do get access to the key"
+    },
+    {
+      "startSeconds": 66.64,
+      "text": "then they can decrypt all the passwords"
+    },
+    {
+      "startSeconds": 68.4,
+      "text": "and you're unfortunately right back to"
+    },
+    {
+      "startSeconds": 70,
+      "text": "ftr"
+    },
+    {
+      "startSeconds": 70.96,
+      "text": "it's definitely nicer that the passwords"
+    },
+    {
+      "startSeconds": 72.56,
+      "text": "aren't just sitting out there in the"
+    },
+    {
+      "startSeconds": 73.68,
+      "text": "open"
+    },
+    {
+      "startSeconds": 74.24,
+      "text": "but if a hacker has access to your"
+    },
+    {
+      "startSeconds": 75.68,
+      "text": "database already it may not be much more"
+    },
+    {
+      "startSeconds": 77.84,
+      "text": "effort for them to steal the decryption"
+    },
+    {
+      "startSeconds": 79.2,
+      "text": "key too from an adjacent server or"
+    },
+    {
+      "startSeconds": 80.799,
+      "text": "config file"
+    },
+    {
+      "startSeconds": 82.159,
+      "text": "also storing passwords in a way that"
+    },
+    {
+      "startSeconds": 83.68,
+      "text": "makes it possible to retrieve the"
+    },
+    {
+      "startSeconds": 85.119,
+      "text": "password"
+    },
+    {
+      "startSeconds": 86,
+      "text": "increases the risk of an inside job"
+    },
+    {
+      "startSeconds": 88.08,
+      "text": "where an employee with privileged access"
+    },
+    {
+      "startSeconds": 89.84,
+      "text": "to the key"
+    },
+    {
+      "startSeconds": 90.56,
+      "text": "decrypts people's passwords for"
+    },
+    {
+      "startSeconds": 91.92,
+      "text": "nefarious purposes the expert protection"
+    },
+    {
+      "startSeconds": 94.4,
+      "text": "certainly helps but this is the"
+    },
+    {
+      "startSeconds": 96,
+      "text": "tier how do we get to see the key"
+    },
+    {
+      "startSeconds": 99.04,
+      "text": "insight is that we only need to know"
+    },
+    {
+      "startSeconds": 100.56,
+      "text": "when the user types in the same password"
+    },
+    {
+      "startSeconds": 102.32,
+      "text": "as when they signed up"
+    },
+    {
+      "startSeconds": 103.52,
+      "text": "we don't actually need to know the"
+    },
+    {
+      "startSeconds": 105.119,
+      "text": "password itself you might think the two"
+    },
+    {
+      "startSeconds": 107.36,
+      "text": "are one of the same but they actually"
+    },
+    {
+      "startSeconds": 109.04,
+      "text": "aren't"
+    },
+    {
+      "startSeconds": 109.84,
+      "text": "it's possible to take a password and"
+    },
+    {
+      "startSeconds": 111.439,
+      "text": "generate a fingerprint from it"
+    },
+    {
+      "startSeconds": 113.2,
+      "text": "which will let us know if we encounter"
+    },
+    {
+      "startSeconds": 114.72,
+      "text": "the same password in the future"
+    },
+    {
+      "startSeconds": 116.24,
+      "text": "but still be unable to recover the"
+    },
+    {
+      "startSeconds": 118,
+      "text": "password directly from the fingerprint"
+    },
+    {
+      "startSeconds": 120.159,
+      "text": "this is a technique known as hashing how"
+    },
+    {
+      "startSeconds": 122.719,
+      "text": "do we use hashing"
+    },
+    {
+      "startSeconds": 124.32,
+      "text": "when the user signs up we take the"
+    },
+    {
+      "startSeconds": 126.24,
+      "text": "password they provide"
+    },
+    {
+      "startSeconds": 127.68,
+      "text": "generate a small fingerprint or hash and"
+    },
+    {
+      "startSeconds": 130.08,
+      "text": "store it instead of the actual password"
+    },
+    {
+      "startSeconds": 132.48,
+      "text": "in the future when the user tries to log"
+    },
+    {
+      "startSeconds": 134.48,
+      "text": "in we take the password they typed in"
+    },
+    {
+      "startSeconds": 136.72,
+      "text": "run the same hashing process and see if"
+    },
+    {
+      "startSeconds": 138.879,
+      "text": "the output hashes compare"
+    },
+    {
+      "startSeconds": 140.8,
+      "text": "if the hashes are the same it's"
+    },
+    {
+      "startSeconds": 142.56,
+      "text": "overwhelmingly likely that they typed in"
+    },
+    {
+      "startSeconds": 144.4,
+      "text": "the correct password"
+    },
+    {
+      "startSeconds": 145.76,
+      "text": "thanks to the power of hashing we're"
+    },
+    {
+      "startSeconds": 147.599,
+      "text": "able to verify someone's password"
+    },
+    {
+      "startSeconds": 149.52,
+      "text": "without storing the actual password"
+    },
+    {
+      "startSeconds": 152.56,
+      "text": "hashing might sound a little magical at"
+    },
+    {
+      "startSeconds": 154.319,
+      "text": "the moment how does hashing prevent"
+    },
+    {
+      "startSeconds": 156.08,
+      "text": "someone from recovering their original"
+    },
+    {
+      "startSeconds": 157.68,
+      "text": "password from the output hash"
+    },
+    {
+      "startSeconds": 159.28,
+      "text": "and how does it prevent two strings from"
+    },
+    {
+      "startSeconds": 160.959,
+      "text": "hashing to the same thing and allowing"
+    },
+    {
+      "startSeconds": 162.48,
+      "text": "someone to log in with the wrong"
+    },
+    {
+      "startSeconds": 163.92,
+      "text": "password"
+    },
+    {
+      "startSeconds": 165.04,
+      "text": "for the first one how to prevent someone"
+    },
+    {
+      "startSeconds": 167.04,
+      "text": "from recovering the original password"
+    },
+    {
+      "startSeconds": 168.959,
+      "text": "the process of hashing involves a lot of"
+    },
+    {
+      "startSeconds": 170.72,
+      "text": "aggressive mixing of the data in the"
+    },
+    {
+      "startSeconds": 172.4,
+      "text": "original input to produce the output"
+    },
+    {
+      "startSeconds": 174.48,
+      "text": "it's like taking three paints of"
+    },
+    {
+      "startSeconds": 175.84,
+      "text": "different colors and mixing them"
+    },
+    {
+      "startSeconds": 176.959,
+      "text": "together which probably results in some"
+    },
+    {
+      "startSeconds": 178.56,
+      "text": "weird shade of brown"
+    },
+    {
+      "startSeconds": 180.08,
+      "text": "with just the brown you'll probably be"
+    },
+    {
+      "startSeconds": 182,
+      "text": "unable to guess the original three"
+    },
+    {
+      "startSeconds": 183.44,
+      "text": "colors that made the brown"
+    },
+    {
+      "startSeconds": 185.12,
+      "text": "in the same way you can't figure out the"
+    },
+    {
+      "startSeconds": 186.72,
+      "text": "original password from the hash because"
+    },
+    {
+      "startSeconds": 188.319,
+      "text": "the bits in the data have all been"
+    },
+    {
+      "startSeconds": 189.599,
+      "text": "thoroughly mixed and scrambled"
+    },
+    {
+      "startSeconds": 191.44,
+      "text": "this property is known as being a"
+    },
+    {
+      "startSeconds": 193.04,
+      "text": "one-way function like a one-way street"
+    },
+    {
+      "startSeconds": 195.599,
+      "text": "once you hash you can't unhash for the"
+    },
+    {
+      "startSeconds": 198.48,
+      "text": "second"
+    },
+    {
+      "startSeconds": 199.04,
+      "text": "which is how hashing makes it hard for"
+    },
+    {
+      "startSeconds": 200.72,
+      "text": "two strings to hash to the same value"
+    },
+    {
+      "startSeconds": 202.72,
+      "text": "known as a hash collision the answer is"
+    },
+    {
+      "startSeconds": 204.959,
+      "text": "similar to what i just said"
+    },
+    {
+      "startSeconds": 206.48,
+      "text": "the hash function mixes the data in such"
+    },
+    {
+      "startSeconds": 208.4,
+      "text": "a way that even small tweaks in the"
+    },
+    {
+      "startSeconds": 210,
+      "text": "input"
+    },
+    {
+      "startSeconds": 210.56,
+      "text": "result in totally different hashes as a"
+    },
+    {
+      "startSeconds": 212.959,
+      "text": "result"
+    },
+    {
+      "startSeconds": 213.68,
+      "text": "for good hash functions there is no"
+    },
+    {
+      "startSeconds": 215.599,
+      "text": "publicly known way to generate two"
+    },
+    {
+      "startSeconds": 217.12,
+      "text": "strings whose hashes collide without"
+    },
+    {
+      "startSeconds": 218.959,
+      "text": "just trying many many many strings"
+    },
+    {
+      "startSeconds": 221.12,
+      "text": "no luck with these ten this property is"
+    },
+    {
+      "startSeconds": 223.519,
+      "text": "called collision resistance"
+    },
+    {
+      "startSeconds": 225.44,
+      "text": "picking the right hash function is"
+    },
+    {
+      "startSeconds": 226.799,
+      "text": "important we used to think that older"
+    },
+    {
+      "startSeconds": 228.879,
+      "text": "hash functions that you may have heard"
+    },
+    {
+      "startSeconds": 230.239,
+      "text": "about"
+    },
+    {
+      "startSeconds": 230.799,
+      "text": "like md5 and sha-1 had collision"
+    },
+    {
+      "startSeconds": 233.76,
+      "text": "resistance"
+    },
+    {
+      "startSeconds": 234.56,
+      "text": "but cryptographic progress marches on"
+    },
+    {
+      "startSeconds": 236.72,
+      "text": "and they've been proved insecure"
+    },
+    {
+      "startSeconds": 238.48,
+      "text": "for example about a decade ago"
+    },
+    {
+      "startSeconds": 240.319,
+      "text": "researchers published a method for"
+    },
+    {
+      "startSeconds": 241.76,
+      "text": "generating a collision"
+    },
+    {
+      "startSeconds": 243.12,
+      "text": "two strings that have the same md5 hash"
+    },
+    {
+      "startSeconds": 245.36,
+      "text": "that you can run in about a second"
+    },
+    {
+      "startSeconds": 247.04,
+      "text": "on your laptop so we've moved on to"
+    },
+    {
+      "startSeconds": 249.599,
+      "text": "stronger hash functions like sha2 which"
+    },
+    {
+      "startSeconds": 251.68,
+      "text": "is the one i've been using in this video"
+    },
+    {
+      "startSeconds": 253.84,
+      "text": "with our new hashing technique under our"
+    },
+    {
+      "startSeconds": 255.36,
+      "text": "belt"
+    },
+    {
+      "startSeconds": 255.84,
+      "text": "let's hash all the passwords in our"
+    },
+    {
+      "startSeconds": 257.359,
+      "text": "database instead of encrypting them"
+    },
+    {
+      "startSeconds": 259.04,
+      "text": "to arrive at cd or password storage now"
+    },
+    {
+      "startSeconds": 262.16,
+      "text": "we don't have a key that effortlessly"
+    },
+    {
+      "startSeconds": 263.84,
+      "text": "unlocks the password table like before"
+    },
+    {
+      "startSeconds": 265.919,
+      "text": "which is definitely an improvement"
+    },
+    {
+      "startSeconds": 267.759,
+      "text": "however we need to talk about dictionary"
+    },
+    {
+      "startSeconds": 269.759,
+      "text": "attacks"
+    },
+    {
+      "startSeconds": 270.8,
+      "text": "as it turns out many people use"
+    },
+    {
+      "startSeconds": 272.4,
+      "text": "extremely weak passwords like password"
+    },
+    {
+      "startSeconds": 274.24,
+      "text": "or one two three four five six"
+    },
+    {
+      "startSeconds": 276.16,
+      "text": "if a hacker has access to your database"
+    },
+    {
+      "startSeconds": 278.16,
+      "text": "they can just run your hash function"
+    },
+    {
+      "startSeconds": 279.919,
+      "text": "on password or one two three four five"
+    },
+    {
+      "startSeconds": 281.68,
+      "text": "six to get the hash"
+    },
+    {
+      "startSeconds": 283.04,
+      "text": "and then find all the hashes that match"
+    },
+    {
+      "startSeconds": 284.479,
+      "text": "in your database voila they've broken"
+    },
+    {
+      "startSeconds": 286.639,
+      "text": "those people's passwords"
+    },
+    {
+      "startSeconds": 288.16,
+      "text": "this is called a dictionary attack"
+    },
+    {
+      "startSeconds": 289.52,
+      "text": "because you could run through the"
+    },
+    {
+      "startSeconds": 290.4,
+      "text": "dictionary hashing words as you go and"
+    },
+    {
+      "startSeconds": 292.16,
+      "text": "seeing if any of them match the hash"
+    },
+    {
+      "startSeconds": 294.479,
+      "text": "remember that it's not possible to"
+    },
+    {
+      "startSeconds": 295.919,
+      "text": "directly turn a hash back into a"
+    },
+    {
+      "startSeconds": 297.44,
+      "text": "password in general"
+    },
+    {
+      "startSeconds": 299.04,
+      "text": "however because the hacker knows the"
+    },
+    {
+      "startSeconds": 300.72,
+      "text": "hash came from a password"
+    },
+    {
+      "startSeconds": 302.4,
+      "text": "they can use their knowledge of human"
+    },
+    {
+      "startSeconds": 303.84,
+      "text": "nature to narrow down the possible"
+    },
+    {
+      "startSeconds": 305.36,
+      "text": "guesses"
+    },
+    {
+      "startSeconds": 306.08,
+      "text": "which makes guessing feasible"
+    },
+    {
+      "startSeconds": 308.16,
+      "text": "furthermore they can use lists of the"
+    },
+    {
+      "startSeconds": 310.08,
+      "text": "most common passwords to pre-generate a"
+    },
+    {
+      "startSeconds": 312.16,
+      "text": "huge database of hashes"
+    },
+    {
+      "startSeconds": 314,
+      "text": "so all they need to do is to compare"
+    },
+    {
+      "startSeconds": 315.68,
+      "text": "their huge database to your database to"
+    },
+    {
+      "startSeconds": 317.6,
+      "text": "find matches"
+    },
+    {
+      "startSeconds": 318.72,
+      "text": "these databases are known as rainbow"
+    },
+    {
+      "startSeconds": 320.479,
+      "text": "tables how can we defend against this"
+    },
+    {
+      "startSeconds": 323.199,
+      "text": "let's go to b-tier for a technique that"
+    },
+    {
+      "startSeconds": 325.039,
+      "text": "protects against rainbow tables but not"
+    },
+    {
+      "startSeconds": 326.8,
+      "text": "against dictionary attacks"
+    },
+    {
+      "startSeconds": 328.479,
+      "text": "it's a technique called salting when the"
+    },
+    {
+      "startSeconds": 331.12,
+      "text": "user signs up"
+    },
+    {
+      "startSeconds": 332.24,
+      "text": "rather than directly hashing each"
+    },
+    {
+      "startSeconds": 333.84,
+      "text": "password we can first generate a short"
+    },
+    {
+      "startSeconds": 335.68,
+      "text": "random string called the salt"
+    },
+    {
+      "startSeconds": 337.68,
+      "text": "then we prepend it to the string before"
+    },
+    {
+      "startSeconds": 340.16,
+      "text": "running the hash"
+    },
+    {
+      "startSeconds": 341.52,
+      "text": "we then store the salt next to the"
+    },
+    {
+      "startSeconds": 343.039,
+      "text": "hashed password when the user logs in we"
+    },
+    {
+      "startSeconds": 345.68,
+      "text": "can prepend the remembered salt to the"
+    },
+    {
+      "startSeconds": 347.44,
+      "text": "password they entered and hash to see if"
+    },
+    {
+      "startSeconds": 349.36,
+      "text": "it matches the stored password"
+    },
+    {
+      "startSeconds": 351.199,
+      "text": "it's important to use the same salt at"
+    },
+    {
+      "startSeconds": 353.039,
+      "text": "login that was generated during signup"
+    },
+    {
+      "startSeconds": 354.88,
+      "text": "which is why we want to store it in the"
+    },
+    {
+      "startSeconds": 356.4,
+      "text": "database"
+    },
+    {
+      "startSeconds": 357.28,
+      "text": "otherwise the user wouldn't be able to"
+    },
+    {
+      "startSeconds": 358.96,
+      "text": "log in even with the right password"
+    },
+    {
+      "startSeconds": 360.72,
+      "text": "because the hashes wouldn't match"
+    },
+    {
+      "startSeconds": 362.479,
+      "text": "this makes rainbow tables useless"
+    },
+    {
+      "startSeconds": 364.24,
+      "text": "because their databases only contain"
+    },
+    {
+      "startSeconds": 366.08,
+      "text": "non-salted hashes for example these"
+    },
+    {
+      "startSeconds": 369.12,
+      "text": "users have the password qwerty but the"
+    },
+    {
+      "startSeconds": 371.039,
+      "text": "table doesn't match anymore"
+    },
+    {
+      "startSeconds": 372.88,
+      "text": "this has the added benefit of decorating"
+    },
+    {
+      "startSeconds": 374.96,
+      "text": "users who have the same password"
+    },
+    {
+      "startSeconds": 377.12,
+      "text": "previously if two users use the same"
+    },
+    {
+      "startSeconds": 379.199,
+      "text": "password their hashes would be the same"
+    },
+    {
+      "startSeconds": 381.28,
+      "text": "which is not ideal because you can see"
+    },
+    {
+      "startSeconds": 383.12,
+      "text": "that they have the same password even if"
+    },
+    {
+      "startSeconds": 384.88,
+      "text": "you don't know what the password"
+    },
+    {
+      "startSeconds": 386,
+      "text": "actually is"
+    },
+    {
+      "startSeconds": 387.36,
+      "text": "now even though their passwords are the"
+    },
+    {
+      "startSeconds": 389.039,
+      "text": "same their salts are different so the"
+    },
+    {
+      "startSeconds": 390.8,
+      "text": "hashes are different"
+    },
+    {
+      "startSeconds": 392.24,
+      "text": "but why is this still beat here remember"
+    },
+    {
+      "startSeconds": 394.639,
+      "text": "the other issue we talked about which is"
+    },
+    {
+      "startSeconds": 396.24,
+      "text": "dictionary attacks"
+    },
+    {
+      "startSeconds": 397.84,
+      "text": "an attacker with a list of common"
+    },
+    {
+      "startSeconds": 399.36,
+      "text": "passwords can still try all of them"
+    },
+    {
+      "startSeconds": 400.88,
+      "text": "against the hash using the salt"
+    },
+    {
+      "startSeconds": 402.88,
+      "text": "they don't get the benefit of"
+    },
+    {
+      "startSeconds": 404,
+      "text": "precomputation but they can still start"
+    },
+    {
+      "startSeconds": 405.84,
+      "text": "from scratch"
+    },
+    {
+      "startSeconds": 406.88,
+      "text": "furthermore specialized hardware like"
+    },
+    {
+      "startSeconds": 408.639,
+      "text": "gpus have made it possible for people to"
+    },
+    {
+      "startSeconds": 410.56,
+      "text": "compute"
+    },
+    {
+      "startSeconds": 411.039,
+      "text": "billions of hashes per second which"
+    },
+    {
+      "startSeconds": 413.12,
+      "text": "translates into billions of guests per"
+    },
+    {
+      "startSeconds": 414.88,
+      "text": "second"
+    },
+    {
+      "startSeconds": 415.84,
+      "text": "how on earth do we stop this one let's"
+    },
+    {
+      "startSeconds": 417.759,
+      "text": "see what a tier has to say"
+    },
+    {
+      "startSeconds": 419.919,
+      "text": "an a tier is using a specialized"
+    },
+    {
+      "startSeconds": 422.16,
+      "text": "password hashing function that is"
+    },
+    {
+      "startSeconds": 423.52,
+      "text": "deliberately slow"
+    },
+    {
+      "startSeconds": 425.28,
+      "text": "the previous hash functions we discussed"
+    },
+    {
+      "startSeconds": 427.039,
+      "text": "are designed to be fast because they're"
+    },
+    {
+      "startSeconds": 428.56,
+      "text": "used for other applications besides"
+    },
+    {
+      "startSeconds": 430.24,
+      "text": "passwords"
+    },
+    {
+      "startSeconds": 431.44,
+      "text": "password hashing functions like bcrypt"
+    },
+    {
+      "startSeconds": 433.68,
+      "text": "script and argon 2 come with salting for"
+    },
+    {
+      "startSeconds": 436,
+      "text": "free"
+    },
+    {
+      "startSeconds": 436.56,
+      "text": "and more importantly are designed to be"
+    },
+    {
+      "startSeconds": 438.479,
+      "text": "really really really slow"
+    },
+    {
+      "startSeconds": 440.08,
+      "text": "to consume lots of power and to take"
+    },
+    {
+      "startSeconds": 442.16,
+      "text": "lots of memory"
+    },
+    {
+      "startSeconds": 443.44,
+      "text": "it sounds weird but this is actually on"
+    },
+    {
+      "startSeconds": 445.199,
+      "text": "purpose to defend against the"
+    },
+    {
+      "startSeconds": 446.639,
+      "text": "overwhelming power of hardware"
+    },
+    {
+      "startSeconds": 448.88,
+      "text": "the billions of hashes per second we saw"
+    },
+    {
+      "startSeconds": 450.72,
+      "text": "a moment ago can be slowed down to mere"
+    },
+    {
+      "startSeconds": 452.88,
+      "text": "thousands per second"
+    },
+    {
+      "startSeconds": 454,
+      "text": "if not even slower because you can"
+    },
+    {
+      "startSeconds": 455.919,
+      "text": "actually choose the level of slowness"
+    },
+    {
+      "startSeconds": 457.68,
+      "text": "you want"
+    },
+    {
+      "startSeconds": 458.4,
+      "text": "this is known as the work factor with"
+    },
+    {
+      "startSeconds": 460.8,
+      "text": "only thousands of guesses per second"
+    },
+    {
+      "startSeconds": 462.72,
+      "text": "that's still enough to easily go through"
+    },
+    {
+      "startSeconds": 464.319,
+      "text": "the most common passwords"
+    },
+    {
+      "startSeconds": 465.84,
+      "text": "but it's not enough to break tougher or"
+    },
+    {
+      "startSeconds": 467.599,
+      "text": "more obscure passwords"
+    },
+    {
+      "startSeconds": 469.28,
+      "text": "with the high enough work factor hackers"
+    },
+    {
+      "startSeconds": 471.199,
+      "text": "might be able to break some of the"
+    },
+    {
+      "startSeconds": 472.56,
+      "text": "passwords in your system but not all of"
+    },
+    {
+      "startSeconds": 474.479,
+      "text": "them"
+    },
+    {
+      "startSeconds": 475.28,
+      "text": "after all the goal of security is not to"
+    },
+    {
+      "startSeconds": 477.28,
+      "text": "be immune to attacks which is impossible"
+    },
+    {
+      "startSeconds": 479.599,
+      "text": "but to hinder attackers enough that they"
+    },
+    {
+      "startSeconds": 481.44,
+      "text": "turn their attention to other places"
+    },
+    {
+      "startSeconds": 483.84,
+      "text": "as a concrete example let's look at"
+    },
+    {
+      "startSeconds": 485.44,
+      "text": "bcrypt the output of b"
+    },
+    {
+      "startSeconds": 487.12,
+      "text": "crypt looks like this it has a prefix"
+    },
+    {
+      "startSeconds": 489.28,
+      "text": "that identifies the output as a"
+    },
+    {
+      "startSeconds": 490.72,
+      "text": "decrypted thing"
+    },
+    {
+      "startSeconds": 492,
+      "text": "a work factor a 22 character salt and a"
+    },
+    {
+      "startSeconds": 494.8,
+      "text": "31 character hash"
+    },
+    {
+      "startSeconds": 496.8,
+      "text": "the most interesting thing about this is"
+    },
+    {
+      "startSeconds": 498.56,
+      "text": "that the work factor is exponential"
+    },
+    {
+      "startSeconds": 500.72,
+      "text": "when you increase the work factor by 1"
+    },
+    {
+      "startSeconds": 502.8,
+      "text": "the function becomes twice as slow"
+    },
+    {
+      "startSeconds": 505.28,
+      "text": "here's a graph of decrypt hash time by"
+    },
+    {
+      "startSeconds": 507.199,
+      "text": "work factor on my laptop"
+    },
+    {
+      "startSeconds": 508.879,
+      "text": "the exponential increase is quite clear"
+    },
+    {
+      "startSeconds": 511.36,
+      "text": "most folks recommend setting it to"
+    },
+    {
+      "startSeconds": 512.719,
+      "text": "around 15 for real use cases which takes"
+    },
+    {
+      "startSeconds": 514.88,
+      "text": "1.3 seconds on my laptop"
+    },
+    {
+      "startSeconds": 516.88,
+      "text": "fun fact when it was first published the"
+    },
+    {
+      "startSeconds": 518.8,
+      "text": "recommended work factor was just"
+    },
+    {
+      "startSeconds": 520.399,
+      "text": "six which would take just two"
+    },
+    {
+      "startSeconds": 522.08,
+      "text": "milliseconds on my modern laptop"
+    },
+    {
+      "startSeconds": 524.72,
+      "text": "so is that it are we done is there an"
+    },
+    {
+      "startSeconds": 527.68,
+      "text": "even higher tier"
+    },
+    {
+      "startSeconds": 528.959,
+      "text": "s tier it's kind of a trick answer but"
+    },
+    {
+      "startSeconds": 531.6,
+      "text": "there is"
+    },
+    {
+      "startSeconds": 532.64,
+      "text": "s tier is not storing passwords at all"
+    },
+    {
+      "startSeconds": 535.519,
+      "text": "as we've learned in this video storing"
+    },
+    {
+      "startSeconds": 536.959,
+      "text": "passwords is quite tricky"
+    },
+    {
+      "startSeconds": 538.32,
+      "text": "so consider ways to avoid doing it at"
+    },
+    {
+      "startSeconds": 540.48,
+      "text": "all for example"
+    },
+    {
+      "startSeconds": 541.68,
+      "text": "you can use other authentication"
+    },
+    {
+      "startSeconds": 543.12,
+      "text": "services like sign in with google or"
+    },
+    {
+      "startSeconds": 545.04,
+      "text": "sign in with facebook and others"
+    },
+    {
+      "startSeconds": 546.88,
+      "text": "so that users can log into your product"
+    },
+    {
+      "startSeconds": 548.64,
+      "text": "using an established authentication"
+    },
+    {
+      "startSeconds": 550.32,
+      "text": "platform"
+    },
+    {
+      "startSeconds": 551.279,
+      "text": "not only is it more convenient for users"
+    },
+    {
+      "startSeconds": 553.36,
+      "text": "you get to sleep better at night knowing"
+    },
+    {
+      "startSeconds": 554.88,
+      "text": "that your system"
+    },
+    {
+      "startSeconds": 555.68,
+      "text": "doesn't have any passwords at all in it"
+    },
+    {
+      "startSeconds": 557.68,
+      "text": "that's all i have for today"
+    },
+    {
+      "startSeconds": 559.12,
+      "text": "let's recap first we looked at storing"
+    },
+    {
+      "startSeconds": 561.44,
+      "text": "passwords in plain text which means"
+    },
+    {
+      "startSeconds": 562.959,
+      "text": "anyone can easily access them"
+    },
+    {
+      "startSeconds": 565.12,
+      "text": "so we considered encrypting them which"
+    },
+    {
+      "startSeconds": 567.12,
+      "text": "is not ideal because their original form"
+    },
+    {
+      "startSeconds": 568.88,
+      "text": "can still be recovered"
+    },
+    {
+      "startSeconds": 570.32,
+      "text": "we introduced hashing to make that"
+    },
+    {
+      "startSeconds": 571.839,
+      "text": "impossible but we saw that people can"
+    },
+    {
+      "startSeconds": 573.76,
+      "text": "pre-compute huge rainbow tables to"
+    },
+    {
+      "startSeconds": 575.6,
+      "text": "quickly break passwords"
+    },
+    {
+      "startSeconds": 577.279,
+      "text": "to counteract that we introduce salting"
+    },
+    {
+      "startSeconds": 579.44,
+      "text": "which individualizes each password with"
+    },
+    {
+      "startSeconds": 581.36,
+      "text": "a random string called the salt"
+    },
+    {
+      "startSeconds": 582.959,
+      "text": "so that precomputed databases don't work"
+    },
+    {
+      "startSeconds": 584.88,
+      "text": "anymore unfortunately hardware is so"
+    },
+    {
+      "startSeconds": 587.2,
+      "text": "fast that even without precomputed"
+    },
+    {
+      "startSeconds": 588.64,
+      "text": "databases attackers can still try"
+    },
+    {
+      "startSeconds": 590.399,
+      "text": "billions of guesses per second"
+    },
+    {
+      "startSeconds": 592.32,
+      "text": "so we need to switch to deliberately"
+    },
+    {
+      "startSeconds": 593.92,
+      "text": "slow password hashing functions that"
+    },
+    {
+      "startSeconds": 595.6,
+      "text": "greatly decrease the rate of guesses"
+    },
+    {
+      "startSeconds": 598,
+      "text": "finally we bypass the whole problem by"
+    },
+    {
+      "startSeconds": 600,
+      "text": "considering how to not store passwords"
+    },
+    {
+      "startSeconds": 601.76,
+      "text": "at all"
+    },
+    {
+      "startSeconds": 602.56,
+      "text": "i hope this was helpful if you enjoyed"
+    },
+    {
+      "startSeconds": 604.56,
+      "text": "this video please consider sharing it"
+    },
+    {
+      "startSeconds": 606.32,
+      "text": "with somebody else who might also enjoy"
+    },
+    {
+      "startSeconds": 608,
+      "text": "it"
+    },
+    {
+      "startSeconds": 608.56,
+      "text": "thanks again"
+    }
+  ]
+}

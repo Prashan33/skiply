@@ -1,0 +1,1397 @@
+{
+  "id": "E3j-4XH0q4g",
+  "url": "https://www.youtube.com/watch?v=E3j-4XH0q4g",
+  "fetchedAt": "2026-09-01T04:06:52.353Z",
+  "captionKind": "asr",
+  "chapters": [],
+  "cues": [
+    {
+      "startSeconds": 0.08,
+      "text": "Hey everybody. In this video, I'm going"
+    },
+    {
+      "startSeconds": 2,
+      "text": "to show you the three ways you can"
+    },
+    {
+      "startSeconds": 4.24,
+      "text": "latency optimize that slow AI agent or"
+    },
+    {
+      "startSeconds": 7.759,
+      "text": "AI application. Uh this is a super"
+    },
+    {
+      "startSeconds": 11.36,
+      "text": "common problem coming up with"
+    },
+    {
+      "startSeconds": 13.04,
+      "text": "organizations that are building on"
+    },
+    {
+      "startSeconds": 14.799,
+      "text": "generative AI. And here is why. Okay. Uh"
+    },
+    {
+      "startSeconds": 18.56,
+      "text": "imagine right in that application uh"
+    },
+    {
+      "startSeconds": 21.119,
+      "text": "it's a basic application at first. It's"
+    },
+    {
+      "startSeconds": 22.64,
+      "text": "a chatbot, right? So, in a basic"
+    },
+    {
+      "startSeconds": 24.96,
+      "text": "chatbot, you're going to have a request"
+    },
+    {
+      "startSeconds": 26.64,
+      "text": "that goes to an LLM and that LLM is"
+    },
+    {
+      "startSeconds": 29.039,
+      "text": "going to reply. And usually that's a"
+    },
+    {
+      "startSeconds": 30.32,
+      "text": "great user experience because you get an"
+    },
+    {
+      "startSeconds": 32.32,
+      "text": "answer within a few seconds of asking"
+    },
+    {
+      "startSeconds": 34.239,
+      "text": "that question because even some of the"
+    },
+    {
+      "startSeconds": 36.399,
+      "text": "biggest LLMs for simple queries can"
+    },
+    {
+      "startSeconds": 38.64,
+      "text": "respond pretty quickly, even with a"
+    },
+    {
+      "startSeconds": 40.48,
+      "text": "simple rag architecture, right? Um, and"
+    },
+    {
+      "startSeconds": 42.96,
+      "text": "so for these type of chatbot"
+    },
+    {
+      "startSeconds": 44.879,
+      "text": "applications, what we tend to think"
+    },
+    {
+      "startSeconds": 46.399,
+      "text": "about is a metric called TTFT or time to"
+    },
+    {
+      "startSeconds": 49.039,
+      "text": "first token, right? and AI applications"
+    },
+    {
+      "startSeconds": 52.079,
+      "text": "running this architecture are generally"
+    },
+    {
+      "startSeconds": 53.44,
+      "text": "very fast and have a fast user"
+    },
+    {
+      "startSeconds": 54.719,
+      "text": "experience. However, this is a very"
+    },
+    {
+      "startSeconds": 56.399,
+      "text": "limiting architecture and what we see"
+    },
+    {
+      "startSeconds": 58.399,
+      "text": "customers starting to adopt at scale are"
+    },
+    {
+      "startSeconds": 60.64,
+      "text": "what we would call agentic architectures"
+    },
+    {
+      "startSeconds": 63.359,
+      "text": "and"
+    },
+    {
+      "startSeconds": 65.04,
+      "text": "latency optimization becomes way more"
+    },
+    {
+      "startSeconds": 66.88,
+      "text": "important with agents. Okay? because"
+    },
+    {
+      "startSeconds": 69.36,
+      "text": "they're much more complex systems. And"
+    },
+    {
+      "startSeconds": 71.52,
+      "text": "generally speaking, the pattern that the"
+    },
+    {
+      "startSeconds": 73.36,
+      "text": "problem that we see is people that are"
+    },
+    {
+      "startSeconds": 75.28,
+      "text": "building agents start building these"
+    },
+    {
+      "startSeconds": 78.159,
+      "text": "agents using just the biggest models for"
+    },
+    {
+      "startSeconds": 81.36,
+      "text": "everything, right? So you might have an"
+    },
+    {
+      "startSeconds": 83.119,
+      "text": "agent. Here's like a a somewhat common"
+    },
+    {
+      "startSeconds": 85.52,
+      "text": "agent architecture where you have an"
+    },
+    {
+      "startSeconds": 88.88,
+      "text": "agent planner that takes a user request,"
+    },
+    {
+      "startSeconds": 91.04,
+      "text": "is going to send that request into um"
+    },
+    {
+      "startSeconds": 93.2,
+      "text": "some system that thinks about what what"
+    },
+    {
+      "startSeconds": 95.6,
+      "text": "tools that it's going to use and how"
+    },
+    {
+      "startSeconds": 96.88,
+      "text": "it's going to collect data. It's going"
+    },
+    {
+      "startSeconds": 98.079,
+      "text": "to collect a bunch of data and do a"
+    },
+    {
+      "startSeconds": 99.28,
+      "text": "bunch of stuff based on that request and"
+    },
+    {
+      "startSeconds": 101.439,
+      "text": "then it's going to think about a"
+    },
+    {
+      "startSeconds": 102.64,
+      "text": "response and give that back to the user."
+    },
+    {
+      "startSeconds": 104.479,
+      "text": "Right? So now we're talking about a"
+    },
+    {
+      "startSeconds": 106.159,
+      "text": "multi-step workflow here that adds a lot"
+    },
+    {
+      "startSeconds": 109.119,
+      "text": "of latency because each step in this"
+    },
+    {
+      "startSeconds": 110.799,
+      "text": "process is a potential LLM call. Right?"
+    },
+    {
+      "startSeconds": 113.6,
+      "text": "And so I see customers they get their"
+    },
+    {
+      "startSeconds": 116.72,
+      "text": "agents working with just the largest"
+    },
+    {
+      "startSeconds": 118.96,
+      "text": "models on Earth. So they get the agents"
+    },
+    {
+      "startSeconds": 120.64,
+      "text": "working with like all sonnet 4 or sonnet"
+    },
+    {
+      "startSeconds": 123.28,
+      "text": "37 like really big smart models but"
+    },
+    {
+      "startSeconds": 125.439,
+      "text": "they're so slow that they come back to"
+    },
+    {
+      "startSeconds": 127.759,
+      "text": "us and say hey great news we got our"
+    },
+    {
+      "startSeconds": 129.52,
+      "text": "agent working uh now we're going to need"
+    },
+    {
+      "startSeconds": 131.52,
+      "text": "a little bit of help um optimizing"
+    },
+    {
+      "startSeconds": 134.879,
+      "text": "latency for that agent. So uh let me"
+    },
+    {
+      "startSeconds": 137.44,
+      "text": "tell you more about how we can do that."
+    },
+    {
+      "startSeconds": 140.48,
+      "text": "There are three uh primary ways that we"
+    },
+    {
+      "startSeconds": 143.52,
+      "text": "see customers optimizing latency today."
+    },
+    {
+      "startSeconds": 146.08,
+      "text": "And we're going to start with what I"
+    },
+    {
+      "startSeconds": 147.92,
+      "text": "would say is kind of the the the"
+    },
+    {
+      "startSeconds": 149.44,
+      "text": "simplest uh and and most straightforward"
+    },
+    {
+      "startSeconds": 151.68,
+      "text": "way and that's by using native features"
+    },
+    {
+      "startSeconds": 155.36,
+      "text": "that optimize latency. This can get you"
+    },
+    {
+      "startSeconds": 157.68,
+      "text": "some really quick wins in terms of"
+    },
+    {
+      "startSeconds": 159.68,
+      "text": "latency. So to be specific here, uh a"
+    },
+    {
+      "startSeconds": 164.16,
+      "text": "great technique that's available on many"
+    },
+    {
+      "startSeconds": 165.92,
+      "text": "providers and is available for a lot of"
+    },
+    {
+      "startSeconds": 167.44,
+      "text": "the models on Bedrock today is prompt"
+    },
+    {
+      "startSeconds": 170.64,
+      "text": "caching. Prompt caching as you can see"
+    },
+    {
+      "startSeconds": 173.519,
+      "text": "right here uh can reduce cost and"
+    },
+    {
+      "startSeconds": 176.959,
+      "text": "latency by extremely high margins right"
+    },
+    {
+      "startSeconds": 180.56,
+      "text": "up to 85 or even 90%. So that's that's a"
+    },
+    {
+      "startSeconds": 185.36,
+      "text": "very easy thing that you can actually"
+    },
+    {
+      "startSeconds": 187.2,
+      "text": "just turn on and for a lot of"
+    },
+    {
+      "startSeconds": 189.28,
+      "text": "applications applications that have a"
+    },
+    {
+      "startSeconds": 190.879,
+      "text": "lot of the same sort of query patterns"
+    },
+    {
+      "startSeconds": 193.04,
+      "text": "this is an instant latency optimization."
+    },
+    {
+      "startSeconds": 195.12,
+      "text": "Okay, so this is something that if"
+    },
+    {
+      "startSeconds": 197.04,
+      "text": "you're thinking about latency or cost,"
+    },
+    {
+      "startSeconds": 199.519,
+      "text": "uh you should consider turning it on for"
+    },
+    {
+      "startSeconds": 201.44,
+      "text": "an app, testing it out, and seeing if it"
+    },
+    {
+      "startSeconds": 203.599,
+      "text": "performs well and if it leads to"
+    },
+    {
+      "startSeconds": 205.76,
+      "text": "savings. Another really easy native way"
+    },
+    {
+      "startSeconds": 208,
+      "text": "to optimize latency for an application"
+    },
+    {
+      "startSeconds": 209.68,
+      "text": "is to use latency optimized inference,"
+    },
+    {
+      "startSeconds": 213.2,
+      "text": "right? So there are different uh kind of"
+    },
+    {
+      "startSeconds": 215.92,
+      "text": "back-end systems a and back-end"
+    },
+    {
+      "startSeconds": 219.12,
+      "text": "inference systems for models can be"
+    },
+    {
+      "startSeconds": 220.799,
+      "text": "designed in different ways. And so in"
+    },
+    {
+      "startSeconds": 222.879,
+      "text": "the context of a provider like Bedrock,"
+    },
+    {
+      "startSeconds": 224.879,
+      "text": "the the LLM provider on AWS, you can use"
+    },
+    {
+      "startSeconds": 228.08,
+      "text": "standard or latency optimized inference."
+    },
+    {
+      "startSeconds": 230,
+      "text": "It's just a flag in the request that you"
+    },
+    {
+      "startSeconds": 231.84,
+      "text": "send into the model. And when you use"
+    },
+    {
+      "startSeconds": 233.68,
+      "text": "latency optimized interest or sorry"
+    },
+    {
+      "startSeconds": 235.44,
+      "text": "inference, you get sent to a backend,"
+    },
+    {
+      "startSeconds": 237.519,
+      "text": "you know, cluster that is more optimized"
+    },
+    {
+      "startSeconds": 240.239,
+      "text": "for latency, right? So that's those"
+    },
+    {
+      "startSeconds": 242.159,
+      "text": "that's like a really simple way is"
+    },
+    {
+      "startSeconds": 244.72,
+      "text": "caching uh and then just optimizing"
+    },
+    {
+      "startSeconds": 248.48,
+      "text": "uh via these you know native configs"
+    },
+    {
+      "startSeconds": 251.28,
+      "text": "right now"
+    },
+    {
+      "startSeconds": 254,
+      "text": "you know you can do some prompt"
+    },
+    {
+      "startSeconds": 255.04,
+      "text": "optimization in there as well. However"
+    },
+    {
+      "startSeconds": 256.88,
+      "text": "like uh I'm kind of assuming if you got"
+    },
+    {
+      "startSeconds": 258.799,
+      "text": "your agent working you've you've"
+    },
+    {
+      "startSeconds": 260,
+      "text": "optimized your prompt to some degree."
+    },
+    {
+      "startSeconds": 262.16,
+      "text": "Now let's go back to the the diagram"
+    },
+    {
+      "startSeconds": 264,
+      "text": "here. Uh another way that we can"
+    },
+    {
+      "startSeconds": 267.199,
+      "text": "optimize here is"
+    },
+    {
+      "startSeconds": 270.96,
+      "text": "all of these steps are potential LLM"
+    },
+    {
+      "startSeconds": 273.52,
+      "text": "calls. So like let's go back and assume"
+    },
+    {
+      "startSeconds": 275.68,
+      "text": "like I was mentioning before that we"
+    },
+    {
+      "startSeconds": 277.28,
+      "text": "built every step on sonnet. Sonnet is a"
+    },
+    {
+      "startSeconds": 280.24,
+      "text": "great model but it's a slow model. And"
+    },
+    {
+      "startSeconds": 283.28,
+      "text": "another uh challenge with these agentic"
+    },
+    {
+      "startSeconds": 286.639,
+      "text": "architectures is because a request is"
+    },
+    {
+      "startSeconds": 289.36,
+      "text": "going to go through many different"
+    },
+    {
+      "startSeconds": 290.56,
+      "text": "steps. It means that you stream response"
+    },
+    {
+      "startSeconds": 294.32,
+      "text": "streaming is not as effective anymore."
+    },
+    {
+      "startSeconds": 296.16,
+      "text": "Like in a chatbot"
+    },
+    {
+      "startSeconds": 298.4,
+      "text": "when once the first token hits you can"
+    },
+    {
+      "startSeconds": 301.199,
+      "text": "start sending that back to a user and"
+    },
+    {
+      "startSeconds": 303.12,
+      "text": "most LLMs generate tokens faster than"
+    },
+    {
+      "startSeconds": 304.88,
+      "text": "humans can read, right? So it creates a"
+    },
+    {
+      "startSeconds": 306.56,
+      "text": "good user experience. In the context of"
+    },
+    {
+      "startSeconds": 309.199,
+      "text": "agents, end to-end latency is what"
+    },
+    {
+      "startSeconds": 311.28,
+      "text": "you're thinking about because you need"
+    },
+    {
+      "startSeconds": 312.4,
+      "text": "this request, the full payload of the"
+    },
+    {
+      "startSeconds": 314.8,
+      "text": "request to pass through every step"
+    },
+    {
+      "startSeconds": 316.56,
+      "text": "before a response get gets returned to"
+    },
+    {
+      "startSeconds": 318.639,
+      "text": "the um client, right? Um and so what we"
+    },
+    {
+      "startSeconds": 321.44,
+      "text": "see is customers will start with"
+    },
+    {
+      "startSeconds": 323.36,
+      "text": "building on on just the biggest models"
+    },
+    {
+      "startSeconds": 325.759,
+      "text": "like a sonnet or an opus or like a llama"
+    },
+    {
+      "startSeconds": 328.4,
+      "text": "for large model. There's a lot of"
+    },
+    {
+      "startSeconds": 330.24,
+      "text": "different big models that are super uh"
+    },
+    {
+      "startSeconds": 332.96,
+      "text": "good at a lot of tasks. Um so what we"
+    },
+    {
+      "startSeconds": 337.12,
+      "text": "will have customers do is start looking"
+    },
+    {
+      "startSeconds": 338.8,
+      "text": "at their application and figuring out"
+    },
+    {
+      "startSeconds": 340.8,
+      "text": "are there any steps in this application."
+    },
+    {
+      "startSeconds": 342.96,
+      "text": "Can we break this application down and"
+    },
+    {
+      "startSeconds": 345.199,
+      "text": "decompose it and find opportunities to"
+    },
+    {
+      "startSeconds": 347.759,
+      "text": "take a step off of a big model and put"
+    },
+    {
+      "startSeconds": 350.72,
+      "text": "it onto a smaller model? Right? So uh we"
+    },
+    {
+      "startSeconds": 353.36,
+      "text": "want to take a large parameter step like"
+    },
+    {
+      "startSeconds": 356.639,
+      "text": "for example uh the planning step. Let's"
+    },
+    {
+      "startSeconds": 358.479,
+      "text": "say you're running that on sonnet. Maybe"
+    },
+    {
+      "startSeconds": 360.16,
+      "text": "you can like optimize the prompt and get"
+    },
+    {
+      "startSeconds": 362.72,
+      "text": "that planner to run on Haiku instead,"
+    },
+    {
+      "startSeconds": 364.8,
+      "text": "which is a smaller model, right? And"
+    },
+    {
+      "startSeconds": 367.28,
+      "text": "this can be applied to any family of"
+    },
+    {
+      "startSeconds": 368.639,
+      "text": "models. But hopefully you can get a"
+    },
+    {
+      "startSeconds": 371.199,
+      "text": "sense for what I'm saying here in that"
+    },
+    {
+      "startSeconds": 373.52,
+      "text": "each step in your agent process is an"
+    },
+    {
+      "startSeconds": 376.96,
+      "text": "opportunity to look at that step and run"
+    },
+    {
+      "startSeconds": 380.8,
+      "text": "it on a smaller model by optimizing the"
+    },
+    {
+      "startSeconds": 382.479,
+      "text": "prompts or other techniques like um like"
+    },
+    {
+      "startSeconds": 385.199,
+      "text": "fine-tuning those models, right? So like"
+    },
+    {
+      "startSeconds": 387.84,
+      "text": "just to just to make it real for you in"
+    },
+    {
+      "startSeconds": 389.44,
+      "text": "the console, right? What I'm saying is a"
+    },
+    {
+      "startSeconds": 391.84,
+      "text": "lot of customers will build an agent on"
+    },
+    {
+      "startSeconds": 394.8,
+      "text": "cloud 3.7 or cloud uh four sonnet"
+    },
+    {
+      "startSeconds": 397.919,
+      "text": "models. But if you can get a step to run"
+    },
+    {
+      "startSeconds": 400.08,
+      "text": "on haik coup instead, right? Be by"
+    },
+    {
+      "startSeconds": 403.36,
+      "text": "either fine-tuning or or customization"
+    },
+    {
+      "startSeconds": 405.199,
+      "text": "or may maybe you could even get that"
+    },
+    {
+      "startSeconds": 406.56,
+      "text": "running on a on an open source model"
+    },
+    {
+      "startSeconds": 408.08,
+      "text": "like from llama that's fine-tuned. Um"
+    },
+    {
+      "startSeconds": 410.56,
+      "text": "there's a lot of latency uh savings to"
+    },
+    {
+      "startSeconds": 412.88,
+      "text": "be to be had in in that sort of a"
+    },
+    {
+      "startSeconds": 414.88,
+      "text": "workflow. So uh one way I see customers"
+    },
+    {
+      "startSeconds": 417.199,
+      "text": "doing this is they'll they'll customize"
+    },
+    {
+      "startSeconds": 419.199,
+      "text": "models. So they might use something like"
+    },
+    {
+      "startSeconds": 420.72,
+      "text": "SageMaker to fine-tune a model or they"
+    },
+    {
+      "startSeconds": 423.759,
+      "text": "might use something like Amazon Bedrock"
+    },
+    {
+      "startSeconds": 425.52,
+      "text": "which has a model distillation feature"
+    },
+    {
+      "startSeconds": 427.52,
+      "text": "which is basically a way to take a large"
+    },
+    {
+      "startSeconds": 429.28,
+      "text": "model and then transfer its knowledge"
+    },
+    {
+      "startSeconds": 431.68,
+      "text": "and understanding and capabilities into"
+    },
+    {
+      "startSeconds": 433.52,
+      "text": "a smaller model for a specific task. I"
+    },
+    {
+      "startSeconds": 436.08,
+      "text": "see customers using these features to"
+    },
+    {
+      "startSeconds": 438.639,
+      "text": "fine-tune and and customize models and"
+    },
+    {
+      "startSeconds": 440.639,
+      "text": "then just importing uh that customized"
+    },
+    {
+      "startSeconds": 442.88,
+      "text": "model into Amazon Bedrock. Okay. And"
+    },
+    {
+      "startSeconds": 445.28,
+      "text": "what that allows you to do if I go back"
+    },
+    {
+      "startSeconds": 447.28,
+      "text": "to our architecture is a step like let's"
+    },
+    {
+      "startSeconds": 449.759,
+      "text": "say the planner step is running on"
+    },
+    {
+      "startSeconds": 452.319,
+      "text": "claude 37 today um if I send a request"
+    },
+    {
+      "startSeconds": 455.28,
+      "text": "into that planner um it might take six"
+    },
+    {
+      "startSeconds": 458.319,
+      "text": "seven seconds to respond but if I'm able"
+    },
+    {
+      "startSeconds": 459.919,
+      "text": "to get that running on haik coup it"
+    },
+    {
+      "startSeconds": 461.28,
+      "text": "might be responding in 1 second or two"
+    },
+    {
+      "startSeconds": 463.44,
+      "text": "seconds or I even see instances where"
+    },
+    {
+      "startSeconds": 465.599,
+      "text": "you can fine-tune a a small parameter"
+    },
+    {
+      "startSeconds": 467.759,
+      "text": "llama model and get subsecond response"
+    },
+    {
+      "startSeconds": 470,
+      "text": "time for uh certain steps. Right? So, so"
+    },
+    {
+      "startSeconds": 473.52,
+      "text": "now imagine this. Imagine I've got three"
+    },
+    {
+      "startSeconds": 475.599,
+      "text": "steps, a planner step, a responder step,"
+    },
+    {
+      "startSeconds": 478.24,
+      "text": "and then this intermediary like data"
+    },
+    {
+      "startSeconds": 480.639,
+      "text": "collection step. Imagine I'm able to"
+    },
+    {
+      "startSeconds": 482.96,
+      "text": "take all of these steps from a large"
+    },
+    {
+      "startSeconds": 485.12,
+      "text": "model like Sonnet and put them all onto"
+    },
+    {
+      "startSeconds": 487.039,
+      "text": "a small model via fine-tuning or"
+    },
+    {
+      "startSeconds": 489.199,
+      "text": "distillation like for example"
+    },
+    {
+      "startSeconds": 492.56,
+      "text": "a a small 8 billion parameter llama"
+    },
+    {
+      "startSeconds": 495.52,
+      "text": "model, right? What that would actually"
+    },
+    {
+      "startSeconds": 497.44,
+      "text": "do is, you know, if if all three of my"
+    },
+    {
+      "startSeconds": 499.28,
+      "text": "steps were on set 37, my end to-end"
+    },
+    {
+      "startSeconds": 501.52,
+      "text": "latency might be something like 15"
+    },
+    {
+      "startSeconds": 503.599,
+      "text": "seconds, which is like, you know, okay"
+    },
+    {
+      "startSeconds": 506.56,
+      "text": "for some apps, but for other apps,"
+    },
+    {
+      "startSeconds": 508.16,
+      "text": "that's pretty unacceptable. Where if I"
+    },
+    {
+      "startSeconds": 510.8,
+      "text": "could move all of those to Llama 8B and"
+    },
+    {
+      "startSeconds": 513.519,
+      "text": "get near sub-second latency on Llama 8B,"
+    },
+    {
+      "startSeconds": 516.159,
+      "text": "which I've personally seen customers"
+    },
+    {
+      "startSeconds": 517.44,
+      "text": "able to accomplish on AWS, uh you could"
+    },
+    {
+      "startSeconds": 520.24,
+      "text": "actually get that into time to be more"
+    },
+    {
+      "startSeconds": 521.919,
+      "text": "like 3 to four seconds, right? Meaning"
+    },
+    {
+      "startSeconds": 524.88,
+      "text": "like you could have a multi-step"
+    },
+    {
+      "startSeconds": 526.72,
+      "text": "workflow like this but deliver the same"
+    },
+    {
+      "startSeconds": 530.24,
+      "text": "speed and response time that you would"
+    },
+    {
+      "startSeconds": 532.48,
+      "text": "kind of expect from a traditional"
+    },
+    {
+      "startSeconds": 534.32,
+      "text": "chatbot uh architecture, right? That"
+    },
+    {
+      "startSeconds": 536.64,
+      "text": "tends to run very fast because it's not"
+    },
+    {
+      "startSeconds": 538.08,
+      "text": "so um doesn't have so many uh steps and"
+    },
+    {
+      "startSeconds": 540.56,
+      "text": "so many LLM calls on the back end. Okay,"
+    },
+    {
+      "startSeconds": 543.12,
+      "text": "so that that's a this is a more advanced"
+    },
+    {
+      "startSeconds": 545.6,
+      "text": "way to improve latency by customizing"
+    },
+    {
+      "startSeconds": 548.24,
+      "text": "models. However, what I see is a lot of"
+    },
+    {
+      "startSeconds": 551.12,
+      "text": "customers uh that reach some limit of"
+    },
+    {
+      "startSeconds": 554.08,
+      "text": "optimizations available with things like"
+    },
+    {
+      "startSeconds": 555.6,
+      "text": "caching and um native latency optimized"
+    },
+    {
+      "startSeconds": 559.12,
+      "text": "inference options will go towards prompt"
+    },
+    {
+      "startSeconds": 562.88,
+      "text": "optimization for smaller models. Uh"
+    },
+    {
+      "startSeconds": 564.8,
+      "text": "distillation or fine-tuning into a"
+    },
+    {
+      "startSeconds": 566.399,
+      "text": "smaller model for steps in their"
+    },
+    {
+      "startSeconds": 569.04,
+      "text": "workflow that are particularly um long,"
+    },
+    {
+      "startSeconds": 571.839,
+      "text": "right? So that means you need to be able"
+    },
+    {
+      "startSeconds": 573.92,
+      "text": "to see and and if you're building"
+    },
+    {
+      "startSeconds": 575.44,
+      "text": "agents, you probably have some agentic"
+    },
+    {
+      "startSeconds": 577.279,
+      "text": "architecture or system that allows you"
+    },
+    {
+      "startSeconds": 578.88,
+      "text": "to see step by step um how long each"
+    },
+    {
+      "startSeconds": 582.24,
+      "text": "call or each step in your workflow is."
+    },
+    {
+      "startSeconds": 585.04,
+      "text": "And that gives you a guide for like"
+    },
+    {
+      "startSeconds": 586.399,
+      "text": "which areas to focus on optimizing"
+    },
+    {
+      "startSeconds": 589.04,
+      "text": "first, right? Like if you have a step"
+    },
+    {
+      "startSeconds": 590.32,
+      "text": "that takes 10 seconds sometimes, that's"
+    },
+    {
+      "startSeconds": 592.32,
+      "text": "a great candidate step for you to go and"
+    },
+    {
+      "startSeconds": 595.44,
+      "text": "look at optimization via uh moving it to"
+    },
+    {
+      "startSeconds": 598,
+      "text": "a smaller model via one of these uh"
+    },
+    {
+      "startSeconds": 599.6,
+      "text": "techniques, right? And then maybe the"
+    },
+    {
+      "startSeconds": 601.839,
+      "text": "the final thing uh here that customers"
+    },
+    {
+      "startSeconds": 605.44,
+      "text": "will do to optimize latency is you can"
+    },
+    {
+      "startSeconds": 607.839,
+      "text": "of course just change your actual"
+    },
+    {
+      "startSeconds": 610.32,
+      "text": "infrastructure right so if you work in"
+    },
+    {
+      "startSeconds": 611.839,
+      "text": "an environment where you have control"
+    },
+    {
+      "startSeconds": 613.44,
+      "text": "over the actual instance type um the"
+    },
+    {
+      "startSeconds": 616.56,
+      "text": "chip architecture you use makes a huge"
+    },
+    {
+      "startSeconds": 618.079,
+      "text": "difference like for example there are if"
+    },
+    {
+      "startSeconds": 620.399,
+      "text": "you're using Nvidia there's the A100"
+    },
+    {
+      "startSeconds": 622.16,
+      "text": "series chips and then there's the H100"
+    },
+    {
+      "startSeconds": 623.839,
+      "text": "series chips and the H uh sorry the H"
+    },
+    {
+      "startSeconds": 626.56,
+      "text": "series chips are the newer chips and"
+    },
+    {
+      "startSeconds": 629.12,
+      "text": "they're I've seen them cut latency in"
+    },
+    {
+      "startSeconds": 631.6,
+      "text": "half sometimes over the A100 series"
+    },
+    {
+      "startSeconds": 634,
+      "text": "chips, right? So sometimes it's a simple"
+    },
+    {
+      "startSeconds": 636.64,
+      "text": "hardware upgrade and you know when you"
+    },
+    {
+      "startSeconds": 638.079,
+      "text": "get into that space you're kind you're"
+    },
+    {
+      "startSeconds": 639.2,
+      "text": "throwing money at the problem. Um"
+    },
+    {
+      "startSeconds": 641.44,
+      "text": "however that is a great way to get"
+    },
+    {
+      "startSeconds": 643.12,
+      "text": "performance. It's always been a good way"
+    },
+    {
+      "startSeconds": 644.56,
+      "text": "in technology to get performance is to"
+    },
+    {
+      "startSeconds": 646.16,
+      "text": "just buy uh beefier hardware uh systems,"
+    },
+    {
+      "startSeconds": 649.44,
+      "text": "right? And so that that certainly"
+    },
+    {
+      "startSeconds": 650.8,
+      "text": "applies within the world of uh LLM"
+    },
+    {
+      "startSeconds": 652.8,
+      "text": "latency as well. And then uh I we also"
+    },
+    {
+      "startSeconds": 657.2,
+      "text": "see a lot of customers actually looking"
+    },
+    {
+      "startSeconds": 659.44,
+      "text": "at their agentic architecture and and"
+    },
+    {
+      "startSeconds": 662.32,
+      "text": "asking the question like can I break"
+    },
+    {
+      "startSeconds": 664.32,
+      "text": "this down or or can I simplify it in a"
+    },
+    {
+      "startSeconds": 667.36,
+      "text": "way. So like basically you know as an"
+    },
+    {
+      "startSeconds": 670,
+      "text": "agent generalizes over many tasks right"
+    },
+    {
+      "startSeconds": 673.6,
+      "text": "um you might you might start with a"
+    },
+    {
+      "startSeconds": 675.6,
+      "text": "small task of like say I want an agent"
+    },
+    {
+      "startSeconds": 677.2,
+      "text": "to like generate powerpoints for me and"
+    },
+    {
+      "startSeconds": 679.2,
+      "text": "then over time you might have it doing a"
+    },
+    {
+      "startSeconds": 680.8,
+      "text": "lot of different complex tasks that"
+    },
+    {
+      "startSeconds": 683.279,
+      "text": "tends to kind of weigh down um a very"
+    },
+    {
+      "startSeconds": 686.88,
+      "text": "simple agentic architecture like the one"
+    },
+    {
+      "startSeconds": 688.48,
+      "text": "I have on the screen here. And so uh we"
+    },
+    {
+      "startSeconds": 691.44,
+      "text": "I do see and and this is still newer"
+    },
+    {
+      "startSeconds": 693.279,
+      "text": "because this is like to get to this"
+    },
+    {
+      "startSeconds": 695.36,
+      "text": "stage you have to have first built a"
+    },
+    {
+      "startSeconds": 697.04,
+      "text": "successful agent right um but we do see"
+    },
+    {
+      "startSeconds": 699.519,
+      "text": "customers adopting something called a"
+    },
+    {
+      "startSeconds": 701.519,
+      "text": "multi- aent uh architecture or multi-"
+    },
+    {
+      "startSeconds": 703.68,
+      "text": "aent workflows and that's where you you"
+    },
+    {
+      "startSeconds": 706.72,
+      "text": "might have multiple different agents"
+    },
+    {
+      "startSeconds": 708.64,
+      "text": "right that do different things"
+    },
+    {
+      "startSeconds": 712.8,
+      "text": "and then between those multiple agents"
+    },
+    {
+      "startSeconds": 716.48,
+      "text": "you might actually um have some like I"
+    },
+    {
+      "startSeconds": 720.959,
+      "text": "we've heard I've heard it called"
+    },
+    {
+      "startSeconds": 721.92,
+      "text": "different things but for now we'll just"
+    },
+    {
+      "startSeconds": 723.36,
+      "text": "call it a supervisor agent"
+    },
+    {
+      "startSeconds": 727.04,
+      "text": "right and uh that agent can kind of"
+    },
+    {
+      "startSeconds": 730.16,
+      "text": "orchestrate what sub agents to call for"
+    },
+    {
+      "startSeconds": 732.56,
+      "text": "different tasks and so uh again this is"
+    },
+    {
+      "startSeconds": 735.12,
+      "text": "a this is a change in architecture from"
+    },
+    {
+      "startSeconds": 737.36,
+      "text": "a more simple agentic architecture uh"
+    },
+    {
+      "startSeconds": 740.079,
+      "text": "but it is oftentimes necessary as you"
+    },
+    {
+      "startSeconds": 742.72,
+      "text": "want uh agents that can do a wider range"
+    },
+    {
+      "startSeconds": 745.04,
+      "text": "of tasks but you don't want disperate"
+    },
+    {
+      "startSeconds": 747.76,
+      "text": "different user experiences is you you"
+    },
+    {
+      "startSeconds": 749.68,
+      "text": "know you don't want to have companies"
+    },
+    {
+      "startSeconds": 751.92,
+      "text": "don't want to have like five different"
+    },
+    {
+      "startSeconds": 753.279,
+      "text": "UIs for for different agents right if"
+    },
+    {
+      "startSeconds": 755.92,
+      "text": "you're if you do a job and you need five"
+    },
+    {
+      "startSeconds": 757.92,
+      "text": "agents to do that job a supervisor agent"
+    },
+    {
+      "startSeconds": 760.639,
+      "text": "allows you to have all those agents in"
+    },
+    {
+      "startSeconds": 762.8,
+      "text": "in the same uh place and kind of like a"
+    },
+    {
+      "startSeconds": 765.12,
+      "text": "seamless user experience. Uh and again"
+    },
+    {
+      "startSeconds": 767.279,
+      "text": "there are latency optimizations to be"
+    },
+    {
+      "startSeconds": 768.88,
+      "text": "had from architecture changes like this"
+    },
+    {
+      "startSeconds": 770.959,
+      "text": "that give you more fine grain control of"
+    },
+    {
+      "startSeconds": 773.519,
+      "text": "how user traffic is flowing through"
+    },
+    {
+      "startSeconds": 775.6,
+      "text": "these models and through these systems."
+    },
+    {
+      "startSeconds": 778.639,
+      "text": "I was talking really fast. The video was"
+    },
+    {
+      "startSeconds": 780.24,
+      "text": "longer than I wanted it to be. I hope"
+    },
+    {
+      "startSeconds": 781.76,
+      "text": "this was helpful though that this this"
+    },
+    {
+      "startSeconds": 783.519,
+      "text": "is pretty comprehensive. I I if I miss"
+    },
+    {
+      "startSeconds": 785.519,
+      "text": "anything, let me know in the comments if"
+    },
+    {
+      "startSeconds": 786.88,
+      "text": "there are other strategies that you've"
+    },
+    {
+      "startSeconds": 788.72,
+      "text": "seen customers using to optimize LLM"
+    },
+    {
+      "startSeconds": 791.44,
+      "text": "latency on AWS. But uh for me, this is"
+    },
+    {
+      "startSeconds": 795.76,
+      "text": "what I would be thinking about if I were"
+    },
+    {
+      "startSeconds": 797.04,
+      "text": "trying to optimize latency for an Aentic"
+    },
+    {
+      "startSeconds": 799.279,
+      "text": "application today. And I hope that this"
+    },
+    {
+      "startSeconds": 801.68,
+      "text": "was useful. Happy building and take it"
+    }
+  ]
+}

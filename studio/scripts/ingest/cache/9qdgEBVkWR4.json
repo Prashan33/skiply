@@ -1,8 +1,349 @@
 {
   "id": "9qdgEBVkWR4",
   "url": "https://www.youtube.com/watch?v=9qdgEBVkWR4",
-  "fetchedAt": "2026-08-31T05:15:41.663Z",
-  "captionKind": "empty",
+  "fetchedAt": "2026-09-01T04:17:47.341Z",
+  "captionKind": "manual",
   "chapters": [],
-  "cues": []
+  "cues": [
+    {
+      "startSeconds": 0,
+      "text": "SPEAKER: Have you ever created something new"
+    },
+    {
+      "startSeconds": 2.48,
+      "text": "by building upon previous examples?"
+    },
+    {
+      "startSeconds": 5.07,
+      "text": "Perhaps you used a well received report as a reference"
+    },
+    {
+      "startSeconds": 8.63,
+      "text": "when writing a similar report, or maybe you"
+    },
+    {
+      "startSeconds": 11.63,
+      "text": "used a relevant and engaging website as a model"
+    },
+    {
+      "startSeconds": 14.87,
+      "text": "when designing your own website."
+    },
+    {
+      "startSeconds": 16.8,
+      "text": "Examples are also useful for LLMs."
+    },
+    {
+      "startSeconds": 20.52,
+      "text": "Including examples in your prompt"
+    },
+    {
+      "startSeconds": 22.4,
+      "text": "can help an LLM better respond to your request"
+    },
+    {
+      "startSeconds": 25.64,
+      "text": "and can be an especially effective strategy"
+    },
+    {
+      "startSeconds": 28.76,
+      "text": "to get your desired output."
+    },
+    {
+      "startSeconds": 31.04,
+      "text": "We're going to explore how to use examples in prompting,"
+    },
+    {
+      "startSeconds": 34.65,
+      "text": "but first, let's briefly discuss the technical term, \"shot.\""
+    },
+    {
+      "startSeconds": 38.66,
+      "text": "In prompt engineering, the word \"shot\""
+    },
+    {
+      "startSeconds": 41.18,
+      "text": "is often used as a synonym for the word \"example.\""
+    },
+    {
+      "startSeconds": 45.18,
+      "text": "There are different names for prompting techniques"
+    },
+    {
+      "startSeconds": 47.66,
+      "text": "based on the number of examples given to the LLM."
+    },
+    {
+      "startSeconds": 52.01,
+      "text": "Zero-shot prompting is a technique"
+    },
+    {
+      "startSeconds": 54.17,
+      "text": "that provides no examples in a prompt,"
+    },
+    {
+      "startSeconds": 56.91,
+      "text": "while one-shot prompting provides one example."
+    },
+    {
+      "startSeconds": 60.81,
+      "text": "And few-shot prompting is a technique"
+    },
+    {
+      "startSeconds": 64.05,
+      "text": "that provides two or more examples in a prompt."
+    },
+    {
+      "startSeconds": 68.04,
+      "text": "Because examples aren't included in zero-shot prompts,"
+    },
+    {
+      "startSeconds": 72.34,
+      "text": "the model is expected to perform the task based only"
+    },
+    {
+      "startSeconds": 76.11,
+      "text": "on its training data and the task description included"
+    },
+    {
+      "startSeconds": 79.17,
+      "text": "in the prompt."
+    },
+    {
+      "startSeconds": 80.1,
+      "text": "Zero-shot prompting is most likely to be effective"
+    },
+    {
+      "startSeconds": 83.37,
+      "text": "when you are seeking simple, direct responses."
+    },
+    {
+      "startSeconds": 87.37,
+      "text": "Zero-shot prompting may not be effective for tasks"
+    },
+    {
+      "startSeconds": 90.87,
+      "text": "that require the LLM to respond in a more specific, nuanced way."
+    },
+    {
+      "startSeconds": 96.16,
+      "text": "Few-shot prompting can improve an LLM's performance"
+    },
+    {
+      "startSeconds": 99.27,
+      "text": "by providing additional context and examples in your prompt."
+    },
+    {
+      "startSeconds": 104.14,
+      "text": "These additional examples can help clarify the desired format,"
+    },
+    {
+      "startSeconds": 108.12,
+      "text": "phrasing, or general pattern."
+    },
+    {
+      "startSeconds": 110.29,
+      "text": "Few-shot prompting can be useful for a range of tasks."
+    },
+    {
+      "startSeconds": 114.29,
+      "text": "For example, you might use few-shot"
+    },
+    {
+      "startSeconds": 116.28,
+      "text": "prompting to generate content in a particular style."
+    },
+    {
+      "startSeconds": 120.06,
+      "text": "Let's say you work for an online retailer."
+    },
+    {
+      "startSeconds": 122.74,
+      "text": "You need to write a product description"
+    },
+    {
+      "startSeconds": 124.5,
+      "text": "for a new skateboard."
+    },
+    {
+      "startSeconds": 126.43,
+      "text": "You already have descriptions for existing products,"
+    },
+    {
+      "startSeconds": 129,
+      "text": "such as a bicycle and roller blades."
+    },
+    {
+      "startSeconds": 131.8,
+      "text": "You want the skateboard description"
+    },
+    {
+      "startSeconds": 133.77,
+      "text": "to follow a similar style and format."
+    },
+    {
+      "startSeconds": 136.6,
+      "text": "We'll start with a prompt that begins"
+    },
+    {
+      "startSeconds": 138.54,
+      "text": "with some general instructions."
+    },
+    {
+      "startSeconds": 140.92,
+      "text": "Write a one-sentence description of a product."
+    },
+    {
+      "startSeconds": 143.95,
+      "text": "It should contain two adjectives that describe the product."
+    },
+    {
+      "startSeconds": 148.06,
+      "text": "We also specify that we want Gemini to review the examples"
+    },
+    {
+      "startSeconds": 151.15,
+      "text": "we provide and write the description of the skateboard"
+    },
+    {
+      "startSeconds": 154.48,
+      "text": "in the same style."
+    },
+    {
+      "startSeconds": 156.87,
+      "text": "Because this is a few-shot prompt,"
+    },
+    {
+      "startSeconds": 159.85,
+      "text": "we need to provide examples that model the style we want."
+    },
+    {
+      "startSeconds": 163.96,
+      "text": "Each example contains a label indicating"
+    },
+    {
+      "startSeconds": 167.01,
+      "text": "the product being described-- a bicycle and Rollerblades."
+    },
+    {
+      "startSeconds": 171.51,
+      "text": "And each description is one sentence long"
+    },
+    {
+      "startSeconds": 174.3,
+      "text": "and contains two adjectives-- sleek"
+    },
+    {
+      "startSeconds": 176.85,
+      "text": "and durable for the bicycle, and smooth and stylish"
+    },
+    {
+      "startSeconds": 180.3,
+      "text": "for the Rollerblades."
+    },
+    {
+      "startSeconds": 182.62,
+      "text": "Next, we type the label skateboard."
+    },
+    {
+      "startSeconds": 185.78,
+      "text": "When we add this label and leave the product description blank,"
+    },
+    {
+      "startSeconds": 189.26,
+      "text": "we indicate to Gemini that we want"
+    },
+    {
+      "startSeconds": 191.2,
+      "text": "it to complete the description of the skateboard"
+    },
+    {
+      "startSeconds": 193.57,
+      "text": "like it did with the other two product descriptions."
+    },
+    {
+      "startSeconds": 197.31,
+      "text": "Let's review our output."
+    },
+    {
+      "startSeconds": 199.55,
+      "text": "The output offers a product description"
+    },
+    {
+      "startSeconds": 201.74,
+      "text": "of the skateboard that meets the criteria we requested and is"
+    },
+    {
+      "startSeconds": 205.64,
+      "text": "in the same writing style and format as the examples"
+    },
+    {
+      "startSeconds": 208.64,
+      "text": "we included in our prompt."
+    },
+    {
+      "startSeconds": 210.95,
+      "text": "In this case, two examples were enough to obtain useful results,"
+    },
+    {
+      "startSeconds": 215.4,
+      "text": "but there is no definitive rule for the optimal number"
+    },
+    {
+      "startSeconds": 218.63,
+      "text": "of examples to include in a prompt."
+    },
+    {
+      "startSeconds": 221.04,
+      "text": "Some LLMs can accurately reproduce"
+    },
+    {
+      "startSeconds": 223.73,
+      "text": "patterns using only a few examples,"
+    },
+    {
+      "startSeconds": 226.1,
+      "text": "while other LLMs need more."
+    },
+    {
+      "startSeconds": 228.45,
+      "text": "At the same time, if you include too many examples,"
+    },
+    {
+      "startSeconds": 232.34,
+      "text": "an LLM's responses may become less flexible and creative."
+    },
+    {
+      "startSeconds": 236.72,
+      "text": "And they may reproduce the examples too closely."
+    },
+    {
+      "startSeconds": 240.97,
+      "text": "Experiment with the number of examples"
+    },
+    {
+      "startSeconds": 243.08,
+      "text": "to include to get the best results for your specific task."
+    },
+    {
+      "startSeconds": 247.61,
+      "text": "Now you know a prompting technique"
+    },
+    {
+      "startSeconds": 249.86,
+      "text": "that will help you get better quality output."
+    },
+    {
+      "startSeconds": 253.19,
+      "text": "Few-shot prompting is an effective strategy"
+    },
+    {
+      "startSeconds": 255.77,
+      "text": "that can help you guide an LLM to generate"
+    },
+    {
+      "startSeconds": 258.74,
+      "text": "more useful responses."
+    }
+  ]
 }

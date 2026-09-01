@@ -1,0 +1,1198 @@
+{
+  "id": "9IcyoLxRAYY",
+  "url": "https://www.youtube.com/watch?v=9IcyoLxRAYY",
+  "fetchedAt": "2026-09-01T04:09:22.404Z",
+  "captionKind": "asr",
+  "chapters": [
+    {
+      "startSeconds": 0,
+      "label": "Introduction"
+    },
+    {
+      "startSeconds": 105,
+      "label": "Create dummy database"
+    },
+    {
+      "startSeconds": 180,
+      "label": "Create two tables"
+    },
+    {
+      "startSeconds": 240,
+      "label": "Create directory"
+    },
+    {
+      "startSeconds": 310,
+      "label": "Run backup"
+    },
+    {
+      "startSeconds": 515,
+      "label": "Restore single table"
+    },
+    {
+      "startSeconds": 635,
+      "label": "Restore multiple tables"
+    },
+    {
+      "startSeconds": 820,
+      "label": "Drop backup database"
+    },
+    {
+      "startSeconds": 1110,
+      "label": "Create database"
+    },
+    {
+      "startSeconds": 1325,
+      "label": "Backup all databases"
+    },
+    {
+      "startSeconds": 1392,
+      "label": "PGdump all"
+    },
+    {
+      "startSeconds": 1487,
+      "label": "System level backup"
+    },
+    {
+      "startSeconds": 1578,
+      "label": "Empty directory backup"
+    },
+    {
+      "startSeconds": 1774,
+      "label": "Point in time recovery"
+    }
+  ],
+  "cues": [
+    {
+      "startSeconds": 5.96,
+      "text": "hi everyone in this video tutorial I"
+    },
+    {
+      "startSeconds": 9.63,
+      "text": "will show you how we can do backup and"
+    },
+    {
+      "startSeconds": 13.83,
+      "text": "restore for PostGIS services and then"
+    },
+    {
+      "startSeconds": 18.3,
+      "text": "also we'll go through object level and"
+    },
+    {
+      "startSeconds": 21.68,
+      "text": "database level so there are different"
+    },
+    {
+      "startSeconds": 24.69,
+      "text": "types of backups that we know like"
+    },
+    {
+      "startSeconds": 27.95,
+      "text": "logical backup or physical backup so"
+    },
+    {
+      "startSeconds": 30.99,
+      "text": "logical backup is doing we do check it"
+    },
+    {
+      "startSeconds": 34.29,
+      "text": "down and physical backup when you are"
+    },
+    {
+      "startSeconds": 37.17,
+      "text": "just copying from or taking a backup of"
+    },
+    {
+      "startSeconds": 40.44,
+      "text": "a physical file location or physical"
+    },
+    {
+      "startSeconds": 43.769,
+      "text": "files so here we are going to use PG"
+    },
+    {
+      "startSeconds": 49.589,
+      "text": "dumb and pity dump all and PD base"
+    },
+    {
+      "startSeconds": 54.78,
+      "text": "backup options so what are the"
+    },
+    {
+      "startSeconds": 58.05,
+      "text": "differences you know all these three"
+    },
+    {
+      "startSeconds": 59.999,
+      "text": "times mainly these three types I will go"
+    },
+    {
+      "startSeconds": 61.769,
+      "text": "through so PD dump is the utility for"
+    },
+    {
+      "startSeconds": 65.01,
+      "text": "backing up Postgres a single process"
+    },
+    {
+      "startSeconds": 67.53,
+      "text": "database and when we are talking about"
+    },
+    {
+      "startSeconds": 69.96,
+      "text": "PD dump all the dumb polity utility for"
+    },
+    {
+      "startSeconds": 74.18,
+      "text": "all the Postgres databases of a cluster"
+    },
+    {
+      "startSeconds": 80.27,
+      "text": "that I will take it back up and put into"
+    },
+    {
+      "startSeconds": 84.18,
+      "text": "a skip file and third one is PG base"
+    },
+    {
+      "startSeconds": 86.939,
+      "text": "backup which is the way I want to take a"
+    },
+    {
+      "startSeconds": 89.399,
+      "text": "full file system level backup for"
+    },
+    {
+      "startSeconds": 92.1,
+      "text": "Postgres services so let's go through"
+    },
+    {
+      "startSeconds": 94.89,
+      "text": "that one to get the option to see all"
+    },
+    {
+      "startSeconds": 100.14,
+      "text": "the options we can type VD down help so"
+    },
+    {
+      "startSeconds": 107.969,
+      "text": "here you can see all the different"
+    },
+    {
+      "startSeconds": 109.77,
+      "text": "options are available to pass in the"
+    },
+    {
+      "startSeconds": 113.729,
+      "text": "parameters or options that I can say so"
+    },
+    {
+      "startSeconds": 116.759,
+      "text": "let's start with that one"
+    },
+    {
+      "startSeconds": 122.579,
+      "text": "so forth that fast we connect to the"
+    },
+    {
+      "startSeconds": 127.149,
+      "text": "database they're saying and let's um"
+    },
+    {
+      "startSeconds": 132.4,
+      "text": "let's go create a dummy database for"
+    },
+    {
+      "startSeconds": 135.37,
+      "text": "this purpose so create database just KP"
+    },
+    {
+      "startSeconds": 145.769,
+      "text": "soap cater that I will let's connect to"
+    },
+    {
+      "startSeconds": 148.239,
+      "text": "the database now inside this Here I am"
+    },
+    {
+      "startSeconds": 155.019,
+      "text": "going to create two tables first level"
+    },
+    {
+      "startSeconds": 164.86,
+      "text": "is employee"
+    },
+    {
+      "startSeconds": 180.489,
+      "text": "get some values see that one will now"
+    },
+    {
+      "startSeconds": 193.4,
+      "text": "create another travel"
+    },
+    {
+      "startSeconds": 233.36,
+      "text": "if we see that you can see those two"
+    },
+    {
+      "startSeconds": 237.93,
+      "text": "tables are present now so let's start"
+    },
+    {
+      "startSeconds": 241.29,
+      "text": "with taking it back out for a single"
+    },
+    {
+      "startSeconds": 245.609,
+      "text": "double what we can do we can first"
+    },
+    {
+      "startSeconds": 251.69,
+      "text": "create a directory tree so let's create"
+    },
+    {
+      "startSeconds": 264.99,
+      "text": "a directory where I will install all the"
+    },
+    {
+      "startSeconds": 268.169,
+      "text": "dumb pods"
+    },
+    {
+      "startSeconds": 285.22,
+      "text": "so now now let's take a backup"
+    },
+    {
+      "startSeconds": 309.129,
+      "text": "so here we're going to run a backup of"
+    },
+    {
+      "startSeconds": 312.669,
+      "text": "particular table that employ devil so"
+    },
+    {
+      "startSeconds": 315.979,
+      "text": "what I'm going to do I am passing very"
+    },
+    {
+      "startSeconds": 318.77,
+      "text": "well ser you you is the user then - W -"
+    },
+    {
+      "startSeconds": 325.099,
+      "text": "W option to prompt me he put ID password"
+    },
+    {
+      "startSeconds": 330.619,
+      "text": "for the Postgres user - tt4 table table"
+    },
+    {
+      "startSeconds": 336.08,
+      "text": "option and I'm giving a name that backup"
+    },
+    {
+      "startSeconds": 339.05,
+      "text": "name and it will e stood there as a SQL"
+    },
+    {
+      "startSeconds": 342.08,
+      "text": "formant so let's run that one I'm going"
+    },
+    {
+      "startSeconds": 350.779,
+      "text": "to execute that"
+    },
+    {
+      "startSeconds": 361.87,
+      "text": "so now let's see the contents of that"
+    },
+    {
+      "startSeconds": 363.73,
+      "text": "file that it has been created so if you"
+    },
+    {
+      "startSeconds": 368.8,
+      "text": "go there inside there you see that all"
+    },
+    {
+      "startSeconds": 374.889,
+      "text": "are basically SQL files so it has all"
+    },
+    {
+      "startSeconds": 383.86,
+      "text": "the necessary SQL commands to create all"
+    },
+    {
+      "startSeconds": 386.44,
+      "text": "those objects so object means here is my"
+    },
+    {
+      "startSeconds": 390.31,
+      "text": "employee table"
+    },
+    {
+      "startSeconds": 392.16,
+      "text": "so now let's test this one so connect to"
+    },
+    {
+      "startSeconds": 396.37,
+      "text": "there I'm going to drop this table so we"
+    },
+    {
+      "startSeconds": 414.19,
+      "text": "have completed backup for a particular"
+    },
+    {
+      "startSeconds": 416.02,
+      "text": "table now we are going to restore test"
+    },
+    {
+      "startSeconds": 421.36,
+      "text": "restore so drop table table dropped you"
+    },
+    {
+      "startSeconds": 427.78,
+      "text": "see so employee table no longer there so"
+    },
+    {
+      "startSeconds": 432.639,
+      "text": "now let's restore"
+    },
+    {
+      "startSeconds": 456.68,
+      "text": "so to raise to that one because we"
+    },
+    {
+      "startSeconds": 460.62,
+      "text": "already used passwords so we prompt that"
+    },
+    {
+      "startSeconds": 463.41,
+      "text": "one this is for password and we give the"
+    },
+    {
+      "startSeconds": 471.81,
+      "text": "path where we raise to that file so this"
+    },
+    {
+      "startSeconds": 488.52,
+      "text": "prompt means it has been successfully"
+    },
+    {
+      "startSeconds": 490.95,
+      "text": "let's check that one so here you see"
+    },
+    {
+      "startSeconds": 503.25,
+      "text": "that table has been restored select from"
+    },
+    {
+      "startSeconds": 505.23,
+      "text": "the travel so data has been restored so"
+    },
+    {
+      "startSeconds": 516.78,
+      "text": "we have tested here for a single table"
+    },
+    {
+      "startSeconds": 520.97,
+      "text": "so now let's do with multiple tables"
+    },
+    {
+      "startSeconds": 526.46,
+      "text": "let's do for multiple tables now so"
+    },
+    {
+      "startSeconds": 539.34,
+      "text": "hearing we are doing the same test but"
+    },
+    {
+      "startSeconds": 541.83,
+      "text": "we are easy two tables here I use devil"
+    },
+    {
+      "startSeconds": 546.09,
+      "text": "employee and table course other thing I"
+    },
+    {
+      "startSeconds": 550.5,
+      "text": "did not use W option just to ask me"
+    },
+    {
+      "startSeconds": 554.76,
+      "text": "password so I am ignoring that option"
+    },
+    {
+      "startSeconds": 557.07,
+      "text": "here so let's run this command"
+    },
+    {
+      "startSeconds": 568.41,
+      "text": "great care the fall"
+    },
+    {
+      "startSeconds": 583.72,
+      "text": "so I'm getting a message that file is"
+    },
+    {
+      "startSeconds": 585.94,
+      "text": "not done let me see that one"
+    },
+    {
+      "startSeconds": 590.85,
+      "text": "what is wrong here I came the thing is I"
+    },
+    {
+      "startSeconds": 596.38,
+      "text": "have rain that back up inside test"
+    },
+    {
+      "startSeconds": 599.53,
+      "text": "Wikipedia should not be there for that"
+    },
+    {
+      "startSeconds": 602.11,
+      "text": "is the issue so I'm exit from there I'm"
+    },
+    {
+      "startSeconds": 605.17,
+      "text": "a super user for pros go start a"
+    },
+    {
+      "startSeconds": 607.27,
+      "text": "business now let's turn that back up no"
+    },
+    {
+      "startSeconds": 610.87,
+      "text": "if I go there see the contents so this"
+    },
+    {
+      "startSeconds": 614.5,
+      "text": "time it did not ask me pass out because"
+    },
+    {
+      "startSeconds": 616.18,
+      "text": "I did not use the minus W option that"
+    },
+    {
+      "startSeconds": 619.51,
+      "text": "you see that last time I used that one"
+    },
+    {
+      "startSeconds": 623.46,
+      "text": "here so I did not use that option this"
+    },
+    {
+      "startSeconds": 627.7,
+      "text": "time so it did not prompt me for"
+    },
+    {
+      "startSeconds": 628.99,
+      "text": "password so see the content here see if"
+    },
+    {
+      "startSeconds": 635.08,
+      "text": "we go through again it has got all dumb"
+    },
+    {
+      "startSeconds": 639.78,
+      "text": "sql's"
+    },
+    {
+      "startSeconds": 641.49,
+      "text": "relate to these two tables and insert"
+    },
+    {
+      "startSeconds": 646.51,
+      "text": "the daughter's well there so let's"
+    },
+    {
+      "startSeconds": 650.28,
+      "text": "connect to the database"
+    },
+    {
+      "startSeconds": 661.88,
+      "text": "et and they drop the stables"
+    },
+    {
+      "startSeconds": 678.35,
+      "text": "so temples are gone because there is no"
+    },
+    {
+      "startSeconds": 680.99,
+      "text": "relation you see so this time we are"
+    },
+    {
+      "startSeconds": 684.86,
+      "text": "going to do restore multiple Devils"
+    },
+    {
+      "startSeconds": 720.04,
+      "text": "sir Easter has been completed"
+    },
+    {
+      "startSeconds": 731.2,
+      "text": "now if I type here is it that those two"
+    },
+    {
+      "startSeconds": 735.26,
+      "text": "tables are restored if I see the data"
+    },
+    {
+      "startSeconds": 739.12,
+      "text": "[Music]"
+    },
+    {
+      "startSeconds": 761.249,
+      "text": "so both the tables has been restored so"
+    },
+    {
+      "startSeconds": 765.04,
+      "text": "so far we have checked that object level"
+    },
+    {
+      "startSeconds": 767.98,
+      "text": "now let's see how we can do with them"
+    },
+    {
+      "startSeconds": 772.029,
+      "text": "database level so let's take it back up"
+    },
+    {
+      "startSeconds": 790.42,
+      "text": "of this database level now so good"
+    },
+    {
+      "startSeconds": 805.839,
+      "text": "so as I discussed brought you four user"
+    },
+    {
+      "startSeconds": 808.99,
+      "text": "deed for the the database and while it"
+    },
+    {
+      "startSeconds": 813.579,
+      "text": "will keep those backup some backup has"
+    },
+    {
+      "startSeconds": 818.019,
+      "text": "been done so all the contents there just"
+    },
+    {
+      "startSeconds": 823.149,
+      "text": "to verify that my backup contents looks"
+    },
+    {
+      "startSeconds": 825.43,
+      "text": "good to the database so drop from super"
+    },
+    {
+      "startSeconds": 841.72,
+      "text": "easy so now drop the database database"
+    },
+    {
+      "startSeconds": 846.509,
+      "text": "this backup database has been dropped if"
+    },
+    {
+      "startSeconds": 852.009,
+      "text": "you see there"
+    },
+    {
+      "startSeconds": 852.999,
+      "text": "so database no not abyss just underscore"
+    },
+    {
+      "startSeconds": 856.389,
+      "text": "BKP no longer exists because we dropped"
+    },
+    {
+      "startSeconds": 859.149,
+      "text": "that one so now we are going to restore"
+    },
+    {
+      "startSeconds": 862.209,
+      "text": "this particular database"
+    },
+    {
+      "startSeconds": 900.07,
+      "text": "okay okay let us before go without"
+    },
+    {
+      "startSeconds": 903.79,
+      "text": "prompt C option so that there is AC"
+    },
+    {
+      "startSeconds": 910.389,
+      "text": "option you see here Y X coming so if we"
+    },
+    {
+      "startSeconds": 917.019,
+      "text": "try to restore run this restore command"
+    },
+    {
+      "startSeconds": 919.36,
+      "text": "could not connect to that database does"
+    },
+    {
+      "startSeconds": 921.699,
+      "text": "not exist because that database should"
+    },
+    {
+      "startSeconds": 926.41,
+      "text": "be there as an empty database but if I"
+    },
+    {
+      "startSeconds": 928.959,
+      "text": "put minus C option capital C"
+    },
+    {
+      "startSeconds": 956.85,
+      "text": "let me check that should not be pista"
+    },
+    {
+      "startSeconds": 966.45,
+      "text": "kill you wastrel"
+    },
+    {
+      "startSeconds": 969.2,
+      "text": "I'm trying to see the document error"
+    },
+    {
+      "startSeconds": 974.45,
+      "text": "okay are you squared to make any"
+    },
+    {
+      "startSeconds": 982.02,
+      "text": "difference"
+    },
+    {
+      "startSeconds": 1010.769,
+      "text": "Oh what I'm doing I'm here I'm just I"
+    },
+    {
+      "startSeconds": 1016.23,
+      "text": "type PS scale that should be pitied um"
+    },
+    {
+      "startSeconds": 1026.149,
+      "text": "vision is good"
+    },
+    {
+      "startSeconds": 1067.899,
+      "text": "my backup part is this one like"
+    },
+    {
+      "startSeconds": 1072.649,
+      "text": "application"
+    },
+    {
+      "startSeconds": 1111.27,
+      "text": "I got that because I only took that dump"
+    },
+    {
+      "startSeconds": 1114.48,
+      "text": "I did not use that create option so that"
+    },
+    {
+      "startSeconds": 1118.679,
+      "text": "it could create that create database"
+    },
+    {
+      "startSeconds": 1120.45,
+      "text": "come on okay database command is not"
+    },
+    {
+      "startSeconds": 1123.27,
+      "text": "there inside that file so let's create"
+    },
+    {
+      "startSeconds": 1125.49,
+      "text": "that data is now just complaining that"
+    },
+    {
+      "startSeconds": 1129.57,
+      "text": "database does not exist create database"
+    },
+    {
+      "startSeconds": 1139.61,
+      "text": "the database has been created and let's"
+    },
+    {
+      "startSeconds": 1143.429,
+      "text": "run this back up barrister so now it's"
+    },
+    {
+      "startSeconds": 1151.679,
+      "text": "good go you see there we can see this"
+    },
+    {
+      "startSeconds": 1161.36,
+      "text": "all good here so what I was pointing"
+    },
+    {
+      "startSeconds": 1164.279,
+      "text": "let's check that one so take it back up"
+    },
+    {
+      "startSeconds": 1175.34,
+      "text": "here we can use as part the document we"
+    },
+    {
+      "startSeconds": 1180.63,
+      "text": "can use this create does this create or"
+    },
+    {
+      "startSeconds": 1184.559,
+      "text": "- see"
+    },
+    {
+      "startSeconds": 1207.19,
+      "text": "so now if we see the content"
+    },
+    {
+      "startSeconds": 1218.73,
+      "text": "so that this is the one kid out of this"
+    },
+    {
+      "startSeconds": 1220.95,
+      "text": "just not there before so now if we do"
+    },
+    {
+      "startSeconds": 1229.04,
+      "text": "drop database so database has been"
+    },
+    {
+      "startSeconds": 1236.97,
+      "text": "dropped that if it is not there"
+    },
+    {
+      "startSeconds": 1240.919,
+      "text": "it's from the register command now run"
+    },
+    {
+      "startSeconds": 1249.99,
+      "text": "that one"
+    },
+    {
+      "startSeconds": 1265.14,
+      "text": "so again it's complaining that database"
+    },
+    {
+      "startSeconds": 1268.72,
+      "text": "does not exist so it should clear the"
+    },
+    {
+      "startSeconds": 1270.73,
+      "text": "database automatically"
+    },
+    {
+      "startSeconds": 1283.44,
+      "text": "this is wrong here because I didn't need"
+    },
+    {
+      "startSeconds": 1286.02,
+      "text": "to did find this"
+    },
+    {
+      "startSeconds": 1290.45,
+      "text": "so now coming here and so database has"
+    },
+    {
+      "startSeconds": 1296.31,
+      "text": "been created that's correct there are"
+    },
+    {
+      "startSeconds": 1299.61,
+      "text": "they start of it we see two tuples and"
+    },
+    {
+      "startSeconds": 1305,
+      "text": "if we go there strikes from course that"
+    },
+    {
+      "startSeconds": 1317.97,
+      "text": "is good select all from second database"
+    },
+    {
+      "startSeconds": 1325.58,
+      "text": "so that also good so so far what we have"
+    },
+    {
+      "startSeconds": 1328.44,
+      "text": "done we have take it back up for a"
+    },
+    {
+      "startSeconds": 1331.62,
+      "text": "particular table and then we talked the"
+    },
+    {
+      "startSeconds": 1336.06,
+      "text": "- Valerie's to the trouble then we did"
+    },
+    {
+      "startSeconds": 1338.13,
+      "text": "the same thing for multiple tables now"
+    },
+    {
+      "startSeconds": 1340.02,
+      "text": "we have done for a single database and"
+    },
+    {
+      "startSeconds": 1342.98,
+      "text": "so we start with job chips so now let's"
+    },
+    {
+      "startSeconds": 1347.33,
+      "text": "do for all the database like all the"
+    },
+    {
+      "startSeconds": 1360.69,
+      "text": "databases here so let's get it out of"
+    },
+    {
+      "startSeconds": 1362.64,
+      "text": "its creating database BKP - so we just"
+    },
+    {
+      "startSeconds": 1373.14,
+      "text": "get out the database for our test"
+    },
+    {
+      "startSeconds": 1374.79,
+      "text": "purpose so you're going to do that for"
+    },
+    {
+      "startSeconds": 1386.45,
+      "text": "all the databases so here we are going"
+    },
+    {
+      "startSeconds": 1394.29,
+      "text": "to use PG tamp all because PG dump only"
+    },
+    {
+      "startSeconds": 1397.65,
+      "text": "creates the backup for one part one"
+    },
+    {
+      "startSeconds": 1399.54,
+      "text": "database at a time and it does not store"
+    },
+    {
+      "startSeconds": 1402.48,
+      "text": "all the information on inside you know"
+    },
+    {
+      "startSeconds": 1405.06,
+      "text": "and like relate to database rules or"
+    },
+    {
+      "startSeconds": 1407.24,
+      "text": "cluster white configuration but when we"
+    },
+    {
+      "startSeconds": 1409.77,
+      "text": "use PD dump all it gets all the"
+    },
+    {
+      "startSeconds": 1413.07,
+      "text": "informations so let's do that one"
+    },
+    {
+      "startSeconds": 1441.06,
+      "text": "so here just drop multiple databases"
+    },
+    {
+      "startSeconds": 1448.75,
+      "text": "that you created for our test purpose"
+    },
+    {
+      "startSeconds": 1468.25,
+      "text": "and let's run the wrister command"
+    },
+    {
+      "startSeconds": 1487.62,
+      "text": "so this is drawing don't know if we go"
+    },
+    {
+      "startSeconds": 1492.51,
+      "text": "there so those doesn't like dot abyss"
+    },
+    {
+      "startSeconds": 1500.059,
+      "text": "just be KP and test Wikipedia has been"
+    },
+    {
+      "startSeconds": 1503.309,
+      "text": "registered successfully so now we'll do"
+    },
+    {
+      "startSeconds": 1510.27,
+      "text": "with the file system level backup so for"
+    },
+    {
+      "startSeconds": 1514.44,
+      "text": "system level backup means here I'm"
+    },
+    {
+      "startSeconds": 1519.02,
+      "text": "telling about all the Postal Service's"
+    },
+    {
+      "startSeconds": 1521.88,
+      "text": "orders so what it does if we see this so"
+    },
+    {
+      "startSeconds": 1531.299,
+      "text": "when you take a PD based backup it's"
+    },
+    {
+      "startSeconds": 1535.049,
+      "text": "ultimately take a backup of this"
+    },
+    {
+      "startSeconds": 1537.51,
+      "text": "directory and we can use this backup to"
+    },
+    {
+      "startSeconds": 1544.169,
+      "text": "create a replication database or to like"
+    },
+    {
+      "startSeconds": 1548.96,
+      "text": "schedule job we can run a backup and if"
+    },
+    {
+      "startSeconds": 1551.399,
+      "text": "something happened we can use that"
+    },
+    {
+      "startSeconds": 1552.779,
+      "text": "there'll be we can use that backup to"
+    },
+    {
+      "startSeconds": 1555.51,
+      "text": "restore this database let's go through"
+    },
+    {
+      "startSeconds": 1561.45,
+      "text": "that one"
+    },
+    {
+      "startSeconds": 1578.04,
+      "text": "so here I put X option to get the you"
+    },
+    {
+      "startSeconds": 1583.44,
+      "text": "know that when transactions are"
+    },
+    {
+      "startSeconds": 1584.85,
+      "text": "happening so that it can get all the"
+    },
+    {
+      "startSeconds": 1586.83,
+      "text": "information are included with that"
+    },
+    {
+      "startSeconds": 1589.32,
+      "text": "backup because this is your testing"
+    },
+    {
+      "startSeconds": 1596.16,
+      "text": "moment but real scenario when you have a"
+    },
+    {
+      "startSeconds": 1598.1,
+      "text": "large strategies and you know your"
+    },
+    {
+      "startSeconds": 1601.11,
+      "text": "during that time window there can be"
+    },
+    {
+      "startSeconds": 1602.85,
+      "text": "transition locks happening to get that"
+    },
+    {
+      "startSeconds": 1605.55,
+      "text": "one we can use that option or it looks"
+    },
+    {
+      "startSeconds": 1617.4,
+      "text": "for them empty directory let's create a"
+    },
+    {
+      "startSeconds": 1624.18,
+      "text": "different directory"
+    },
+    {
+      "startSeconds": 1641.98,
+      "text": "so now if you check there so if I"
+    },
+    {
+      "startSeconds": 1648.95,
+      "text": "compare with the data directory here"
+    },
+    {
+      "startSeconds": 1654.52,
+      "text": "you'll see they're ultimately copying"
+    },
+    {
+      "startSeconds": 1658.549,
+      "text": "whole directory edge of data directory"
+    },
+    {
+      "startSeconds": 1664.9,
+      "text": "so to reach to that one what we need to"
+    },
+    {
+      "startSeconds": 1668.45,
+      "text": "do just think a case that server has"
+    },
+    {
+      "startSeconds": 1675.62,
+      "text": "been crashed"
+    },
+    {
+      "startSeconds": 1693.62,
+      "text": "so now we are going to remove data from"
+    },
+    {
+      "startSeconds": 1703.13,
+      "text": "this data directory so now if I try to"
+    },
+    {
+      "startSeconds": 1714.41,
+      "text": "start it will not disturb because"
+    },
+    {
+      "startSeconds": 1716.03,
+      "text": "nothing is there"
+    },
+    {
+      "startSeconds": 1716.93,
+      "text": "I have already closed"
+    },
+    {
+      "startSeconds": 1727.27,
+      "text": "so it's not getting the part nothing"
+    },
+    {
+      "startSeconds": 1729.7,
+      "text": "because that has been dropped my move"
+    },
+    {
+      "startSeconds": 1733.66,
+      "text": "everything's from the directory so now"
+    },
+    {
+      "startSeconds": 1736.3,
+      "text": "what I need to do that the back out this"
+    },
+    {
+      "startSeconds": 1741.94,
+      "text": "one this I need to put into my actual"
+    },
+    {
+      "startSeconds": 1754.75,
+      "text": "data directory so which is this one now"
+    },
+    {
+      "startSeconds": 1762.82,
+      "text": "if I try to start and see their status"
+    },
+    {
+      "startSeconds": 1774.03,
+      "text": "so this has been completed so without"
+    },
+    {
+      "startSeconds": 1778.09,
+      "text": "this there is other options that we can"
+    },
+    {
+      "startSeconds": 1780.13,
+      "text": "use like for point in time recovery so"
+    },
+    {
+      "startSeconds": 1784.27,
+      "text": "how that works point in time recovery"
+    },
+    {
+      "startSeconds": 1786.61,
+      "text": "relates to with the base backup they"
+    },
+    {
+      "startSeconds": 1790.809,
+      "text": "need to also take a backup of the wall"
+    },
+    {
+      "startSeconds": 1792.79,
+      "text": "files what the change is transaction"
+    },
+    {
+      "startSeconds": 1795.1,
+      "text": "changes are happening it is turns into"
+    },
+    {
+      "startSeconds": 1796.9,
+      "text": "the wall falls and it also roll forward"
+    },
+    {
+      "startSeconds": 1800.23,
+      "text": "on the wall files to do a point in time"
+    },
+    {
+      "startSeconds": 1804.429,
+      "text": "recovery that is little bit intermediate"
+    },
+    {
+      "startSeconds": 1811,
+      "text": "or high skills you need it so for this"
+    },
+    {
+      "startSeconds": 1813.61,
+      "text": "video I am NOT going to discuss that one"
+    },
+    {
+      "startSeconds": 1817.17,
+      "text": "so to get like more information with all"
+    },
+    {
+      "startSeconds": 1821.11,
+      "text": "this you can go to post Grayson document"
+    },
+    {
+      "startSeconds": 1826.99,
+      "text": "website and go through there so so far"
+    },
+    {
+      "startSeconds": 1832.75,
+      "text": "in this video I have discussed different"
+    },
+    {
+      "startSeconds": 1834.94,
+      "text": "levels of database backup and then we"
+    },
+    {
+      "startSeconds": 1841.3,
+      "text": "did restore using PG Tom PG Tom Paul and"
+    },
+    {
+      "startSeconds": 1848.16,
+      "text": "PG based backup"
+    },
+    {
+      "startSeconds": 1850.15,
+      "text": "hope you enjoyed or get a very good idea"
+    },
+    {
+      "startSeconds": 1854.73,
+      "text": "how backup"
+    },
+    {
+      "startSeconds": 1858.55,
+      "text": "mr. walks into post Gustavus thank you"
+    }
+  ]
+}

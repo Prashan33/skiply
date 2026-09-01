@@ -1,0 +1,810 @@
+{
+  "id": "4bQeGUzHpOE",
+  "url": "https://www.youtube.com/watch?v=4bQeGUzHpOE",
+  "fetchedAt": "2026-09-01T04:10:24.195Z",
+  "captionKind": "asr",
+  "chapters": [
+    {
+      "startSeconds": 0,
+      "label": "Why Headers Matter for Web App Security"
+    },
+    {
+      "startSeconds": 47,
+      "label": "What Are HTTP Secure Headers?"
+    },
+    {
+      "startSeconds": 80,
+      "label": "Content-Security-Policy (CSP)"
+    },
+    {
+      "startSeconds": 130,
+      "label": "HSTS (Strict-Transport-Security)"
+    },
+    {
+      "startSeconds": 191,
+      "label": "X-Content-Type-Options"
+    },
+    {
+      "startSeconds": 253,
+      "label": "Referrer-Policy"
+    },
+    {
+      "startSeconds": 317,
+      "label": "CORS (Cross-Origin Resource Sharing)"
+    },
+    {
+      "startSeconds": 412,
+      "label": "Permissions-Policy"
+    },
+    {
+      "startSeconds": 476,
+      "label": "Wrap-up: Secure Your App by Default"
+    }
+  ],
+  "cues": [
+    {
+      "startSeconds": 0.64,
+      "text": "Most developers lock down their back end"
+    },
+    {
+      "startSeconds": 3.2,
+      "text": "but miss a simple trick on the front"
+    },
+    {
+      "startSeconds": 5.12,
+      "text": "end. HTTP secure headers. For example,"
+    },
+    {
+      "startSeconds": 9.599,
+      "text": "CSP helps stops things like cross-ite"
+    },
+    {
+      "startSeconds": 12.32,
+      "text": "scripting. HSTS make sure your site"
+    },
+    {
+      "startSeconds": 16,
+      "text": "always loads over HTTPS. And then there"
+    },
+    {
+      "startSeconds": 18.88,
+      "text": "is course or COS, referral policy,"
+    },
+    {
+      "startSeconds": 21.84,
+      "text": "permissions policy and more. Each"
+    },
+    {
+      "startSeconds": 24.48,
+      "text": "closing a different security loophole."
+    },
+    {
+      "startSeconds": 27.279,
+      "text": "These headers are built into the"
+    },
+    {
+      "startSeconds": 29.039,
+      "text": "browser. You just have to use them"
+    },
+    {
+      "startSeconds": 31.199,
+      "text": "right. In this video, you'll learn"
+    },
+    {
+      "startSeconds": 33.44,
+      "text": "exactly what secure headers are, why"
+    },
+    {
+      "startSeconds": 35.84,
+      "text": "they are critical, and how to quickly"
+    },
+    {
+      "startSeconds": 37.68,
+      "text": "implement them, making your apps"
+    },
+    {
+      "startSeconds": 40,
+      "text": "dramatically safer. Let's dive in."
+    },
+    {
+      "startSeconds": 44.14,
+      "text": "[Music]"
+    },
+    {
+      "startSeconds": 48.32,
+      "text": "Secure headers are tiny rule books your"
+    },
+    {
+      "startSeconds": 50.8,
+      "text": "server sends to the browser, telling it"
+    },
+    {
+      "startSeconds": 53.28,
+      "text": "how to treat your content securely. They"
+    },
+    {
+      "startSeconds": 56.48,
+      "text": "don't touch your app logic, but they"
+    },
+    {
+      "startSeconds": 58.719,
+      "text": "quietly enforce critical rules in the"
+    },
+    {
+      "startSeconds": 61.199,
+      "text": "browser like only load scripts from"
+    },
+    {
+      "startSeconds": 64.239,
+      "text": "trusted resources, always use HTTPS or"
+    },
+    {
+      "startSeconds": 68.08,
+      "text": "don't leak sensitive referral data. And"
+    },
+    {
+      "startSeconds": 70.72,
+      "text": "just like that, you have shut down"
+    },
+    {
+      "startSeconds": 72.4,
+      "text": "entire classes of attacks without"
+    },
+    {
+      "startSeconds": 74.56,
+      "text": "changing a single line of JavaScript."
+    },
+    {
+      "startSeconds": 77.2,
+      "text": "Let's start with one of the most"
+    },
+    {
+      "startSeconds": 78.479,
+      "text": "powerful content security policy or CSP."
+    },
+    {
+      "startSeconds": 82.799,
+      "text": "CSP is like a white list for your front"
+    },
+    {
+      "startSeconds": 85.2,
+      "text": "end. It tells your browser only load"
+    },
+    {
+      "startSeconds": 87.92,
+      "text": "scripts, styles, and assets from these"
+    },
+    {
+      "startSeconds": 90.479,
+      "text": "trusted places. For example, this says"
+    },
+    {
+      "startSeconds": 94,
+      "text": "load everything from your own domain by"
+    },
+    {
+      "startSeconds": 95.92,
+      "text": "default. Scripts can also come from your"
+    },
+    {
+      "startSeconds": 98.64,
+      "text": "trusted CDN and block object tags"
+    },
+    {
+      "startSeconds": 101.52,
+      "text": "entirely. No flash, no surprises. So"
+    },
+    {
+      "startSeconds": 104.799,
+      "text": "without CSP, malicious scripts can run"
+    },
+    {
+      "startSeconds": 107.2,
+      "text": "via XSS. Attackers can load code from"
+    },
+    {
+      "startSeconds": 109.84,
+      "text": "any domain and plugins like Flash may"
+    },
+    {
+      "startSeconds": 112.24,
+      "text": "execute. With CSP, only trusted scripts"
+    },
+    {
+      "startSeconds": 115.439,
+      "text": "are allowed. Browsers block unknown"
+    },
+    {
+      "startSeconds": 117.439,
+      "text": "sources and risky elements are blocked."
+    },
+    {
+      "startSeconds": 120.479,
+      "text": "One pro tip, start with content security"
+    },
+    {
+      "startSeconds": 123.04,
+      "text": "policy report only. It logs violations"
+    },
+    {
+      "startSeconds": 125.92,
+      "text": "without blocking anything, so you can"
+    },
+    {
+      "startSeconds": 127.84,
+      "text": "test it safely. Now, let's talk about"
+    },
+    {
+      "startSeconds": 130.72,
+      "text": "HSTS."
+    },
+    {
+      "startSeconds": 132.4,
+      "text": "Some websites still load over plain HTTP"
+    },
+    {
+      "startSeconds": 135.12,
+      "text": "if the browser doesn't start with HTTPS."
+    },
+    {
+      "startSeconds": 138.4,
+      "text": "And that's a problem because in that"
+    },
+    {
+      "startSeconds": 140.48,
+      "text": "initial moment, the connection is still"
+    },
+    {
+      "startSeconds": 142.72,
+      "text": "unencrypted."
+    },
+    {
+      "startSeconds": 144.239,
+      "text": "That tiny window where the browser first"
+    },
+    {
+      "startSeconds": 146.4,
+      "text": "reaches out over HTTP is all an attacker"
+    },
+    {
+      "startSeconds": 149.44,
+      "text": "needs. On a public Wi-Fi network,"
+    },
+    {
+      "startSeconds": 151.92,
+      "text": "someone could intercept the request,"
+    },
+    {
+      "startSeconds": 154,
+      "text": "redirect you, or inject malicious"
+    },
+    {
+      "startSeconds": 156.239,
+      "text": "content before the site even switches to"
+    },
+    {
+      "startSeconds": 158.8,
+      "text": "HTTPS."
+    },
+    {
+      "startSeconds": 160.48,
+      "text": "HSTS fixes this. Once the browser sees"
+    },
+    {
+      "startSeconds": 163.68,
+      "text": "the HSTS header, it knows always use"
+    },
+    {
+      "startSeconds": 166.879,
+      "text": "HTTPS for this domain. No exceptions."
+    },
+    {
+      "startSeconds": 170,
+      "text": "And here is what it looks like. This"
+    },
+    {
+      "startSeconds": 172.16,
+      "text": "tells the browser, enforce HTTPS for one"
+    },
+    {
+      "startSeconds": 175.28,
+      "text": "full year, include all subdomains. And"
+    },
+    {
+      "startSeconds": 178.08,
+      "text": "preload this rule into browsers so even"
+    },
+    {
+      "startSeconds": 180.4,
+      "text": "firsttime visitors connect securely."
+    },
+    {
+      "startSeconds": 183.12,
+      "text": "It's a small header with a big impact,"
+    },
+    {
+      "startSeconds": 185.28,
+      "text": "shutting down a common attack vector"
+    },
+    {
+      "startSeconds": 187.2,
+      "text": "most people don't even realize exists."
+    },
+    {
+      "startSeconds": 189.92,
+      "text": "Next up is a small header that blocks a"
+    },
+    {
+      "startSeconds": 192.319,
+      "text": "surprisingly sneaky attack, MIME"
+    },
+    {
+      "startSeconds": 195.12,
+      "text": "sniffing. Let's say your server sends a"
+    },
+    {
+      "startSeconds": 198,
+      "text": "file with a .txt extension, but inside"
+    },
+    {
+      "startSeconds": 201.44,
+      "text": "that file is actually some malicious"
+    },
+    {
+      "startSeconds": 203.68,
+      "text": "JavaScript. Some older or lenient"
+    },
+    {
+      "startSeconds": 206,
+      "text": "browsers might try to guess what kind of"
+    },
+    {
+      "startSeconds": 208.48,
+      "text": "file it is and decide, hm, this looks"
+    },
+    {
+      "startSeconds": 211.36,
+      "text": "like a script. Let me run it. That's"
+    },
+    {
+      "startSeconds": 213.84,
+      "text": "called mimen sniffing and it can lead to"
+    },
+    {
+      "startSeconds": 216.72,
+      "text": "unexpected script execution. even if the"
+    },
+    {
+      "startSeconds": 219.12,
+      "text": "content type says otherwise. To prevent"
+    },
+    {
+      "startSeconds": 221.599,
+      "text": "this, we use Xc content type options no"
+    },
+    {
+      "startSeconds": 224.959,
+      "text": "sniff. This tells the browser, trust"
+    },
+    {
+      "startSeconds": 227.68,
+      "text": "what I said the file is. Don't try to"
+    },
+    {
+      "startSeconds": 230,
+      "text": "guess. It's simple and it blocks a whole"
+    },
+    {
+      "startSeconds": 232.64,
+      "text": "class of attacks where the browser gets"
+    },
+    {
+      "startSeconds": 234.159,
+      "text": "a little too smart for its own good."
+    },
+    {
+      "startSeconds": 236.64,
+      "text": "Without this header, browser may sniff"
+    },
+    {
+      "startSeconds": 238.879,
+      "text": "file types and misinterpret them or a"
+    },
+    {
+      "startSeconds": 240.959,
+      "text": "txt file with script content might get"
+    },
+    {
+      "startSeconds": 243.12,
+      "text": "executed. So this header makes browsers"
+    },
+    {
+      "startSeconds": 246.56,
+      "text": "strictly follow declared content type"
+    },
+    {
+      "startSeconds": 248.4,
+      "text": "and malicious files are treated as plain"
+    },
+    {
+      "startSeconds": 250.64,
+      "text": "text not scripts. Now when a user clicks"
+    },
+    {
+      "startSeconds": 253.68,
+      "text": "a link from your site to another the"
+    },
+    {
+      "startSeconds": 255.92,
+      "text": "browser sends a referral header."
+    },
+    {
+      "startSeconds": 258.479,
+      "text": "Basically saying hey this is where the"
+    },
+    {
+      "startSeconds": 260.959,
+      "text": "user came from. But here's the catch."
+    },
+    {
+      "startSeconds": 263.759,
+      "text": "That header might include full URLs"
+    },
+    {
+      "startSeconds": 266.4,
+      "text": "including query parameters, tokens or"
+    },
+    {
+      "startSeconds": 269.04,
+      "text": "even user ids. And that's risky."
+    },
+    {
+      "startSeconds": 272.72,
+      "text": "You might be leaking sensitive info to"
+    },
+    {
+      "startSeconds": 274.479,
+      "text": "third party websites without even"
+    },
+    {
+      "startSeconds": 276.32,
+      "text": "realizing it. To control this, we use"
+    },
+    {
+      "startSeconds": 279.759,
+      "text": "referral policy strict origin when cross"
+    },
+    {
+      "startSeconds": 282.32,
+      "text": "origin. This means if the next page is"
+    },
+    {
+      "startSeconds": 285.44,
+      "text": "on your own domain, send the full URL."
+    },
+    {
+      "startSeconds": 288.639,
+      "text": "If it's going to another domain, just"
+    },
+    {
+      "startSeconds": 290.72,
+      "text": "send the origin, say bitemong.io, and"
+    },
+    {
+      "startSeconds": 293.84,
+      "text": "nothing more. It's a simple tweak that"
+    },
+    {
+      "startSeconds": 296.24,
+      "text": "protects your users's privacy and keeps"
+    },
+    {
+      "startSeconds": 298.479,
+      "text": "your internal data from leaking to the"
+    },
+    {
+      "startSeconds": 300.4,
+      "text": "outside. Without this policy, full URLs"
+    },
+    {
+      "startSeconds": 303.6,
+      "text": "including your query params can leak to"
+    },
+    {
+      "startSeconds": 305.36,
+      "text": "other sites and sensitive data like"
+    },
+    {
+      "startSeconds": 307.68,
+      "text": "tokens or ids may be exposed. With this"
+    },
+    {
+      "startSeconds": 310.24,
+      "text": "policy in place, only the domain is"
+    },
+    {
+      "startSeconds": 312.24,
+      "text": "shared on cross- site requests and user"
+    },
+    {
+      "startSeconds": 314.4,
+      "text": "privacy is protected by limiting"
+    },
+    {
+      "startSeconds": 316.08,
+      "text": "referral info. Let's talk about course"
+    },
+    {
+      "startSeconds": 318.56,
+      "text": "or cross origin resource sharing. Course"
+    },
+    {
+      "startSeconds": 321.68,
+      "text": "is all about control. Who is allowed to"
+    },
+    {
+      "startSeconds": 323.84,
+      "text": "talk to your back end and who is not? By"
+    },
+    {
+      "startSeconds": 326.4,
+      "text": "default, browsers block JavaScript"
+    },
+    {
+      "startSeconds": 328.639,
+      "text": "running on one domain from making"
+    },
+    {
+      "startSeconds": 330.08,
+      "text": "requests to another. And that's a good"
+    },
+    {
+      "startSeconds": 332.32,
+      "text": "security feature, but your front end and"
+    },
+    {
+      "startSeconds": 334.8,
+      "text": "back end might live on different"
+    },
+    {
+      "startSeconds": 336.32,
+      "text": "domains. Say your React app is on"
+    },
+    {
+      "startSeconds": 339.12,
+      "text": "app.bitemunk.io"
+    },
+    {
+      "startSeconds": 341.12,
+      "text": "and your API is on api.bitemunk.com."
+    },
+    {
+      "startSeconds": 345.28,
+      "text": "To make that work securely, you need to"
+    },
+    {
+      "startSeconds": 347.52,
+      "text": "explicitly allow that connection. And"
+    },
+    {
+      "startSeconds": 349.52,
+      "text": "that's where course headers come in. And"
+    },
+    {
+      "startSeconds": 351.68,
+      "text": "here's an example. This tells the"
+    },
+    {
+      "startSeconds": 354,
+      "text": "browser only allow requests from"
+    },
+    {
+      "startSeconds": 355.68,
+      "text": "bitemunk.io and only accept safe methods"
+    },
+    {
+      "startSeconds": 358.88,
+      "text": "like get or post. Only allow specific"
+    },
+    {
+      "startSeconds": 361.44,
+      "text": "headers like content type and"
+    },
+    {
+      "startSeconds": 363.039,
+      "text": "authorization. And again guys here avoid"
+    },
+    {
+      "startSeconds": 365.919,
+      "text": "using star or wild card unless you are"
+    },
+    {
+      "startSeconds": 368,
+      "text": "absolutely sure there is no sensitive"
+    },
+    {
+      "startSeconds": 369.68,
+      "text": "data involved. Think of course as a"
+    },
+    {
+      "startSeconds": 372.16,
+      "text": "gate. You decide who gets in. By the way"
+    },
+    {
+      "startSeconds": 375.6,
+      "text": "I have done a full deep dive on how"
+    },
+    {
+      "startSeconds": 377.28,
+      "text": "course works, why it exist, common"
+    },
+    {
+      "startSeconds": 379.36,
+      "text": "pitfalls and how to fix course errors."
+    },
+    {
+      "startSeconds": 382.08,
+      "text": "Check it out in the security playlist on"
+    },
+    {
+      "startSeconds": 383.759,
+      "text": "this channel if you want the complete"
+    },
+    {
+      "startSeconds": 385.44,
+      "text": "picture. So basically without proper"
+    },
+    {
+      "startSeconds": 388.08,
+      "text": "course legit cross origin request may"
+    },
+    {
+      "startSeconds": 390.479,
+      "text": "fail. APIs may unintentionally expose"
+    },
+    {
+      "startSeconds": 393.68,
+      "text": "data to any site. Course make sure that"
+    },
+    {
+      "startSeconds": 396.4,
+      "text": "only trusted domains can access your API"
+    },
+    {
+      "startSeconds": 399.12,
+      "text": "and the access is tightly controlled by"
+    },
+    {
+      "startSeconds": 401.199,
+      "text": "origin and method. But headers don't"
+    },
+    {
+      "startSeconds": 404.08,
+      "text": "just control what comes in and out. They"
+    },
+    {
+      "startSeconds": 406.479,
+      "text": "can also control what your site is"
+    },
+    {
+      "startSeconds": 408.56,
+      "text": "allowed to do inside the browser itself."
+    },
+    {
+      "startSeconds": 411.12,
+      "text": "And that's where permissions policy come"
+    },
+    {
+      "startSeconds": 413.199,
+      "text": "in. Modern browsers give websites access"
+    },
+    {
+      "startSeconds": 415.68,
+      "text": "to features like geoloccation, camera,"
+    },
+    {
+      "startSeconds": 418.4,
+      "text": "microphone, full screen, and even"
+    },
+    {
+      "startSeconds": 421.12,
+      "text": "vibration. But here's the thing, not"
+    },
+    {
+      "startSeconds": 424.16,
+      "text": "every script on your site should have"
+    },
+    {
+      "startSeconds": 425.84,
+      "text": "that power. Imagine emitting a third"
+    },
+    {
+      "startSeconds": 428.16,
+      "text": "party widget and it quietly asks for a"
+    },
+    {
+      "startSeconds": 430.24,
+      "text": "mic access. Yeah, not great. Permissions"
+    },
+    {
+      "startSeconds": 434.319,
+      "text": "policy let you take that control. You"
+    },
+    {
+      "startSeconds": 436.4,
+      "text": "define who gets access to what right"
+    },
+    {
+      "startSeconds": 439.12,
+      "text": "from the response header. Only your own"
+    },
+    {
+      "startSeconds": 441.68,
+      "text": "site can access your location. Mic and"
+    },
+    {
+      "startSeconds": 444.319,
+      "text": "camera blocked completely even by"
+    },
+    {
+      "startSeconds": 446.88,
+      "text": "accident. It's clean, declarative, and"
+    },
+    {
+      "startSeconds": 449.84,
+      "text": "gives you a security budget you control."
+    },
+    {
+      "startSeconds": 452.639,
+      "text": "So now you have got a toolkit of"
+    },
+    {
+      "startSeconds": 454.8,
+      "text": "powerful HTTP secure headers. Each one"
+    },
+    {
+      "startSeconds": 457.52,
+      "text": "closing a specific security gap. And"
+    },
+    {
+      "startSeconds": 459.84,
+      "text": "here's the best part. They work"
+    },
+    {
+      "startSeconds": 461.52,
+      "text": "silently. No UI changes, no user"
+    },
+    {
+      "startSeconds": 464.639,
+      "text": "friction. the smart defaults that make"
+    },
+    {
+      "startSeconds": 466.96,
+      "text": "your app safer. If this helped you,"
+    },
+    {
+      "startSeconds": 469.44,
+      "text": "share it with your team. And if you want"
+    },
+    {
+      "startSeconds": 471.12,
+      "text": "more, hit like, subscribe, and check out"
+    },
+    {
+      "startSeconds": 473.36,
+      "text": "my security and system design playlist"
+    },
+    {
+      "startSeconds": 475.12,
+      "text": "for more deep dives like this. See you"
+    },
+    {
+      "startSeconds": 477.039,
+      "text": "in the next one. Stay secure."
+    },
+    {
+      "startSeconds": 480.82,
+      "text": "[Music]"
+    }
+  ]
+}

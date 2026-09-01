@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { auth } from "@clerk/nextjs/server";
-import { BarChart3, Bookmark, ChevronRight, Clock, Users } from "lucide-react";
+import { BarChart3, ChevronRight, Clock, Users } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { TopNav } from "@/components/ui/Navigation";
 import { Badge } from "@/components/ui/Badge";
@@ -14,8 +14,9 @@ import {
   type SidebarModule,
 } from "@/components/lesson/LessonSidebar";
 import { LessonNav, type NavLesson } from "@/components/lesson/LessonNav";
+import { LessonBookmarkButton } from "@/components/lesson/LessonBookmarkButton";
 import { LESSON_BY_SLUG_QUERY, LESSON_SLUGS_QUERY } from "@/sanity/lib/queries";
-import { getReadClient } from "@/sanity/lib/fetch";
+import { getProgressForUser, getReadClient } from "@/sanity/lib/fetch";
 import { urlFor } from "@/sanity/lib/image";
 import { getPostHogClient } from "@/lib/posthog-server";
 import { capitalize, formatClock, formatDurationFromSeconds } from "@/lib/format";
@@ -64,6 +65,16 @@ export default async function LessonPage({
 
   if (!lesson) notFound();
 
+  const progress = userId ? await getProgressForUser(userId) : null;
+  const progressEntries = progress?.entries ?? [];
+  const completedIds = new Set(
+    progressEntries.filter((e) => e?.completed && e.lessonId).map((e) => e.lessonId as string),
+  );
+  const currentEntry = progressEntries.find((e) => e?.lessonId === lesson._id) ?? null;
+  const lessonBookmarked = (progress?.bookmarks ?? []).some(
+    (b) => b?.kind === "lesson" && b.refId === lesson._id,
+  );
+
   const course = lesson.course;
   const modules = course?.modules ?? [];
 
@@ -103,19 +114,20 @@ export default async function LessonPage({
         }
       : null;
 
-  // Placeholder progress — no per-learner backend yet (see LessonSidebar).
+  // Real per-learner progress (AGENTS.md §7). Completion is watch-gated by
+  // `POST /api/progress`; a lesson only counts as done once it is in `completedIds`.
+  const completedInCourse = flat.filter((l) => completedIds.has(l.id)).length;
   const percentComplete =
-    flat.length > 0 && currentIndex >= 0
-      ? Math.round((currentIndex / flat.length) * 100)
-      : 0;
+    flat.length > 0 ? Math.round((completedInCourse / flat.length) * 100) : 0;
 
-  const sidebarModules: SidebarModule[] = modules.map((m, mi) => {
-    const lessons = (m.lessons ?? []).map((l) => {
+  const sidebarModules: SidebarModule[] = modules.map((m) => {
+    const moduleLessons = m.lessons ?? [];
+    const lessons = moduleLessons.map((l) => {
       const flatIdx = flat.findIndex((f) => f.id === l._id);
       const status =
         flatIdx === currentIndex
           ? ("active" as const)
-          : flatIdx >= 0 && flatIdx < currentIndex
+          : completedIds.has(l._id)
             ? ("done" as const)
             : ("upcoming" as const);
       return {
@@ -126,14 +138,15 @@ export default async function LessonPage({
         status,
       };
     });
-    const moduleSeconds = (m.lessons ?? []).reduce((s, l) => s + (l.duration ?? 0), 0);
+    const moduleSeconds = moduleLessons.reduce((s, l) => s + (l.duration ?? 0), 0);
     return {
       key: m._key,
       title: m.title ?? "Untitled module",
       durationLabel: formatDurationFromSeconds(moduleSeconds),
       lessons,
-      completed: mi < activeModuleIndex,
-      hasActive: mi === activeModuleIndex,
+      completed:
+        moduleLessons.length > 0 && moduleLessons.every((l) => completedIds.has(l._id)),
+      hasActive: moduleLessons.some((l) => l._id === lesson._id),
     };
   });
 
@@ -147,7 +160,15 @@ export default async function LessonPage({
     ? { url: posterUrl, alt: lesson.poster?.alt || lesson.title || "" }
     : null;
 
-  const startSeconds = parseStartSeconds(sp.t ?? sp.start, lesson.duration);
+  // An explicit `?t=` / `?start=` always wins; otherwise resume where the learner
+  // left off, unless they finished or are within 15s of the end.
+  const explicitStart = parseStartSeconds(sp.t ?? sp.start, lesson.duration);
+  const resumeAt = currentEntry?.lastPosition ?? 0;
+  const canResume =
+    !currentEntry?.completed &&
+    resumeAt > 0 &&
+    (lesson.duration == null || resumeAt < lesson.duration - 15);
+  const startSeconds = explicitStart > 0 ? explicitStart : canResume ? resumeAt : 0;
 
   const studentCount =
     typeof lesson.studentCount === "number"
@@ -251,14 +272,12 @@ export default async function LessonPage({
                   </p>
                 )}
               </div>
-              <button
-                type="button"
-                aria-label="Save lesson"
-                title="Save lesson"
-                className="flex h-10 w-10 shrink-0 items-center justify-center rounded-[var(--radius-sm)] border border-neutral-200 text-neutral-500 hover:border-neutral-300 hover:text-neutral-700"
-              >
-                <Bookmark className="h-4 w-4" strokeWidth={2} />
-              </button>
+              <LessonBookmarkButton
+                lessonId={lesson._id}
+                lessonSlug={slug}
+                lessonTitle={lesson.title ?? "Lesson"}
+                initialBookmarked={lessonBookmarked}
+              />
             </div>
 
             {/* Meta row */}
@@ -290,6 +309,9 @@ export default async function LessonPage({
               monogram={monogram}
               lessonSlug={slug}
               courseSlug={course?.slug ?? null}
+              lessonId={lesson._id}
+              initialSecondsWatched={currentEntry?.secondsWatched ?? 0}
+              initialCompleted={currentEntry?.completed ?? false}
             />
 
             {/* Tabs */}

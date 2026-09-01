@@ -1,8 +1,694 @@
 {
   "id": "iCEJY9XpfG8",
   "url": "https://www.youtube.com/watch?v=iCEJY9XpfG8",
-  "fetchedAt": "2026-08-31T05:15:31.686Z",
-  "captionKind": "empty",
-  "chapters": [],
-  "cues": []
+  "fetchedAt": "2026-09-01T04:06:08.891Z",
+  "captionKind": "asr",
+  "chapters": [
+    {
+      "startSeconds": 0,
+      "label": "Intro"
+    },
+    {
+      "startSeconds": 12,
+      "label": "Mapped Types"
+    },
+    {
+      "startSeconds": 387,
+      "label": "Outro"
+    }
+  ],
+  "cues": [
+    {
+      "startSeconds": 0.359,
+      "text": "map types are a really powerful tool"
+    },
+    {
+      "startSeconds": 2.399,
+      "text": "every typescript developer should know"
+    },
+    {
+      "startSeconds": 4.4,
+      "text": "so let's figure out how to use them and"
+    },
+    {
+      "startSeconds": 6.6,
+      "text": "let's add them to our tool"
+    },
+    {
+      "startSeconds": 11.12,
+      "text": "belt so let's dive straight into the"
+    },
+    {
+      "startSeconds": 13.759,
+      "text": "code and let's figure out how we can use"
+    },
+    {
+      "startSeconds": 15.799,
+      "text": "the map types to make our code much more"
+    },
+    {
+      "startSeconds": 18,
+      "text": "robust let's say we have a type events"
+    },
+    {
+      "startSeconds": 20.48,
+      "text": "here and this has an add property and a"
+    },
+    {
+      "startSeconds": 23.359,
+      "text": "remove property now what we want to do"
+    },
+    {
+      "startSeconds": 26,
+      "text": "is we want to say we have a user actions"
+    },
+    {
+      "startSeconds": 28.599,
+      "text": "object here and this of type on events"
+    },
+    {
+      "startSeconds": 31.56,
+      "text": "and what is this on events what kind of"
+    },
+    {
+      "startSeconds": 33.84,
+      "text": "type we have an on ADD property here"
+    },
+    {
+      "startSeconds": 36.52,
+      "text": "which is a function and on remove"
+    },
+    {
+      "startSeconds": 38.92,
+      "text": "property which is also a function so"
+    },
+    {
+      "startSeconds": 41.2,
+      "text": "basically this on events should have an"
+    },
+    {
+      "startSeconds": 43.12,
+      "text": "on function for each of the events now"
+    },
+    {
+      "startSeconds": 45.96,
+      "text": "we could create an on events type like"
+    },
+    {
+      "startSeconds": 48.16,
+      "text": "this and could then say on ADD and on"
+    },
+    {
+      "startSeconds": 51.32,
+      "text": "remove like this now this works"
+    },
+    {
+      "startSeconds": 53.64,
+      "text": "perfectly fine but as soon as we change"
+    },
+    {
+      "startSeconds": 56.48,
+      "text": "something in our events we can see what"
+    },
+    {
+      "startSeconds": 58.719,
+      "text": "the problems are with this approach so"
+    },
+    {
+      "startSeconds": 60.6,
+      "text": "if I say move here we can see that"
+    },
+    {
+      "startSeconds": 62.92,
+      "text": "everything still compiles and we don't"
+    },
+    {
+      "startSeconds": 65,
+      "text": "want that because you want for each of"
+    },
+    {
+      "startSeconds": 66.96,
+      "text": "the events an on event function and on"
+    },
+    {
+      "startSeconds": 70.32,
+      "text": "ADD and on remove and on move function"
+    },
+    {
+      "startSeconds": 72.799,
+      "text": "in this case this of course cannot be"
+    },
+    {
+      "startSeconds": 74.96,
+      "text": "achieved if we create them manually that"
+    },
+    {
+      "startSeconds": 77.759,
+      "text": "this will automatically create a new on"
+    },
+    {
+      "startSeconds": 80.64,
+      "text": "type but we can only achieve this by"
+    },
+    {
+      "startSeconds": 83.159,
+      "text": "using map types let's think about how"
+    },
+    {
+      "startSeconds": 85.6,
+      "text": "the shape of this onevent type should"
+    },
+    {
+      "startSeconds": 87.439,
+      "text": "look like we want it to have all the"
+    },
+    {
+      "startSeconds": 89.24,
+      "text": "property keys of our events but prefixed"
+    },
+    {
+      "startSeconds": 92.079,
+      "text": "with an on and an uppercased first"
+    },
+    {
+      "startSeconds": 94.28,
+      "text": "letter of our events key so what we can"
+    },
+    {
+      "startSeconds": 96.799,
+      "text": "say here is we say type event keys and"
+    },
+    {
+      "startSeconds": 99.92,
+      "text": "we say key of events this is like a"
+    },
+    {
+      "startSeconds": 102.52,
+      "text": "helper type which we will use and this"
+    },
+    {
+      "startSeconds": 104.6,
+      "text": "event Keys here now says that if we have"
+    },
+    {
+      "startSeconds": 107.32,
+      "text": "a key here of type event Keys we are"
+    },
+    {
+      "startSeconds": 110.04,
+      "text": "only allowed to use add remove or move"
+    },
+    {
+      "startSeconds": 113.24,
+      "text": "as a string here because this is only"
+    },
+    {
+      "startSeconds": 115.04,
+      "text": "allowed to be the key of our events so"
+    },
+    {
+      "startSeconds": 117.96,
+      "text": "what we now can do with this is we can"
+    },
+    {
+      "startSeconds": 119.96,
+      "text": "create our map type we remove these"
+    },
+    {
+      "startSeconds": 122.719,
+      "text": "fixed types here and we say okay the key"
+    },
+    {
+      "startSeconds": 126.36,
+      "text": "has to be in event Keys you can see we"
+    },
+    {
+      "startSeconds": 129.36,
+      "text": "have used our brackets here and as a"
+    },
+    {
+      "startSeconds": 132.28,
+      "text": "value we can say we just want to have"
+    },
+    {
+      "startSeconds": 134.879,
+      "text": "any function like this and now we can"
+    },
+    {
+      "startSeconds": 137.28,
+      "text": "see line 12 does no longer compile"
+    },
+    {
+      "startSeconds": 139.48,
+      "text": "because now we of course have to change"
+    },
+    {
+      "startSeconds": 141.48,
+      "text": "this to add and remove because now only"
+    },
+    {
+      "startSeconds": 145.04,
+      "text": "the property keys of our events type are"
+    },
+    {
+      "startSeconds": 147.64,
+      "text": "allowed now what we also have to do now"
+    },
+    {
+      "startSeconds": 150.04,
+      "text": "to make it compile is and that is one"
+    },
+    {
+      "startSeconds": 152.56,
+      "text": "one step in the right direction is we"
+    },
+    {
+      "startSeconds": 154.48,
+      "text": "have to add our move function here"
+    },
+    {
+      "startSeconds": 157.36,
+      "text": "because otherwise this will not compile"
+    },
+    {
+      "startSeconds": 159.4,
+      "text": "of course now we have the problem that"
+    },
+    {
+      "startSeconds": 161.519,
+      "text": "we don't have the on prefix but we can"
+    },
+    {
+      "startSeconds": 163.92,
+      "text": "change that we can use template lals and"
+    },
+    {
+      "startSeconds": 166.4,
+      "text": "use this key here because this key is"
+    },
+    {
+      "startSeconds": 168.4,
+      "text": "just a variable you can call this"
+    },
+    {
+      "startSeconds": 169.879,
+      "text": "anything you like but I like to call"
+    },
+    {
+      "startSeconds": 171.959,
+      "text": "this key what we now say is s and then"
+    },
+    {
+      "startSeconds": 175.48,
+      "text": "use spec ticks and we will use template"
+    },
+    {
+      "startSeconds": 177.959,
+      "text": "literals I already did videos about"
+    },
+    {
+      "startSeconds": 179.959,
+      "text": "template L rules you can find it in the"
+    },
+    {
+      "startSeconds": 181.76,
+      "text": "info box but also in the description"
+    },
+    {
+      "startSeconds": 183.56,
+      "text": "below and we can use this template L"
+    },
+    {
+      "startSeconds": 185.879,
+      "text": "rules to tell typescript hey we want an"
+    },
+    {
+      "startSeconds": 188.319,
+      "text": "on prefix and then we use our curly"
+    },
+    {
+      "startSeconds": 190.519,
+      "text": "braces with our dollar sign and then"
+    },
+    {
+      "startSeconds": 192.84,
+      "text": "access this key here and now we can see"
+    },
+    {
+      "startSeconds": 195.12,
+      "text": "our code does no longer compile because"
+    },
+    {
+      "startSeconds": 197.239,
+      "text": "what we now need to do is we need to"
+    },
+    {
+      "startSeconds": 199.76,
+      "text": "prefix all our properties with an on"
+    },
+    {
+      "startSeconds": 202.799,
+      "text": "because we tell typescript hey we want"
+    },
+    {
+      "startSeconds": 205,
+      "text": "our property keys to have an on prefix"
+    },
+    {
+      "startSeconds": 207.64,
+      "text": "and then the key now the last thing we"
+    },
+    {
+      "startSeconds": 209.519,
+      "text": "have to do is we have to capitalize the"
+    },
+    {
+      "startSeconds": 211.439,
+      "text": "first letter how can we do this we say"
+    },
+    {
+      "startSeconds": 214.12,
+      "text": "capitalize like this this is a so-called"
+    },
+    {
+      "startSeconds": 216.68,
+      "text": "intrinsic utility type from typescript"
+    },
+    {
+      "startSeconds": 219.28,
+      "text": "we pass it our key here and we can see"
+    },
+    {
+      "startSeconds": 221.879,
+      "text": "now the code does no longer compile"
+    },
+    {
+      "startSeconds": 223.72,
+      "text": "because now we have to uppercase the"
+    },
+    {
+      "startSeconds": 226.4,
+      "text": "first letter of our events keys and now"
+    },
+    {
+      "startSeconds": 229.36,
+      "text": "we can see we have already achieved what"
+    },
+    {
+      "startSeconds": 231.56,
+      "text": "we wanted we have our events type which"
+    },
+    {
+      "startSeconds": 234.2,
+      "text": "is like our base type and we have our on"
+    },
+    {
+      "startSeconds": 236.36,
+      "text": "events which is a map type which deres"
+    },
+    {
+      "startSeconds": 239.04,
+      "text": "from this event"
+    },
+    {
+      "startSeconds": 240.28,
+      "text": "now if I change something from remove"
+    },
+    {
+      "startSeconds": 242.239,
+      "text": "for example to delete we can see here"
+    },
+    {
+      "startSeconds": 244.439,
+      "text": "this does no longer compile because this"
+    },
+    {
+      "startSeconds": 246.4,
+      "text": "is not found and now I can change this"
+    },
+    {
+      "startSeconds": 248.64,
+      "text": "and we can see here I get autoc"
+    },
+    {
+      "startSeconds": 250.2,
+      "text": "completion I I can change this to on"
+    },
+    {
+      "startSeconds": 252.239,
+      "text": "delete and we can see now the C compiles"
+    },
+    {
+      "startSeconds": 254.4,
+      "text": "fine so we have our events which is like"
+    },
+    {
+      "startSeconds": 256.84,
+      "text": "the base and our on events which is"
+    },
+    {
+      "startSeconds": 259.639,
+      "text": "completely dependent on it so we don't"
+    },
+    {
+      "startSeconds": 261.479,
+      "text": "have to change it manually now this is"
+    },
+    {
+      "startSeconds": 263.759,
+      "text": "already really nice but let's make this"
+    },
+    {
+      "startSeconds": 265.68,
+      "text": "a little bit more generic so what we can"
+    },
+    {
+      "startSeconds": 267.68,
+      "text": "say here is we can say okay in instead"
+    },
+    {
+      "startSeconds": 270,
+      "text": "of this being an dependent on the event"
+    },
+    {
+      "startSeconds": 273.52,
+      "text": "and on the event Keys we can say here we"
+    },
+    {
+      "startSeconds": 275.88,
+      "text": "make this generic we say on T extends"
+    },
+    {
+      "startSeconds": 279.72,
+      "text": "object because we want only to be able"
+    },
+    {
+      "startSeconds": 281.8,
+      "text": "to use it with an with an object type"
+    },
+    {
+      "startSeconds": 283.84,
+      "text": "like the events type is and then we say"
+    },
+    {
+      "startSeconds": 286.32,
+      "text": "key has to be in key of T because here"
+    },
+    {
+      "startSeconds": 291.4,
+      "text": "we don't want this event Keys anymore we"
+    },
+    {
+      "startSeconds": 293.36,
+      "text": "want to be P be using just the keys of"
+    },
+    {
+      "startSeconds": 295.72,
+      "text": "this type we pass in and now we get an"
+    },
+    {
+      "startSeconds": 297.6,
+      "text": "error because we can see here this key"
+    },
+    {
+      "startSeconds": 299.8,
+      "text": "is not valid to be passed to the"
+    },
+    {
+      "startSeconds": 301.52,
+      "text": "capitalize why is this well this key can"
+    },
+    {
+      "startSeconds": 304.28,
+      "text": "be something else than just a string"
+    },
+    {
+      "startSeconds": 306.72,
+      "text": "because keys of prop of objects can also"
+    },
+    {
+      "startSeconds": 309.8,
+      "text": "be like numbers or symbols so we have to"
+    },
+    {
+      "startSeconds": 312.68,
+      "text": "restrict this so we can say in case of"
+    },
+    {
+      "startSeconds": 315.8,
+      "text": "this key extending string so basically"
+    },
+    {
+      "startSeconds": 318.759,
+      "text": "if this key is a string in this case we"
+    },
+    {
+      "startSeconds": 321.44,
+      "text": "say okay we want to have this template"
+    },
+    {
+      "startSeconds": 324,
+      "text": "literal this key otherwise we say never"
+    },
+    {
+      "startSeconds": 327.72,
+      "text": "and what this never does basically is it"
+    },
+    {
+      "startSeconds": 330.12,
+      "text": "filters all the properties all the"
+    },
+    {
+      "startSeconds": 332.68,
+      "text": "property Keys which are not a string so"
+    },
+    {
+      "startSeconds": 335.28,
+      "text": "the never type is really something"
+    },
+    {
+      "startSeconds": 336.72,
+      "text": "interesting and really powerful type and"
+    },
+    {
+      "startSeconds": 338.6,
+      "text": "I will make a video which I will go more"
+    },
+    {
+      "startSeconds": 341.12,
+      "text": "in depth about it I already did one you"
+    },
+    {
+      "startSeconds": 343.199,
+      "text": "can check it out in the info box or in"
+    },
+    {
+      "startSeconds": 344.8,
+      "text": "the description where I will show you"
+    },
+    {
+      "startSeconds": 346.759,
+      "text": "how you can use the never type with the"
+    },
+    {
+      "startSeconds": 348.8,
+      "text": "satisfies keyword to make exhaustive"
+    },
+    {
+      "startSeconds": 351.4,
+      "text": "switches or exhaustive if else cases but"
+    },
+    {
+      "startSeconds": 354.24,
+      "text": "let's go back here and fix this we say"
+    },
+    {
+      "startSeconds": 357,
+      "text": "instead of on events we say on event"
+    },
+    {
+      "startSeconds": 359.639,
+      "text": "events like this and we can see it's now"
+    },
+    {
+      "startSeconds": 361.72,
+      "text": "perfectly fine again and is working as"
+    },
+    {
+      "startSeconds": 363.8,
+      "text": "before but now in a much more generic"
+    },
+    {
+      "startSeconds": 365.759,
+      "text": "way where it can pass in any type you"
+    },
+    {
+      "startSeconds": 368.12,
+      "text": "like so to recapitulate what we did we"
+    },
+    {
+      "startSeconds": 370.72,
+      "text": "created a basic type an events type then"
+    },
+    {
+      "startSeconds": 373.599,
+      "text": "used a map type with a generic to create"
+    },
+    {
+      "startSeconds": 376.84,
+      "text": "a new type from it which changes"
+    },
+    {
+      "startSeconds": 379.24,
+      "text": "immediately when we change the base type"
+    },
+    {
+      "startSeconds": 381.599,
+      "text": "if we change one type then the other"
+    },
+    {
+      "startSeconds": 383.4,
+      "text": "ones will automatically also change"
+    },
+    {
+      "startSeconds": 385.72,
+      "text": "their"
+    },
+    {
+      "startSeconds": 386.88,
+      "text": "shape so thank you for watching the"
+    },
+    {
+      "startSeconds": 389.08,
+      "text": "video I I hope you learned something"
+    },
+    {
+      "startSeconds": 390.4,
+      "text": "useful today if you did maybe leave a"
+    },
+    {
+      "startSeconds": 392.639,
+      "text": "like And subscribe to the channel if you"
+    },
+    {
+      "startSeconds": 394.479,
+      "text": "want to stay updated for the newest"
+    },
+    {
+      "startSeconds": 396.28,
+      "text": "typescript stuff and let me know in the"
+    },
+    {
+      "startSeconds": 398.12,
+      "text": "comments if you have certain topics you"
+    },
+    {
+      "startSeconds": 399.96,
+      "text": "want to get covered in future videos see"
+    },
+    {
+      "startSeconds": 402.599,
+      "text": "you soon bye"
+    }
+  ]
 }

@@ -1,8 +1,1946 @@
 {
   "id": "Qwb-Za6cBws",
   "url": "https://www.youtube.com/watch?v=Qwb-Za6cBws",
-  "fetchedAt": "2026-08-31T05:14:56.302Z",
-  "captionKind": "empty",
-  "chapters": [],
-  "cues": []
+  "fetchedAt": "2026-09-01T04:05:11.239Z",
+  "captionKind": "asr",
+  "chapters": [
+    {
+      "startSeconds": 0,
+      "label": "Introduction"
+    },
+    {
+      "startSeconds": 26,
+      "label": "Demo Application"
+    },
+    {
+      "startSeconds": 105,
+      "label": "Basic Profiler Features"
+    },
+    {
+      "startSeconds": 390,
+      "label": "Advanced Profiler Features"
+    }
+  ],
+  "cues": [
+    {
+      "startSeconds": 0,
+      "text": "Debugging a slow React application to"
+    },
+    {
+      "startSeconds": 2.52,
+      "text": "fix performance problems is incredibly"
+    },
+    {
+      "startSeconds": 4.48,
+      "text": "time-consuming and difficult, but if you"
+    },
+    {
+      "startSeconds": 6.96,
+      "text": "use the right tools and you know how to"
+    },
+    {
+      "startSeconds": 8.84,
+      "text": "use them correctly, it can become"
+    },
+    {
+      "startSeconds": 10.32,
+      "text": "incredibly easy. That's why in this"
+    },
+    {
+      "startSeconds": 12.04,
+      "text": "video, I'm going to show you how to use"
+    },
+    {
+      "startSeconds": 13.44,
+      "text": "these tools and actually understand what"
+    },
+    {
+      "startSeconds": 15.72,
+      "text": "all this mess on the screen is saying."
+    },
+    {
+      "startSeconds": 21.12,
+      "text": "Welcome back to Web Dev Simplified. My"
+    },
+    {
+      "startSeconds": 23.16,
+      "text": "name's Kyle, and my job is to simplify"
+    },
+    {
+      "startSeconds": 24.88,
+      "text": "the web for you, so you can start"
+    },
+    {
+      "startSeconds": 26.12,
+      "text": "building your dream project sooner. And"
+    },
+    {
+      "startSeconds": 27.72,
+      "text": "to get started, I have a fairly complex"
+    },
+    {
+      "startSeconds": 29.32,
+      "text": "project here that has a lot of stuff"
+    },
+    {
+      "startSeconds": 30.48,
+      "text": "going on. For example, we have all this"
+    },
+    {
+      "startSeconds": 31.68,
+      "text": "different sorting that we can do. You'll"
+    },
+    {
+      "startSeconds": 33.32,
+      "text": "notice when I click on certain things,"
+    },
+    {
+      "startSeconds": 34.76,
+      "text": "my page is really, really slow. That's"
+    },
+    {
+      "startSeconds": 36.44,
+      "text": "what we're going to be fixing in this"
+    },
+    {
+      "startSeconds": 37.56,
+      "text": "video, these different performance"
+    },
+    {
+      "startSeconds": 38.56,
+      "text": "problems. You'll notice I can do a bunch"
+    },
+    {
+      "startSeconds": 40.16,
+      "text": "of different things, but again, when I"
+    },
+    {
+      "startSeconds": 41.4,
+      "text": "click on a lot of these buttons, you'll"
+    },
+    {
+      "startSeconds": 42.44,
+      "text": "notice there's a huge slow down on this"
+    },
+    {
+      "startSeconds": 44.08,
+      "text": "task board page, which is obviously not"
+    },
+    {
+      "startSeconds": 45.92,
+      "text": "ideal. I have a job listings page, which"
+    },
+    {
+      "startSeconds": 47.84,
+      "text": "is blank for now. I can view my own job"
+    },
+    {
+      "startSeconds": 49.88,
+      "text": "listings if I'm logged in. I can create"
+    },
+    {
+      "startSeconds": 51.8,
+      "text": "listings, and you'll notice some of"
+    },
+    {
+      "startSeconds": 52.84,
+      "text": "these pages are quite snappy to go to,"
+    },
+    {
+      "startSeconds": 54.8,
+      "text": "while other pages, such as this task"
+    },
+    {
+      "startSeconds": 56.44,
+      "text": "board page, are incredibly slow. Now,"
+    },
+    {
+      "startSeconds": 58.76,
+      "text": "this project is part of my React"
+    },
+    {
+      "startSeconds": 60.16,
+      "text": "Simplified course. It's actually the"
+    },
+    {
+      "startSeconds": 61.44,
+      "text": "final project in the entire course. So,"
+    },
+    {
+      "startSeconds": 63.44,
+      "text": "if you're interested in checking that"
+    },
+    {
+      "startSeconds": 64.48,
+      "text": "course out, I'll have a link down in the"
+    },
+    {
+      "startSeconds": 65.72,
+      "text": "description for you. I'm currently still"
+    },
+    {
+      "startSeconds": 67.4,
+      "text": "finishing up this project, so the course"
+    },
+    {
+      "startSeconds": 68.88,
+      "text": "isn't quite ready yet, but it should be"
+    },
+    {
+      "startSeconds": 70.48,
+      "text": "ready rather soon. So, I'd recommend"
+    },
+    {
+      "startSeconds": 71.92,
+      "text": "just going down, clicking that link in"
+    },
+    {
+      "startSeconds": 73.16,
+      "text": "the description, and checking to see if"
+    },
+    {
+      "startSeconds": 74.32,
+      "text": "it's available. And if not, you can just"
+    },
+    {
+      "startSeconds": 75.56,
+      "text": "enter your email, and I'll let you know"
+    },
+    {
+      "startSeconds": 76.64,
+      "text": "as soon as the course is ready. Anyway,"
+    },
+    {
+      "startSeconds": 78.48,
+      "text": "though, I noticed that this task board"
+    },
+    {
+      "startSeconds": 79.92,
+      "text": "page is rather slow, and I really want"
+    },
+    {
+      "startSeconds": 81.4,
+      "text": "to fix this task board page. And you'll"
+    },
+    {
+      "startSeconds": 83.08,
+      "text": "notice that since all the slow down is"
+    },
+    {
+      "startSeconds": 84.64,
+      "text": "on this page, and all the other pages"
+    },
+    {
+      "startSeconds": 86.04,
+      "text": "seem to be rather quick compared to this"
+    },
+    {
+      "startSeconds": 87.52,
+      "text": "one, you'd think, \"Okay, my problem is"
+    },
+    {
+      "startSeconds": 89.12,
+      "text": "clearly with this task board page.\" And"
+    },
+    {
+      "startSeconds": 91.32,
+      "text": "if you were to look through the code,"
+    },
+    {
+      "startSeconds": 92.32,
+      "text": "you could spend forever looking through"
+    },
+    {
+      "startSeconds": 93.76,
+      "text": "all the task board related code, but"
+    },
+    {
+      "startSeconds": 95.56,
+      "text": "you'd never actually find the bug that's"
+    },
+    {
+      "startSeconds": 97.32,
+      "text": "slowing it down, cuz the bug that's"
+    },
+    {
+      "startSeconds": 98.72,
+      "text": "slowing down my application really"
+    },
+    {
+      "startSeconds": 100,
+      "text": "doesn't have anything to do with all"
+    },
+    {
+      "startSeconds": 101.48,
+      "text": "with this task board page. So, the best"
+    },
+    {
+      "startSeconds": 103.36,
+      "text": "way to find performance-related bugs"
+    },
+    {
+      "startSeconds": 105.12,
+      "text": "inside of React is to use the profiler,"
+    },
+    {
+      "startSeconds": 107.84,
+      "text": "which is part of the React DevTools. So,"
+    },
+    {
+      "startSeconds": 109.92,
+      "text": "if you have the React DevTools"
+    },
+    {
+      "startSeconds": 111.36,
+      "text": "installed, and you inspect the page, you"
+    },
+    {
+      "startSeconds": 113.24,
+      "text": "should be able to see over here, you can"
+    },
+    {
+      "startSeconds": 115.08,
+      "text": "open up the profiler section, and this"
+    },
+    {
+      "startSeconds": 117.12,
+      "text": "gives you of your different profiling"
+    },
+    {
+      "startSeconds": 118.8,
+      "text": "related data. Now, if you don't have the"
+    },
+    {
+      "startSeconds": 120.64,
+      "text": "React DevTools installed, all you need"
+    },
+    {
+      "startSeconds": 122.4,
+      "text": "to do is just go to whatever browser you"
+    },
+    {
+      "startSeconds": 124.16,
+      "text": "want. Just search for React DevTools"
+    },
+    {
+      "startSeconds": 125.6,
+      "text": "extension, and you can install it. It's"
+    },
+    {
+      "startSeconds": 127,
+      "text": "available for pretty much every single"
+    },
+    {
+      "startSeconds": 128.479,
+      "text": "browser out there. Now, if we want to"
+    },
+    {
+      "startSeconds": 130,
+      "text": "start profiling our site to see what is"
+    },
+    {
+      "startSeconds": 132.08,
+      "text": "slow, all we need to do is just click on"
+    },
+    {
+      "startSeconds": 134.12,
+      "text": "this blue button that's going to start"
+    },
+    {
+      "startSeconds": 135.6,
+      "text": "profiling, or you can click this reload"
+    },
+    {
+      "startSeconds": 137.36,
+      "text": "and start profiling, and that'll give"
+    },
+    {
+      "startSeconds": 138.72,
+      "text": "you essentially your first page load,"
+    },
+    {
+      "startSeconds": 140.32,
+      "text": "and it'll include that as part of your"
+    },
+    {
+      "startSeconds": 141.6,
+      "text": "profiler. So, depending on if you want"
+    },
+    {
+      "startSeconds": 143.28,
+      "text": "to profile an entire page load or just"
+    },
+    {
+      "startSeconds": 145.24,
+      "text": "profile like single individual actions,"
+    },
+    {
+      "startSeconds": 147.56,
+      "text": "is going to depend on which one of these"
+    },
+    {
+      "startSeconds": 148.76,
+      "text": "you choose. For now, I'm just going to"
+    },
+    {
+      "startSeconds": 150,
+      "text": "click start profiling. You notice this"
+    },
+    {
+      "startSeconds": 151.4,
+      "text": "turns red, and now I can do anything I"
+    },
+    {
+      "startSeconds": 153.24,
+      "text": "want on my application, and that is"
+    },
+    {
+      "startSeconds": 154.6,
+      "text": "going to be saved inside of the"
+    },
+    {
+      "startSeconds": 155.8,
+      "text": "profiler. So, I noticed when I did"
+    },
+    {
+      "startSeconds": 157.28,
+      "text": "sorting, it was really slow. So, let's"
+    },
+    {
+      "startSeconds": 158.52,
+      "text": "sort ascending. You'll notice it's"
+    },
+    {
+      "startSeconds": 160.04,
+      "text": "really laggy, really slow. Okay, that"
+    },
+    {
+      "startSeconds": 161.64,
+      "text": "just finished up. I'm going to go back"
+    },
+    {
+      "startSeconds": 163.08,
+      "text": "to my profiler, and I'm going to stop"
+    },
+    {
+      "startSeconds": 164.56,
+      "text": "it. So, I can just click this red"
+    },
+    {
+      "startSeconds": 165.48,
+      "text": "button, and that's going to stop the"
+    },
+    {
+      "startSeconds": 166.84,
+      "text": "profiler. Now, if we go over to either"
+    },
+    {
+      "startSeconds": 168.8,
+      "text": "of these charts, you'll notice this"
+    },
+    {
+      "startSeconds": 169.84,
+      "text": "number in the top right here, this one"
+    },
+    {
+      "startSeconds": 171.4,
+      "text": "out of 16. This essentially is telling"
+    },
+    {
+      "startSeconds": 173.28,
+      "text": "me how many times my React application"
+    },
+    {
+      "startSeconds": 175.28,
+      "text": "rendered. So, pretty much whenever your"
+    },
+    {
+      "startSeconds": 177.2,
+      "text": "hooks change, your state change, or"
+    },
+    {
+      "startSeconds": 178.28,
+      "text": "whatever your context change, anything"
+    },
+    {
+      "startSeconds": 180,
+      "text": "that causes a re-render is going to be"
+    },
+    {
+      "startSeconds": 181.84,
+      "text": "saved in this section, one out of 16."
+    },
+    {
+      "startSeconds": 184.12,
+      "text": "So, I have 16 different times my React"
+    },
+    {
+      "startSeconds": 186.08,
+      "text": "application rendered, and you'll notice"
+    },
+    {
+      "startSeconds": 187.76,
+      "text": "if I go through here, there are all"
+    },
+    {
+      "startSeconds": 189.239,
+      "text": "these different bars on the right-hand"
+    },
+    {
+      "startSeconds": 190.6,
+      "text": "side, and these bars tell me how long"
+    },
+    {
+      "startSeconds": 192.519,
+      "text": "different things took. So, if I hover"
+    },
+    {
+      "startSeconds": 193.88,
+      "text": "over one of these small bars, you can"
+    },
+    {
+      "startSeconds": 195.32,
+      "text": "see that it rendered in 0.9"
+    },
+    {
+      "startSeconds": 196.76,
+      "text": "milliseconds, my layout effects were 0.1"
+    },
+    {
+      "startSeconds": 198.48,
+      "text": "millisecond, and my passive effects were"
+    },
+    {
+      "startSeconds": 200,
+      "text": "0.1 millisecond. So, I mean, this entire"
+    },
+    {
+      "startSeconds": 201.84,
+      "text": "bar took 1 millisecond essentially to"
+    },
+    {
+      "startSeconds": 203.56,
+      "text": "render everything. While these larger"
+    },
+    {
+      "startSeconds": 205.64,
+      "text": "these taller ones, you notice they took"
+    },
+    {
+      "startSeconds": 207.16,
+      "text": "806 milliseconds to render. So, they"
+    },
+    {
+      "startSeconds": 209.36,
+      "text": "were much, much slower than everything"
+    },
+    {
+      "startSeconds": 211.04,
+      "text": "else. So, if you want to debug where the"
+    },
+    {
+      "startSeconds": 212.92,
+      "text": "slowest part of your application is, do"
+    },
+    {
+      "startSeconds": 214.8,
+      "text": "the action that is slow while you're"
+    },
+    {
+      "startSeconds": 216.519,
+      "text": "profiling, and then look for whatever"
+    },
+    {
+      "startSeconds": 217.959,
+      "text": "the tallest bar in this section is."
+    },
+    {
+      "startSeconds": 219.959,
+      "text": "You'll notice there's two specific"
+    },
+    {
+      "startSeconds": 221.16,
+      "text": "sections where it was an 800 millisecond"
+    },
+    {
+      "startSeconds": 223,
+      "text": "render time. So, I know that these are"
+    },
+    {
+      "startSeconds": 224.6,
+      "text": "the two places I want to look. I want to"
+    },
+    {
+      "startSeconds": 225.88,
+      "text": "click on both of these to figure out,"
+    },
+    {
+      "startSeconds": 227.4,
+      "text": "okay, what are the things that are"
+    },
+    {
+      "startSeconds": 228.36,
+      "text": "slowing down my application?"
+    },
+    {
+      "startSeconds": 230.4,
+      "text": "Now, on top of that, there's different"
+    },
+    {
+      "startSeconds": 231.64,
+      "text": "things that you can do to look at the"
+    },
+    {
+      "startSeconds": 232.92,
+      "text": "information you're getting. For example,"
+    },
+    {
+      "startSeconds": 234.44,
+      "text": "there's three different views you can"
+    },
+    {
+      "startSeconds": 235.68,
+      "text": "use. You can use the flame graph view."
+    },
+    {
+      "startSeconds": 237.56,
+      "text": "This is really good for seeing like a"
+    },
+    {
+      "startSeconds": 239.32,
+      "text": "hierarchical view of how everything's"
+    },
+    {
+      "startSeconds": 241.12,
+      "text": "going. So, as you can see, it kind of"
+    },
+    {
+      "startSeconds": 242.76,
+      "text": "breaks down the very top level of my"
+    },
+    {
+      "startSeconds": 244.12,
+      "text": "application, and it breaks down all my"
+    },
+    {
+      "startSeconds": 245.72,
+      "text": "different hierarchy into all of my"
+    },
+    {
+      "startSeconds": 246.84,
+      "text": "different components, even some of my"
+    },
+    {
+      "startSeconds": 247.959,
+      "text": "really small ones. And the ones that are"
+    },
+    {
+      "startSeconds": 249.4,
+      "text": "actually changing are going to be"
+    },
+    {
+      "startSeconds": 250.4,
+      "text": "highlighted in these colors here, as you"
+    },
+    {
+      "startSeconds": 251.92,
+      "text": "can see. So, that's great if you want to"
+    },
+    {
+      "startSeconds": 253.48,
+      "text": "see like an overall hierarchy, but if"
+    },
+    {
+      "startSeconds": 255.08,
+      "text": "you want to just determine what are the"
+    },
+    {
+      "startSeconds": 256.4,
+      "text": "things slowing down my application, this"
+    },
+    {
+      "startSeconds": 258.28,
+      "text": "ranked chart is going to be the way to"
+    },
+    {
+      "startSeconds": 259.799,
+      "text": "go. Because when you click on it,"
+    },
+    {
+      "startSeconds": 261.12,
+      "text": "essentially whatever your slowest thing"
+    },
+    {
+      "startSeconds": 262.76,
+      "text": "is is going to show up at the very top,"
+    },
+    {
+      "startSeconds": 264.24,
+      "text": "and it's going to go down from there."
+    },
+    {
+      "startSeconds": 265.84,
+      "text": "So, for example, if I click over here,"
+    },
+    {
+      "startSeconds": 267.16,
+      "text": "you notice this drop-down menu content"
+    },
+    {
+      "startSeconds": 269.08,
+      "text": "is taking about 40 milliseconds to"
+    },
+    {
+      "startSeconds": 270.76,
+      "text": "reload every single time. So, I know"
+    },
+    {
+      "startSeconds": 272.88,
+      "text": "that my bug is related to this drop-down"
+    },
+    {
+      "startSeconds": 275.24,
+      "text": "menu content, and has nothing to do with"
+    },
+    {
+      "startSeconds": 277.28,
+      "text": "my task board. It's entirely to do with"
+    },
+    {
+      "startSeconds": 278.8,
+      "text": "my drop-down menu. So, now that we know"
+    },
+    {
+      "startSeconds": 280.6,
+      "text": "that, we click this button to clear out"
+    },
+    {
+      "startSeconds": 282,
+      "text": "of our profiler, and then we can"
+    },
+    {
+      "startSeconds": 283.16,
+      "text": "actually go to the code to see what is"
+    },
+    {
+      "startSeconds": 284.76,
+      "text": "causing that problem and fix that bug."
+    },
+    {
+      "startSeconds": 286.64,
+      "text": "So, this is just the code for the"
+    },
+    {
+      "startSeconds": 287.76,
+      "text": "project. If I open up my client, I know"
+    },
+    {
+      "startSeconds": 289.4,
+      "text": "that this is in that drop-down menu"
+    },
+    {
+      "startSeconds": 291.12,
+      "text": "component. So, I can come over into my"
+    },
+    {
+      "startSeconds": 292.84,
+      "text": "component section in the UI, and I have"
+    },
+    {
+      "startSeconds": 294.48,
+      "text": "this drop-down menu inside of here. Now,"
+    },
+    {
+      "startSeconds": 296.68,
+      "text": "I know it's in the drop-down menu"
+    },
+    {
+      "startSeconds": 298.08,
+      "text": "content, because that's what it told me"
+    },
+    {
+      "startSeconds": 299.48,
+      "text": "the name of the component is, and I can"
+    },
+    {
+      "startSeconds": 301.08,
+      "text": "look at the code inside of this section"
+    },
+    {
+      "startSeconds": 302.48,
+      "text": "to see, \"Okay, where is my problem?\" And"
+    },
+    {
+      "startSeconds": 304.6,
+      "text": "well, here we go. I obviously this is a"
+    },
+    {
+      "startSeconds": 305.96,
+      "text": "problem. I have this sleep function"
+    },
+    {
+      "startSeconds": 307.56,
+      "text": "being called, which is waiting for 20"
+    },
+    {
+      "startSeconds": 309.24,
+      "text": "milliseconds and doing nothing. Now,"
+    },
+    {
+      "startSeconds": 310.919,
+      "text": "obviously this is a very contrived"
+    },
+    {
+      "startSeconds": 312.28,
+      "text": "example, because it's not actually"
+    },
+    {
+      "startSeconds": 313.84,
+      "text": "something that you would run into. You"
+    },
+    {
+      "startSeconds": 314.88,
+      "text": "would never have a sleep function in"
+    },
+    {
+      "startSeconds": 316.16,
+      "text": "your code. But, just imagine there was"
+    },
+    {
+      "startSeconds": 317.84,
+      "text": "something slow in my code, and I didn't"
+    },
+    {
+      "startSeconds": 319.44,
+      "text": "realize it. That's essentially what this"
+    },
+    {
+      "startSeconds": 320.96,
+      "text": "sleep function is representing,"
+    },
+    {
+      "startSeconds": 322.32,
+      "text": "something that is slow and taking time."
+    },
+    {
+      "startSeconds": 324.36,
+      "text": "So, now I can remove this, and hopefully"
+    },
+    {
+      "startSeconds": 326.2,
+      "text": "just by doing that, I've essentially"
+    },
+    {
+      "startSeconds": 327.6,
+      "text": "fixed all of my code problems. Now, I"
+    },
+    {
+      "startSeconds": 329.68,
+      "text": "can come back into here, and I can just"
+    },
+    {
+      "startSeconds": 331.16,
+      "text": "test around here. I click on my task"
+    },
+    {
+      "startSeconds": 332.56,
+      "text": "board. You notice now all my sorting"
+    },
+    {
+      "startSeconds": 334.2,
+      "text": "stuff is super snappy. So, it seems like"
+    },
+    {
+      "startSeconds": 336.04,
+      "text": "that has fixed the problem. But, in"
+    },
+    {
+      "startSeconds": 337.6,
+      "text": "order to truly tell if the problem has"
+    },
+    {
+      "startSeconds": 339.36,
+      "text": "been fixed, what we need to do is we"
+    },
+    {
+      "startSeconds": 340.68,
+      "text": "need to do our profiler. So, let's"
+    },
+    {
+      "startSeconds": 342,
+      "text": "inspect our page, go back over to our"
+    },
+    {
+      "startSeconds": 343.48,
+      "text": "profile, and let's just click the start"
+    },
+    {
+      "startSeconds": 345.28,
+      "text": "profile button. I'm going to do the"
+    },
+    {
+      "startSeconds": 346.64,
+      "text": "exact same thing. I'm going to navigate"
+    },
+    {
+      "startSeconds": 348,
+      "text": "around. Let's maybe try sorting a couple"
+    },
+    {
+      "startSeconds": 349.88,
+      "text": "different columns here. Maybe we'll"
+    },
+    {
+      "startSeconds": 351.44,
+      "text": "change the status of one of these to a"
+    },
+    {
+      "startSeconds": 352.84,
+      "text": "medium status. And now I'm going to stop"
+    },
+    {
+      "startSeconds": 354.88,
+      "text": "my profiler. So, let's go back to that"
+    },
+    {
+      "startSeconds": 356.52,
+      "text": "profiler. And we should see that there's"
+    },
+    {
+      "startSeconds": 358.4,
+      "text": "really no bars that are taking a super"
+    },
+    {
+      "startSeconds": 360.2,
+      "text": "long amount of time. So, we can see that"
+    },
+    {
+      "startSeconds": 361.68,
+      "text": "this bar is rather long here. But again,"
+    },
+    {
+      "startSeconds": 363.76,
+      "text": "if I look at the actual total time that"
+    },
+    {
+      "startSeconds": 365.36,
+      "text": "is taking, 25 milliseconds to render,"
+    },
+    {
+      "startSeconds": 367.64,
+      "text": "that's really not that big of a deal,"
+    },
+    {
+      "startSeconds": 368.96,
+      "text": "especially with all the data I'm"
+    },
+    {
+      "startSeconds": 370.16,
+      "text": "rendering on my screen. And if I go"
+    },
+    {
+      "startSeconds": 371.68,
+      "text": "through and I look at all these, you"
+    },
+    {
+      "startSeconds": 373.12,
+      "text": "notice that really none of them are"
+    },
+    {
+      "startSeconds": 374.24,
+      "text": "taking that terribly long. I mean,"
+    },
+    {
+      "startSeconds": 375.36,
+      "text": "there's a ton of different re-renders"
+    },
+    {
+      "startSeconds": 376.64,
+      "text": "happening cuz I have tons of state"
+    },
+    {
+      "startSeconds": 378.16,
+      "text": "changing. You notice as I scan through"
+    },
+    {
+      "startSeconds": 379.919,
+      "text": "all of these, there's really nothing"
+    },
+    {
+      "startSeconds": 381.16,
+      "text": "taking more than 25 or so milliseconds,"
+    },
+    {
+      "startSeconds": 383.52,
+      "text": "which is great. That means my"
+    },
+    {
+      "startSeconds": 384.4,
+      "text": "application is rather quick. And the"
+    },
+    {
+      "startSeconds": 386.08,
+      "text": "huge slow down I had is essentially"
+    },
+    {
+      "startSeconds": 387.96,
+      "text": "fixed. So, that's pretty much the"
+    },
+    {
+      "startSeconds": 389.4,
+      "text": "easiest and most basic way that you can"
+    },
+    {
+      "startSeconds": 391.28,
+      "text": "use this tool. But there's a lot of"
+    },
+    {
+      "startSeconds": 392.52,
+      "text": "other more advanced information you can"
+    },
+    {
+      "startSeconds": 394.16,
+      "text": "glean from this if you really want to"
+    },
+    {
+      "startSeconds": 395.48,
+      "text": "deep dive into debugging your"
+    },
+    {
+      "startSeconds": 396.88,
+      "text": "application. So, like I mentioned, the"
+    },
+    {
+      "startSeconds": 398.68,
+      "text": "flame chart is really nice cuz it gives"
+    },
+    {
+      "startSeconds": 400.36,
+      "text": "you a good idea of how everything in"
+    },
+    {
+      "startSeconds": 401.919,
+      "text": "your application is re-rendered. So, you"
+    },
+    {
+      "startSeconds": 403.64,
+      "text": "can see if there are certain things that"
+    },
+    {
+      "startSeconds": 404.88,
+      "text": "are taking a really long time. Like in"
+    },
+    {
+      "startSeconds": 406.28,
+      "text": "my case, most of the render time that is"
+    },
+    {
+      "startSeconds": 408.2,
+      "text": "happening is this data table being"
+    },
+    {
+      "startSeconds": 410,
+      "text": "rendered. And as you can see, there's a"
+    },
+    {
+      "startSeconds": 411.32,
+      "text": "ton of information that's being rendered"
+    },
+    {
+      "startSeconds": 412.76,
+      "text": "inside of it, which is why it's taking,"
+    },
+    {
+      "startSeconds": 414.16,
+      "text": "you know, 22 milliseconds to render. You"
+    },
+    {
+      "startSeconds": 416.56,
+      "text": "also notice that there's two different"
+    },
+    {
+      "startSeconds": 417.96,
+      "text": "numbers being prints out here. There's"
+    },
+    {
+      "startSeconds": 419.72,
+      "text": "1.9 milliseconds and then there's this"
+    },
+    {
+      "startSeconds": 421.52,
+      "text": "22.6 milliseconds. What that is"
+    },
+    {
+      "startSeconds": 423.88,
+      "text": "essentially saying is that the data"
+    },
+    {
+      "startSeconds": 425.32,
+      "text": "table and all of the children inside of"
+    },
+    {
+      "startSeconds": 427.48,
+      "text": "it took 22.6 milliseconds to render. But"
+    },
+    {
+      "startSeconds": 430.64,
+      "text": "the data table itself with none of the"
+    },
+    {
+      "startSeconds": 432.36,
+      "text": "children only took 1.9 milliseconds to"
+    },
+    {
+      "startSeconds": 434.8,
+      "text": "render. So, this is a really great way"
+    },
+    {
+      "startSeconds": 436.32,
+      "text": "for you to figure out, okay, is my"
+    },
+    {
+      "startSeconds": 437.8,
+      "text": "actual data table slow or is it the"
+    },
+    {
+      "startSeconds": 439.76,
+      "text": "children inside of the data table that"
+    },
+    {
+      "startSeconds": 441.6,
+      "text": "are slow? Cuz my data table took a total"
+    },
+    {
+      "startSeconds": 443.88,
+      "text": "of 22.6 milliseconds to render itself"
+    },
+    {
+      "startSeconds": 446.48,
+      "text": "and all of the children, but the data"
+    },
+    {
+      "startSeconds": 448.12,
+      "text": "table itself only took 1.9 milliseconds."
+    },
+    {
+      "startSeconds": 450.8,
+      "text": "So, most of the slow down is just in the"
+    },
+    {
+      "startSeconds": 452.12,
+      "text": "sheer number of different children that"
+    },
+    {
+      "startSeconds": 453.8,
+      "text": "it needs to render, even if all of them"
+    },
+    {
+      "startSeconds": 455.6,
+      "text": "only take up, you know, 0.1 millisecond,"
+    },
+    {
+      "startSeconds": 457.36,
+      "text": "there's so many of them that it slows it"
+    },
+    {
+      "startSeconds": 458.84,
+      "text": "down quite a bit. Another The nice thing"
+    },
+    {
+      "startSeconds": 460.64,
+      "text": "about this view is you can see"
+    },
+    {
+      "startSeconds": 461.96,
+      "text": "highlighted in green here is essentially"
+    },
+    {
+      "startSeconds": 463.68,
+      "text": "everything that's changed. Everything"
+    },
+    {
+      "startSeconds": 464.84,
+      "text": "that's not gray has changed. As you can"
+    },
+    {
+      "startSeconds": 466.44,
+      "text": "see in the gray section, it did not"
+    },
+    {
+      "startSeconds": 467.92,
+      "text": "render at all. As we go through here,"
+    },
+    {
+      "startSeconds": 469.72,
+      "text": "you'll notice that different things are"
+    },
+    {
+      "startSeconds": 470.96,
+      "text": "gray because they didn't have to"
+    },
+    {
+      "startSeconds": 471.96,
+      "text": "re-render or they didn't render at all."
+    },
+    {
+      "startSeconds": 473.76,
+      "text": "So, that's really helpful that you can"
+    },
+    {
+      "startSeconds": 474.84,
+      "text": "kind of see that information while the"
+    },
+    {
+      "startSeconds": 476.08,
+      "text": "things that are colored are actually"
+    },
+    {
+      "startSeconds": 477.52,
+      "text": "changed and they are being rendered."
+    },
+    {
+      "startSeconds": 479.36,
+      "text": "Also, if I were to click on something,"
+    },
+    {
+      "startSeconds": 480.6,
+      "text": "like let's say I want to click on my"
+    },
+    {
+      "startSeconds": 481.64,
+      "text": "data table to see how many times that's"
+    },
+    {
+      "startSeconds": 483.08,
+      "text": "re-rendered. On the right-hand side"
+    },
+    {
+      "startSeconds": 484.52,
+      "text": "here, you can see all of the different"
+    },
+    {
+      "startSeconds": 486,
+      "text": "instances that this component was"
+    },
+    {
+      "startSeconds": 487.72,
+      "text": "re-rendered. If I click on it, it's just"
+    },
+    {
+      "startSeconds": 489.24,
+      "text": "going to jump to that exact time where"
+    },
+    {
+      "startSeconds": 490.96,
+      "text": "that state was changed. So, if you want"
+    },
+    {
+      "startSeconds": 492.64,
+      "text": "to have a particular component and"
+    },
+    {
+      "startSeconds": 493.84,
+      "text": "you're wondering how many times is it"
+    },
+    {
+      "startSeconds": 495.04,
+      "text": "being rendered, when is it being"
+    },
+    {
+      "startSeconds": 496.44,
+      "text": "rendered based on different things in my"
+    },
+    {
+      "startSeconds": 497.68,
+      "text": "application, I can click around just"
+    },
+    {
+      "startSeconds": 499.52,
+      "text": "like this to see exactly why it's"
+    },
+    {
+      "startSeconds": 501.2,
+      "text": "rendering and when it's rendering. And"
+    },
+    {
+      "startSeconds": 503.36,
+      "text": "speaking of why something's rendered,"
+    },
+    {
+      "startSeconds": 505.08,
+      "text": "you'll notice I have this section called"
+    },
+    {
+      "startSeconds": 506.28,
+      "text": "why did this render right here and it"
+    },
+    {
+      "startSeconds": 507.56,
+      "text": "tells me, \"Okay, hook one changed. Hook"
+    },
+    {
+      "startSeconds": 509.56,
+      "text": "one Hook three changed here.\" It's the"
+    },
+    {
+      "startSeconds": 511.36,
+      "text": "first time the component rendered. It'll"
+    },
+    {
+      "startSeconds": 512.479,
+      "text": "tell me exactly why it's re-rendered."
+    },
+    {
+      "startSeconds": 514.039,
+      "text": "Here, the props have changed. And this"
+    },
+    {
+      "startSeconds": 515.84,
+      "text": "is really useful. And if you see"
+    },
+    {
+      "startSeconds": 517.08,
+      "text": "something like hook three changed, all"
+    },
+    {
+      "startSeconds": 518.64,
+      "text": "that means is the third hook inside of"
+    },
+    {
+      "startSeconds": 520.32,
+      "text": "your component is the one that has the"
+    },
+    {
+      "startSeconds": 522.12,
+      "text": "change occurring in it, which is causing"
+    },
+    {
+      "startSeconds": 523.76,
+      "text": "the re-render. This is really great to"
+    },
+    {
+      "startSeconds": 525.4,
+      "text": "see, \"Is my component re-rendering too"
+    },
+    {
+      "startSeconds": 527.04,
+      "text": "many times?\" And you can check, \"Why is"
+    },
+    {
+      "startSeconds": 528.88,
+      "text": "it actually re-rendering that many"
+    },
+    {
+      "startSeconds": 530.2,
+      "text": "times?\" Now, by default, this"
+    },
+    {
+      "startSeconds": 531.76,
+      "text": "information is not actually going to be"
+    },
+    {
+      "startSeconds": 533.32,
+      "text": "shown to you. If you want to see this"
+    },
+    {
+      "startSeconds": 534.64,
+      "text": "information, you need to click on this"
+    },
+    {
+      "startSeconds": 535.839,
+      "text": "cog right here. Go to the profile"
+    },
+    {
+      "startSeconds": 537.28,
+      "text": "section and then just click record why"
+    },
+    {
+      "startSeconds": 539.08,
+      "text": "each component rendered while profiling."
+    },
+    {
+      "startSeconds": 541.36,
+      "text": "That'll give you this why did this"
+    },
+    {
+      "startSeconds": 542.64,
+      "text": "render section right here, which is"
+    },
+    {
+      "startSeconds": 544.08,
+      "text": "really useful. Now, if you don't have"
+    },
+    {
+      "startSeconds": 545.64,
+      "text": "anything clicked on at all, it'll"
+    },
+    {
+      "startSeconds": 547.08,
+      "text": "essentially just give you information"
+    },
+    {
+      "startSeconds": 548.36,
+      "text": "about the basic things on why this"
+    },
+    {
+      "startSeconds": 550.44,
+      "text": "actual re-render happened, like the"
+    },
+    {
+      "startSeconds": 552.2,
+      "text": "duration and then what actually caused"
+    },
+    {
+      "startSeconds": 553.839,
+      "text": "that thing to update. In our case, the"
+    },
+    {
+      "startSeconds": 554.96,
+      "text": "data table changed, which is what caused"
+    },
+    {
+      "startSeconds": 556.56,
+      "text": "this re-render. Now, we already talked"
+    },
+    {
+      "startSeconds": 558.08,
+      "text": "about this ranked view, which is really"
+    },
+    {
+      "startSeconds": 559.56,
+      "text": "great for finding your slow components."
+    },
+    {
+      "startSeconds": 561.52,
+      "text": "And there's also this timeline component"
+    },
+    {
+      "startSeconds": 563.12,
+      "text": "here. This one's a little bit more"
+    },
+    {
+      "startSeconds": 564.4,
+      "text": "difficult to parse and figure out"
+    },
+    {
+      "startSeconds": 565.8,
+      "text": "exactly what's going on. But if I just"
+    },
+    {
+      "startSeconds": 567.6,
+      "text": "zoom into a particular section here,"
+    },
+    {
+      "startSeconds": 569.6,
+      "text": "you'll notice that this kind of gives me"
+    },
+    {
+      "startSeconds": 570.68,
+      "text": "a breakdown of exactly what's happening"
+    },
+    {
+      "startSeconds": 572.6,
+      "text": "on a timeline. So, I can really see,"
+    },
+    {
+      "startSeconds": 574.36,
+      "text": "\"Okay, at a specific time, my drop-down"
+    },
+    {
+      "startSeconds": 576.4,
+      "text": "menu state update was scheduled and it"
+    },
+    {
+      "startSeconds": 578.4,
+      "text": "ran the React render, and it committed"
+    },
+    {
+      "startSeconds": 580,
+      "text": "those changes and passive effects"
+    },
+    {
+      "startSeconds": 581.36,
+      "text": "happened. Then, as you can see here,"
+    },
+    {
+      "startSeconds": 583.08,
+      "text": "another change changed here, my presence"
+    },
+    {
+      "startSeconds": 585.12,
+      "text": "state updated. So, now it's doing some"
+    },
+    {
+      "startSeconds": 586.68,
+      "text": "more rendering. So, all these top"
+    },
+    {
+      "startSeconds": 588.2,
+      "text": "sections are essentially like why your"
+    },
+    {
+      "startSeconds": 590.12,
+      "text": "React state changed, whatever actually"
+    },
+    {
+      "startSeconds": 591.92,
+      "text": "caused your re-render. And this bottom"
+    },
+    {
+      "startSeconds": 593.48,
+      "text": "section is just all the different time"
+    },
+    {
+      "startSeconds": 595.04,
+      "text": "it took to render every single step of"
+    },
+    {
+      "startSeconds": 597.08,
+      "text": "the React render process. This is really"
+    },
+    {
+      "startSeconds": 599.08,
+      "text": "great if you can need to get like super"
+    },
+    {
+      "startSeconds": 600.48,
+      "text": "nitty-gritty and figure out exactly"
+    },
+    {
+      "startSeconds": 602.04,
+      "text": "what's going on and why different steps"
+    },
+    {
+      "startSeconds": 603.64,
+      "text": "are taking the time that they are. This"
+    },
+    {
+      "startSeconds": 605.28,
+      "text": "can be useful, but I find that this"
+    },
+    {
+      "startSeconds": 606.84,
+      "text": "timeline view is really not that useful"
+    },
+    {
+      "startSeconds": 608.96,
+      "text": "compared to the actual flame chart and"
+    },
+    {
+      "startSeconds": 611.28,
+      "text": "the ranked view here. Now, another thing"
+    },
+    {
+      "startSeconds": 613,
+      "text": "that's really important for your"
+    },
+    {
+      "startSeconds": 614,
+      "text": "settings is you can actually hide"
+    },
+    {
+      "startSeconds": 615.36,
+      "text": "commits that take less than a certain"
+    },
+    {
+      "startSeconds": 616.8,
+      "text": "amount of time. So, for example, I can"
+    },
+    {
+      "startSeconds": 618.08,
+      "text": "say, \"You know what? Any commit that"
+    },
+    {
+      "startSeconds": 619.24,
+      "text": "takes less than 5 ms, I don't even want"
+    },
+    {
+      "startSeconds": 621.4,
+      "text": "to have show up at all.\" And now you'll"
+    },
+    {
+      "startSeconds": 623.04,
+      "text": "notice there's only seven total"
+    },
+    {
+      "startSeconds": 625.04,
+      "text": "re-renders that are being shown cuz"
+    },
+    {
+      "startSeconds": 626.8,
+      "text": "there's only seven renders on my page"
+    },
+    {
+      "startSeconds": 628.72,
+      "text": "that are taking more than 5 ms. This is"
+    },
+    {
+      "startSeconds": 631.28,
+      "text": "great if you want to hide some of those"
+    },
+    {
+      "startSeconds": 632.52,
+      "text": "really small things, which makes it"
+    },
+    {
+      "startSeconds": 633.96,
+      "text": "easier to find the things that are"
+    },
+    {
+      "startSeconds": 635.12,
+      "text": "actually slowing down your application."
+    },
+    {
+      "startSeconds": 637,
+      "text": "For example, you could set this"
+    },
+    {
+      "startSeconds": 637.96,
+      "text": "threshold to like 50 ms, and now you'll"
+    },
+    {
+      "startSeconds": 640.2,
+      "text": "only see re-renders that cause your"
+    },
+    {
+      "startSeconds": 642.08,
+      "text": "application to take more than 50 ms,"
+    },
+    {
+      "startSeconds": 644.32,
+      "text": "which is kind of a good cutoff for"
+    },
+    {
+      "startSeconds": 645.44,
+      "text": "figuring out what is actually slow"
+    },
+    {
+      "startSeconds": 646.8,
+      "text": "inside of your application. Otherwise,"
+    },
+    {
+      "startSeconds": 648.839,
+      "text": "you can just leave it as zero like I"
+    },
+    {
+      "startSeconds": 650.16,
+      "text": "have here if you want to see absolutely"
+    },
+    {
+      "startSeconds": 651.6,
+      "text": "everything that's going on. Now, another"
+    },
+    {
+      "startSeconds": 653.2,
+      "text": "really important thing about debugging"
+    },
+    {
+      "startSeconds": 655.16,
+      "text": "and profiling is that often times the"
+    },
+    {
+      "startSeconds": 657.04,
+      "text": "computer you're working on is rather"
+    },
+    {
+      "startSeconds": 658.52,
+      "text": "powerful and fast compared to the"
+    },
+    {
+      "startSeconds": 660,
+      "text": "computer or mobile device that your"
+    },
+    {
+      "startSeconds": 661.72,
+      "text": "users are actually using. So, in order"
+    },
+    {
+      "startSeconds": 663.76,
+      "text": "to emulate a slower device, if you go to"
+    },
+    {
+      "startSeconds": 665.8,
+      "text": "this performance tab here, you can"
+    },
+    {
+      "startSeconds": 667.28,
+      "text": "actually massively throttle your"
+    },
+    {
+      "startSeconds": 668.6,
+      "text": "computer. For example, you can six times"
+    },
+    {
+      "startSeconds": 670.32,
+      "text": "slow down your CPU, and you can even if"
+    },
+    {
+      "startSeconds": 672.44,
+      "text": "you have a like multi-threaded"
+    },
+    {
+      "startSeconds": 673.839,
+      "text": "processor, you can say, \"You know what?"
+    },
+    {
+      "startSeconds": 675.24,
+      "text": "I only want to use one of those threads"
+    },
+    {
+      "startSeconds": 676.76,
+      "text": "at a time limit the power of my computer"
+    },
+    {
+      "startSeconds": 679.08,
+      "text": "as much as possible. That way, when I go"
+    },
+    {
+      "startSeconds": 681,
+      "text": "about and I do my profiling, you'll"
+    },
+    {
+      "startSeconds": 682.72,
+      "text": "notice that it's going to be much"
+    },
+    {
+      "startSeconds": 683.72,
+      "text": "slower. If I come in here, I'm going to"
+    },
+    {
+      "startSeconds": 684.839,
+      "text": "do my profiling. I'm just going to, you"
+    },
+    {
+      "startSeconds": 686.56,
+      "text": "know, come in here. You'll notice"
+    },
+    {
+      "startSeconds": 687.44,
+      "text": "automatically, just by doing this, I"
+    },
+    {
+      "startSeconds": 689.36,
+      "text": "feel a little bit of slow down on my"
+    },
+    {
+      "startSeconds": 691.08,
+      "text": "application. It's not like massive and"
+    },
+    {
+      "startSeconds": 692.96,
+      "text": "destroying things, but it is just a"
+    },
+    {
+      "startSeconds": 694.76,
+      "text": "little bit slower. And if we come over"
+    },
+    {
+      "startSeconds": 696.56,
+      "text": "back to the profiler and stop this, you"
+    },
+    {
+      "startSeconds": 698.32,
+      "text": "notice that the timing for different"
+    },
+    {
+      "startSeconds": 699.76,
+      "text": "things is going to be much larger. For"
+    },
+    {
+      "startSeconds": 701.32,
+      "text": "example, here, some of these longer"
+    },
+    {
+      "startSeconds": 703.12,
+      "text": "renders, these are taking 23"
+    },
+    {
+      "startSeconds": 704.44,
+      "text": "milliseconds. But like the passive"
+    },
+    {
+      "startSeconds": 706.28,
+      "text": "effects here, you can see are taking 50"
+    },
+    {
+      "startSeconds": 707.6,
+      "text": "milliseconds for that and so on. And if"
+    },
+    {
+      "startSeconds": 709.72,
+      "text": "I wanted to come in here and I said, you"
+    },
+    {
+      "startSeconds": 710.76,
+      "text": "know what, show me everything that's"
+    },
+    {
+      "startSeconds": 711.92,
+      "text": "greater than 50. Actually, let's do 100"
+    },
+    {
+      "startSeconds": 713.6,
+      "text": "milliseconds."
+    },
+    {
+      "startSeconds": 715,
+      "text": "There we go. Now you can see I had two"
+    },
+    {
+      "startSeconds": 716.72,
+      "text": "renders. So generally, if you're trying"
+    },
+    {
+      "startSeconds": 718.16,
+      "text": "to debug your application and"
+    },
+    {
+      "startSeconds": 719.52,
+      "text": "pre-emptively find areas that are slow,"
+    },
+    {
+      "startSeconds": 721.44,
+      "text": "like maybe you don't notice things are"
+    },
+    {
+      "startSeconds": 722.8,
+      "text": "slow when you're first testing, but you"
+    },
+    {
+      "startSeconds": 724.28,
+      "text": "want to test to see if there are any"
+    },
+    {
+      "startSeconds": 725.68,
+      "text": "spots that are potentially slow, making"
+    },
+    {
+      "startSeconds": 727.6,
+      "text": "sure you throttle your performance as"
+    },
+    {
+      "startSeconds": 729.04,
+      "text": "much as possible is a really great area"
+    },
+    {
+      "startSeconds": 730.88,
+      "text": "to see what the slowest part of your"
+    },
+    {
+      "startSeconds": 732.36,
+      "text": "application is, even if it doesn't feel"
+    },
+    {
+      "startSeconds": 734.28,
+      "text": "slow on your computer."
+    },
+    {
+      "startSeconds": 735.84,
+      "text": "Now if you want to learn how to build"
+    },
+    {
+      "startSeconds": 737.12,
+      "text": "this project in React, you're going to"
+    },
+    {
+      "startSeconds": 738.84,
+      "text": "want to take my React Simplified course"
+    },
+    {
+      "startSeconds": 740.6,
+      "text": "because it is the final project inside"
+    },
+    {
+      "startSeconds": 742.64,
+      "text": "of that course. Now I'm not 100% done"
+    },
+    {
+      "startSeconds": 744.96,
+      "text": "with this project or the course. I'm"
+    },
+    {
+      "startSeconds": 746.36,
+      "text": "working on the last section right now."
+    },
+    {
+      "startSeconds": 748.08,
+      "text": "So it's currently not available, but it"
+    },
+    {
+      "startSeconds": 749.6,
+      "text": "should be available very soon. So just"
+    },
+    {
+      "startSeconds": 751.68,
+      "text": "go to the sales page and you can check"
+    },
+    {
+      "startSeconds": 753.04,
+      "text": "to see if it's available. And if it's"
+    },
+    {
+      "startSeconds": 754.4,
+      "text": "not, you can enter your email at the"
+    },
+    {
+      "startSeconds": 755.56,
+      "text": "bottom and I'll let you know as soon as"
+    },
+    {
+      "startSeconds": 756.839,
+      "text": "the course is ready for you to take."
+    },
+    {
+      "startSeconds": 758.36,
+      "text": "Honestly, if you want to master React,"
+    },
+    {
+      "startSeconds": 760.2,
+      "text": "this is the best course out there to do"
+    },
+    {
+      "startSeconds": 762.08,
+      "text": "so because it not only teaches you all"
+    },
+    {
+      "startSeconds": 763.8,
+      "text": "the fundamentals you need, but it"
+    },
+    {
+      "startSeconds": 765.04,
+      "text": "teaches you all the more advanced"
+    },
+    {
+      "startSeconds": 766.24,
+      "text": "concepts you need to understand in order"
+    },
+    {
+      "startSeconds": 767.64,
+      "text": "to build full-fledged projects like you"
+    },
+    {
+      "startSeconds": 769.48,
+      "text": "just saw. So if you're at all interested"
+    },
+    {
+      "startSeconds": 771.48,
+      "text": "in mastering React, I highly recommend"
+    },
+    {
+      "startSeconds": 773.2,
+      "text": "checking out the link in the description"
+    },
+    {
+      "startSeconds": 774.56,
+      "text": "down below. With that said, thank you"
+    },
+    {
+      "startSeconds": 776.28,
+      "text": "very much for watching and have a good"
+    },
+    {
+      "startSeconds": 777.64,
+      "text": "day."
+    }
+  ]
 }

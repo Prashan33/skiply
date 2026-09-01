@@ -1,0 +1,349 @@
+{
+  "id": "u57EnkQaUTY",
+  "url": "https://www.youtube.com/watch?v=u57EnkQaUTY",
+  "fetchedAt": "2026-09-01T04:06:54.930Z",
+  "captionKind": "manual",
+  "chapters": [],
+  "cues": [
+    {
+      "startSeconds": 0.84,
+      "text": "Prompt caching can significantly improve the speed and cost effectiveness of large language"
+    },
+    {
+      "startSeconds": 6.28,
+      "text": "models. Sounds good. Sign me up. But, um. But what is prompt caching? Well,"
+    },
+    {
+      "startSeconds": 13.12,
+      "text": "let me start by defining what prompt caching is not. So it is not regular"
+    },
+    {
+      "startSeconds": 20.08,
+      "text": "output focused caching. So let me give you an example of that. If you've sent in a query and"
+    },
+    {
+      "startSeconds": 27,
+      "text": "you've sent that query into, let's say, a database, maybe it's a SQL query.Well, the"
+    },
+    {
+      "startSeconds": 33.6,
+      "text": "database is going to process that result and give you the output here. So we've got the"
+    },
+    {
+      "startSeconds": 40.24,
+      "text": "result from the database lookup. Now those results they can be stored"
+    },
+    {
+      "startSeconds": 46.68,
+      "text": "in a cache. And when somebody else makes that same query soon, afterwards"
+    },
+    {
+      "startSeconds": 53.6,
+      "text": "well, we can just kind of skip the lookup and go directly to the result stored in the cache."
+    },
+    {
+      "startSeconds": 60.12,
+      "text": "Great. Now let's apply this concept to an LLM. So in this case, we have an input"
+    },
+    {
+      "startSeconds": 67.12,
+      "text": "prompt that we've received from a user. And that input prompt is sent for processing"
+    },
+    {
+      "startSeconds": 73.44,
+      "text": "into a large language model. And then, the large language model is going to"
+    },
+    {
+      "startSeconds": 80.04,
+      "text": "process that and send back some sort of output. We'll call this the response from the"
+    },
+    {
+      "startSeconds": 87.16,
+      "text": "LLM. Okay. So that's pretty standard practice. But what happens if soon after another user sends"
+    },
+    {
+      "startSeconds": 94.08,
+      "text": "him the same prompt? Does that prompt caching mean that we can just kind of skip the LLM call and"
+    },
+    {
+      "startSeconds": 100.519,
+      "text": "just go directly to the cached response? No. What I'm describing here is"
+    },
+    {
+      "startSeconds": 107.04,
+      "text": "actually called output caching. And it's certainly something that can be done with large"
+    },
+    {
+      "startSeconds": 113.76,
+      "text": "language models, but it is not what prompt caching is. Prompt caching is about caching"
+    },
+    {
+      "startSeconds": 120.68,
+      "text": "only the input prompt. Only caching this part here so that the LLM doesn't"
+    },
+    {
+      "startSeconds": 127.649,
+      "text": "need to process it a second time. Now, to understand prompt caching, you need to understand"
+    },
+    {
+      "startSeconds": 133.009,
+      "text": "what happens when we take a large language model, an LLM, and we send"
+    },
+    {
+      "startSeconds": 139.889,
+      "text": "to that large language model a prompt. So this is where we are sending in a request"
+    },
+    {
+      "startSeconds": 146.649,
+      "text": "prompt. Now what happens here is the model computes something called key-value"
+    },
+    {
+      "startSeconds": 152.969,
+      "text": "pairs. So let's model that in the LLM here as KV"
+    },
+    {
+      "startSeconds": 159.529,
+      "text": "pairs. And it does that at every transformer layer for every token in your input."
+    },
+    {
+      "startSeconds": 166.329,
+      "text": "And we can think of these key pairs as the model's internal understanding of your prompt. So"
+    },
+    {
+      "startSeconds": 172.609,
+      "text": "how every word relates to every other word, what context matters, what information to focus on. And"
+    },
+    {
+      "startSeconds": 178.929,
+      "text": "computing these, it can be a bit expensive. This is the prefilled phase that happens before the"
+    },
+    {
+      "startSeconds": 183.969,
+      "text": "LLM actually can generate its first token of output. So what we can"
+    },
+    {
+      "startSeconds": 190.889,
+      "text": "do is cache the KV pairs. So this here is where the"
+    },
+    {
+      "startSeconds": 197.649,
+      "text": "prompt caching actually applies. It stores these precomputed KV"
+    },
+    {
+      "startSeconds": 204.009,
+      "text": "pairs. Now for a simple prompt like what's the capital of France? Well, this caching"
+    },
+    {
+      "startSeconds": 210.85,
+      "text": "isn't going to save much time. Processing a handful of tokens that's cheap and fast you don't"
+    },
+    {
+      "startSeconds": 216.729,
+      "text": "need caching. But what if we structured our prompt in a little bit of a different way? So let's"
+    },
+    {
+      "startSeconds": 222.57,
+      "text": "consider here a prompt that we're going to build in detail. And in this prompt,"
+    },
+    {
+      "startSeconds": 229.489,
+      "text": "we have put a bunch of stuff. So, for example, we're going to put a big document in our context window"
+    },
+    {
+      "startSeconds": 235.089,
+      "text": "here. So this is a 50-page document. And then, in our prompt, we are going to ask the"
+    },
+    {
+      "startSeconds": 241.9,
+      "text": "large language model to summarize that document. So here is the summarize"
+    },
+    {
+      "startSeconds": 248.499,
+      "text": "request. So now the model has to compute KV pairs for thousands of tokens across"
+    },
+    {
+      "startSeconds": 255.46,
+      "text": "dozens of transformer layers, millions of operations before it can ever start generating"
+    },
+    {
+      "startSeconds": 260.54,
+      "text": "that response. So with prompt caching, that processing work is getting saved. Now,"
+    },
+    {
+      "startSeconds": 267.179,
+      "text": "later on in a new conversation or an API call, you could send that same 50-page"
+    },
+    {
+      "startSeconds": 273.9,
+      "text": "document followed this time by instead of asking to summarize, we just provide some kind of"
+    },
+    {
+      "startSeconds": 279.219,
+      "text": "different question. And the system will recognize that document prefix. It will retrieve the cached"
+    },
+    {
+      "startSeconds": 285.579,
+      "text": "KV pairs and then only process the new question at the end. And that's a pretty notable saving"
+    },
+    {
+      "startSeconds": 292.54,
+      "text": "in latency and cost. Now what kinds of things can be cached? Let's answer that question."
+    },
+    {
+      "startSeconds": 299.179,
+      "text": "What can be cached? Well, I've already mentioned that you can put"
+    },
+    {
+      "startSeconds": 305.5,
+      "text": "documents into a prompt into the context window. So like a 50-page product manual or"
+    },
+    {
+      "startSeconds": 312.499,
+      "text": "a research paper or a legal contract or anything, you want to kind of ask multiple questions about"
+    },
+    {
+      "startSeconds": 317.1,
+      "text": "that can be stored in the cache. But another good example, and probably the most common thing that"
+    },
+    {
+      "startSeconds": 323.66,
+      "text": "gets cached, is the system prompt. Now, system prompts are the most common"
+    },
+    {
+      "startSeconds": 330.659,
+      "text": "use case, where really every chatbot has instructions that tell it how to operate. It"
+    },
+    {
+      "startSeconds": 336.22,
+      "text": "defines its personality and its rules and its behavior. You know, things like you're a helpful"
+    },
+    {
+      "startSeconds": 340.499,
+      "text": "customer service agent, blah, blah, blah. That sort of thing can be cached. And we can also put into"
+    },
+    {
+      "startSeconds": 347.1,
+      "text": "the cache few short examples. So when you want the model to format responses a certain way, you show"
+    },
+    {
+      "startSeconds": 353.739,
+      "text": "it examples. there are a bunch of other things in a prompt that could be cached as well, like"
+    },
+    {
+      "startSeconds": 359.059,
+      "text": "tool and function definitions and conversation history. Okay, but when does an LLM"
+    },
+    {
+      "startSeconds": 365.989,
+      "text": "know what gets cached? Well, it comes down to a"
+    },
+    {
+      "startSeconds": 372.549,
+      "text": "technique called prefix matching to figure out what should actually be"
+    },
+    {
+      "startSeconds": 379.35,
+      "text": "stored in the cache. So the cache system matches your prompt from the very beginning. Token by"
+    },
+    {
+      "startSeconds": 386.07,
+      "text": "token. And when it encounters the first token that differs from what's cached, then caching stops and"
+    },
+    {
+      "startSeconds": 391.269,
+      "text": "normal processing takes over. And that makes prompt structure important for automatic caching."
+    },
+    {
+      "startSeconds": 396.67,
+      "text": "So let's consider a prompt structure. Let's say that we've got a prompt that has in it some"
+    },
+    {
+      "startSeconds": 402.829,
+      "text": "system instructions. And then, we're going to put a document in as well. Let's say there's some kind"
+    },
+    {
+      "startSeconds": 408.07,
+      "text": "of 20-page manual that's here. And then, yeah, we're going to include some few shot examples as"
+    },
+    {
+      "startSeconds": 414.709,
+      "text": "well. And then finally we're going to submit a user question. So the user question might"
+    },
+    {
+      "startSeconds": 421.67,
+      "text": "be like what are the warranty terms. Am I going to use this manual to figure out the answer. Well,"
+    },
+    {
+      "startSeconds": 427.029,
+      "text": "this structure puts all of the static content first. So when the next request comes in with"
+    },
+    {
+      "startSeconds": 433.989,
+      "text": "just a different question, like now it's going to say what's the return policy? The cache matches"
+    },
+    {
+      "startSeconds": 439.87,
+      "text": "through all of this static content here. All of this stuff is actually"
+    },
+    {
+      "startSeconds": 446.629,
+      "text": "inside of the cache. And we only need to process the new question at the end."
+    },
+    {
+      "startSeconds": 453.869,
+      "text": "But if we were to flip this around and we were to put the dynamic stuff first, put the question up"
+    },
+    {
+      "startSeconds": 460.03,
+      "text": "here, then the cache is going to fail immediately when the question changes. You'd have to reprocess"
+    },
+    {
+      "startSeconds": 465.549,
+      "text": "everything here again, so it's best to put that stuff up front specifically when we're talking"
+    },
+    {
+      "startSeconds": 472.269,
+      "text": "about automatic prompt caching So that's what gets cached. But a couple of other notes based on"
+    },
+    {
+      "startSeconds": 478.949,
+      "text": "prompt caching that we should talk about. One is like how much stuff to get cashed. Well, typically,"
+    },
+    {
+      "startSeconds": 485.799,
+      "text": "you need at least 1024 tokens to initiate"
+    },
+    {
+      "startSeconds": 492.559,
+      "text": "cashing. That's really before cashing provides any benefit. Because below that threshold, the overhead"
+    },
+    {
+      "startSeconds": 498.08,
+      "text": "of managing the cash really exceeds the savings. And also cashes don't last forever. They're"
+    },
+    {
+      "startSeconds": 504.559,
+      "text": "usually cleared after 5 to 10 minutes just to keep the data fresh. Although"
+    },
+    {
+      "startSeconds": 511.559,
+      "text": "some can hang around for up to 24 hours. And some providers provide the automatic caching that I've"
+    },
+    {
+      "startSeconds": 517.799,
+      "text": "been talking about here. But some providers actually require you to explicitly mark"
+    },
+    {
+      "startSeconds": 524.559,
+      "text": "which parts of your prompt should be cached in your API calls. So these are the explicit types of"
+    },
+    {
+      "startSeconds": 530.759,
+      "text": "caching. So, so, that's prompt caching. And with the right use case it's a way to"
+    },
+    {
+      "startSeconds": 537.159,
+      "text": "reduce LLM costs and latency."
+    }
+  ]
+}

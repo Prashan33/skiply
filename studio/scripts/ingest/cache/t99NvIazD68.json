@@ -1,0 +1,773 @@
+{
+  "id": "t99NvIazD68",
+  "url": "https://www.youtube.com/watch?v=t99NvIazD68",
+  "fetchedAt": "2026-09-01T04:08:31.421Z",
+  "captionKind": "asr",
+  "chapters": [],
+  "cues": [
+    {
+      "startSeconds": 0.08,
+      "text": "hey programmers welcome back before we"
+    },
+    {
+      "startSeconds": 2.159,
+      "text": "talk about item potency which I think is"
+    },
+    {
+      "startSeconds": 4.64,
+      "text": "something that every developer should be"
+    },
+    {
+      "startSeconds": 6.2,
+      "text": "aware of let me give you a fun fact"
+    },
+    {
+      "startSeconds": 8.44,
+      "text": "first well a couple years ago Uber Eats"
+    },
+    {
+      "startSeconds": 11.519,
+      "text": "had an incident in India well there was"
+    },
+    {
+      "startSeconds": 14.24,
+      "text": "a glitch that let people order free food"
+    },
+    {
+      "startSeconds": 17.48,
+      "text": "for the whole weekend long story short"
+    },
+    {
+      "startSeconds": 19.8,
+      "text": "this glitch was coming from the fact"
+    },
+    {
+      "startSeconds": 21.32,
+      "text": "that Uber Eats was contacting a payment"
+    },
+    {
+      "startSeconds": 23.64,
+      "text": "provider such as stripe and this payment"
+    },
+    {
+      "startSeconds": 26.359,
+      "text": "provider was returning different error"
+    },
+    {
+      "startSeconds": 28.519,
+      "text": "messages every time for for the same"
+    },
+    {
+      "startSeconds": 30.759,
+      "text": "error and by that Uber Eats the API of"
+    },
+    {
+      "startSeconds": 33.52,
+      "text": "Uber Eats wasn't able to dis distinguish"
+    },
+    {
+      "startSeconds": 36.079,
+      "text": "them and was creating new orders every"
+    },
+    {
+      "startSeconds": 38.2,
+      "text": "time so how is it actually related to"
+    },
+    {
+      "startSeconds": 41.12,
+      "text": "our topic now well first of all let's"
+    },
+    {
+      "startSeconds": 43.399,
+      "text": "define it potency or it potency doesn't"
+    },
+    {
+      "startSeconds": 46.16,
+      "text": "really matter it's something in software"
+    },
+    {
+      "startSeconds": 48.559,
+      "text": "and technology that typically refers to"
+    },
+    {
+      "startSeconds": 51.12,
+      "text": "the idea that you can perform an"
+    },
+    {
+      "startSeconds": 53.399,
+      "text": "operation multiple times without"
+    },
+    {
+      "startSeconds": 55.399,
+      "text": "triggering any side effects meaning"
+    },
+    {
+      "startSeconds": 57.44,
+      "text": "imagine you have a function some pure"
+    },
+    {
+      "startSeconds": 59.519,
+      "text": "function and you call this function many"
+    },
+    {
+      "startSeconds": 62.28,
+      "text": "times you can call it many times and the"
+    },
+    {
+      "startSeconds": 64.28,
+      "text": "result has to be the same every time"
+    },
+    {
+      "startSeconds": 66.92,
+      "text": "doesn't matter how many times you call"
+    },
+    {
+      "startSeconds": 68.36,
+      "text": "it the result has to be the same if it's"
+    },
+    {
+      "startSeconds": 70.64,
+      "text": "not meaning it's not it important and"
+    },
+    {
+      "startSeconds": 73.08,
+      "text": "why is it so important in our case well"
+    },
+    {
+      "startSeconds": 75.159,
+      "text": "whenever you're developing apis you have"
+    },
+    {
+      "startSeconds": 77.32,
+      "text": "to make sure that your API is consistent"
+    },
+    {
+      "startSeconds": 79.88,
+      "text": "in its Behavior well imagine this"
+    },
+    {
+      "startSeconds": 82.64,
+      "text": "following scenario imagine you have a"
+    },
+    {
+      "startSeconds": 84.68,
+      "text": "client that makes a request to create an"
+    },
+    {
+      "startSeconds": 87,
+      "text": "order and this is a post request okay so"
+    },
+    {
+      "startSeconds": 90.159,
+      "text": "the client makes a request to the API"
+    },
+    {
+      "startSeconds": 92.24,
+      "text": "and then the API wants to save it in the"
+    },
+    {
+      "startSeconds": 94.36,
+      "text": "database because this order has to be"
+    },
+    {
+      "startSeconds": 96.479,
+      "text": "saved somewhere well imagine in the"
+    },
+    {
+      "startSeconds": 98.759,
+      "text": "Uber's case this database was actually a"
+    },
+    {
+      "startSeconds": 100.88,
+      "text": "payment provider and the payment"
+    },
+    {
+      "startSeconds": 102.439,
+      "text": "provider had a database but in our case"
+    },
+    {
+      "startSeconds": 104.36,
+      "text": "it's going to be just a database so we"
+    },
+    {
+      "startSeconds": 106.28,
+      "text": "now try to save this in a database and"
+    },
+    {
+      "startSeconds": 109.079,
+      "text": "we create a burger okay the burger is"
+    },
+    {
+      "startSeconds": 111.64,
+      "text": "now saved in the database what the"
+    },
+    {
+      "startSeconds": 113.479,
+      "text": "database is going to do is it's going to"
+    },
+    {
+      "startSeconds": 115.68,
+      "text": "return the the message to the API either"
+    },
+    {
+      "startSeconds": 118.039,
+      "text": "it's successful the query was successful"
+    },
+    {
+      "startSeconds": 119.799,
+      "text": "uccessful either it errored out and"
+    },
+    {
+      "startSeconds": 122,
+      "text": "obviously our query was successful"
+    },
+    {
+      "startSeconds": 124.2,
+      "text": "because we now have a burger in the"
+    },
+    {
+      "startSeconds": 125.759,
+      "text": "database but obviously when the API is"
+    },
+    {
+      "startSeconds": 128.679,
+      "text": "returning the results to the client this"
+    },
+    {
+      "startSeconds": 131.48,
+      "text": "part can actually cause a failure it can"
+    },
+    {
+      "startSeconds": 133.959,
+      "text": "be a network disruption it can be an"
+    },
+    {
+      "startSeconds": 135.959,
+      "text": "actual exception in our code but the"
+    },
+    {
+      "startSeconds": 138,
+      "text": "client is going to think that hey now I"
+    },
+    {
+      "startSeconds": 140.28,
+      "text": "have an error meaning why not press the"
+    },
+    {
+      "startSeconds": 142.68,
+      "text": "same order button again and now we have"
+    },
+    {
+      "startSeconds": 144.92,
+      "text": "a second try the client makes the same"
+    },
+    {
+      "startSeconds": 147.16,
+      "text": "request here and the API thinks that"
+    },
+    {
+      "startSeconds": 149.879,
+      "text": "okay another post request I'm going to"
+    },
+    {
+      "startSeconds": 151.92,
+      "text": "save this in the database as well and"
+    },
+    {
+      "startSeconds": 153.68,
+      "text": "now we end up having two burgers and now"
+    },
+    {
+      "startSeconds": 156.28,
+      "text": "the database Returns the success message"
+    },
+    {
+      "startSeconds": 158.48,
+      "text": "to the API the API Returns the success"
+    },
+    {
+      "startSeconds": 160.92,
+      "text": "message message to the client and the"
+    },
+    {
+      "startSeconds": 162.64,
+      "text": "client thinks okay my or my order is on"
+    },
+    {
+      "startSeconds": 165.48,
+      "text": "the way but actually the client ordered"
+    },
+    {
+      "startSeconds": 167.64,
+      "text": "two times this is exactly what happened"
+    },
+    {
+      "startSeconds": 169.92,
+      "text": "with Uber so I guess you're already"
+    },
+    {
+      "startSeconds": 172.12,
+      "text": "thinking like what can we actually do"
+    },
+    {
+      "startSeconds": 174.36,
+      "text": "here what's the remedy for it and how"
+    },
+    {
+      "startSeconds": 176.68,
+      "text": "can we fix it before we go into that I"
+    },
+    {
+      "startSeconds": 179.28,
+      "text": "want to dive a bit deeper into the item"
+    },
+    {
+      "startSeconds": 181.879,
+      "text": "potency itself and when it actually is"
+    },
+    {
+      "startSeconds": 184.72,
+      "text": "important so we all have these different"
+    },
+    {
+      "startSeconds": 188.12,
+      "text": "HTTP methods that we can perform okay we"
+    },
+    {
+      "startSeconds": 190.519,
+      "text": "have a get head and some of them are"
+    },
+    {
+      "startSeconds": 193.08,
+      "text": "actually fetching the information others"
+    },
+    {
+      "startSeconds": 195.84,
+      "text": "are adding new information so get head"
+    },
+    {
+      "startSeconds": 198.959,
+      "text": "put delete trace an option actually"
+    },
+    {
+      "startSeconds": 201.76,
+      "text": "don't really need to be aware of item"
+    },
+    {
+      "startSeconds": 204.36,
+      "text": "potency okay what needs to know about"
+    },
+    {
+      "startSeconds": 207.2,
+      "text": "item potency and where we have to be"
+    },
+    {
+      "startSeconds": 209.28,
+      "text": "careful is the post and Patch because"
+    },
+    {
+      "startSeconds": 212.76,
+      "text": "post is going to create something new in"
+    },
+    {
+      "startSeconds": 215.239,
+      "text": "the database and Patch is very similar"
+    },
+    {
+      "startSeconds": 217.76,
+      "text": "actually to put if you don't know the"
+    },
+    {
+      "startSeconds": 219.2,
+      "text": "difference I would suggest you to go and"
+    },
+    {
+      "startSeconds": 220.879,
+      "text": "Google it but basically put in replaces"
+    },
+    {
+      "startSeconds": 224.04,
+      "text": "the item in the database as a whole"
+    },
+    {
+      "startSeconds": 227,
+      "text": "while patch only patches it meaning if"
+    },
+    {
+      "startSeconds": 229.36,
+      "text": "you have an array put is going to"
+    },
+    {
+      "startSeconds": 231.36,
+      "text": "completely replace an array but patch is"
+    },
+    {
+      "startSeconds": 234.04,
+      "text": "going to extend the array this is why we"
+    },
+    {
+      "startSeconds": 236.4,
+      "text": "need to be careful with item potency"
+    },
+    {
+      "startSeconds": 238.56,
+      "text": "when we use these two two methods"
+    },
+    {
+      "startSeconds": 240.4,
+      "text": "obviously delete doesn't have to care"
+    },
+    {
+      "startSeconds": 242.28,
+      "text": "about item potency because we're simply"
+    },
+    {
+      "startSeconds": 244.319,
+      "text": "deleting the item and in which scenarios"
+    },
+    {
+      "startSeconds": 246.68,
+      "text": "do we have to be careful well the"
+    },
+    {
+      "startSeconds": 248.56,
+      "text": "scenario is like a complete or complete"
+    },
+    {
+      "startSeconds": 251,
+      "text": "purchase page where you actually have"
+    },
+    {
+      "startSeconds": 252.64,
+      "text": "your order button because this page is"
+    },
+    {
+      "startSeconds": 255.36,
+      "text": "the one that is performing this itm"
+    },
+    {
+      "startSeconds": 257.6,
+      "text": "poent action and every time you're on"
+    },
+    {
+      "startSeconds": 259.919,
+      "text": "this on this kind of critical pages of"
+    },
+    {
+      "startSeconds": 261.88,
+      "text": "your application you have to remember"
+    },
+    {
+      "startSeconds": 263.4,
+      "text": "about item potency so let's go back to"
+    },
+    {
+      "startSeconds": 265.72,
+      "text": "the solution or at least a potential"
+    },
+    {
+      "startSeconds": 267.68,
+      "text": "solution and the solution that is out"
+    },
+    {
+      "startSeconds": 270,
+      "text": "there in the industry is something"
+    },
+    {
+      "startSeconds": 272,
+      "text": "called an item potency key I will call"
+    },
+    {
+      "startSeconds": 274.32,
+      "text": "it X item poy ID or you can also call it"
+    },
+    {
+      "startSeconds": 278.96,
+      "text": "a key so the ID is going to be a unique"
+    },
+    {
+      "startSeconds": 281.72,
+      "text": "identifier or in other words just a"
+    },
+    {
+      "startSeconds": 284.32,
+      "text": "random ID generated in our application"
+    },
+    {
+      "startSeconds": 286.88,
+      "text": "memory all right so how is this going to"
+    },
+    {
+      "startSeconds": 289.199,
+      "text": "function in our graph here well whenever"
+    },
+    {
+      "startSeconds": 291.919,
+      "text": "a client makes a critical at importancy"
+    },
+    {
+      "startSeconds": 294.88,
+      "text": "critical requests such as pressing the"
+    },
+    {
+      "startSeconds": 297.36,
+      "text": "order button here we're going to attach"
+    },
+    {
+      "startSeconds": 300.039,
+      "text": "this to our request and notice that I"
+    },
+    {
+      "startSeconds": 303.039,
+      "text": "added an X kind of a notation to that"
+    },
+    {
+      "startSeconds": 306.32,
+      "text": "that this can be ah header a request"
+    },
+    {
+      "startSeconds": 308.36,
+      "text": "header doesn't have to be a payload we"
+    },
+    {
+      "startSeconds": 310.24,
+      "text": "can attach it as a request header when"
+    },
+    {
+      "startSeconds": 312.12,
+      "text": "the request goes to the API the API here"
+    },
+    {
+      "startSeconds": 316,
+      "text": "can now handle the logic but the first"
+    },
+    {
+      "startSeconds": 318.639,
+      "text": "time the client makes a request the API"
+    },
+    {
+      "startSeconds": 321.24,
+      "text": "is going to keep this item pocy key then"
+    },
+    {
+      "startSeconds": 324.12,
+      "text": "actually make a query to the database"
+    },
+    {
+      "startSeconds": 326.759,
+      "text": "when the burger is created we're talking"
+    },
+    {
+      "startSeconds": 329,
+      "text": "about the first burger then the database"
+    },
+    {
+      "startSeconds": 331.68,
+      "text": "Returns the success me message to our"
+    },
+    {
+      "startSeconds": 333.68,
+      "text": "API and now this item potency key that"
+    },
+    {
+      "startSeconds": 336.479,
+      "text": "we have here has to be stored somewhere"
+    },
+    {
+      "startSeconds": 338.479,
+      "text": "in a memory and well we're going to talk"
+    },
+    {
+      "startSeconds": 340.72,
+      "text": "about these different places where you"
+    },
+    {
+      "startSeconds": 342.759,
+      "text": "can store this item potency key but"
+    },
+    {
+      "startSeconds": 344.84,
+      "text": "basically API has to keep track of this"
+    },
+    {
+      "startSeconds": 346.88,
+      "text": "item potency key because the second time"
+    },
+    {
+      "startSeconds": 349.6,
+      "text": "when the user is makes a request with"
+    },
+    {
+      "startSeconds": 352.56,
+      "text": "the same item pocy because some kind of"
+    },
+    {
+      "startSeconds": 354.56,
+      "text": "an error happened in the first time the"
+    },
+    {
+      "startSeconds": 356.36,
+      "text": "API already knows that hey I already"
+    },
+    {
+      "startSeconds": 359.16,
+      "text": "have an import a key with the same ID"
+    },
+    {
+      "startSeconds": 361.96,
+      "text": "that you're sending me meaning the"
+    },
+    {
+      "startSeconds": 363.88,
+      "text": "database has previously succeeded with"
+    },
+    {
+      "startSeconds": 366.28,
+      "text": "creating your order and now I'm simply"
+    },
+    {
+      "startSeconds": 368.8,
+      "text": "not going to contact the database and"
+    },
+    {
+      "startSeconds": 370.759,
+      "text": "return you a success message right away"
+    },
+    {
+      "startSeconds": 373.28,
+      "text": "because your previous order has already"
+    },
+    {
+      "startSeconds": 375.72,
+      "text": "been placed now a valid question would"
+    },
+    {
+      "startSeconds": 377.68,
+      "text": "be where do exactly do we store this it"
+    },
+    {
+      "startSeconds": 379.88,
+      "text": "potency key should we store it in the"
+    },
+    {
+      "startSeconds": 381.8,
+      "text": "application memory well probably not I"
+    },
+    {
+      "startSeconds": 384.319,
+      "text": "would suggest storing it either in in a"
+    },
+    {
+      "startSeconds": 386.599,
+      "text": "normal database this database can"
+    },
+    {
+      "startSeconds": 389.12,
+      "text": "basically basically live or it can be a"
+    },
+    {
+      "startSeconds": 391.36,
+      "text": "table within this database that you're"
+    },
+    {
+      "startSeconds": 393.599,
+      "text": "using here or even better we can see"
+    },
+    {
+      "startSeconds": 396,
+      "text": "that we can also make use of a Rus cache"
+    },
+    {
+      "startSeconds": 399.039,
+      "text": "a Rus cache will live somewhere here"
+    },
+    {
+      "startSeconds": 401.599,
+      "text": "where API usually contacts before"
+    },
+    {
+      "startSeconds": 404.4,
+      "text": "reaching out to the database which is"
+    },
+    {
+      "startSeconds": 406.199,
+      "text": "going to hold these item potency keys to"
+    },
+    {
+      "startSeconds": 408.84,
+      "text": "make use of the to make use of it to"
+    },
+    {
+      "startSeconds": 411.96,
+      "text": "have a proper error handling okay and"
+    },
+    {
+      "startSeconds": 414.319,
+      "text": "what this item poy key would normally"
+    },
+    {
+      "startSeconds": 416.479,
+      "text": "look like is very simple on the front"
+    },
+    {
+      "startSeconds": 418.319,
+      "text": "end or on the client whenever we're"
+    },
+    {
+      "startSeconds": 420.319,
+      "text": "making a request such as this we're"
+    },
+    {
+      "startSeconds": 422.4,
+      "text": "making a request to the cart we're going"
+    },
+    {
+      "startSeconds": 424.599,
+      "text": "to attach this header and every time we"
+    },
+    {
+      "startSeconds": 427.12,
+      "text": "make a request this header is going to"
+    },
+    {
+      "startSeconds": 428.919,
+      "text": "be there as simple as that I'm not going"
+    },
+    {
+      "startSeconds": 430.8,
+      "text": "to show you the backend code because it"
+    },
+    {
+      "startSeconds": 432.72,
+      "text": "would be more complicated there is some"
+    },
+    {
+      "startSeconds": 434.96,
+      "text": "if statements based on the request that"
+    },
+    {
+      "startSeconds": 436.879,
+      "text": "you make to your Rus cash but I hope you"
+    },
+    {
+      "startSeconds": 438.68,
+      "text": "get the general idea okay guys if you"
+    },
+    {
+      "startSeconds": 440.879,
+      "text": "like this video make sure to subscribe"
+    },
+    {
+      "startSeconds": 442.919,
+      "text": "leave a like as always it's going to"
+    },
+    {
+      "startSeconds": 444.52,
+      "text": "help my channel a lot and I will see you"
+    },
+    {
+      "startSeconds": 446.8,
+      "text": "in the next video goodbye"
+    }
+  ]
+}

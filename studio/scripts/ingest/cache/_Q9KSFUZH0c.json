@@ -1,0 +1,801 @@
+{
+  "id": "_Q9KSFUZH0c",
+  "url": "https://www.youtube.com/watch?v=_Q9KSFUZH0c",
+  "fetchedAt": "2026-09-01T04:09:27.541Z",
+  "captionKind": "asr",
+  "chapters": [],
+  "cues": [
+    {
+      "startSeconds": 0.16,
+      "text": "your Docker image could be smaller and"
+    },
+    {
+      "startSeconds": 1.76,
+      "text": "faster let's talk about using"
+    },
+    {
+      "startSeconds": 3.12,
+      "text": "multi-stage builds to optimize your"
+    },
+    {
+      "startSeconds": 4.72,
+      "text": "Docker files for super fast and"
+    },
+    {
+      "startSeconds": 6.279,
+      "text": "efficient images hey I'm Kyle from Depot"
+    },
+    {
+      "startSeconds": 8.4,
+      "text": "and this is a Docker file for a rust"
+    },
+    {
+      "startSeconds": 10.2,
+      "text": "project it's not a good Docker file for"
+    },
+    {
+      "startSeconds": 12.759,
+      "text": "a number of reasons but the point is if"
+    },
+    {
+      "startSeconds": 14.92,
+      "text": "you want to build and deploy a rust"
+    },
+    {
+      "startSeconds": 16.64,
+      "text": "project this will do it you could start"
+    },
+    {
+      "startSeconds": 18.96,
+      "text": "editing the source and rebuild the image"
+    },
+    {
+      "startSeconds": 20.68,
+      "text": "without even having rust installed but"
+    },
+    {
+      "startSeconds": 22.64,
+      "text": "there are a few issues here that will"
+    },
+    {
+      "startSeconds": 24.519,
+      "text": "make our image build slower and still be"
+    },
+    {
+      "startSeconds": 27.24,
+      "text": "much larger in size than it needs to be"
+    },
+    {
+      "startSeconds": 29.4,
+      "text": "the bigger the image the longer it will"
+    },
+    {
+      "startSeconds": 30.88,
+      "text": "take to push and pull or deploy not to"
+    },
+    {
+      "startSeconds": 32.8,
+      "text": "mention if you're paying for all that"
+    },
+    {
+      "startSeconds": 33.92,
+      "text": "bandwidth and storage it'll start to add"
+    },
+    {
+      "startSeconds": 35.68,
+      "text": "up Docker is an excellent build tool and"
+    },
+    {
+      "startSeconds": 37.96,
+      "text": "great for packaging and deploying"
+    },
+    {
+      "startSeconds": 39.12,
+      "text": "applications but we don't want to ship"
+    },
+    {
+      "startSeconds": 41.039,
+      "text": "our build tools and source code in the"
+    },
+    {
+      "startSeconds": 43,
+      "text": "image that we're deploying let's build"
+    },
+    {
+      "startSeconds": 44.76,
+      "text": "this image and double check how big it"
+    },
+    {
+      "startSeconds": 46.52,
+      "text": "is currently if we build it and run"
+    },
+    {
+      "startSeconds": 48.28,
+      "text": "Docker image LS we can see that it's"
+    },
+    {
+      "startSeconds": 49.92,
+      "text": "almost 2.5 gigs and by the way this is"
+    },
+    {
+      "startSeconds": 52.44,
+      "text": "just a simple hello world API so that's"
+    },
+    {
+      "startSeconds": 54.84,
+      "text": "suspiciously large for what is really"
+    },
+    {
+      "startSeconds": 56.32,
+      "text": "just a single binary we need to run if"
+    },
+    {
+      "startSeconds": 58.16,
+      "text": "we look back at our Docker file it makes"
+    },
+    {
+      "startSeconds": 60.039,
+      "text": "sense our base image is the rust image"
+    },
+    {
+      "startSeconds": 62,
+      "text": "which has all of the tooling needed to"
+    },
+    {
+      "startSeconds": 63.68,
+      "text": "build our project and we don't really"
+    },
+    {
+      "startSeconds": 65.159,
+      "text": "need that once we have our binary we"
+    },
+    {
+      "startSeconds": 67.52,
+      "text": "copy our source code into the image when"
+    },
+    {
+      "startSeconds": 69.2,
+      "text": "we build it and then we obviously don't"
+    },
+    {
+      "startSeconds": 70.759,
+      "text": "need or want that in our final image so"
+    },
+    {
+      "startSeconds": 73.72,
+      "text": "what should you do build it locally and"
+    },
+    {
+      "startSeconds": 75.88,
+      "text": "copy it into a container well that would"
+    },
+    {
+      "startSeconds": 77.72,
+      "text": "work but it kind of defeats the point of"
+    },
+    {
+      "startSeconds": 79.479,
+      "text": "using Docker in a lot of ways Docker is"
+    },
+    {
+      "startSeconds": 81.32,
+      "text": "great for keeping our build process"
+    },
+    {
+      "startSeconds": 82.799,
+      "text": "portable repeatable and cached so what"
+    },
+    {
+      "startSeconds": 85.6,
+      "text": "we'll actually do is use two Docker"
+    },
+    {
+      "startSeconds": 87.56,
+      "text": "images one for building the project and"
+    },
+    {
+      "startSeconds": 89.96,
+      "text": "one for running it and we'll do this in"
+    },
+    {
+      "startSeconds": 91.479,
+      "text": "one Docker file using multi-stage builds"
+    },
+    {
+      "startSeconds": 93.84,
+      "text": "let's go back to our Docker file and see"
+    },
+    {
+      "startSeconds": 95.079,
+      "text": "what we can do first in our base image"
+    },
+    {
+      "startSeconds": 96.96,
+      "text": "we'll give it a name so that we can"
+    },
+    {
+      "startSeconds": 98.28,
+      "text": "reference it in our final image by"
+    },
+    {
+      "startSeconds": 100.36,
+      "text": "labeling this from statement we are"
+    },
+    {
+      "startSeconds": 101.759,
+      "text": "creating a stage in our build process"
+    },
+    {
+      "startSeconds": 103.56,
+      "text": "essentially a separate image that we can"
+    },
+    {
+      "startSeconds": 105.36,
+      "text": "reference and reuse later we'll name"
+    },
+    {
+      "startSeconds": 107.079,
+      "text": "this the Builder and everything will"
+    },
+    {
+      "startSeconds": 108.88,
+      "text": "stay mostly the same until we hit the"
+    },
+    {
+      "startSeconds": 110.759,
+      "text": "build step right here where we run cargo"
+    },
+    {
+      "startSeconds": 113.079,
+      "text": "build once that completes we'll have the"
+    },
+    {
+      "startSeconds": 115.68,
+      "text": "binary we need to run our application"
+    },
+    {
+      "startSeconds": 117.28,
+      "text": "but we no longer need anything else from"
+    },
+    {
+      "startSeconds": 119,
+      "text": "this image so we'll start a new stage"
+    },
+    {
+      "startSeconds": 121,
+      "text": "this time our final stage that we intend"
+    },
+    {
+      "startSeconds": 122.64,
+      "text": "to deploy because this is the final"
+    },
+    {
+      "startSeconds": 124.719,
+      "text": "stage we don't have to give it a name"
+    },
+    {
+      "startSeconds": 126.2,
+      "text": "because we won't be referencing it"
+    },
+    {
+      "startSeconds": 127.399,
+      "text": "anywhere else but more importantly in"
+    },
+    {
+      "startSeconds": 129.319,
+      "text": "this different stage we can use a"
+    },
+    {
+      "startSeconds": 130.92,
+      "text": "different base image one that is much"
+    },
+    {
+      "startSeconds": 132.68,
+      "text": "smaller and only contains the necessary"
+    },
+    {
+      "startSeconds": 134.44,
+      "text": "runtime dependencies to run our binary"
+    },
+    {
+      "startSeconds": 136.84,
+      "text": "if we compile our rust app statically we"
+    },
+    {
+      "startSeconds": 138.68,
+      "text": "can even run it inside a scratch image"
+    },
+    {
+      "startSeconds": 140.319,
+      "text": "which is the smallest possible base"
+    },
+    {
+      "startSeconds": 141.68,
+      "text": "image you can use as it"
+    },
+    {
+      "startSeconds": 143.56,
+      "text": "contains well nothing scratch is a"
+    },
+    {
+      "startSeconds": 146.48,
+      "text": "special base image that is completely"
+    },
+    {
+      "startSeconds": 148.56,
+      "text": "empty but capable of running statically"
+    },
+    {
+      "startSeconds": 150.56,
+      "text": "compiled binaries it's also where images"
+    },
+    {
+      "startSeconds": 152.44,
+      "text": "like dbn and buy box are built from"
+    },
+    {
+      "startSeconds": 154.04,
+      "text": "which are adding in the file system and"
+    },
+    {
+      "startSeconds": 155.56,
+      "text": "libraries relevant to those"
+    },
+    {
+      "startSeconds": 156.72,
+      "text": "distributions if you're writing for"
+    },
+    {
+      "startSeconds": 158.28,
+      "text": "python or no. JS or most other non-comp"
+    },
+    {
+      "startSeconds": 160.239,
+      "text": "miled languages you'll often want to use"
+    },
+    {
+      "startSeconds": 162.28,
+      "text": "an Alpine variant of your runtime image"
+    },
+    {
+      "startSeconds": 164.2,
+      "text": "which is usually considerably smaller"
+    },
+    {
+      "startSeconds": 165.879,
+      "text": "than the default image then we can use"
+    },
+    {
+      "startSeconds": 167.84,
+      "text": "the copy command with the from flag to"
+    },
+    {
+      "startSeconds": 170.44,
+      "text": "copy the binary out of the Builder stage"
+    },
+    {
+      "startSeconds": 172.84,
+      "text": "and into our final image by the way"
+    },
+    {
+      "startSeconds": 175.239,
+      "text": "there are much better ways to handle"
+    },
+    {
+      "startSeconds": 176.64,
+      "text": "caching dependencies specifically but it"
+    },
+    {
+      "startSeconds": 178.959,
+      "text": "can be a little different depending on"
+    },
+    {
+      "startSeconds": 180.2,
+      "text": "each language and we aren't trying to"
+    },
+    {
+      "startSeconds": 181.599,
+      "text": "focus tooo much on any individual"
+    },
+    {
+      "startSeconds": 183.2,
+      "text": "language today so while this is a good"
+    },
+    {
+      "startSeconds": 185,
+      "text": "example of multi-stage builds just to be"
+    },
+    {
+      "startSeconds": 186.92,
+      "text": "clear we can optimize this even further"
+    },
+    {
+      "startSeconds": 189.12,
+      "text": "but if you want a perfect Docker file"
+    },
+    {
+      "startSeconds": 190.76,
+      "text": "template for rust node.js or other"
+    },
+    {
+      "startSeconds": 192.92,
+      "text": "languages I'll have them linked below"
+    },
+    {
+      "startSeconds": 194.959,
+      "text": "okay so let's build this new Docker file"
+    },
+    {
+      "startSeconds": 196.799,
+      "text": "and compare it to our last attempt"
+    },
+    {
+      "startSeconds": 198.319,
+      "text": "remember the last image was almost 2.5"
+    },
+    {
+      "startSeconds": 200.44,
+      "text": "gigs with our new multi-stage build"
+    },
+    {
+      "startSeconds": 202.519,
+      "text": "Docker file our final image is just"
+    },
+    {
+      "startSeconds": 204.519,
+      "text": "barely 5 megabytes for reference a photo"
+    },
+    {
+      "startSeconds": 207.76,
+      "text": "taken on my phone is about 5 .7"
+    },
+    {
+      "startSeconds": 210.519,
+      "text": "megabytes or put another way our new"
+    },
+    {
+      "startSeconds": 212.959,
+      "text": "image is just about 500 times smaller"
+    },
+    {
+      "startSeconds": 215.439,
+      "text": "than our original one I'm going to show"
+    },
+    {
+      "startSeconds": 217.12,
+      "text": "you one last example with no. JS"
+    },
+    {
+      "startSeconds": 218.56,
+      "text": "independency caching because there's"
+    },
+    {
+      "startSeconds": 220.439,
+      "text": "actually one more really important"
+    },
+    {
+      "startSeconds": 221.76,
+      "text": "benefit to multi-stage builds that we"
+    },
+    {
+      "startSeconds": 223.08,
+      "text": "didn't really talk about yet having a"
+    },
+    {
+      "startSeconds": 224.76,
+      "text": "small final image is great for"
+    },
+    {
+      "startSeconds": 226.4,
+      "text": "deployment but it doesn't necessarily"
+    },
+    {
+      "startSeconds": 228.159,
+      "text": "make our build times any faster we can"
+    },
+    {
+      "startSeconds": 230.04,
+      "text": "push it faster so that's a big"
+    },
+    {
+      "startSeconds": 231.72,
+      "text": "Improvement but we can use multi-stage"
+    },
+    {
+      "startSeconds": 233.4,
+      "text": "builds to take advantage of caching in"
+    },
+    {
+      "startSeconds": 235,
+      "text": "our build process this is a sample"
+    },
+    {
+      "startSeconds": 236.959,
+      "text": "multi-stage Docker file for a node pnpm"
+    },
+    {
+      "startSeconds": 239.319,
+      "text": "project again you can find this link and"
+    },
+    {
+      "startSeconds": 241.56,
+      "text": "full guide for this Docker file below"
+    },
+    {
+      "startSeconds": 243.439,
+      "text": "but what I want to show you is how a"
+    },
+    {
+      "startSeconds": 245.599,
+      "text": "third stage can be used to cach"
+    },
+    {
+      "startSeconds": 247.959,
+      "text": "dependencies in this example we'll start"
+    },
+    {
+      "startSeconds": 250.36,
+      "text": "with a common base image node 20 in this"
+    },
+    {
+      "startSeconds": 252.64,
+      "text": "case and name it as such we'll reference"
+    },
+    {
+      "startSeconds": 255.92,
+      "text": "the same base image in each of our"
+    },
+    {
+      "startSeconds": 257.359,
+      "text": "stages the first real stage here is our"
+    },
+    {
+      "startSeconds": 260.4,
+      "text": "dependency stage where we will copy in"
+    },
+    {
+      "startSeconds": 262.68,
+      "text": "just our package.json and pmpm lock"
+    },
+    {
+      "startSeconds": 265.24,
+      "text": "files so that we can install our"
+    },
+    {
+      "startSeconds": 267.44,
+      "text": "dependencies usually when we're working"
+    },
+    {
+      "startSeconds": 269.36,
+      "text": "on a project most of our changes are"
+    },
+    {
+      "startSeconds": 271.36,
+      "text": "going to be in the source code much less"
+    },
+    {
+      "startSeconds": 273.12,
+      "text": "often are we going to be changing our"
+    },
+    {
+      "startSeconds": 274.759,
+      "text": "dependencies by separating out our"
+    },
+    {
+      "startSeconds": 276.919,
+      "text": "dependencies into a separate stage we"
+    },
+    {
+      "startSeconds": 278.8,
+      "text": "can take advantage of doctor's caching"
+    },
+    {
+      "startSeconds": 280.56,
+      "text": "mechanisms to only rebuild this stage"
+    },
+    {
+      "startSeconds": 282.88,
+      "text": "when there are changes to our package"
+    },
+    {
+      "startSeconds": 284.4,
+      "text": "files without this typically every time"
+    },
+    {
+      "startSeconds": 287.4,
+      "text": "we made any change to our project and"
+    },
+    {
+      "startSeconds": 289.16,
+      "text": "went to rebuild the docker image we"
+    },
+    {
+      "startSeconds": 291,
+      "text": "would also be rerunning the pnpm install"
+    },
+    {
+      "startSeconds": 293.96,
+      "text": "every time even if the dependencies"
+    },
+    {
+      "startSeconds": 295.919,
+      "text": "haven't changed you'll notice we're also"
+    },
+    {
+      "startSeconds": 297.8,
+      "text": "using a special Mount flag here this is"
+    },
+    {
+      "startSeconds": 299.759,
+      "text": "is a special feature we'll go into in"
+    },
+    {
+      "startSeconds": 301.12,
+      "text": "another video but it's essentially am"
+    },
+    {
+      "startSeconds": 303,
+      "text": "mountable volume where you can store"
+    },
+    {
+      "startSeconds": 304.919,
+      "text": "your cash and reuse it between build"
+    },
+    {
+      "startSeconds": 306.44,
+      "text": "stages now we'll have a build stage very"
+    },
+    {
+      "startSeconds": 308.8,
+      "text": "much like our rust example where we will"
+    },
+    {
+      "startSeconds": 310.919,
+      "text": "mount in our cache and copy the source"
+    },
+    {
+      "startSeconds": 312.759,
+      "text": "code in to build our project what will"
+    },
+    {
+      "startSeconds": 314.72,
+      "text": "happen most often in this build process"
+    },
+    {
+      "startSeconds": 316.36,
+      "text": "now is buildkit will recognize in this"
+    },
+    {
+      "startSeconds": 318.479,
+      "text": "copy command that the source code is"
+    },
+    {
+      "startSeconds": 320.4,
+      "text": "changed and it will invalidate the cache"
+    },
+    {
+      "startSeconds": 322.84,
+      "text": "for just this stage but not the"
+    },
+    {
+      "startSeconds": 325,
+      "text": "dependency stage assuming our"
+    },
+    {
+      "startSeconds": 326.639,
+      "text": "dependencies haven't changed and once"
+    },
+    {
+      "startSeconds": 328.52,
+      "text": "again just like before we'll have a"
+    },
+    {
+      "startSeconds": 329.919,
+      "text": "final stage where we'll copy in just the"
+    },
+    {
+      "startSeconds": 331.6,
+      "text": "built JS version of our app and run it"
+    },
+    {
+      "startSeconds": 333.84,
+      "text": "and that is how we can take advantage of"
+    },
+    {
+      "startSeconds": 335.52,
+      "text": "multi-stage builds and Docker to"
+    },
+    {
+      "startSeconds": 337.12,
+      "text": "optimize our build process reduce the"
+    },
+    {
+      "startSeconds": 338.919,
+      "text": "size of our images and speed up our"
+    },
+    {
+      "startSeconds": 340.8,
+      "text": "deployments of course if you're running"
+    },
+    {
+      "startSeconds": 342.8,
+      "text": "that in an ephemeral CI environment that"
+    },
+    {
+      "startSeconds": 344.759,
+      "text": "may not be all that useful if your cash"
+    },
+    {
+      "startSeconds": 346.759,
+      "text": "is being thrown away at the end of every"
+    },
+    {
+      "startSeconds": 348.28,
+      "text": "job for that we have Depot remote Docker"
+    },
+    {
+      "startSeconds": 350.28,
+      "text": "Builders replace a Docker build command"
+    },
+    {
+      "startSeconds": 352.28,
+      "text": "with the depot build command or use our"
+    },
+    {
+      "startSeconds": 354,
+      "text": "GitHub actions and centralize your"
+    },
+    {
+      "startSeconds": 355.44,
+      "text": "builds in the cloud with persistent cash"
+    },
+    {
+      "startSeconds": 357.28,
+      "text": "for up to 40 times faster builds running"
+    },
+    {
+      "startSeconds": 359.319,
+      "text": "your builds and Depot not only frees up"
+    },
+    {
+      "startSeconds": 360.84,
+      "text": "your local machine for other tasks but"
+    },
+    {
+      "startSeconds": 362.44,
+      "text": "it also gives you the benefit of a"
+    },
+    {
+      "startSeconds": 363.72,
+      "text": "shared cash across all of your projects"
+    },
+    {
+      "startSeconds": 365.759,
+      "text": "and team members links to everything we"
+    },
+    {
+      "startSeconds": 367.479,
+      "text": "talked about are in the description"
+    },
+    {
+      "startSeconds": 368.84,
+      "text": "we'll have more Docker optimization"
+    },
+    {
+      "startSeconds": 370.16,
+      "text": "tutorials coming almost every week so"
+    },
+    {
+      "startSeconds": 371.96,
+      "text": "please hit subscribe and we'll see you"
+    },
+    {
+      "startSeconds": 373.68,
+      "text": "next time happy building"
+    },
+    {
+      "startSeconds": 376.45,
+      "text": "[Music]"
+    }
+  ]
+}

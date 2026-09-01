@@ -1,8 +1,1066 @@
 {
   "id": "O94ESaJtHtM",
   "url": "https://www.youtube.com/watch?v=O94ESaJtHtM",
-  "fetchedAt": "2026-08-31T05:14:52.945Z",
-  "captionKind": "empty",
-  "chapters": [],
-  "cues": []
+  "fetchedAt": "2026-09-01T04:05:01.782Z",
+  "captionKind": "asr",
+  "chapters": [
+    {
+      "startSeconds": 0,
+      "label": "<Untitled Chapter 1>"
+    },
+    {
+      "startSeconds": 243,
+      "label": "MULTIPLE ACTIONS"
+    },
+    {
+      "startSeconds": 275,
+      "label": "COMPOSITION"
+    },
+    {
+      "startSeconds": 304,
+      "label": "CLIENT ACTIONS"
+    },
+    {
+      "startSeconds": 377,
+      "label": "OPTIMISTIC UPDATES"
+    }
+  ],
+  "cues": [
+    {
+      "startSeconds": 0,
+      "text": "just yesterday nexjs announced that the"
+    },
+    {
+      "startSeconds": 2.399,
+      "text": "app directory is now stable and ready"
+    },
+    {
+      "startSeconds": 4.14,
+      "text": "for use in production this is"
+    },
+    {
+      "startSeconds": 6.299,
+      "text": "JS app"
+    },
+    {
+      "startSeconds": 11.94,
+      "text": "full that's great news but what's more"
+    },
+    {
+      "startSeconds": 14.04,
+      "text": "exciting is they just announced a new"
+    },
+    {
+      "startSeconds": 15.66,
+      "text": "feature called server actions which"
+    },
+    {
+      "startSeconds": 17.64,
+      "text": "allows you to write one-off server-side"
+    },
+    {
+      "startSeconds": 19.44,
+      "text": "functions right alongside your server"
+    },
+    {
+      "startSeconds": 21.24,
+      "text": "components and that's huge because it"
+    },
+    {
+      "startSeconds": 22.92,
+      "text": "means you no longer need to write"
+    },
+    {
+      "startSeconds": 24.119,
+      "text": "individual API routes when submitting"
+    },
+    {
+      "startSeconds": 26.16,
+      "text": "forms or doing any other kind of data"
+    },
+    {
+      "startSeconds": 27.96,
+      "text": "mutation in today's video you'll learn"
+    },
+    {
+      "startSeconds": 29.699,
+      "text": "five different ways to use nexjs server"
+    },
+    {
+      "startSeconds": 31.8,
+      "text": "actions and in the process we'll build a"
+    },
+    {
+      "startSeconds": 33.66,
+      "text": "form that you can edit with real data"
+    },
+    {
+      "startSeconds": 35.399,
+      "text": "that has a skeleton loading UI between"
+    },
+    {
+      "startSeconds": 37.32,
+      "text": "updates and will also throw in a like"
+    },
+    {
+      "startSeconds": 39.059,
+      "text": "button with optimistic updates and"
+    },
+    {
+      "startSeconds": 40.92,
+      "text": "you'll be amazed at how much easier this"
+    },
+    {
+      "startSeconds": 42.36,
+      "text": "code is to write with server actions but"
+    },
+    {
+      "startSeconds": 44.399,
+      "text": "first not everybody is convinced on"
+    },
+    {
+      "startSeconds": 46.32,
+      "text": "Twitter people have been roasting this"
+    },
+    {
+      "startSeconds": 47.579,
+      "text": "feature because at first glance it looks"
+    },
+    {
+      "startSeconds": 49.32,
+      "text": "so similar to PHP where you might have"
+    },
+    {
+      "startSeconds": 51.36,
+      "text": "an index PHP file that co-locates your"
+    },
+    {
+      "startSeconds": 53.82,
+      "text": "HTML with different server-side"
+    },
+    {
+      "startSeconds": 55.44,
+      "text": "endpoints and that's totally correct but"
+    },
+    {
+      "startSeconds": 57.6,
+      "text": "at the same time it completely misses"
+    },
+    {
+      "startSeconds": 59.1,
+      "text": "the point when you run a server action"
+    },
+    {
+      "startSeconds": 60.539,
+      "text": "with next it doesn't completely reload"
+    },
+    {
+      "startSeconds": 62.34,
+      "text": "the page like a traditional PHP app"
+    },
+    {
+      "startSeconds": 64.26,
+      "text": "would and instead only re-renders the"
+    },
+    {
+      "startSeconds": 66.299,
+      "text": "server components that means you can"
+    },
+    {
+      "startSeconds": 67.619,
+      "text": "create an awesome front-end experience"
+    },
+    {
+      "startSeconds": 68.939,
+      "text": "with react while easily integrating"
+    },
+    {
+      "startSeconds": 70.799,
+      "text": "server-side code as you may know I like"
+    },
+    {
+      "startSeconds": 72.84,
+      "text": "to throw a lot of shade at react but"
+    },
+    {
+      "startSeconds": 74.28,
+      "text": "honestly I think server components"
+    },
+    {
+      "startSeconds": 75.659,
+      "text": "combined with actions is one of the"
+    },
+    {
+      "startSeconds": 77.1,
+      "text": "coolest things they've ever done it's a"
+    },
+    {
+      "startSeconds": 78.659,
+      "text": "classic react feature huge productivity"
+    },
+    {
+      "startSeconds": 80.4,
+      "text": "boost with plenty of ways to shoot"
+    },
+    {
+      "startSeconds": 82.02,
+      "text": "yourself in the foot it'll be easier if"
+    },
+    {
+      "startSeconds": 83.46,
+      "text": "I just show you so let's go ahead and"
+    },
+    {
+      "startSeconds": 84.9,
+      "text": "generate a new next application and by"
+    },
+    {
+      "startSeconds": 87,
+      "text": "the way this video is part of my brand"
+    },
+    {
+      "startSeconds": 88.86,
+      "text": "new Next js13 course which you can now"
+    },
+    {
+      "startSeconds": 91.259,
+      "text": "access on fireship i o it contains over"
+    },
+    {
+      "startSeconds": 93.36,
+      "text": "30 fast-paced videos covering a bunch of"
+    },
+    {
+      "startSeconds": 95.46,
+      "text": "different rendering data fetching and"
+    },
+    {
+      "startSeconds": 97.2,
+      "text": "caching strategies the first thing"
+    },
+    {
+      "startSeconds": 98.82,
+      "text": "you'll likely want to use server actions"
+    },
+    {
+      "startSeconds": 100.259,
+      "text": "for is to handle form submissions that"
+    },
+    {
+      "startSeconds": 102.659,
+      "text": "update some data in your database in"
+    },
+    {
+      "startSeconds": 104.52,
+      "text": "this demo we have a dynamic route under"
+    },
+    {
+      "startSeconds": 106.5,
+      "text": "dog slash ID which displays a card with"
+    },
+    {
+      "startSeconds": 109.259,
+      "text": "some profile information under that"
+    },
+    {
+      "startSeconds": 110.82,
+      "text": "Dynamic route we have another page that"
+    },
+    {
+      "startSeconds": 112.92,
+      "text": "contains a form to edit this data prior"
+    },
+    {
+      "startSeconds": 115.2,
+      "text": "to actions the way you would do this is"
+    },
+    {
+      "startSeconds": 116.82,
+      "text": "to create an API route somewhere that"
+    },
+    {
+      "startSeconds": 119.04,
+      "text": "uses a post or put request to run the"
+    },
+    {
+      "startSeconds": 121.2,
+      "text": "actual mutation then you would create a"
+    },
+    {
+      "startSeconds": 123.06,
+      "text": "client component that makes a fetch call"
+    },
+    {
+      "startSeconds": 124.979,
+      "text": "to that endpoint then on top of that to"
+    },
+    {
+      "startSeconds": 126.96,
+      "text": "show the updates in the page you'll need"
+    },
+    {
+      "startSeconds": 128.52,
+      "text": "to bring in the use transition Hook from"
+    },
+    {
+      "startSeconds": 130.08,
+      "text": "react until the client-side router to"
+    },
+    {
+      "startSeconds": 131.819,
+      "text": "refresh the page it's way more"
+    },
+    {
+      "startSeconds": 133.86,
+      "text": "complicated than it should be luckily"
+    },
+    {
+      "startSeconds": 135.42,
+      "text": "actions change all that currently here"
+    },
+    {
+      "startSeconds": 137.099,
+      "text": "in our edit form we're first fetching"
+    },
+    {
+      "startSeconds": 138.959,
+      "text": "data in the server component and for the"
+    },
+    {
+      "startSeconds": 140.76,
+      "text": "database I'm using versel's new key"
+    },
+    {
+      "startSeconds": 142.5,
+      "text": "value database but feel free to use"
+    },
+    {
+      "startSeconds": 144.12,
+      "text": "whatever data source you'd like once we"
+    },
+    {
+      "startSeconds": 145.739,
+      "text": "have our data which is just a dog object"
+    },
+    {
+      "startSeconds": 147.959,
+      "text": "with a name image and breed we can then"
+    },
+    {
+      "startSeconds": 150.48,
+      "text": "use it as the default values here in the"
+    },
+    {
+      "startSeconds": 152.34,
+      "text": "form on the form itself we don't use the"
+    },
+    {
+      "startSeconds": 154.739,
+      "text": "client-side on submit event handler we"
+    },
+    {
+      "startSeconds": 157.02,
+      "text": "instead pass it in action this is a"
+    },
+    {
+      "startSeconds": 159,
+      "text": "special property that takes a function"
+    },
+    {
+      "startSeconds": 160.68,
+      "text": "and will provide the data from the form"
+    },
+    {
+      "startSeconds": 162.48,
+      "text": "to run server-side code let's go ahead"
+    },
+    {
+      "startSeconds": 164.519,
+      "text": "and Define that function right here in"
+    },
+    {
+      "startSeconds": 165.9,
+      "text": "the component body create an async"
+    },
+    {
+      "startSeconds": 167.58,
+      "text": "function named up dog that receives the"
+    },
+    {
+      "startSeconds": 169.5,
+      "text": "form data as an argument but you might"
+    },
+    {
+      "startSeconds": 171.42,
+      "text": "be wondering what's up dog not much"
+    },
+    {
+      "startSeconds": 173.4,
+      "text": "what's going on with you dog I'm just"
+    },
+    {
+      "startSeconds": 174.9,
+      "text": "working on the server function here"
+    },
+    {
+      "startSeconds": 176.28,
+      "text": "that's special because it has this use"
+    },
+    {
+      "startSeconds": 178.14,
+      "text": "server directive next.js will"
+    },
+    {
+      "startSeconds": 180.12,
+      "text": "automatically turn this into a"
+    },
+    {
+      "startSeconds": 181.379,
+      "text": "server-side endpoint and you can access"
+    },
+    {
+      "startSeconds": 182.94,
+      "text": "things like headers and cookies here if"
+    },
+    {
+      "startSeconds": 184.68,
+      "text": "needed in this case we'll take our form"
+    },
+    {
+      "startSeconds": 186.12,
+      "text": "data and update the database and that's"
+    },
+    {
+      "startSeconds": 188.16,
+      "text": "literally all you need to create a"
+    },
+    {
+      "startSeconds": 189.78,
+      "text": "mutation if we go into the browser and"
+    },
+    {
+      "startSeconds": 191.4,
+      "text": "open up an the network Tab and then"
+    },
+    {
+      "startSeconds": 193.2,
+      "text": "submit the form you'll notice that it"
+    },
+    {
+      "startSeconds": 194.64,
+      "text": "sends a request to the URL that we're"
+    },
+    {
+      "startSeconds": 196.44,
+      "text": "currently on it's a post request that"
+    },
+    {
+      "startSeconds": 198.12,
+      "text": "runs that function we just defined on"
+    },
+    {
+      "startSeconds": 199.739,
+      "text": "the server that's pretty cool but you'll"
+    },
+    {
+      "startSeconds": 201.42,
+      "text": "notice that it doesn't automatically"
+    },
+    {
+      "startSeconds": 202.739,
+      "text": "update the UI that's not ideal you'll"
+    },
+    {
+      "startSeconds": 204.84,
+      "text": "likely want to show the latest data"
+    },
+    {
+      "startSeconds": 206.159,
+      "text": "after the mutation is complete but we"
+    },
+    {
+      "startSeconds": 207.959,
+      "text": "can easily fix that by importing"
+    },
+    {
+      "startSeconds": 209.64,
+      "text": "revalidate path from next cache which"
+    },
+    {
+      "startSeconds": 212.159,
+      "text": "will tell it to revalidate the page and"
+    },
+    {
+      "startSeconds": 214.2,
+      "text": "update the server components but what"
+    },
+    {
+      "startSeconds": 215.76,
+      "text": "makes this so awesome is that it"
+    },
+    {
+      "startSeconds": 217.2,
+      "text": "automatically updates the data that we"
+    },
+    {
+      "startSeconds": 218.819,
+      "text": "fetched in the UI it doesn't need a full"
+    },
+    {
+      "startSeconds": 220.739,
+      "text": "page reload in addition we can easily"
+    },
+    {
+      "startSeconds": 222.72,
+      "text": "Implement loading UI by simply adding a"
+    },
+    {
+      "startSeconds": 224.879,
+      "text": "loading component to this directory and"
+    },
+    {
+      "startSeconds": 226.5,
+      "text": "now when we run the mutation we get the"
+    },
+    {
+      "startSeconds": 228.12,
+      "text": "skeleton UI that's displayed while the"
+    },
+    {
+      "startSeconds": 229.98,
+      "text": "mutation is taking place I'm not going"
+    },
+    {
+      "startSeconds": 231.48,
+      "text": "to cover the CSS for the skeleton UI but"
+    },
+    {
+      "startSeconds": 233.459,
+      "text": "you can find it in the full course notes"
+    },
+    {
+      "startSeconds": 235.2,
+      "text": "that may or may not be desirable in the"
+    },
+    {
+      "startSeconds": 237.06,
+      "text": "UI but let's just take a moment to"
+    },
+    {
+      "startSeconds": 238.62,
+      "text": "appreciate how easy it was to implement"
+    },
+    {
+      "startSeconds": 240.239,
+      "text": "compared to previous versions of next"
+    },
+    {
+      "startSeconds": 242.04,
+      "text": "the second thing you need to know is"
+    },
+    {
+      "startSeconds": 243.54,
+      "text": "that you can use multiple actions on the"
+    },
+    {
+      "startSeconds": 245.519,
+      "text": "same form currently updog is our default"
+    },
+    {
+      "startSeconds": 247.56,
+      "text": "form action but let's go ahead and add a"
+    },
+    {
+      "startSeconds": 249.659,
+      "text": "second button to this form but give this"
+    },
+    {
+      "startSeconds": 251.519,
+      "text": "one the form action property that points"
+    },
+    {
+      "startSeconds": 253.98,
+      "text": "to a completely different server"
+    },
+    {
+      "startSeconds": 255.299,
+      "text": "function this function will also update"
+    },
+    {
+      "startSeconds": 256.919,
+      "text": "the database but instead it will use"
+    },
+    {
+      "startSeconds": 258.78,
+      "text": "next navigation to redirect back to the"
+    },
+    {
+      "startSeconds": 261.299,
+      "text": "main profile page so it's like a save"
+    },
+    {
+      "startSeconds": 263.34,
+      "text": "and quit feature but you could really do"
+    },
+    {
+      "startSeconds": 265.08,
+      "text": "anything you want here like upload an"
+    },
+    {
+      "startSeconds": 266.759,
+      "text": "image or update an individual form field"
+    },
+    {
+      "startSeconds": 268.8,
+      "text": "or whatever now if we go back to the"
+    },
+    {
+      "startSeconds": 270.54,
+      "text": "demo we have two different ways to"
+    },
+    {
+      "startSeconds": 272.16,
+      "text": "submit the same form that's pretty cool"
+    },
+    {
+      "startSeconds": 273.9,
+      "text": "but the third thing you should know is"
+    },
+    {
+      "startSeconds": 275.58,
+      "text": "that server actions are composable and"
+    },
+    {
+      "startSeconds": 277.62,
+      "text": "that means we don't need to Define them"
+    },
+    {
+      "startSeconds": 279.06,
+      "text": "directly inside the server component"
+    },
+    {
+      "startSeconds": 280.919,
+      "text": "it's often useful to Define them there"
+    },
+    {
+      "startSeconds": 282.54,
+      "text": "because they can access other data that"
+    },
+    {
+      "startSeconds": 284.22,
+      "text": "you've already fetched but you could"
+    },
+    {
+      "startSeconds": 285.54,
+      "text": "just as easily extract them outside the"
+    },
+    {
+      "startSeconds": 287.34,
+      "text": "component or put them in a completely"
+    },
+    {
+      "startSeconds": 288.9,
+      "text": "different file for example we might"
+    },
+    {
+      "startSeconds": 290.699,
+      "text": "create an actions.ts file that exports"
+    },
+    {
+      "startSeconds": 293.28,
+      "text": "multiple server functions one benefit of"
+    },
+    {
+      "startSeconds": 295.38,
+      "text": "doing this is that we can just put the"
+    },
+    {
+      "startSeconds": 296.82,
+      "text": "use server directive at the top and it"
+    },
+    {
+      "startSeconds": 298.68,
+      "text": "will apply to all the functions in this"
+    },
+    {
+      "startSeconds": 300.24,
+      "text": "file but more importantly we can now"
+    },
+    {
+      "startSeconds": 302.16,
+      "text": "reuse these actions in any component"
+    },
+    {
+      "startSeconds": 304.08,
+      "text": "that's pretty cool but the fourth thing"
+    },
+    {
+      "startSeconds": 305.639,
+      "text": "you should know is that the action"
+    },
+    {
+      "startSeconds": 306.9,
+      "text": "property only works on elements inside"
+    },
+    {
+      "startSeconds": 308.94,
+      "text": "of a form because server components"
+    },
+    {
+      "startSeconds": 310.919,
+      "text": "can't handle clients side interactions"
+    },
+    {
+      "startSeconds": 312.72,
+      "text": "like button clicks however it is still"
+    },
+    {
+      "startSeconds": 314.82,
+      "text": "possible to trigger server actions from"
+    },
+    {
+      "startSeconds": 316.86,
+      "text": "client components in this example we"
+    },
+    {
+      "startSeconds": 318.78,
+      "text": "have two server actions of like and"
+    },
+    {
+      "startSeconds": 320.88,
+      "text": "dislike that will increment and"
+    },
+    {
+      "startSeconds": 322.44,
+      "text": "decrement a value in the database and"
+    },
+    {
+      "startSeconds": 324.36,
+      "text": "then revalidate that path then from"
+    },
+    {
+      "startSeconds": 326.1,
+      "text": "there we have a client component called"
+    },
+    {
+      "startSeconds": 327.9,
+      "text": "likes it Imports the like and dislike"
+    },
+    {
+      "startSeconds": 330.36,
+      "text": "actions from that file and also the use"
+    },
+    {
+      "startSeconds": 333,
+      "text": "transition Hook from react use"
+    },
+    {
+      "startSeconds": 334.8,
+      "text": "transition is essential here because it"
+    },
+    {
+      "startSeconds": 336.66,
+      "text": "allows us to update State without"
+    },
+    {
+      "startSeconds": 338.34,
+      "text": "blocking the UI what that means in this"
+    },
+    {
+      "startSeconds": 340.32,
+      "text": "case is that it will execute the server"
+    },
+    {
+      "startSeconds": 342,
+      "text": "action then the next JS router will"
+    },
+    {
+      "startSeconds": 343.74,
+      "text": "reload the server component and update"
+    },
+    {
+      "startSeconds": 345.36,
+      "text": "the state all in a single round trip to"
+    },
+    {
+      "startSeconds": 347.16,
+      "text": "make that happen we have this somewhat"
+    },
+    {
+      "startSeconds": 348.9,
+      "text": "ugly code here where we need to wrap the"
+    },
+    {
+      "startSeconds": 350.639,
+      "text": "server action inside of start transition"
+    },
+    {
+      "startSeconds": 352.62,
+      "text": "but once that's done we can now go back"
+    },
+    {
+      "startSeconds": 354.66,
+      "text": "to our component and click the button"
+    },
+    {
+      "startSeconds": 356.4,
+      "text": "which will run the mutation but also"
+    },
+    {
+      "startSeconds": 358.32,
+      "text": "refetch the latest light count from the"
+    },
+    {
+      "startSeconds": 360.18,
+      "text": "parent server component and does so all"
+    },
+    {
+      "startSeconds": 362.22,
+      "text": "in one round trip which would be way"
+    },
+    {
+      "startSeconds": 363.66,
+      "text": "more complex to handle without server"
+    },
+    {
+      "startSeconds": 365.4,
+      "text": "components you'd likely need to bring in"
+    },
+    {
+      "startSeconds": 366.9,
+      "text": "use effect in a client component and"
+    },
+    {
+      "startSeconds": 368.699,
+      "text": "you'll probably end up losing your mind"
+    },
+    {
+      "startSeconds": 369.9,
+      "text": "in the process in fact one of my"
+    },
+    {
+      "startSeconds": 371.46,
+      "text": "favorite things about server components"
+    },
+    {
+      "startSeconds": 373.139,
+      "text": "in general is they eliminate the need to"
+    },
+    {
+      "startSeconds": 374.94,
+      "text": "use use effect in most of your"
+    },
+    {
+      "startSeconds": 376.38,
+      "text": "components but the fifth thing you"
+    },
+    {
+      "startSeconds": 377.82,
+      "text": "should know is that actions can also"
+    },
+    {
+      "startSeconds": 379.62,
+      "text": "support optimistic updates one problem"
+    },
+    {
+      "startSeconds": 381.66,
+      "text": "with our current implementation is that"
+    },
+    {
+      "startSeconds": 383.46,
+      "text": "when you click the button there's like a"
+    },
+    {
+      "startSeconds": 384.9,
+      "text": "few hundred millisecond delay before the"
+    },
+    {
+      "startSeconds": 386.58,
+      "text": "light count actually updates and that's"
+    },
+    {
+      "startSeconds": 388.5,
+      "text": "not ideal tools like Firebase have been"
+    },
+    {
+      "startSeconds": 390.3,
+      "text": "doing optimistic updates for the last 10"
+    },
+    {
+      "startSeconds": 392.1,
+      "text": "years to make it appear like the server"
+    },
+    {
+      "startSeconds": 394.08,
+      "text": "has zero latency I'm going to go ahead"
+    },
+    {
+      "startSeconds": 395.88,
+      "text": "and re-implement our like button but"
+    },
+    {
+      "startSeconds": 397.56,
+      "text": "this time instead of use transition I'm"
+    },
+    {
+      "startSeconds": 399.72,
+      "text": "going to bring in an experimental hook"
+    },
+    {
+      "startSeconds": 401.4,
+      "text": "called use optimistic this Hook is"
+    },
+    {
+      "startSeconds": 403.86,
+      "text": "basically like a combination of use"
+    },
+    {
+      "startSeconds": 405.84,
+      "text": "transition and use reducer in react"
+    },
+    {
+      "startSeconds": 408.18,
+      "text": "it'll update the UI instantly with what"
+    },
+    {
+      "startSeconds": 410.1,
+      "text": "you think the server is going to respond"
+    },
+    {
+      "startSeconds": 411.6,
+      "text": "with then when the server actually does"
+    },
+    {
+      "startSeconds": 413.28,
+      "text": "respond it will sync up the True Value"
+    },
+    {
+      "startSeconds": 415.139,
+      "text": "usually that would mean there was some"
+    },
+    {
+      "startSeconds": 416.58,
+      "text": "kind of server error and so it rolls"
+    },
+    {
+      "startSeconds": 418.08,
+      "text": "back to the previous value in this"
+    },
+    {
+      "startSeconds": 419.819,
+      "text": "component we'll also pass in the light"
+    },
+    {
+      "startSeconds": 421.38,
+      "text": "count from the server component and then"
+    },
+    {
+      "startSeconds": 423,
+      "text": "we'll add an additional property of"
+    },
+    {
+      "startSeconds": 424.5,
+      "text": "sending so we know when the actual"
+    },
+    {
+      "startSeconds": 426.18,
+      "text": "update is taking place from there we"
+    },
+    {
+      "startSeconds": 428.1,
+      "text": "Define a reducer function that takes the"
+    },
+    {
+      "startSeconds": 430.02,
+      "text": "previous state and then updates it with"
+    },
+    {
+      "startSeconds": 431.52,
+      "text": "the latest value now from here we go"
+    },
+    {
+      "startSeconds": 433.68,
+      "text": "into the click handlers for our buttons"
+    },
+    {
+      "startSeconds": 435.479,
+      "text": "and we call the server action just like"
+    },
+    {
+      "startSeconds": 437.34,
+      "text": "we did previously but we also use the"
+    },
+    {
+      "startSeconds": 439.139,
+      "text": "hook to update a value that we think the"
+    },
+    {
+      "startSeconds": 441.18,
+      "text": "light count will be which in this case"
+    },
+    {
+      "startSeconds": 442.62,
+      "text": "would be the current light count plus or"
+    },
+    {
+      "startSeconds": 444.72,
+      "text": "minus one and now if we go to the demo"
+    },
+    {
+      "startSeconds": 446.639,
+      "text": "we can compare the two like buttons side"
+    },
+    {
+      "startSeconds": 448.5,
+      "text": "by side you'll notice that in the"
+    },
+    {
+      "startSeconds": 450,
+      "text": "optimistic button the light count"
+    },
+    {
+      "startSeconds": 451.62,
+      "text": "changes as soon as we click it and"
+    },
+    {
+      "startSeconds": 453.479,
+      "text": "that'll make your server look extremely"
+    },
+    {
+      "startSeconds": 454.919,
+      "text": "fast even though it's not as of today"
+    },
+    {
+      "startSeconds": 456.9,
+      "text": "server actions are in Alpha but they"
+    },
+    {
+      "startSeconds": 458.699,
+      "text": "open the door to all kinds of awesome"
+    },
+    {
+      "startSeconds": 460.199,
+      "text": "patterns if you want to get really good"
+    },
+    {
+      "startSeconds": 461.88,
+      "text": "at next 13 check out my full Pro course"
+    },
+    {
+      "startSeconds": 463.86,
+      "text": "where we'll continue to explore the"
+    },
+    {
+      "startSeconds": 465.36,
+      "text": "possibilities with server actions thanks"
+    },
+    {
+      "startSeconds": 467.22,
+      "text": "for watching and I will see you in the"
+    },
+    {
+      "startSeconds": 468.96,
+      "text": "next one"
+    }
+  ]
 }

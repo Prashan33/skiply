@@ -1,8 +1,1266 @@
 {
   "id": "VBlSe8tvg4U",
   "url": "https://www.youtube.com/watch?v=VBlSe8tvg4U",
-  "fetchedAt": "2026-08-31T05:14:50.348Z",
-  "captionKind": "empty",
-  "chapters": [],
-  "cues": []
+  "fetchedAt": "2026-09-01T04:04:56.200Z",
+  "captionKind": "manual",
+  "chapters": [
+    {
+      "startSeconds": 0,
+      "label": "Introduction"
+    },
+    {
+      "startSeconds": 24,
+      "label": "Demo"
+    },
+    {
+      "startSeconds": 80,
+      "label": "Caching overview"
+    },
+    {
+      "startSeconds": 126,
+      "label": "Foundations"
+    },
+    {
+      "startSeconds": 370,
+      "label": "Static: fetch()"
+    },
+    {
+      "startSeconds": 423,
+      "label": "Dynamic: fetch() without caching"
+    },
+    {
+      "startSeconds": 457,
+      "label": "Static: unstable_cache()"
+    },
+    {
+      "startSeconds": 577,
+      "label": "Dynamic: Direct database calls"
+    },
+    {
+      "startSeconds": 607,
+      "label": "Revalidating static data"
+    },
+    {
+      "startSeconds": 752,
+      "label": "Revalidating from external sources (webhooks)"
+    },
+    {
+      "startSeconds": 852,
+      "label": "Revalidating static data with ISR"
+    },
+    {
+      "startSeconds": 928,
+      "label": "React cache()"
+    },
+    {
+      "startSeconds": 1000,
+      "label": "App Router and Pages Router differences"
+    },
+    {
+      "startSeconds": 1072,
+      "label": "Example: Forms with useFormState & useFormStatus"
+    },
+    {
+      "startSeconds": 1173,
+      "label": "Using forms without JavaScript"
+    },
+    {
+      "startSeconds": 1199,
+      "label": "Exploring the network tab for a Server Action"
+    },
+    {
+      "startSeconds": 1249,
+      "label": "Example: Optimistic UI"
+    },
+    {
+      "startSeconds": 1305,
+      "label": "Preventing navigations with pending mutations"
+    },
+    {
+      "startSeconds": 1354,
+      "label": "Progressive enhancement"
+    },
+    {
+      "startSeconds": 1419,
+      "label": "Partial Prerendering"
+    },
+    {
+      "startSeconds": 1496,
+      "label": "Conclusion"
+    }
+  ],
+  "cues": [
+    {
+      "startSeconds": 0.08,
+      "text": "Let's talk about caching in Next.js. This is probably one of the most requested videos"
+    },
+    {
+      "startSeconds": 4.24,
+      "text": "that I've had, and I know you all want to see some practical examples of how to cache data,"
+    },
+    {
+      "startSeconds": 9.12,
+      "text": "revalidate data, and also just walk through how the model works from the"
+    },
+    {
+      "startSeconds": 13.04,
+      "text": "ground up. So that's what we're going to do today. We're going to show some examples,"
+    },
+    {
+      "startSeconds": 16.44,
+      "text": "show some demo apps that will have the code open source as well, too,"
+    },
+    {
+      "startSeconds": 19.96,
+      "text": "and kind of walk through the foundations of how caching works in the Next.js App Router."
+    },
+    {
+      "startSeconds": 24.52,
+      "text": "Okay, let's start by looking at an example of an application that uses caching. It revalidates"
+    },
+    {
+      "startSeconds": 28.84,
+      "text": "data and it has mutations, so we can work backwards from a real product. So, on the right,"
+    },
+    {
+      "startSeconds": 33.76,
+      "text": "I have this example of kind of a roadmap feature prioritization app, and if I go in here and I"
+    },
+    {
+      "startSeconds": 39.28,
+      "text": "say new feature, I hit enter, this data that is now shown on the page is being cached. Anytime"
+    },
+    {
+      "startSeconds": 47.56,
+      "text": "I make a mutation to this data, like uploading a feature or adding another new feature, the Next.js"
+    },
+    {
+      "startSeconds": 55.76,
+      "text": "App Router is able to revalidate that data. It's able to mutate the cache and update it with the"
+    },
+    {
+      "startSeconds": 60.84,
+      "text": "latest features. So now, if I reload the page, I still see that we have our cache data on the page."
+    },
+    {
+      "startSeconds": 66.36,
+      "text": "Now, this is a simple example, but it really is probably the most common way of interacting"
+    },
+    {
+      "startSeconds": 71.72,
+      "text": "with the App Router. And we're going to break down how every bit of this happens,"
+    },
+    {
+      "startSeconds": 76,
+      "text": "from static pages to the cache pages, and finally to revalidating data."
+    },
+    {
+      "startSeconds": 80.4,
+      "text": "Before we jump in, I want to talk a bit about the state of caching in Next.js today. So,"
+    },
+    {
+      "startSeconds": 84.68,
+      "text": "the App Router has been out for about a year now, and a lot of you all have shared a lot of"
+    },
+    {
+      "startSeconds": 89,
+      "text": "great feedback with us on the parts of caching that you like, the parts of caching that you"
+    },
+    {
+      "startSeconds": 92.92,
+      "text": "want us to change, and how we can improve the developer experience, and even helped report"
+    },
+    {
+      "startSeconds": 97.04,
+      "text": "and solve some bugs along the way, too. And maybe the last time you all tried out caching,"
+    },
+    {
+      "startSeconds": 102.32,
+      "text": "some parts of this model might not have been ready yet, like server actions or revalidateTag or"
+    },
+    {
+      "startSeconds": 107.28,
+      "text": "revalidatePath. So if you haven't checked it out in a while, definitely come into this video with"
+    },
+    {
+      "startSeconds": 111.88,
+      "text": "a fresh set of eyes because it might look a little different than the last time you checked it out."
+    },
+    {
+      "startSeconds": 116,
+      "text": "As you'll see as I talk through the video,"
+    },
+    {
+      "startSeconds": 117.36,
+      "text": "there's still ways that we want to make this even more simple. So I'll highlight"
+    },
+    {
+      "startSeconds": 120.8,
+      "text": "a few things that we're still working on along the way to simplify this even further."
+    },
+    {
+      "startSeconds": 125.12,
+      "text": "Okay, so now let's talk about some of the foundations of caching in the App Router."
+    },
+    {
+      "startSeconds": 129.76,
+      "text": "We can understand how the pieces fit together. We'll talk a little bit about static and dynamic"
+    },
+    {
+      "startSeconds": 134.52,
+      "text": "pages or static and dynamic rendering. We'll talk about some differences with the pages"
+    },
+    {
+      "startSeconds": 138.48,
+      "text": "router model that you might have used before, and we'll also walk through some examples of"
+    },
+    {
+      "startSeconds": 143.32,
+      "text": "different use cases where you might want to use caching and what that would look like."
+    },
+    {
+      "startSeconds": 146.88,
+      "text": "So let's start with static and dynamic rendering. In my application, in my editor on the left here,"
+    },
+    {
+      "startSeconds": 153.28,
+      "text": "I have an App Router app, and I have a page at the index route. This page is just rendering out"
+    },
+    {
+      "startSeconds": 160.08,
+      "text": "some JSX, and it's rendering out the date of right now. In my terminal on the bottom left,"
+    },
+    {
+      "startSeconds": 165.08,
+      "text": "I'm running next dev. So on the right in the browser, if I reload the page,"
+    },
+    {
+      "startSeconds": 171.12,
+      "text": "I can see I'm making requests to this page, and I'm getting a new date on every request."
+    },
+    {
+      "startSeconds": 177.08,
+      "text": "Now, this functionality of being able to refresh the page when you're running your local dev server"
+    },
+    {
+      "startSeconds": 182.04,
+      "text": "and see up-to-date data is how Next.js has worked since the pages router as well. I also have,"
+    },
+    {
+      "startSeconds": 187.84,
+      "text": "just to show an example, this /test which is in the pages router that does basically the exact"
+    },
+    {
+      "startSeconds": 193.68,
+      "text": "same thing, except it's passing the date from getStaticProps. And when I'm running in my local"
+    },
+    {
+      "startSeconds": 199.2,
+      "text": "dev environment and I reload the page, I see that exact same behavior, too, with the pages router."
+    },
+    {
+      "startSeconds": 204.68,
+      "text": "Now, what you're witnessing is that when you're running local dev and you reload the page,"
+    },
+    {
+      "startSeconds": 210.28,
+      "text": "even though this page is going to be cached, we're going to talk about that here in a second,"
+    },
+    {
+      "startSeconds": 214.64,
+      "text": "the data is fresh on every reload. And I think sometimes that foundational bit gets a little"
+    },
+    {
+      "startSeconds": 220.28,
+      "text": "bit confused between folks trying out this new model. So we have to understand that bit first."
+    },
+    {
+      "startSeconds": 226.12,
+      "text": "For example, if I were to go and run the build and then start my application locally,"
+    },
+    {
+      "startSeconds": 233.2,
+      "text": "you're going to witness a different behavior. What you're going to see is, when we run a production"
+    },
+    {
+      "startSeconds": 238.08,
+      "text": "build, when we take this example of our App Router page where it had a date, this code,"
+    },
+    {
+      "startSeconds": 244.52,
+      "text": "while it is a server component, is going to be evaluated during the build. So there's nothing"
+    },
+    {
+      "startSeconds": 249.52,
+      "text": "in this component that's saying that it needs to access any information on demand or from"
+    },
+    {
+      "startSeconds": 254.32,
+      "text": "the request, so it can be pre-rendered, and it doesn't need to be computed on the fly."
+    },
+    {
+      "startSeconds": 259.2,
+      "text": "So, if I reload the page, I now see this date that has been generated, the page has"
+    },
+    {
+      "startSeconds": 264.96,
+      "text": "been pre-rendered, and nothing changes. So this is a foundational bit to understand,"
+    },
+    {
+      "startSeconds": 269.2,
+      "text": "which is that even though we're using server components, the default is that pages get"
+    },
+    {
+      "startSeconds": 273.92,
+      "text": "prerendered when you run a build. It's also worth mentioning that the same thing applies to route"
+    },
+    {
+      "startSeconds": 279.16,
+      "text": "handlers that use a GET and do not read anything from the incoming request. So if you try to use"
+    },
+    {
+      "startSeconds": 285.24,
+      "text": "a route handler and you want to just print out a date, you might notice the same behavior. Route"
+    },
+    {
+      "startSeconds": 290.68,
+      "text": "handlers are built on the same foundation as pages, so they share the same default behavior."
+    },
+    {
+      "startSeconds": 296.44,
+      "text": "Now, what if this isn't the behavior that we want? What if we do actually"
+    },
+    {
+      "startSeconds": 300.48,
+      "text": "want our page to be computed dynamically, to run dynamically on every request? Well,"
+    },
+    {
+      "startSeconds": 305.72,
+      "text": "we want it to be dynamically rendered and not statically rendered."
+    },
+    {
+      "startSeconds": 308.76,
+      "text": "Now, I've updated my code on the left here to read something from the incoming request. So,"
+    },
+    {
+      "startSeconds": 313.76,
+      "text": "I'm using this cookies() function, which allows me to look at the incoming request. I could"
+    },
+    {
+      "startSeconds": 318.12,
+      "text": "have also used a headers() function, or we also have one called noStore(),"
+    },
+    {
+      "startSeconds": 323.16,
+      "text": "which allows you to do basically the exact same thing to opt into dynamic rendering. And now,"
+    },
+    {
+      "startSeconds": 328.84,
+      "text": "when I reload the page on the right, you're seeing that this component is"
+    },
+    {
+      "startSeconds": 332.16,
+      "text": "getting a fresh date on every reload. So now, the page is using dynamic rendering."
+    },
+    {
+      "startSeconds": 337.84,
+      "text": "There are a number of ways, when we talk about fetching and caching,"
+    },
+    {
+      "startSeconds": 340.36,
+      "text": "of how you can opt out of using the default behavior where things are cached."
+    },
+    {
+      "startSeconds": 345.6,
+      "text": "But it's important to understand this difference from the start."
+    },
+    {
+      "startSeconds": 348.52,
+      "text": "Okay, so with an understanding of static and dynamic, and what"
+    },
+    {
+      "startSeconds": 351.44,
+      "text": "is opting a page into dynamic rendering, and an understanding that the local next"
+    },
+    {
+      "startSeconds": 355.76,
+      "text": "dev environment is different than running your production server,"
+    },
+    {
+      "startSeconds": 359.04,
+      "text": "let's talk about some specific examples of how you would fetch data and how caching will affect that."
+    },
+    {
+      "startSeconds": 364.28,
+      "text": "We're going to start with the most simple example, which is using the fetch API. So here,"
+    },
+    {
+      "startSeconds": 371.2,
+      "text": "I have the fetch API, I'm making a request to some external URL, I get back JSON,"
+    },
+    {
+      "startSeconds": 376.36,
+      "text": "and then I'm showing the stock on the page. So in the right, my browser, if I reload the page,"
+    },
+    {
+      "startSeconds": 381.16,
+      "text": "I see in my console that this is a cache hit. I can reload the page,"
+    },
+    {
+      "startSeconds": 385.32,
+      "text": "still seeing a cache hit. Now, I have an option turned on in my next.config that"
+    },
+    {
+      "startSeconds": 390.32,
+      "text": "allows me to see more information about the URLs that I'm fetching from. If you all think"
+    },
+    {
+      "startSeconds": 394.8,
+      "text": "this is helpful and you want us to do more like this in the terminal, definitely let us know,"
+    },
+    {
+      "startSeconds": 398.96,
+      "text": "but that's where you're seeing that, and then it's getting rendered out on the page as well, too."
+    },
+    {
+      "startSeconds": 403.52,
+      "text": "Now, let's say when I'm testing locally, I want to empty the cache, and I want to get"
+    },
+    {
+      "startSeconds": 408,
+      "text": "fresh data. You can use Command + Shift + R like a hard reload in the browser. If I do that now,"
+    },
+    {
+      "startSeconds": 413.84,
+      "text": "we see in the console that it was a cache skip, and now if I reload, I'm back to cache"
+    },
+    {
+      "startSeconds": 418.72,
+      "text": "data again. So if you need to clear that out, Command + Shift + R is your friend."
+    },
+    {
+      "startSeconds": 423.16,
+      "text": "What about if you have a fetch but you don't want it to be cached? Well, going back to the"
+    },
+    {
+      "startSeconds": 428,
+      "text": "foundational part I talked through with dynamic rendering, we want to tell this"
+    },
+    {
+      "startSeconds": 432.08,
+      "text": "component actually we don't want to store this into cash. We want to use no store, or cookies,"
+    },
+    {
+      "startSeconds": 437.84,
+      "text": "or headers, or looking at search prams, or a number of different ways you can opt into dynamic"
+    },
+    {
+      "startSeconds": 442.48,
+      "text": "rendering. noStore() is the easiest, so here I've opted this into dynamic rendering. I said,"
+    },
+    {
+      "startSeconds": 448.32,
+      "text": "you know what, don't do this. So if I reload my browser on the right, you see every single time"
+    },
+    {
+      "startSeconds": 453.8,
+      "text": "I'm seeing cache skip. So this is a really easy way to opt out. Now, your next question might be,"
+    },
+    {
+      "startSeconds": 459,
+      "text": "that's great, the fetch API is super helpful if I'm using some external API, but what about if I'm"
+    },
+    {
+      "startSeconds": 464.36,
+      "text": "trying to build my full stack app in Next.js? I want to just go directly to the database,"
+    },
+    {
+      "startSeconds": 469.04,
+      "text": "or I want to use some library that doesn't expose the fetch API. The answer for that is a function"
+    },
+    {
+      "startSeconds": 475.24,
+      "text": "called unstable_cache(). So let's take a look at this. In this example, I have an unstable_cache()"
+    },
+    {
+      "startSeconds": 481.24,
+      "text": "route here, pretty much the same exact thing where I have this product quantity component, but I'm"
+    },
+    {
+      "startSeconds": 486.68,
+      "text": "making this call to this getProduct() function. Let's take a look at what this looks like. So,"
+    },
+    {
+      "startSeconds": 491.2,
+      "text": "I have this unstable_cache() function, and it takes in this function here where I'm going to"
+    },
+    {
+      "startSeconds": 495.92,
+      "text": "go to my database using a Postgres database. I'm going to select from the products table, and I'm"
+    },
+    {
+      "startSeconds": 501.2,
+      "text": "going to find the one with the ID of one, and then I'm tagging this cache to say that this is for all"
+    },
+    {
+      "startSeconds": 507.64,
+      "text": "of the products that I'm fetching. So if I go back to my browser, I reload the page, this is"
+    },
+    {
+      "startSeconds": 513.92,
+      "text": "being cached every single time. And if I wanted to clear the cache again, I can do a similar"
+    },
+    {
+      "startSeconds": 519.28,
+      "text": "thing where I go and fetch that from the origin source. Now, you might be wondering, is it okay"
+    },
+    {
+      "startSeconds": 526.44,
+      "text": "to use this? Can I use this as unstable_cache()? Fine, the API structure here might change a little"
+    },
+    {
+      "startSeconds": 533.32,
+      "text": "bit and we're looking for your feedback on the overall structure of this. We've already heard"
+    },
+    {
+      "startSeconds": 537.24,
+      "text": "feedback that it's a little confusing why there are the parts that make up the cache key here, and"
+    },
+    {
+      "startSeconds": 542.56,
+      "text": "then how you're specifically tagging the cache to revalidate the cache here. So we plan to simplify"
+    },
+    {
+      "startSeconds": 547.36,
+      "text": "this a little bit, but the general idea is still very solid. So if you have your data layer in your"
+    },
+    {
+      "startSeconds": 554.08,
+      "text": "application that has your database and it has your fetches and your functions, and you want"
+    },
+    {
+      "startSeconds": 558.88,
+      "text": "to use unstable_cache(), this is totally fine. You can still kind of build out your application"
+    },
+    {
+      "startSeconds": 563.6,
+      "text": "in this model, and then over time, as we improve this cache in the coming months, we'll provide"
+    },
+    {
+      "startSeconds": 569.56,
+      "text": "code mods and documentation and examples to move from this world to the newer world. Now, if you're"
+    },
+    {
+      "startSeconds": 577.04,
+      "text": "like, you know what, actually I want to go to my database, I want to grab new data, I don't want to"
+    },
+    {
+      "startSeconds": 582.08,
+      "text": "cache anything here, that's fine. You don't need to use the unstable_cache() function. Instead,"
+    },
+    {
+      "startSeconds": 586.56,
+      "text": "you can write your component like this. I've just kind of inlined that database fetch here, so go to"
+    },
+    {
+      "startSeconds": 591.64,
+      "text": "my database, I select all the products, and then I have a list of products. So on every reload,"
+    },
+    {
+      "startSeconds": 597.12,
+      "text": "I'm going and fetching that new list of products. Now, the counter to this is how we actually"
+    },
+    {
+      "startSeconds": 602.68,
+      "text": "invalidate the cache when that data changes, and we're going to talk about that a little bit more"
+    },
+    {
+      "startSeconds": 606.64,
+      "text": "here in a minute. Alright, let's take this a little bit further. So I have a route here,"
+    },
+    {
+      "startSeconds": 611.48,
+      "text": "it's a dynamic route that's a list of products, and inside of that page, I'm getting a product"
+    },
+    {
+      "startSeconds": 617.96,
+      "text": "based on the ID, and then I'm showing the name and the price. So I have /product/2, /product/1,"
+    },
+    {
+      "startSeconds": 625.12,
+      "text": "and I have different data depending on what I'm reading from the parameter from params.id, and"
+    },
+    {
+      "startSeconds": 631.72,
+      "text": "this getProduct call. If I go look at this file, getProduct again, it's using unstable_cache(),"
+    },
+    {
+      "startSeconds": 637.72,
+      "text": "it's fetching from the database, and it's tagging it with products. Now let's show"
+    },
+    {
+      "startSeconds": 641.28,
+      "text": "what the mutation side of this looks like. And to show that example, I have a route here that"
+    },
+    {
+      "startSeconds": 646.48,
+      "text": "is /dashboard. Let's take a look at this code. So /dashboard, it has some JSX, it has products, it"
+    },
+    {
+      "startSeconds": 654.52,
+      "text": "has a link back to all products, it has a list of the products, and it has a form to actually create"
+    },
+    {
+      "startSeconds": 661.76,
+      "text": "a product. So I can go back here, I can look at all the products, the same list is here, and then"
+    },
+    {
+      "startSeconds": 667.16,
+      "text": "I also can add in a new product here. Now when I submit this form, I'm going to use a server action"
+    },
+    {
+      "startSeconds": 673.48,
+      "text": "So I have this action called createProduct. createProduct, I'm just putting it inline here,"
+    },
+    {
+      "startSeconds": 678.92,
+      "text": "but it's probably best practice to move this to its own file where you can have your own"
+    },
+    {
+      "startSeconds": 683.44,
+      "text": "data layer, where you can add in security checks as well too. For the sake of simplicity in this"
+    },
+    {
+      "startSeconds": 688.32,
+      "text": "example, I have it here. So I mark it with the \"use server\" directive to mark this as a"
+    },
+    {
+      "startSeconds": 693,
+      "text": "server action. I do a mutation on the database where I insert a new field into the database,"
+    },
+    {
+      "startSeconds": 699.44,
+      "text": "and then I'm going to revalidate the tag of products. Now what I want to show is when I"
+    },
+    {
+      "startSeconds": 703.76,
+      "text": "add a new product and I'm able to revalidate this data, how it revalidates data that's been tagged"
+    },
+    {
+      "startSeconds": 709.36,
+      "text": "across different pages as well too. So when you call revalidateTag, it's actually purging that"
+    },
+    {
+      "startSeconds": 714.84,
+      "text": "entire cache. So let's say I want a new product here, that's going to be beef, and let's say"
+    },
+    {
+      "startSeconds": 723,
+      "text": "the price is 50. I hit create, you're going to see not only does this list of products update"
+    },
+    {
+      "startSeconds": 729.72,
+      "text": "because we've revalidated the tag, also if I go back to all products and I fetch this data,"
+    },
+    {
+      "startSeconds": 735.44,
+      "text": "we also see this updated with the latest list. So even going kind of cross-navigation as well too,"
+    },
+    {
+      "startSeconds": 741.48,
+      "text": "I had a mutation that I was controlling in my application. I said this data change,"
+    },
+    {
+      "startSeconds": 745.76,
+      "text": "my database had a new item, I call revalidateTag or revalidatePath, and now I can see that latest"
+    },
+    {
+      "startSeconds": 751.36,
+      "text": "information updated. Now the follow-up to that is what do I do when there's a mutation that someone"
+    },
+    {
+      "startSeconds": 756.6,
+      "text": "else made on my application? So maybe I went to a CMS and I updated the data. Maybe the data changed"
+    },
+    {
+      "startSeconds": 762.4,
+      "text": "in my database, this is where webhooks can come in very handy. So I have a webhook in my application"
+    },
+    {
+      "startSeconds": 768.24,
+      "text": "using a route handler, and what I'm going to do to demonstrate this is I have my application here,"
+    },
+    {
+      "startSeconds": 774.48,
+      "text": "/product/1, and right now if I reload the page, the price is 9. So what I want to do"
+    },
+    {
+      "startSeconds": 780.52,
+      "text": "instead is if I call this webhook, simulating some external event in my system changing,"
+    },
+    {
+      "startSeconds": 787.12,
+      "text": "something in my database has changed, I want to go and I want to revalidate the tag products and"
+    },
+    {
+      "startSeconds": 792.2,
+      "text": "I want to return back. So this takes a post request to my application, so I'm just going"
+    },
+    {
+      "startSeconds": 797.8,
+      "text": "to open up a new terminal here, going to make a post request, and I get success back. So now"
+    },
+    {
+      "startSeconds": 803.88,
+      "text": "if I go here, I reload the page, I get this new data fetched from the database. So even even if"
+    },
+    {
+      "startSeconds": 809.12,
+      "text": "that mutation is happening outside of my my user interaction, clicking a button, it's happening"
+    },
+    {
+      "startSeconds": 814.36,
+      "text": "from an external system, revalidateTag can still revalidate that whole data."
+    },
+    {
+      "startSeconds": 818.76,
+      "text": "Now the last bit here is what happens if neither of those are possible? What happens if it's not"
+    },
+    {
+      "startSeconds": 824.08,
+      "text": "something that I control, or it's something I can listen to from my database or my CMS? And"
+    },
+    {
+      "startSeconds": 828.8,
+      "text": "this is where we're still helping to get feedback and iterate on this experience today. I'll link"
+    },
+    {
+      "startSeconds": 833.2,
+      "text": "a thread down below where we have a deep dive into how caching works today, and walks through"
+    },
+    {
+      "startSeconds": 838.36,
+      "text": "a lot of these bits, as well as our caching documentation. And if you're in this third"
+    },
+    {
+      "startSeconds": 842.4,
+      "text": "camp right here, we'd love to hear your feedback on how to make this better. We do have an option"
+    },
+    {
+      "startSeconds": 847.08,
+      "text": "that we're proposing to configure this a bit more, so we love to hear your use cases around this."
+    },
+    {
+      "startSeconds": 851.84,
+      "text": "If you have cache data that you want to periodically revalidate using the"
+    },
+    {
+      "startSeconds": 856.48,
+      "text": "incremental static regeneration-like behavior, you can also do that, either using the fetch"
+    },
+    {
+      "startSeconds": 861.64,
+      "text": "API or using unstable_cache(). So today, the way this works with the fetch API is that you"
+    },
+    {
+      "startSeconds": 867.24,
+      "text": "can pass additional options by extending the fetch API. So maybe I want something like this,"
+    },
+    {
+      "startSeconds": 874.24,
+      "text": "we're actually looking to move away from extending the fetch based on your feedback"
+    },
+    {
+      "startSeconds": 879.96,
+      "text": "and the community's feedback. So in the future, we'll have a way to code mod or to upgrade this"
+    },
+    {
+      "startSeconds": 885.36,
+      "text": "where you can have something like revalidate after, and you can put time in or an API that"
+    },
+    {
+      "startSeconds": 892.28,
+      "text": "looks something similar to this. But for today, it's totally okay to use it this way, we'll give"
+    },
+    {
+      "startSeconds": 897.52,
+      "text": "some more guidance as that change in the future. But I wanted to just mention that as well too."
+    },
+    {
+      "startSeconds": 902.08,
+      "text": "And also on the unstable_cache() function, if I go back to getProduct, inside of here,"
+    },
+    {
+      "startSeconds": 908.24,
+      "text": "this option not only has the ability to tag the cache but also to set a revalidate time"
+    },
+    {
+      "startSeconds": 913.88,
+      "text": "when you're using unstable_cache() as well too. So that's how you can use incremental"
+    },
+    {
+      "startSeconds": 918.28,
+      "text": "static regeneration-like ability to update cache data based on some time interval."
+    },
+    {
+      "startSeconds": 924.04,
+      "text": "The last one I want to talk about, walking through the foundational examples of how these bits work,"
+    },
+    {
+      "startSeconds": 928.36,
+      "text": "is the React cache function. So different from the Next.js cache function, the React cache function,"
+    },
+    {
+      "startSeconds": 934.16,
+      "text": "you can kind of think about it like memorization on the server. So I call"
+    },
+    {
+      "startSeconds": 938.2,
+      "text": "the same thing with the same inputs, I can essentially dup that. Now this is"
+    },
+    {
+      "startSeconds": 943.84,
+      "text": "important because there are some instances in the Next.js App Router that kind of are"
+    },
+    {
+      "startSeconds": 948.44,
+      "text": "pushing you towards a model where you're calling the same function multiple times,"
+    },
+    {
+      "startSeconds": 952.16,
+      "text": "and that's okay. We've given you these helpers so that you can have control over the cache state of"
+    },
+    {
+      "startSeconds": 957.88,
+      "text": "how I call a phone function and have it not get called multiple times. So for example,"
+    },
+    {
+      "startSeconds": 961.92,
+      "text": "on this page, I have this call to get products, so it's going to my database,"
+    },
+    {
+      "startSeconds": 967,
+      "text": "and I'm using the same call both to generate the initial metadata for the page, like the title, and"
+    },
+    {
+      "startSeconds": 973.32,
+      "text": "I'm using it to display the name of the product on the page. And when I go look at get products,"
+    },
+    {
+      "startSeconds": 978.24,
+      "text": "I'm wrapping that function with the React cache function, so it's only going to be"
+    },
+    {
+      "startSeconds": 981.72,
+      "text": "ever called once. Go to the database and I get the information. So, I reload the page here on"
+    },
+    {
+      "startSeconds": 986.72,
+      "text": "the right in the console, I see get products one, and then I see this page get displayed. I reload"
+    },
+    {
+      "startSeconds": 992.16,
+      "text": "again, I only see one call to get products, even though you can see Apple's displayed"
+    },
+    {
+      "startSeconds": 996.44,
+      "text": "in the title and it's displayed on the page. So, I wanted to mention that one as well too."
+    },
+    {
+      "startSeconds": 1000.88,
+      "text": "Alright, now I want to show another example of a CRUD app, or a Create, Read, Update, Delete,"
+    },
+    {
+      "startSeconds": 1005.36,
+      "text": "that's using forms, showing some of this in practice a little bit more. But first,"
+    },
+    {
+      "startSeconds": 1009.52,
+      "text": "I want to talk about the architecture a little bit. So, coming back to the differences between"
+    },
+    {
+      "startSeconds": 1014,
+      "text": "the Pages and the App Router, I think this diagram hopefully explains things well. So with the Pages"
+    },
+    {
+      "startSeconds": 1020.88,
+      "text": "Router model, let's start there. You would write code in a client component. Everything"
+    },
+    {
+      "startSeconds": 1025.2,
+      "text": "was client components in the Pages Router, and you would have some event handler like onSubmit"
+    },
+    {
+      "startSeconds": 1029.96,
+      "text": "that would call an API route where you would go update your database or update some source,"
+    },
+    {
+      "startSeconds": 1035.68,
+      "text": "and then that API route could return back some JSON, where on the client you could"
+    },
+    {
+      "startSeconds": 1040.64,
+      "text": "handle this response and update the UI. In the App Router, it's actually entirely different,"
+    },
+    {
+      "startSeconds": 1045.96,
+      "text": "it's server-based. So the App Router, I have a form submission and that form submission can"
+    },
+    {
+      "startSeconds": 1051.16,
+      "text": "call a server action which runs on the server. It goes to our server, it can update our database,"
+    },
+    {
+      "startSeconds": 1056.64,
+      "text": "it can revalidate our cache, and then it can return back the new UI as well as the"
+    },
+    {
+      "startSeconds": 1062.2,
+      "text": "data in the same network roundtrip in this RSC payload back to our UI. So, there are"
+    },
+    {
+      "startSeconds": 1068.28,
+      "text": "some foundational differences here between how these two models work. Let's look at an example."
+    },
+    {
+      "startSeconds": 1072.76,
+      "text": "Okay, so let's look at this to-do list example. It's a bit more simple example from the first one"
+    },
+    {
+      "startSeconds": 1077.28,
+      "text": "that we showed. I want to walk through a couple of different bits here. So, let me make a new to-do,"
+    },
+    {
+      "startSeconds": 1084.6,
+      "text": "enter, that's going to submit the form. You'll see that the form went into that loading state,"
+    },
+    {
+      "startSeconds": 1089.16,
+      "text": "and then the new form was added. So, on this page, we're fetching the to-dos from our Postgres"
+    },
+    {
+      "startSeconds": 1095.04,
+      "text": "database. Those get cached, and then I have this \"Add Todo\" form that uses this hook called"
+    },
+    {
+      "startSeconds": 1100.8,
+      "text": "useFormState, which allows me to take some error back from my server action or some success message"
+    },
+    {
+      "startSeconds": 1106.36,
+      "text": "and display it on the page. And in this instance, I'm using the response back from the server action"
+    },
+    {
+      "startSeconds": 1111.32,
+      "text": "to send a message to a screen reader. So, in this live area, and also inside of here, I have"
+    },
+    {
+      "startSeconds": 1117.84,
+      "text": "this submit button. The submit button is using another hook from React called useFormStatus,"
+    },
+    {
+      "startSeconds": 1124.52,
+      "text": "and useFormStatus is going to know when a mutation is pending. So when we're adding in a new to-do,"
+    },
+    {
+      "startSeconds": 1131.84,
+      "text": "another to-do, when I hit enter, and this goes into a pending state, you're going to"
+    },
+    {
+      "startSeconds": 1136.36,
+      "text": "notice that the add button gets disabled, and we're able to then see that reflected in the"
+    },
+    {
+      "startSeconds": 1142.16,
+      "text": "UI. So let's take a look at what this action actually does. If I go into createTodo here,"
+    },
+    {
+      "startSeconds": 1148.28,
+      "text": "basically all it's doing is going to our SQL database, it's inserting some data,"
+    },
+    {
+      "startSeconds": 1152.76,
+      "text": "and then it's revalidating the path, and then it's returning that message back to"
+    },
+    {
+      "startSeconds": 1157.28,
+      "text": "the UI in the RSC payload, the React Server Components payload. So, you can use this now."
+    },
+    {
+      "startSeconds": 1163.12,
+      "text": "The cool thing about this whole model is that it works even if JavaScript hasn't loaded yet. So,"
+    },
+    {
+      "startSeconds": 1168.52,
+      "text": "for example, let's say that I want to go in here, let's say disable JavaScript, and I'll"
+    },
+    {
+      "startSeconds": 1175.84,
+      "text": "reload the page. And I want to delete this to-do, great, that still works. I want to add a to-do,"
+    },
+    {
+      "startSeconds": 1184.96,
+      "text": "that also still works. And it also still works with useFormState. So, you'll notice there was"
+    },
+    {
+      "startSeconds": 1190.8,
+      "text": "that browser loading spinner at the top because it's doing the normal HTML form reload where the"
+    },
+    {
+      "startSeconds": 1196.32,
+      "text": "page is reloading. So, I think that's pretty cool. I also think it's worth showing what the network"
+    },
+    {
+      "startSeconds": 1201.28,
+      "text": "tab looks like when you're doing a mutation, when you're calling a server action, and you're going"
+    },
+    {
+      "startSeconds": 1205.64,
+      "text": "to revalidate that cache data. So, let's say I want to do another to-do here. I hit add,"
+    },
+    {
+      "startSeconds": 1212.84,
+      "text": "and we're going to see just this one network request. So, I see in here that another to-do"
+    },
+    {
+      "startSeconds": 1217.96,
+      "text": "pops up. I click on this value, and I see that basically the server action is just posting back"
+    },
+    {
+      "startSeconds": 1224.12,
+      "text": "to itself, it's posting back to the same route. There's some additional information inside of here"
+    },
+    {
+      "startSeconds": 1229.56,
+      "text": "about the request. We can even see if we go into the payload, we can see more about what's in here,"
+    },
+    {
+      "startSeconds": 1234.44,
+      "text": "what we sent along to the server action, what the to-do was, it's called \"Another Todo\". And then"
+    },
+    {
+      "startSeconds": 1240.04,
+      "text": "the server, in this instance, returns back the UI as well as that updated state in that RSC payload."
+    },
+    {
+      "startSeconds": 1248.12,
+      "text": "Now, going back to our first example with the roadmap product, I want to show another cool"
+    },
+    {
+      "startSeconds": 1252.2,
+      "text": "React hook called useOptimistic. What I'm going to do is actually slow down our network here. So,"
+    },
+    {
+      "startSeconds": 1259.08,
+      "text": "we're going to go to slow 3G. And when I showed it for the first time, everything felt really,"
+    },
+    {
+      "startSeconds": 1263.56,
+      "text": "really fast. But what happens if I was on a slower internet connection? Would this still feel really"
+    },
+    {
+      "startSeconds": 1268.48,
+      "text": "snappy? So, I'm going to click upvote, and I'm going to notice that I immediately see"
+    },
+    {
+      "startSeconds": 1273.04,
+      "text": "the 4 on the right side, but it took awhile for the information to get updated. And if I look"
+    },
+    {
+      "startSeconds": 1278.32,
+      "text": "down in the network tab, I see that even though this waterfall, even though this request hadn't"
+    },
+    {
+      "startSeconds": 1282.92,
+      "text": "completed yet, I'm able to provide feedback to the user right away using this optimistic"
+    },
+    {
+      "startSeconds": 1288.4,
+      "text": "UI pattern. And this also works too if I add a new item. So let's say, \"Another Another One\","
+    },
+    {
+      "startSeconds": 1294.32,
+      "text": "and I hit enter. I immediately see it show up, I immediately see the form field get cleared out,"
+    },
+    {
+      "startSeconds": 1299.88,
+      "text": "and then down below I see, okay, that network request has completed."
+    },
+    {
+      "startSeconds": 1303.68,
+      "text": "Now, you might be thinking, well, what if my internet is really, really slow? So,"
+    },
+    {
+      "startSeconds": 1308.6,
+      "text": "\"really really slow\", and a user submits this form but then they want to close the browser tab. So,"
+    },
+    {
+      "startSeconds": 1314.92,
+      "text": "they hit enter and then they try to do a Command + W to close. Well, something I've added in here is"
+    },
+    {
+      "startSeconds": 1322.48,
+      "text": "just a little bit of JavaScript code that prevents them from leaving the site if this mutation hasn't"
+    },
+    {
+      "startSeconds": 1329.08,
+      "text": "completed. So it says, \"Hey, are you sure you want to leave the site?\" In this instance,"
+    },
+    {
+      "startSeconds": 1332.12,
+      "text": "I'm going to say no, and then I see that my mutation goes through. And this only takes"
+    },
+    {
+      "startSeconds": 1337.08,
+      "text": "just a little bit of code here. So, I have this useEffect that is basically listening"
+    },
+    {
+      "startSeconds": 1341.44,
+      "text": "for this beforeunload event, and I can use that based on the pending state to"
+    },
+    {
+      "startSeconds": 1346.28,
+      "text": "know whether I want to pause and ask the user whether they want to confirm leaving the page."
+    },
+    {
+      "startSeconds": 1351.68,
+      "text": "Now, going back up to my useOptimistic pattern, I want to show something that was subtle but"
+    },
+    {
+      "startSeconds": 1355.8,
+      "text": "very important, which is that this pattern still supports progressive enhancement. On the right,"
+    },
+    {
+      "startSeconds": 1360.6,
+      "text": "in my browser, I've disabled JavaScript, and when I'm loading the page, if there's no JavaScript,"
+    },
+    {
+      "startSeconds": 1366,
+      "text": "or more commonly, the JavaScript hasn't yet loaded, this can still work. So,"
+    },
+    {
+      "startSeconds": 1371,
+      "text": "in that instance, we're going to call the server action through the native form submission,"
+    },
+    {
+      "startSeconds": 1375.4,
+      "text": "through the action. So if I click on \"Upvote New Feature\", I see the browser reload,"
+    },
+    {
+      "startSeconds": 1381.24,
+      "text": "and I see \"New Feature\" here, the value goes up to six. And because I don't have JavaScript,"
+    },
+    {
+      "startSeconds": 1387.64,
+      "text": "I don't get to have the niceties of the optimistic UI updates."
+    },
+    {
+      "startSeconds": 1392,
+      "text": "But that's okay, because once the JavaScript has loaded, then I can use the client event handler,"
+    },
+    {
+      "startSeconds": 1397.44,
+      "text": "which is going to give me some, uh, additional enhancements to the flow. Now,"
+    },
+    {
+      "startSeconds": 1401.32,
+      "text": "it's worth mentioning that you might want to have a completely different pattern here,"
+    },
+    {
+      "startSeconds": 1404.68,
+      "text": "a completely different UX. If having JavaScript disabled is actually a very important requirement"
+    },
+    {
+      "startSeconds": 1410.08,
+      "text": "for your application, you might want a different UX, where this redirects to"
+    },
+    {
+      "startSeconds": 1413.64,
+      "text": "some different page instead. But it's nice that you have the ability to craft that experience."
+    },
+    {
+      "startSeconds": 1418.16,
+      "text": "Now, okay, the last thing I want to talk about, as it relates to caching,"
+    },
+    {
+      "startSeconds": 1422.04,
+      "text": "and static and dynamic rendering, is Partial Prerendering. Now, this is still experimental,"
+    },
+    {
+      "startSeconds": 1426.76,
+      "text": "so this is just an early look. But previously, the way the Next.js pages' App Router worked was,"
+    },
+    {
+      "startSeconds": 1432.16,
+      "text": "you had All or Nothing static or dynamic pages. Either you could run your whole page"
+    },
+    {
+      "startSeconds": 1436.6,
+      "text": "and pre-render as static, or you had to run it on demand. And I'll link a video down below,"
+    },
+    {
+      "startSeconds": 1441.84,
+      "text": "and some additional information about partial pre-rendering."
+    },
+    {
+      "startSeconds": 1444.56,
+      "text": "But just to show an example of what this looks like, I have my website on the right, and the"
+    },
+    {
+      "startSeconds": 1449.28,
+      "text": "majority of this page is static. But then I have this component where I'm listing out the number of"
+    },
+    {
+      "startSeconds": 1454.64,
+      "text": "subscribers, which, it's a great time to subscribe to the Vercel YouTube channel, if you haven't. And"
+    },
+    {
+      "startSeconds": 1459.84,
+      "text": "in this component, I want these numbers to be dynamic. I want them to be fresh. So, in this"
+    },
+    {
+      "startSeconds": 1465.68,
+      "text": "application, I have the partial pre-rendering flag flipped on. The shell of my application,"
+    },
+    {
+      "startSeconds": 1470.24,
+      "text": "or the majority of this page, was pre-rendered as static. But then, this specific component,"
+    },
+    {
+      "startSeconds": 1475.36,
+      "text": "I'm able to say, \"You know what, actually use noStore, and we want this one to run dynamically.\""
+    },
+    {
+      "startSeconds": 1481.44,
+      "text": "So, if I reload the page, I'm able to run just that bit dynamically. And since the subscribers"
+    },
+    {
+      "startSeconds": 1487.2,
+      "text": "haven't updated, I can show a different example with my blog, which is where,"
+    },
+    {
+      "startSeconds": 1490.84,
+      "text": "if I click in here, I'm able to get that new value and see it update in the top right."
+    },
+    {
+      "startSeconds": 1496.04,
+      "text": "Okay, so that wraps up this video. We talked about fetching, caching, and revalidating with"
+    },
+    {
+      "startSeconds": 1500.36,
+      "text": "the Next.js App Router. Hopefully, these demos and these examples help solve and answer some of"
+    },
+    {
+      "startSeconds": 1505.44,
+      "text": "your questions. If you still have open questions, please leave comments down below, or if there's"
+    },
+    {
+      "startSeconds": 1510.2,
+      "text": "things you want to see us make more content about, also just let us know. But hopefully,"
+    },
+    {
+      "startSeconds": 1515,
+      "text": "this puts you on the right path to understanding caching in your next Next.js application. Peace."
+    }
+  ]
 }

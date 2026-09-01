@@ -1,8 +1,1458 @@
 {
   "id": "cGiSr0MilsI",
   "url": "https://www.youtube.com/watch?v=cGiSr0MilsI",
-  "fetchedAt": "2026-08-31T05:14:57.355Z",
-  "captionKind": "empty",
-  "chapters": [],
-  "cues": []
+  "fetchedAt": "2026-09-01T04:05:14.920Z",
+  "captionKind": "asr",
+  "chapters": [
+    {
+      "startSeconds": 0,
+      "label": "Intro"
+    },
+    {
+      "startSeconds": 70,
+      "label": "LCP"
+    },
+    {
+      "startSeconds": 342,
+      "label": "CLS"
+    },
+    {
+      "startSeconds": 611,
+      "label": "INP"
+    },
+    {
+      "startSeconds": 820,
+      "label": "Recap"
+    }
+  ],
+  "cues": [
+    {
+      "startSeconds": 0,
+      "text": "If you want to improve the performance"
+    },
+    {
+      "startSeconds": 2.04,
+      "text": "of a website, the first question is"
+    },
+    {
+      "startSeconds": 4.24,
+      "text": "always the same. What exactly should we"
+    },
+    {
+      "startSeconds": 7.12,
+      "text": "measure? Core Web Vitals answer that"
+    },
+    {
+      "startSeconds": 9.68,
+      "text": "question with three metrics that focus"
+    },
+    {
+      "startSeconds": 12.04,
+      "text": "on loading, reusability, and"
+    },
+    {
+      "startSeconds": 14.96,
+      "text": "responsiveness. In this video, I will"
+    },
+    {
+      "startSeconds": 17,
+      "text": "walk through each one and"
+    },
+    {
+      "startSeconds": 19.16,
+      "text": "show you what is actually happening"
+    },
+    {
+      "startSeconds": 21.52,
+      "text": "inside the browser."
+    },
+    {
+      "startSeconds": 25.52,
+      "text": "Core Web Vitals focus on three aspects"
+    },
+    {
+      "startSeconds": 28.96,
+      "text": "of user experience. The first one is"
+    },
+    {
+      "startSeconds": 31.68,
+      "text": "Largest Contentful Paint or LCP, which"
+    },
+    {
+      "startSeconds": 35.24,
+      "text": "measures how quickly the main content"
+    },
+    {
+      "startSeconds": 37.92,
+      "text": "appears. The second one is Cumulative"
+    },
+    {
+      "startSeconds": 40.08,
+      "text": "Layout Shift or CLS, which measures how"
+    },
+    {
+      "startSeconds": 43.52,
+      "text": "stable the page layout is. And the third"
+    },
+    {
+      "startSeconds": 46.28,
+      "text": "one is Interaction to Next Paint or INP,"
+    },
+    {
+      "startSeconds": 50.04,
+      "text": "which measures how responsive the page"
+    },
+    {
+      "startSeconds": 52.44,
+      "text": "feels when user interactively visit. In"
+    },
+    {
+      "startSeconds": 55.32,
+      "text": "this video, I will explain each of them"
+    },
+    {
+      "startSeconds": 57.64,
+      "text": "with a short visual animation, and then"
+    },
+    {
+      "startSeconds": 60.8,
+      "text": "we will look at the simple before and"
+    },
+    {
+      "startSeconds": 63.36,
+      "text": "after code example to see how those"
+    },
+    {
+      "startSeconds": 66.08,
+      "text": "issues usually happen in real"
+    },
+    {
+      "startSeconds": 68.84,
+      "text": "applications."
+    },
+    {
+      "startSeconds": 72.72,
+      "text": "Let's start with Largest Contentful"
+    },
+    {
+      "startSeconds": 74.44,
+      "text": "Paint or LCP. LCP measures the time it"
+    },
+    {
+      "startSeconds": 77.68,
+      "text": "takes for the largest visible element in"
+    },
+    {
+      "startSeconds": 80.64,
+      "text": "the viewport to finish rendering."
+    },
+    {
+      "startSeconds": 83.28,
+      "text": "Usually, this element is something like"
+    },
+    {
+      "startSeconds": 85.4,
+      "text": "a hero image, a large heading, or the"
+    },
+    {
+      "startSeconds": 89.08,
+      "text": "main content block. So, instead of"
+    },
+    {
+      "startSeconds": 91.64,
+      "text": "asking when did the page start loading,"
+    },
+    {
+      "startSeconds": 95.04,
+      "text": "LCP asks a more meaningful question."
+    },
+    {
+      "startSeconds": 97.72,
+      "text": "When does the main content actually"
+    },
+    {
+      "startSeconds": 99.36,
+      "text": "appears for the user? For good user"
+    },
+    {
+      "startSeconds": 101.84,
+      "text": "experience, Google recommend keeping LCP"
+    },
+    {
+      "startSeconds": 104.84,
+      "text": "under 2.5 seconds. Let's visualize how"
+    },
+    {
+      "startSeconds": 107.84,
+      "text": "the browser calculate this. As the page"
+    },
+    {
+      "startSeconds": 110.2,
+      "text": "loads, different elements start appear"
+    },
+    {
+      "startSeconds": 112.36,
+      "text": "inside the viewport. At first, maybe a"
+    },
+    {
+      "startSeconds": 114.6,
+      "text": "small element appears. So, the browser"
+    },
+    {
+      "startSeconds": 116.84,
+      "text": "treat that as a current Largest"
+    },
+    {
+      "startSeconds": 119.24,
+      "text": "Contentful Paint candidate. Then a"
+    },
+    {
+      "startSeconds": 121.32,
+      "text": "larger element appears, so the browser"
+    },
+    {
+      "startSeconds": 123.72,
+      "text": "update the candidate. Finally, the"
+    },
+    {
+      "startSeconds": 126.08,
+      "text": "largest element appears on the screen,"
+    },
+    {
+      "startSeconds": 128.24,
+      "text": "and once that element finish rendering,"
+    },
+    {
+      "startSeconds": 130.56,
+      "text": "the browser records the LCP time. So,"
+    },
+    {
+      "startSeconds": 133.64,
+      "text": "the LCP metric is basically the moment"
+    },
+    {
+      "startSeconds": 136.76,
+      "text": "when the largest visible element finish"
+    },
+    {
+      "startSeconds": 139.2,
+      "text": "painting in the viewport. Now, let's"
+    },
+    {
+      "startSeconds": 141.28,
+      "text": "look at a common issue that slows this"
+    },
+    {
+      "startSeconds": 143.36,
+      "text": "down. So, in this example, the page"
+    },
+    {
+      "startSeconds": 145.48,
+      "text": "include a slow JavaScript file inside"
+    },
+    {
+      "startSeconds": 147.72,
+      "text": "the header. It's called"
+    },
+    {
+      "startSeconds": 148.8,
+      "text": "source.bundle.js. Because this script is"
+    },
+    {
+      "startSeconds": 150.8,
+      "text": "blocking, the browser has to stop"
+    },
+    {
+      "startSeconds": 152.84,
+      "text": "parsing the HTML while the script"
+    },
+    {
+      "startSeconds": 154.8,
+      "text": "downloads and executes. So, if you look"
+    },
+    {
+      "startSeconds": 156.8,
+      "text": "at this bundle.js, it has a full block"
+    },
+    {
+      "startSeconds": 159.32,
+      "text": "here that will slow down the JavaScript"
+    },
+    {
+      "startSeconds": 161.8,
+      "text": "execution. The reason for this behavior"
+    },
+    {
+      "startSeconds": 164.16,
+      "text": "is actually quite simple. JavaScript is"
+    },
+    {
+      "startSeconds": 166.44,
+      "text": "allowed to modify the DOM. A script"
+    },
+    {
+      "startSeconds": 169.04,
+      "text": "could insert element, remove nodes, and"
+    },
+    {
+      "startSeconds": 171.6,
+      "text": "change the structure of the page"
+    },
+    {
+      "startSeconds": 173.48,
+      "text": "entirely. So, the browser cannot safely"
+    },
+    {
+      "startSeconds": 175.84,
+      "text": "continue building the page until the"
+    },
+    {
+      "startSeconds": 178.76,
+      "text": "script has finished running. As a"
+    },
+    {
+      "startSeconds": 180.6,
+      "text": "result, the browser pause HTML parsing,"
+    },
+    {
+      "startSeconds": 183.4,
+      "text": "downloading the script, execute it, and"
+    },
+    {
+      "startSeconds": 185.64,
+      "text": "only then continue building the rest of"
+    },
+    {
+      "startSeconds": 187.72,
+      "text": "the page. And that creates a problem for"
+    },
+    {
+      "startSeconds": 190.04,
+      "text": "our LCP element. Because the browser is"
+    },
+    {
+      "startSeconds": 192.52,
+      "text": "blocked at the header, it cannot reach"
+    },
+    {
+      "startSeconds": 194.72,
+      "text": "to the part of the HTML where the hero"
+    },
+    {
+      "startSeconds": 197.08,
+      "text": "image appears, which means the image"
+    },
+    {
+      "startSeconds": 199.24,
+      "text": "request only starts after the script"
+    },
+    {
+      "startSeconds": 201.76,
+      "text": "finishes. So, the most important content"
+    },
+    {
+      "startSeconds": 203.92,
+      "text": "on the page start loading later, and the"
+    },
+    {
+      "startSeconds": 207.44,
+      "text": "LCP time becomes much worse. So, as you"
+    },
+    {
+      "startSeconds": 210.04,
+      "text": "can see in the LCP before HTML, the"
+    },
+    {
+      "startSeconds": 212.36,
+      "text": "script is in the header and it's"
+    },
+    {
+      "startSeconds": 214.2,
+      "text": "blocking the rest of the page from"
+    },
+    {
+      "startSeconds": 216.24,
+      "text": "rendering. And we have a Largest"
+    },
+    {
+      "startSeconds": 217.92,
+      "text": "Contentful element here, which is the"
+    },
+    {
+      "startSeconds": 220.04,
+      "text": "image. And if we go to the browser and"
+    },
+    {
+      "startSeconds": 222.44,
+      "text": "open up the LCP before example, you can"
+    },
+    {
+      "startSeconds": 226.56,
+      "text": "see the script is loading a bit, and"
+    },
+    {
+      "startSeconds": 230.28,
+      "text": "then the hero image shows up, and you"
+    },
+    {
+      "startSeconds": 232.04,
+      "text": "can see Largest Contentful Paint LCP has"
+    },
+    {
+      "startSeconds": 235.28,
+      "text": "like 5.4 seconds. You can see that in"
+    },
+    {
+      "startSeconds": 238.8,
+      "text": "the Chrome DevTools in the Performance"
+    },
+    {
+      "startSeconds": 241.44,
+      "text": "tab. And by default, it has three"
+    },
+    {
+      "startSeconds": 245.12,
+      "text": "core"
+    },
+    {
+      "startSeconds": 246.32,
+      "text": "metric, and you can see the Largest"
+    },
+    {
+      "startSeconds": 248.52,
+      "text": "Contentful Paint is really bad at this"
+    },
+    {
+      "startSeconds": 251,
+      "text": "stage. Now, let's compare that with the"
+    },
+    {
+      "startSeconds": 253.16,
+      "text": "improved version. Instead of blocking"
+    },
+    {
+      "startSeconds": 255.24,
+      "text": "the page, we mark the script with a"
+    },
+    {
+      "startSeconds": 256.92,
+      "text": "defer attribute. This tells the browser"
+    },
+    {
+      "startSeconds": 259.359,
+      "text": "that the script does not need to run"
+    },
+    {
+      "startSeconds": 262.2,
+      "text": "immediately. It won't change the DOM"
+    },
+    {
+      "startSeconds": 264.12,
+      "text": "element. The browser can continue"
+    },
+    {
+      "startSeconds": 265.96,
+      "text": "parsing the HTML, build the DOM, and"
+    },
+    {
+      "startSeconds": 268.64,
+      "text": "download the script in parallel. The"
+    },
+    {
+      "startSeconds": 270.64,
+      "text": "script will only execute after the HTML"
+    },
+    {
+      "startSeconds": 273.32,
+      "text": "parsing is finished, which allows the"
+    },
+    {
+      "startSeconds": 275.84,
+      "text": "page structure and important resource to"
+    },
+    {
+      "startSeconds": 277.96,
+      "text": "load much earlier. We also preload the"
+    },
+    {
+      "startSeconds": 280.72,
+      "text": "hero image, so the browser starts"
+    },
+    {
+      "startSeconds": 282.52,
+      "text": "requesting it as early as possible. And"
+    },
+    {
+      "startSeconds": 285.04,
+      "text": "also, we give the hero image a high"
+    },
+    {
+      "startSeconds": 286.92,
+      "text": "fetch priority, which tells the browser"
+    },
+    {
+      "startSeconds": 288.92,
+      "text": "that this resource is especially"
+    },
+    {
+      "startSeconds": 290.84,
+      "text": "important for the page. If you are"
+    },
+    {
+      "startSeconds": 292.68,
+      "text": "curious about how preload works in more"
+    },
+    {
+      "startSeconds": 294.96,
+      "text": "details, I actually made another video"
+    },
+    {
+      "startSeconds": 297.04,
+      "text": "explaining preload, prefetch, and lazy"
+    },
+    {
+      "startSeconds": 299.6,
+      "text": "loading. So, you can check them out"
+    },
+    {
+      "startSeconds": 301.52,
+      "text": "after this one. And now, let's go back"
+    },
+    {
+      "startSeconds": 303.36,
+      "text": "to the browser and go back to demos. I'm"
+    },
+    {
+      "startSeconds": 306.52,
+      "text": "cleaning up the metrics here and then"
+    },
+    {
+      "startSeconds": 308.72,
+      "text": "doing the after load. So, you see the"
+    },
+    {
+      "startSeconds": 310.76,
+      "text": "image immediately because it's"
+    },
+    {
+      "startSeconds": 312.2,
+      "text": "preloaded. And then the page is still"
+    },
+    {
+      "startSeconds": 315.48,
+      "text": "loading, and then you can see that"
+    },
+    {
+      "startSeconds": 317.4,
+      "text": "there's a much better result on the LCP,"
+    },
+    {
+      "startSeconds": 320.12,
+      "text": "Largest Contentful Paint, even the"
+    },
+    {
+      "startSeconds": 321.8,
+      "text": "JavaScript itself is as slow as before."
+    },
+    {
+      "startSeconds": 324.64,
+      "text": "With this small change, the main content"
+    },
+    {
+      "startSeconds": 326.6,
+      "text": "appears much earlier, and the LCP score"
+    },
+    {
+      "startSeconds": 329.08,
+      "text": "improves significantly. So, key idea for"
+    },
+    {
+      "startSeconds": 331.92,
+      "text": "LCP is simple. Try not to block the"
+    },
+    {
+      "startSeconds": 334.32,
+      "text": "browser from loading the most important"
+    },
+    {
+      "startSeconds": 336.48,
+      "text": "content. Prioritize the main visual"
+    },
+    {
+      "startSeconds": 338.84,
+      "text": "element and then delay everything that"
+    },
+    {
+      "startSeconds": 341,
+      "text": "is not critical."
+    },
+    {
+      "startSeconds": 345.2,
+      "text": "Now, let's talk about Cumulative Layout"
+    },
+    {
+      "startSeconds": 347.08,
+      "text": "Shift or CLS. CLS measures how much"
+    },
+    {
+      "startSeconds": 350.64,
+      "text": "visible content moves unexpectedly while"
+    },
+    {
+      "startSeconds": 353.84,
+      "text": "the page is loading. You might have seen"
+    },
+    {
+      "startSeconds": 355.8,
+      "text": "this before. You start reading something"
+    },
+    {
+      "startSeconds": 358.24,
+      "text": "on the page, and suddenly the text jumps"
+    },
+    {
+      "startSeconds": 361.68,
+      "text": "because an image load above it or an"
+    },
+    {
+      "startSeconds": 364.72,
+      "text": "advertisement has started appears. That"
+    },
+    {
+      "startSeconds": 366.64,
+      "text": "movement creates a layout shift. The CLS"
+    },
+    {
+      "startSeconds": 370.28,
+      "text": "adds up all these shift into a score. A"
+    },
+    {
+      "startSeconds": 373.16,
+      "text": "good CLS score should stay under .1."
+    },
+    {
+      "startSeconds": 376.92,
+      "text": "Let's visualize how that works. Imagine"
+    },
+    {
+      "startSeconds": 379.2,
+      "text": "a simple grid layout with several"
+    },
+    {
+      "startSeconds": 381.56,
+      "text": "elements. At first, everything looks"
+    },
+    {
+      "startSeconds": 383.56,
+      "text": "stable, but then one element suddenly"
+    },
+    {
+      "startSeconds": 385.92,
+      "text": "grows because an image loads and its"
+    },
+    {
+      "startSeconds": 388.24,
+      "text": "size was not known earlier. When that"
+    },
+    {
+      "startSeconds": 390.92,
+      "text": "happens, the surrounding elements have"
+    },
+    {
+      "startSeconds": 392.96,
+      "text": "to move to make space for that element."
+    },
+    {
+      "startSeconds": 395.52,
+      "text": "That movement creates a layout shift."
+    },
+    {
+      "startSeconds": 397.52,
+      "text": "Then another element changed shape,"
+    },
+    {
+      "startSeconds": 400.12,
+      "text": "maybe from a square to rectangle, and"
+    },
+    {
+      "startSeconds": 402.4,
+      "text": "once again, the surrounding elements"
+    },
+    {
+      "startSeconds": 404.12,
+      "text": "have to move. Each of those movements"
+    },
+    {
+      "startSeconds": 406.44,
+      "text": "contribute to a CLS score. Now, let's"
+    },
+    {
+      "startSeconds": 408.8,
+      "text": "look at a typical example in code. In"
+    },
+    {
+      "startSeconds": 410.76,
+      "text": "the first version of this page, in a CLS"
+    },
+    {
+      "startSeconds": 412.88,
+      "text": "before, the image do not specify their"
+    },
+    {
+      "startSeconds": 415.24,
+      "text": "width and height. When the page"
+    },
+    {
+      "startSeconds": 416.84,
+      "text": "initially runs, the browser doesn't know"
+    },
+    {
+      "startSeconds": 420.64,
+      "text": "how much space this image will occupy,"
+    },
+    {
+      "startSeconds": 423.56,
+      "text": "so it doesn't reserve any space for"
+    },
+    {
+      "startSeconds": 425.52,
+      "text": "them. Then when the images finally load,"
+    },
+    {
+      "startSeconds": 428.28,
+      "text": "the browser suddenly insert them into"
+    },
+    {
+      "startSeconds": 430.6,
+      "text": "the layout. And when that happen, the"
+    },
+    {
+      "startSeconds": 433.24,
+      "text": "rest of the page shift downwards. This"
+    },
+    {
+      "startSeconds": 435.48,
+      "text": "creates layout jumps and increase the"
+    },
+    {
+      "startSeconds": 438.44,
+      "text": "CLS score. So, in here, we add a few"
+    },
+    {
+      "startSeconds": 441,
+      "text": "delays to the image element. And in the"
+    },
+    {
+      "startSeconds": 444.08,
+      "text": "image element, we don't have the source,"
+    },
+    {
+      "startSeconds": 445.76,
+      "text": "we just have the data source"
+    },
+    {
+      "startSeconds": 448.84,
+      "text": "for the actual image, and then we will"
+    },
+    {
+      "startSeconds": 451.04,
+      "text": "use the JavaScript to insert this"
+    },
+    {
+      "startSeconds": 453.2,
+      "text": "element dynamically. At the run time,"
+    },
+    {
+      "startSeconds": 455.28,
+      "text": "the browser wouldn't know how big the"
+    },
+    {
+      "startSeconds": 458.6,
+      "text": "size of the image would be. And then if"
+    },
+    {
+      "startSeconds": 460.36,
+      "text": "we go to the browser and see the before,"
+    },
+    {
+      "startSeconds": 462.72,
+      "text": "you will notice that the image will"
+    },
+    {
+      "startSeconds": 464.32,
+      "text": "suddenly change the size here. And"
+    },
+    {
+      "startSeconds": 466.8,
+      "text": "please note that this shift is happening"
+    },
+    {
+      "startSeconds": 469.52,
+      "text": "only inside the viewport, so if we can"
+    },
+    {
+      "startSeconds": 473.08,
+      "text": "move this outside as a standalone"
+    },
+    {
+      "startSeconds": 476.64,
+      "text": "window, and"
+    },
+    {
+      "startSeconds": 478.64,
+      "text": "we can change the size of this a little"
+    },
+    {
+      "startSeconds": 481.04,
+      "text": "bit and do another refresh, we probably"
+    },
+    {
+      "startSeconds": 484.92,
+      "text": "can see some different scores"
+    },
+    {
+      "startSeconds": 487.16,
+      "text": "for the CLS. You can see it has a worse"
+    },
+    {
+      "startSeconds": 491.44,
+      "text": "number here because we have changed the"
+    },
+    {
+      "startSeconds": 494.64,
+      "text": "the viewport size, and that particular"
+    },
+    {
+      "startSeconds": 496.8,
+      "text": "proportion of this image to the viewport"
+    },
+    {
+      "startSeconds": 499.56,
+      "text": "will be slightly larger than before."
+    },
+    {
+      "startSeconds": 502.32,
+      "text": "Let's compare this with the improved"
+    },
+    {
+      "startSeconds": 504.4,
+      "text": "version. Here, we simply add width and"
+    },
+    {
+      "startSeconds": 506.96,
+      "text": "height attribute to the image element."
+    },
+    {
+      "startSeconds": 509.36,
+      "text": "With this information, the browser can"
+    },
+    {
+      "startSeconds": 511.36,
+      "text": "calculate the correct aspect ratio and"
+    },
+    {
+      "startSeconds": 514,
+      "text": "reserve the space immediately. So, all"
+    },
+    {
+      "startSeconds": 516.28,
+      "text": "the images now have the correct width"
+    },
+    {
+      "startSeconds": 518.36,
+      "text": "and height. And if we go to the browser"
+    },
+    {
+      "startSeconds": 520.32,
+      "text": "again and go to the after example, you"
+    },
+    {
+      "startSeconds": 523.2,
+      "text": "can see the Cumulative Layout Shift is"
+    },
+    {
+      "startSeconds": 525.16,
+      "text": "zero because there's no shift at all."
+    },
+    {
+      "startSeconds": 528.08,
+      "text": "And let's change the network throttling"
+    },
+    {
+      "startSeconds": 530.28,
+      "text": "to"
+    },
+    {
+      "startSeconds": 531.8,
+      "text": "fast 4G, and it will slow down the image"
+    },
+    {
+      "startSeconds": 534.76,
+      "text": "loading, but even with that, the"
+    },
+    {
+      "startSeconds": 537.36,
+      "text": "Cumulative Layout Shift will still be"
+    },
+    {
+      "startSeconds": 539.48,
+      "text": "zero because even the image is loading,"
+    },
+    {
+      "startSeconds": 542.24,
+      "text": "the size has already been calculated"
+    },
+    {
+      "startSeconds": 543.92,
+      "text": "correctly because we have this number in"
+    },
+    {
+      "startSeconds": 546.36,
+      "text": "the image tag. So, that means that even"
+    },
+    {
+      "startSeconds": 548.52,
+      "text": "before the image finish loading, the"
+    },
+    {
+      "startSeconds": 550.4,
+      "text": "layout already knows how much space it"
+    },
+    {
+      "startSeconds": 552.88,
+      "text": "needs. When the image finally appears,"
+    },
+    {
+      "startSeconds": 555.12,
+      "text": "nothing moves, and that means the CLS"
+    },
+    {
+      "startSeconds": 557.72,
+      "text": "score stays close to zero. So, the main"
+    },
+    {
+      "startSeconds": 559.96,
+      "text": "takeaway for CLS is straightforward."
+    },
+    {
+      "startSeconds": 562.64,
+      "text": "Whenever content might load later, such"
+    },
+    {
+      "startSeconds": 565.24,
+      "text": "as images or embedded media, make sure"
+    },
+    {
+      "startSeconds": 568.68,
+      "text": "the browser already know the size, so it"
+    },
+    {
+      "startSeconds": 571.4,
+      "text": "can reserve the space in advance. That"
+    },
+    {
+      "startSeconds": 574.04,
+      "text": "way, the layout stays stable and the"
+    },
+    {
+      "startSeconds": 576.44,
+      "text": "page doesn't suddenly jump while users"
+    },
+    {
+      "startSeconds": 579,
+      "text": "are reading. By the way, if you're"
+    },
+    {
+      "startSeconds": 580.76,
+      "text": "interested in learning more about topics"
+    },
+    {
+      "startSeconds": 582.88,
+      "text": "like these, I actually have a course"
+    },
+    {
+      "startSeconds": 584.8,
+      "text": "called Front-End System Design"
+    },
+    {
+      "startSeconds": 586.36,
+      "text": "Essentials. In the course, I go deeper"
+    },
+    {
+      "startSeconds": 588.64,
+      "text": "into concepts that affect front-end"
+    },
+    {
+      "startSeconds": 591.04,
+      "text": "performance and architecture, including"
+    },
+    {
+      "startSeconds": 593.52,
+      "text": "things like Core Web Vitals, data"
+    },
+    {
+      "startSeconds": 595.6,
+      "text": "fetching strategies, caching,"
+    },
+    {
+      "startSeconds": 597.72,
+      "text": "and other system design topics that are"
+    },
+    {
+      "startSeconds": 600.16,
+      "text": "very common in front-end interviews and"
+    },
+    {
+      "startSeconds": 602.48,
+      "text": "the real production applications. So, if"
+    },
+    {
+      "startSeconds": 604.56,
+      "text": "you want to explore those ideas in a"
+    },
+    {
+      "startSeconds": 606.28,
+      "text": "more structured way, you can check out"
+    },
+    {
+      "startSeconds": 608.6,
+      "text": "the course using the link in the"
+    },
+    {
+      "startSeconds": 610.04,
+      "text": "description."
+    },
+    {
+      "startSeconds": 613.88,
+      "text": "Finally, let's talk about Interaction to"
+    },
+    {
+      "startSeconds": 616.32,
+      "text": "Next Paint or INP."
+    },
+    {
+      "startSeconds": 618.56,
+      "text": "This metric measures how quickly the"
+    },
+    {
+      "startSeconds": 620.52,
+      "text": "page responds to user input. When the"
+    },
+    {
+      "startSeconds": 623.4,
+      "text": "user click a button, presses a key, or"
+    },
+    {
+      "startSeconds": 626.72,
+      "text": "taps on the screen, the browser should"
+    },
+    {
+      "startSeconds": 628.64,
+      "text": "update the interface quickly so the user"
+    },
+    {
+      "startSeconds": 630.92,
+      "text": "feels the action was recognized. INP"
+    },
+    {
+      "startSeconds": 634.32,
+      "text": "measures the time between the user"
+    },
+    {
+      "startSeconds": 636.44,
+      "text": "interaction"
+    },
+    {
+      "startSeconds": 637.76,
+      "text": "to the next visual update on the screen."
+    },
+    {
+      "startSeconds": 640.08,
+      "text": "For a good experience, this should"
+    },
+    {
+      "startSeconds": 642.08,
+      "text": "ideally stay below 200 ms. Let's see"
+    },
+    {
+      "startSeconds": 645.76,
+      "text": "what can go wrong. Imagine a button that"
+    },
+    {
+      "startSeconds": 648.08,
+      "text": "triggers some heavy processing. When the"
+    },
+    {
+      "startSeconds": 650.36,
+      "text": "user clicks the button, a large amount"
+    },
+    {
+      "startSeconds": 652.28,
+      "text": "of work uh starts running on the main"
+    },
+    {
+      "startSeconds": 654.68,
+      "text": "thread. Because JavaScript is"
+    },
+    {
+      "startSeconds": 656.6,
+      "text": "single-threaded in the browser, this"
+    },
+    {
+      "startSeconds": 658.8,
+      "text": "heavy work blocks everything else. The"
+    },
+    {
+      "startSeconds": 660.88,
+      "text": "browser cannot update the UI and it"
+    },
+    {
+      "startSeconds": 662.76,
+      "text": "cannot respond to other interactions."
+    },
+    {
+      "startSeconds": 664.96,
+      "text": "So, the user clicks the button and"
+    },
+    {
+      "startSeconds": 666.96,
+      "text": "nothing appears to happen until the"
+    },
+    {
+      "startSeconds": 669.16,
+      "text": "computation finishes. Only then does the"
+    },
+    {
+      "startSeconds": 671.64,
+      "text": "page upload. This creates a slow and"
+    },
+    {
+      "startSeconds": 674.12,
+      "text": "unresponsive experience, which leads to"
+    },
+    {
+      "startSeconds": 676.8,
+      "text": "a poor INP score. So, in the browser, we"
+    },
+    {
+      "startSeconds": 679.48,
+      "text": "have this demo before page. Ideally,"
+    },
+    {
+      "startSeconds": 681.96,
+      "text": "when you click this processing button,"
+    },
+    {
+      "startSeconds": 683.8,
+      "text": "it will increase the counter. And uh if"
+    },
+    {
+      "startSeconds": 686.36,
+      "text": "we click this process data, and as that"
+    },
+    {
+      "startSeconds": 689.36,
+      "text": "process is blocked the main thread, and"
+    },
+    {
+      "startSeconds": 691.72,
+      "text": "during that time, if we click the uh"
+    },
+    {
+      "startSeconds": 694.36,
+      "text": "counter, it won't response. So, to make"
+    },
+    {
+      "startSeconds": 697.2,
+      "text": "that more obvious, uh let's change the"
+    },
+    {
+      "startSeconds": 700.24,
+      "text": "CPU throttling to"
+    },
+    {
+      "startSeconds": 702.36,
+      "text": "a slower CPU, let's say 20 times slower."
+    },
+    {
+      "startSeconds": 706.16,
+      "text": "The click is still working, but if we"
+    },
+    {
+      "startSeconds": 709,
+      "text": "click the process data,"
+    },
+    {
+      "startSeconds": 710.88,
+      "text": "and then I'm trying to click the"
+    },
+    {
+      "startSeconds": 713.16,
+      "text": "counter, but it's not responding. So,"
+    },
+    {
+      "startSeconds": 715.56,
+      "text": "you see the Interaction to Next Paint is"
+    },
+    {
+      "startSeconds": 718.04,
+      "text": "relatively long. If I do a another"
+    },
+    {
+      "startSeconds": 720.24,
+      "text": "refresh, we'll show you again. So, by"
+    },
+    {
+      "startSeconds": 723.16,
+      "text": "default, the counter is responsive. And"
+    },
+    {
+      "startSeconds": 725.72,
+      "text": "then when I click this one and then"
+    },
+    {
+      "startSeconds": 727.32,
+      "text": "click this, I have actually clicked"
+    },
+    {
+      "startSeconds": 729.36,
+      "text": "quite a lot,"
+    },
+    {
+      "startSeconds": 730.68,
+      "text": "but it's not just responding because the"
+    },
+    {
+      "startSeconds": 733.76,
+      "text": "processing data is blocked the main"
+    },
+    {
+      "startSeconds": 736.28,
+      "text": "thread. And if we go back to the"
+    },
+    {
+      "startSeconds": 740.16,
+      "text": "after example here, so the setup is"
+    },
+    {
+      "startSeconds": 743.24,
+      "text": "same. We have 20 times slower uh CPU,"
+    },
+    {
+      "startSeconds": 746.72,
+      "text": "and the counter works uh just as before,"
+    },
+    {
+      "startSeconds": 749.68,
+      "text": "but if we click the process and then"
+    },
+    {
+      "startSeconds": 752.08,
+      "text": "click this, it's still responding."
+    },
+    {
+      "startSeconds": 754.839,
+      "text": "Uh and it has a better Interaction to"
+    },
+    {
+      "startSeconds": 757.24,
+      "text": "Next Paint score. And the reason of that"
+    },
+    {
+      "startSeconds": 759.88,
+      "text": "is instead of doing all the work at"
+    },
+    {
+      "startSeconds": 761.52,
+      "text": "once, we break the task into smaller"
+    },
+    {
+      "startSeconds": 763.76,
+      "text": "chunks. When the button is clicked, we"
+    },
+    {
+      "startSeconds": 765.72,
+      "text": "immediately update the UI to show"
+    },
+    {
+      "startSeconds": 768.04,
+      "text": "something like a processing, then we"
+    },
+    {
+      "startSeconds": 769.76,
+      "text": "process a small portion of the work, and"
+    },
+    {
+      "startSeconds": 772.36,
+      "text": "yield control back to the uh browser."
+    },
+    {
+      "startSeconds": 774.92,
+      "text": "This can be done using the technique"
+    },
+    {
+      "startSeconds": 776.48,
+      "text": "like set timeout or uh chunk loop."
+    },
+    {
+      "startSeconds": 779.52,
+      "text": "Because we periodically yield control,"
+    },
+    {
+      "startSeconds": 782,
+      "text": "the browser has opportunity to repaint"
+    },
+    {
+      "startSeconds": 784.08,
+      "text": "the UI"
+    },
+    {
+      "startSeconds": 785.28,
+      "text": "and respond to other interactions. And"
+    },
+    {
+      "startSeconds": 788.08,
+      "text": "the user sees immediate feedback, the"
+    },
+    {
+      "startSeconds": 790,
+      "text": "page remains responsive. So, you can see"
+    },
+    {
+      "startSeconds": 792.36,
+      "text": "in the INP after example, we are"
+    },
+    {
+      "startSeconds": 794.32,
+      "text": "processing the data uh with chunks, and"
+    },
+    {
+      "startSeconds": 797.36,
+      "text": "uh for each chunk, it's only has"
+    },
+    {
+      "startSeconds": 800.52,
+      "text": "uh 500 elements, which will be much"
+    },
+    {
+      "startSeconds": 803.36,
+      "text": "faster than the 10,000 items long. So,"
+    },
+    {
+      "startSeconds": 807.12,
+      "text": "the key idea for INP is to keep the main"
+    },
+    {
+      "startSeconds": 809.64,
+      "text": "thread free whenever possible. If you"
+    },
+    {
+      "startSeconds": 812.72,
+      "text": "have heavy work to do, split it into"
+    },
+    {
+      "startSeconds": 815.16,
+      "text": "smaller tasks so the browser can keep"
+    },
+    {
+      "startSeconds": 818.04,
+      "text": "updating the interface."
+    },
+    {
+      "startSeconds": 823.2,
+      "text": "Let's quickly recap the three core Web"
+    },
+    {
+      "startSeconds": 825.72,
+      "text": "Vitals. Largest Contentful Paint or LCP"
+    },
+    {
+      "startSeconds": 829.08,
+      "text": "focuses on loading performance. The key"
+    },
+    {
+      "startSeconds": 832.64,
+      "text": "idea is to make sure the most important"
+    },
+    {
+      "startSeconds": 835,
+      "text": "content uh appears as early as possible."
+    },
+    {
+      "startSeconds": 838.64,
+      "text": "Cumulative Layout Shift or CLS focuses"
+    },
+    {
+      "startSeconds": 841.88,
+      "text": "on visual stability. We want the layout"
+    },
+    {
+      "startSeconds": 844.72,
+      "text": "to remain stable while page loads. So,"
+    },
+    {
+      "startSeconds": 847.839,
+      "text": "reserving space for images and the"
+    },
+    {
+      "startSeconds": 850,
+      "text": "dynamic content is very important. And"
+    },
+    {
+      "startSeconds": 852.4,
+      "text": "Interaction to Next Paint or INP focuses"
+    },
+    {
+      "startSeconds": 855.2,
+      "text": "on responsiveness. If the main thread is"
+    },
+    {
+      "startSeconds": 857.48,
+      "text": "blocked by long tasks, the page cannot"
+    },
+    {
+      "startSeconds": 860.92,
+      "text": "respond to the user interactions"
+    },
+    {
+      "startSeconds": 862.76,
+      "text": "quickly. So, in many cases, improving"
+    },
+    {
+      "startSeconds": 865.24,
+      "text": "Web Vitals is really about a few simple"
+    },
+    {
+      "startSeconds": 868,
+      "text": "ideas. Prioritize important resources,"
+    },
+    {
+      "startSeconds": 871.079,
+      "text": "keeping the layout predictable, and"
+    },
+    {
+      "startSeconds": 873.6,
+      "text": "avoiding long blocking work on the main"
+    },
+    {
+      "startSeconds": 876.16,
+      "text": "thread. If you want to try the examples"
+    },
+    {
+      "startSeconds": 878.04,
+      "text": "yourself, you can run the demo project"
+    },
+    {
+      "startSeconds": 880.04,
+      "text": "locally and compare the before and after"
+    },
+    {
+      "startSeconds": 882.48,
+      "text": "versions. Thanks for watching, and I"
+    },
+    {
+      "startSeconds": 884.52,
+      "text": "will see you in next one."
+    }
+  ]
 }

@@ -1,0 +1,418 @@
+{
+  "id": "NPFbYpb0I7w",
+  "url": "https://www.youtube.com/watch?v=NPFbYpb0I7w",
+  "fetchedAt": "2026-09-01T04:09:36.303Z",
+  "captionKind": "manual",
+  "chapters": [
+    {
+      "startSeconds": 0,
+      "label": "Intro"
+    },
+    {
+      "startSeconds": 50,
+      "label": "ClusterIP"
+    },
+    {
+      "startSeconds": 70,
+      "label": "NodePort"
+    },
+    {
+      "startSeconds": 164,
+      "label": "LoadBalancer"
+    },
+    {
+      "startSeconds": 223,
+      "label": "Ingress"
+    },
+    {
+      "startSeconds": 310,
+      "label": "Benefits of Kubernetes Ingress"
+    }
+  ],
+  "cues": [
+    {
+      "startSeconds": 0.177,
+      "text": "Hi, everyone."
+    },
+    {
+      "startSeconds": 1.157,
+      "text": "My name is Sai Vennam,"
+    },
+    {
+      "startSeconds": 2.156,
+      "text": "and today we're going to be talking about Kubernetes Ingress in 5 minutes."
+    },
+    {
+      "startSeconds": 5.839,
+      "text": "Now, I'm going to assume you already have the fundamental understandings of Kubernetes,"
+    },
+    {
+      "startSeconds": 8.966,
+      "text": "but if you don't, be sure to check out my video, \"Kubernetes Explained\"."
+    },
+    {
+      "startSeconds": 12.786,
+      "text": "Let's go ahead and get started."
+    },
+    {
+      "startSeconds": 15.036,
+      "text": "Let's assume that we've got a pod"
+    },
+    {
+      "startSeconds": 17.399,
+      "text": "scaled out three times within my Kubernetes cluster,"
+    },
+    {
+      "startSeconds": 20.59,
+      "text": "and I've got three nodes in my Kubernetes cluster,"
+    },
+    {
+      "startSeconds": 23.4,
+      "text": "and this pod is scaled up to three."
+    },
+    {
+      "startSeconds": 26.216,
+      "text": "Now, these pods together -"
+    },
+    {
+      "startSeconds": 28.075,
+      "text": "let's say I've created a grouping with the label selector"
+    },
+    {
+      "startSeconds": 31.304,
+      "text": "to create what's called a \"service\"."
+    },
+    {
+      "startSeconds": 35.175,
+      "text": "Now, a service"
+    },
+    {
+      "startSeconds": 37.087,
+      "text": "basically enables me to load balance requests to one of these pods,"
+    },
+    {
+      "startSeconds": 41.476,
+      "text": "and that's going to be our first start here."
+    },
+    {
+      "startSeconds": 44.466,
+      "text": "Let's say we've got a \"service.yaml\" that defines that service."
+    },
+    {
+      "startSeconds": 47.757,
+      "text": "One of the core things you can define in that is going to be a type,"
+    },
+    {
+      "startSeconds": 51.46,
+      "text": "and we're going to start with the basic one, \"Cluster IP\"."
+    },
+    {
+      "startSeconds": 56.122,
+      "text": "Now, basically every service that gets created in Kubernetes has a cluster IP."
+    },
+    {
+      "startSeconds": 61.084,
+      "text": "It enables access to that service from within the Kubernetes network,"
+    },
+    {
+      "startSeconds": 65.736,
+      "text": "not the external network."
+    },
+    {
+      "startSeconds": 67.226,
+      "text": "So, let's assume our service has a Cluster IP and move forward"
+    },
+    {
+      "startSeconds": 70.257,
+      "text": "to the next, more interesting, option here."
+    },
+    {
+      "startSeconds": 73.845,
+      "text": "I could also specify that type as a Node port."
+    },
+    {
+      "startSeconds": 79.67,
+      "text": "Now, a Node port is actually a lot like the name kind of makes it sound."
+    },
+    {
+      "startSeconds": 84.697,
+      "text": "Now, we've got three nodes in our cluster,"
+    },
+    {
+      "startSeconds": 86.736,
+      "text": "and each one of those nodes has a publicly accessible IP."
+    },
+    {
+      "startSeconds": 90.327,
+      "text": "Now, let's say that that publicly accessible IP looks something like 169.0.0.1,"
+    },
+    {
+      "startSeconds": 97.216,
+      "text": "169.0.0.2, and so on for the third one."
+    },
+    {
+      "startSeconds": 104.752,
+      "text": "Now, this is a publicly accessible IP address,"
+    },
+    {
+      "startSeconds": 108.286,
+      "text": "but what a Note Port will do is assign the same Node port,"
+    },
+    {
+      "startSeconds": 112.601,
+      "text": "so the same port, let's say it's 31,000, to all three of those nodes."
+    },
+    {
+      "startSeconds": 118.957,
+      "text": "So, for external access from outside,"
+    },
+    {
+      "startSeconds": 122.138,
+      "text": "from the Internet that's coming in,"
+    },
+    {
+      "startSeconds": 125.478,
+      "text": "and that hits that port on any one of these IP addresses that's externally accessible."
+    },
+    {
+      "startSeconds": 131.205,
+      "text": "It's going to route directly to service that's defined in that service.yaml."
+    },
+    {
+      "startSeconds": 137.695,
+      "text": "So, that's an interesting approach and there's a couple of limitations."
+    },
+    {
+      "startSeconds": 141.677,
+      "text": "So, basically any service can only have one port."
+    },
+    {
+      "startSeconds": 145.35,
+      "text": "But more importantly,"
+    },
+    {
+      "startSeconds": 146.682,
+      "text": "if a node were to go down, say you're working with a cloud service provider"
+    },
+    {
+      "startSeconds": 150.246,
+      "text": "and you scale your nodes up and down a lot,"
+    },
+    {
+      "startSeconds": 152.433,
+      "text": "well, you're going to have to maintain that updated IP address that's going to change"
+    },
+    {
+      "startSeconds": 156.312,
+      "text": "when a new node comes up."
+    },
+    {
+      "startSeconds": 158.5,
+      "text": "So, although it works, it's not the best approach"
+    },
+    {
+      "startSeconds": 162.096,
+      "text": "to exposing your applications on the public Internet."
+    },
+    {
+      "startSeconds": 165.09,
+      "text": "Let's talk about a third type here."
+    },
+    {
+      "startSeconds": 167.365,
+      "text": "It's going to be type \"load balancer\"."
+    },
+    {
+      "startSeconds": 170.216,
+      "text": "Now a load balancer, when you define it,"
+    },
+    {
+      "startSeconds": 173.807,
+      "text": "so, it's really dependent on how a cloud provider is providing their Kubernetes service."
+    },
+    {
+      "startSeconds": 177.827,
+      "text": "But essentially the way it works,"
+    },
+    {
+      "startSeconds": 180,
+      "text": "the cloud provider is going to spin up something called an NLB,"
+    },
+    {
+      "startSeconds": 183.655,
+      "text": "or a \"Network Load Balancer\","
+    },
+    {
+      "startSeconds": 186.278,
+      "text": "for every service that you expose this way."
+    },
+    {
+      "startSeconds": 188.933,
+      "text": "And so, for users that are coming in and accessing that NLB,"
+    },
+    {
+      "startSeconds": 192.718,
+      "text": "that IP address, it's going to route directly to that service."
+    },
+    {
+      "startSeconds": 197.564,
+      "text": "But although this is good, again, it's only one kind of service,"
+    },
+    {
+      "startSeconds": 202.99,
+      "text": "one load balancer IP address per service."
+    },
+    {
+      "startSeconds": 205.563,
+      "text": "And, in addition, load balancers are a commodity at the end of the day."
+    },
+    {
+      "startSeconds": 211.069,
+      "text": "If you need to expose a lot of services, that's a lot of load balancers"
+    },
+    {
+      "startSeconds": 214.7,
+      "text": "which can be inefficient when going to scale."
+    },
+    {
+      "startSeconds": 218.171,
+      "text": "Now, the last one I want to talk about here is actually not even a service type;"
+    },
+    {
+      "startSeconds": 222.363,
+      "text": "it's a new thing called an \"Ingress Resource\""
+    },
+    {
+      "startSeconds": 225.497,
+      "text": "which maybe we can define with an ingress.yaml file,"
+    },
+    {
+      "startSeconds": 228.544,
+      "text": "and this is going to be, you know, you're going to define a \"kind: ingress\"."
+    },
+    {
+      "startSeconds": 235.532,
+      "text": "Now an ingress is a little different."
+    },
+    {
+      "startSeconds": 237.85,
+      "text": "The way ingress is going to work, when you create this,"
+    },
+    {
+      "startSeconds": 240.366,
+      "text": "it's going to create basically a set of rules within your cluster,"
+    },
+    {
+      "startSeconds": 244.028,
+      "text": "an ingress resource that can route based on a set of rules."
+    },
+    {
+      "startSeconds": 248.117,
+      "text": "These rules are going to be really reminiscent"
+    },
+    {
+      "startSeconds": 250.099,
+      "text": "of something like an engine X reverse proxy."
+    },
+    {
+      "startSeconds": 253.204,
+      "text": "So, the first thing that ingress will do is create"
+    },
+    {
+      "startSeconds": 256.121,
+      "text": "an external load balancer"
+    },
+    {
+      "startSeconds": 259.588,
+      "text": "that's able to handle requests coming in"
+    },
+    {
+      "startSeconds": 262.906,
+      "text": "and let's say that request comes in for app.com"
+    },
+    {
+      "startSeconds": 266.508,
+      "text": "which maps to an IP address that the ingress supports"
+    },
+    {
+      "startSeconds": 269.736,
+      "text": "and now here's where the interesting part comes in."
+    },
+    {
+      "startSeconds": 272.436,
+      "text": "It can actually route based on a set of rules."
+    },
+    {
+      "startSeconds": 275.239,
+      "text": "So, let's say we have a second set of pods in the cluster"
+    },
+    {
+      "startSeconds": 278.814,
+      "text": "and these set of pods route to a Service B."
+    },
+    {
+      "startSeconds": 287.81,
+      "text": "Now, this rule - maybe we introduce a rule that says if the rule comes in,"
+    },
+    {
+      "startSeconds": 293.444,
+      "text": "or the route comes in with, let's say, serviceb.app.com,"
+    },
+    {
+      "startSeconds": 301.004,
+      "text": "then route to this set of services,"
+    },
+    {
+      "startSeconds": 303.078,
+      "text": "otherwise route all other traffic to Service A."
+    },
+    {
+      "startSeconds": 307.035,
+      "text": "We'll just say \"other\"."
+    },
+    {
+      "startSeconds": 309.536,
+      "text": "So, an ingress is powerful because you can route multiple backend services"
+    },
+    {
+      "startSeconds": 313.654,
+      "text": "with a single IP address"
+    },
+    {
+      "startSeconds": 315.367,
+      "text": "and then do path-based routing."
+    },
+    {
+      "startSeconds": 317.586,
+      "text": "So, as other advantages you can do something like TLS termination,"
+    },
+    {
+      "startSeconds": 321.664,
+      "text": "do virtual hosts"
+    },
+    {
+      "startSeconds": 323.386,
+      "text": "and a number of other kind of capabilities that become available."
+    },
+    {
+      "startSeconds": 326.57,
+      "text": "So, this was Kubernetes ingress in five minutes."
+    },
+    {
+      "startSeconds": 329.006,
+      "text": "If you enjoyed this video, or have any questions,"
+    },
+    {
+      "startSeconds": 331.193,
+      "text": "be sure to drop a like or a comment below."
+    },
+    {
+      "startSeconds": 333.397,
+      "text": "Stay tuned and follow us for more videos like this in the future."
+    },
+    {
+      "startSeconds": 336.89,
+      "text": "Thank you."
+    }
+  ]
+}

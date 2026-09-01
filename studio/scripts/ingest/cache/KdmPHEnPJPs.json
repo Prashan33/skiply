@@ -1,0 +1,3210 @@
+{
+  "id": "KdmPHEnPJPs",
+  "url": "https://www.youtube.com/watch?v=KdmPHEnPJPs",
+  "fetchedAt": "2026-09-01T04:07:41.219Z",
+  "captionKind": "asr",
+  "chapters": [
+    {
+      "startSeconds": 0,
+      "label": "<Untitled Chapter 1>"
+    },
+    {
+      "startSeconds": 2,
+      "label": "Handle Missing Values"
+    },
+    {
+      "startSeconds": 50,
+      "label": "How To Drop Missing Values"
+    },
+    {
+      "startSeconds": 235,
+      "label": "Axis Argument"
+    },
+    {
+      "startSeconds": 416,
+      "label": "Drop Rows That Are Missing Values in a Specific Column"
+    },
+    {
+      "startSeconds": 593,
+      "label": "Custom Missing Values"
+    },
+    {
+      "startSeconds": 898,
+      "label": "Casting Data Types"
+    },
+    {
+      "startSeconds": 1217,
+      "label": "Loading in a Csv"
+    },
+    {
+      "startSeconds": 1309,
+      "label": "Problem with Casting some Values"
+    },
+    {
+      "startSeconds": 1476,
+      "label": "View Unique Values of a Series"
+    }
+  ],
+  "cues": [
+    {
+      "startSeconds": 0.16,
+      "text": "hey there how's it going everybody in"
+    },
+    {
+      "startSeconds": 1.64,
+      "text": "this video we're going to be learning"
+    },
+    {
+      "startSeconds": 2.72,
+      "text": "how to handle missing values and also"
+    },
+    {
+      "startSeconds": 4.56,
+      "text": "how to clean up our data a bit now"
+    },
+    {
+      "startSeconds": 6.56,
+      "text": "almost every data set that you're going"
+    },
+    {
+      "startSeconds": 7.879,
+      "text": "to be working with is likely going to"
+    },
+    {
+      "startSeconds": 9.76,
+      "text": "have some missing data or data that we'd"
+    },
+    {
+      "startSeconds": 11.92,
+      "text": "like to clean up or convert to a"
+    },
+    {
+      "startSeconds": 13.519,
+      "text": "different data type so we'll learn how"
+    },
+    {
+      "startSeconds": 15.36,
+      "text": "to do all of that here now towards the"
+    },
+    {
+      "startSeconds": 17.359,
+      "text": "end of the video we'll combine what we"
+    },
+    {
+      "startSeconds": 19.119,
+      "text": "learned here to be able to look at our"
+    },
+    {
+      "startSeconds": 20.72,
+      "text": "stack Overflow survey data and calculate"
+    },
+    {
+      "startSeconds": 23.24,
+      "text": "the average years of experiences of"
+    },
+    {
+      "startSeconds": 25.359,
+      "text": "developers who answered the survey so be"
+    },
+    {
+      "startSeconds": 27.56,
+      "text": "sure to stay around for that and it's"
+    },
+    {
+      "startSeconds": 29.24,
+      "text": "going to be great practice for what we"
+    },
+    {
+      "startSeconds": 30.88,
+      "text": "learned here uh now I would like to"
+    },
+    {
+      "startSeconds": 32.599,
+      "text": "mention that we do have a sponsor for"
+    },
+    {
+      "startSeconds": 34.079,
+      "text": "this series of videos and that is"
+    },
+    {
+      "startSeconds": 35.879,
+      "text": "brilliant so I really want to thank"
+    },
+    {
+      "startSeconds": 37.559,
+      "text": "brilliant for sponsoring the series and"
+    },
+    {
+      "startSeconds": 39.44,
+      "text": "it would be great if you all could check"
+    },
+    {
+      "startSeconds": 40.48,
+      "text": "them out using the link in the"
+    },
+    {
+      "startSeconds": 41.68,
+      "text": "description section below and support"
+    },
+    {
+      "startSeconds": 43.2,
+      "text": "the sponsors and I'll talk more about"
+    },
+    {
+      "startSeconds": 44.92,
+      "text": "their services in just a bit so with"
+    },
+    {
+      "startSeconds": 46.96,
+      "text": "that said let's go ahead and get started"
+    },
+    {
+      "startSeconds": 49.28,
+      "text": "okay so first let's talk about how to"
+    },
+    {
+      "startSeconds": 51.719,
+      "text": "drop missing values so I have my"
+    },
+    {
+      "startSeconds": 53.96,
+      "text": "Snippets file open here and we've seen"
+    },
+    {
+      "startSeconds": 55.84,
+      "text": "this in previous videos and again if"
+    },
+    {
+      "startSeconds": 58.239,
+      "text": "anyone wants to follow along then I'll"
+    },
+    {
+      "startSeconds": 60.48,
+      "text": "have a link to all of these notebooks"
+    },
+    {
+      "startSeconds": 62.32,
+      "text": "and the data in the description section"
+    },
+    {
+      "startSeconds": 64.04,
+      "text": "below and as we've seen in previous"
+    },
+    {
+      "startSeconds": 66.119,
+      "text": "videos we'll learn how to do some of"
+    },
+    {
+      "startSeconds": 67.799,
+      "text": "this in our smaller Snippets data frame"
+    },
+    {
+      "startSeconds": 69.92,
+      "text": "first and then we'll see how to do some"
+    },
+    {
+      "startSeconds": 72.2,
+      "text": "interesting stuff on our larger stack"
+    },
+    {
+      "startSeconds": 74.04,
+      "text": "Overflow data set uh to get this working"
+    },
+    {
+      "startSeconds": 76.4,
+      "text": "on some real world data so for this"
+    },
+    {
+      "startSeconds": 78.68,
+      "text": "video I've added some null values here"
+    },
+    {
+      "startSeconds": 81.32,
+      "text": "into our Snippets data frame uh that we"
+    },
+    {
+      "startSeconds": 83.759,
+      "text": "didn't have before so I added some extra"
+    },
+    {
+      "startSeconds": 86.72,
+      "text": "first names here and we can see that I"
+    },
+    {
+      "startSeconds": 88.92,
+      "text": "just have one that that is uh a numpy"
+    },
+    {
+      "startSeconds": 92.64,
+      "text": "naan which is a not a number value I"
+    },
+    {
+      "startSeconds": 95.24,
+      "text": "also imported numpy up here at the top"
+    },
+    {
+      "startSeconds": 97.88,
+      "text": "uh this this one here is just a nonone"
+    },
+    {
+      "startSeconds": 100.24,
+      "text": "value and then I also have some custom"
+    },
+    {
+      "startSeconds": 102.64,
+      "text": "missing values as well this one is just"
+    },
+    {
+      "startSeconds": 105.079,
+      "text": "a string of Na and this one is just a"
+    },
+    {
+      "startSeconds": 107.759,
+      "text": "string of missing so I have some nens"
+    },
+    {
+      "startSeconds": 110.759,
+      "text": "some nuns and stuff like that uh thrown"
+    },
+    {
+      "startSeconds": 113.24,
+      "text": "throughout this data so that we have"
+    },
+    {
+      "startSeconds": 114.719,
+      "text": "some missing values so you're going to"
+    },
+    {
+      "startSeconds": 116.52,
+      "text": "see this a lot uh that when we work with"
+    },
+    {
+      "startSeconds": 118.96,
+      "text": "pandas uh we're going to have some"
+    },
+    {
+      "startSeconds": 120.64,
+      "text": "missing data and depending on what it is"
+    },
+    {
+      "startSeconds": 122.6,
+      "text": "you're trying to do you might want to"
+    },
+    {
+      "startSeconds": 124.24,
+      "text": "handle this in different ways so one"
+    },
+    {
+      "startSeconds": 126.64,
+      "text": "thing you might want to do with missing"
+    },
+    {
+      "startSeconds": 128.28,
+      "text": "data is to Simply remove it so for our"
+    },
+    {
+      "startSeconds": 130.879,
+      "text": "small data frame here uh let's say that"
+    },
+    {
+      "startSeconds": 133.12,
+      "text": "we're going to do some analysis with"
+    },
+    {
+      "startSeconds": 135.12,
+      "text": "these people in the data frame but if"
+    },
+    {
+      "startSeconds": 137.2,
+      "text": "they don't have their first name last"
+    },
+    {
+      "startSeconds": 139.28,
+      "text": "name and email address uh then we can't"
+    },
+    {
+      "startSeconds": 142.08,
+      "text": "do what we're trying to do so we'll just"
+    },
+    {
+      "startSeconds": 144,
+      "text": "remove the rows that don't have those"
+    },
+    {
+      "startSeconds": 145.76,
+      "text": "values so in order to do this we can use"
+    },
+    {
+      "startSeconds": 148.44,
+      "text": "the drop in method so let's do this and"
+    },
+    {
+      "startSeconds": 151.4,
+      "text": "then I'll explain the results uh and go"
+    },
+    {
+      "startSeconds": 154,
+      "text": "over those so all I'm going to do down"
+    },
+    {
+      "startSeconds": 155.879,
+      "text": "here with my data frame is I'm going to"
+    },
+    {
+      "startSeconds": 157.72,
+      "text": "say DF do dropna and we're going to run"
+    },
+    {
+      "startSeconds": 160.92,
+      "text": "that without any arguments right now so"
+    },
+    {
+      "startSeconds": 163.36,
+      "text": "when we run this we can see that now we"
+    },
+    {
+      "startSeconds": 165.48,
+      "text": "only get four rows of data here and up"
+    },
+    {
+      "startSeconds": 168.64,
+      "text": "here we had uh let's see four five six 7"
+    },
+    {
+      "startSeconds": 172.56,
+      "text": "so we got these four rows here uh"
+    },
+    {
+      "startSeconds": 174.64,
+      "text": "because they didn't have any missing"
+    },
+    {
+      "startSeconds": 176.36,
+      "text": "values now we do still have our bottom"
+    },
+    {
+      "startSeconds": 178.84,
+      "text": "row here uh which has some of our custom"
+    },
+    {
+      "startSeconds": 181.519,
+      "text": "missing values but we'll see how to deal"
+    },
+    {
+      "startSeconds": 183.799,
+      "text": "with these in just a second but for now"
+    },
+    {
+      "startSeconds": 186.28,
+      "text": "let's go over what drop in a is actually"
+    },
+    {
+      "startSeconds": 188.44,
+      "text": "doing here now what's going on in the"
+    },
+    {
+      "startSeconds": 190.48,
+      "text": "background is that drop in a is using"
+    },
+    {
+      "startSeconds": 193.08,
+      "text": "some default arguments so I'm going to"
+    },
+    {
+      "startSeconds": 195.319,
+      "text": "manually fill in these default arguments"
+    },
+    {
+      "startSeconds": 197.799,
+      "text": "and it might make more sense why we got"
+    },
+    {
+      "startSeconds": 199.879,
+      "text": "this specific result so by default I'll"
+    },
+    {
+      "startSeconds": 202.92,
+      "text": "leave that one here and now I'm going to"
+    },
+    {
+      "startSeconds": 205.44,
+      "text": "fill in drop in a again but I'm going to"
+    },
+    {
+      "startSeconds": 207.68,
+      "text": "put the default arguments that already"
+    },
+    {
+      "startSeconds": 210.2,
+      "text": "has and the default arguments of what"
+    },
+    {
+      "startSeconds": 212.84,
+      "text": "this is doing in the background is it"
+    },
+    {
+      "startSeconds": 214.84,
+      "text": "has an axis set to index and it has a"
+    },
+    {
+      "startSeconds": 218.439,
+      "text": "how variable set to any so since this is"
+    },
+    {
+      "startSeconds": 222.72,
+      "text": "what the method was using by default"
+    },
+    {
+      "startSeconds": 224.48,
+      "text": "anyway we should go go ahead and get the"
+    },
+    {
+      "startSeconds": 226.879,
+      "text": "same results here and we can see that we"
+    },
+    {
+      "startSeconds": 228.599,
+      "text": "do we get the same results as we did"
+    },
+    {
+      "startSeconds": 230.64,
+      "text": "when we ran this up here but now let me"
+    },
+    {
+      "startSeconds": 232.879,
+      "text": "actually explain these arguments here so"
+    },
+    {
+      "startSeconds": 235.4,
+      "text": "first we have the axis argument so this"
+    },
+    {
+      "startSeconds": 237.92,
+      "text": "can either be set to index or set to"
+    },
+    {
+      "startSeconds": 240.72,
+      "text": "columns that is going to tell pandas"
+    },
+    {
+      "startSeconds": 242.799,
+      "text": "that we want to drop na values when our"
+    },
+    {
+      "startSeconds": 245.439,
+      "text": "rows are missing values when it's set"
+    },
+    {
+      "startSeconds": 247.48,
+      "text": "here to index if we set this to columns"
+    },
+    {
+      "startSeconds": 250.319,
+      "text": "then it would instead drop columns if"
+    },
+    {
+      "startSeconds": 252.76,
+      "text": "they had missing values and we'll look"
+    },
+    {
+      "startSeconds": 254.799,
+      "text": "at that in just a second now the second"
+    },
+    {
+      "startSeconds": 257.28,
+      "text": "argument here is how uh we want to drop"
+    },
+    {
+      "startSeconds": 260.16,
+      "text": "these or I guess a better way to frame"
+    },
+    {
+      "startSeconds": 262.04,
+      "text": "that is this is the criteria that it"
+    },
+    {
+      "startSeconds": 264.68,
+      "text": "uses for dropping a row or a column so"
+    },
+    {
+      "startSeconds": 267.759,
+      "text": "by default this is set to any so we're"
+    },
+    {
+      "startSeconds": 270.6,
+      "text": "looking over our rows since this is set"
+    },
+    {
+      "startSeconds": 272.639,
+      "text": "to index and this is set to any here so"
+    },
+    {
+      "startSeconds": 276.88,
+      "text": "it will drop rows with any missing"
+    },
+    {
+      "startSeconds": 279.28,
+      "text": "values but this might not be what you"
+    },
+    {
+      "startSeconds": 281.4,
+      "text": "want maybe uh with this kind of an"
+    },
+    {
+      "startSeconds": 284.16,
+      "text": "analysis that we're doing it's okay to"
+    },
+    {
+      "startSeconds": 286.08,
+      "text": "have uh you know missing email or last"
+    },
+    {
+      "startSeconds": 288.56,
+      "text": "name or something like that uh but there"
+    },
+    {
+      "startSeconds": 290.759,
+      "text": "just has to be something it can't just"
+    },
+    {
+      "startSeconds": 292.759,
+      "text": "be an entire row of missing values so if"
+    },
+    {
+      "startSeconds": 295.96,
+      "text": "that's the case then we can instead"
+    },
+    {
+      "startSeconds": 297.88,
+      "text": "change this how argument to to all and"
+    },
+    {
+      "startSeconds": 302.039,
+      "text": "this will then only drop rows when all"
+    },
+    {
+      "startSeconds": 304.52,
+      "text": "of the values in that row are missing so"
+    },
+    {
+      "startSeconds": 307.52,
+      "text": "now if I run this then we can see that"
+    },
+    {
+      "startSeconds": 310.24,
+      "text": "now we get back more rows than we did"
+    },
+    {
+      "startSeconds": 312.16,
+      "text": "before because it kept the rows that had"
+    },
+    {
+      "startSeconds": 314.56,
+      "text": "some missing values uh but not all"
+    },
+    {
+      "startSeconds": 317.44,
+      "text": "missing values so we can see here we"
+    },
+    {
+      "startSeconds": 319.199,
+      "text": "have an email missing but there were"
+    },
+    {
+      "startSeconds": 321.4,
+      "text": "some other uh columns filled in and we"
+    },
+    {
+      "startSeconds": 324.36,
+      "text": "can see that everything was missing here"
+    },
+    {
+      "startSeconds": 326.6,
+      "text": "but they did have an email so all of the"
+    },
+    {
+      "startSeconds": 329.039,
+      "text": "values have to missing in order for uh"
+    },
+    {
+      "startSeconds": 331.919,
+      "text": "this to actually drop those so it looks"
+    },
+    {
+      "startSeconds": 334.36,
+      "text": "like we are missing index of four if I"
+    },
+    {
+      "startSeconds": 336.6,
+      "text": "go up to my original data frame here we"
+    },
+    {
+      "startSeconds": 338.96,
+      "text": "can see that that index had all missing"
+    },
+    {
+      "startSeconds": 341,
+      "text": "values there okay now if I instead"
+    },
+    {
+      "startSeconds": 343.56,
+      "text": "change this axis to columns instead of"
+    },
+    {
+      "startSeconds": 346.199,
+      "text": "index then it will drop columns that"
+    },
+    {
+      "startSeconds": 348.759,
+      "text": "have all missing values uh we don't have"
+    },
+    {
+      "startSeconds": 351.16,
+      "text": "any columns that have missing values all"
+    },
+    {
+      "startSeconds": 353.759,
+      "text": "the way down so it should just return"
+    },
+    {
+      "startSeconds": 355.88,
+      "text": "our original data frame so if I say"
+    },
+    {
+      "startSeconds": 358.759,
+      "text": "columns here and run run this then we"
+    },
+    {
+      "startSeconds": 360.72,
+      "text": "can see that that's what we get because"
+    },
+    {
+      "startSeconds": 362.6,
+      "text": "none of these columns have missing"
+    },
+    {
+      "startSeconds": 364.16,
+      "text": "values all the way down uh now if I set"
+    },
+    {
+      "startSeconds": 366.8,
+      "text": "this back to the default and drop"
+    },
+    {
+      "startSeconds": 368.88,
+      "text": "columns with any missing values then"
+    },
+    {
+      "startSeconds": 371.16,
+      "text": "we'll actually get an empty data frame"
+    },
+    {
+      "startSeconds": 373,
+      "text": "returned because we have one row that is"
+    },
+    {
+      "startSeconds": 376.039,
+      "text": "completely empty uh that we saw here"
+    },
+    {
+      "startSeconds": 378.36,
+      "text": "this uh index of four uh so for that row"
+    },
+    {
+      "startSeconds": 382.16,
+      "text": "each column is going to have at least"
+    },
+    {
+      "startSeconds": 384.24,
+      "text": "one missing value and if we set this to"
+    },
+    {
+      "startSeconds": 387.039,
+      "text": "any then any column which is is even a"
+    },
+    {
+      "startSeconds": 390.8,
+      "text": "single missing value will be dropped"
+    },
+    {
+      "startSeconds": 393.28,
+      "text": "which in this case is all of them so if"
+    },
+    {
+      "startSeconds": 396.479,
+      "text": "I change this to any then since we have"
+    },
+    {
+      "startSeconds": 400.4,
+      "text": "all missing values in one of these rows"
+    },
+    {
+      "startSeconds": 402.88,
+      "text": "uh that's just going to give us an empty"
+    },
+    {
+      "startSeconds": 404.599,
+      "text": "data frame now at this point you might"
+    },
+    {
+      "startSeconds": 406.44,
+      "text": "be wondering uh okay well uh my data is"
+    },
+    {
+      "startSeconds": 409.36,
+      "text": "a bit more complicated than this and I'm"
+    },
+    {
+      "startSeconds": 411.599,
+      "text": "doing some an analysis where I want to"
+    },
+    {
+      "startSeconds": 413.88,
+      "text": "drop some missing values but I only want"
+    },
+    {
+      "startSeconds": 416.36,
+      "text": "to drop rows that are missing values in"
+    },
+    {
+      "startSeconds": 418.639,
+      "text": "a specific column so for example let's"
+    },
+    {
+      "startSeconds": 421.36,
+      "text": "say that we're doing some analysis on"
+    },
+    {
+      "startSeconds": 423.319,
+      "text": "our data and it's fine if they don't"
+    },
+    {
+      "startSeconds": 425.24,
+      "text": "have a first name or a last name but we"
+    },
+    {
+      "startSeconds": 427.919,
+      "text": "really need the email address and if"
+    },
+    {
+      "startSeconds": 430.28,
+      "text": "they don't have an email address then we"
+    },
+    {
+      "startSeconds": 432.84,
+      "text": "need to just drop those rows so in order"
+    },
+    {
+      "startSeconds": 435.28,
+      "text": "to do this we can pass in a subset"
+    },
+    {
+      "startSeconds": 437.879,
+      "text": "argument so first I'm going to set our"
+    },
+    {
+      "startSeconds": 440.96,
+      "text": "uh our uh axis here back to index so"
+    },
+    {
+      "startSeconds": 444.28,
+      "text": "that we're dropping rows and now we want"
+    },
+    {
+      "startSeconds": 447.879,
+      "text": "to pass in a subset argument and this"
+    },
+    {
+      "startSeconds": 450.879,
+      "text": "subset will be the column names that"
+    },
+    {
+      "startSeconds": 452.879,
+      "text": "we're checking for missing values so in"
+    },
+    {
+      "startSeconds": 455.16,
+      "text": "this case it's just going to be a single"
+    },
+    {
+      "startSeconds": 457.16,
+      "text": "column so I'm going to say subset is"
+    },
+    {
+      "startSeconds": 459.479,
+      "text": "equal to and I'm still going to pass in"
+    },
+    {
+      "startSeconds": 462.319,
+      "text": "a list even though this is just a single"
+    },
+    {
+      "startSeconds": 464.919,
+      "text": "column and I'll will say email so if I"
+    },
+    {
+      "startSeconds": 467.639,
+      "text": "run this then we can see that the data"
+    },
+    {
+      "startSeconds": 469.599,
+      "text": "frame that we get back is full of rows"
+    },
+    {
+      "startSeconds": 472.039,
+      "text": "that have uh at least their email"
+    },
+    {
+      "startSeconds": 474.08,
+      "text": "address filled in and again this one"
+    },
+    {
+      "startSeconds": 476,
+      "text": "down here with these na values that is"
+    },
+    {
+      "startSeconds": 477.96,
+      "text": "our custom missing values and I'll show"
+    },
+    {
+      "startSeconds": 479.84,
+      "text": "you how to treat those as missing values"
+    },
+    {
+      "startSeconds": 481.8,
+      "text": "in just a bit now in this case here"
+    },
+    {
+      "startSeconds": 483.96,
+      "text": "since we're only passing in a single"
+    },
+    {
+      "startSeconds": 485.84,
+      "text": "column for our subset our how argument"
+    },
+    {
+      "startSeconds": 489.039,
+      "text": "here uh isn't really doing much because"
+    },
+    {
+      "startSeconds": 491.52,
+      "text": "it's only going to look at the email"
+    },
+    {
+      "startSeconds": 493.28,
+      "text": "address for missing values so if an"
+    },
+    {
+      "startSeconds": 495.28,
+      "text": "email address isn't filled in uh then"
+    },
+    {
+      "startSeconds": 497.8,
+      "text": "passing in either any or all for our"
+    },
+    {
+      "startSeconds": 501.4,
+      "text": "argument here uh would trigger that row"
+    },
+    {
+      "startSeconds": 503.84,
+      "text": "to be removed so even if I put this as"
+    },
+    {
+      "startSeconds": 506.44,
+      "text": "all it should give us the same results"
+    },
+    {
+      "startSeconds": 509.039,
+      "text": "because we're only checking one value"
+    },
+    {
+      "startSeconds": 511,
+      "text": "but we can also pass in multiple columns"
+    },
+    {
+      "startSeconds": 513.039,
+      "text": "to our subset so what if we said okay"
+    },
+    {
+      "startSeconds": 515.719,
+      "text": "well in order for my data to be useful I"
+    },
+    {
+      "startSeconds": 518.44,
+      "text": "need either their last name or their"
+    },
+    {
+      "startSeconds": 520.599,
+      "text": "email address but I don't need both so"
+    },
+    {
+      "startSeconds": 523.64,
+      "text": "in order to do this we could just say"
+    },
+    {
+      "startSeconds": 525.839,
+      "text": "okay they need um all of the values in"
+    },
+    {
+      "startSeconds": 532.24,
+      "text": "last name and an email or I'm sorry"
+    },
+    {
+      "startSeconds": 535.44,
+      "text": "there that uh I got that reversed uh"
+    },
+    {
+      "startSeconds": 537.44,
+      "text": "they don't need their last name and the"
+    },
+    {
+      "startSeconds": 539.079,
+      "text": "email"
+    },
+    {
+      "startSeconds": 539.959,
+      "text": "uh it just can't be that all of those"
+    },
+    {
+      "startSeconds": 541.839,
+      "text": "values are missing so as long as the"
+    },
+    {
+      "startSeconds": 543.92,
+      "text": "last name or the email is there then it"
+    },
+    {
+      "startSeconds": 546.68,
+      "text": "shouldn't drop those rows so if I run"
+    },
+    {
+      "startSeconds": 549.079,
+      "text": "this then we can see that we get some"
+    },
+    {
+      "startSeconds": 551.2,
+      "text": "values that don't have an email but they"
+    },
+    {
+      "startSeconds": 553.12,
+      "text": "did have a last name and also uh we"
+    },
+    {
+      "startSeconds": 556.079,
+      "text": "would get back some values that didn't"
+    },
+    {
+      "startSeconds": 558.079,
+      "text": "have a last name but do have an email"
+    },
+    {
+      "startSeconds": 560,
+      "text": "just like this Anonymous one here it has"
+    },
+    {
+      "startSeconds": 561.92,
+      "text": "an email but it doesn't have a last name"
+    },
+    {
+      "startSeconds": 564,
+      "text": "and again that's because we passed in"
+    },
+    {
+      "startSeconds": 565.64,
+      "text": "all for our how argument which means for"
+    },
+    {
+      "startSeconds": 568.68,
+      "text": "a row to be dropped both of the subset"
+    },
+    {
+      "startSeconds": 571.8,
+      "text": "columns needed to be missing now like"
+    },
+    {
+      "startSeconds": 574.519,
+      "text": "we've seen in previous videos this isn't"
+    },
+    {
+      "startSeconds": 576.72,
+      "text": "permanently changing our data frame"
+    },
+    {
+      "startSeconds": 578.56,
+      "text": "values if we want to permanently change"
+    },
+    {
+      "startSeconds": 580.519,
+      "text": "our data frame then we'd have to add the"
+    },
+    {
+      "startSeconds": 582.48,
+      "text": "in place argument and set that equal to"
+    },
+    {
+      "startSeconds": 584.8,
+      "text": "True uh here within this method but"
+    },
+    {
+      "startSeconds": 588.079,
+      "text": "we've seen that a bunch throughout the"
+    },
+    {
+      "startSeconds": 589.24,
+      "text": "series so far uh so I don't think I'll"
+    },
+    {
+      "startSeconds": 591.279,
+      "text": "go over that again here okay so now"
+    },
+    {
+      "startSeconds": 593.72,
+      "text": "let's get to these custom missing values"
+    },
+    {
+      "startSeconds": 595.72,
+      "text": "we can see down here uh that we have a"
+    },
+    {
+      "startSeconds": 598.64,
+      "text": "row here that has some customized"
+    },
+    {
+      "startSeconds": 600.959,
+      "text": "missing values so for example maybe the"
+    },
+    {
+      "startSeconds": 603.48,
+      "text": "people who you got our data from uh"
+    },
+    {
+      "startSeconds": 605.76,
+      "text": "didn't know what to do with missing"
+    },
+    {
+      "startSeconds": 607.16,
+      "text": "values so instead they just passed in a"
+    },
+    {
+      "startSeconds": 610,
+      "text": "string of Na or they passed in you know"
+    },
+    {
+      "startSeconds": 613.079,
+      "text": "a string of missing like we have here so"
+    },
+    {
+      "startSeconds": 616.12,
+      "text": "how would we actually handle these well"
+    },
+    {
+      "startSeconds": 618.2,
+      "text": "it depends on how we load in our data in"
+    },
+    {
+      "startSeconds": 620.839,
+      "text": "this case we've created our data frame"
+    },
+    {
+      "startSeconds": 623.079,
+      "text": "from scratch by uh creating a dictionary"
+    },
+    {
+      "startSeconds": 626.16,
+      "text": "and then creating our data frame here so"
+    },
+    {
+      "startSeconds": 628.56,
+      "text": "what we can do here is is just simply"
+    },
+    {
+      "startSeconds": 630.04,
+      "text": "replace those values with an Nan value"
+    },
+    {
+      "startSeconds": 633.16,
+      "text": "now if we instead loaded in our data"
+    },
+    {
+      "startSeconds": 635.04,
+      "text": "from a CSV file then we could do"
+    },
+    {
+      "startSeconds": 637.56,
+      "text": "something different but first I'll show"
+    },
+    {
+      "startSeconds": 640.2,
+      "text": "this and then we'll take a look at the"
+    },
+    {
+      "startSeconds": 641.44,
+      "text": "CSV file later whenever I go over to the"
+    },
+    {
+      "startSeconds": 644,
+      "text": "stack Overflow data so right here at the"
+    },
+    {
+      "startSeconds": 646.519,
+      "text": "top where we created our data frame I'm"
+    },
+    {
+      "startSeconds": 649.16,
+      "text": "going to replace these values with a"
+    },
+    {
+      "startSeconds": 651.12,
+      "text": "proper numpy Nan value uh so to do this"
+    },
+    {
+      "startSeconds": 655.36,
+      "text": "I'm just going to go a couple of lines"
+    },
+    {
+      "startSeconds": 656.72,
+      "text": "down here and we've seen this in"
+    },
+    {
+      "startSeconds": 658.92,
+      "text": "previous videos but we can use this"
+    },
+    {
+      "startSeconds": 661.2,
+      "text": "replace here and I'm replacing all the"
+    },
+    {
+      "startSeconds": 664,
+      "text": "values in the entire data frame so"
+    },
+    {
+      "startSeconds": 666.24,
+      "text": "anytime we see a string of Na I'm going"
+    },
+    {
+      "startSeconds": 669.24,
+      "text": "to replace that with numpy Na and again"
+    },
+    {
+      "startSeconds": 674.6,
+      "text": "I am importing numpy up here as MP so"
+    },
+    {
+      "startSeconds": 677.72,
+      "text": "that's where I'm getting uh I'm able to"
+    },
+    {
+      "startSeconds": 679.6,
+      "text": "use numpy and then I want to say in"
+    },
+    {
+      "startSeconds": 682.6,
+      "text": "place equal to true because we actually"
+    },
+    {
+      "startSeconds": 684.48,
+      "text": "want to modify that data frame so if I"
+    },
+    {
+      "startSeconds": 688.48,
+      "text": "run that then that would replace those"
+    },
+    {
+      "startSeconds": 691.04,
+      "text": "values but I'm also going to place uh"
+    },
+    {
+      "startSeconds": 693.639,
+      "text": "replace this string of missing as well"
+    },
+    {
+      "startSeconds": 696.6,
+      "text": "with mp. Nan values and I want to do"
+    },
+    {
+      "startSeconds": 699.519,
+      "text": "that in place as well so let's go ahead"
+    },
+    {
+      "startSeconds": 702.2,
+      "text": "and run this that should replace those"
+    },
+    {
+      "startSeconds": 704.399,
+      "text": "values and now if I look at our data"
+    },
+    {
+      "startSeconds": 706.76,
+      "text": "frame here then we can see that we no"
+    },
+    {
+      "startSeconds": 709.76,
+      "text": "longer have that string of missing or na"
+    },
+    {
+      "startSeconds": 713.079,
+      "text": "these are now all Nan values and now if"
+    },
+    {
+      "startSeconds": 716.2,
+      "text": "we go back through and we run our cells"
+    },
+    {
+      "startSeconds": 718.639,
+      "text": "where we drw in a values uh then these"
+    },
+    {
+      "startSeconds": 721.32,
+      "text": "custom values should have been replaced"
+    },
+    {
+      "startSeconds": 723.24,
+      "text": "and it should treat those as missing"
+    },
+    {
+      "startSeconds": 725.36,
+      "text": "values so right here we can see what our"
+    },
+    {
+      "startSeconds": 728.04,
+      "text": "previous result was where we got this"
+    },
+    {
+      "startSeconds": 730.12,
+      "text": "index of six with those custom values if"
+    },
+    {
+      "startSeconds": 732.6,
+      "text": "I rerun this now we can see that that's"
+    },
+    {
+      "startSeconds": 734.8,
+      "text": "gone and the same with here if I rerun"
+    },
+    {
+      "startSeconds": 738,
+      "text": "this then that is gone as well now if"
+    },
+    {
+      "startSeconds": 740.36,
+      "text": "you don't actually want to make any"
+    },
+    {
+      "startSeconds": 741.68,
+      "text": "changes and we just want to see if"
+    },
+    {
+      "startSeconds": 743.519,
+      "text": "certain values would or wouldn't be"
+    },
+    {
+      "startSeconds": 745.32,
+      "text": "treated as na values then we could just"
+    },
+    {
+      "startSeconds": 747.88,
+      "text": "run the na or is in a method uh and get"
+    },
+    {
+      "startSeconds": 751.44,
+      "text": "a mask of values uh as to whether or not"
+    },
+    {
+      "startSeconds": 754.279,
+      "text": "these classify as na or not so let me"
+    },
+    {
+      "startSeconds": 757.56,
+      "text": "just show you what I mean here so I"
+    },
+    {
+      "startSeconds": 758.959,
+      "text": "could say DF do isna and this is just"
+    },
+    {
+      "startSeconds": 762.48,
+      "text": "going to give us a mask here of values"
+    },
+    {
+      "startSeconds": 765.36,
+      "text": "that uh or whether or not they are"
+    },
+    {
+      "startSeconds": 767.839,
+      "text": "classified as an NA value so we can see"
+    },
+    {
+      "startSeconds": 770.72,
+      "text": "that our row four here uh was all na"
+    },
+    {
+      "startSeconds": 773.72,
+      "text": "values and so same thing with our row"
+    },
+    {
+      "startSeconds": 775.88,
+      "text": "six and we can see some other missing"
+    },
+    {
+      "startSeconds": 777.72,
+      "text": "values uh uh through out here as well"
+    },
+    {
+      "startSeconds": 780.399,
+      "text": "now sometimes uh especially when we're"
+    },
+    {
+      "startSeconds": 782.32,
+      "text": "working with numerical data we might"
+    },
+    {
+      "startSeconds": 784.639,
+      "text": "want to F our na values with a"
+    },
+    {
+      "startSeconds": 787.639,
+      "text": "particular value now I'm working with"
+    },
+    {
+      "startSeconds": 789.8,
+      "text": "string data here but sometimes it make"
+    },
+    {
+      "startSeconds": 792.8,
+      "text": "might make sense to fill your na values"
+    },
+    {
+      "startSeconds": 794.88,
+      "text": "with certain values uh with these as"
+    },
+    {
+      "startSeconds": 796.8,
+      "text": "well so for example let's assume that we"
+    },
+    {
+      "startSeconds": 799.32,
+      "text": "were calculating grades for assignments"
+    },
+    {
+      "startSeconds": 801.68,
+      "text": "or something like that and you had some"
+    },
+    {
+      "startSeconds": 803.72,
+      "text": "assignments that were NAA because the"
+    },
+    {
+      "startSeconds": 806.24,
+      "text": "student never turned in the assignment"
+    },
+    {
+      "startSeconds": 808.56,
+      "text": "well at that point you could just decide"
+    },
+    {
+      "startSeconds": 810.56,
+      "text": "if you wanted to score all missing"
+    },
+    {
+      "startSeconds": 812.88,
+      "text": "assignments as zeros so that you could"
+    },
+    {
+      "startSeconds": 815.279,
+      "text": "properly calculate up the grades so to"
+    },
+    {
+      "startSeconds": 818.199,
+      "text": "do something like this uh we can use the"
+    },
+    {
+      "startSeconds": 821.12,
+      "text": "fill in a method so for example I could"
+    },
+    {
+      "startSeconds": 824.399,
+      "text": "say something like this if I do a DF do"
+    },
+    {
+      "startSeconds": 827.24,
+      "text": "fill Na and then pass in a value uh just"
+    },
+    {
+      "startSeconds": 830.88,
+      "text": "to show you exactly what this is doing"
+    },
+    {
+      "startSeconds": 833.399,
+      "text": "I'm going to fill all of our missing"
+    },
+    {
+      "startSeconds": 834.839,
+      "text": "values with this capitalized missing"
+    },
+    {
+      "startSeconds": 837.04,
+      "text": "string here and if I run this then we"
+    },
+    {
+      "startSeconds": 840.68,
+      "text": "can see that all of those missing or all"
+    },
+    {
+      "startSeconds": 843.6,
+      "text": "of those na values were filled with this"
+    },
+    {
+      "startSeconds": 846.16,
+      "text": "string capitalized as missing now like I"
+    },
+    {
+      "startSeconds": 849.32,
+      "text": "said before I don't do this a lot with"
+    },
+    {
+      "startSeconds": 851.279,
+      "text": "certain strings uh I found this uh to be"
+    },
+    {
+      "startSeconds": 854,
+      "text": "most useful for numerical data uh"
+    },
+    {
+      "startSeconds": 856.48,
+      "text": "depending on how you're doing your"
+    },
+    {
+      "startSeconds": 858.44,
+      "text": "calculations uh but you might want to"
+    },
+    {
+      "startSeconds": 860.839,
+      "text": "give na values a value of zero or Nega"
+    },
+    {
+      "startSeconds": 863.959,
+      "text": "one or something like that so if it"
+    },
+    {
+      "startSeconds": 866.959,
+      "text": "would make sense with your data and you"
+    },
+    {
+      "startSeconds": 868.92,
+      "text": "had numerical data to replace your"
+    },
+    {
+      "startSeconds": 870.519,
+      "text": "missing values with a zero then you"
+    },
+    {
+      "startSeconds": 872.32,
+      "text": "could just run DF fill na0 and if I go"
+    },
+    {
+      "startSeconds": 875.959,
+      "text": "ahead and run this then we can see that"
+    },
+    {
+      "startSeconds": 878,
+      "text": "that works on our data frame as well and"
+    },
+    {
+      "startSeconds": 880.56,
+      "text": "again just like with our other methods"
+    },
+    {
+      "startSeconds": 882.44,
+      "text": "if you want those changes to your data"
+    },
+    {
+      "startSeconds": 883.92,
+      "text": "frame to be permanent and carry over"
+    },
+    {
+      "startSeconds": 885.6,
+      "text": "into other cells then simply just add"
+    },
+    {
+      "startSeconds": 887.8,
+      "text": "that inplace argument and set that to"
+    },
+    {
+      "startSeconds": 890,
+      "text": "true to make that change permanent okay"
+    },
+    {
+      "startSeconds": 892.759,
+      "text": "so now let's look at another common"
+    },
+    {
+      "startSeconds": 894.8,
+      "text": "thing that we're likely going to need to"
+    },
+    {
+      "startSeconds": 896.72,
+      "text": "do with a lot of our data and that is"
+    },
+    {
+      "startSeconds": 899.16,
+      "text": "casting data types so I have another"
+    },
+    {
+      "startSeconds": 901.519,
+      "text": "column in my Snippets here that I didn't"
+    },
+    {
+      "startSeconds": 903.88,
+      "text": "have in previous videos and I have up"
+    },
+    {
+      "startSeconds": 906.8,
+      "text": "here if we look this is this age column"
+    },
+    {
+      "startSeconds": 910.079,
+      "text": "so let's say that we wanted to get the"
+    },
+    {
+      "startSeconds": 911.839,
+      "text": "average age of all the people in this"
+    },
+    {
+      "startSeconds": 914,
+      "text": "sample data frame well right now these"
+    },
+    {
+      "startSeconds": 916.56,
+      "text": "might look like numbers when we print"
+    },
+    {
+      "startSeconds": 918.24,
+      "text": "them out in our data frame down here but"
+    },
+    {
+      "startSeconds": 920.639,
+      "text": "the these are actually strings and we"
+    },
+    {
+      "startSeconds": 922.8,
+      "text": "can see this if we look at our data"
+    },
+    {
+      "startSeconds": 924.68,
+      "text": "Frame data types so to do this we can"
+    },
+    {
+      "startSeconds": 927.279,
+      "text": "say DF do D types and that's not a"
+    },
+    {
+      "startSeconds": 930.839,
+      "text": "method it's just an attribute so if I"
+    },
+    {
+      "startSeconds": 933.24,
+      "text": "run this here then we can see that it"
+    },
+    {
+      "startSeconds": 935.16,
+      "text": "says all of these columns are objects"
+    },
+    {
+      "startSeconds": 937.839,
+      "text": "and when it says it's an object it"
+    },
+    {
+      "startSeconds": 939.399,
+      "text": "likely means it's a string or a mix of"
+    },
+    {
+      "startSeconds": 942.079,
+      "text": "different things so in the latest"
+    },
+    {
+      "startSeconds": 944.44,
+      "text": "version of python or pandis I'm sorry"
+    },
+    {
+      "startSeconds": 946.959,
+      "text": "they actually updated it so that there's"
+    },
+    {
+      "startSeconds": 949.12,
+      "text": "actually a string data type now uh but"
+    },
+    {
+      "startSeconds": 951.639,
+      "text": "I'll do a video on those pandis version"
+    },
+    {
+      "startSeconds": 954.079,
+      "text": "updates at the end of this series since"
+    },
+    {
+      "startSeconds": 956.12,
+      "text": "they actually released that updated"
+    },
+    {
+      "startSeconds": 957.6,
+      "text": "version uh as I was writing this course"
+    },
+    {
+      "startSeconds": 960.16,
+      "text": "uh but don't worry there's not a lot"
+    },
+    {
+      "startSeconds": 961.68,
+      "text": "that's changed to where uh what you"
+    },
+    {
+      "startSeconds": 963.56,
+      "text": "learn here will be outdated or anything"
+    },
+    {
+      "startSeconds": 965.68,
+      "text": "like that uh it's still mostly the same"
+    },
+    {
+      "startSeconds": 968.639,
+      "text": "uh but we can see here that our age"
+    },
+    {
+      "startSeconds": 971.12,
+      "text": "column is a string because it's uh this"
+    },
+    {
+      "startSeconds": 973.759,
+      "text": "object data type so if we wanted the"
+    },
+    {
+      "startSeconds": 976.319,
+      "text": "average age uh then it wouldn't work as"
+    },
+    {
+      "startSeconds": 979.079,
+      "text": "it is now so let's just see what this"
+    },
+    {
+      "startSeconds": 981.44,
+      "text": "error looks like so I'm going to grab"
+    },
+    {
+      "startSeconds": 984.24,
+      "text": "the mean of that age column and if I run"
+    },
+    {
+      "startSeconds": 988.12,
+      "text": "this then we can you can see that right"
+    },
+    {
+      "startSeconds": 989.6,
+      "text": "now we get an error and if I scroll down"
+    },
+    {
+      "startSeconds": 991.959,
+      "text": "to see what this error was it says can"
+    },
+    {
+      "startSeconds": 993.68,
+      "text": "only concatenate uh Str Str not int to"
+    },
+    {
+      "startSeconds": 997.959,
+      "text": "string now that might not be the most"
+    },
+    {
+      "startSeconds": 999.8,
+      "text": "easy to understand error right there uh"
+    },
+    {
+      "startSeconds": 1002,
+      "text": "but basically it's telling us that"
+    },
+    {
+      "startSeconds": 1003.6,
+      "text": "because that column is strings and not"
+    },
+    {
+      "startSeconds": 1006.839,
+      "text": "integers so we need to convert that"
+    },
+    {
+      "startSeconds": 1008.759,
+      "text": "column to numbers instead of a string"
+    },
+    {
+      "startSeconds": 1011.24,
+      "text": "now there's a caveat uh when doing this"
+    },
+    {
+      "startSeconds": 1013.759,
+      "text": "and this might throw some people off so"
+    },
+    {
+      "startSeconds": 1016.24,
+      "text": "when we have Nan values in a column that"
+    },
+    {
+      "startSeconds": 1019.04,
+      "text": "we're trying to convert to numbers then"
+    },
+    {
+      "startSeconds": 1021.199,
+      "text": "you need to use the float data type and"
+    },
+    {
+      "startSeconds": 1024.12,
+      "text": "that's because the N value is actually a"
+    },
+    {
+      "startSeconds": 1026.919,
+      "text": "float under the hood uh let me go ahead"
+    },
+    {
+      "startSeconds": 1029.36,
+      "text": "and show this just to show you what this"
+    },
+    {
+      "startSeconds": 1032.039,
+      "text": "looks like so I'm going to look up the"
+    },
+    {
+      "startSeconds": 1034.039,
+      "text": "type of np.nan and we can see that that"
+    },
+    {
+      "startSeconds": 1037.679,
+      "text": "is a float so if we try to convert this"
+    },
+    {
+      "startSeconds": 1040.28,
+      "text": "column to integers then it's going to"
+    },
+    {
+      "startSeconds": 1042.16,
+      "text": "throw an error when it runs into those n"
+    },
+    {
+      "startSeconds": 1045.48,
+      "text": "values because it can't convert those so"
+    },
+    {
+      "startSeconds": 1049,
+      "text": "if I was to say DF and of age is equal"
+    },
+    {
+      "startSeconds": 1054.6,
+      "text": "to and now let's try to convert these to"
+    },
+    {
+      "startSeconds": 1057.12,
+      "text": "integers so the way that you cast data"
+    },
+    {
+      "startSeconds": 1059.32,
+      "text": "types here is we can just say Okay I"
+    },
+    {
+      "startSeconds": 1062,
+      "text": "want the age column as type and now we"
+    },
+    {
+      "startSeconds": 1066.12,
+      "text": "want to pass in the type that we want if"
+    },
+    {
+      "startSeconds": 1068.44,
+      "text": "I try to convert these to integers then"
+    },
+    {
+      "startSeconds": 1071.2,
+      "text": "this is going to give us an error"
+    },
+    {
+      "startSeconds": 1073.08,
+      "text": "because we have some Nan values uh so we"
+    },
+    {
+      "startSeconds": 1076.159,
+      "text": "can see here int argument must be a"
+    },
+    {
+      "startSeconds": 1078.2,
+      "text": "string uh not nun type so when you're"
+    },
+    {
+      "startSeconds": 1081.52,
+      "text": "trying to convert these to numbers and"
+    },
+    {
+      "startSeconds": 1083.08,
+      "text": "you have those Nan values you basically"
+    },
+    {
+      "startSeconds": 1085.84,
+      "text": "have two options here if your column"
+    },
+    {
+      "startSeconds": 1088.6,
+      "text": "didn't have any missing values then this"
+    },
+    {
+      "startSeconds": 1090.44,
+      "text": "would just work fine we wouldn't even"
+    },
+    {
+      "startSeconds": 1092.28,
+      "text": "run into this error uh but if it does"
+    },
+    {
+      "startSeconds": 1094.96,
+      "text": "have missing values then you can either"
+    },
+    {
+      "startSeconds": 1096.919,
+      "text": "convert those missing values to"
+    },
+    {
+      "startSeconds": 1098.679,
+      "text": "something else like a zero using the F"
+    },
+    {
+      "startSeconds": 1101.36,
+      "text": "na method that we saw before or you can"
+    },
+    {
+      "startSeconds": 1104.159,
+      "text": "just cast that column to a float instead"
+    },
+    {
+      "startSeconds": 1106.96,
+      "text": "now I think this would be a bad idea to"
+    },
+    {
+      "startSeconds": 1109.48,
+      "text": "convert those missing values to a zero"
+    },
+    {
+      "startSeconds": 1111.6,
+      "text": "or some other number uh because we're"
+    },
+    {
+      "startSeconds": 1113.52,
+      "text": "trying to compute the average in this"
+    },
+    {
+      "startSeconds": 1115.44,
+      "text": "case uh but depending on your data that"
+    },
+    {
+      "startSeconds": 1118.2,
+      "text": "might be what you want to do but I'm"
+    },
+    {
+      "startSeconds": 1120,
+      "text": "going to go ahead and just convert these"
+    },
+    {
+      "startSeconds": 1121.44,
+      "text": "to floats so those Nan values stay"
+    },
+    {
+      "startSeconds": 1124.48,
+      "text": "missing values so instead of an INT here"
+    },
+    {
+      "startSeconds": 1127.2,
+      "text": "I'm just going to convert this to a"
+    },
+    {
+      "startSeconds": 1128.36,
+      "text": "float and if I run this then that seemed"
+    },
+    {
+      "startSeconds": 1130.84,
+      "text": "to have worked so now we can look at the"
+    },
+    {
+      "startSeconds": 1133.88,
+      "text": "data types again so I'll say DF whoops"
+    },
+    {
+      "startSeconds": 1136.64,
+      "text": "sorry I wasn't typing in that cell I can"
+    },
+    {
+      "startSeconds": 1138.4,
+      "text": "say DF DOD types and if we look at this"
+    },
+    {
+      "startSeconds": 1142.4,
+      "text": "then we can see that now our age is a"
+    },
+    {
+      "startSeconds": 1144.799,
+      "text": "float object here so now let's see what"
+    },
+    {
+      "startSeconds": 1147.76,
+      "text": "happens when we try to take the average"
+    },
+    {
+      "startSeconds": 1150.6,
+      "text": "of that column so I'll say DF do mean"
+    },
+    {
+      "startSeconds": 1153.96,
+      "text": "and if I run that then we can see that"
+    },
+    {
+      "startSeconds": 1156.12,
+      "text": "we get the average value for those ages"
+    },
+    {
+      "startSeconds": 1158.559,
+      "text": "now if you have an entire data frame of"
+    },
+    {
+      "startSeconds": 1160.76,
+      "text": "numbers or something like that that"
+    },
+    {
+      "startSeconds": 1162.36,
+      "text": "you're trying to convert all at once"
+    },
+    {
+      "startSeconds": 1164.76,
+      "text": "then the data frame object has an asz"
+    },
+    {
+      "startSeconds": 1166.88,
+      "text": "type method as well so you could just"
+    },
+    {
+      "startSeconds": 1169.76,
+      "text": "say DF do astype and then pass in"
+    },
+    {
+      "startSeconds": 1174.039,
+      "text": "whatever data type you're trying to cast"
+    },
+    {
+      "startSeconds": 1176.36,
+      "text": "everything to uh and just convert"
+    },
+    {
+      "startSeconds": 1178.88,
+      "text": "everything in the data frame at once but"
+    },
+    {
+      "startSeconds": 1181.2,
+      "text": "we have some mixed columns here so we"
+    },
+    {
+      "startSeconds": 1183.48,
+      "text": "don't want to do that okay so we've been"
+    },
+    {
+      "startSeconds": 1185.36,
+      "text": "looking at our small data set right now"
+    },
+    {
+      "startSeconds": 1187.4,
+      "text": "to test this stuff out but now let's"
+    },
+    {
+      "startSeconds": 1189.4,
+      "text": "take what we learned here and learn how"
+    },
+    {
+      "startSeconds": 1191.24,
+      "text": "this applies to real world data and do"
+    },
+    {
+      "startSeconds": 1193.44,
+      "text": "some analysis on our stack Overflow"
+    },
+    {
+      "startSeconds": 1195.4,
+      "text": "survey data okay so first of all uh I"
+    },
+    {
+      "startSeconds": 1198.2,
+      "text": "mentioned earlier that if we had custom"
+    },
+    {
+      "startSeconds": 1200.559,
+      "text": "values for missing data then it's a"
+    },
+    {
+      "startSeconds": 1202.919,
+      "text": "little bit easier to handle these when"
+    },
+    {
+      "startSeconds": 1204.679,
+      "text": "loading in a CSV and what I'm talking"
+    },
+    {
+      "startSeconds": 1207.76,
+      "text": "about up here is up here at the top"
+    },
+    {
+      "startSeconds": 1211,
+      "text": "where we replaced these custom missing"
+    },
+    {
+      "startSeconds": 1214.12,
+      "text": "values let me show you how we would do"
+    },
+    {
+      "startSeconds": 1216.159,
+      "text": "this same thing uh but loading in a CSV"
+    },
+    {
+      "startSeconds": 1219.48,
+      "text": "instead so I'm going to switch over here"
+    },
+    {
+      "startSeconds": 1221.36,
+      "text": "to my stack Overflow survey data let me"
+    },
+    {
+      "startSeconds": 1224.32,
+      "text": "go ahead and rerun this just to make"
+    },
+    {
+      "startSeconds": 1226.28,
+      "text": "sure that um all of this stuff is"
+    },
+    {
+      "startSeconds": 1229.159,
+      "text": "running okay so this notebook's still"
+    },
+    {
+      "startSeconds": 1230.88,
+      "text": "running that's good and again this is"
+    },
+    {
+      "startSeconds": 1232.799,
+      "text": "that stack Overflow data that we will"
+    },
+    {
+      "startSeconds": 1234.88,
+      "text": "have been using throughout the series"
+    },
+    {
+      "startSeconds": 1236.6,
+      "text": "and if you'd like to follow along then I"
+    },
+    {
+      "startSeconds": 1238.24,
+      "text": "do have a download link for this in the"
+    },
+    {
+      "startSeconds": 1240.12,
+      "text": "description section below okay so if I"
+    },
+    {
+      "startSeconds": 1242.559,
+      "text": "wanted to ignore those custom values"
+    },
+    {
+      "startSeconds": 1244.72,
+      "text": "when loading in a CSV then we can simply"
+    },
+    {
+      "startSeconds": 1247.679,
+      "text": "pass in an argument of a list of values"
+    },
+    {
+      "startSeconds": 1250.679,
+      "text": "that we want to be treated as missing so"
+    },
+    {
+      "startSeconds": 1254.2,
+      "text": "here's how we would do this if we had"
+    },
+    {
+      "startSeconds": 1256.799,
+      "text": "some custom missing value here in this"
+    },
+    {
+      "startSeconds": 1259.32,
+      "text": "CSV file then I could simply create a"
+    },
+    {
+      "startSeconds": 1262.44,
+      "text": "list here of those missing values"
+    },
+    {
+      "startSeconds": 1265.88,
+      "text": "and I will just call this Na vals and"
+    },
+    {
+      "startSeconds": 1269.52,
+      "text": "now I'll pass in a list of those so"
+    },
+    {
+      "startSeconds": 1272.32,
+      "text": "let's say that we have some values that"
+    },
+    {
+      "startSeconds": 1274.88,
+      "text": "are a string of Na and a string of"
+    },
+    {
+      "startSeconds": 1277.039,
+      "text": "missing uh so now what we could do here"
+    },
+    {
+      "startSeconds": 1280.12,
+      "text": "is just add in an argument and say na"
+    },
+    {
+      "startSeconds": 1283.919,
+      "text": "values is equal to and then that list"
+    },
+    {
+      "startSeconds": 1286.799,
+      "text": "that we just created and if we run that"
+    },
+    {
+      "startSeconds": 1289.88,
+      "text": "then we shouldn't get any errors and"
+    },
+    {
+      "startSeconds": 1291.76,
+      "text": "when it reads in that CSV then it will"
+    },
+    {
+      "startSeconds": 1294.279,
+      "text": "treat that list of values uh as missing"
+    },
+    {
+      "startSeconds": 1297.64,
+      "text": "values and give them an N result now in"
+    },
+    {
+      "startSeconds": 1301.6,
+      "text": "this survey here they did a good job of"
+    },
+    {
+      "startSeconds": 1303.36,
+      "text": "not having any weird occurrences like"
+    },
+    {
+      "startSeconds": 1305.159,
+      "text": "that so that actually shouldn't change"
+    },
+    {
+      "startSeconds": 1307.44,
+      "text": "anything okay so now let's look at an"
+    },
+    {
+      "startSeconds": 1309.84,
+      "text": "interesting problem with casting some"
+    },
+    {
+      "startSeconds": 1311.88,
+      "text": "values so let's say that for the"
+    },
+    {
+      "startSeconds": 1314.76,
+      "text": "developers who answered this survey we"
+    },
+    {
+      "startSeconds": 1317,
+      "text": "wanted to calculate the average number"
+    },
+    {
+      "startSeconds": 1319.039,
+      "text": "of years of coding experience among all"
+    },
+    {
+      "startSeconds": 1321.52,
+      "text": "of them now that might be a good thing"
+    },
+    {
+      "startSeconds": 1323.2,
+      "text": "to know to compare your experience"
+    },
+    {
+      "startSeconds": 1325,
+      "text": "against the average uh but let's look at"
+    },
+    {
+      "startSeconds": 1327.84,
+      "text": "what this uh or why this might be"
+    },
+    {
+      "startSeconds": 1329.919,
+      "text": "difficult to calculate with this data"
+    },
+    {
+      "startSeconds": 1331.64,
+      "text": "set and US calculating this solution is"
+    },
+    {
+      "startSeconds": 1334.279,
+      "text": "actually going to apply several Concepts"
+    },
+    {
+      "startSeconds": 1336.64,
+      "text": "that we've learned so far throughout"
+    },
+    {
+      "startSeconds": 1338.2,
+      "text": "this series so the column to view the"
+    },
+    {
+      "startSeconds": 1340.799,
+      "text": "answer for uh this question in the"
+    },
+    {
+      "startSeconds": 1343.4,
+      "text": "survey is called years code so let's"
+    },
+    {
+      "startSeconds": 1346.88,
+      "text": "look at some of these answers so I'm"
+    },
+    {
+      "startSeconds": 1348.76,
+      "text": "just going to look at the top 10 answers"
+    },
+    {
+      "startSeconds": 1351.64,
+      "text": "for Year's code so I will do a do head"
+    },
+    {
+      "startSeconds": 1356.84,
+      "text": "and let's look at the top 10 so if I run"
+    },
+    {
+      "startSeconds": 1359.4,
+      "text": "this then at first glance this doesn't"
+    },
+    {
+      "startSeconds": 1361.799,
+      "text": "really look like it'll be a problem we"
+    },
+    {
+      "startSeconds": 1363.799,
+      "text": "just have a bunch of integers and the"
+    },
+    {
+      "startSeconds": 1366.039,
+      "text": "number of years that different"
+    },
+    {
+      "startSeconds": 1367.52,
+      "text": "respondents have been coding so you"
+    },
+    {
+      "startSeconds": 1369.679,
+      "text": "might think that we can just grab the"
+    },
+    {
+      "startSeconds": 1371.159,
+      "text": "mean uh by of this column simply by"
+    },
+    {
+      "startSeconds": 1374.2,
+      "text": "saying okay if we just have a bunch of"
+    },
+    {
+      "startSeconds": 1376.08,
+      "text": "integers here and some Nan values that's"
+    },
+    {
+      "startSeconds": 1378.84,
+      "text": "fine let's just grab the mean of that"
+    },
+    {
+      "startSeconds": 1381.559,
+      "text": "column but if I run this then we get an"
+    },
+    {
+      "startSeconds": 1384.559,
+      "text": "error and if I scroll down here then it"
+    },
+    {
+      "startSeconds": 1388.24,
+      "text": "says can only concatenate string uh to"
+    },
+    {
+      "startSeconds": 1391.4,
+      "text": "string and we saw the same error in our"
+    },
+    {
+      "startSeconds": 1394.039,
+      "text": "smaller data set where the column was"
+    },
+    {
+      "startSeconds": 1396.679,
+      "text": "actually being loaded in as a string"
+    },
+    {
+      "startSeconds": 1399.039,
+      "text": "instead of numerical data and we should"
+    },
+    {
+      "startSeconds": 1401.4,
+      "text": "know how to handle this by now since we"
+    },
+    {
+      "startSeconds": 1403.6,
+      "text": "did it in the smaller data set so let's"
+    },
+    {
+      "startSeconds": 1406.279,
+      "text": "try that so let's try to convert to"
+    },
+    {
+      "startSeconds": 1408.799,
+      "text": "floats and then take the average so let"
+    },
+    {
+      "startSeconds": 1411.88,
+      "text": "me go back up here to the top where we"
+    },
+    {
+      "startSeconds": 1413.88,
+      "text": "ran this and instead of running the mean"
+    },
+    {
+      "startSeconds": 1416.2,
+      "text": "here I'm going to say okay well let's"
+    },
+    {
+      "startSeconds": 1418.88,
+      "text": "convert this to a float so that we can"
+    },
+    {
+      "startSeconds": 1422.32,
+      "text": "grab that average so I will say as type"
+    },
+    {
+      "startSeconds": 1426.48,
+      "text": "and we want to convert this to a float"
+    },
+    {
+      "startSeconds": 1428.24,
+      "text": "since there are Nan values so if I run"
+    },
+    {
+      "startSeconds": 1431.799,
+      "text": "this then we still get an error so we"
+    },
+    {
+      "startSeconds": 1434.12,
+      "text": "didn't get an error in our smaller data"
+    },
+    {
+      "startSeconds": 1435.84,
+      "text": "set here so if I scroll down then it"
+    },
+    {
+      "startSeconds": 1438.52,
+      "text": "says could not convert string to float"
+    },
+    {
+      "startSeconds": 1441.32,
+      "text": "and the string that it couldn't convert"
+    },
+    {
+      "startSeconds": 1443.039,
+      "text": "was less than one year so this might be"
+    },
+    {
+      "startSeconds": 1445.76,
+      "text": "something that we didn't expect here so"
+    },
+    {
+      "startSeconds": 1448.279,
+      "text": "obviously we don't just have numbers and"
+    },
+    {
+      "startSeconds": 1450.559,
+      "text": "Nan values in this column there is"
+    },
+    {
+      "startSeconds": 1453.159,
+      "text": "actually a string value that respondents"
+    },
+    {
+      "startSeconds": 1455.799,
+      "text": "could select that is equal to this"
+    },
+    {
+      "startSeconds": 1457.88,
+      "text": "string of less than one year for coding"
+    },
+    {
+      "startSeconds": 1460.52,
+      "text": "experience so let's look at all the"
+    },
+    {
+      "startSeconds": 1462.679,
+      "text": "unique values of this of this column so"
+    },
+    {
+      "startSeconds": 1465.48,
+      "text": "that we can see exactly what's in here"
+    },
+    {
+      "startSeconds": 1467.399,
+      "text": "in case there are more strings like this"
+    },
+    {
+      "startSeconds": 1469.88,
+      "text": "and I don't believe we've actually seen"
+    },
+    {
+      "startSeconds": 1472.159,
+      "text": "this in the series yet maybe we have I'm"
+    },
+    {
+      "startSeconds": 1474.72,
+      "text": "can't really remember uh but if we want"
+    },
+    {
+      "startSeconds": 1476.96,
+      "text": "to view unique values of a series then"
+    },
+    {
+      "startSeconds": 1480.039,
+      "text": "we can simply use the unique method so"
+    },
+    {
+      "startSeconds": 1482.72,
+      "text": "we could also use the value counts"
+    },
+    {
+      "startSeconds": 1484.48,
+      "text": "method that we've seen several times"
+    },
+    {
+      "startSeconds": 1486.039,
+      "text": "before if we want to count all the"
+    },
+    {
+      "startSeconds": 1487.799,
+      "text": "unique values uh but we don't really"
+    },
+    {
+      "startSeconds": 1489.64,
+      "text": "want to count them we just want to see"
+    },
+    {
+      "startSeconds": 1491.64,
+      "text": "all the unique values in this column so"
+    },
+    {
+      "startSeconds": 1494.24,
+      "text": "to do this I'm going to"
+    },
+    {
+      "startSeconds": 1497,
+      "text": "say d F and then access that years code"
+    },
+    {
+      "startSeconds": 1500.72,
+      "text": "column do"
+    },
+    {
+      "startSeconds": 1503.2,
+      "text": "unique do unique that is a method so if"
+    },
+    {
+      "startSeconds": 1506.919,
+      "text": "I run this whoops and I spelled this"
+    },
+    {
+      "startSeconds": 1509.159,
+      "text": "wrong sorry having a hard time typing"
+    },
+    {
+      "startSeconds": 1511.399,
+      "text": "today okay so if I run this then this"
+    },
+    {
+      "startSeconds": 1514.36,
+      "text": "gives us all the unique values of that"
+    },
+    {
+      "startSeconds": 1516.559,
+      "text": "column and as we'd expect there are a"
+    },
+    {
+      "startSeconds": 1519.08,
+      "text": "lot of numbers but we see that uh we"
+    },
+    {
+      "startSeconds": 1521.679,
+      "text": "also have some strings that are mixed"
+    },
+    {
+      "startSeconds": 1523.96,
+      "text": "throughout these numbers now we also"
+    },
+    {
+      "startSeconds": 1526.48,
+      "text": "have Nan values here but we're not going"
+    },
+    {
+      "startSeconds": 1528.6,
+      "text": "to worry about those we just want to"
+    },
+    {
+      "startSeconds": 1530.6,
+      "text": "ignore the Nan values because that's"
+    },
+    {
+      "startSeconds": 1533.2,
+      "text": "just people who didn't answer the"
+    },
+    {
+      "startSeconds": 1534.559,
+      "text": "question but we can see that the strings"
+    },
+    {
+      "startSeconds": 1536.64,
+      "text": "that we have throughout here are less"
+    },
+    {
+      "startSeconds": 1539.039,
+      "text": "than one year and more than 50 years of"
+    },
+    {
+      "startSeconds": 1542.32,
+      "text": "coding experience okay so those are our"
+    },
+    {
+      "startSeconds": 1545.159,
+      "text": "only string values so I'm going to"
+    },
+    {
+      "startSeconds": 1547.72,
+      "text": "replace those with numbers so that we"
+    },
+    {
+      "startSeconds": 1549.84,
+      "text": "can get an idea of the average years"
+    },
+    {
+      "startSeconds": 1552.039,
+      "text": "people have been coding so let's go"
+    },
+    {
+      "startSeconds": 1554.2,
+      "text": "ahead and replace less than one year"
+    },
+    {
+      "startSeconds": 1556.919,
+      "text": "here with a zero"
+    },
+    {
+      "startSeconds": 1558.76,
+      "text": "since that's basically the same thing if"
+    },
+    {
+      "startSeconds": 1560.48,
+      "text": "somebody's been coding for less than a"
+    },
+    {
+      "startSeconds": 1562.2,
+      "text": "year then they've been coding for"
+    },
+    {
+      "startSeconds": 1563.919,
+      "text": "basically zero years so to do"
+    },
+    {
+      "startSeconds": 1566.679,
+      "text": "this I can say DF do years code and"
+    },
+    {
+      "startSeconds": 1571.6,
+      "text": "access that column and then we can just"
+    },
+    {
+      "startSeconds": 1575.12,
+      "text": "replace that value of less than one year"
+    },
+    {
+      "startSeconds": 1580,
+      "text": "and let's replace that with a zero and"
+    },
+    {
+      "startSeconds": 1583.2,
+      "text": "we also want this to be in place equal"
+    },
+    {
+      "startSeconds": 1585.96,
+      "text": "to true because we actually want to"
+    },
+    {
+      "startSeconds": 1588.32,
+      "text": "modify that data frame so if I run that"
+    },
+    {
+      "startSeconds": 1592.24,
+      "text": "then it should make that replacement and"
+    },
+    {
+      "startSeconds": 1594.72,
+      "text": "now I'm also going to replace the value"
+    },
+    {
+      "startSeconds": 1596.76,
+      "text": "for more than 50 years here and this is"
+    },
+    {
+      "startSeconds": 1600.679,
+      "text": "going to skew our results a bit"
+    },
+    {
+      "startSeconds": 1602.52,
+      "text": "depending on how we want to do this I'm"
+    },
+    {
+      "startSeconds": 1604.919,
+      "text": "simply going to replace this with the"
+    },
+    {
+      "startSeconds": 1606.76,
+      "text": "value of 51 uh there may be some people"
+    },
+    {
+      "startSeconds": 1610.08,
+      "text": "who have several more uh more years of"
+    },
+    {
+      "startSeconds": 1612.799,
+      "text": "coding experience than 51 years but I"
+    },
+    {
+      "startSeconds": 1615.48,
+      "text": "can't imagine that it would be that many"
+    },
+    {
+      "startSeconds": 1617.12,
+      "text": "people who have you know coded many"
+    },
+    {
+      "startSeconds": 1619.76,
+      "text": "years greater than 50 so I'm going just"
+    },
+    {
+      "startSeconds": 1622.48,
+      "text": "going to fill this in with 51 but like I"
+    },
+    {
+      "startSeconds": 1625,
+      "text": "said depending on what we pick here it"
+    },
+    {
+      "startSeconds": 1627.2,
+      "text": "could affect our results slightly but"
+    },
+    {
+      "startSeconds": 1629,
+      "text": "not by a lot in this case so I'm just"
+    },
+    {
+      "startSeconds": 1632.2,
+      "text": "going to grab this same replace value"
+    },
+    {
+      "startSeconds": 1635.039,
+      "text": "here and instead I want to replace more"
+    },
+    {
+      "startSeconds": 1638.52,
+      "text": "than 50 years and I'm going to replace"
+    },
+    {
+      "startSeconds": 1641.24,
+      "text": "that with a value of 51 so now let me go"
+    },
+    {
+      "startSeconds": 1644.36,
+      "text": "ahead and run this and if we want to"
+    },
+    {
+      "startSeconds": 1646.84,
+      "text": "look at these unique values again then"
+    },
+    {
+      "startSeconds": 1648.88,
+      "text": "we could look at these and now it"
+    },
+    {
+      "startSeconds": 1650.96,
+      "text": "doesn't look like we have any strings in"
+    },
+    {
+      "startSeconds": 1653.08,
+      "text": "here but we can see here that this is"
+    },
+    {
+      "startSeconds": 1655.08,
+      "text": "still a dtype of object which means that"
+    },
+    {
+      "startSeconds": 1658.679,
+      "text": "it's not actually reading this in as"
+    },
+    {
+      "startSeconds": 1661.12,
+      "text": "floats so if we scroll back up here a"
+    },
+    {
+      "startSeconds": 1664.159,
+      "text": "bit oh actually I think I um overwrote"
+    },
+    {
+      "startSeconds": 1667.88,
+      "text": "that line yes I did so let's just try"
+    },
+    {
+      "startSeconds": 1670.519,
+      "text": "that again so what I want to do here is"
+    },
+    {
+      "startSeconds": 1674.679,
+      "text": "I want to convert this to a float and"
+    },
+    {
+      "startSeconds": 1677.519,
+      "text": "this is what uh gave us an error before"
+    },
+    {
+      "startSeconds": 1680.2,
+      "text": "because we had these strings in here and"
+    },
+    {
+      "startSeconds": 1682.64,
+      "text": "it didn't know how to convert these to a"
+    },
+    {
+      "startSeconds": 1684.159,
+      "text": "float but now we should just be able to"
+    },
+    {
+      "startSeconds": 1686.919,
+      "text": "see say Okay I want to convert that as"
+    },
+    {
+      "startSeconds": 1690.279,
+      "text": "type set that to a float so let's run"
+    },
+    {
+      "startSeconds": 1693.679,
+      "text": "that and we didn't get an error this"
+    },
+    {
+      "startSeconds": 1695.519,
+      "text": "time so that's good and now we should be"
+    },
+    {
+      "startSeconds": 1697.84,
+      "text": "able to view the average numbers of or"
+    },
+    {
+      "startSeconds": 1700.2,
+      "text": "average number of years of coding"
+    },
+    {
+      "startSeconds": 1701.919,
+      "text": "experience of the developers who filled"
+    },
+    {
+      "startSeconds": 1704.12,
+      "text": "out this survey so to do this I'm just"
+    },
+    {
+      "startSeconds": 1707.039,
+      "text": "going to say okay DF data frame access"
+    },
+    {
+      "startSeconds": 1710.96,
+      "text": "that column grab the mean of that column"
+    },
+    {
+      "startSeconds": 1714,
+      "text": "so if I run this then we can see that"
+    },
+    {
+      "startSeconds": 1715.96,
+      "text": "now we get that average back so the"
+    },
+    {
+      "startSeconds": 1718.6,
+      "text": "average that we got here was about 11"
+    },
+    {
+      "startSeconds": 1720.64,
+      "text": "and a half years of coding experience uh"
+    },
+    {
+      "startSeconds": 1723.36,
+      "text": "as the average years for developers who"
+    },
+    {
+      "startSeconds": 1726.039,
+      "text": "answered this survey and now you can do"
+    },
+    {
+      "startSeconds": 1728.36,
+      "text": "other analysis on this as well so for"
+    },
+    {
+      "startSeconds": 1730.919,
+      "text": "example if we wanted to see the median"
+    },
+    {
+      "startSeconds": 1733.559,
+      "text": "then I could run that and the median"
+    },
+    {
+      "startSeconds": 1735.679,
+      "text": "comes back as 9 years of coding"
+    },
+    {
+      "startSeconds": 1737.72,
+      "text": "experience"
+    },
+    {
+      "startSeconds": 1738.76,
+      "text": "so hopefully that real world example"
+    },
+    {
+      "startSeconds": 1740.559,
+      "text": "helped explain why it's important to"
+    },
+    {
+      "startSeconds": 1742.519,
+      "text": "know how to cast these values and"
+    },
+    {
+      "startSeconds": 1744.48,
+      "text": "understand what's going on there uh"
+    },
+    {
+      "startSeconds": 1746.159,
+      "text": "there's always going to be data that is"
+    },
+    {
+      "startSeconds": 1747.96,
+      "text": "messy or not in the format that we want"
+    },
+    {
+      "startSeconds": 1750.159,
+      "text": "it in so knowing how to handle these"
+    },
+    {
+      "startSeconds": 1752.039,
+      "text": "missing values and cast these values to"
+    },
+    {
+      "startSeconds": 1754.36,
+      "text": "different data types is really going to"
+    },
+    {
+      "startSeconds": 1756.2,
+      "text": "be essential uh when working with pandis"
+    },
+    {
+      "startSeconds": 1759.039,
+      "text": "okay so before we end here I'd like to"
+    },
+    {
+      "startSeconds": 1761.08,
+      "text": "thank the sponsor of this video and"
+    },
+    {
+      "startSeconds": 1763.12,
+      "text": "mention why I really enjoy their"
+    },
+    {
+      "startSeconds": 1764.84,
+      "text": "tutorials and that is brilliant so in"
+    },
+    {
+      "startSeconds": 1767.919,
+      "text": "this series we've been learning about"
+    },
+    {
+      "startSeconds": 1769.399,
+      "text": "pandas and how to analyze data in Python"
+    },
+    {
+      "startSeconds": 1772.12,
+      "text": "and brilant would be an excellent way to"
+    },
+    {
+      "startSeconds": 1773.6,
+      "text": "supplement what you learn here with"
+    },
+    {
+      "startSeconds": 1775.08,
+      "text": "their Hands-On courses they have some"
+    },
+    {
+      "startSeconds": 1777.12,
+      "text": "excellent courses and lessons that do a"
+    },
+    {
+      "startSeconds": 1778.799,
+      "text": "deep dive on how to think about and"
+    },
+    {
+      "startSeconds": 1780.6,
+      "text": "analyze data correctly for data analysis"
+    },
+    {
+      "startSeconds": 1783,
+      "text": "fundamentals I would really recommend"
+    },
+    {
+      "startSeconds": 1784.679,
+      "text": "checking out their statistics course"
+    },
+    {
+      "startSeconds": 1786.48,
+      "text": "which shows you how to analyze graphs"
+    },
+    {
+      "startSeconds": 1788.24,
+      "text": "and determine significance in the data"
+    },
+    {
+      "startSeconds": 1790.32,
+      "text": "and I would also recommend their machine"
+    },
+    {
+      "startSeconds": 1791.679,
+      "text": "learning course which takes data"
+    },
+    {
+      "startSeconds": 1793.399,
+      "text": "analysis to a new level where you learn"
+    },
+    {
+      "startSeconds": 1795.64,
+      "text": "about the techniques being used that"
+    },
+    {
+      "startSeconds": 1797.24,
+      "text": "allow machines to make decisions where"
+    },
+    {
+      "startSeconds": 1799.2,
+      "text": "there's just too many variables for a"
+    },
+    {
+      "startSeconds": 1800.76,
+      "text": "human to consider so to support my"
+    },
+    {
+      "startSeconds": 1802.84,
+      "text": "channel and learn more about brilliant"
+    },
+    {
+      "startSeconds": 1804.6,
+      "text": "you can go to brilliant.org for/ CMS to"
+    },
+    {
+      "startSeconds": 1807.84,
+      "text": "sign up for free and also the first 200"
+    },
+    {
+      "startSeconds": 1810.24,
+      "text": "people that go to that link will get 20%"
+    },
+    {
+      "startSeconds": 1812.399,
+      "text": "off the annual premium subscription and"
+    },
+    {
+      "startSeconds": 1814.84,
+      "text": "you can find that link in the"
+    },
+    {
+      "startSeconds": 1816.12,
+      "text": "description section below again that's"
+    },
+    {
+      "startSeconds": 1818.48,
+      "text": "brilliant.org"
+    },
+    {
+      "startSeconds": 1821.72,
+      "text": "CMS okay so I think that's going to do"
+    },
+    {
+      "startSeconds": 1823.679,
+      "text": "it for this pandis video I hope you feel"
+    },
+    {
+      "startSeconds": 1825.799,
+      "text": "like you got a good idea for how to"
+    },
+    {
+      "startSeconds": 1827.519,
+      "text": "handle these missing values and cast our"
+    },
+    {
+      "startSeconds": 1829.559,
+      "text": "data to different data types so that we"
+    },
+    {
+      "startSeconds": 1831.6,
+      "text": "can do exactly what we want to do in"
+    },
+    {
+      "startSeconds": 1833.84,
+      "text": "terms of analyzing our data now in the"
+    },
+    {
+      "startSeconds": 1836.32,
+      "text": "next video we're going to be learning"
+    },
+    {
+      "startSeconds": 1838,
+      "text": "how to work with dates and time series"
+    },
+    {
+      "startSeconds": 1840.32,
+      "text": "data now I've been using the stack"
+    },
+    {
+      "startSeconds": 1842.44,
+      "text": "Overflow survey data for this entire"
+    },
+    {
+      "startSeconds": 1844.72,
+      "text": "series because I love being able to show"
+    },
+    {
+      "startSeconds": 1846.96,
+      "text": "you all real world examples of how these"
+    },
+    {
+      "startSeconds": 1849.2,
+      "text": "Concepts apply but our stack Overflow"
+    },
+    {
+      "startSeconds": 1851.76,
+      "text": "survey data doesn't have any time series"
+    },
+    {
+      "startSeconds": 1854.519,
+      "text": "data that we can actually work with so"
+    },
+    {
+      "startSeconds": 1856.6,
+      "text": "I'm going to be using a different data"
+    },
+    {
+      "startSeconds": 1858.279,
+      "text": "set for the next video and I still"
+    },
+    {
+      "startSeconds": 1860.559,
+      "text": "haven't narrowed down exactly what I'll"
+    },
+    {
+      "startSeconds": 1862.32,
+      "text": "be using but I'll be sure that it allows"
+    },
+    {
+      "startSeconds": 1864.399,
+      "text": "us to do some analysis on some real"
+    },
+    {
+      "startSeconds": 1866.32,
+      "text": "world data like we've been doing so"
+    },
+    {
+      "startSeconds": 1868.519,
+      "text": "maybe we'll use time series data to you"
+    },
+    {
+      "startSeconds": 1871.159,
+      "text": "know analyze cryptocurrency rates over"
+    },
+    {
+      "startSeconds": 1873.519,
+      "text": "time or something like that but if"
+    },
+    {
+      "startSeconds": 1875.48,
+      "text": "anyone has any questions about what we"
+    },
+    {
+      "startSeconds": 1877.039,
+      "text": "covered in this video then feel free to"
+    },
+    {
+      "startSeconds": 1879.08,
+      "text": "ask in the comment section below and"
+    },
+    {
+      "startSeconds": 1880.559,
+      "text": "I'll do my best to answer those and if"
+    },
+    {
+      "startSeconds": 1882.24,
+      "text": "you enjoy these tutorials and would like"
+    },
+    {
+      "startSeconds": 1883.72,
+      "text": "to support them then there are several"
+    },
+    {
+      "startSeconds": 1885.24,
+      "text": "ways you can do that the easiest way is"
+    },
+    {
+      "startSeconds": 1887.039,
+      "text": "to Simply like the video video and give"
+    },
+    {
+      "startSeconds": 1888.399,
+      "text": "it a thumbs up and also it's a huge help"
+    },
+    {
+      "startSeconds": 1890.32,
+      "text": "to share these videos with anyone who"
+    },
+    {
+      "startSeconds": 1891.799,
+      "text": "you think would find them useful and if"
+    },
+    {
+      "startSeconds": 1893.36,
+      "text": "you have the means you can contribute"
+    },
+    {
+      "startSeconds": 1894.799,
+      "text": "through patreon and there's a link to"
+    },
+    {
+      "startSeconds": 1896.279,
+      "text": "that page in the description section"
+    },
+    {
+      "startSeconds": 1897.76,
+      "text": "below be sure to subscribe for future"
+    },
+    {
+      "startSeconds": 1899.799,
+      "text": "videos and thank you all for watching"
+    }
+  ]
+}

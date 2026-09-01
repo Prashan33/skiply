@@ -1,0 +1,905 @@
+{
+  "id": "z9-_YQWxwJ4",
+  "url": "https://www.youtube.com/watch?v=z9-_YQWxwJ4",
+  "fetchedAt": "2026-09-01T04:10:14.961Z",
+  "captionKind": "asr",
+  "chapters": [],
+  "cues": [
+    {
+      "startSeconds": 0.16,
+      "text": "You ever wonder how your favorite"
+    },
+    {
+      "startSeconds": 1.439,
+      "text": "shopping site just knows what's in your"
+    },
+    {
+      "startSeconds": 3.28,
+      "text": "cart? Or how you can close a social"
+    },
+    {
+      "startSeconds": 4.96,
+      "text": "media tab, come back an hour later, and"
+    },
+    {
+      "startSeconds": 6.799,
+      "text": "you're still logged in? Well, that's not"
+    },
+    {
+      "startSeconds": 9.12,
+      "text": "magic. It's web authentication. And"
+    },
+    {
+      "startSeconds": 11.679,
+      "text": "today, we're going to pull back the"
+    },
+    {
+      "startSeconds": 12.88,
+      "text": "curtain on how the web remembers who you"
+    },
+    {
+      "startSeconds": 14.639,
+      "text": "are. We're going to break down the two"
+    },
+    {
+      "startSeconds": 16.32,
+      "text": "heavyweights in this space, the classic"
+    },
+    {
+      "startSeconds": 18.32,
+      "text": "session and the modern JWT. So, here's"
+    },
+    {
+      "startSeconds": 21.52,
+      "text": "our game plan. We'll kick things off"
+    },
+    {
+      "startSeconds": 23.119,
+      "text": "with the big question that every single"
+    },
+    {
+      "startSeconds": 25.119,
+      "text": "web developer has to answer. Then we'll"
+    },
+    {
+      "startSeconds": 27.439,
+      "text": "look at the classic solution, good old"
+    },
+    {
+      "startSeconds": 29.279,
+      "text": "cookies and sessions. After that, we'll"
+    },
+    {
+      "startSeconds": 31.519,
+      "text": "jump into the modern world with JSON web"
+    },
+    {
+      "startSeconds": 33.6,
+      "text": "tokens. We'll put them headtohead, cover"
+    },
+    {
+      "startSeconds": 35.76,
+      "text": "the security rules you just can't skip,"
+    },
+    {
+      "startSeconds": 37.92,
+      "text": "and wrap it all up by helping you figure"
+    },
+    {
+      "startSeconds": 39.6,
+      "text": "out which one makes the most sense for"
+    },
+    {
+      "startSeconds": 41.12,
+      "text": "your project. All right, let's dive"
+    },
+    {
+      "startSeconds": 43.84,
+      "text": "right in. At the heart of all this is"
+    },
+    {
+      "startSeconds": 46.32,
+      "text": "one fundamental challenge every single"
+    },
+    {
+      "startSeconds": 48.32,
+      "text": "person building for the web has to"
+    },
+    {
+      "startSeconds": 49.92,
+      "text": "solve. Memory. I mean, think about it."
+    },
+    {
+      "startSeconds": 53.12,
+      "text": "The web by its very nature is completely"
+    },
+    {
+      "startSeconds": 56.32,
+      "text": "forgetful. We call it stateless. Every"
+    },
+    {
+      "startSeconds": 59.359,
+      "text": "time you click a link or refresh a page,"
+    },
+    {
+      "startSeconds": 61.76,
+      "text": "it's like you're a total stranger. If we"
+    },
+    {
+      "startSeconds": 64.08,
+      "text": "didn't have a way to fix this, you'd be"
+    },
+    {
+      "startSeconds": 65.92,
+      "text": "logging in over and over and over again."
+    },
+    {
+      "startSeconds": 68.72,
+      "text": "Can you imagine how annoying that would"
+    },
+    {
+      "startSeconds": 70.24,
+      "text": "be? So, how do we solve this puzzle? It"
+    },
+    {
+      "startSeconds": 73.92,
+      "text": "all boils down to this one word,"
+    },
+    {
+      "startSeconds": 76.08,
+      "text": "authentication. You can think of it as"
+    },
+    {
+      "startSeconds": 78.32,
+      "text": "the web's bouncer. It's the process that"
+    },
+    {
+      "startSeconds": 80.72,
+      "text": "stands at the door and asks that one"
+    },
+    {
+      "startSeconds": 82.4,
+      "text": "critical question. Who are you? Making"
+    },
+    {
+      "startSeconds": 84.799,
+      "text": "sure only the right people get access to"
+    },
+    {
+      "startSeconds": 86.799,
+      "text": "the right places. So let's talk about"
+    },
+    {
+      "startSeconds": 89.6,
+      "text": "the first big solution to this problem."
+    },
+    {
+      "startSeconds": 91.92,
+      "text": "The traditional way of doing things."
+    },
+    {
+      "startSeconds": 93.52,
+      "text": "We're talking about the tried andrue"
+    },
+    {
+      "startSeconds": 95.119,
+      "text": "combo of cookies and sessions. This is"
+    },
+    {
+      "startSeconds": 97.439,
+      "text": "what's known as a stateful solution,"
+    },
+    {
+      "startSeconds": 99.439,
+      "text": "which is just a fancy way of saying the"
+    },
+    {
+      "startSeconds": 101.119,
+      "text": "server has to do the remembering for"
+    },
+    {
+      "startSeconds": 102.799,
+      "text": "you. And honestly, the best way to get"
+    },
+    {
+      "startSeconds": 104.96,
+      "text": "this is with a simple analogy. Think of"
+    },
+    {
+      "startSeconds": 106.799,
+      "text": "it like a code check. You show up at a"
+    },
+    {
+      "startSeconds": 108.479,
+      "text": "venue, you hand over your coat, that's"
+    },
+    {
+      "startSeconds": 110.079,
+      "text": "your user data, and the server keeps it"
+    },
+    {
+      "startSeconds": 111.84,
+      "text": "safe. In return, what do you get? A"
+    },
+    {
+      "startSeconds": 114,
+      "text": "little ticket, right? A unique ID. You"
+    },
+    {
+      "startSeconds": 116.24,
+      "text": "don't have to lug your code around all"
+    },
+    {
+      "startSeconds": 117.6,
+      "text": "night. You just need to hang on to that"
+    },
+    {
+      "startSeconds": 119.04,
+      "text": "little ticket. So, how does this code"
+    },
+    {
+      "startSeconds": 121.6,
+      "text": "check thing actually work in the digital"
+    },
+    {
+      "startSeconds": 123.52,
+      "text": "world? Well, it's pretty"
+    },
+    {
+      "startSeconds": 124.719,
+      "text": "straightforward. First, you log in,"
+    },
+    {
+      "startSeconds": 126.719,
+      "text": "right? Then, the server creates a"
+    },
+    {
+      "startSeconds": 128,
+      "text": "session for you. Think of it like a"
+    },
+    {
+      "startSeconds": 129.36,
+      "text": "little locker on the server and stores"
+    },
+    {
+      "startSeconds": 130.879,
+      "text": "your info there. Then, it hands you back"
+    },
+    {
+      "startSeconds": 132.72,
+      "text": "that little ticket, your session ID,"
+    },
+    {
+      "startSeconds": 134.319,
+      "text": "tucked inside a cookie. From that moment"
+    },
+    {
+      "startSeconds": 136.4,
+      "text": "on, every single time you talk to the"
+    },
+    {
+      "startSeconds": 138.16,
+      "text": "server, your browser automatically"
+    },
+    {
+      "startSeconds": 139.68,
+      "text": "flashes that ticket. The server just"
+    },
+    {
+      "startSeconds": 141.52,
+      "text": "glances at the number, finds your"
+    },
+    {
+      "startSeconds": 142.879,
+      "text": "locker, and boom, it knows exactly who"
+    },
+    {
+      "startSeconds": 144.8,
+      "text": "you are. Now, this approach has some"
+    },
+    {
+      "startSeconds": 147.2,
+      "text": "really big pluses. The number one"
+    },
+    {
+      "startSeconds": 149.12,
+      "text": "benefit, security. Your actual data,"
+    },
+    {
+      "startSeconds": 152.08,
+      "text": "your coat, never leaves the server site."
+    },
+    {
+      "startSeconds": 154.48,
+      "text": "It's never exposed. The server also has"
+    },
+    {
+      "startSeconds": 156.879,
+      "text": "complete control. It can tear up your"
+    },
+    {
+      "startSeconds": 158.72,
+      "text": "ticket anytime it wants. So, if you log"
+    },
+    {
+      "startSeconds": 160.879,
+      "text": "out or an admin decides to ban you, that"
+    },
+    {
+      "startSeconds": 163.2,
+      "text": "session is gone instantly. But there's"
+    },
+    {
+      "startSeconds": 166.959,
+      "text": "always a butt, right? What happens when"
+    },
+    {
+      "startSeconds": 170.16,
+      "text": "your app gets super popular and you need"
+    },
+    {
+      "startSeconds": 172.239,
+      "text": "more than one server to handle all the"
+    },
+    {
+      "startSeconds": 173.92,
+      "text": "traffic? Now, you've got a problem."
+    },
+    {
+      "startSeconds": 176.959,
+      "text": "Which server has your code? This is the"
+    },
+    {
+      "startSeconds": 180.08,
+      "text": "big scalability problem. The fact that"
+    },
+    {
+      "startSeconds": 182.48,
+      "text": "the server has to remember you that it's"
+    },
+    {
+      "startSeconds": 184.72,
+      "text": "stateful creates a ton of overhead and"
+    },
+    {
+      "startSeconds": 186.959,
+      "text": "complexity, especially for huge modern"
+    },
+    {
+      "startSeconds": 189.2,
+      "text": "apps. And that very problem, the scaling"
+    },
+    {
+      "startSeconds": 192.239,
+      "text": "issue, leads us straight to our second"
+    },
+    {
+      "startSeconds": 194.4,
+      "text": "contender. The modern approach known as"
+    },
+    {
+      "startSeconds": 196.879,
+      "text": "JSON web tokens. You'll usually just"
+    },
+    {
+      "startSeconds": 199.2,
+      "text": "hear them called JWTs. This method is"
+    },
+    {
+      "startSeconds": 202,
+      "text": "the complete opposite. It's stateless"
+    },
+    {
+      "startSeconds": 204.64,
+      "text": "and it was designed from the ground up"
+    },
+    {
+      "startSeconds": 206.4,
+      "text": "for the kind of massive distributed web"
+    },
+    {
+      "startSeconds": 208.56,
+      "text": "we have today. To get your head around"
+    },
+    {
+      "startSeconds": 210.959,
+      "text": "JWTs, let's use a new analogy. Forget"
+    },
+    {
+      "startSeconds": 213.92,
+      "text": "the coat check. This time you've got a"
+    },
+    {
+      "startSeconds": 215.84,
+      "text": "VIP backstage pass. And this really"
+    },
+    {
+      "startSeconds": 218.319,
+      "text": "highlights the difference. The pass"
+    },
+    {
+      "startSeconds": 220.4,
+      "text": "itself has all the important info"
+    },
+    {
+      "startSeconds": 222.48,
+      "text": "printed right on it. Your name, your"
+    },
+    {
+      "startSeconds": 224.56,
+      "text": "access level when it expires. You carry"
+    },
+    {
+      "startSeconds": 227.12,
+      "text": "it with you and any security guard, any"
+    },
+    {
+      "startSeconds": 229.519,
+      "text": "server can just look at it, see that"
+    },
+    {
+      "startSeconds": 231.36,
+      "text": "it's legit and wave you through. No need"
+    },
+    {
+      "startSeconds": 233.519,
+      "text": "to check some master list. The process"
+    },
+    {
+      "startSeconds": 235.92,
+      "text": "starts out pretty similar. You log in,"
+    },
+    {
+      "startSeconds": 238.4,
+      "text": "but instead of the server creating a"
+    },
+    {
+      "startSeconds": 240.159,
+      "text": "file, it generates this signed token,"
+    },
+    {
+      "startSeconds": 242.4,
+      "text": "your VIP pass, and puts your user data"
+    },
+    {
+      "startSeconds": 244.959,
+      "text": "right inside it. Then it sends that"
+    },
+    {
+      "startSeconds": 246.959,
+      "text": "token back to you. Now, it's your job to"
+    },
+    {
+      "startSeconds": 249.04,
+      "text": "show that token with every request you"
+    },
+    {
+      "startSeconds": 250.799,
+      "text": "make, usually in something called an"
+    },
+    {
+      "startSeconds": 252.64,
+      "text": "authorization header. Any server that"
+    },
+    {
+      "startSeconds": 255.04,
+      "text": "gets it can just check the digital"
+    },
+    {
+      "startSeconds": 257.04,
+      "text": "signature, confirm it's real, and you're"
+    },
+    {
+      "startSeconds": 258.88,
+      "text": "in. The server doesn't have to remember"
+    },
+    {
+      "startSeconds": 260.799,
+      "text": "a single thing. The advantages here are"
+    },
+    {
+      "startSeconds": 264,
+      "text": "massive for modern applications because"
+    },
+    {
+      "startSeconds": 266.4,
+      "text": "the server stores nothing. It's"
+    },
+    {
+      "startSeconds": 268.16,
+      "text": "stateless which means you can scale"
+    },
+    {
+      "startSeconds": 269.919,
+      "text": "almost infinitely. This is an absolute"
+    },
+    {
+      "startSeconds": 272.32,
+      "text": "gamecher for microservices where you"
+    },
+    {
+      "startSeconds": 274.479,
+      "text": "might have dozens of little services"
+    },
+    {
+      "startSeconds": 275.84,
+      "text": "that all need to know who you are. The"
+    },
+    {
+      "startSeconds": 278.08,
+      "text": "tokens are also super portable and"
+    },
+    {
+      "startSeconds": 280,
+      "text": "self-contained. Everything you need is"
+    },
+    {
+      "startSeconds": 282.16,
+      "text": "right there in the token. But of course,"
+    },
+    {
+      "startSeconds": 285.199,
+      "text": "there are trade-offs. What if someone"
+    },
+    {
+      "startSeconds": 287.36,
+      "text": "steals your VIP pass? Well, until it"
+    },
+    {
+      "startSeconds": 290.16,
+      "text": "expires, they can pretend to be you."
+    },
+    {
+      "startSeconds": 292.88,
+      "text": "Revoking a JWT is really hard because"
+    },
+    {
+      "startSeconds": 296.08,
+      "text": "there's no central place to just delete"
+    },
+    {
+      "startSeconds": 297.919,
+      "text": "it. You have to wait for it to expire or"
+    },
+    {
+      "startSeconds": 300.24,
+      "text": "build some complex workound. And another"
+    },
+    {
+      "startSeconds": 303.04,
+      "text": "thing, if you try to stuff too much"
+    },
+    {
+      "startSeconds": 305.04,
+      "text": "information into that token, it can get"
+    },
+    {
+      "startSeconds": 307.12,
+      "text": "pretty big and that can actually slow"
+    },
+    {
+      "startSeconds": 308.96,
+      "text": "down your whole application. Okay, so"
+    },
+    {
+      "startSeconds": 311.6,
+      "text": "we've seen both approaches, the good and"
+    },
+    {
+      "startSeconds": 313.84,
+      "text": "the bad. Now, let's put them side by"
+    },
+    {
+      "startSeconds": 316,
+      "text": "side in a proper showdown to make the"
+    },
+    {
+      "startSeconds": 318.08,
+      "text": "differences crystal clear. You know, if"
+    },
+    {
+      "startSeconds": 320.88,
+      "text": "you remember just one thing, let it be"
+    },
+    {
+      "startSeconds": 322.96,
+      "text": "this. With sessions, the server is the"
+    },
+    {
+      "startSeconds": 325.199,
+      "text": "one responsible for remembering"
+    },
+    {
+      "startSeconds": 326.639,
+      "text": "everything. It keeps the state. With"
+    },
+    {
+      "startSeconds": 328.8,
+      "text": "JWTs, that whole responsibility gets"
+    },
+    {
+      "startSeconds": 331.44,
+      "text": "pushed over to the client. The client"
+    },
+    {
+      "startSeconds": 333.68,
+      "text": "holds the state inside the token. That's"
+    },
+    {
+      "startSeconds": 336.16,
+      "text": "the core architectural decision you're"
+    },
+    {
+      "startSeconds": 338.08,
+      "text": "making. This table really lays it all"
+    },
+    {
+      "startSeconds": 340.96,
+      "text": "out. Sessions are stateful, which makes"
+    },
+    {
+      "startSeconds": 343.919,
+      "text": "scaling them a real headache. But on the"
+    },
+    {
+      "startSeconds": 345.759,
+      "text": "flip side, kicking someone out is"
+    },
+    {
+      "startSeconds": 347.919,
+      "text": "instant and easy. JWTs are stateless, so"
+    },
+    {
+      "startSeconds": 351.199,
+      "text": "they scale beautifully. But revoking a"
+    },
+    {
+      "startSeconds": 353.44,
+      "text": "token before it expires, oof, that's"
+    },
+    {
+      "startSeconds": 356.08,
+      "text": "tricky and takes some extra engineering."
+    },
+    {
+      "startSeconds": 358.24,
+      "text": "See, it's that classic battle. Do you"
+    },
+    {
+      "startSeconds": 360,
+      "text": "want more control or do you want easier"
+    },
+    {
+      "startSeconds": 361.68,
+      "text": "scalability? Now, look, no matter which"
+    },
+    {
+      "startSeconds": 364.319,
+      "text": "path you go down, some security rules"
+    },
+    {
+      "startSeconds": 366.319,
+      "text": "are just non-negotiable. These are the"
+    },
+    {
+      "startSeconds": 368.72,
+      "text": "things you have to do, period. No matter"
+    },
+    {
+      "startSeconds": 370.88,
+      "text": "what system you're building, first and"
+    },
+    {
+      "startSeconds": 372.96,
+      "text": "foremost, always, always use HTTPS. That"
+    },
+    {
+      "startSeconds": 376.8,
+      "text": "encrypts everything. If you're using"
+    },
+    {
+      "startSeconds": 378.56,
+      "text": "cookies for sessions, you got to set the"
+    },
+    {
+      "startSeconds": 380.4,
+      "text": "HTTP only and secure flags to protect"
+    },
+    {
+      "startSeconds": 382.8,
+      "text": "them. With JWTs, don't ever put super"
+    },
+    {
+      "startSeconds": 385.84,
+      "text": "sensitive data in the payload and keep"
+    },
+    {
+      "startSeconds": 387.84,
+      "text": "them small. A really crucial strategy"
+    },
+    {
+      "startSeconds": 390.08,
+      "text": "for JWTs is using short-lived access"
+    },
+    {
+      "startSeconds": 392.4,
+      "text": "tokens with longer lived refresh tokens."
+    },
+    {
+      "startSeconds": 394.96,
+      "text": "That way, if a token gets stolen, the"
+    },
+    {
+      "startSeconds": 396.639,
+      "text": "damage is limited. And for any system,"
+    },
+    {
+      "startSeconds": 398.56,
+      "text": "you have to have a solid logout plan and"
+    },
+    {
+      "startSeconds": 400.4,
+      "text": "protect your login pages from getting"
+    },
+    {
+      "startSeconds": 401.84,
+      "text": "hammered by attackers."
+    },
+    {
+      "startSeconds": 403.84,
+      "text": "All right, we've gone through the"
+    },
+    {
+      "startSeconds": 405.36,
+      "text": "theory, the pros and cons, the security"
+    },
+    {
+      "startSeconds": 407.6,
+      "text": "essentials. So, now it's time for the"
+    },
+    {
+      "startSeconds": 409.68,
+      "text": "final most important question. Which one"
+    },
+    {
+      "startSeconds": 412.4,
+      "text": "is right for you? The general rule of"
+    },
+    {
+      "startSeconds": 415.039,
+      "text": "thumb is pretty clear. You're probably"
+    },
+    {
+      "startSeconds": 416.8,
+      "text": "going to lean towards sessions if you're"
+    },
+    {
+      "startSeconds": 418.4,
+      "text": "building a more traditional monolithic"
+    },
+    {
+      "startSeconds": 420.319,
+      "text": "app. You know, where the front end and"
+    },
+    {
+      "startSeconds": 422.319,
+      "text": "back end are all one big happy family."
+    },
+    {
+      "startSeconds": 424.8,
+      "text": "and they're definitely the winner if you"
+    },
+    {
+      "startSeconds": 426.319,
+      "text": "need that power to instantly revoke"
+    },
+    {
+      "startSeconds": 427.919,
+      "text": "someone's access, like an admin needing"
+    },
+    {
+      "startSeconds": 430.16,
+      "text": "to ban a user right now. On the other"
+    },
+    {
+      "startSeconds": 432.56,
+      "text": "hand, JWTs are almost certainly your"
+    },
+    {
+      "startSeconds": 435.28,
+      "text": "best bet if you're living in the modern"
+    },
+    {
+      "startSeconds": 437.12,
+      "text": "world of microservices and distributed"
+    },
+    {
+      "startSeconds": 439.28,
+      "text": "systems. They are the perfect fit for"
+    },
+    {
+      "startSeconds": 441.599,
+      "text": "single page applications, for mobile"
+    },
+    {
+      "startSeconds": 443.599,
+      "text": "apps, and really any situation where"
+    },
+    {
+      "startSeconds": 445.759,
+      "text": "different services or APIs need to talk"
+    },
+    {
+      "startSeconds": 447.84,
+      "text": "to each other without sharing some"
+    },
+    {
+      "startSeconds": 449.52,
+      "text": "central database of sessions. And that"
+    },
+    {
+      "startSeconds": 452.479,
+      "text": "really brings us to the core takeaway"
+    },
+    {
+      "startSeconds": 454.24,
+      "text": "here, which is summed up perfectly by"
+    },
+    {
+      "startSeconds": 456.319,
+      "text": "this quote from Raul Junko. There is no"
+    },
+    {
+      "startSeconds": 459.36,
+      "text": "single best solution. There's no magic"
+    },
+    {
+      "startSeconds": 461.919,
+      "text": "bullet. It is all about understanding"
+    },
+    {
+      "startSeconds": 463.84,
+      "text": "the trade-offs and picking the right"
+    },
+    {
+      "startSeconds": 465.44,
+      "text": "tool for the job you are actually doing."
+    },
+    {
+      "startSeconds": 468.639,
+      "text": "So now the choice is yours. As you start"
+    },
+    {
+      "startSeconds": 471.28,
+      "text": "planning out your next big project,"
+    },
+    {
+      "startSeconds": 473.599,
+      "text": "what's it going to be? Are you going to"
+    },
+    {
+      "startSeconds": 475.52,
+      "text": "go for the tight server side control"
+    },
+    {
+      "startSeconds": 477.44,
+      "text": "that sessions give you or the massive"
+    },
+    {
+      "startSeconds": 480.56,
+      "text": "flexible scalability that comes with"
+    },
+    {
+      "startSeconds": 482.56,
+      "text": "JWTs?"
+    },
+    {
+      "startSeconds": 484.24,
+      "text": "The right answer? Well, it all depends"
+    },
+    {
+      "startSeconds": 486.639,
+      "text": "on what you're building. Choose wisely."
+    }
+  ]
+}

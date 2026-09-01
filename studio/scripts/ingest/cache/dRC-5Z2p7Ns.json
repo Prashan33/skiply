@@ -1,0 +1,3014 @@
+{
+  "id": "dRC-5Z2p7Ns",
+  "url": "https://www.youtube.com/watch?v=dRC-5Z2p7Ns",
+  "fetchedAt": "2026-09-01T04:09:52.413Z",
+  "captionKind": "asr",
+  "chapters": [
+    {
+      "startSeconds": 0,
+      "label": "Introduction"
+    },
+    {
+      "startSeconds": 640,
+      "label": "CubeCat Top"
+    },
+    {
+      "startSeconds": 880,
+      "label": "HPA"
+    },
+    {
+      "startSeconds": 1270,
+      "label": "Create a Service"
+    }
+  ],
+  "cues": [
+    {
+      "startSeconds": 0,
+      "text": "hello everyone welcome back to another"
+    },
+    {
+      "startSeconds": 2.7,
+      "text": "session by k21 Academy today our export"
+    },
+    {
+      "startSeconds": 5.52,
+      "text": "trainer will be discussing horizontal"
+    },
+    {
+      "startSeconds": 7.68,
+      "text": "board Auto scaling using the 2048 game"
+    },
+    {
+      "startSeconds": 10.98,
+      "text": "as an example so please watch the video"
+    },
+    {
+      "startSeconds": 13.139,
+      "text": "till the end this is the application"
+    },
+    {
+      "startSeconds": 15.059,
+      "text": "which is deployed I've exposed it to the"
+    },
+    {
+      "startSeconds": 17.039,
+      "text": "outside world some some random game"
+    },
+    {
+      "startSeconds": 19.619,
+      "text": "right it's a 2048 Tile game it pretty"
+    },
+    {
+      "startSeconds": 23.039,
+      "text": "popular"
+    },
+    {
+      "startSeconds": 24.119,
+      "text": "right now I have deployed it and I've"
+    },
+    {
+      "startSeconds": 28.26,
+      "text": "have multiple replicas I have exposed it"
+    },
+    {
+      "startSeconds": 30.599,
+      "text": "to the outside world"
+    },
+    {
+      "startSeconds": 32.16,
+      "text": "of course we don't share the IP address"
+    },
+    {
+      "startSeconds": 34.02,
+      "text": "report number to the end users we all"
+    },
+    {
+      "startSeconds": 36.18,
+      "text": "know before we deploy our application to"
+    },
+    {
+      "startSeconds": 38.64,
+      "text": "the outside world you need to put them"
+    },
+    {
+      "startSeconds": 39.96,
+      "text": "behind a DNS server you need to on a web"
+    },
+    {
+      "startSeconds": 42.78,
+      "text": "proxy and Port ad that's what we do"
+    },
+    {
+      "startSeconds": 45.059,
+      "text": "right so if you if you don't really give"
+    },
+    {
+      "startSeconds": 47.399,
+      "text": "the IP addresses you can't you don't"
+    },
+    {
+      "startSeconds": 48.96,
+      "text": "expect your end users to remember the IP"
+    },
+    {
+      "startSeconds": 51.239,
+      "text": "address import number where those are"
+    },
+    {
+      "startSeconds": 52.5,
+      "text": "the additional steps what you need to do"
+    },
+    {
+      "startSeconds": 53.879,
+      "text": "when you deploy your application so"
+    },
+    {
+      "startSeconds": 55.8,
+      "text": "Productions that's outside the scope of"
+    },
+    {
+      "startSeconds": 57.12,
+      "text": "kubernetes for now well the point is"
+    },
+    {
+      "startSeconds": 59.219,
+      "text": "this application is exposed assuming you"
+    },
+    {
+      "startSeconds": 61.62,
+      "text": "know we have some URL set here some DNS"
+    },
+    {
+      "startSeconds": 63.719,
+      "text": "name"
+    },
+    {
+      "startSeconds": 64.64,
+      "text": "and now I have five copies of it and"
+    },
+    {
+      "startSeconds": 67.979,
+      "text": "there are thousand plus users accessing"
+    },
+    {
+      "startSeconds": 69.6,
+      "text": "this game actually this game becomes"
+    },
+    {
+      "startSeconds": 71.52,
+      "text": "white and pretty popular and now"
+    },
+    {
+      "startSeconds": 73.799,
+      "text": "millions of users start accessing it"
+    },
+    {
+      "startSeconds": 75.72,
+      "text": "what's going to happen but what's going"
+    },
+    {
+      "startSeconds": 77.88,
+      "text": "to happen is this one guy this for"
+    },
+    {
+      "startSeconds": 79.92,
+      "text": "replicas are not enough"
+    },
+    {
+      "startSeconds": 82.5,
+      "text": "not enough per se is maybe you know a"
+    },
+    {
+      "startSeconds": 85.979,
+      "text": "million users are accessing five copies"
+    },
+    {
+      "startSeconds": 87.659,
+      "text": "of them are able to do you know take"
+    },
+    {
+      "startSeconds": 89.939,
+      "text": "over the load"
+    },
+    {
+      "startSeconds": 91.2,
+      "text": "but the game becomes viral and now"
+    },
+    {
+      "startSeconds": 93.299,
+      "text": "hundreds of users Millions thousands of"
+    },
+    {
+      "startSeconds": 95.1,
+      "text": "users are accessing it these guys are"
+    },
+    {
+      "startSeconds": 97.38,
+      "text": "going to get picked out so what do I"
+    },
+    {
+      "startSeconds": 99.18,
+      "text": "need to do when I need to add more"
+    },
+    {
+      "startSeconds": 101.04,
+      "text": "copies increase the replicas"
+    },
+    {
+      "startSeconds": 104.1,
+      "text": "and so far whatever we have learned the"
+    },
+    {
+      "startSeconds": 106.979,
+      "text": "replica is what we did was scaling up"
+    },
+    {
+      "startSeconds": 109.32,
+      "text": "manually two o'clock in the night is"
+    },
+    {
+      "startSeconds": 112.02,
+      "text": "sudden search you don't expect me to log"
+    },
+    {
+      "startSeconds": 113.939,
+      "text": "in and increase the count of replicas or"
+    },
+    {
+      "startSeconds": 117.119,
+      "text": "can we do well kubernetes has a solution"
+    },
+    {
+      "startSeconds": 119.64,
+      "text": "for you and that's called as horizontal"
+    },
+    {
+      "startSeconds": 122.28,
+      "text": "part of Auto scalar HBA as we call it in"
+    },
+    {
+      "startSeconds": 125.88,
+      "text": "short horizontal pod Auto Scala what"
+    },
+    {
+      "startSeconds": 129.539,
+      "text": "does this guy do well we created another"
+    },
+    {
+      "startSeconds": 132.02,
+      "text": "controller which sits on top of any"
+    },
+    {
+      "startSeconds": 135.26,
+      "text": "machine sorry any controller which you"
+    },
+    {
+      "startSeconds": 137.7,
+      "text": "can scale you hand over the scaling part"
+    },
+    {
+      "startSeconds": 140.04,
+      "text": "to that I've copied this from the"
+    },
+    {
+      "startSeconds": 141.599,
+      "text": "documentation"
+    },
+    {
+      "startSeconds": 143.28,
+      "text": "so you create another controller called"
+    },
+    {
+      "startSeconds": 145.92,
+      "text": "as HPA"
+    },
+    {
+      "startSeconds": 147.3,
+      "text": "and you give the scaling behavior of"
+    },
+    {
+      "startSeconds": 150.12,
+      "text": "that particular replica set or"
+    },
+    {
+      "startSeconds": 151.739,
+      "text": "deployment to HPA"
+    },
+    {
+      "startSeconds": 154.02,
+      "text": "now HP is sits on top of the deployment"
+    },
+    {
+      "startSeconds": 156.12,
+      "text": "keeps an eye of course you need to tell"
+    },
+    {
+      "startSeconds": 158.459,
+      "text": "that as part of your desired State when"
+    },
+    {
+      "startSeconds": 159.959,
+      "text": "to scale what to scale and stuff like"
+    },
+    {
+      "startSeconds": 161.879,
+      "text": "that so what do you need to mention you"
+    },
+    {
+      "startSeconds": 163.8,
+      "text": "need to mention few things to HPA so"
+    },
+    {
+      "startSeconds": 165.959,
+      "text": "you're asking somebody else to keep an"
+    },
+    {
+      "startSeconds": 167.459,
+      "text": "eye and scale but somebody else is HPA"
+    },
+    {
+      "startSeconds": 169.739,
+      "text": "in our case right so when you create"
+    },
+    {
+      "startSeconds": 171.48,
+      "text": "dhpa first thing you tell is there can"
+    },
+    {
+      "startSeconds": 173.64,
+      "text": "be hundreds of deployments out there in"
+    },
+    {
+      "startSeconds": 175.319,
+      "text": "your cluster so you need to give which"
+    },
+    {
+      "startSeconds": 177.66,
+      "text": "deployment am I talking about"
+    },
+    {
+      "startSeconds": 179.94,
+      "text": "we need to give a scaled Target"
+    },
+    {
+      "startSeconds": 181.98,
+      "text": "reference telling that there is a"
+    },
+    {
+      "startSeconds": 183.72,
+      "text": "deployment called as game that is what"
+    },
+    {
+      "startSeconds": 185.58,
+      "text": "I'm talking to you about keep an eye on"
+    },
+    {
+      "startSeconds": 187.62,
+      "text": "this guy fine I'm going to keep an eye"
+    },
+    {
+      "startSeconds": 189.84,
+      "text": "on that guy then when do I scale what is"
+    },
+    {
+      "startSeconds": 193.019,
+      "text": "the trigger point for me"
+    },
+    {
+      "startSeconds": 195.3,
+      "text": "yeah you want me to add some replicas"
+    },
+    {
+      "startSeconds": 198,
+      "text": "increase when the load increases correct"
+    },
+    {
+      "startSeconds": 201.3,
+      "text": "so you need to give me some threshold"
+    },
+    {
+      "startSeconds": 204.36,
+      "text": "some threshold what threshold well until"
+    },
+    {
+      "startSeconds": 208.92,
+      "text": "the version 1.22 the only option HPA"
+    },
+    {
+      "startSeconds": 212.159,
+      "text": "what was in the version big one of the"
+    },
+    {
+      "startSeconds": 215.22,
+      "text": "of the API resource there"
+    },
+    {
+      "startSeconds": 217.739,
+      "text": "it had only one field called this target"
+    },
+    {
+      "startSeconds": 220.26,
+      "text": "CPU utilization the CPU utilization of"
+    },
+    {
+      "startSeconds": 224.4,
+      "text": "the parts combined of all the parts"
+    },
+    {
+      "startSeconds": 226.5,
+      "text": "combined of this deployment"
+    },
+    {
+      "startSeconds": 229.319,
+      "text": "is going to take that into consideration"
+    },
+    {
+      "startSeconds": 232.5,
+      "text": "default is 80 percent"
+    },
+    {
+      "startSeconds": 234.72,
+      "text": "when the CPU utilization goes above 80"
+    },
+    {
+      "startSeconds": 237.36,
+      "text": "percent of these parts that means cheap"
+    },
+    {
+      "startSeconds": 240.48,
+      "text": "fertilization is directly proportional"
+    },
+    {
+      "startSeconds": 241.98,
+      "text": "to the number of requests to what your"
+    },
+    {
+      "startSeconds": 243.959,
+      "text": "application part is handling right now"
+    },
+    {
+      "startSeconds": 245.64,
+      "text": "if I go look at"
+    },
+    {
+      "startSeconds": 247.08,
+      "text": "CPT position maybe it's zero because"
+    },
+    {
+      "startSeconds": 248.7,
+      "text": "there's no request at all so if you have"
+    },
+    {
+      "startSeconds": 250.62,
+      "text": "millions of users accessing in millions"
+    },
+    {
+      "startSeconds": 252.239,
+      "text": "of requests if there's a lot of context"
+    },
+    {
+      "startSeconds": 254.04,
+      "text": "if you're switching your CPU utilization"
+    },
+    {
+      "startSeconds": 255.72,
+      "text": "goes up right so you give that as part"
+    },
+    {
+      "startSeconds": 258.66,
+      "text": "of your desired State when you create a"
+    },
+    {
+      "startSeconds": 260.22,
+      "text": "HPA you tell listen at this particular"
+    },
+    {
+      "startSeconds": 262.979,
+      "text": "threshold maybe 50 when the CP"
+    },
+    {
+      "startSeconds": 266.04,
+      "text": "utilization goes above 50 percent"
+    },
+    {
+      "startSeconds": 268.44,
+      "text": "scale up and do what we'll scale up and"
+    },
+    {
+      "startSeconds": 270.66,
+      "text": "add more replicas"
+    },
+    {
+      "startSeconds": 272.4,
+      "text": "now I've mentioned the"
+    },
+    {
+      "startSeconds": 275.4,
+      "text": "threshold as 50 so as long as the C per"
+    },
+    {
+      "startSeconds": 278.94,
+      "text": "utilization of all the parts which is"
+    },
+    {
+      "startSeconds": 280.38,
+      "text": "being managed by this deployment is"
+    },
+    {
+      "startSeconds": 282.36,
+      "text": "under 50 the HPA is not going to do"
+    },
+    {
+      "startSeconds": 285.419,
+      "text": "anything this is my desired state"
+    },
+    {
+      "startSeconds": 287.78,
+      "text": "tillage 50 you don't need to do anything"
+    },
+    {
+      "startSeconds": 290.82,
+      "text": "if it breaches 50 percent maybe it goes"
+    },
+    {
+      "startSeconds": 293.1,
+      "text": "to 60 maybe it goes to 70 you need to do"
+    },
+    {
+      "startSeconds": 295.86,
+      "text": "what you need to start adding more parts"
+    },
+    {
+      "startSeconds": 298.56,
+      "text": "we need to start adding more parts and"
+    },
+    {
+      "startSeconds": 301.32,
+      "text": "then collectively try to bring down the"
+    },
+    {
+      "startSeconds": 303.06,
+      "text": "CP utilization to below 50. so for"
+    },
+    {
+      "startSeconds": 306.24,
+      "text": "example if I had only one pod and if I"
+    },
+    {
+      "startSeconds": 308.46,
+      "text": "had and then the secret relation went to"
+    },
+    {
+      "startSeconds": 309.84,
+      "text": "maybe 80."
+    },
+    {
+      "startSeconds": 311.759,
+      "text": "right so if I there's an algorithm go"
+    },
+    {
+      "startSeconds": 314.46,
+      "text": "I'll go show that algorithm to you that"
+    },
+    {
+      "startSeconds": 316.38,
+      "text": "the algorithm is uh"
+    },
+    {
+      "startSeconds": 318.78,
+      "text": "you know your current metric value"
+    },
+    {
+      "startSeconds": 321,
+      "text": "divided by designated current is 80"
+    },
+    {
+      "startSeconds": 322.919,
+      "text": "desired is maybe 40 more example for"
+    },
+    {
+      "startSeconds": 325.02,
+      "text": "division purpose if I keep it simple"
+    },
+    {
+      "startSeconds": 326.28,
+      "text": "it's going to show you as two so two is"
+    },
+    {
+      "startSeconds": 328.8,
+      "text": "the number of replicas what you need to"
+    },
+    {
+      "startSeconds": 330.12,
+      "text": "add so that you know you've received"
+    },
+    {
+      "startSeconds": 331.68,
+      "text": "utilization goes to 80 and if there's"
+    },
+    {
+      "startSeconds": 333.78,
+      "text": "only one part replica there if you add"
+    },
+    {
+      "startSeconds": 335.58,
+      "text": "two of them the load can get distributed"
+    },
+    {
+      "startSeconds": 337.32,
+      "text": "the CPU utilization to have come down to"
+    },
+    {
+      "startSeconds": 340.8,
+      "text": "40."
+    },
+    {
+      "startSeconds": 342.78,
+      "text": "that is an algorithm let me look at that"
+    },
+    {
+      "startSeconds": 344.34,
+      "text": "but the point is you need to whatever"
+    },
+    {
+      "startSeconds": 346.8,
+      "text": "you need to do how many other replicas"
+    },
+    {
+      "startSeconds": 348.6,
+      "text": "you need to add add them"
+    },
+    {
+      "startSeconds": 350.46,
+      "text": "add them to bring the desired threshold"
+    },
+    {
+      "startSeconds": 355.199,
+      "text": "to whatever I have so if it goes to 70"
+    },
+    {
+      "startSeconds": 357.6,
+      "text": "80 90 meaning that number of Parts what"
+    },
+    {
+      "startSeconds": 359.88,
+      "text": "we have we're not able to handle this"
+    },
+    {
+      "startSeconds": 361.139,
+      "text": "load break it down 250 so bring it down"
+    },
+    {
+      "startSeconds": 363.36,
+      "text": "to 50 what do you need to do you need to"
+    },
+    {
+      "startSeconds": 364.979,
+      "text": "start adding more parts"
+    },
+    {
+      "startSeconds": 366.9,
+      "text": "meaning scale up right and now I do not"
+    },
+    {
+      "startSeconds": 371.4,
+      "text": "say for example if you have a design of"
+    },
+    {
+      "startSeconds": 373.259,
+      "text": "a service can an attack where you're"
+    },
+    {
+      "startSeconds": 374.94,
+      "text": "constantly being smart and constantly"
+    },
+    {
+      "startSeconds": 376.56,
+      "text": "being hit that threshold is going to go"
+    },
+    {
+      "startSeconds": 378.9,
+      "text": "no matter how many parts you keep on"
+    },
+    {
+      "startSeconds": 380.759,
+      "text": "adding the secret utilization is not"
+    },
+    {
+      "startSeconds": 382.259,
+      "text": "going to come down to your threshold"
+    },
+    {
+      "startSeconds": 384.3,
+      "text": "so I want you to scale up but I don't"
+    },
+    {
+      "startSeconds": 387.24,
+      "text": "want you to infinitely scale up on max"
+    },
+    {
+      "startSeconds": 389.039,
+      "text": "out my cluster resources so what I do is"
+    },
+    {
+      "startSeconds": 391.38,
+      "text": "I give the upward limit as well"
+    },
+    {
+      "startSeconds": 393.6,
+      "text": "it's called the max I want you to scale"
+    },
+    {
+      "startSeconds": 396.539,
+      "text": "up keep on adding Parts one two three"
+    },
+    {
+      "startSeconds": 398.52,
+      "text": "four five six seven eight whatever part"
+    },
+    {
+      "startSeconds": 400.38,
+      "text": "you want to bring that threshold to my"
+    },
+    {
+      "startSeconds": 403.199,
+      "text": "desired value"
+    },
+    {
+      "startSeconds": 404.4,
+      "text": "but for some reason you can't bring it"
+    },
+    {
+      "startSeconds": 406.979,
+      "text": "down don't infinitely keep spilling up I"
+    },
+    {
+      "startSeconds": 409.44,
+      "text": "know my application it does not need to"
+    },
+    {
+      "startSeconds": 411.3,
+      "text": "go up Beyond 10 replicas Max so I give a"
+    },
+    {
+      "startSeconds": 414,
+      "text": "upward limit it tries to scale up from"
+    },
+    {
+      "startSeconds": 416.4,
+      "text": "whatever account you have to to the max"
+    },
+    {
+      "startSeconds": 418.259,
+      "text": "value and if even Beyond Max it's not"
+    },
+    {
+      "startSeconds": 420.78,
+      "text": "able to bring it down to the threshold"
+    },
+    {
+      "startSeconds": 422.22,
+      "text": "it is going to ignore it"
+    },
+    {
+      "startSeconds": 424.199,
+      "text": "similarly when everything is uh"
+    },
+    {
+      "startSeconds": 427.699,
+      "text": "fine and there is no you know everything"
+    },
+    {
+      "startSeconds": 431.88,
+      "text": "is beyond the threshold what is the"
+    },
+    {
+      "startSeconds": 433.979,
+      "text": "minimum number of replicas I want you to"
+    },
+    {
+      "startSeconds": 435.9,
+      "text": "manage I will set that to minimum number"
+    },
+    {
+      "startSeconds": 438.6,
+      "text": "maybe I will set it to two for any given"
+    },
+    {
+      "startSeconds": 440.639,
+      "text": "point of time I want two copies"
+    },
+    {
+      "startSeconds": 443.039,
+      "text": "the threshold is under 0 or 0 to 50 keep"
+    },
+    {
+      "startSeconds": 446.819,
+      "text": "the minimum count so the scaling part I"
+    },
+    {
+      "startSeconds": 450.18,
+      "text": "will hand over to another controller"
+    },
+    {
+      "startSeconds": 451.8,
+      "text": "called as HP and I give these four"
+    },
+    {
+      "startSeconds": 453.419,
+      "text": "options to him he's going to look at"
+    },
+    {
+      "startSeconds": 455.52,
+      "text": "that which deployment what threshold and"
+    },
+    {
+      "startSeconds": 458.039,
+      "text": "it's going to scale up gradually try to"
+    },
+    {
+      "startSeconds": 460.319,
+      "text": "add more parts to bring it to the"
+    },
+    {
+      "startSeconds": 462.12,
+      "text": "desired level if it is not able to do"
+    },
+    {
+      "startSeconds": 464.099,
+      "text": "that it will stop at the max level when"
+    },
+    {
+      "startSeconds": 466.199,
+      "text": "everything is fine it will maintain the"
+    },
+    {
+      "startSeconds": 468.9,
+      "text": "minimum replicas what you've asked for"
+    },
+    {
+      "startSeconds": 471,
+      "text": "that's your HPA that's how you're going"
+    },
+    {
+      "startSeconds": 473.94,
+      "text": "to create another controller called as"
+    },
+    {
+      "startSeconds": 475.5,
+      "text": "horizontal pod Auto Scala let's go take"
+    },
+    {
+      "startSeconds": 478.199,
+      "text": "a look at that but one thing is for HPA"
+    },
+    {
+      "startSeconds": 481.139,
+      "text": "to work"
+    },
+    {
+      "startSeconds": 482.099,
+      "text": "it needs to have some metric value the"
+    },
+    {
+      "startSeconds": 484.259,
+      "text": "metric value here is a CPU utilization"
+    },
+    {
+      "startSeconds": 487.259,
+      "text": "so how can I get that metric value"
+    },
+    {
+      "startSeconds": 491.16,
+      "text": "that opens up another question is what"
+    },
+    {
+      "startSeconds": 493.199,
+      "text": "kind of monitoring do I have available"
+    },
+    {
+      "startSeconds": 494.759,
+      "text": "out of the box in the kubernetes cluster"
+    },
+    {
+      "startSeconds": 497.039,
+      "text": "what I have set up right now the answer"
+    },
+    {
+      "startSeconds": 499.259,
+      "text": "for that question is I do not have any"
+    },
+    {
+      "startSeconds": 501.479,
+      "text": "monitoring going on right now because"
+    },
+    {
+      "startSeconds": 503.46,
+      "text": "when you make use of qbdm to set up your"
+    },
+    {
+      "startSeconds": 505.44,
+      "text": "cluster there's no monitoring involved"
+    },
+    {
+      "startSeconds": 507.84,
+      "text": "there's monitoring needs to be an"
+    },
+    {
+      "startSeconds": 510.599,
+      "text": "additional item on top of it"
+    },
+    {
+      "startSeconds": 513.539,
+      "text": "kubernetes supports various different"
+    },
+    {
+      "startSeconds": 514.979,
+      "text": "tools per se there is a metric server"
+    },
+    {
+      "startSeconds": 518.459,
+      "text": "a very lightweight application which can"
+    },
+    {
+      "startSeconds": 520.86,
+      "text": "monitor the two basic resources you have"
+    },
+    {
+      "startSeconds": 524.339,
+      "text": "that memory and CPU but again that is"
+    },
+    {
+      "startSeconds": 527.16,
+      "text": "not installed or deployed by default you"
+    },
+    {
+      "startSeconds": 529.98,
+      "text": "need to deploy it or there are other"
+    },
+    {
+      "startSeconds": 532.92,
+      "text": "tools very quite popular there is"
+    },
+    {
+      "startSeconds": 534.54,
+      "text": "promotius which is very popular you need"
+    },
+    {
+      "startSeconds": 536.519,
+      "text": "to again it's not installed by default"
+    },
+    {
+      "startSeconds": 538.74,
+      "text": "when you set up cuberium cluster you"
+    },
+    {
+      "startSeconds": 540.66,
+      "text": "need to add on create a deployment"
+    },
+    {
+      "startSeconds": 542.519,
+      "text": "create Prometheus this is a deployment"
+    },
+    {
+      "startSeconds": 544.56,
+      "text": "and you need to enable monitoring on top"
+    },
+    {
+      "startSeconds": 546.959,
+      "text": "of it how you can make use of elastic"
+    },
+    {
+      "startSeconds": 548.58,
+      "text": "stack they are paid versions like data"
+    },
+    {
+      "startSeconds": 550.5,
+      "text": "dog dinatra is there many of them"
+    },
+    {
+      "startSeconds": 551.94,
+      "text": "available that kubernetes has support"
+    },
+    {
+      "startSeconds": 553.38,
+      "text": "for all of them there are images of"
+    },
+    {
+      "startSeconds": 555.3,
+      "text": "those available few of them are open"
+    },
+    {
+      "startSeconds": 557.279,
+      "text": "source few of them are paid versions"
+    },
+    {
+      "startSeconds": 558.959,
+      "text": "like data dog and stuff like that you"
+    },
+    {
+      "startSeconds": 560.88,
+      "text": "can set them up"
+    },
+    {
+      "startSeconds": 562.74,
+      "text": "but there is a monitoring server"
+    },
+    {
+      "startSeconds": 564.839,
+      "text": "which is available for you of course it"
+    },
+    {
+      "startSeconds": 567.36,
+      "text": "is not deployed by default but there is"
+    },
+    {
+      "startSeconds": 570.42,
+      "text": "a monitoring server called as metric"
+    },
+    {
+      "startSeconds": 572.04,
+      "text": "server"
+    },
+    {
+      "startSeconds": 573,
+      "text": "so every cubelet that cubelet which is"
+    },
+    {
+      "startSeconds": 575.1,
+      "text": "running on every node of your cluster"
+    },
+    {
+      "startSeconds": 577.019,
+      "text": "has a sub component called S3 advisor"
+    },
+    {
+      "startSeconds": 580.26,
+      "text": "C advisor stands for container advisor"
+    },
+    {
+      "startSeconds": 582.24,
+      "text": "it's an open source tool when you're"
+    },
+    {
+      "startSeconds": 584.16,
+      "text": "running Shand download Docker you can"
+    },
+    {
+      "startSeconds": 585.959,
+      "text": "also install that what does this guy do"
+    },
+    {
+      "startSeconds": 587.82,
+      "text": "this guy captures your CPU and memory"
+    },
+    {
+      "startSeconds": 590.1,
+      "text": "utilization to basic requirements is a"
+    },
+    {
+      "startSeconds": 593.399,
+      "text": "metric server it's a thin very thin"
+    },
+    {
+      "startSeconds": 595.68,
+      "text": "lightweight in-memory kind of an"
+    },
+    {
+      "startSeconds": 597.12,
+      "text": "application"
+    },
+    {
+      "startSeconds": 598.44,
+      "text": "which is provided to you by kubernetes"
+    },
+    {
+      "startSeconds": 601.88,
+      "text": "you can make use of that you can it's"
+    },
+    {
+      "startSeconds": 604.019,
+      "text": "not deployed by default you can deploy"
+    },
+    {
+      "startSeconds": 605.58,
+      "text": "it it's going to talk to your cubelet on"
+    },
+    {
+      "startSeconds": 607.56,
+      "text": "every node and it's going to capture the"
+    },
+    {
+      "startSeconds": 609.06,
+      "text": "memory and CPU this metric server is not"
+    },
+    {
+      "startSeconds": 612.12,
+      "text": "stateful meaning you know it does not"
+    },
+    {
+      "startSeconds": 613.74,
+      "text": "store anything on the database it does"
+    },
+    {
+      "startSeconds": 615.24,
+      "text": "not tell you what was the CP transition"
+    },
+    {
+      "startSeconds": 617.16,
+      "text": "20 days ago it's not going to tell you"
+    },
+    {
+      "startSeconds": 618.48,
+      "text": "all of that it's going to show you what"
+    },
+    {
+      "startSeconds": 620.04,
+      "text": "the current memory and CPU utilization"
+    },
+    {
+      "startSeconds": 622.26,
+      "text": "is"
+    },
+    {
+      "startSeconds": 623.459,
+      "text": "so you need to have the HPA to work it"
+    },
+    {
+      "startSeconds": 626.16,
+      "text": "needs the metrics metrics to be running"
+    },
+    {
+      "startSeconds": 627.54,
+      "text": "you need to have some monitoring going"
+    },
+    {
+      "startSeconds": 628.86,
+      "text": "on there so you need to have the metric"
+    },
+    {
+      "startSeconds": 631.74,
+      "text": "server installed we need to do that"
+    },
+    {
+      "startSeconds": 633.54,
+      "text": "right now which is not installed in my"
+    },
+    {
+      "startSeconds": 635.82,
+      "text": "machine right now"
+    },
+    {
+      "startSeconds": 637.32,
+      "text": "so this is another command called as"
+    },
+    {
+      "startSeconds": 638.82,
+      "text": "cube cattle top that also makes use of"
+    },
+    {
+      "startSeconds": 641.76,
+      "text": "your metric server so if it's a cube"
+    },
+    {
+      "startSeconds": 644.459,
+      "text": "candle top and show me the CPU fan"
+    },
+    {
+      "startSeconds": 646.44,
+      "text": "memory of the nodes available out there"
+    },
+    {
+      "startSeconds": 648.899,
+      "text": "it's going to come back to you and"
+    },
+    {
+      "startSeconds": 650.399,
+      "text": "complain metrics API is not available so"
+    },
+    {
+      "startSeconds": 653.519,
+      "text": "if I take you to the documentation"
+    },
+    {
+      "startSeconds": 655.62,
+      "text": "and if you look at Matrix server it"
+    },
+    {
+      "startSeconds": 658.56,
+      "text": "tells you you get enough metric server"
+    },
+    {
+      "startSeconds": 660.18,
+      "text": "fetches metrics from cubelets and"
+    },
+    {
+      "startSeconds": 662.459,
+      "text": "exposes via Matrix API Cube top command"
+    },
+    {
+      "startSeconds": 665.22,
+      "text": "can work with it it tells you it is not"
+    },
+    {
+      "startSeconds": 667.019,
+      "text": "installed by default you can do so by"
+    },
+    {
+      "startSeconds": 669.3,
+      "text": "you know visiting the GitHub and"
+    },
+    {
+      "startSeconds": 670.98,
+      "text": "downloading it there's a URL here it"
+    },
+    {
+      "startSeconds": 673.32,
+      "text": "talks about what metric service tells"
+    },
+    {
+      "startSeconds": 674.94,
+      "text": "you it is very resource efficient takes"
+    },
+    {
+      "startSeconds": 676.5,
+      "text": "only one Milli code of a CPU 2 MB of"
+    },
+    {
+      "startSeconds": 679.579,
+      "text": "memory and what it does it collects"
+    },
+    {
+      "startSeconds": 682.2,
+      "text": "metrics every 15 seconds"
+    },
+    {
+      "startSeconds": 684.24,
+      "text": "and support up to 5000 nodes in a"
+    },
+    {
+      "startSeconds": 686.16,
+      "text": "cluster and you know you can just deploy"
+    },
+    {
+      "startSeconds": 689.04,
+      "text": "it this way"
+    },
+    {
+      "startSeconds": 690.12,
+      "text": "and your metric server will be installed"
+    },
+    {
+      "startSeconds": 692.82,
+      "text": "so right now when I came back when I did"
+    },
+    {
+      "startSeconds": 695.459,
+      "text": "the cube card at the top now it says"
+    },
+    {
+      "startSeconds": 697.019,
+      "text": "Matrix API not available because a"
+    },
+    {
+      "startSeconds": 698.76,
+      "text": "metric server is not deployed let's go"
+    },
+    {
+      "startSeconds": 701.399,
+      "text": "ahead and deploy the metric server real"
+    },
+    {
+      "startSeconds": 703.079,
+      "text": "quick"
+    },
+    {
+      "startSeconds": 704.339,
+      "text": "copy the same yeah one file what we saw"
+    },
+    {
+      "startSeconds": 706.14,
+      "text": "in the documentation"
+    },
+    {
+      "startSeconds": 707.579,
+      "text": "and it deployed something"
+    },
+    {
+      "startSeconds": 709.74,
+      "text": "if I quickly go back and do cubecat will"
+    },
+    {
+      "startSeconds": 711.839,
+      "text": "get parts in the namespace cube system"
+    },
+    {
+      "startSeconds": 715.5,
+      "text": "we see the metric server is in the"
+    },
+    {
+      "startSeconds": 718.32,
+      "text": "container creating stage we can also do"
+    },
+    {
+      "startSeconds": 719.94,
+      "text": "iPhone watch"
+    },
+    {
+      "startSeconds": 721.32,
+      "text": "it's currently running but not ready"
+    },
+    {
+      "startSeconds": 723.36,
+      "text": "it's going to come back already said it"
+    },
+    {
+      "startSeconds": 724.98,
+      "text": "sometime very way the point is we've"
+    },
+    {
+      "startSeconds": 727.079,
+      "text": "deployed The Matrix server now when I go"
+    },
+    {
+      "startSeconds": 729,
+      "text": "back and do Cube cable top nodes now it"
+    },
+    {
+      "startSeconds": 732.24,
+      "text": "does not tell you Matrix API not"
+    },
+    {
+      "startSeconds": 734.279,
+      "text": "available like the way it did earlier"
+    },
+    {
+      "startSeconds": 735.72,
+      "text": "now it's telling you some other error"
+    },
+    {
+      "startSeconds": 737.579,
+      "text": "because the Matrix server is still not"
+    },
+    {
+      "startSeconds": 738.959,
+      "text": "up yet it's still not come to the ready"
+    },
+    {
+      "startSeconds": 740.459,
+      "text": "state to accept the traffic once it"
+    },
+    {
+      "startSeconds": 742.62,
+      "text": "comes up it's going to take 15 seconds"
+    },
+    {
+      "startSeconds": 744.12,
+      "text": "to go scrape the Matrix so the cube"
+    },
+    {
+      "startSeconds": 746.76,
+      "text": "cattle top command is working because we"
+    },
+    {
+      "startSeconds": 749.16,
+      "text": "have installed the metric server good"
+    },
+    {
+      "startSeconds": 751.32,
+      "text": "now this is also another important"
+    },
+    {
+      "startSeconds": 753.3,
+      "text": "interview question or interview the exam"
+    },
+    {
+      "startSeconds": 755.579,
+      "text": "question as well so this top command"
+    },
+    {
+      "startSeconds": 757.74,
+      "text": "works with respect to the nodes the pods"
+    },
+    {
+      "startSeconds": 761.22,
+      "text": "and the container level as well so I can"
+    },
+    {
+      "startSeconds": 763.2,
+      "text": "do Cube candle top pods as well so it's"
+    },
+    {
+      "startSeconds": 765.779,
+      "text": "going to show you at the part level the"
+    },
+    {
+      "startSeconds": 767.82,
+      "text": "memory and CPU right and if I have"
+    },
+    {
+      "startSeconds": 770.339,
+      "text": "multiple containers like for example top"
+    },
+    {
+      "startSeconds": 772.079,
+      "text": "Parts iPhone and Cube hyphen is for STM"
+    },
+    {
+      "startSeconds": 775.44,
+      "text": "so for example view of net"
+    },
+    {
+      "startSeconds": 778.44,
+      "text": "has multiple containers has two"
+    },
+    {
+      "startSeconds": 780.12,
+      "text": "containers in it so if I look at we want"
+    },
+    {
+      "startSeconds": 782.76,
+      "text": "to look at the container level"
+    },
+    {
+      "startSeconds": 785.04,
+      "text": "it's going to show you that value at the"
+    },
+    {
+      "startSeconds": 787.32,
+      "text": "container level as well like in the pot"
+    },
+    {
+      "startSeconds": 789.839,
+      "text": "I have multiple containers I want to"
+    },
+    {
+      "startSeconds": 791.1,
+      "text": "look at the CPU memory utilization of"
+    },
+    {
+      "startSeconds": 792.36,
+      "text": "the container level you can you will"
+    },
+    {
+      "startSeconds": 794.82,
+      "text": "look at the Pod level you can you want"
+    },
+    {
+      "startSeconds": 797.04,
+      "text": "to look at the node level you can so the"
+    },
+    {
+      "startSeconds": 798.959,
+      "text": "top command shows you nodes and parts"
+    },
+    {
+      "startSeconds": 801.3,
+      "text": "all right additionally it also has uh"
+    },
+    {
+      "startSeconds": 805.32,
+      "text": "option like sort by I can do iPhone 5"
+    },
+    {
+      "startSeconds": 808.62,
+      "text": "and so on iPhone 5 equals to m e m o r y"
+    },
+    {
+      "startSeconds": 812.519,
+      "text": "it's going to sort that why are you"
+    },
+    {
+      "startSeconds": 814.74,
+      "text": "showing all this stuff well like I told"
+    },
+    {
+      "startSeconds": 817.98,
+      "text": "you the exam is going to be a"
+    },
+    {
+      "startSeconds": 819.3,
+      "text": "combination of questions which take less"
+    },
+    {
+      "startSeconds": 821.459,
+      "text": "time and the question will take larger"
+    },
+    {
+      "startSeconds": 822.72,
+      "text": "time there can be a simple question this"
+    },
+    {
+      "startSeconds": 824.639,
+      "text": "is okay listen in this namespace there"
+    },
+    {
+      "startSeconds": 826.32,
+      "text": "are 20 Parts running can you tell me"
+    },
+    {
+      "startSeconds": 828.66,
+      "text": "which part is consuming highest number"
+    },
+    {
+      "startSeconds": 832.32,
+      "text": "of how much highest memory so for"
+    },
+    {
+      "startSeconds": 835.38,
+      "text": "example if you run the top command on"
+    },
+    {
+      "startSeconds": 836.7,
+      "text": "the namespace maybe everything looks"
+    },
+    {
+      "startSeconds": 838.44,
+      "text": "something like this everything showing"
+    },
+    {
+      "startSeconds": 839.76,
+      "text": "as 15 18 15 19 16. when you look into"
+    },
+    {
+      "startSeconds": 841.92,
+      "text": "the naked eye everything looks the same"
+    },
+    {
+      "startSeconds": 844.019,
+      "text": "for you so scenarios like that if you"
+    },
+    {
+      "startSeconds": 846.36,
+      "text": "have a question there can be a question"
+    },
+    {
+      "startSeconds": 847.68,
+      "text": "on there you can just do sort by memory"
+    },
+    {
+      "startSeconds": 849.72,
+      "text": "or if the questions are on CPU you can"
+    },
+    {
+      "startSeconds": 851.579,
+      "text": "sort by CPU just want to sort it out for"
+    },
+    {
+      "startSeconds": 853.74,
+      "text": "you here of course 234 is right up top"
+    },
+    {
+      "startSeconds": 856.38,
+      "text": "we can identify if there's a question if"
+    },
+    {
+      "startSeconds": 858.54,
+      "text": "I ask you a question which is the pod in"
+    },
+    {
+      "startSeconds": 861.3,
+      "text": "this particular namespace consuming"
+    },
+    {
+      "startSeconds": 862.92,
+      "text": "highest number of CPU or memory your"
+    },
+    {
+      "startSeconds": 866.22,
+      "text": "answer is this question despondent so"
+    },
+    {
+      "startSeconds": 868.74,
+      "text": "you need to take the part name and write"
+    },
+    {
+      "startSeconds": 870.3,
+      "text": "that part name as the answer to that"
+    },
+    {
+      "startSeconds": 871.68,
+      "text": "question so that from that point of view"
+    },
+    {
+      "startSeconds": 873.66,
+      "text": "top command is what I showed you a"
+    },
+    {
+      "startSeconds": 875.339,
+      "text": "little bit in depth but we came here"
+    },
+    {
+      "startSeconds": 877.139,
+      "text": "looking for the hpf all right let's go"
+    },
+    {
+      "startSeconds": 880.019,
+      "text": "and"
+    },
+    {
+      "startSeconds": 880.92,
+      "text": "look at the HPA for HPA to work I need"
+    },
+    {
+      "startSeconds": 883.38,
+      "text": "to have the metrics and we install the"
+    },
+    {
+      "startSeconds": 884.88,
+      "text": "Matrix good let me quickly clean things"
+    },
+    {
+      "startSeconds": 886.86,
+      "text": "up keep cattle delete"
+    },
+    {
+      "startSeconds": 890.1,
+      "text": "let's go look at the HPA right now so"
+    },
+    {
+      "startSeconds": 892.26,
+      "text": "for HPA to work what do we need we"
+    },
+    {
+      "startSeconds": 894.12,
+      "text": "needed the deployment to be created let"
+    },
+    {
+      "startSeconds": 897,
+      "text": "me quickly get the deployment yaml I'm"
+    },
+    {
+      "startSeconds": 899.519,
+      "text": "going to create a yaml file deployment"
+    },
+    {
+      "startSeconds": 901.26,
+      "text": "apply from file web app.yamal we've"
+    },
+    {
+      "startSeconds": 904.199,
+      "text": "created a deployment let me open the"
+    },
+    {
+      "startSeconds": 906.06,
+      "text": "deployment let's look at the deployment"
+    },
+    {
+      "startSeconds": 908.1,
+      "text": "I'm going to delete few lines here this"
+    },
+    {
+      "startSeconds": 910.68,
+      "text": "is the regular deployment what we have"
+    },
+    {
+      "startSeconds": 913.68,
+      "text": "seen so far okay we have a spec we have"
+    },
+    {
+      "startSeconds": 918.12,
+      "text": "replicas we have selector and we have"
+    },
+    {
+      "startSeconds": 920.82,
+      "text": "template right the regular deployment so"
+    },
+    {
+      "startSeconds": 923.399,
+      "text": "let me undo the lines what I delete it"
+    },
+    {
+      "startSeconds": 925.86,
+      "text": "now we're getting introduced to A New"
+    },
+    {
+      "startSeconds": 928.5,
+      "text": "Concept New Concept of War of resources"
+    },
+    {
+      "startSeconds": 932.519,
+      "text": "so optionally you can specify the"
+    },
+    {
+      "startSeconds": 936.6,
+      "text": "resources what your container needs most"
+    },
+    {
+      "startSeconds": 939.54,
+      "text": "common resources what you have are CPU"
+    },
+    {
+      "startSeconds": 941.339,
+      "text": "and memory I have seen this somewhere"
+    },
+    {
+      "startSeconds": 943.86,
+      "text": "yes let me save this let me go back to"
+    },
+    {
+      "startSeconds": 946.68,
+      "text": "Docker when I was running the container"
+    },
+    {
+      "startSeconds": 948.72,
+      "text": "Docker container and ask for help we"
+    },
+    {
+      "startSeconds": 951.66,
+      "text": "made use of something what hyphen hyphen"
+    },
+    {
+      "startSeconds": 954.42,
+      "text": "memory remember"
+    },
+    {
+      "startSeconds": 956.22,
+      "text": "by default your container can consume as"
+    },
+    {
+      "startSeconds": 958.98,
+      "text": "much as memory available on the Node by"
+    },
+    {
+      "startSeconds": 961.139,
+      "text": "Design we don't want that to happen why"
+    },
+    {
+      "startSeconds": 963.12,
+      "text": "this is a badly written code there's a"
+    },
+    {
+      "startSeconds": 964.92,
+      "text": "memory leak there's an attacker who got"
+    },
+    {
+      "startSeconds": 966.24,
+      "text": "access to the container he's cropping up"
+    },
+    {
+      "startSeconds": 968.339,
+      "text": "all the memory of that container well"
+    },
+    {
+      "startSeconds": 970.62,
+      "text": "that container is going to consume all"
+    },
+    {
+      "startSeconds": 972.06,
+      "text": "the memory on the Node the other"
+    },
+    {
+      "startSeconds": 973.92,
+      "text": "containers other processes on the server"
+    },
+    {
+      "startSeconds": 975.899,
+      "text": "are going to starve we don't want that"
+    },
+    {
+      "startSeconds": 977.639,
+      "text": "we understand our application we know"
+    },
+    {
+      "startSeconds": 979.32,
+      "text": "our application does not need"
+    },
+    {
+      "startSeconds": 981.06,
+      "text": "a memory is certain Beyond a certain"
+    },
+    {
+      "startSeconds": 983.04,
+      "text": "limit so when we ran our containers we"
+    },
+    {
+      "startSeconds": 986.279,
+      "text": "made use of hyphen iPhone memory or"
+    },
+    {
+      "startSeconds": 987.899,
+      "text": "iPhone M as an option and we set the"
+    },
+    {
+      "startSeconds": 989.94,
+      "text": "upper limit so beyond this limit your"
+    },
+    {
+      "startSeconds": 992.519,
+      "text": "container could not make use of the"
+    },
+    {
+      "startSeconds": 994.199,
+      "text": "memory what happened when install it"
+    },
+    {
+      "startSeconds": 996.18,
+      "text": "well based on how you would be of"
+    },
+    {
+      "startSeconds": 997.98,
+      "text": "defined your application maybe out of"
+    },
+    {
+      "startSeconds": 999.779,
+      "text": "memory exception and stuff like that"
+    },
+    {
+      "startSeconds": 1001.399,
+      "text": "similar you had something else hyphen"
+    },
+    {
+      "startSeconds": 1003.86,
+      "text": "hyphen CPU"
+    },
+    {
+      "startSeconds": 1005.18,
+      "text": "where you could Define how much of CPU"
+    },
+    {
+      "startSeconds": 1007.639,
+      "text": "your containers can make use of by"
+    },
+    {
+      "startSeconds": 1010.22,
+      "text": "default they can make use of as much as"
+    },
+    {
+      "startSeconds": 1011.6,
+      "text": "a CPU available on your host right"
+    },
+    {
+      "startSeconds": 1013.519,
+      "text": "that's when you ran your containers"
+    },
+    {
+      "startSeconds": 1014.92,
+      "text": "specify some options with memory you add"
+    },
+    {
+      "startSeconds": 1017.18,
+      "text": "the memory soft limit as well"
+    },
+    {
+      "startSeconds": 1018.62,
+      "text": "preservation that amount of memory will"
+    },
+    {
+      "startSeconds": 1020.66,
+      "text": "be the result for you now back to the"
+    },
+    {
+      "startSeconds": 1024.02,
+      "text": "kubernetes world same containers of what"
+    },
+    {
+      "startSeconds": 1026.419,
+      "text": "we're running so far what we ran without"
+    },
+    {
+      "startSeconds": 1028.579,
+      "text": "any limits so now the way you restrict"
+    },
+    {
+      "startSeconds": 1031.699,
+      "text": "that CPU and memory in the kubernetes"
+    },
+    {
+      "startSeconds": 1034.339,
+      "text": "world by another keyword under your"
+    },
+    {
+      "startSeconds": 1036.799,
+      "text": "containers pick under here"
+    },
+    {
+      "startSeconds": 1039.88,
+      "text": "container spec you see under your spec"
+    },
+    {
+      "startSeconds": 1042.02,
+      "text": "containers is where you have because you"
+    },
+    {
+      "startSeconds": 1043.88,
+      "text": "need to specify these limits at every"
+    },
+    {
+      "startSeconds": 1046.1,
+      "text": "container level"
+    },
+    {
+      "startSeconds": 1047.54,
+      "text": "right so we have two ways of doing it we"
+    },
+    {
+      "startSeconds": 1049.82,
+      "text": "have resources we have under resources"
+    },
+    {
+      "startSeconds": 1052.34,
+      "text": "limits and requests and there are two"
+    },
+    {
+      "startSeconds": 1054.38,
+      "text": "resources"
+    },
+    {
+      "startSeconds": 1055.419,
+      "text": "your memory Colony double quotes"
+    },
+    {
+      "startSeconds": 1059.84,
+      "text": "memory is represented in bytes kilobytes"
+    },
+    {
+      "startSeconds": 1062.72,
+      "text": "megabytes gigabytes and CPU is in melee"
+    },
+    {
+      "startSeconds": 1066.02,
+      "text": "course"
+    },
+    {
+      "startSeconds": 1066.799,
+      "text": "and again it is also M here well memory"
+    },
+    {
+      "startSeconds": 1069.44,
+      "text": "we understand is in by eight kilobytes"
+    },
+    {
+      "startSeconds": 1071.36,
+      "text": "megabytes gigabytes right"
+    },
+    {
+      "startSeconds": 1073.4,
+      "text": "CPU resource units are called as coarse"
+    },
+    {
+      "startSeconds": 1076.28,
+      "text": "one physical CPU or one virtual CPU is"
+    },
+    {
+      "startSeconds": 1079.16,
+      "text": "one zero two four melee course"
+    },
+    {
+      "startSeconds": 1081.679,
+      "text": "well here M here stands for Billy course"
+    },
+    {
+      "startSeconds": 1084.799,
+      "text": "that means if I had one CPU of 100 Milli"
+    },
+    {
+      "startSeconds": 1087.799,
+      "text": "is nothing but 10 percent of CPU so this"
+    },
+    {
+      "startSeconds": 1090.5,
+      "text": "particular container can't see beyond 10"
+    },
+    {
+      "startSeconds": 1093.2,
+      "text": "of CPU meaning the 10 of my CPU of that"
+    },
+    {
+      "startSeconds": 1095.96,
+      "text": "host is equal to 100 CPU for this"
+    },
+    {
+      "startSeconds": 1098.66,
+      "text": "container CPUs in cores memory isn't"
+    },
+    {
+      "startSeconds": 1101.66,
+      "text": "bytes we understand that resource units"
+    },
+    {
+      "startSeconds": 1104.48,
+      "text": "concept I'm going to Deep dive on that"
+    },
+    {
+      "startSeconds": 1106.58,
+      "text": "right so there are two ways of defining"
+    },
+    {
+      "startSeconds": 1109.34,
+      "text": "it what under resources you have limits"
+    },
+    {
+      "startSeconds": 1112.34,
+      "text": "you have request what are these two well"
+    },
+    {
+      "startSeconds": 1115.039,
+      "text": "first let's look at the request so when"
+    },
+    {
+      "startSeconds": 1117.62,
+      "text": "you specify resource request for a"
+    },
+    {
+      "startSeconds": 1121.22,
+      "text": "container in a pod this information is"
+    },
+    {
+      "startSeconds": 1123.44,
+      "text": "used by two people first it is used by"
+    },
+    {
+      "startSeconds": 1126.32,
+      "text": "Cube scheduler so far the scheduler was"
+    },
+    {
+      "startSeconds": 1129.32,
+      "text": "doing whatever it was doing right we"
+    },
+    {
+      "startSeconds": 1131.299,
+      "text": "never told my scheduler to do what we"
+    },
+    {
+      "startSeconds": 1132.98,
+      "text": "wanted to do we are getting introduced"
+    },
+    {
+      "startSeconds": 1135.2,
+      "text": "to certain things when I'm telling my"
+    },
+    {
+      "startSeconds": 1136.34,
+      "text": "schedule I listed dude put me on to any"
+    },
+    {
+      "startSeconds": 1138.62,
+      "text": "node I don't care as long as that node"
+    },
+    {
+      "startSeconds": 1141.02,
+      "text": "has this much amount of memory for me"
+    },
+    {
+      "startSeconds": 1143.78,
+      "text": "are this much amount of CPU for me so"
+    },
+    {
+      "startSeconds": 1146.6,
+      "text": "scaling the makes use of this"
+    },
+    {
+      "startSeconds": 1147.74,
+      "text": "information to decide which node to"
+    },
+    {
+      "startSeconds": 1149.9,
+      "text": "place you on so it's going to look at"
+    },
+    {
+      "startSeconds": 1152.059,
+      "text": "the hundreds of nodes what you have"
+    },
+    {
+      "startSeconds": 1153.32,
+      "text": "let's go to search for the nodes which"
+    },
+    {
+      "startSeconds": 1155.059,
+      "text": "has at least"
+    },
+    {
+      "startSeconds": 1156.02,
+      "text": "this much of resource what you have"
+    },
+    {
+      "startSeconds": 1158.48,
+      "text": "asked for is available there it becomes"
+    },
+    {
+      "startSeconds": 1160.52,
+      "text": "the filtering criteria for your"
+    },
+    {
+      "startSeconds": 1162.32,
+      "text": "scheduler of course if the 100 nodes 500"
+    },
+    {
+      "startSeconds": 1164.6,
+      "text": "and after 150 nodes are having this"
+    },
+    {
+      "startSeconds": 1167,
+      "text": "capacity it's going to filter those 50"
+    },
+    {
+      "startSeconds": 1168.62,
+      "text": "and it's going to rank and score and"
+    },
+    {
+      "startSeconds": 1170.059,
+      "text": "choose any one of them based on which"
+    },
+    {
+      "startSeconds": 1171.799,
+      "text": "case the highest ranking but I give the"
+    },
+    {
+      "startSeconds": 1173.9,
+      "text": "filtering condition that's your request"
+    },
+    {
+      "startSeconds": 1175.94,
+      "text": "that's Point number one scannular make"
+    },
+    {
+      "startSeconds": 1177.559,
+      "text": "sure this is information good and"
+    },
+    {
+      "startSeconds": 1179.299,
+      "text": "whatever you mentioned under the limits"
+    },
+    {
+      "startSeconds": 1181.4,
+      "text": "whatever you've mentioned the limits"
+    },
+    {
+      "startSeconds": 1183.02,
+      "text": "that's your upper limit your container"
+    },
+    {
+      "startSeconds": 1185.059,
+      "text": "can't make use of Beyond this cubelet on"
+    },
+    {
+      "startSeconds": 1187.88,
+      "text": "that particular node is going to enforce"
+    },
+    {
+      "startSeconds": 1189.919,
+      "text": "this limit so your container can't see"
+    },
+    {
+      "startSeconds": 1192.32,
+      "text": "beyond this what happens well what"
+    },
+    {
+      "startSeconds": 1195.38,
+      "text": "happens if you're running your"
+    },
+    {
+      "startSeconds": 1196.34,
+      "text": "application and your CPU which is stuck"
+    },
+    {
+      "startSeconds": 1198.679,
+      "text": "there right same story memory same story"
+    },
+    {
+      "startSeconds": 1201.559,
+      "text": "gets killed usually without a memory"
+    },
+    {
+      "startSeconds": 1203.48,
+      "text": "exception oaf limit is enforced by"
+    },
+    {
+      "startSeconds": 1206.66,
+      "text": "cubelet and your container is not"
+    },
+    {
+      "startSeconds": 1208.22,
+      "text": "allowed to use beyond what is the limit"
+    },
+    {
+      "startSeconds": 1210.62,
+      "text": "request is made use of it too guys first"
+    },
+    {
+      "startSeconds": 1213.14,
+      "text": "guy is the cube scheduler which uses his"
+    },
+    {
+      "startSeconds": 1215.24,
+      "text": "information to put decide which note to"
+    },
+    {
+      "startSeconds": 1217.64,
+      "text": "put you on and then what it does when it"
+    },
+    {
+      "startSeconds": 1219.86,
+      "text": "goes to a particular node cubelet what"
+    },
+    {
+      "startSeconds": 1221.84,
+      "text": "it does also reserves the requested"
+    },
+    {
+      "startSeconds": 1224.6,
+      "text": "amount of that resource for especially"
+    },
+    {
+      "startSeconds": 1227.24,
+      "text": "for your use only for your container use"
+    },
+    {
+      "startSeconds": 1230.24,
+      "text": "it's going to do a soft reservation out"
+    },
+    {
+      "startSeconds": 1232.58,
+      "text": "there that is your request so I'm going"
+    },
+    {
+      "startSeconds": 1235.52,
+      "text": "to undo what I have added here in the HP"
+    },
+    {
+      "startSeconds": 1237.679,
+      "text": "I kind of introduced this concept to"
+    },
+    {
+      "startSeconds": 1239.24,
+      "text": "show you the scaling part because by"
+    },
+    {
+      "startSeconds": 1241.16,
+      "text": "default that container can consume as"
+    },
+    {
+      "startSeconds": 1242.9,
+      "text": "much as resources I can't add that much"
+    },
+    {
+      "startSeconds": 1245.179,
+      "text": "load to scale up automatically but we"
+    },
+    {
+      "startSeconds": 1248.059,
+      "text": "wanted to introduce A New Concept how do"
+    },
+    {
+      "startSeconds": 1249.86,
+      "text": "you restrict your limits and how do you"
+    },
+    {
+      "startSeconds": 1251.9,
+      "text": "do soft reservations and you tell your"
+    },
+    {
+      "startSeconds": 1253.46,
+      "text": "scheduler where to put you is with the"
+    },
+    {
+      "startSeconds": 1255.559,
+      "text": "help of resources under your containers"
+    },
+    {
+      "startSeconds": 1257.419,
+      "text": "under resources you say limits and"
+    },
+    {
+      "startSeconds": 1260.12,
+      "text": "requests the two kind of resources you"
+    },
+    {
+      "startSeconds": 1261.98,
+      "text": "have memory and CPU memory in bytes and"
+    },
+    {
+      "startSeconds": 1264.74,
+      "text": "CPU in your codes all right but we came"
+    },
+    {
+      "startSeconds": 1267.08,
+      "text": "here to look for HPA as a concept and we"
+    },
+    {
+      "startSeconds": 1269.419,
+      "text": "got introduced to something else new"
+    },
+    {
+      "startSeconds": 1271.28,
+      "text": "good so I'm going to create this"
+    },
+    {
+      "startSeconds": 1272.78,
+      "text": "deployment right now I think we did"
+    },
+    {
+      "startSeconds": 1274.039,
+      "text": "already created this it can get on so"
+    },
+    {
+      "startSeconds": 1276.5,
+      "text": "we've created a deployment which has"
+    },
+    {
+      "startSeconds": 1277.94,
+      "text": "three replicas and that is request what"
+    },
+    {
+      "startSeconds": 1280.22,
+      "text": "we have said right life is good fine I"
+    },
+    {
+      "startSeconds": 1282.559,
+      "text": "need to create a service for this to"
+    },
+    {
+      "startSeconds": 1284.36,
+      "text": "access it good so what do we do we learn"
+    },
+    {
+      "startSeconds": 1286.76,
+      "text": "the exposed command very easy to create"
+    },
+    {
+      "startSeconds": 1288.44,
+      "text": "a service we'll say Cube cuddle expose a"
+    },
+    {
+      "startSeconds": 1291.26,
+      "text": "service a deployment what is the name of"
+    },
+    {
+      "startSeconds": 1293.179,
+      "text": "your deployment here the name of my"
+    },
+    {
+      "startSeconds": 1294.86,
+      "text": "deployment and what is the port number"
+    },
+    {
+      "startSeconds": 1296.659,
+      "text": "for my service with whatever I want what"
+    },
+    {
+      "startSeconds": 1299.48,
+      "text": "is the name of the service if you don't"
+    },
+    {
+      "startSeconds": 1301.159,
+      "text": "mention this option the name of"
+    },
+    {
+      "startSeconds": 1303.02,
+      "text": "deployment will be the name of your"
+    },
+    {
+      "startSeconds": 1304.159,
+      "text": "service I will say create me a service"
+    },
+    {
+      "startSeconds": 1306.32,
+      "text": "whatever name right and I will say maybe"
+    },
+    {
+      "startSeconds": 1309.62,
+      "text": "create me a type is equal to node Port"
+    },
+    {
+      "startSeconds": 1311.72,
+      "text": "because we have learned that of course I"
+    },
+    {
+      "startSeconds": 1313.52,
+      "text": "could do Expose and help it shows me all"
+    },
+    {
+      "startSeconds": 1315.14,
+      "text": "the options I'm just showing you a few"
+    },
+    {
+      "startSeconds": 1316.58,
+      "text": "easily I was able to create a service"
+    },
+    {
+      "startSeconds": 1319.64,
+      "text": "good now Cube cat will get all we also"
+    },
+    {
+      "startSeconds": 1323.299,
+      "text": "have a service note Port created this is"
+    },
+    {
+      "startSeconds": 1325.82,
+      "text": "the port number what is been given to me"
+    },
+    {
+      "startSeconds": 1328.1,
+      "text": "good so if I say in my Etc host files"
+    },
+    {
+      "startSeconds": 1331.46,
+      "text": "I've added Cube Node 1 as an entry and"
+    },
+    {
+      "startSeconds": 1333.38,
+      "text": "if I said support number and I'm able to"
+    },
+    {
+      "startSeconds": 1335.659,
+      "text": "access that application fine now we need"
+    },
+    {
+      "startSeconds": 1339.08,
+      "text": "to see the HPA let's create the h PA for"
+    },
+    {
+      "startSeconds": 1343.159,
+      "text": "this guy let me download the Yaman file"
+    },
+    {
+      "startSeconds": 1345.08,
+      "text": "for my HP kind as horizontal pod Auto"
+    },
+    {
+      "startSeconds": 1348.679,
+      "text": "Scala the group belongs to Auto scaling"
+    },
+    {
+      "startSeconds": 1351.86,
+      "text": "the version is B1 in the new versions in"
+    },
+    {
+      "startSeconds": 1355.52,
+      "text": "the new versions of the kubernetes at"
+    },
+    {
+      "startSeconds": 1358.12,
+      "text": "1.23 onwards two three two four two five"
+    },
+    {
+      "startSeconds": 1360.74,
+      "text": "the version of Auto scale has been"
+    },
+    {
+      "startSeconds": 1362.539,
+      "text": "upgraded to V2 V2 has more options more"
+    },
+    {
+      "startSeconds": 1365.299,
+      "text": "options where you can specify V1 is only"
+    },
+    {
+      "startSeconds": 1368.059,
+      "text": "one option what you have called as"
+    },
+    {
+      "startSeconds": 1369.38,
+      "text": "Target CPU utilization percentage well"
+    },
+    {
+      "startSeconds": 1371.96,
+      "text": "under the HPA spec there are four things"
+    },
+    {
+      "startSeconds": 1373.88,
+      "text": "which is the target reference hundreds"
+    },
+    {
+      "startSeconds": 1376.88,
+      "text": "of deployments which deployment you want"
+    },
+    {
+      "startSeconds": 1378.44,
+      "text": "me to scale up well there is a"
+    },
+    {
+      "startSeconds": 1380.24,
+      "text": "deployment which belongs to apps as a"
+    },
+    {
+      "startSeconds": 1381.86,
+      "text": "group version V1 name of this guy this"
+    },
+    {
+      "startSeconds": 1383.9,
+      "text": "is what I want you to keep an eye on I'm"
+    },
+    {
+      "startSeconds": 1385.46,
+      "text": "telling my hpf and I'm telling what is"
+    },
+    {
+      "startSeconds": 1387.86,
+      "text": "the CP utilization default is 80 percent"
+    },
+    {
+      "startSeconds": 1390.26,
+      "text": "and I want the scale up to happen faster"
+    },
+    {
+      "startSeconds": 1392.419,
+      "text": "I have mentioned 20 as my default so it"
+    },
+    {
+      "startSeconds": 1394.4,
+      "text": "needs to ensure at any given point of"
+    },
+    {
+      "startSeconds": 1396.44,
+      "text": "time the certification of those parts"
+    },
+    {
+      "startSeconds": 1398.179,
+      "text": "out there collectively is below 20"
+    },
+    {
+      "startSeconds": 1399.74,
+      "text": "percent so we'll do whatever you need to"
+    },
+    {
+      "startSeconds": 1402.5,
+      "text": "do add as many as replicas as you want"
+    },
+    {
+      "startSeconds": 1404.96,
+      "text": "to bring it down to below 20 percent but"
+    },
+    {
+      "startSeconds": 1407.9,
+      "text": "I don't want you to max out my cluster"
+    },
+    {
+      "startSeconds": 1409.7,
+      "text": "resources I don't want you to infinitely"
+    },
+    {
+      "startSeconds": 1411.74,
+      "text": "scale maximum you can scale up to 10."
+    },
+    {
+      "startSeconds": 1414.5,
+      "text": "beyond that well don't do anything I"
+    },
+    {
+      "startSeconds": 1417.2,
+      "text": "know my applications Max 10 should be"
+    },
+    {
+      "startSeconds": 1418.82,
+      "text": "enough when it is all under 20 under the"
+    },
+    {
+      "startSeconds": 1421.82,
+      "text": "threshold life is good I wanted to"
+    },
+    {
+      "startSeconds": 1424.58,
+      "text": "maintain minimum of two replicas I've"
+    },
+    {
+      "startSeconds": 1426.799,
+      "text": "mentioned that I'm going to create my"
+    },
+    {
+      "startSeconds": 1428.78,
+      "text": "HPA keep cattle apply from file"
+    },
+    {
+      "startSeconds": 1433.059,
+      "text": "hpa.yaml my HPA got created very nice"
+    },
+    {
+      "startSeconds": 1436.159,
+      "text": "Cube cadded at all and I have HPA also"
+    },
+    {
+      "startSeconds": 1440.72,
+      "text": "created here that HPA is referencing a"
+    },
+    {
+      "startSeconds": 1443.539,
+      "text": "deployment name as web application and"
+    },
+    {
+      "startSeconds": 1445.64,
+      "text": "right now it's telling I don't know what"
+    },
+    {
+      "startSeconds": 1447.2,
+      "text": "is the current CPU utilization because"
+    },
+    {
+      "startSeconds": 1450.02,
+      "text": "when you deploy an HPA HP is going to"
+    },
+    {
+      "startSeconds": 1452.659,
+      "text": "score scrape your metrics you already"
+    },
+    {
+      "startSeconds": 1454.64,
+      "text": "have exposed geometrics API you have"
+    },
+    {
+      "startSeconds": 1456.5,
+      "text": "installed your Matrix API server and"
+    },
+    {
+      "startSeconds": 1458.419,
+      "text": "it's going to scrape this metrics every"
+    },
+    {
+      "startSeconds": 1460.28,
+      "text": "15 seconds can we change all of that of"
+    },
+    {
+      "startSeconds": 1462.799,
+      "text": "course we can change all that behavior"
+    },
+    {
+      "startSeconds": 1464.62,
+      "text": "default is 15 seconds you don't want it"
+    },
+    {
+      "startSeconds": 1466.94,
+      "text": "to keep on scraping your metrics and"
+    },
+    {
+      "startSeconds": 1468.38,
+      "text": "slow down things that's why the default"
+    },
+    {
+      "startSeconds": 1470.419,
+      "text": "value is set to 15 seconds so it's going"
+    },
+    {
+      "startSeconds": 1472.52,
+      "text": "to take some time like 15 seconds if you"
+    },
+    {
+      "startSeconds": 1474.26,
+      "text": "come back and look at it now it is"
+    },
+    {
+      "startSeconds": 1476,
+      "text": "captured what is your current metric"
+    },
+    {
+      "startSeconds": 1477.919,
+      "text": "value now these parts of this deployment"
+    },
+    {
+      "startSeconds": 1480.08,
+      "text": "currently are consuming zero percent of"
+    },
+    {
+      "startSeconds": 1482.9,
+      "text": "CPU nobody is accessing it so we need to"
+    },
+    {
+      "startSeconds": 1485.36,
+      "text": "do what I add some load how do I do that"
+    },
+    {
+      "startSeconds": 1488.179,
+      "text": "I need to access that application"
+    },
+    {
+      "startSeconds": 1489.559,
+      "text": "correct so what will we do we will make"
+    },
+    {
+      "startSeconds": 1492.919,
+      "text": "use of a tool called as Siege as a third"
+    },
+    {
+      "startSeconds": 1496.1,
+      "text": "party tool I am going to run that when I"
+    },
+    {
+      "startSeconds": 1498.32,
+      "text": "have installed it tool called SC this is"
+    },
+    {
+      "startSeconds": 1499.82,
+      "text": "a regular tool General load testing tool"
+    },
+    {
+      "startSeconds": 1501.5,
+      "text": "http is load tester that is and just to"
+    },
+    {
+      "startSeconds": 1504.26,
+      "text": "add some tool load or that so if I"
+    },
+    {
+      "startSeconds": 1506.179,
+      "text": "quickly do Cube I will get all"
+    },
+    {
+      "startSeconds": 1508.419,
+      "text": "this is the port number what I have"
+    },
+    {
+      "startSeconds": 1510.86,
+      "text": "correct so what do I do if I make use of"
+    },
+    {
+      "startSeconds": 1512.9,
+      "text": "the tool what we have installed called a"
+    },
+    {
+      "startSeconds": 1514.34,
+      "text": "Siege and I say concurrently is the"
+    },
+    {
+      "startSeconds": 1516.98,
+      "text": "quiet mode don't give me any verbose"
+    },
+    {
+      "startSeconds": 1518.48,
+      "text": "output concurrently as five users for"
+    },
+    {
+      "startSeconds": 1521.299,
+      "text": "the time of two minutes I want you to"
+    },
+    {
+      "startSeconds": 1524.36,
+      "text": "hit this URL that URL is Q by fitting"
+    },
+    {
+      "startSeconds": 1527.179,
+      "text": "over to what and the port number"
+    },
+    {
+      "startSeconds": 1529.279,
+      "text": "any node name node IP you can make use"
+    },
+    {
+      "startSeconds": 1531.44,
+      "text": "of I can make use of my node name"
+    },
+    {
+      "startSeconds": 1533.48,
+      "text": "because I have added that IP address in"
+    },
+    {
+      "startSeconds": 1535.76,
+      "text": "my Etc host file otherwise you can make"
+    },
+    {
+      "startSeconds": 1537.98,
+      "text": "use of node IP you can internally again"
+    },
+    {
+      "startSeconds": 1539.96,
+      "text": "the cluster I can make your cluster IP"
+    },
+    {
+      "startSeconds": 1541.46,
+      "text": "and this port number node name node IP"
+    },
+    {
+      "startSeconds": 1543.98,
+      "text": "and this port number as well so what's"
+    },
+    {
+      "startSeconds": 1546.14,
+      "text": "going to happen is going to hit this URL"
+    },
+    {
+      "startSeconds": 1548.779,
+      "text": "for two minutes straight As five"
+    },
+    {
+      "startSeconds": 1551.059,
+      "text": "continuous the moment you hit is what's"
+    },
+    {
+      "startSeconds": 1552.62,
+      "text": "going to happen it's going to say"
+    },
+    {
+      "startSeconds": 1553.4,
+      "text": "welcome to nginx 200 response right"
+    },
+    {
+      "startSeconds": 1556.039,
+      "text": "maybe it takes a milliseconds and then"
+    },
+    {
+      "startSeconds": 1558.02,
+      "text": "it's going to again going to bombard it"
+    },
+    {
+      "startSeconds": 1559.64,
+      "text": "with the same request so it's going to"
+    },
+    {
+      "startSeconds": 1561.679,
+      "text": "do in this two minutes maybe you know a"
+    },
+    {
+      "startSeconds": 1563.48,
+      "text": "couple of thousands of transaction so in"
+    },
+    {
+      "startSeconds": 1565.4,
+      "text": "a way what happens all of my pods are"
+    },
+    {
+      "startSeconds": 1567.32,
+      "text": "going to get busy the CP utilization of"
+    },
+    {
+      "startSeconds": 1569.24,
+      "text": "those guys is going to go up we have"
+    },
+    {
+      "startSeconds": 1570.799,
+      "text": "Captain CP utilization little bit of CPU"
+    },
+    {
+      "startSeconds": 1572.659,
+      "text": "Spike there that going to cross the"
+    },
+    {
+      "startSeconds": 1575,
+      "text": "threshold of 20 and it plcd scaling up"
+    },
+    {
+      "startSeconds": 1578.9,
+      "text": "happening let me get the CG right now is"
+    },
+    {
+      "startSeconds": 1581.6,
+      "text": "running let me come back to other screen"
+    },
+    {
+      "startSeconds": 1583.46,
+      "text": "what we have"
+    },
+    {
+      "startSeconds": 1584.72,
+      "text": "this Matrix is claimed every 15 seconds"
+    },
+    {
+      "startSeconds": 1588.799,
+      "text": "right right now it is showing as zero"
+    },
+    {
+      "startSeconds": 1593.24,
+      "text": "percent so after 15 seconds it's going"
+    },
+    {
+      "startSeconds": 1595.1,
+      "text": "to come back and go look at the Matrix"
+    },
+    {
+      "startSeconds": 1596.48,
+      "text": "now that we are bombarding it constantly"
+    },
+    {
+      "startSeconds": 1599,
+      "text": "hitting this guy"
+    },
+    {
+      "startSeconds": 1600.44,
+      "text": "the CP utilization is going to go up"
+    },
+    {
+      "startSeconds": 1602.659,
+      "text": "slowly you see the CPU went up to 18"
+    },
+    {
+      "startSeconds": 1605.539,
+      "text": "right now still not enough to trigger"
+    },
+    {
+      "startSeconds": 1608.9,
+      "text": "the scale up Beyond it's still below 20"
+    },
+    {
+      "startSeconds": 1612.559,
+      "text": "still it's not going to do anything it's"
+    },
+    {
+      "startSeconds": 1614.179,
+      "text": "still going to maintain the same replica"
+    },
+    {
+      "startSeconds": 1615.62,
+      "text": "so we're still constantly hitting it and"
+    },
+    {
+      "startSeconds": 1618.14,
+      "text": "now we see there's Matrix jump to 36"
+    },
+    {
+      "startSeconds": 1621.02,
+      "text": "percent so it needs to add more parts to"
+    },
+    {
+      "startSeconds": 1623.299,
+      "text": "bring it to 20 percent so you realize I"
+    },
+    {
+      "startSeconds": 1626.419,
+      "text": "need to add three more replicas and four"
+    },
+    {
+      "startSeconds": 1628.159,
+      "text": "more replicas you see four more replicas"
+    },
+    {
+      "startSeconds": 1630.5,
+      "text": "were scaled up so guys this was our"
+    },
+    {
+      "startSeconds": 1633.08,
+      "text": "expert from team k21 academy and if in"
+    },
+    {
+      "startSeconds": 1635.96,
+      "text": "case you want to have a deeper dive and"
+    },
+    {
+      "startSeconds": 1638.179,
+      "text": "want to build a career in kubernetes and"
+    },
+    {
+      "startSeconds": 1640.82,
+      "text": "Docker including devops then we have"
+    },
+    {
+      "startSeconds": 1643.159,
+      "text": "something really special for you we have"
+    },
+    {
+      "startSeconds": 1645.98,
+      "text": "our free class on mastering kubernetes"
+    },
+    {
+      "startSeconds": 1648.26,
+      "text": "Dockers and devops that includes how to"
+    },
+    {
+      "startSeconds": 1651.26,
+      "text": "build in demand skills and land a higher"
+    },
+    {
+      "startSeconds": 1653.9,
+      "text": "paying job so for that you just have to"
+    },
+    {
+      "startSeconds": 1656.299,
+      "text": "visit"
+    },
+    {
+      "startSeconds": 1657.279,
+      "text": "k21academy.com forward slash k8s to do"
+    },
+    {
+      "startSeconds": 1661.159,
+      "text": "you have to click on book your free seat"
+    },
+    {
+      "startSeconds": 1663.14,
+      "text": "now and after that select an event date"
+    },
+    {
+      "startSeconds": 1666.08,
+      "text": "according to your availability enter"
+    },
+    {
+      "startSeconds": 1668.059,
+      "text": "your name your email address your phone"
+    },
+    {
+      "startSeconds": 1670.22,
+      "text": "number and click on yes save my seat"
+    },
+    {
+      "startSeconds": 1672.919,
+      "text": "moving ahead you'll be seeing this kind"
+    },
+    {
+      "startSeconds": 1674.72,
+      "text": "of interface here just have to save this"
+    },
+    {
+      "startSeconds": 1677.419,
+      "text": "link on the extreme Right add it to a"
+    },
+    {
+      "startSeconds": 1679.82,
+      "text": "calendars and I'll see you in the free"
+    },
+    {
+      "startSeconds": 1681.5,
+      "text": "class till then take care and keep"
+    },
+    {
+      "startSeconds": 1683.9,
+      "text": "learning"
+    }
+  ]
+}

@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { ChevronDown } from "lucide-react";
+import { Check, ChevronDown } from "lucide-react";
 import posthog from "posthog-js";
 import { cn } from "@/lib/cn";
 import { Badge } from "@/components/ui/Badge";
@@ -14,6 +14,7 @@ export type CourseContentLesson = {
   slug: string | null;
   clock: string;
   freePreview: boolean;
+  completed: boolean;
 };
 
 export type CourseContentModule = {
@@ -106,8 +107,17 @@ export function CourseContent({
                   {module.lessons.map((lesson) => {
                     const row = (
                       <span className="flex items-center gap-3 py-2.5">
-                        <span className="w-12 shrink-0 text-small text-neutral-500">
-                          {lesson.label}
+                        <span className="flex w-12 shrink-0 items-center text-small text-neutral-500">
+                          {lesson.completed ? (
+                            <span
+                              aria-label="Completed"
+                              className="flex h-5 w-5 items-center justify-center rounded-full border border-primary-500 text-primary-500"
+                            >
+                              <Check className="h-3 w-3" strokeWidth={3} />
+                            </span>
+                          ) : (
+                            lesson.label
+                          )}
                         </span>
                         <span className="min-w-0 flex-1 truncate text-body text-neutral-700">
                           {lesson.title}

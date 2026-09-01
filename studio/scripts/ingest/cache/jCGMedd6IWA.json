@@ -1,8 +1,1118 @@
 {
   "id": "jCGMedd6IWA",
   "url": "https://www.youtube.com/watch?v=jCGMedd6IWA",
-  "fetchedAt": "2026-08-31T05:15:03.865Z",
-  "captionKind": "empty",
-  "chapters": [],
-  "cues": []
+  "fetchedAt": "2026-09-01T04:05:33.755Z",
+  "captionKind": "asr",
+  "chapters": [
+    {
+      "startSeconds": 0,
+      "label": "Introduction"
+    },
+    {
+      "startSeconds": 40,
+      "label": "Why you need useDeferredValue"
+    },
+    {
+      "startSeconds": 119,
+      "label": "How useDeferredValue works"
+    },
+    {
+      "startSeconds": 165,
+      "label": "How to implement useDeferredValue"
+    }
+  ],
+  "cues": [
+    {
+      "startSeconds": 0,
+      "text": "One of the biggest goals of React 18 was"
+    },
+    {
+      "startSeconds": 2.68,
+      "text": "to try to fix sluggish and"
+    },
+    {
+      "startSeconds": 4.16,
+      "text": "non-responsive applications and to do so"
+    },
+    {
+      "startSeconds": 6.48,
+      "text": "they implemented two main hooks. There's"
+    },
+    {
+      "startSeconds": 8.64,
+      "text": "the use transition hook and the use"
+    },
+    {
+      "startSeconds": 10.6,
+      "text": "deferred value hook. In this video we're"
+    },
+    {
+      "startSeconds": 12.68,
+      "text": "going to be specifically focusing on the"
+    },
+    {
+      "startSeconds": 14.2,
+      "text": "use deferred value hook, but if you want"
+    },
+    {
+      "startSeconds": 16.24,
+      "text": "to look at the use transition hook as"
+    },
+    {
+      "startSeconds": 17.68,
+      "text": "well as all the other hooks in React, I"
+    },
+    {
+      "startSeconds": 19.56,
+      "text": "have a completely free React course that"
+    },
+    {
+      "startSeconds": 21.4,
+      "text": "covers every single hook. It's going to"
+    },
+    {
+      "startSeconds": 23.12,
+      "text": "be linked down in the description for"
+    },
+    {
+      "startSeconds": 24.6,
+      "text": "you. Now with that said, let's get"
+    },
+    {
+      "startSeconds": 26,
+      "text": "started on use deferred value."
+    },
+    {
+      "startSeconds": 31.36,
+      "text": "Welcome back to WebDev Simplified. My"
+    },
+    {
+      "startSeconds": 33.48,
+      "text": "name is Kyle and my job is to simplify"
+    },
+    {
+      "startSeconds": 35.24,
+      "text": "the web for you so you can start"
+    },
+    {
+      "startSeconds": 36.56,
+      "text": "building your dream project sooner. In"
+    },
+    {
+      "startSeconds": 38.08,
+      "text": "this video we're going to be talking all"
+    },
+    {
+      "startSeconds": 39.2,
+      "text": "about use deferred value. So to get"
+    },
+    {
+      "startSeconds": 41.56,
+      "text": "started I kind of want to explain what"
+    },
+    {
+      "startSeconds": 42.76,
+      "text": "our application does. We essentially"
+    },
+    {
+      "startSeconds": 44.48,
+      "text": "just have a really simple list component"
+    },
+    {
+      "startSeconds": 46.52,
+      "text": "which takes in an input prop. This input"
+    },
+    {
+      "startSeconds": 48.92,
+      "text": "prop is set to whatever I type into this"
+    },
+    {
+      "startSeconds": 50.64,
+      "text": "input box over here. As you can see, we"
+    },
+    {
+      "startSeconds": 52.92,
+      "text": "just have a simple input box. Whenever"
+    },
+    {
+      "startSeconds": 54.32,
+      "text": "it changes, we set this input state"
+    },
+    {
+      "startSeconds": 55.92,
+      "text": "variable and pass it down to our list"
+    },
+    {
+      "startSeconds": 57.64,
+      "text": "component. But we're going to imagine"
+    },
+    {
+      "startSeconds": 59.12,
+      "text": "that this app doesn't even exist. We're"
+    },
+    {
+      "startSeconds": 60.48,
+      "text": "just getting this input prop and that's"
+    },
+    {
+      "startSeconds": 61.88,
+      "text": "all we know. Inside of here, what we're"
+    },
+    {
+      "startSeconds": 63.84,
+      "text": "doing is we're taking our list here,"
+    },
+    {
+      "startSeconds": 65.48,
+      "text": "we're memoizing it using the use memo"
+    },
+    {
+      "startSeconds": 67.16,
+      "text": "hook. And again, if you're unfamiliar"
+    },
+    {
+      "startSeconds": 68.6,
+      "text": "with this hook, that free React hooks"
+    },
+    {
+      "startSeconds": 70.36,
+      "text": "course is going to be linked down in the"
+    },
+    {
+      "startSeconds": 71.6,
+      "text": "description for you. And then what we're"
+    },
+    {
+      "startSeconds": 73.4,
+      "text": "doing inside this use memo is we're"
+    },
+    {
+      "startSeconds": 74.84,
+      "text": "creating a really, really big list. This"
+    },
+    {
+      "startSeconds": 76.68,
+      "text": "list is 20,000 elements long and each"
+    },
+    {
+      "startSeconds": 78.6,
+      "text": "element is just the input itself. So"
+    },
+    {
+      "startSeconds": 80.72,
+      "text": "whenever we change our input, we create"
+    },
+    {
+      "startSeconds": 82.04,
+      "text": "a brand new list with 20,000 elements."
+    },
+    {
+      "startSeconds": 84.24,
+      "text": "Well, this right here is going to be"
+    },
+    {
+      "startSeconds": 85.6,
+      "text": "pretty slow because that's a lot of"
+    },
+    {
+      "startSeconds": 87.16,
+      "text": "elements to render to the page. So if I"
+    },
+    {
+      "startSeconds": 89,
+      "text": "come over here and I type onto my"
+    },
+    {
+      "startSeconds": 90.4,
+      "text": "keyboard for example, right now, I"
+    },
+    {
+      "startSeconds": 92.16,
+      "text": "clicked the D key, you can see it takes"
+    },
+    {
+      "startSeconds": 94,
+      "text": "maybe a second, two seconds to render"
+    },
+    {
+      "startSeconds": 95.76,
+      "text": "out. And the more information I type"
+    },
+    {
+      "startSeconds": 97.4,
+      "text": "like if I start typing right now, you"
+    },
+    {
+      "startSeconds": 99.4,
+      "text": "can see it takes a long time before all"
+    },
+    {
+      "startSeconds": 101.16,
+      "text": "this information renders out to the"
+    },
+    {
+      "startSeconds": 102.44,
+      "text": "screen. Again, multiple seconds. It's"
+    },
+    {
+      "startSeconds": 104.44,
+      "text": "slow, it's sluggish and the user does"
+    },
+    {
+      "startSeconds": 105.96,
+      "text": "not like to work with this type of"
+    },
+    {
+      "startSeconds": 107.44,
+      "text": "experience cuz the input box does not"
+    },
+    {
+      "startSeconds": 109.4,
+      "text": "feel responsive. With use deferred"
+    },
+    {
+      "startSeconds": 111.52,
+      "text": "value, we can actually fix this so that"
+    },
+    {
+      "startSeconds": 113.48,
+      "text": "the input box itself is going to feel"
+    },
+    {
+      "startSeconds": 115.32,
+      "text": "responsive even if the actual website"
+    },
+    {
+      "startSeconds": 117.44,
+      "text": "itself is not that responsive. Now, the"
+    },
+    {
+      "startSeconds": 119.48,
+      "text": "way this use deferred value hook works"
+    },
+    {
+      "startSeconds": 121.88,
+      "text": "is it's very similar to something like"
+    },
+    {
+      "startSeconds": 123.44,
+      "text": "debounce or throttling. Essentially, if"
+    },
+    {
+      "startSeconds": 125.36,
+      "text": "you're unfamiliar with those concepts,"
+    },
+    {
+      "startSeconds": 126.84,
+      "text": "is whenever you're typing inside of an"
+    },
+    {
+      "startSeconds": 128.16,
+      "text": "input with debounce, what it's going to"
+    },
+    {
+      "startSeconds": 129.56,
+      "text": "do is it's going to wait until you at"
+    },
+    {
+      "startSeconds": 131.12,
+      "text": "least spend like 100 milliseconds not"
+    },
+    {
+      "startSeconds": 133.04,
+      "text": "typing, and then it's going to do all of"
+    },
+    {
+      "startSeconds": 135.24,
+      "text": "the calls. So, you could type in like 10"
+    },
+    {
+      "startSeconds": 136.72,
+      "text": "characters, and as long as there's no"
+    },
+    {
+      "startSeconds": 138.24,
+      "text": "more than 100 millisecond gap between"
+    },
+    {
+      "startSeconds": 140.44,
+      "text": "each key press, it's not going to do"
+    },
+    {
+      "startSeconds": 141.8,
+      "text": "anything till you wait 100 seconds or"
+    },
+    {
+      "startSeconds": 143.72,
+      "text": "100 milliseconds after your last key"
+    },
+    {
+      "startSeconds": 145.24,
+      "text": "press. With use deferred value, you"
+    },
+    {
+      "startSeconds": 147.44,
+      "text": "don't actually specify a hard-coded"
+    },
+    {
+      "startSeconds": 148.959,
+      "text": "time. What React does is it just says,"
+    },
+    {
+      "startSeconds": 150.8,
+      "text": "\"Okay, I know that this value is going"
+    },
+    {
+      "startSeconds": 152.56,
+      "text": "to be deferred. So, if there's a lot of"
+    },
+    {
+      "startSeconds": 153.88,
+      "text": "changes going on, I'm not going to do"
+    },
+    {
+      "startSeconds": 155.959,
+      "text": "anything, and instead I'm going to wait"
+    },
+    {
+      "startSeconds": 157.32,
+      "text": "until the application isn't busy with"
+    },
+    {
+      "startSeconds": 159.04,
+      "text": "anything else, and then I'm going to go"
+    },
+    {
+      "startSeconds": 161.04,
+      "text": "ahead and process all of these different"
+    },
+    {
+      "startSeconds": 162.68,
+      "text": "changes.\" So, to use this use deferred"
+    },
+    {
+      "startSeconds": 164.64,
+      "text": "value hook, it's actually really simple."
+    },
+    {
+      "startSeconds": 166.56,
+      "text": "First, we just need to import the hook"
+    },
+    {
+      "startSeconds": 168.36,
+      "text": "up here at the very top, and then what"
+    },
+    {
+      "startSeconds": 169.88,
+      "text": "we need to do is we need to say what"
+    },
+    {
+      "startSeconds": 171.16,
+      "text": "value we want to defer. In our case, we"
+    },
+    {
+      "startSeconds": 172.8,
+      "text": "want to defer this input value. Cuz if"
+    },
+    {
+      "startSeconds": 174.76,
+      "text": "this input value has a lot of changes"
+    },
+    {
+      "startSeconds": 176.48,
+      "text": "going on, I don't want to render out a"
+    },
+    {
+      "startSeconds": 178,
+      "text": "brand new list every single time we make"
+    },
+    {
+      "startSeconds": 179.8,
+      "text": "a change. Instead, what I want to do is"
+    },
+    {
+      "startSeconds": 181.4,
+      "text": "I want to wait until it's been a while"
+    },
+    {
+      "startSeconds": 182.88,
+      "text": "since my change has happened before I"
+    },
+    {
+      "startSeconds": 184.68,
+      "text": "render out the list in case I type a"
+    },
+    {
+      "startSeconds": 186.12,
+      "text": "bunch of letters at once."
+    },
+    {
+      "startSeconds": 187.8,
+      "text": "So, we can say that our deferred"
+    },
+    {
+      "startSeconds": 191.04,
+      "text": "input here is going to be equal to"
+    },
+    {
+      "startSeconds": 193.08,
+      "text": "calling use deferred value with our"
+    },
+    {
+      "startSeconds": 194.84,
+      "text": "input passed in. So, all this does"
+    },
+    {
+      "startSeconds": 196.56,
+      "text": "inside of React land it says, \"Hey,"
+    },
+    {
+      "startSeconds": 197.92,
+      "text": "taking this input, and as long as"
+    },
+    {
+      "startSeconds": 199.519,
+      "text": "there's a decent amount of time between"
+    },
+    {
+      "startSeconds": 201.2,
+      "text": "when the input changed last time, then"
+    },
+    {
+      "startSeconds": 203.32,
+      "text": "update our new deferred input."
+    },
+    {
+      "startSeconds": 204.8,
+      "text": "Otherwise, keep it the same as it was"
+    },
+    {
+      "startSeconds": 206.44,
+      "text": "before until we stop typing"
+    },
+    {
+      "startSeconds": 208.16,
+      "text": "essentially.\" Then, what we can do is"
+    },
+    {
+      "startSeconds": 209.959,
+      "text": "just replace everywhere we have input"
+    },
+    {
+      "startSeconds": 211.68,
+      "text": "with this deferred input. So, here and"
+    },
+    {
+      "startSeconds": 213.84,
+      "text": "here. Now, we've essentially replaced"
+    },
+    {
+      "startSeconds": 215.6,
+      "text": "every instance of our input with this"
+    },
+    {
+      "startSeconds": 217.2,
+      "text": "deferred version of our input. And just"
+    },
+    {
+      "startSeconds": 219.28,
+      "text": "by doing that, you're going to notice"
+    },
+    {
+      "startSeconds": 220.32,
+      "text": "our app is a little bit more responsive."
+    },
+    {
+      "startSeconds": 221.64,
+      "text": "Let me just refresh it real quick, and"
+    },
+    {
+      "startSeconds": 222.84,
+      "text": "I'm going to type in a character, for"
+    },
+    {
+      "startSeconds": 224.04,
+      "text": "example, A. And you can see that A"
+    },
+    {
+      "startSeconds": 225.88,
+      "text": "immediately appears on the screen, and"
+    },
+    {
+      "startSeconds": 227.519,
+      "text": "then my list loads afterwards. And"
+    },
+    {
+      "startSeconds": 229.4,
+      "text": "that's because of this use deferred"
+    },
+    {
+      "startSeconds": 230.68,
+      "text": "value. What's happening inside of React,"
+    },
+    {
+      "startSeconds": 232.6,
+      "text": "if we go back into our app components,"
+    },
+    {
+      "startSeconds": 234.24,
+      "text": "we can see what that looks like as well."
+    },
+    {
+      "startSeconds": 235.88,
+      "text": "You can see inside of here we're setting"
+    },
+    {
+      "startSeconds": 237.32,
+      "text": "our input. And this is happening and"
+    },
+    {
+      "startSeconds": 239.4,
+      "text": "what's happening is it's setting our"
+    },
+    {
+      "startSeconds": 240.4,
+      "text": "input and then normally if we didn't"
+    },
+    {
+      "startSeconds": 242.56,
+      "text": "have this deferred value here, what it"
+    },
+    {
+      "startSeconds": 243.96,
+      "text": "would do is it'd be popping into this"
+    },
+    {
+      "startSeconds": 245.52,
+      "text": "use memo, it'd be calculating out my"
+    },
+    {
+      "startSeconds": 247.12,
+      "text": "entire list and then it would be"
+    },
+    {
+      "startSeconds": 248.72,
+      "text": "rendering out all the information to the"
+    },
+    {
+      "startSeconds": 250.28,
+      "text": "screen at once. So it'd be rendering out"
+    },
+    {
+      "startSeconds": 251.88,
+      "text": "this new input value as well as my"
+    },
+    {
+      "startSeconds": 253.64,
+      "text": "entire new list value as well."
+    },
+    {
+      "startSeconds": 256.4,
+      "text": "But with use deferred value, what's"
+    },
+    {
+      "startSeconds": 257.92,
+      "text": "happening instead is it's saying, \"Okay,"
+    },
+    {
+      "startSeconds": 260.04,
+      "text": "my input has changed and then I'm going"
+    },
+    {
+      "startSeconds": 261.799,
+      "text": "to go into my list component. It's"
+    },
+    {
+      "startSeconds": 262.88,
+      "text": "saying use deferred value, so we're just"
+    },
+    {
+      "startSeconds": 264.4,
+      "text": "going to return the original value,"
+    },
+    {
+      "startSeconds": 265.8,
+      "text": "which is nothing.\" So like whatever the"
+    },
+    {
+      "startSeconds": 267.24,
+      "text": "value was last time the app rendered,"
+    },
+    {
+      "startSeconds": 268.88,
+      "text": "that's what it's going to return. So my"
+    },
+    {
+      "startSeconds": 270.32,
+      "text": "list, it doesn't even change. So this"
+    },
+    {
+      "startSeconds": 272.2,
+      "text": "use memo doesn't have to run. We don't"
+    },
+    {
+      "startSeconds": 273.919,
+      "text": "have to do this lengthy for loop. So"
+    },
+    {
+      "startSeconds": 275.48,
+      "text": "nothing changes on our list side of"
+    },
+    {
+      "startSeconds": 277.2,
+      "text": "things. And then instead in our app over"
+    },
+    {
+      "startSeconds": 278.919,
+      "text": "here, we're rendering out our input with"
+    },
+    {
+      "startSeconds": 280.48,
+      "text": "the new value. Then it's been a while"
+    },
+    {
+      "startSeconds": 282.52,
+      "text": "since we hit our key, maybe a 100"
+    },
+    {
+      "startSeconds": 283.88,
+      "text": "milliseconds or 50 milliseconds has"
+    },
+    {
+      "startSeconds": 285.48,
+      "text": "passed, our application has rendered,"
+    },
+    {
+      "startSeconds": 287.28,
+      "text": "nothing's happened for a while. So now"
+    },
+    {
+      "startSeconds": 288.64,
+      "text": "React's like, \"You know what? It's been"
+    },
+    {
+      "startSeconds": 290.16,
+      "text": "long enough. Let me give you the new"
+    },
+    {
+      "startSeconds": 291.64,
+      "text": "value.\" So now the deferred input is"
+    },
+    {
+      "startSeconds": 293.08,
+      "text": "going to be set to this A key that I"
+    },
+    {
+      "startSeconds": 294.48,
+      "text": "typed in. It's going to recompute my"
+    },
+    {
+      "startSeconds": 296.28,
+      "text": "entire list and then render out the"
+    },
+    {
+      "startSeconds": 297.84,
+      "text": "brand new list. So what this essentially"
+    },
+    {
+      "startSeconds": 299.68,
+      "text": "allows us to do is specify things that"
+    },
+    {
+      "startSeconds": 301.36,
+      "text": "are high priority and low priority. By"
+    },
+    {
+      "startSeconds": 303.88,
+      "text": "using this use deferred value, you're"
+    },
+    {
+      "startSeconds": 305.24,
+      "text": "saying, \"You know what? This deferred"
+    },
+    {
+      "startSeconds": 306.52,
+      "text": "input value is of low priority. I don't"
+    },
+    {
+      "startSeconds": 309.2,
+      "text": "care if this gets updated immediately or"
+    },
+    {
+      "startSeconds": 311.24,
+      "text": "if it takes a little while for it to"
+    },
+    {
+      "startSeconds": 312.56,
+      "text": "update because I know it's going to be"
+    },
+    {
+      "startSeconds": 314.16,
+      "text": "slow and computationally expensive to"
+    },
+    {
+      "startSeconds": 316.28,
+      "text": "do. So I'm going to let it happen later."
+    },
+    {
+      "startSeconds": 318.32,
+      "text": "Whenever it happens, it's okay. I don't"
+    },
+    {
+      "startSeconds": 319.88,
+      "text": "really care. Instead, I want things like"
+    },
+    {
+      "startSeconds": 321.84,
+      "text": "my input value to be updated immediately"
+    },
+    {
+      "startSeconds": 324.48,
+      "text": "while something else like this list, it"
+    },
+    {
+      "startSeconds": 326.12,
+      "text": "can happen whenever. I really don't"
+    },
+    {
+      "startSeconds": 327.68,
+      "text": "care.\" So now this is great because"
+    },
+    {
+      "startSeconds": 329.24,
+      "text": "whenever I type over here in my input,"
+    },
+    {
+      "startSeconds": 330.72,
+      "text": "for example, I could type a bunch of"
+    },
+    {
+      "startSeconds": 331.919,
+      "text": "letters all at once and you can see all"
+    },
+    {
+      "startSeconds": 333.44,
+      "text": "those letters are going to show up on"
+    },
+    {
+      "startSeconds": 334.76,
+      "text": "the screen all at once, which is really"
+    },
+    {
+      "startSeconds": 336.4,
+      "text": "handy. And to kind of show you exactly"
+    },
+    {
+      "startSeconds": 338.12,
+      "text": "how this works, I'm actually going to"
+    },
+    {
+      "startSeconds": 339.28,
+      "text": "use a simple use effect. And inside this"
+    },
+    {
+      "startSeconds": 341.84,
+      "text": "use effect, I'm just going to print out"
+    },
+    {
+      "startSeconds": 343.4,
+      "text": "some code. I'm actually just going to"
+    },
+    {
+      "startSeconds": 344.2,
+      "text": "copy this over. And all this code does"
+    },
+    {
+      "startSeconds": 346.04,
+      "text": "is print out what my input value is and"
+    },
+    {
+      "startSeconds": 347.76,
+      "text": "what my deferred input value is. And"
+    },
+    {
+      "startSeconds": 349.88,
+      "text": "then we're going to make sure anytime"
+    },
+    {
+      "startSeconds": 351.12,
+      "text": "our input or deferred input changes,"
+    },
+    {
+      "startSeconds": 353.36,
+      "text": "we're going to render out this code"
+    },
+    {
+      "startSeconds": 354.92,
+      "text": "here. So essentially anytime our input"
+    },
+    {
+      "startSeconds": 356.52,
+      "text": "or deferred input changes, it's going to"
+    },
+    {
+      "startSeconds": 357.92,
+      "text": "print out what each of those are equal"
+    },
+    {
+      "startSeconds": 359.4,
+      "text": "to at the given time. Let me just clear"
+    },
+    {
+      "startSeconds": 361.84,
+      "text": "out my application. Going to inspect"
+    },
+    {
+      "startSeconds": 363.6,
+      "text": "here, go over to the console, just clear"
+    },
+    {
+      "startSeconds": 365.52,
+      "text": "this out. And what I'm going to do is"
+    },
+    {
+      "startSeconds": 366.68,
+      "text": "I'm just going to type the character A."
+    },
+    {
+      "startSeconds": 368.6,
+      "text": "And you can see at first my input is A"
+    },
+    {
+      "startSeconds": 370.64,
+      "text": "and my deferred value is nothing. It"
+    },
+    {
+      "startSeconds": 372.2,
+      "text": "stayed as the previous value and then"
+    },
+    {
+      "startSeconds": 373.56,
+      "text": "after a little while they both got set"
+    },
+    {
+      "startSeconds": 375.16,
+      "text": "to A. Let's refresh this and try this"
+    },
+    {
+      "startSeconds": 377.12,
+      "text": "again where let's just start out where I"
+    },
+    {
+      "startSeconds": 378.72,
+      "text": "type in a bunch of letters all at once"
+    },
+    {
+      "startSeconds": 380,
+      "text": "like ASDF. You can see my input goes A,"
+    },
+    {
+      "startSeconds": 382.68,
+      "text": "AS, ASD, ASDF. And my deferred value"
+    },
+    {
+      "startSeconds": 385.6,
+      "text": "never changes during that entire time"
+    },
+    {
+      "startSeconds": 387.4,
+      "text": "cuz there was no delay in between my"
+    },
+    {
+      "startSeconds": 389.68,
+      "text": "character presses. So React is like,"
+    },
+    {
+      "startSeconds": 391.48,
+      "text": "\"Okay, things are still changing, things"
+    },
+    {
+      "startSeconds": 393,
+      "text": "are still changing. I'm not going to"
+    },
+    {
+      "startSeconds": 394.04,
+      "text": "update the value yet.\" And then I stop"
+    },
+    {
+      "startSeconds": 395.88,
+      "text": "typing. It's been a while so React's"
+    },
+    {
+      "startSeconds": 397.32,
+      "text": "like, \"Okay, things haven't changed in a"
+    },
+    {
+      "startSeconds": 398.88,
+      "text": "while. Let's update that deferred value"
+    },
+    {
+      "startSeconds": 400.52,
+      "text": "and render out the brand new list.\" Now"
+    },
+    {
+      "startSeconds": 402.48,
+      "text": "the real place that this shines is when"
+    },
+    {
+      "startSeconds": 403.919,
+      "text": "you don't actually have access to the"
+    },
+    {
+      "startSeconds": 405.32,
+      "text": "ability to set the state. In our case,"
+    },
+    {
+      "startSeconds": 407.44,
+      "text": "we could change the code up here for our"
+    },
+    {
+      "startSeconds": 409.2,
+      "text": "set input, but imagine that this set"
+    },
+    {
+      "startSeconds": 411.44,
+      "text": "input happened in like a library or it"
+    },
+    {
+      "startSeconds": 413.4,
+      "text": "happened somewhere else in your"
+    },
+    {
+      "startSeconds": 414.48,
+      "text": "application that's far removed from your"
+    },
+    {
+      "startSeconds": 416.28,
+      "text": "list component. It'd be nearly"
+    },
+    {
+      "startSeconds": 418,
+      "text": "impossible to use that set state and"
+    },
+    {
+      "startSeconds": 419.919,
+      "text": "modify how this works. So instead we can"
+    },
+    {
+      "startSeconds": 421.919,
+      "text": "just plop in this use deferred value and"
+    },
+    {
+      "startSeconds": 423.919,
+      "text": "it's going to be smart enough to know"
+    },
+    {
+      "startSeconds": 425.12,
+      "text": "that, \"Okay, we're going to wait for the"
+    },
+    {
+      "startSeconds": 426.36,
+      "text": "change in the input to be long enough.\""
+    },
+    {
+      "startSeconds": 428.44,
+      "text": "And it's essentially going to implement"
+    },
+    {
+      "startSeconds": 429.72,
+      "text": "that debounce or throttling behavior for"
+    },
+    {
+      "startSeconds": 431.6,
+      "text": "us, but it's going to be even better"
+    },
+    {
+      "startSeconds": 433.2,
+      "text": "than like a debounce or throttling"
+    },
+    {
+      "startSeconds": 434.76,
+      "text": "implementation. Cuz it's not going to be"
+    },
+    {
+      "startSeconds": 436.44,
+      "text": "forced to wait like 300 milliseconds."
+    },
+    {
+      "startSeconds": 438.52,
+      "text": "Instead if nothing happens and it can"
+    },
+    {
+      "startSeconds": 440.04,
+      "text": "work right away, it's just going to work"
+    },
+    {
+      "startSeconds": 441.72,
+      "text": "right away. But if there's lots of"
+    },
+    {
+      "startSeconds": 443,
+      "text": "changes, it's going to make sure it"
+    },
+    {
+      "startSeconds": 444.28,
+      "text": "waits long enough for all of them. And"
+    },
+    {
+      "startSeconds": 446,
+      "text": "React's smart enough to know what's"
+    },
+    {
+      "startSeconds": 447.2,
+      "text": "going on inside the library to know when"
+    },
+    {
+      "startSeconds": 449.08,
+      "text": "the best time to change this input is."
+    },
+    {
+      "startSeconds": 452.08,
+      "text": "Now if you enjoyed this video, you're"
+    },
+    {
+      "startSeconds": 453.2,
+      "text": "definitely going to love my completely"
+    },
+    {
+      "startSeconds": 454.919,
+      "text": "free React Hooks course. It's going to"
+    },
+    {
+      "startSeconds": 456.72,
+      "text": "be linked down in the description below."
+    },
+    {
+      "startSeconds": 458.16,
+      "text": "It covers every single React Hook that"
+    },
+    {
+      "startSeconds": 460,
+      "text": "that need to know and it's a"
+    },
+    {
+      "startSeconds": 461.88,
+      "text": "free, which is absolutely amazing. No"
+    },
+    {
+      "startSeconds": 463.92,
+      "text": "ads, nothing like that. So, if you're"
+    },
+    {
+      "startSeconds": 465.56,
+      "text": "interested, that's going to be linked"
+    },
+    {
+      "startSeconds": 466.52,
+      "text": "down in the description for you. Now,"
+    },
+    {
+      "startSeconds": 468.28,
+      "text": "with that said, thank you very much for"
+    },
+    {
+      "startSeconds": 469.76,
+      "text": "watching, and have a good day."
+    }
+  ]
 }

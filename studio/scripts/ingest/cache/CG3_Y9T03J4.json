@@ -1,8 +1,1169 @@
 {
   "id": "CG3_Y9T03J4",
   "url": "https://www.youtube.com/watch?v=CG3_Y9T03J4",
-  "fetchedAt": "2026-08-31T05:15:15.035Z",
-  "captionKind": "empty",
+  "fetchedAt": "2026-09-01T04:05:51.252Z",
+  "captionKind": "asr",
   "chapters": [],
-  "cues": []
+  "cues": [
+    {
+      "startSeconds": 0.16,
+      "text": "union types in typescript are a tool"
+    },
+    {
+      "startSeconds": 2.48,
+      "text": "that gives you incredible strong type"
+    },
+    {
+      "startSeconds": 4.56,
+      "text": "safety for complex typing scenarios so"
+    },
+    {
+      "startSeconds": 7.44,
+      "text": "let's take a look at an example in this"
+    },
+    {
+      "startSeconds": 9.599,
+      "text": "video when you first hear about type"
+    },
+    {
+      "startSeconds": 11.28,
+      "text": "unions in typescript it's often in the"
+    },
+    {
+      "startSeconds": 13.04,
+      "text": "context of line two here this is a query"
+    },
+    {
+      "startSeconds": 16.24,
+      "text": "options type that we might use to set up"
+    },
+    {
+      "startSeconds": 18.4,
+      "text": "a database request and as you can see we"
+    },
+    {
+      "startSeconds": 20.96,
+      "text": "have a number of tables that we can"
+    },
+    {
+      "startSeconds": 23.279,
+      "text": "query"
+    },
+    {
+      "startSeconds": 24.16,
+      "text": "now the non-union way to do this might"
+    },
+    {
+      "startSeconds": 27.119,
+      "text": "be to just say string and assume that"
+    },
+    {
+      "startSeconds": 29.519,
+      "text": "we're going to check in our actual"
+    },
+    {
+      "startSeconds": 31.84,
+      "text": "application code that the table name"
+    },
+    {
+      "startSeconds": 34.079,
+      "text": "given is an acceptable table but we can"
+    },
+    {
+      "startSeconds": 35.84,
+      "text": "do this at the type layer as well by"
+    },
+    {
+      "startSeconds": 37.84,
+      "text": "using a union so we can say we only"
+    },
+    {
+      "startSeconds": 39.68,
+      "text": "allow querying of the users widgets and"
+    },
+    {
+      "startSeconds": 42.239,
+      "text": "sessions table the problem with this"
+    },
+    {
+      "startSeconds": 44,
+      "text": "union is that it's really only"
+    },
+    {
+      "startSeconds": 45.52,
+      "text": "restricting our table name it's not"
+    },
+    {
+      "startSeconds": 47.36,
+      "text": "contributing anything else to this query"
+    },
+    {
+      "startSeconds": 49.36,
+      "text": "options type but it can notice these"
+    },
+    {
+      "startSeconds": 51.44,
+      "text": "options we have on lines three through"
+    },
+    {
+      "startSeconds": 52.96,
+      "text": "five because we don't know which table"
+    },
+    {
+      "startSeconds": 55.6,
+      "text": "name will be passed in we have to make"
+    },
+    {
+      "startSeconds": 57.6,
+      "text": "all three of these ids optional we"
+    },
+    {
+      "startSeconds": 59.76,
+      "text": "likely won't have a widget id for"
+    },
+    {
+      "startSeconds": 61.6,
+      "text": "example when we're querying the users"
+    },
+    {
+      "startSeconds": 64,
+      "text": "table and so again we'll have to check"
+    },
+    {
+      "startSeconds": 65.439,
+      "text": "in our application code to see if this"
+    },
+    {
+      "startSeconds": 67.28,
+      "text": "is the user's table do we have a user id"
+    },
+    {
+      "startSeconds": 69.52,
+      "text": "and so on and then at the bottom here we"
+    },
+    {
+      "startSeconds": 71.2,
+      "text": "have limit and offset which are both"
+    },
+    {
+      "startSeconds": 72.64,
+      "text": "things that maybe all of these queries"
+    },
+    {
+      "startSeconds": 74.24,
+      "text": "will need and we'll come back to those"
+    },
+    {
+      "startSeconds": 75.36,
+      "text": "in a bit but first it would be really"
+    },
+    {
+      "startSeconds": 77.04,
+      "text": "great if we could use unions to strongly"
+    },
+    {
+      "startSeconds": 79.68,
+      "text": "type the table name and the id field"
+    },
+    {
+      "startSeconds": 83.04,
+      "text": "together in some way well we can and"
+    },
+    {
+      "startSeconds": 85.28,
+      "text": "let's create a new query options type"
+    },
+    {
+      "startSeconds": 88.08,
+      "text": "here this query options type is going to"
+    },
+    {
+      "startSeconds": 90.32,
+      "text": "be a union but not at the individual"
+    },
+    {
+      "startSeconds": 92.64,
+      "text": "property level but instead at the"
+    },
+    {
+      "startSeconds": 94.159,
+      "text": "overall type level so first let's just"
+    },
+    {
+      "startSeconds": 96.32,
+      "text": "say that the table is equal to users and"
+    },
+    {
+      "startSeconds": 98.96,
+      "text": "this has a user id field that is a"
+    },
+    {
+      "startSeconds": 101.6,
+      "text": "string and then we can union that"
+    },
+    {
+      "startSeconds": 104.079,
+      "text": "together using the pipe character just"
+    },
+    {
+      "startSeconds": 105.759,
+      "text": "like we did up here on line two and"
+    },
+    {
+      "startSeconds": 108.079,
+      "text": "create another entire type and so for"
+    },
+    {
+      "startSeconds": 110.64,
+      "text": "example this one can be for the widgets"
+    },
+    {
+      "startSeconds": 112.88,
+      "text": "table and instead of a user id we'll"
+    },
+    {
+      "startSeconds": 114.88,
+      "text": "have a widget id and we can do the same"
+    },
+    {
+      "startSeconds": 116.96,
+      "text": "thing for the sessions table so now we"
+    },
+    {
+      "startSeconds": 118.56,
+      "text": "have this type that is a union of three"
+    },
+    {
+      "startSeconds": 122,
+      "text": "different types and we could put these"
+    },
+    {
+      "startSeconds": 123.92,
+      "text": "three individual types into their own"
+    },
+    {
+      "startSeconds": 126.159,
+      "text": "type variable if you want but we can"
+    },
+    {
+      "startSeconds": 128.399,
+      "text": "also just union them together as literal"
+    },
+    {
+      "startSeconds": 130.16,
+      "text": "types here and now we can ensure that"
+    },
+    {
+      "startSeconds": 132.48,
+      "text": "the right table name is always passed"
+    },
+    {
+      "startSeconds": 134.8,
+      "text": "with the right id so for example if we"
+    },
+    {
+      "startSeconds": 137.2,
+      "text": "create options object here we can say"
+    },
+    {
+      "startSeconds": 139.76,
+      "text": "table equals users and we can say widget"
+    },
+    {
+      "startSeconds": 143.12,
+      "text": "id equals one two three and if we do"
+    },
+    {
+      "startSeconds": 145.68,
+      "text": "this notice we have an error with widget"
+    },
+    {
+      "startSeconds": 147.28,
+      "text": "id and this is that table users widget"
+    },
+    {
+      "startSeconds": 150.72,
+      "text": "id string is not assignable to query"
+    },
+    {
+      "startSeconds": 152.48,
+      "text": "options it knows that we can't use the"
+    },
+    {
+      "startSeconds": 154.08,
+      "text": "widget id field with the users table so"
+    },
+    {
+      "startSeconds": 156.8,
+      "text": "if we change this to user id then this"
+    },
+    {
+      "startSeconds": 159.36,
+      "text": "should work just fine now if we go back"
+    },
+    {
+      "startSeconds": 161.84,
+      "text": "to widget id notice that if we use our"
+    },
+    {
+      "startSeconds": 164.319,
+      "text": "old query options there's no problem"
+    },
+    {
+      "startSeconds": 166.08,
+      "text": "with this it works just fine because"
+    },
+    {
+      "startSeconds": 168.08,
+      "text": "there's nothing that binds the user"
+    },
+    {
+      "startSeconds": 169.92,
+      "text": "table to the user id field that is one"
+    },
+    {
+      "startSeconds": 172.319,
+      "text": "of the things that we get with the union"
+    },
+    {
+      "startSeconds": 174.48,
+      "text": "at the outer type level if you will"
+    },
+    {
+      "startSeconds": 176.319,
+      "text": "instead of the field level but there are"
+    },
+    {
+      "startSeconds": 177.84,
+      "text": "actually other big benefits that we can"
+    },
+    {
+      "startSeconds": 179.36,
+      "text": "get from this type of union let's create"
+    },
+    {
+      "startSeconds": 182.159,
+      "text": "our query function here and just for the"
+    },
+    {
+      "startSeconds": 185.12,
+      "text": "sake of this example let's say we're"
+    },
+    {
+      "startSeconds": 186.64,
+      "text": "going to return a string here and we're"
+    },
+    {
+      "startSeconds": 188.239,
+      "text": "just going to use the id fields as the"
+    },
+    {
+      "startSeconds": 190.4,
+      "text": "strings that we're going to return the"
+    },
+    {
+      "startSeconds": 192,
+      "text": "thing we can use here is a switch"
+    },
+    {
+      "startSeconds": 193.92,
+      "text": "statement and we want to switch on"
+    },
+    {
+      "startSeconds": 195.599,
+      "text": "options.table now if we hover over"
+    },
+    {
+      "startSeconds": 197.76,
+      "text": "options.table here notice the type of"
+    },
+    {
+      "startSeconds": 200.159,
+      "text": "the table property it's a union of the"
+    },
+    {
+      "startSeconds": 202.08,
+      "text": "strings users widgets and sessions which"
+    },
+    {
+      "startSeconds": 204.239,
+      "text": "is essentially the same thing we had in"
+    },
+    {
+      "startSeconds": 206.08,
+      "text": "our first example here what's happening"
+    },
+    {
+      "startSeconds": 207.84,
+      "text": "is typescript notices that all of the"
+    },
+    {
+      "startSeconds": 209.519,
+      "text": "variants inside of query options have a"
+    },
+    {
+      "startSeconds": 211.76,
+      "text": "table and it knows what the values of"
+    },
+    {
+      "startSeconds": 214.72,
+      "text": "those table properties are and so it"
+    },
+    {
+      "startSeconds": 217.519,
+      "text": "knows all of the possible values that"
+    },
+    {
+      "startSeconds": 219.519,
+      "text": "options.table can be and it can show"
+    },
+    {
+      "startSeconds": 221.519,
+      "text": "that as another type union so now we"
+    },
+    {
+      "startSeconds": 223.84,
+      "text": "know exactly what cases we need we can"
+    },
+    {
+      "startSeconds": 225.76,
+      "text": "have a case for the users table and if i"
+    },
+    {
+      "startSeconds": 228.4,
+      "text": "say i'm going to return options dot"
+    },
+    {
+      "startSeconds": 230.64,
+      "text": "notice as soon as i hit the dot what our"
+    },
+    {
+      "startSeconds": 232.239,
+      "text": "auto complete shows us we have table and"
+    },
+    {
+      "startSeconds": 234.319,
+      "text": "we have user id and notice it knows the"
+    },
+    {
+      "startSeconds": 236.48,
+      "text": "table specifically is users and not"
+    },
+    {
+      "startSeconds": 238.879,
+      "text": "widgets or sessions so we've essentially"
+    },
+    {
+      "startSeconds": 241.28,
+      "text": "narrowed the type here by using"
+    },
+    {
+      "startSeconds": 242.959,
+      "text": "options.table and then a case for one of"
+    },
+    {
+      "startSeconds": 245.599,
+      "text": "the values of table we've narrowed the"
+    },
+    {
+      "startSeconds": 247.84,
+      "text": "possibilities of what options can be and"
+    },
+    {
+      "startSeconds": 250.56,
+      "text": "now we know that options will have a"
+    },
+    {
+      "startSeconds": 253.12,
+      "text": "user id field"
+    },
+    {
+      "startSeconds": 254.64,
+      "text": "so we can grab that user id field and"
+    },
+    {
+      "startSeconds": 256.639,
+      "text": "return it now to satisfy our function"
+    },
+    {
+      "startSeconds": 258.239,
+      "text": "here i'm just going to throw a return of"
+    },
+    {
+      "startSeconds": 260.4,
+      "text": "empty string at the bottom but there's"
+    },
+    {
+      "startSeconds": 262.24,
+      "text": "more cases that we can add right so we"
+    },
+    {
+      "startSeconds": 264.72,
+      "text": "can add a case here for our widgets"
+    },
+    {
+      "startSeconds": 266.72,
+      "text": "table and if we return this we can see"
+    },
+    {
+      "startSeconds": 269.12,
+      "text": "that we know we have a widget id to be"
+    },
+    {
+      "startSeconds": 272.16,
+      "text": "complete we can return our session id as"
+    },
+    {
+      "startSeconds": 275.04,
+      "text": "well when we know we're in the session"
+    },
+    {
+      "startSeconds": 276.96,
+      "text": "table now notice something else that"
+    },
+    {
+      "startSeconds": 278.32,
+      "text": "typescript sees it knows that down here"
+    },
+    {
+      "startSeconds": 280.4,
+      "text": "we have some unreachable code how does"
+    },
+    {
+      "startSeconds": 282.24,
+      "text": "it know that well it knows there are"
+    },
+    {
+      "startSeconds": 284.4,
+      "text": "only three options for table and we are"
+    },
+    {
+      "startSeconds": 286.479,
+      "text": "handling all three of those options and"
+    },
+    {
+      "startSeconds": 288.479,
+      "text": "so we'll always return from one of these"
+    },
+    {
+      "startSeconds": 290.72,
+      "text": "pieces of the switch statement so we can"
+    },
+    {
+      "startSeconds": 292.24,
+      "text": "remove a return at the end and this is"
+    },
+    {
+      "startSeconds": 294.32,
+      "text": "still valid code so using a rich union"
+    },
+    {
+      "startSeconds": 297.12,
+      "text": "type like this with a switch statement"
+    },
+    {
+      "startSeconds": 299.04,
+      "text": "makes it really easy for us to be very"
+    },
+    {
+      "startSeconds": 301.28,
+      "text": "type safe about objects that have"
+    },
+    {
+      "startSeconds": 303.36,
+      "text": "various shapes that we need to support"
+    },
+    {
+      "startSeconds": 305.44,
+      "text": "but we can actually take this a step"
+    },
+    {
+      "startSeconds": 306.88,
+      "text": "further let's say that we want to add"
+    },
+    {
+      "startSeconds": 308.8,
+      "text": "something new to query options maybe we"
+    },
+    {
+      "startSeconds": 310.88,
+      "text": "have a new table here so i'll add"
+    },
+    {
+      "startSeconds": 312.8,
+      "text": "another union here and this will be"
+    },
+    {
+      "startSeconds": 314.72,
+      "text": "table let's say sales we're going to"
+    },
+    {
+      "startSeconds": 317.199,
+      "text": "take a sale id as a string notice that"
+    },
+    {
+      "startSeconds": 321.039,
+      "text": "we get an error in our function here the"
+    },
+    {
+      "startSeconds": 322.72,
+      "text": "function lacks an ending return"
+    },
+    {
+      "startSeconds": 324.08,
+      "text": "statement so typescript immediately"
+    },
+    {
+      "startSeconds": 325.759,
+      "text": "recognizes that this function doesn't"
+    },
+    {
+      "startSeconds": 328.24,
+      "text": "return a string in all cases now because"
+    },
+    {
+      "startSeconds": 331.039,
+      "text": "there is a case that we're not handling"
+    },
+    {
+      "startSeconds": 333.039,
+      "text": "here so that's actually pretty great"
+    },
+    {
+      "startSeconds": 334.4,
+      "text": "because it means that we have this error"
+    },
+    {
+      "startSeconds": 336.32,
+      "text": "now that tells us that our union has"
+    },
+    {
+      "startSeconds": 339.12,
+      "text": "extended and we need to update this"
+    },
+    {
+      "startSeconds": 340.639,
+      "text": "query function this is actually though a"
+    },
+    {
+      "startSeconds": 342.72,
+      "text": "side effect of the way that we're"
+    },
+    {
+      "startSeconds": 343.84,
+      "text": "returning from within our case"
+    },
+    {
+      "startSeconds": 345.12,
+      "text": "statements here let's say we had"
+    },
+    {
+      "startSeconds": 346.479,
+      "text": "something different where maybe we have"
+    },
+    {
+      "startSeconds": 348.16,
+      "text": "an id here that defaults to an empty"
+    },
+    {
+      "startSeconds": 350.24,
+      "text": "string and then instead of returning"
+    },
+    {
+      "startSeconds": 352.4,
+      "text": "inside of these we actually just assign"
+    },
+    {
+      "startSeconds": 355.039,
+      "text": "this id and then we'll return id at the"
+    },
+    {
+      "startSeconds": 357.52,
+      "text": "end in this pattern where we're not"
+    },
+    {
+      "startSeconds": 359.039,
+      "text": "returning directly out of the switch"
+    },
+    {
+      "startSeconds": 360.639,
+      "text": "statement and frankly this is probably"
+    },
+    {
+      "startSeconds": 362.4,
+      "text": "the more common pattern we don't have an"
+    },
+    {
+      "startSeconds": 364.56,
+      "text": "error anymore because we're always"
+    },
+    {
+      "startSeconds": 366,
+      "text": "returning a string so how can we know"
+    },
+    {
+      "startSeconds": 368.639,
+      "text": "that we aren't missing anything in our"
+    },
+    {
+      "startSeconds": 370.56,
+      "text": "switch statement how can we make it an"
+    },
+    {
+      "startSeconds": 372.479,
+      "text": "exhaustive switch well that's the name"
+    },
+    {
+      "startSeconds": 374.319,
+      "text": "of the pattern i'm going to show you"
+    },
+    {
+      "startSeconds": 375.28,
+      "text": "here next an exhaustive switch what we"
+    },
+    {
+      "startSeconds": 377.199,
+      "text": "can do is add a default now before i add"
+    },
+    {
+      "startSeconds": 380.319,
+      "text": "this default i'm going to remove sales"
+    },
+    {
+      "startSeconds": 382.56,
+      "text": "here and we'll see how this works if we"
+    },
+    {
+      "startSeconds": 384.96,
+      "text": "had a default here"
+    },
+    {
+      "startSeconds": 386.56,
+      "text": "what is the value of options in this"
+    },
+    {
+      "startSeconds": 389.199,
+      "text": "default block pause the video and think"
+    },
+    {
+      "startSeconds": 391.039,
+      "text": "about this for a second if you want to"
+    },
+    {
+      "startSeconds": 392.8,
+      "text": "well the value of options is of type"
+    },
+    {
+      "startSeconds": 396.08,
+      "text": "never what it means is all of the case"
+    },
+    {
+      "startSeconds": 398.639,
+      "text": "statements above the default block have"
+    },
+    {
+      "startSeconds": 400.88,
+      "text": "exhausted all of the possibilities for"
+    },
+    {
+      "startSeconds": 403.52,
+      "text": "the value of options.table and that"
+    },
+    {
+      "startSeconds": 405.36,
+      "text": "means if we reach this default block"
+    },
+    {
+      "startSeconds": 407.199,
+      "text": "there's nothing left that options can be"
+    },
+    {
+      "startSeconds": 408.96,
+      "text": "never is a special type script type"
+    },
+    {
+      "startSeconds": 410.96,
+      "text": "which means no value it's impossible for"
+    },
+    {
+      "startSeconds": 413.36,
+      "text": "us to get here essentially and so what"
+    },
+    {
+      "startSeconds": 414.96,
+      "text": "we can do now is say that we expect"
+    },
+    {
+      "startSeconds": 417.199,
+      "text": "never in this block let's create a"
+    },
+    {
+      "startSeconds": 419.28,
+      "text": "utility for this so we can say assert"
+    },
+    {
+      "startSeconds": 422.479,
+      "text": "cannot reach and we're going to take"
+    },
+    {
+      "startSeconds": 424.88,
+      "text": "some variable it doesn't matter what but"
+    },
+    {
+      "startSeconds": 426.479,
+      "text": "it's going to be of type never and in"
+    },
+    {
+      "startSeconds": 428.16,
+      "text": "here we'll throw a new error so assert"
+    },
+    {
+      "startSeconds": 430.8,
+      "text": "cannot reach we'll throw an error if we"
+    },
+    {
+      "startSeconds": 432.56,
+      "text": "ever call it at runtime but at compile"
+    },
+    {
+      "startSeconds": 435.28,
+      "text": "time it expects to receive an argument"
+    },
+    {
+      "startSeconds": 437.84,
+      "text": "of never and that's exactly what options"
+    },
+    {
+      "startSeconds": 439.84,
+      "text": "is here so in here we can call assert"
+    },
+    {
+      "startSeconds": 442.16,
+      "text": "cannot reach and we can pass it options"
+    },
+    {
+      "startSeconds": 445.36,
+      "text": "all right now at this point nothing"
+    },
+    {
+      "startSeconds": 447.919,
+      "text": "breaks in our code here right because"
+    },
+    {
+      "startSeconds": 450.56,
+      "text": "what's happening is options.table is one"
+    },
+    {
+      "startSeconds": 453.28,
+      "text": "of three values we're handling those"
+    },
+    {
+      "startSeconds": 454.8,
+      "text": "three values and then we pass options"
+    },
+    {
+      "startSeconds": 457.199,
+      "text": "which is now a never value to a function"
+    },
+    {
+      "startSeconds": 459.68,
+      "text": "that takes a never value and so this is"
+    },
+    {
+      "startSeconds": 462.16,
+      "text": "perfectly valid typescript but now let's"
+    },
+    {
+      "startSeconds": 464.319,
+      "text": "add back our sales table here so now if"
+    },
+    {
+      "startSeconds": 467.12,
+      "text": "we scroll down here now we have an error"
+    },
+    {
+      "startSeconds": 469.52,
+      "text": "in the switch statement even in the case"
+    },
+    {
+      "startSeconds": 471.28,
+      "text": "where the switch statement isn't"
+    },
+    {
+      "startSeconds": 472.319,
+      "text": "returning things if we hover over the"
+    },
+    {
+      "startSeconds": 474.08,
+      "text": "error we can see that the argument of"
+    },
+    {
+      "startSeconds": 475.84,
+      "text": "type table sales sales id string is not"
+    },
+    {
+      "startSeconds": 477.919,
+      "text": "assignable to never so now what's"
+    },
+    {
+      "startSeconds": 479.84,
+      "text": "happening is typescript recognizes"
+    },
+    {
+      "startSeconds": 481.28,
+      "text": "there's a fourth value for our"
+    },
+    {
+      "startSeconds": 484,
+      "text": "options.table and that is of course our"
+    },
+    {
+      "startSeconds": 485.84,
+      "text": "string sales and it also recognizes that"
+    },
+    {
+      "startSeconds": 488.16,
+      "text": "our switch statement here doesn't handle"
+    },
+    {
+      "startSeconds": 489.919,
+      "text": "this case and so when we get to the"
+    },
+    {
+      "startSeconds": 491.44,
+      "text": "default block the only value for options"
+    },
+    {
+      "startSeconds": 494.479,
+      "text": "must be table is sales and we can't pass"
+    },
+    {
+      "startSeconds": 497.36,
+      "text": "that to our assert cannot reach and so"
+    },
+    {
+      "startSeconds": 499.599,
+      "text": "now we have a compile time error that"
+    },
+    {
+      "startSeconds": 500.96,
+      "text": "tells us hey you're not handling a"
+    },
+    {
+      "startSeconds": 503.28,
+      "text": "situation that can arise in your code so"
+    },
+    {
+      "startSeconds": 505.599,
+      "text": "let's add that we can now add a case"
+    },
+    {
+      "startSeconds": 507.759,
+      "text": "here for sales and now typescript is"
+    },
+    {
+      "startSeconds": 510.639,
+      "text": "happy once again it recognizes that at"
+    },
+    {
+      "startSeconds": 512.719,
+      "text": "this point options cannot be anything at"
+    },
+    {
+      "startSeconds": 514.959,
+      "text": "all so options is never"
+    },
+    {
+      "startSeconds": 516.88,
+      "text": "and our assert statement is now true"
+    },
+    {
+      "startSeconds": 519.519,
+      "text": "once again so this is the exhaustive"
+    },
+    {
+      "startSeconds": 521.36,
+      "text": "switch pattern i love that typescript"
+    },
+    {
+      "startSeconds": 522.88,
+      "text": "gives us a way to type objects that may"
+    },
+    {
+      "startSeconds": 525.04,
+      "text": "have many different shapes pull those"
+    },
+    {
+      "startSeconds": 527.519,
+      "text": "types together into a union like this"
+    },
+    {
+      "startSeconds": 529.92,
+      "text": "and then we can use something like an"
+    },
+    {
+      "startSeconds": 531.2,
+      "text": "exhaustive switch to ensure that we're"
+    },
+    {
+      "startSeconds": 532.72,
+      "text": "handling all of the possible states of"
+    },
+    {
+      "startSeconds": 534.8,
+      "text": "our system now there's one thing that we"
+    },
+    {
+      "startSeconds": 536.32,
+      "text": "didn't bring over from our old query"
+    },
+    {
+      "startSeconds": 538.08,
+      "text": "options and that is the limit and offset"
+    },
+    {
+      "startSeconds": 541.279,
+      "text": "and essentially we want to add these to"
+    },
+    {
+      "startSeconds": 543.6,
+      "text": "every single possible value here and so"
+    },
+    {
+      "startSeconds": 546.16,
+      "text": "what we can do instead of a union is an"
+    },
+    {
+      "startSeconds": 548,
+      "text": "intersection"
+    },
+    {
+      "startSeconds": 549.2,
+      "text": "so i can say right at the top here paste"
+    },
+    {
+      "startSeconds": 551.68,
+      "text": "that here and instead of using the pipe"
+    },
+    {
+      "startSeconds": 554.08,
+      "text": "character to union these i'm going to"
+    },
+    {
+      "startSeconds": 556.56,
+      "text": "use the ampersand to intersect them now"
+    },
+    {
+      "startSeconds": 559.36,
+      "text": "this is not exactly right if i hover"
+    },
+    {
+      "startSeconds": 561.12,
+      "text": "over query options here you can see that"
+    },
+    {
+      "startSeconds": 562.64,
+      "text": "we have only intersected with the user"
+    },
+    {
+      "startSeconds": 565.519,
+      "text": "table so i'm going to need to put"
+    },
+    {
+      "startSeconds": 567.36,
+      "text": "parentheses around the rest of this and"
+    },
+    {
+      "startSeconds": 570.08,
+      "text": "that way we are actually adding this to"
+    },
+    {
+      "startSeconds": 572.72,
+      "text": "all of them and so now you can see the"
+    },
+    {
+      "startSeconds": 574,
+      "text": "limit and offset intersects with all of"
+    },
+    {
+      "startSeconds": 576.399,
+      "text": "these things and we can do a quick test"
+    },
+    {
+      "startSeconds": 578.24,
+      "text": "here for example we can see that options"
+    },
+    {
+      "startSeconds": 580.24,
+      "text": "dot now includes limit and offset and if"
+    },
+    {
+      "startSeconds": 582.64,
+      "text": "we add that maybe down here we can see"
+    },
+    {
+      "startSeconds": 585.04,
+      "text": "options dot includes limit and offset as"
+    },
+    {
+      "startSeconds": 587.279,
+      "text": "well so"
+    },
+    {
+      "startSeconds": 588.64,
+      "text": "that way we can actually use the"
+    },
+    {
+      "startSeconds": 591.36,
+      "text": "intersection intersection is another"
+    },
+    {
+      "startSeconds": 593.2,
+      "text": "pretty powerful way of combining types"
+    },
+    {
+      "startSeconds": 595.04,
+      "text": "maybe we'll do a separate video on that"
+    },
+    {
+      "startSeconds": 596.56,
+      "text": "sometime but just wanted to throw that"
+    },
+    {
+      "startSeconds": 598.32,
+      "text": "in as a little bonus thing for you so"
+    },
+    {
+      "startSeconds": 601.12,
+      "text": "this has been how to use union types to"
+    },
+    {
+      "startSeconds": 604.24,
+      "text": "do exhaustive switch statements in"
+    },
+    {
+      "startSeconds": 605.76,
+      "text": "typescript a really powerful way to make"
+    },
+    {
+      "startSeconds": 607.36,
+      "text": "sure you're strongly typing complex"
+    },
+    {
+      "startSeconds": 609.2,
+      "text": "types if you enjoyed this video please"
+    },
+    {
+      "startSeconds": 610.88,
+      "text": "do like it subscribe if you want to see"
+    },
+    {
+      "startSeconds": 612.64,
+      "text": "more of this type of thing and thanks"
+    },
+    {
+      "startSeconds": 614.32,
+      "text": "for watching"
+    }
+  ]
 }

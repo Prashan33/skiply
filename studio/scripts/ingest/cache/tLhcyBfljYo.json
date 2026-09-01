@@ -1,8 +1,2166 @@
 {
   "id": "tLhcyBfljYo",
   "url": "https://www.youtube.com/watch?v=tLhcyBfljYo",
-  "fetchedAt": "2026-08-31T05:14:54.106Z",
-  "captionKind": "empty",
-  "chapters": [],
-  "cues": []
+  "fetchedAt": "2026-09-01T04:05:05.295Z",
+  "captionKind": "asr",
+  "chapters": [
+    {
+      "startSeconds": 0,
+      "label": "Solution"
+    }
+  ],
+  "cues": [
+    {
+      "startSeconds": 0,
+      "text": "in this video we're going to see how you"
+    },
+    {
+      "startSeconds": 1.62,
+      "text": "can validate data when you work with"
+    },
+    {
+      "startSeconds": 3.3,
+      "text": "server actions in XTS so this example is"
+    },
+    {
+      "startSeconds": 5.64,
+      "text": "using a server action and if we make a"
+    },
+    {
+      "startSeconds": 7.74,
+      "text": "mistake here and I click on ADD we're"
+    },
+    {
+      "startSeconds": 9.36,
+      "text": "going to have this toast message that"
+    },
+    {
+      "startSeconds": 10.92,
+      "text": "will show us a result error right so"
+    },
+    {
+      "startSeconds": 12.78,
+      "text": "we're going to use result to validate"
+    },
+    {
+      "startSeconds": 14.16,
+      "text": "the data so let's see how we can do that"
+    },
+    {
+      "startSeconds": 15.78,
+      "text": "so here we just have a simple to-do's"
+    },
+    {
+      "startSeconds": 17.64,
+      "text": "page it's fetching the to-do's from the"
+    },
+    {
+      "startSeconds": 19.5,
+      "text": "database so we have an H1 we have the"
+    },
+    {
+      "startSeconds": 21.6,
+      "text": "form I have collapsed the form here and"
+    },
+    {
+      "startSeconds": 23.58,
+      "text": "we have the list where we map over all"
+    },
+    {
+      "startSeconds": 25.26,
+      "text": "the to-do's now this form is using a"
+    },
+    {
+      "startSeconds": 27.119,
+      "text": "server action it's called add to do and"
+    },
+    {
+      "startSeconds": 29.34,
+      "text": "I have defined it here in its own"
+    },
+    {
+      "startSeconds": 30.599,
+      "text": "separate file now since this is a server"
+    },
+    {
+      "startSeconds": 32.46,
+      "text": "component I could also Define it here"
+    },
+    {
+      "startSeconds": 34.26,
+      "text": "but for organizational purposes I prefer"
+    },
+    {
+      "startSeconds": 36.239,
+      "text": "to put it in its own file with use"
+    },
+    {
+      "startSeconds": 37.92,
+      "text": "server at the top so this function will"
+    },
+    {
+      "startSeconds": 39.96,
+      "text": "just take the content that's basically"
+    },
+    {
+      "startSeconds": 42,
+      "text": "what we input here and then it will"
+    },
+    {
+      "startSeconds": 43.62,
+      "text": "attempt to insert that in our database"
+    },
+    {
+      "startSeconds": 45.12,
+      "text": "and then it will revalidate our path all"
+    },
+    {
+      "startSeconds": 47.1,
+      "text": "right so how can we use results here to"
+    },
+    {
+      "startSeconds": 48.899,
+      "text": "make it all a bit safer so let's say we"
+    },
+    {
+      "startSeconds": 50.82,
+      "text": "want to validate the data both on the"
+    },
+    {
+      "startSeconds": 52.92,
+      "text": "client side as well on the server side"
+    },
+    {
+      "startSeconds": 55.02,
+      "text": "so I said this is our server side but"
+    },
+    {
+      "startSeconds": 56.699,
+      "text": "here on the client before we actually"
+    },
+    {
+      "startSeconds": 58.32,
+      "text": "send it to the server before we info the"
+    },
+    {
+      "startSeconds": 60.48,
+      "text": "server action we also want to validate"
+    },
+    {
+      "startSeconds": 62.1,
+      "text": "the data and right now what we have is"
+    },
+    {
+      "startSeconds": 63.899,
+      "text": "only a server action that will"
+    },
+    {
+      "startSeconds": 65.339,
+      "text": "immediately get invoked when we submit"
+    },
+    {
+      "startSeconds": 67.14,
+      "text": "the form but now we want some"
+    },
+    {
+      "startSeconds": 68.46,
+      "text": "client-side interactivity so we're going"
+    },
+    {
+      "startSeconds": 70.26,
+      "text": "to have to refactor this form into a"
+    },
+    {
+      "startSeconds": 72,
+      "text": "client component because you cannot have"
+    },
+    {
+      "startSeconds": 73.68,
+      "text": "clients have interactivity in a server"
+    },
+    {
+      "startSeconds": 75.6,
+      "text": "component so here in the components"
+    },
+    {
+      "startSeconds": 77.22,
+      "text": "folder I'm going to create a component"
+    },
+    {
+      "startSeconds": 79.02,
+      "text": "called form and I will just put my form"
+    },
+    {
+      "startSeconds": 81.18,
+      "text": "in there RFC form and just paste it here"
+    },
+    {
+      "startSeconds": 84.78,
+      "text": "it needs access to my server action so I"
+    },
+    {
+      "startSeconds": 87.06,
+      "text": "will just import that here I don't need"
+    },
+    {
+      "startSeconds": 88.86,
+      "text": "this and now I can use this form"
+    },
+    {
+      "startSeconds": 91.32,
+      "text": "component like this I need to input this"
+    },
+    {
+      "startSeconds": 93.96,
+      "text": "and we can remove this import all right"
+    },
+    {
+      "startSeconds": 96.18,
+      "text": "so this is still a server component now"
+    },
+    {
+      "startSeconds": 97.68,
+      "text": "and now we're going to make this form a"
+    },
+    {
+      "startSeconds": 99.42,
+      "text": "client's components so I'm going to use"
+    },
+    {
+      "startSeconds": 101.22,
+      "text": "the use client directive at the top of"
+    },
+    {
+      "startSeconds": 103.02,
+      "text": "the file and I'm going to save here"
+    },
+    {
+      "startSeconds": 104.4,
+      "text": "alright so now we've refactored this"
+    },
+    {
+      "startSeconds": 105.9,
+      "text": "into a client's component so we can add"
+    },
+    {
+      "startSeconds": 107.7,
+      "text": "client-side interactivity here and the"
+    },
+    {
+      "startSeconds": 109.74,
+      "text": "way to do that here with server actions"
+    },
+    {
+      "startSeconds": 111.18,
+      "text": "is to have a client action so we have"
+    },
+    {
+      "startSeconds": 113.579,
+      "text": "server actions they will only run on the"
+    },
+    {
+      "startSeconds": 115.619,
+      "text": "server but we can also have client"
+    },
+    {
+      "startSeconds": 117.06,
+      "text": "actions basically just a function here"
+    },
+    {
+      "startSeconds": 118.86,
+      "text": "that we give to action in here and that"
+    },
+    {
+      "startSeconds": 120.78,
+      "text": "will run on the client so we can"
+    },
+    {
+      "startSeconds": 122.22,
+      "text": "actually Define that here we can"
+    },
+    {
+      "startSeconds": 123.6,
+      "text": "actually just call that client action"
+    },
+    {
+      "startSeconds": 125.159,
+      "text": "and it's going to be an async function"
+    },
+    {
+      "startSeconds": 126.719,
+      "text": "that will take informed data and in the"
+    },
+    {
+      "startSeconds": 129,
+      "text": "client action we can actually invoke the"
+    },
+    {
+      "startSeconds": 131.099,
+      "text": "server action here so I'm going to"
+    },
+    {
+      "startSeconds": 132.3,
+      "text": "remove it here so the add to do is our"
+    },
+    {
+      "startSeconds": 134.64,
+      "text": "server action we can just invoke that"
+    },
+    {
+      "startSeconds": 136.5,
+      "text": "here but then we can also have"
+    },
+    {
+      "startSeconds": 138,
+      "text": "client-side interactivity here so we can"
+    },
+    {
+      "startSeconds": 140.099,
+      "text": "for example reset the form what we're"
+    },
+    {
+      "startSeconds": 142.02,
+      "text": "going to do here is client-side"
+    },
+    {
+      "startSeconds": 143.16,
+      "text": "validation and what we're also going to"
+    },
+    {
+      "startSeconds": 144.72,
+      "text": "do here is after we invoke the server"
+    },
+    {
+      "startSeconds": 146.76,
+      "text": "action depending on the result of that"
+    },
+    {
+      "startSeconds": 148.319,
+      "text": "we may want to Output an error message"
+    },
+    {
+      "startSeconds": 150.12,
+      "text": "to the user and we can do other things"
+    },
+    {
+      "startSeconds": 151.739,
+      "text": "here as well like be optimistic with the"
+    },
+    {
+      "startSeconds": 153.66,
+      "text": "UI for example it's actually a really"
+    },
+    {
+      "startSeconds": 155.04,
+      "text": "cool hook use optimistic check out my"
+    },
+    {
+      "startSeconds": 156.9,
+      "text": "other videos and server actions right so"
+    },
+    {
+      "startSeconds": 158.64,
+      "text": "let me just remove this so these are the"
+    },
+    {
+      "startSeconds": 160.379,
+      "text": "two things that we're going to do in"
+    },
+    {
+      "startSeconds": 161.459,
+      "text": "this video and I'm using typescript here"
+    },
+    {
+      "startSeconds": 163.44,
+      "text": "let me quickly type this as form data"
+    },
+    {
+      "startSeconds": 165.78,
+      "text": "and then this is what we can pass here"
+    },
+    {
+      "startSeconds": 167.34,
+      "text": "to the action attributes here right so"
+    },
+    {
+      "startSeconds": 169.26,
+      "text": "this is all code that will run on the"
+    },
+    {
+      "startSeconds": 170.819,
+      "text": "client and then the server action when"
+    },
+    {
+      "startSeconds": 172.379,
+      "text": "you call that all of this code will run"
+    },
+    {
+      "startSeconds": 174.3,
+      "text": "on the server right client and server"
+    },
+    {
+      "startSeconds": 176.099,
+      "text": "actions alright so we're going to use"
+    },
+    {
+      "startSeconds": 177.239,
+      "text": "zot here to validate this client side"
+    },
+    {
+      "startSeconds": 179.4,
+      "text": "right now before we actually do the"
+    },
+    {
+      "startSeconds": 181.2,
+      "text": "client-side validation with Zars we're"
+    },
+    {
+      "startSeconds": 182.94,
+      "text": "just going to construct a new to do"
+    },
+    {
+      "startSeconds": 185.16,
+      "text": "object that we can then validate so what"
+    },
+    {
+      "startSeconds": 187.379,
+      "text": "we can say here is const new to do and"
+    },
+    {
+      "startSeconds": 189.72,
+      "text": "these to do objects in my example appear"
+    },
+    {
+      "startSeconds": 192.18,
+      "text": "are objects with a Content property and"
+    },
+    {
+      "startSeconds": 194.76,
+      "text": "we can get that from the form when we"
+    },
+    {
+      "startSeconds": 196.319,
+      "text": "submit the form we have this input here"
+    },
+    {
+      "startSeconds": 198.42,
+      "text": "and a button so the only thing we"
+    },
+    {
+      "startSeconds": 199.739,
+      "text": "actually have to pay attention to is"
+    },
+    {
+      "startSeconds": 200.879,
+      "text": "this input here and it has a name of"
+    },
+    {
+      "startSeconds": 202.86,
+      "text": "content and that's basically the text"
+    },
+    {
+      "startSeconds": 204.48,
+      "text": "here so we can just grab that with from"
+    },
+    {
+      "startSeconds": 206.819,
+      "text": "data dot get content right so if you"
+    },
+    {
+      "startSeconds": 209.28,
+      "text": "pass a function here to action you"
+    },
+    {
+      "startSeconds": 210.9,
+      "text": "automatically get from data from next.js"
+    },
+    {
+      "startSeconds": 212.94,
+      "text": "right so then you can use dot get to get"
+    },
+    {
+      "startSeconds": 214.739,
+      "text": "the actual value of that input and these"
+    },
+    {
+      "startSeconds": 216.959,
+      "text": "objects optionally have an ID it's going"
+    },
+    {
+      "startSeconds": 219.18,
+      "text": "to be a number now typically these IDs"
+    },
+    {
+      "startSeconds": 221.04,
+      "text": "get created when we add them to the"
+    },
+    {
+      "startSeconds": 222.48,
+      "text": "database right so that will only happen"
+    },
+    {
+      "startSeconds": 224.099,
+      "text": "here we actually insert it with Prisma"
+    },
+    {
+      "startSeconds": 225.959,
+      "text": "it will actually create an ID so here"
+    },
+    {
+      "startSeconds": 228,
+      "text": "when we just grab the information from"
+    },
+    {
+      "startSeconds": 230.159,
+      "text": "the form it doesn't have an ID yet"
+    },
+    {
+      "startSeconds": 231.9,
+      "text": "because it hasn't been inserted in a"
+    },
+    {
+      "startSeconds": 233.28,
+      "text": "database yet so we're going to make that"
+    },
+    {
+      "startSeconds": 234.599,
+      "text": "optional right so here we're not going"
+    },
+    {
+      "startSeconds": 236.04,
+      "text": "to have an ID because we don't have that"
+    },
+    {
+      "startSeconds": 237.659,
+      "text": "when we first insert it into the"
+    },
+    {
+      "startSeconds": 239.159,
+      "text": "database but later later when you"
+    },
+    {
+      "startSeconds": 240.54,
+      "text": "updated to do you do need an ID right so"
+    },
+    {
+      "startSeconds": 242.58,
+      "text": "we're going to make it optional and so"
+    },
+    {
+      "startSeconds": 244.019,
+      "text": "this is just a very simple new to do so"
+    },
+    {
+      "startSeconds": 245.58,
+      "text": "then we want to validate this with zot"
+    },
+    {
+      "startSeconds": 247.379,
+      "text": "so I'm going to install zot npm install"
+    },
+    {
+      "startSeconds": 249.599,
+      "text": "result okay I've installed this and with"
+    },
+    {
+      "startSeconds": 251.76,
+      "text": "that you want to create a schema so we"
+    },
+    {
+      "startSeconds": 253.799,
+      "text": "will just Define that up here for now so"
+    },
+    {
+      "startSeconds": 255.599,
+      "text": "what we can say is we can say to do"
+    },
+    {
+      "startSeconds": 257.1,
+      "text": "schema and then we can use zot so let me"
+    },
+    {
+      "startSeconds": 259.739,
+      "text": "import that we just we only have to"
+    },
+    {
+      "startSeconds": 261.6,
+      "text": "import Z from zot right so here we were"
+    },
+    {
+      "startSeconds": 264.24,
+      "text": "grabbing the actual data from the form"
+    },
+    {
+      "startSeconds": 265.919,
+      "text": "and now here we're going to describe how"
+    },
+    {
+      "startSeconds": 268.02,
+      "text": "the to-do should look like so we can say"
+    },
+    {
+      "startSeconds": 269.88,
+      "text": "well it's an object so we can say Z dot"
+    },
+    {
+      "startSeconds": 272.16,
+      "text": "objects and then in the object we will"
+    },
+    {
+      "startSeconds": 274.56,
+      "text": "have a Content property and optionally"
+    },
+    {
+      "startSeconds": 276.479,
+      "text": "that ID property so let's start with"
+    },
+    {
+      "startSeconds": 278.46,
+      "text": "content here so we can just say this"
+    },
+    {
+      "startSeconds": 280.56,
+      "text": "content property should be a string so"
+    },
+    {
+      "startSeconds": 282.54,
+      "text": "you say C dot string everything else"
+    },
+    {
+      "startSeconds": 284.46,
+      "text": "that you want to add here so here we can"
+    },
+    {
+      "startSeconds": 286.139,
+      "text": "say it should be trimmed remove the"
+    },
+    {
+      "startSeconds": 288.06,
+      "text": "white space It should be at least one"
+    },
+    {
+      "startSeconds": 290.1,
+      "text": "character but at most 100 characters"
+    },
+    {
+      "startSeconds": 292.44,
+      "text": "right so this is a simple example of how"
+    },
+    {
+      "startSeconds": 294.419,
+      "text": "zot works right and what you can then"
+    },
+    {
+      "startSeconds": 295.979,
+      "text": "also do is you can provide custom error"
+    },
+    {
+      "startSeconds": 298.139,
+      "text": "messages so if the minimum is is not at"
+    },
+    {
+      "startSeconds": 300.72,
+      "text": "least one we can say that to do content"
+    },
+    {
+      "startSeconds": 302.699,
+      "text": "must not be empty or must be at least"
+    },
+    {
+      "startSeconds": 306.3,
+      "text": "one character long imagine if the person"
+    },
+    {
+      "startSeconds": 309.18,
+      "text": "goes over the maximum we may want to"
+    },
+    {
+      "startSeconds": 311.16,
+      "text": "Output a different message to do content"
+    },
+    {
+      "startSeconds": 313.08,
+      "text": "must be at most 100 characters long"
+    },
+    {
+      "startSeconds": 315.12,
+      "text": "right so this is our schema now"
+    },
+    {
+      "startSeconds": 316.56,
+      "text": "basically the blueprint for to-do's this"
+    },
+    {
+      "startSeconds": 318.84,
+      "text": "is what the to-do should look like"
+    },
+    {
+      "startSeconds": 320.16,
+      "text": "that's a Content property but we also"
+    },
+    {
+      "startSeconds": 322.02,
+      "text": "have an ID property optionally so we can"
+    },
+    {
+      "startSeconds": 324.3,
+      "text": "say Z that's going to be a number and"
+    },
+    {
+      "startSeconds": 326.1,
+      "text": "it's going to be optional right you can"
+    },
+    {
+      "startSeconds": 327.419,
+      "text": "just Define it like this right so now we"
+    },
+    {
+      "startSeconds": 328.979,
+      "text": "have our schema now we can use this to"
+    },
+    {
+      "startSeconds": 330.72,
+      "text": "validate that new to do so we can say to"
+    },
+    {
+      "startSeconds": 332.82,
+      "text": "do schema and we could say dot parse"
+    },
+    {
+      "startSeconds": 335.16,
+      "text": "parse this new to do object now if we do"
+    },
+    {
+      "startSeconds": 337.5,
+      "text": "it like this and there is actually a"
+    },
+    {
+      "startSeconds": 339.18,
+      "text": "problem here for example maybe we forget"
+    },
+    {
+      "startSeconds": 341.16,
+      "text": "the content property it will give us an"
+    },
+    {
+      "startSeconds": 343.44,
+      "text": "error it will actually throw an error so"
+    },
+    {
+      "startSeconds": 345.24,
+      "text": "you would have to wrap it and try catch"
+    },
+    {
+      "startSeconds": 346.979,
+      "text": "and there's nothing wrong with that but"
+    },
+    {
+      "startSeconds": 348.3,
+      "text": "in practice people do seem to prefer the"
+    },
+    {
+      "startSeconds": 350.22,
+      "text": "other way which is safe bars and here"
+    },
+    {
+      "startSeconds": 352.74,
+      "text": "what happens if there is an error is"
+    },
+    {
+      "startSeconds": 354.36,
+      "text": "there will not be an error thrown we"
+    },
+    {
+      "startSeconds": 356.039,
+      "text": "just got a result here and in that"
+    },
+    {
+      "startSeconds": 357.84,
+      "text": "result variable we can check if they're"
+    },
+    {
+      "startSeconds": 359.46,
+      "text": "actually actually it was an error so if"
+    },
+    {
+      "startSeconds": 361.38,
+      "text": "the success was not true we can output"
+    },
+    {
+      "startSeconds": 363.539,
+      "text": "an error message right so here we can"
+    },
+    {
+      "startSeconds": 365.28,
+      "text": "already output an error message on the"
+    },
+    {
+      "startSeconds": 366.84,
+      "text": "client here we're also going to Output"
+    },
+    {
+      "startSeconds": 368.4,
+      "text": "an error message if something went wrong"
+    },
+    {
+      "startSeconds": 369.96,
+      "text": "on the server alright so let's actually"
+    },
+    {
+      "startSeconds": 371.28,
+      "text": "see what we get if we actually do make"
+    },
+    {
+      "startSeconds": 372.84,
+      "text": "this mistake of not adding the content"
+    },
+    {
+      "startSeconds": 374.58,
+      "text": "to the objects so I'm going to inspect"
+    },
+    {
+      "startSeconds": 376.38,
+      "text": "here to my console and here what we can"
+    },
+    {
+      "startSeconds": 378.18,
+      "text": "do is we can just lock the results so"
+    },
+    {
+      "startSeconds": 380.22,
+      "text": "now what we have is a new to do which is"
+    },
+    {
+      "startSeconds": 382.199,
+      "text": "actually just an empty object here but"
+    },
+    {
+      "startSeconds": 384,
+      "text": "we have just told Zod that this object"
+    },
+    {
+      "startSeconds": 386.1,
+      "text": "should have a Content property and"
+    },
+    {
+      "startSeconds": 388.02,
+      "text": "optionally an ID right so ID can be left"
+    },
+    {
+      "startSeconds": 390.12,
+      "text": "off without problems but content should"
+    },
+    {
+      "startSeconds": 391.919,
+      "text": "be there we didn't say that this was"
+    },
+    {
+      "startSeconds": 393.12,
+      "text": "optional right so it has to be there and"
+    },
+    {
+      "startSeconds": 395.039,
+      "text": "now we have this new to do it's empty so"
+    },
+    {
+      "startSeconds": 397.08,
+      "text": "now we're going to use to do schema.save"
+    },
+    {
+      "startSeconds": 398.88,
+      "text": "bars on that node to do so this result"
+    },
+    {
+      "startSeconds": 401.1,
+      "text": "should not be successful and so we"
+    },
+    {
+      "startSeconds": 403.139,
+      "text": "should be able to see some error so"
+    },
+    {
+      "startSeconds": 404.699,
+      "text": "let's see what happens when I click add"
+    },
+    {
+      "startSeconds": 406.02,
+      "text": "here alright I'm actually going to"
+    },
+    {
+      "startSeconds": 407.28,
+      "text": "comment this out because it gives us a"
+    },
+    {
+      "startSeconds": 408.9,
+      "text": "red squiggly line let's deal with that"
+    },
+    {
+      "startSeconds": 410.16,
+      "text": "later so now we have this new to do with"
+    },
+    {
+      "startSeconds": 412.139,
+      "text": "an object it doesn't have the content"
+    },
+    {
+      "startSeconds": 414.12,
+      "text": "property and let's say it also has an ID"
+    },
+    {
+      "startSeconds": 416.28,
+      "text": "property but it's a string and it should"
+    },
+    {
+      "startSeconds": 418.56,
+      "text": "be a number so now we value basically"
+    },
+    {
+      "startSeconds": 420,
+      "text": "have two mistakes we don't have content"
+    },
+    {
+      "startSeconds": 421.86,
+      "text": "and this ID is of the wrong type because"
+    },
+    {
+      "startSeconds": 424.319,
+      "text": "ID should be a number if it's there"
+    },
+    {
+      "startSeconds": 425.94,
+      "text": "right so now with Zars what's going to"
+    },
+    {
+      "startSeconds": 427.56,
+      "text": "happen is we're gonna parse that new to"
+    },
+    {
+      "startSeconds": 429.24,
+      "text": "do we're gonna get some result the"
+    },
+    {
+      "startSeconds": 430.68,
+      "text": "result will not be successful now and"
+    },
+    {
+      "startSeconds": 432.419,
+      "text": "now here we can access the error"
+    },
+    {
+      "startSeconds": 434.1,
+      "text": "messages so let me quickly show you how"
+    },
+    {
+      "startSeconds": 436.08,
+      "text": "we can access that so you have resulted"
+    },
+    {
+      "startSeconds": 437.94,
+      "text": "error and that's going to give you an"
+    },
+    {
+      "startSeconds": 439.979,
+      "text": "issue per problem so here we have two"
+    },
+    {
+      "startSeconds": 442.919,
+      "text": "problems two errors it's going to create"
+    },
+    {
+      "startSeconds": 444.599,
+      "text": "an issue for each one of them so I'm"
+    },
+    {
+      "startSeconds": 446.28,
+      "text": "Gonna Save here now I'm going to click"
+    },
+    {
+      "startSeconds": 447.78,
+      "text": "add here let's see what we get and we"
+    },
+    {
+      "startSeconds": 449.34,
+      "text": "get an array oops we get some other"
+    },
+    {
+      "startSeconds": 451.139,
+      "text": "issue but that's not a problem so we get"
+    },
+    {
+      "startSeconds": 452.699,
+      "text": "an array here and this array has an"
+    },
+    {
+      "startSeconds": 454.919,
+      "text": "object for each issue so here the first"
+    },
+    {
+      "startSeconds": 457.08,
+      "text": "one is expected number received string"
+    },
+    {
+      "startSeconds": 459.9,
+      "text": "right and we can see path that has to do"
+    },
+    {
+      "startSeconds": 461.819,
+      "text": "with the ID and the second issue here is"
+    },
+    {
+      "startSeconds": 463.979,
+      "text": "required and it has to do with content"
+    },
+    {
+      "startSeconds": 466.139,
+      "text": "right it's received undefined right so"
+    },
+    {
+      "startSeconds": 468.12,
+      "text": "we can use the message in here and the"
+    },
+    {
+      "startSeconds": 470.28,
+      "text": "path to create one big error message"
+    },
+    {
+      "startSeconds": 472.44,
+      "text": "that we can just output as a toast on"
+    },
+    {
+      "startSeconds": 474.599,
+      "text": "the page right so let's do that right so"
+    },
+    {
+      "startSeconds": 476.46,
+      "text": "what we can do is we can just create a"
+    },
+    {
+      "startSeconds": 478.259,
+      "text": "variable here for the error map search"
+    },
+    {
+      "startSeconds": 480,
+      "text": "it's going to be a string initially"
+    },
+    {
+      "startSeconds": 481.86,
+      "text": "empty and then we're going to Loop"
+    },
+    {
+      "startSeconds": 483.539,
+      "text": "through all those errors called by not"
+    },
+    {
+      "startSeconds": 485.039,
+      "text": "already helping me out so I can say"
+    },
+    {
+      "startSeconds": 487.699,
+      "text": "result.error.issues for each issue we"
+    },
+    {
+      "startSeconds": 489.78,
+      "text": "want to append that to the error message"
+    },
+    {
+      "startSeconds": 491.34,
+      "text": "right so here I get a compiler"
+    },
+    {
+      "startSeconds": 493.139,
+      "text": "suggestion and this is not exactly what"
+    },
+    {
+      "startSeconds": 495.24,
+      "text": "we want we'll say error message let's"
+    },
+    {
+      "startSeconds": 497.16,
+      "text": "see let me make this full screen and let"
+    },
+    {
+      "startSeconds": 499.08,
+      "text": "me launch this here so what this needs"
+    },
+    {
+      "startSeconds": 501.06,
+      "text": "to be is the previous error message plus"
+    },
+    {
+      "startSeconds": 503.22,
+      "text": "the message of that issue plus a period"
+    },
+    {
+      "startSeconds": 506.28,
+      "text": "and a space at the end so this message"
+    },
+    {
+      "startSeconds": 508.379,
+      "text": "will be for example required so we also"
+    },
+    {
+      "startSeconds": 511.08,
+      "text": "want to know the field to what that"
+    },
+    {
+      "startSeconds": 512.58,
+      "text": "message is connected to right and salt"
+    },
+    {
+      "startSeconds": 514.38,
+      "text": "gives us that here in issue.path and"
+    },
+    {
+      "startSeconds": 516.779,
+      "text": "then it's going to be the first element"
+    },
+    {
+      "startSeconds": 517.86,
+      "text": "it's an array and it's going to be for"
+    },
+    {
+      "startSeconds": 519.479,
+      "text": "example content and then we can add like"
+    },
+    {
+      "startSeconds": 522.24,
+      "text": "colon after that so let's see colon"
+    },
+    {
+      "startSeconds": 524.459,
+      "text": "space and then the actual message then"
+    },
+    {
+      "startSeconds": 526.5,
+      "text": "it's going to be content colon required"
+    },
+    {
+      "startSeconds": 529.92,
+      "text": "and then a period and then you have the"
+    },
+    {
+      "startSeconds": 531.899,
+      "text": "next error message a little bit it's"
+    },
+    {
+      "startSeconds": 533.82,
+      "text": "complicated to work with these result"
+    },
+    {
+      "startSeconds": 535.44,
+      "text": "errors result does help you out so they"
+    },
+    {
+      "startSeconds": 537.899,
+      "text": "do have two other methods that you can"
+    },
+    {
+      "startSeconds": 539.459,
+      "text": "use actually called format to help you"
+    },
+    {
+      "startSeconds": 542.04,
+      "text": "format the errors in an easier way to"
+    },
+    {
+      "startSeconds": 544.32,
+      "text": "output something on the client this is"
+    },
+    {
+      "startSeconds": 546.06,
+      "text": "helpful if you have a complicated format"
+    },
+    {
+      "startSeconds": 548.04,
+      "text": "nested objects if you have a more simple"
+    },
+    {
+      "startSeconds": 550.26,
+      "text": "form there's also a flatten so if you"
+    },
+    {
+      "startSeconds": 552.42,
+      "text": "have no nested objects you can use this"
+    },
+    {
+      "startSeconds": 554.16,
+      "text": "now here we have a super simple form and"
+    },
+    {
+      "startSeconds": 556.08,
+      "text": "I don't want to dive into the details of"
+    },
+    {
+      "startSeconds": 557.64,
+      "text": "zot too much so we're just gonna do it"
+    },
+    {
+      "startSeconds": 559.8,
+      "text": "like what we've been doing here this is"
+    },
+    {
+      "startSeconds": 561.36,
+      "text": "the error message now and now we want to"
+    },
+    {
+      "startSeconds": 563.04,
+      "text": "use a toast message let's say and I'm"
+    },
+    {
+      "startSeconds": 565.26,
+      "text": "going to use react hot toast for that so"
+    },
+    {
+      "startSeconds": 567.12,
+      "text": "let me install that npm install react"
+    },
+    {
+      "startSeconds": 569.459,
+      "text": "hot toast okay so I installed this and"
+    },
+    {
+      "startSeconds": 572.76,
+      "text": "the first step is to determine where the"
+    },
+    {
+      "startSeconds": 575.16,
+      "text": "toast message should be displayed on the"
+    },
+    {
+      "startSeconds": 577.08,
+      "text": "page so basically where should be top"
+    },
+    {
+      "startSeconds": 578.76,
+      "text": "right and typically you do want to put"
+    },
+    {
+      "startSeconds": 580.62,
+      "text": "that in the layout file so let's go to"
+    },
+    {
+      "startSeconds": 582.6,
+      "text": "the layout here this is the root"
+    },
+    {
+      "startSeconds": 583.86,
+      "text": "component of our app and what we can do"
+    },
+    {
+      "startSeconds": 585.6,
+      "text": "here is we can add that here in the body"
+    },
+    {
+      "startSeconds": 587.519,
+      "text": "and it's the toaster component so let me"
+    },
+    {
+      "startSeconds": 590.04,
+      "text": "input this and then we can specify the"
+    },
+    {
+      "startSeconds": 592.62,
+      "text": "position I think top right is the most"
+    },
+    {
+      "startSeconds": 594.42,
+      "text": "common one most people are used to that"
+    },
+    {
+      "startSeconds": 595.98,
+      "text": "so I will just use that and that's just"
+    },
+    {
+      "startSeconds": 597.839,
+      "text": "the placeholder and now we need to"
+    },
+    {
+      "startSeconds": 599.1,
+      "text": "actually in invoke a toast message when"
+    },
+    {
+      "startSeconds": 601.14,
+      "text": "we want to actually display a message so"
+    },
+    {
+      "startSeconds": 603.06,
+      "text": "here we now have the message constructed"
+    },
+    {
+      "startSeconds": 605.1,
+      "text": "now we actually want to Output this so"
+    },
+    {
+      "startSeconds": 607.019,
+      "text": "here what we can do is we can use this"
+    },
+    {
+      "startSeconds": 608.88,
+      "text": "toast function and we can say dot error"
+    },
+    {
+      "startSeconds": 611.279,
+      "text": "and then the message that we want to"
+    },
+    {
+      "startSeconds": 612.72,
+      "text": "have displayed in that post message now"
+    },
+    {
+      "startSeconds": 614.519,
+      "text": "I need to import this and no help here"
+    },
+    {
+      "startSeconds": 616.62,
+      "text": "so let's see import toast from react hot"
+    },
+    {
+      "startSeconds": 620.04,
+      "text": "tones actually default export all right"
+    },
+    {
+      "startSeconds": 621.899,
+      "text": "so now let's see what we get so now we"
+    },
+    {
+      "startSeconds": 623.88,
+      "text": "still have this new to do which has two"
+    },
+    {
+      "startSeconds": 626.04,
+      "text": "mistakes it doesn't have the content"
+    },
+    {
+      "startSeconds": 627.72,
+      "text": "property because I comment test this out"
+    },
+    {
+      "startSeconds": 629.58,
+      "text": "and it has an ID property but the ID"
+    },
+    {
+      "startSeconds": 631.32,
+      "text": "property is of the wrong type it should"
+    },
+    {
+      "startSeconds": 633.899,
+      "text": "be a number and here it's a string and"
+    },
+    {
+      "startSeconds": 635.58,
+      "text": "now it should fill to parse and so we"
+    },
+    {
+      "startSeconds": 638.1,
+      "text": "should be able to construct an error"
+    },
+    {
+      "startSeconds": 639.6,
+      "text": "message and display that here to the"
+    },
+    {
+      "startSeconds": 641.399,
+      "text": "user so now let's try it and see what we"
+    },
+    {
+      "startSeconds": 643.08,
+      "text": "get I'm going to write test here press"
+    },
+    {
+      "startSeconds": 644.64,
+      "text": "add and we get a very nice dose message"
+    },
+    {
+      "startSeconds": 646.98,
+      "text": "here ID expected number receive string"
+    },
+    {
+      "startSeconds": 649.62,
+      "text": "content required so now it's very clear"
+    },
+    {
+      "startSeconds": 651.54,
+      "text": "to us what went wrong right so now if I"
+    },
+    {
+      "startSeconds": 653.399,
+      "text": "fix these mistakes and I add this back"
+    },
+    {
+      "startSeconds": 655.2,
+      "text": "and maybe we don't have an ID and ID is"
+    },
+    {
+      "startSeconds": 657.24,
+      "text": "optional so we can leave it up so now"
+    },
+    {
+      "startSeconds": 658.98,
+      "text": "this should work because now it adheres"
+    },
+    {
+      "startSeconds": 661.14,
+      "text": "to this schema from zot so now if I"
+    },
+    {
+      "startSeconds": 663.12,
+      "text": "click add you can see there is no error"
+    },
+    {
+      "startSeconds": 664.86,
+      "text": "message and because here the save bars"
+    },
+    {
+      "startSeconds": 667.14,
+      "text": "will show result that success is true so"
+    },
+    {
+      "startSeconds": 669.42,
+      "text": "we don't go into the F block here and"
+    },
+    {
+      "startSeconds": 671.22,
+      "text": "here we're just not doing anything yet"
+    },
+    {
+      "startSeconds": 672.54,
+      "text": "all right now of course now we actually"
+    },
+    {
+      "startSeconds": 673.92,
+      "text": "want to invoke the server action we want"
+    },
+    {
+      "startSeconds": 675.66,
+      "text": "to we want to send the new to do to the"
+    },
+    {
+      "startSeconds": 678.06,
+      "text": "server so now what do we pass here do we"
+    },
+    {
+      "startSeconds": 679.98,
+      "text": "actually use the variable new to do we"
+    },
+    {
+      "startSeconds": 681.66,
+      "text": "have just parsed that so it went"
+    },
+    {
+      "startSeconds": 683.399,
+      "text": "successfully so we could pass that but"
+    },
+    {
+      "startSeconds": 685.38,
+      "text": "zot actually gives us the actual object"
+    },
+    {
+      "startSeconds": 687.779,
+      "text": "in the result here as well and it has"
+    },
+    {
+      "startSeconds": 689.94,
+      "text": "some benefits of using that one so you"
+    },
+    {
+      "startSeconds": 691.92,
+      "text": "can actually use result.data here I"
+    },
+    {
+      "startSeconds": 693.899,
+      "text": "think that's a little bit better I'm"
+    },
+    {
+      "startSeconds": 695.04,
+      "text": "going to comment this out I'm Gonna Save"
+    },
+    {
+      "startSeconds": 697.019,
+      "text": "here so now if I click add here you can"
+    },
+    {
+      "startSeconds": 699,
+      "text": "see we actually get our to do objects"
+    },
+    {
+      "startSeconds": 701.16,
+      "text": "here and it's showing us content test so"
+    },
+    {
+      "startSeconds": 703.8,
+      "text": "this is the same as just using new to do"
+    },
+    {
+      "startSeconds": 706.019,
+      "text": "right and not entirely true because if"
+    },
+    {
+      "startSeconds": 708,
+      "text": "we add something here that's not in the"
+    },
+    {
+      "startSeconds": 709.68,
+      "text": "schema as something else blah blah so"
+    },
+    {
+      "startSeconds": 712.32,
+      "text": "here if we would add something else"
+    },
+    {
+      "startSeconds": 713.82,
+      "text": "which is not in a schema right something"
+    },
+    {
+      "startSeconds": 715.8,
+      "text": "else the property there is not defined"
+    },
+    {
+      "startSeconds": 717.48,
+      "text": "here if we would use new to do here and"
+    },
+    {
+      "startSeconds": 719.76,
+      "text": "send that to the server that something"
+    },
+    {
+      "startSeconds": 721.44,
+      "text": "else will be on there but if you use"
+    },
+    {
+      "startSeconds": 723.24,
+      "text": "this resulted data here if I now click"
+    },
+    {
+      "startSeconds": 725.64,
+      "text": "add here you can see it only has"
+    },
+    {
+      "startSeconds": 727.68,
+      "text": "contents it doesn't allow this something"
+    },
+    {
+      "startSeconds": 729.899,
+      "text": "else to go through as well so it"
+    },
+    {
+      "startSeconds": 731.7,
+      "text": "basically strips that information if you"
+    },
+    {
+      "startSeconds": 733.8,
+      "text": "didn't specify that for the schema and"
+    },
+    {
+      "startSeconds": 735.779,
+      "text": "also has a better typescript support so"
+    },
+    {
+      "startSeconds": 737.7,
+      "text": "it's better to continue with the data"
+    },
+    {
+      "startSeconds": 739.68,
+      "text": "that we get from zot once we parsed it"
+    },
+    {
+      "startSeconds": 741.779,
+      "text": "so that's what we're going to send to"
+    },
+    {
+      "startSeconds": 742.98,
+      "text": "the server here so now we're going to"
+    },
+    {
+      "startSeconds": 744.54,
+      "text": "invoke the server action we're going to"
+    },
+    {
+      "startSeconds": 746.1,
+      "text": "pass result.data and now we get let's"
+    },
+    {
+      "startSeconds": 748.26,
+      "text": "quickly line let's see yes and now we"
+    },
+    {
+      "startSeconds": 750,
+      "text": "have to go to our server action here the"
+    },
+    {
+      "startSeconds": 751.8,
+      "text": "server action right now is still"
+    },
+    {
+      "startSeconds": 753.06,
+      "text": "expecting form data because that's how"
+    },
+    {
+      "startSeconds": 755.339,
+      "text": "we had it defined before we refactor to"
+    },
+    {
+      "startSeconds": 757.62,
+      "text": "a client's action so now in the server"
+    },
+    {
+      "startSeconds": 759.42,
+      "text": "action we're gonna get a new to do we"
+    },
+    {
+      "startSeconds": 761.64,
+      "text": "know what type it's going to be but this"
+    },
+    {
+      "startSeconds": 763.26,
+      "text": "is going to run on the server and"
+    },
+    {
+      "startSeconds": 764.579,
+      "text": "typically you really shouldn't trust any"
+    },
+    {
+      "startSeconds": 766.62,
+      "text": "information coming from the client so I"
+    },
+    {
+      "startSeconds": 768.72,
+      "text": "think it's the best that we type this as"
+    },
+    {
+      "startSeconds": 770.399,
+      "text": "a noun right we're going to assume this"
+    },
+    {
+      "startSeconds": 772.5,
+      "text": "is unknown for now and we need to"
+    },
+    {
+      "startSeconds": 774,
+      "text": "validate this properly before we can"
+    },
+    {
+      "startSeconds": 775.62,
+      "text": "safely assume it is actually of that"
+    },
+    {
+      "startSeconds": 777.48,
+      "text": "type to do let me make this a little bit"
+    },
+    {
+      "startSeconds": 778.98,
+      "text": "of water right so now we basically want"
+    },
+    {
+      "startSeconds": 780.6,
+      "text": "to do server-side validation and it's"
+    },
+    {
+      "startSeconds": 782.639,
+      "text": "going to be almost the same as here on"
+    },
+    {
+      "startSeconds": 784.5,
+      "text": "the client so we want to have our schema"
+    },
+    {
+      "startSeconds": 786.48,
+      "text": "be available in this file as well so we"
+    },
+    {
+      "startSeconds": 788.94,
+      "text": "might as well create a lib folder"
+    },
+    {
+      "startSeconds": 790.74,
+      "text": "Library folder where we put our types"
+    },
+    {
+      "startSeconds": 792.959,
+      "text": "and our schemas so I'm going to create"
+    },
+    {
+      "startSeconds": 794.7,
+      "text": "lib and typically you want to have a"
+    },
+    {
+      "startSeconds": 796.68,
+      "text": "file where you centralize the types of"
+    },
+    {
+      "startSeconds": 798.839,
+      "text": "your project you might as well add our"
+    },
+    {
+      "startSeconds": 800.579,
+      "text": "start schemas as well so here I'm going"
+    },
+    {
+      "startSeconds": 802.44,
+      "text": "to copy this to do schema and I'm going"
+    },
+    {
+      "startSeconds": 805.079,
+      "text": "to paste that here in types now here we"
+    },
+    {
+      "startSeconds": 807.3,
+      "text": "need to import this out so I'm going to"
+    },
+    {
+      "startSeconds": 808.68,
+      "text": "remove it from here and I'm going to"
+    },
+    {
+      "startSeconds": 810.36,
+      "text": "paste it here now we want to export this"
+    },
+    {
+      "startSeconds": 812.1,
+      "text": "so we can use it in other files now one"
+    },
+    {
+      "startSeconds": 813.959,
+      "text": "other handy thing you can do with SAS is"
+    },
+    {
+      "startSeconds": 816.06,
+      "text": "if you want to have a regular typescript"
+    },
+    {
+      "startSeconds": 818.16,
+      "text": "type from this you can use zot.infer you"
+    },
+    {
+      "startSeconds": 821.519,
+      "text": "can use the schema and infer that time"
+    },
+    {
+      "startSeconds": 823.38,
+      "text": "right so we're actually not going to use"
+    },
+    {
+      "startSeconds": 824.639,
+      "text": "it here we don't need that here but"
+    },
+    {
+      "startSeconds": 825.959,
+      "text": "typically in a bigger application you do"
+    },
+    {
+      "startSeconds": 827.639,
+      "text": "need that okay so now we're exporting"
+    },
+    {
+      "startSeconds": 829.139,
+      "text": "this to do schema and let's see we are"
+    },
+    {
+      "startSeconds": 831.3,
+      "text": "using this here so I'm going to import"
+    },
+    {
+      "startSeconds": 832.8,
+      "text": "that right so this is our client action"
+    },
+    {
+      "startSeconds": 834.54,
+      "text": "it's quite big this is how it looks like"
+    },
+    {
+      "startSeconds": 836.16,
+      "text": "right now in the form component and now"
+    },
+    {
+      "startSeconds": 837.839,
+      "text": "we are invoking the server action all"
+    },
+    {
+      "startSeconds": 839.579,
+      "text": "right so I'm going to save here we're"
+    },
+    {
+      "startSeconds": 840.72,
+      "text": "going to go to our server action here"
+    },
+    {
+      "startSeconds": 842.1,
+      "text": "and I'm going to remove remove this so"
+    },
+    {
+      "startSeconds": 844.32,
+      "text": "before we try to attempt to insert it in"
+    },
+    {
+      "startSeconds": 846.18,
+      "text": "a database we want to validate the data"
+    },
+    {
+      "startSeconds": 847.98,
+      "text": "that we get here it's going to be the"
+    },
+    {
+      "startSeconds": 849.6,
+      "text": "same as here on the client right so we"
+    },
+    {
+      "startSeconds": 851.339,
+      "text": "might as well just copy this paste it"
+    },
+    {
+      "startSeconds": 852.899,
+      "text": "right here instead of client side now"
+    },
+    {
+      "startSeconds": 854.579,
+      "text": "it's server size validation now we do"
+    },
+    {
+      "startSeconds": 856.5,
+      "text": "need our to-do schema it's going to be"
+    },
+    {
+      "startSeconds": 858,
+      "text": "from that file that we just created now"
+    },
+    {
+      "startSeconds": 859.62,
+      "text": "here we're running on the server so"
+    },
+    {
+      "startSeconds": 860.94,
+      "text": "let's see if we parse this and it's not"
+    },
+    {
+      "startSeconds": 863.1,
+      "text": "successful we go here and we want to"
+    },
+    {
+      "startSeconds": 864.839,
+      "text": "construct an error message so this will"
+    },
+    {
+      "startSeconds": 866.7,
+      "text": "all stay the same now here we don't want"
+    },
+    {
+      "startSeconds": 868.62,
+      "text": "to use toast right we're on the server"
+    },
+    {
+      "startSeconds": 870.48,
+      "text": "here we cannot use those messages and so"
+    },
+    {
+      "startSeconds": 872.639,
+      "text": "here we don't want to use dust now what"
+    },
+    {
+      "startSeconds": 874.26,
+      "text": "we want to do here is we want to return"
+    },
+    {
+      "startSeconds": 875.519,
+      "text": "a message to the client and so here we"
+    },
+    {
+      "startSeconds": 877.38,
+      "text": "want to return a plain JavaScript object"
+    },
+    {
+      "startSeconds": 879.48,
+      "text": "with just an error property and then"
+    },
+    {
+      "startSeconds": 881.76,
+      "text": "that message that we construct here so"
+    },
+    {
+      "startSeconds": 883.68,
+      "text": "now in our server action if we get"
+    },
+    {
+      "startSeconds": 885.24,
+      "text": "something that does not adhere to that"
+    },
+    {
+      "startSeconds": 887.1,
+      "text": "to do schema we are going to return a"
+    },
+    {
+      "startSeconds": 889.32,
+      "text": "message to the client that's going to be"
+    },
+    {
+      "startSeconds": 890.94,
+      "text": "an object with an error property so now"
+    },
+    {
+      "startSeconds": 893.04,
+      "text": "we need to go back to the clients right"
+    },
+    {
+      "startSeconds": 894.48,
+      "text": "because here we invoke our server action"
+    },
+    {
+      "startSeconds": 896.279,
+      "text": "and now it could be something wrong on"
+    },
+    {
+      "startSeconds": 897.959,
+      "text": "the server so here we want to assign"
+    },
+    {
+      "startSeconds": 899.16,
+      "text": "design a potential response to let's say"
+    },
+    {
+      "startSeconds": 902.1,
+      "text": "a response and then we can just check if"
+    },
+    {
+      "startSeconds": 904.38,
+      "text": "there is an error on that response"
+    },
+    {
+      "startSeconds": 906.24,
+      "text": "object so if response dot error and"
+    },
+    {
+      "startSeconds": 910.56,
+      "text": "typescript complaints because response"
+    },
+    {
+      "startSeconds": 912.48,
+      "text": "could also be undefined maybe we're not"
+    },
+    {
+      "startSeconds": 914.519,
+      "text": "returning anything from the server so"
+    },
+    {
+      "startSeconds": 916.139,
+      "text": "I'll use this well if there is an error"
+    },
+    {
+      "startSeconds": 918.12,
+      "text": "we can just do the same here we can use"
+    },
+    {
+      "startSeconds": 919.8,
+      "text": "those dot error right so toast.error and"
+    },
+    {
+      "startSeconds": 922.26,
+      "text": "that's going to be response.error now"
+    },
+    {
+      "startSeconds": 924.36,
+      "text": "and so we send an object here with a key"
+    },
+    {
+      "startSeconds": 926.339,
+      "text": "of error so we say responsible error"
+    },
+    {
+      "startSeconds": 928.74,
+      "text": "that the value of that will be the"
+    },
+    {
+      "startSeconds": 930.06,
+      "text": "message right so let me put this here"
+    },
+    {
+      "startSeconds": 931.68,
+      "text": "right so now we have client set"
+    },
+    {
+      "startSeconds": 933.42,
+      "text": "validation and server-side validation"
+    },
+    {
+      "startSeconds": 935.339,
+      "text": "let's quickly test this so I'm going to"
+    },
+    {
+      "startSeconds": 937.079,
+      "text": "disable the client search validation"
+    },
+    {
+      "startSeconds": 938.699,
+      "text": "here and we're going to pass this new to"
+    },
+    {
+      "startSeconds": 940.38,
+      "text": "do right now directly to the server and"
+    },
+    {
+      "startSeconds": 942.6,
+      "text": "let's say we make some mistake here so"
+    },
+    {
+      "startSeconds": 944.16,
+      "text": "we forget to add content and we add ID"
+    },
+    {
+      "startSeconds": 946.8,
+      "text": "but that's going to be a string whereas"
+    },
+    {
+      "startSeconds": 948.54,
+      "text": "it should be a number right so now we're"
+    },
+    {
+      "startSeconds": 949.98,
+      "text": "gonna we're gonna have two issues just"
+    },
+    {
+      "startSeconds": 951.3,
+      "text": "like before so we should technically see"
+    },
+    {
+      "startSeconds": 952.98,
+      "text": "the same dose message as before right"
+    },
+    {
+      "startSeconds": 954.839,
+      "text": "because now this new to-do has problems"
+    },
+    {
+      "startSeconds": 957,
+      "text": "we send it to the server action server"
+    },
+    {
+      "startSeconds": 958.8,
+      "text": "action going to try to validate that"
+    },
+    {
+      "startSeconds": 960.48,
+      "text": "it's not going to be successful it's"
+    },
+    {
+      "startSeconds": 961.86,
+      "text": "going to create an error message and it"
+    },
+    {
+      "startSeconds": 963.48,
+      "text": "returns that as an object here which we"
+    },
+    {
+      "startSeconds": 965.22,
+      "text": "grab here and then output it with a"
+    },
+    {
+      "startSeconds": 966.959,
+      "text": "toast message I'm going to save here and"
+    },
+    {
+      "startSeconds": 968.94,
+      "text": "I'm gonna press add here let's see what"
+    },
+    {
+      "startSeconds": 970.68,
+      "text": "we get and indeed we get a very nice"
+    },
+    {
+      "startSeconds": 972.24,
+      "text": "toast message here with a message from"
+    },
+    {
+      "startSeconds": 974.399,
+      "text": "the server press let me add this back"
+    },
+    {
+      "startSeconds": 976.38,
+      "text": "again right so now we have a really nice"
+    },
+    {
+      "startSeconds": 978.72,
+      "text": "setup with very safe validation both"
+    },
+    {
+      "startSeconds": 981.06,
+      "text": "client-side as well as server sites I"
+    },
+    {
+      "startSeconds": 983.279,
+      "text": "can collapse this so we can see it a"
+    },
+    {
+      "startSeconds": 984.779,
+      "text": "little bit better so this looks good so"
+    },
+    {
+      "startSeconds": 986.279,
+      "text": "now after we parsed it here on the"
+    },
+    {
+      "startSeconds": 987.779,
+      "text": "server we can also use that result"
+    },
+    {
+      "startSeconds": 989.399,
+      "text": "object with the actual validated data"
+    },
+    {
+      "startSeconds": 991.68,
+      "text": "just like we used before on the client"
+    },
+    {
+      "startSeconds": 993.44,
+      "text": "result.data to actually insert it into"
+    },
+    {
+      "startSeconds": 995.579,
+      "text": "the database typically you also want to"
+    },
+    {
+      "startSeconds": 997.32,
+      "text": "wrap this in a try catch but I have a"
+    },
+    {
+      "startSeconds": 999.24,
+      "text": "separate video on that so make sure you"
+    },
+    {
+      "startSeconds": 1000.8,
+      "text": "check out my other videos and server"
+    },
+    {
+      "startSeconds": 1002.12,
+      "text": "actions now if you really want to become"
+    },
+    {
+      "startSeconds": 1003.44,
+      "text": "a professional react next year as"
+    },
+    {
+      "startSeconds": 1004.94,
+      "text": "developer I have a course on that so"
+    },
+    {
+      "startSeconds": 1006.44,
+      "text": "make sure you check out the links in the"
+    },
+    {
+      "startSeconds": 1007.699,
+      "text": "description make sure you've also"
+    },
+    {
+      "startSeconds": 1009.199,
+      "text": "mastered the fundamentals for JavaScript"
+    },
+    {
+      "startSeconds": 1010.82,
+      "text": "as well as CSS I have courses on them"
+    },
+    {
+      "startSeconds": 1012.8,
+      "text": "both hope this was helpful thanks for"
+    },
+    {
+      "startSeconds": 1014.3,
+      "text": "watching and see you next one bye"
+    }
+  ]
 }

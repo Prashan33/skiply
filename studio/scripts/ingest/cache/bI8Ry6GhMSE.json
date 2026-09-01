@@ -1,0 +1,570 @@
+{
+  "id": "bI8Ry6GhMSE",
+  "url": "https://www.youtube.com/watch?v=bI8Ry6GhMSE",
+  "fetchedAt": "2026-09-01T04:08:20.478Z",
+  "captionKind": "asr",
+  "chapters": [
+    {
+      "startSeconds": 0,
+      "label": "Database replication strategies for distributed systems"
+    },
+    {
+      "startSeconds": 179,
+      "label": "Multileader strategy mitigates leader failure"
+    },
+    {
+      "startSeconds": 223,
+      "label": "Leaderless replication Clever methods for managing chaos"
+    },
+    {
+      "startSeconds": 281,
+      "label": "Choosing the right exponent strategy"
+    }
+  ],
+  "cues": [
+    {
+      "startSeconds": 0,
+      "text": "let's talk about database replication"
+    },
+    {
+      "startSeconds": 2.34,
+      "text": "for your system design interview"
+    },
+    {
+      "startSeconds": 3.92,
+      "text": "[Music]"
+    },
+    {
+      "startSeconds": 7.5,
+      "text": "database replication is basically what"
+    },
+    {
+      "startSeconds": 9.66,
+      "text": "it sounds like copying data from one"
+    },
+    {
+      "startSeconds": 11.639,
+      "text": "data source to another and thus"
+    },
+    {
+      "startSeconds": 13.44,
+      "text": "replicating it in one or more places"
+    },
+    {
+      "startSeconds": 15.059,
+      "text": "there are many reasons for copying data"
+    },
+    {
+      "startSeconds": 17.4,
+      "text": "to protect against data loss during"
+    },
+    {
+      "startSeconds": 19.08,
+      "text": "system failures to serve increased"
+    },
+    {
+      "startSeconds": 21.48,
+      "text": "traffic or even to improve latency when"
+    },
+    {
+      "startSeconds": 24,
+      "text": "pursuing a regional strategy you can"
+    },
+    {
+      "startSeconds": 26.039,
+      "text": "also think of replication as a proactive"
+    },
+    {
+      "startSeconds": 27.84,
+      "text": "strategy to help applications scale"
+    },
+    {
+      "startSeconds": 29.66,
+      "text": "ultimately with data in modern"
+    },
+    {
+      "startSeconds": 31.8,
+      "text": "distributed systems being spread out"
+    },
+    {
+      "startSeconds": 33.48,
+      "text": "across multiple nodes and the fact that"
+    },
+    {
+      "startSeconds": 35.82,
+      "text": "networks are notoriously unreliable"
+    },
+    {
+      "startSeconds": 38,
+      "text": "storing data in multiple places to"
+    },
+    {
+      "startSeconds": 40.26,
+      "text": "prevent data loss has become absolutely"
+    },
+    {
+      "startSeconds": 42.059,
+      "text": "essential our Focus today is going to be"
+    },
+    {
+      "startSeconds": 44.46,
+      "text": "on the strategies that you can use to"
+    },
+    {
+      "startSeconds": 46.2,
+      "text": "copy data specifically for databases"
+    },
+    {
+      "startSeconds": 48.6,
+      "text": "although a lot of these replication"
+    },
+    {
+      "startSeconds": 50.64,
+      "text": "strategies are viable for other data"
+    },
+    {
+      "startSeconds": 52.68,
+      "text": "sources too like caches app servers and"
+    },
+    {
+      "startSeconds": 55.98,
+      "text": "object file storage replication is"
+    },
+    {
+      "startSeconds": 58.02,
+      "text": "simple if data doesn't change much"
+    },
+    {
+      "startSeconds": 59.84,
+      "text": "unfortunately that's not the case with"
+    },
+    {
+      "startSeconds": 62.399,
+      "text": "most modern systems so how do write"
+    },
+    {
+      "startSeconds": 65.159,
+      "text": "requests Cascade across multiple"
+    },
+    {
+      "startSeconds": 67.5,
+      "text": "identical databases with timeliness and"
+    },
+    {
+      "startSeconds": 69.96,
+      "text": "consistency"
+    },
+    {
+      "startSeconds": 71.04,
+      "text": "there are a few strategies to choose"
+    },
+    {
+      "startSeconds": 72.659,
+      "text": "from though as always there are"
+    },
+    {
+      "startSeconds": 74.88,
+      "text": "trade-offs for each first there is the"
+    },
+    {
+      "startSeconds": 77.04,
+      "text": "leader follower strategy also known as"
+    },
+    {
+      "startSeconds": 79.38,
+      "text": "primary replica this is probably the"
+    },
+    {
+      "startSeconds": 82.2,
+      "text": "most common strategy where a query"
+    },
+    {
+      "startSeconds": 84,
+      "text": "writes to a single designated leader the"
+    },
+    {
+      "startSeconds": 86.46,
+      "text": "leader then replicates the updated data"
+    },
+    {
+      "startSeconds": 88.619,
+      "text": "to followers sounds simple enough so"
+    },
+    {
+      "startSeconds": 91.439,
+      "text": "what's the catch well if this is done"
+    },
+    {
+      "startSeconds": 93.72,
+      "text": "synchronously it can be really really"
+    },
+    {
+      "startSeconds": 96,
+      "text": "slow synchronous replication requires"
+    },
+    {
+      "startSeconds": 98.759,
+      "text": "that both the leader and followers must"
+    },
+    {
+      "startSeconds": 101.22,
+      "text": "commit before the right is considered"
+    },
+    {
+      "startSeconds": 103.079,
+      "text": "successful this does ensure that"
+    },
+    {
+      "startSeconds": 105.479,
+      "text": "follower data is up to date but if a"
+    },
+    {
+      "startSeconds": 108.42,
+      "text": "follower in the chain goes down the"
+    },
+    {
+      "startSeconds": 110.939,
+      "text": "right query will fail and even if the"
+    },
+    {
+      "startSeconds": 113.22,
+      "text": "whole system is up waiting for a"
+    },
+    {
+      "startSeconds": 115.079,
+      "text": "follower located halfway across the"
+    },
+    {
+      "startSeconds": 116.939,
+      "text": "world to come back up and acknowledge a"
+    },
+    {
+      "startSeconds": 119.1,
+      "text": "successful right will raise latency"
+    },
+    {
+      "startSeconds": 120.96,
+      "text": "considerably asynchronous replication"
+    },
+    {
+      "startSeconds": 123.18,
+      "text": "may be an option for use cases where"
+    },
+    {
+      "startSeconds": 125.34,
+      "text": "transaction speed is more important than"
+    },
+    {
+      "startSeconds": 127.38,
+      "text": "consistently accurate data with"
+    },
+    {
+      "startSeconds": 129.479,
+      "text": "asynchronous replication the leader"
+    },
+    {
+      "startSeconds": 131.819,
+      "text": "sends write requests to its followers"
+    },
+    {
+      "startSeconds": 133.739,
+      "text": "and moves on without waiting for"
+    },
+    {
+      "startSeconds": 135.3,
+      "text": "acknowledgment is this faster yes but"
+    },
+    {
+      "startSeconds": 139.26,
+      "text": "this introduces inconsistency between"
+    },
+    {
+      "startSeconds": 141.36,
+      "text": "the leader and followers which can be a"
+    },
+    {
+      "startSeconds": 143.28,
+      "text": "huge problem if the leader goes down and"
+    },
+    {
+      "startSeconds": 145.26,
+      "text": "the most up-to-date data is lost and"
+    },
+    {
+      "startSeconds": 147.66,
+      "text": "make no mistake leader failures will"
+    },
+    {
+      "startSeconds": 150.42,
+      "text": "happen in the case of a simple leader"
+    },
+    {
+      "startSeconds": 152.76,
+      "text": "follower strategy when the leader fails"
+    },
+    {
+      "startSeconds": 154.739,
+      "text": "which is also called a failover the"
+    },
+    {
+      "startSeconds": 156.959,
+      "text": "replica is promoted to be the leader and"
+    },
+    {
+      "startSeconds": 159.12,
+      "text": "takes over"
+    },
+    {
+      "startSeconds": 160.14,
+      "text": "failover is a huge problem under"
+    },
+    {
+      "startSeconds": 162.54,
+      "text": "asynchronous replication but it's not"
+    },
+    {
+      "startSeconds": 165.06,
+      "text": "great under synchronous replication"
+    },
+    {
+      "startSeconds": 166.56,
+      "text": "either without a leader you lose the"
+    },
+    {
+      "startSeconds": 169.08,
+      "text": "ability to handle rights it's absolutely"
+    },
+    {
+      "startSeconds": 171.48,
+      "text": "critical to talk through leader failure"
+    },
+    {
+      "startSeconds": 173.459,
+      "text": "in your system design interview luckily"
+    },
+    {
+      "startSeconds": 175.86,
+      "text": "there are a few tweaks to the base"
+    },
+    {
+      "startSeconds": 177.36,
+      "text": "leader follower framework that can help"
+    },
+    {
+      "startSeconds": 179.099,
+      "text": "our next strategy tweaks leader follower"
+    },
+    {
+      "startSeconds": 181.379,
+      "text": "by designating more than one leader in"
+    },
+    {
+      "startSeconds": 183.54,
+      "text": "the system this is called leader leader"
+    },
+    {
+      "startSeconds": 186,
+      "text": "or multi-leader and it's a simple way to"
+    },
+    {
+      "startSeconds": 188.76,
+      "text": "mitigate leader failure in this strategy"
+    },
+    {
+      "startSeconds": 190.86,
+      "text": "more than one database is available to"
+    },
+    {
+      "startSeconds": 193.26,
+      "text": "take rights meaning if one leader goes"
+    },
+    {
+      "startSeconds": 195.84,
+      "text": "down the other can step in in order to"
+    },
+    {
+      "startSeconds": 198.599,
+      "text": "figure out which one steps in we use"
+    },
+    {
+      "startSeconds": 200.76,
+      "text": "different types of consensus algorithms"
+    },
+    {
+      "startSeconds": 202.8,
+      "text": "to elect a new leader the most common"
+    },
+    {
+      "startSeconds": 205.44,
+      "text": "consensus algorithm out there is paxos"
+    },
+    {
+      "startSeconds": 207.78,
+      "text": "which you may have already heard of this"
+    },
+    {
+      "startSeconds": 209.819,
+      "text": "multi-leader strategy does introduce a"
+    },
+    {
+      "startSeconds": 212.28,
+      "text": "slight lag as data must be replicated to"
+    },
+    {
+      "startSeconds": 214.5,
+      "text": "multiple leaders and Engineers need to"
+    },
+    {
+      "startSeconds": 216.42,
+      "text": "deal with that complexity especially"
+    },
+    {
+      "startSeconds": 218.28,
+      "text": "when discrepancies arise between leader"
+    },
+    {
+      "startSeconds": 220.34,
+      "text": "but the added durability mostly"
+    },
+    {
+      "startSeconds": 223.019,
+      "text": "outweighs the cons next we have"
+    },
+    {
+      "startSeconds": 224.819,
+      "text": "leaderless replication"
+    },
+    {
+      "startSeconds": 226.86,
+      "text": "why maintain the leader follower"
+    },
+    {
+      "startSeconds": 228.84,
+      "text": "hierarchy at all if leader election and"
+    },
+    {
+      "startSeconds": 231.48,
+      "text": "conflict resolution are so painful"
+    },
+    {
+      "startSeconds": 233.54,
+      "text": "Amazon's dynabo DB repopularized the"
+    },
+    {
+      "startSeconds": 236.519,
+      "text": "idea of leaderless replication and now"
+    },
+    {
+      "startSeconds": 239.34,
+      "text": "most Cloud providers use something"
+    },
+    {
+      "startSeconds": 241.319,
+      "text": "similar a lot of people consider"
+    },
+    {
+      "startSeconds": 243.299,
+      "text": "leaderless replication to be pure"
+    },
+    {
+      "startSeconds": 245.58,
+      "text": "Anarchy but there are some clever"
+    },
+    {
+      "startSeconds": 247.98,
+      "text": "methods for dealing with the chaos that"
+    },
+    {
+      "startSeconds": 249.72,
+      "text": "comes with managing a network of read"
+    },
+    {
+      "startSeconds": 251.879,
+      "text": "and write capable replicas for example"
+    },
+    {
+      "startSeconds": 254.64,
+      "text": "with read repair clients can detect"
+    },
+    {
+      "startSeconds": 257.639,
+      "text": "errors when several nodes return a"
+    },
+    {
+      "startSeconds": 259.56,
+      "text": "consistent value but one doesn't these"
+    },
+    {
+      "startSeconds": 262.44,
+      "text": "errors are then fixed by sending a right"
+    },
+    {
+      "startSeconds": 264.419,
+      "text": "request to the inconsistent node now"
+    },
+    {
+      "startSeconds": 267,
+      "text": "that we know a few replication"
+    },
+    {
+      "startSeconds": 268.62,
+      "text": "strategies how do you know when to"
+    },
+    {
+      "startSeconds": 270.6,
+      "text": "implement one there are so many reasons"
+    },
+    {
+      "startSeconds": 272.4,
+      "text": "to include replicas and so many"
+    },
+    {
+      "startSeconds": 274.139,
+      "text": "strategies to choose from we generally"
+    },
+    {
+      "startSeconds": 276.18,
+      "text": "recommend including replicas in anything"
+    },
+    {
+      "startSeconds": 278.22,
+      "text": "more than the most basic server database"
+    },
+    {
+      "startSeconds": 280.62,
+      "text": "system the key is choosing the right"
+    },
+    {
+      "startSeconds": 283.32,
+      "text": "strategy to learn more check out the"
+    },
+    {
+      "startSeconds": 285.9,
+      "text": "exponent article Linked In the"
+    },
+    {
+      "startSeconds": 287.22,
+      "text": "description to get more in depth about"
+    },
+    {
+      "startSeconds": 288.72,
+      "text": "each of these strategies and the best"
+    },
+    {
+      "startSeconds": 290.4,
+      "text": "time to use them good luck with your"
+    },
+    {
+      "startSeconds": 291.96,
+      "text": "interviews and thanks for watching"
+    },
+    {
+      "startSeconds": 293.94,
+      "text": "foreign"
+    },
+    {
+      "startSeconds": 296.67,
+      "text": "[Music]"
+    }
+  ]
+}

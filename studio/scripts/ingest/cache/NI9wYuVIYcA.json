@@ -1,0 +1,502 @@
+{
+  "id": "NI9wYuVIYcA",
+  "url": "https://www.youtube.com/watch?v=NI9wYuVIYcA",
+  "fetchedAt": "2026-09-01T04:08:59.227Z",
+  "captionKind": "asr",
+  "chapters": [
+    {
+      "startSeconds": 0,
+      "label": "Introduction"
+    },
+    {
+      "startSeconds": 8,
+      "label": "Index"
+    },
+    {
+      "startSeconds": 34,
+      "label": "Linear Complexity"
+    },
+    {
+      "startSeconds": 62,
+      "label": "Binary Search Trees"
+    },
+    {
+      "startSeconds": 109,
+      "label": "BTree Balancing"
+    },
+    {
+      "startSeconds": 166,
+      "label": "Summary"
+    }
+  ],
+  "cues": [
+    {
+      "startSeconds": 0.88,
+      "text": "hi in this video I'd like to talk about"
+    },
+    {
+      "startSeconds": 2.48,
+      "text": "be trees how they can help determine"
+    },
+    {
+      "startSeconds": 4.96,
+      "text": "what to index and what not to index in"
+    },
+    {
+      "startSeconds": 7.279,
+      "text": "an SQL database first let's open any"
+    },
+    {
+      "startSeconds": 10.36,
+      "text": "book at the"
+    },
+    {
+      "startSeconds": 12.08,
+      "text": "end this is the index the section of the"
+    },
+    {
+      "startSeconds": 14.799,
+      "text": "book that points out where important"
+    },
+    {
+      "startSeconds": 16.96,
+      "text": "keywords are so if you want to find a"
+    },
+    {
+      "startSeconds": 18.76,
+      "text": "term you can look up the pages that"
+    },
+    {
+      "startSeconds": 20.519,
+      "text": "reference the term instead of going"
+    },
+    {
+      "startSeconds": 22.32,
+      "text": "through the whole book similarly to that"
+    },
+    {
+      "startSeconds": 24.48,
+      "text": "we can ask our database to keep an index"
+    },
+    {
+      "startSeconds": 26.279,
+      "text": "next to a table and when we want to find"
+    },
+    {
+      "startSeconds": 27.96,
+      "text": "something specific instead of going"
+    },
+    {
+      "startSeconds": 29.56,
+      "text": "through the whole table we will use the"
+    },
+    {
+      "startSeconds": 31.08,
+      "text": "index to help with our"
+    },
+    {
+      "startSeconds": 33.399,
+      "text": "searches how does this"
+    },
+    {
+      "startSeconds": 36.36,
+      "text": "work let's get back to our table if we"
+    },
+    {
+      "startSeconds": 39.04,
+      "text": "store the table as a link list whenever"
+    },
+    {
+      "startSeconds": 40.8,
+      "text": "we want to find an item we would have to"
+    },
+    {
+      "startSeconds": 42.399,
+      "text": "Traverse the list until we find it on"
+    },
+    {
+      "startSeconds": 44.6,
+      "text": "average we'd have to Traverse half of it"
+    },
+    {
+      "startSeconds": 46.28,
+      "text": "and the more items we have the more we"
+    },
+    {
+      "startSeconds": 48.64,
+      "text": "have to look through this is called"
+    },
+    {
+      "startSeconds": 51.399,
+      "text": "linear complexity or bigo of M but"
+    },
+    {
+      "startSeconds": 54.879,
+      "text": "simply it means that the time it takes"
+    },
+    {
+      "startSeconds": 56.44,
+      "text": "to look something up grows twice if the"
+    },
+    {
+      "startSeconds": 59.16,
+      "text": "data set doubl"
+    },
+    {
+      "startSeconds": 61.92,
+      "text": "how can we improve that time we can if"
+    },
+    {
+      "startSeconds": 64.28,
+      "text": "we sacrifice in something else example"
+    },
+    {
+      "startSeconds": 67,
+      "text": "space let's try using a separate"
+    },
+    {
+      "startSeconds": 69.119,
+      "text": "structure to store where the data is for"
+    },
+    {
+      "startSeconds": 71,
+      "text": "example a binary search tree we can"
+    },
+    {
+      "startSeconds": 73.56,
+      "text": "choose a root and put our elements"
+    },
+    {
+      "startSeconds": 75.32,
+      "text": "before or after the root then as our"
+    },
+    {
+      "startSeconds": 77.92,
+      "text": "database grows it's easier for us to"
+    },
+    {
+      "startSeconds": 79.52,
+      "text": "locate an element as we don't have to"
+    },
+    {
+      "startSeconds": 81.04,
+      "text": "Traverse the whole tree now the time it"
+    },
+    {
+      "startSeconds": 84.079,
+      "text": "generally takes to find an item doesn't"
+    },
+    {
+      "startSeconds": 86.2,
+      "text": "roll that quickly it performs in what is"
+    },
+    {
+      "startSeconds": 88.64,
+      "text": "called logarithmic time"
+    },
+    {
+      "startSeconds": 90.6,
+      "text": "if the data set doubles the search time"
+    },
+    {
+      "startSeconds": 92.72,
+      "text": "increases by a linear Factor this is"
+    },
+    {
+      "startSeconds": 95,
+      "text": "much better than list"
+    },
+    {
+      "startSeconds": 97.04,
+      "text": "traversal however if we have more"
+    },
+    {
+      "startSeconds": 98.88,
+      "text": "elements on one of the branches we will"
+    },
+    {
+      "startSeconds": 100.84,
+      "text": "have an unbalanced tree the worst case"
+    },
+    {
+      "startSeconds": 103.64,
+      "text": "scenario then is that we still have to"
+    },
+    {
+      "startSeconds": 105.92,
+      "text": "Traverse all the nodes to get to the one"
+    },
+    {
+      "startSeconds": 107.68,
+      "text": "we want can we do something about it"
+    },
+    {
+      "startSeconds": 110.52,
+      "text": "what can we sacrifice to optimize the"
+    },
+    {
+      "startSeconds": 112.439,
+      "text": "search time well we can trade off some"
+    },
+    {
+      "startSeconds": 116.32,
+      "text": "time it takes to add items to the tree"
+    },
+    {
+      "startSeconds": 119.079,
+      "text": "whenever we in a new record we can"
+    },
+    {
+      "startSeconds": 121.24,
+      "text": "choose a new route in such a way that"
+    },
+    {
+      "startSeconds": 123.759,
+      "text": "the height of the tree Remains the Same"
+    },
+    {
+      "startSeconds": 125.28,
+      "text": "for all branches there's one more"
+    },
+    {
+      "startSeconds": 127.719,
+      "text": "practical thing to consider here disk"
+    },
+    {
+      "startSeconds": 130.08,
+      "text": "access is expensive so we want to do"
+    },
+    {
+      "startSeconds": 132.44,
+      "text": "that as rarely as possible to achieve"
+    },
+    {
+      "startSeconds": 134.56,
+      "text": "that we can store several elements per"
+    },
+    {
+      "startSeconds": 136.2,
+      "text": "node in a sorted way this is called a"
+    },
+    {
+      "startSeconds": 138.68,
+      "text": "page when traversing the tree you access"
+    },
+    {
+      "startSeconds": 141.76,
+      "text": "the dis only to receive the pages"
+    },
+    {
+      "startSeconds": 143.4,
+      "text": "instead of individual elements the the"
+    },
+    {
+      "startSeconds": 145.599,
+      "text": "page has a fixed maximum size when you"
+    },
+    {
+      "startSeconds": 147.36,
+      "text": "add a new element to the page and it"
+    },
+    {
+      "startSeconds": 149.56,
+      "text": "becomes larger than the limit the page"
+    },
+    {
+      "startSeconds": 151.76,
+      "text": "needs to be split and the tree then"
+    },
+    {
+      "startSeconds": 154.959,
+      "text": "rebalanced this data structure is called"
+    },
+    {
+      "startSeconds": 157.36,
+      "text": "a b tree balancing the B tree is a cost"
+    },
+    {
+      "startSeconds": 160.48,
+      "text": "that we have to pay with every insert"
+    },
+    {
+      "startSeconds": 162.28,
+      "text": "but our worst case scenario still"
+    },
+    {
+      "startSeconds": 164.04,
+      "text": "performs in log riing"
+    },
+    {
+      "startSeconds": 165.72,
+      "text": "time all right so now after we've seen"
+    },
+    {
+      "startSeconds": 168.48,
+      "text": "how an index tree is assembled we can"
+    },
+    {
+      "startSeconds": 170.319,
+      "text": "better decide what to index for instance"
+    },
+    {
+      "startSeconds": 173.44,
+      "text": "if we add an index to a Boolean column"
+    },
+    {
+      "startSeconds": 176.08,
+      "text": "the tree will contain two large branches"
+    },
+    {
+      "startSeconds": 181.239,
+      "text": "the storage engine would still have to"
+    },
+    {
+      "startSeconds": 182.68,
+      "text": "Traverse lists of pages on the true and"
+    },
+    {
+      "startSeconds": 184.56,
+      "text": "false signs the index doesn't really"
+    },
+    {
+      "startSeconds": 186.519,
+      "text": "help"
+    },
+    {
+      "startSeconds": 188.64,
+      "text": "here or take another"
+    },
+    {
+      "startSeconds": 190.92,
+      "text": "example let's say you add an index to a"
+    },
+    {
+      "startSeconds": 194.04,
+      "text": "column containing very different data"
+    },
+    {
+      "startSeconds": 195.799,
+      "text": "like uuids or random numbers it will"
+    },
+    {
+      "startSeconds": 198.28,
+      "text": "result in a tree that has to be"
+    },
+    {
+      "startSeconds": 200.08,
+      "text": "rebalanced often since the insert go to"
+    },
+    {
+      "startSeconds": 202.799,
+      "text": "very different pages causing them to"
+    },
+    {
+      "startSeconds": 204.239,
+      "text": "split so if you're doing more inserts on"
+    },
+    {
+      "startSeconds": 206.92,
+      "text": "random data perhaps a primary key B Tre"
+    },
+    {
+      "startSeconds": 209.799,
+      "text": "index is not the best one for you we can"
+    },
+    {
+      "startSeconds": 212.48,
+      "text": "also use this knowledge to look a bit"
+    },
+    {
+      "startSeconds": 214.12,
+      "text": "closer what we're indexing versus what"
+    },
+    {
+      "startSeconds": 216.56,
+      "text": "we're searching for for example if we"
+    },
+    {
+      "startSeconds": 219.4,
+      "text": "have a composite index on the first name"
+    },
+    {
+      "startSeconds": 221.159,
+      "text": "and last name searching for a"
+    },
+    {
+      "startSeconds": 222.68,
+      "text": "concatenation of both will not hit the"
+    },
+    {
+      "startSeconds": 226.76,
+      "text": "index or if we're indexing a datetime"
+    },
+    {
+      "startSeconds": 229.4,
+      "text": "field but are searching for entries"
+    },
+    {
+      "startSeconds": 231.04,
+      "text": "using the date part we will also not hit"
+    },
+    {
+      "startSeconds": 233.599,
+      "text": "the index every entry has to be"
+    },
+    {
+      "startSeconds": 235.68,
+      "text": "transformed before comparison"
+    },
+    {
+      "startSeconds": 240.319,
+      "text": "giving an index is a cost and we have to"
+    },
+    {
+      "startSeconds": 242.12,
+      "text": "make sure that we benefit from it"
+    },
+    {
+      "startSeconds": 244,
+      "text": "whenever I design a table I usually play"
+    },
+    {
+      "startSeconds": 245.92,
+      "text": "around with indices and do an explain of"
+    },
+    {
+      "startSeconds": 248.28,
+      "text": "most common queries that I"
+    },
+    {
+      "startSeconds": 250.799,
+      "text": "expect so that's it in this video we"
+    },
+    {
+      "startSeconds": 253.04,
+      "text": "only looked at a B tree index there are"
+    },
+    {
+      "startSeconds": 254.92,
+      "text": "other types some of them are only"
+    },
+    {
+      "startSeconds": 257.04,
+      "text": "available to some databases or storage"
+    },
+    {
+      "startSeconds": 258.84,
+      "text": "engines and the knowledge of how they"
+    },
+    {
+      "startSeconds": 260.199,
+      "text": "work behind the scenes can help you"
+    },
+    {
+      "startSeconds": 261.639,
+      "text": "design more efficient tables and queries"
+    },
+    {
+      "startSeconds": 264.16,
+      "text": "thanks for watching"
+    }
+  ]
+}

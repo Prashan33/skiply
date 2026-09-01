@@ -1,8 +1,594 @@
 {
   "id": "6M9aZzm-kEc",
   "url": "https://www.youtube.com/watch?v=6M9aZzm-kEc",
-  "fetchedAt": "2026-08-31T05:15:16.138Z",
-  "captionKind": "empty",
-  "chapters": [],
-  "cues": []
+  "fetchedAt": "2026-09-01T04:05:54.445Z",
+  "captionKind": "asr",
+  "chapters": [
+    {
+      "startSeconds": 0,
+      "label": "SO underrated"
+    },
+    {
+      "startSeconds": 12,
+      "label": "Objects are mutable!"
+    },
+    {
+      "startSeconds": 114,
+      "label": "How as const works"
+    },
+    {
+      "startSeconds": 158,
+      "label": "Object.freeze"
+    },
+    {
+      "startSeconds": 199,
+      "label": "Deriving types from as const"
+    },
+    {
+      "startSeconds": 270,
+      "label": "keyof typeof"
+    }
+  ],
+  "cues": [
+    {
+      "startSeconds": 0,
+      "text": "so someone just asked in the chat like"
+    },
+    {
+      "startSeconds": 1.62,
+      "text": "what is the most underrated typescript"
+    },
+    {
+      "startSeconds": 3.36,
+      "text": "feature and I think the most underrated"
+    },
+    {
+      "startSeconds": 5.16,
+      "text": "feature is as constant as const is just"
+    },
+    {
+      "startSeconds": 8.88,
+      "text": "so useful in so many different"
+    },
+    {
+      "startSeconds": 10.62,
+      "text": "situations first of all let's just"
+    },
+    {
+      "startSeconds": 12.3,
+      "text": "describe what as constant is so let's"
+    },
+    {
+      "startSeconds": 13.74,
+      "text": "say you've got an object here we've got"
+    },
+    {
+      "startSeconds": 14.94,
+      "text": "const object equals this and let's say"
+    },
+    {
+      "startSeconds": 17.34,
+      "text": "we got there let's just make it sort of"
+    },
+    {
+      "startSeconds": 19.02,
+      "text": "a set of roots or something now when we"
+    },
+    {
+      "startSeconds": 21.24,
+      "text": "look at these roots here if we hover"
+    },
+    {
+      "startSeconds": 22.8,
+      "text": "over them if we try to access like"
+    },
+    {
+      "startSeconds": 24.92,
+      "text": "roots.home here Roots dot home then this"
+    },
+    {
+      "startSeconds": 29.279,
+      "text": "is going to be typed as string and if we"
+    },
+    {
+      "startSeconds": 31.32,
+      "text": "try to let's say cons go to root and we"
+    },
+    {
+      "startSeconds": 34.92,
+      "text": "say okay I want you to basically be able"
+    },
+    {
+      "startSeconds": 37.739,
+      "text": "to pass in kind of like any of these"
+    },
+    {
+      "startSeconds": 40.44,
+      "text": "roots any of home or admin or users how"
+    },
+    {
+      "startSeconds": 44.34,
+      "text": "do we type this well we'd have to say"
+    },
+    {
+      "startSeconds": 45.84,
+      "text": "that root is going to be like this or"
+    },
+    {
+      "startSeconds": 49.1,
+      "text": "this or users and that's pretty Grim"
+    },
+    {
+      "startSeconds": 53.1,
+      "text": "because it's kind of like we've repeated"
+    },
+    {
+      "startSeconds": 54.78,
+      "text": "ourselves right you should not ever be"
+    },
+    {
+      "startSeconds": 57.539,
+      "text": "doing this where you have multiple"
+    },
+    {
+      "startSeconds": 59.039,
+      "text": "sources of Truth for the the same type"
+    },
+    {
+      "startSeconds": 60.78,
+      "text": "and this works you know like"
+    },
+    {
+      "startSeconds": 62.699,
+      "text": "everything's fine go to Roots you know"
+    },
+    {
+      "startSeconds": 64.92,
+      "text": "we've got this we've got admin users"
+    },
+    {
+      "startSeconds": 66.54,
+      "text": "autocomplete and great but what if we"
+    },
+    {
+      "startSeconds": 68.76,
+      "text": "wanted to derive one from the other if I"
+    },
+    {
+      "startSeconds": 71.159,
+      "text": "try to do this if I try to say okay root"
+    },
+    {
+      "startSeconds": 73.68,
+      "text": "dot admin like this it's actually going"
+    },
+    {
+      "startSeconds": 76.08,
+      "text": "to yell at me even though rootstart"
+    },
+    {
+      "startSeconds": 78.24,
+      "text": "admin is one of these members here so"
+    },
+    {
+      "startSeconds": 80.52,
+      "text": "why is it yelling at me let's have a"
+    },
+    {
+      "startSeconds": 81.96,
+      "text": "look you can see here that it was"
+    },
+    {
+      "startSeconds": 83.34,
+      "text": "expecting this admin or users but you"
+    },
+    {
+      "startSeconds": 85.68,
+      "text": "passed string I didn't pass string I"
+    },
+    {
+      "startSeconds": 88.5,
+      "text": "passed this thing here well typescript"
+    },
+    {
+      "startSeconds": 91.259,
+      "text": "thinks that what you've got here in this"
+    },
+    {
+      "startSeconds": 93.24,
+      "text": "object is a string just a plain old"
+    },
+    {
+      "startSeconds": 95.28,
+      "text": "string admin string it doesn't"
+    },
+    {
+      "startSeconds": 97.14,
+      "text": "understand that this is forward slash"
+    },
+    {
+      "startSeconds": 99.18,
+      "text": "admin and the reason for this is that"
+    },
+    {
+      "startSeconds": 101.159,
+      "text": "rootstop admin it could be changed it"
+    },
+    {
+      "startSeconds": 104.28,
+      "text": "could be made into like whatever like"
+    },
+    {
+      "startSeconds": 107.1,
+      "text": "this there's nothing to say that that's"
+    },
+    {
+      "startSeconds": 109.02,
+      "text": "not going to be changed so typescript"
+    },
+    {
+      "startSeconds": 110.46,
+      "text": "infers it as a string that can be"
+    },
+    {
+      "startSeconds": 113.939,
+      "text": "changed so how do we then change it to"
+    },
+    {
+      "startSeconds": 117.119,
+      "text": "be something that can't be changed how"
+    },
+    {
+      "startSeconds": 119.46,
+      "text": "do we make make it so that this object"
+    },
+    {
+      "startSeconds": 121.799,
+      "text": "here is like consted forever well we say"
+    },
+    {
+      "startSeconds": 126.439,
+      "text": "as const and now two things happen so"
+    },
+    {
+      "startSeconds": 130.319,
+      "text": "first of all rootstock admin now gets an"
+    },
+    {
+      "startSeconds": 132.3,
+      "text": "error saying you cannot assign to admin"
+    },
+    {
+      "startSeconds": 133.98,
+      "text": "because it's a read-only property if we"
+    },
+    {
+      "startSeconds": 135.599,
+      "text": "hover over Roots here it's no longer"
+    },
+    {
+      "startSeconds": 137.34,
+      "text": "home string administering user string"
+    },
+    {
+      "startSeconds": 139.56,
+      "text": "it's home this admin this uses this"
+    },
+    {
+      "startSeconds": 142.26,
+      "text": "pretty cool and so if I delete this here"
+    },
+    {
+      "startSeconds": 145.14,
+      "text": "now rootstop admin we can see that it's"
+    },
+    {
+      "startSeconds": 147.42,
+      "text": "being inferred as forward slash admin if"
+    },
+    {
+      "startSeconds": 150.12,
+      "text": "I remove the as const it's now being"
+    },
+    {
+      "startSeconds": 151.86,
+      "text": "inferred as string so as cons what it"
+    },
+    {
+      "startSeconds": 155.52,
+      "text": "does is it makes objects read only you"
+    },
+    {
+      "startSeconds": 158.7,
+      "text": "notice that something we could have done"
+    },
+    {
+      "startSeconds": 160.26,
+      "text": "here is we could have used object dot"
+    },
+    {
+      "startSeconds": 162.72,
+      "text": "freeze object.freeze does the same thing"
+    },
+    {
+      "startSeconds": 165.599,
+      "text": "and it actually works on the type level"
+    },
+    {
+      "startSeconds": 167.7,
+      "text": "two except it works at runtime"
+    },
+    {
+      "startSeconds": 170.18,
+      "text": "object.freeze prevents it from being"
+    },
+    {
+      "startSeconds": 172.519,
+      "text": "manipulated so if I say root start admin"
+    },
+    {
+      "startSeconds": 175.2,
+      "text": "equals this for instance then it's going"
+    },
+    {
+      "startSeconds": 177.12,
+      "text": "to yell at me for the same reason but"
+    },
+    {
+      "startSeconds": 178.86,
+      "text": "object.freeze will Works in a different"
+    },
+    {
+      "startSeconds": 180.66,
+      "text": "way because it doesn't let you doesn't"
+    },
+    {
+      "startSeconds": 182.4,
+      "text": "do it deeply so if I have like a deep"
+    },
+    {
+      "startSeconds": 184.68,
+      "text": "root here then I can actually modify"
+    },
+    {
+      "startSeconds": 187.26,
+      "text": "Roots dot deep dot whatever equals"
+    },
+    {
+      "startSeconds": 190.26,
+      "text": "something like this so object of freeze"
+    },
+    {
+      "startSeconds": 192.659,
+      "text": "only works on the top level whereas as"
+    },
+    {
+      "startSeconds": 194.519,
+      "text": "const actually works on the whole tamale"
+    },
+    {
+      "startSeconds": 197.76,
+      "text": "baby oh yeah I haven't talked about this"
+    },
+    {
+      "startSeconds": 200.34,
+      "text": "yet so we need to talk about our go to"
+    },
+    {
+      "startSeconds": 202.08,
+      "text": "root function because I'll go to root"
+    },
+    {
+      "startSeconds": 203.94,
+      "text": "function now it's still got all of this"
+    },
+    {
+      "startSeconds": 205.68,
+      "text": "repetitive information wouldn't it be"
+    },
+    {
+      "startSeconds": 207.239,
+      "text": "great if one could infer from the other"
+    },
+    {
+      "startSeconds": 208.62,
+      "text": "let's say type of roots is type of roots"
+    },
+    {
+      "startSeconds": 213.84,
+      "text": "type of is super useful with ascons"
+    },
+    {
+      "startSeconds": 216.239,
+      "text": "because what this means is we can"
+    },
+    {
+      "startSeconds": 217.62,
+      "text": "extract the type of this type here so"
+    },
+    {
+      "startSeconds": 221.4,
+      "text": "we've now got access to home admin and"
+    },
+    {
+      "startSeconds": 223.56,
+      "text": "users right there which is super nice"
+    },
+    {
+      "startSeconds": 225.78,
+      "text": "now then how do we extract the object"
+    },
+    {
+      "startSeconds": 229.319,
+      "text": "values from there well I'll give you a"
+    },
+    {
+      "startSeconds": 231.659,
+      "text": "little trick that you can do let's say"
+    },
+    {
+      "startSeconds": 233.76,
+      "text": "we've got our roots and type of roots"
+    },
+    {
+      "startSeconds": 236.58,
+      "text": "we're going to index into this kind of"
+    },
+    {
+      "startSeconds": 238.98,
+      "text": "with a dynamic property access and we're"
+    },
+    {
+      "startSeconds": 241.56,
+      "text": "going to say key of type of roots what"
+    },
+    {
+      "startSeconds": 246.12,
+      "text": "what is going on there so we've got this"
+    },
+    {
+      "startSeconds": 248.04,
+      "text": "route now isn't how this admin or users"
+    },
+    {
+      "startSeconds": 251.28,
+      "text": "I I can actually just replace this with"
+    },
+    {
+      "startSeconds": 254.76,
+      "text": "root root and now if I say go to root"
+    },
+    {
+      "startSeconds": 258,
+      "text": "and I've got this admin users I can now"
+    },
+    {
+      "startSeconds": 260.82,
+      "text": "add a new one so new user is going to be"
+    },
+    {
+      "startSeconds": 263.699,
+      "text": "users new and I can now this now gets"
+    },
+    {
+      "startSeconds": 267.66,
+      "text": "added without meaning to like repeat"
+    },
+    {
+      "startSeconds": 269.94,
+      "text": "myself anyway it's absolutely beautiful"
+    },
+    {
+      "startSeconds": 271.86,
+      "text": "but let's take a look at this syntax"
+    },
+    {
+      "startSeconds": 273.72,
+      "text": "What's Happening Here is we're basically"
+    },
+    {
+      "startSeconds": 275.46,
+      "text": "doing like an object.values but on the"
+    },
+    {
+      "startSeconds": 277.979,
+      "text": "type level we're indexing into these"
+    },
+    {
+      "startSeconds": 280.56,
+      "text": "roots and we're saying okay let's say"
+    },
+    {
+      "startSeconds": 283.139,
+      "text": "type root Keys is key of type of roots"
+    },
+    {
+      "startSeconds": 286.8,
+      "text": "what do you think this is type is going"
+    },
+    {
+      "startSeconds": 288.66,
+      "text": "to be this type is going to be home or"
+    },
+    {
+      "startSeconds": 291.12,
+      "text": "admin or users or new user here right so"
+    },
+    {
+      "startSeconds": 294.54,
+      "text": "it's going to be like a union type of"
+    },
+    {
+      "startSeconds": 296.639,
+      "text": "all of these keys and now I could index"
+    },
+    {
+      "startSeconds": 299.4,
+      "text": "into this root by saying if I just index"
+    },
+    {
+      "startSeconds": 301.68,
+      "text": "into it and say home then I'm going to"
+    },
+    {
+      "startSeconds": 303.78,
+      "text": "get this like uh this one here right"
+    },
+    {
+      "startSeconds": 306.6,
+      "text": "because I'm just saying it's home"
+    },
+    {
+      "startSeconds": 308.46,
+      "text": "indexing to it with home I can pass a"
+    },
+    {
+      "startSeconds": 310.56,
+      "text": "union here so I can pass in admin there"
+    },
+    {
+      "startSeconds": 312.9,
+      "text": "and now I get home or admin into here"
+    },
+    {
+      "startSeconds": 316.02,
+      "text": "but what I could do is I could just pass"
+    },
+    {
+      "startSeconds": 318.18,
+      "text": "in this Union which is also generated"
+    },
+    {
+      "startSeconds": 321.24,
+      "text": "from here into this little slot there"
+    },
+    {
+      "startSeconds": 324.06,
+      "text": "and that means I get to do like an"
+    },
+    {
+      "startSeconds": 325.919,
+      "text": "object of values on it because the root"
+    },
+    {
+      "startSeconds": 328.38,
+      "text": "Keys then get passed into the type of"
+    },
+    {
+      "startSeconds": 330.539,
+      "text": "roots in fact let me just reduce this"
+    },
+    {
+      "startSeconds": 332.699,
+      "text": "down even more"
+    },
+    {
+      "startSeconds": 334.44,
+      "text": "and then I end up with all of the values"
+    },
+    {
+      "startSeconds": 336.78,
+      "text": "of that thing"
+    }
+  ]
 }

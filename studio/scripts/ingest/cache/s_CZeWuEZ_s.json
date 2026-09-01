@@ -1,8 +1,701 @@
 {
   "id": "s_CZeWuEZ_s",
   "url": "https://www.youtube.com/watch?v=s_CZeWuEZ_s",
-  "fetchedAt": "2026-08-31T05:15:35.938Z",
-  "captionKind": "empty",
+  "fetchedAt": "2026-09-01T04:06:21.089Z",
+  "captionKind": "asr",
   "chapters": [],
-  "cues": []
+  "cues": [
+    {
+      "startSeconds": 0.32,
+      "text": "good morning today i'm going to tell"
+    },
+    {
+      "startSeconds": 1.599,
+      "text": "what are those files with d.t.s"
+    },
+    {
+      "startSeconds": 3.919,
+      "text": "extension and how to use them"
+    },
+    {
+      "startSeconds": 5.52,
+      "text": "you probably already know that"
+    },
+    {
+      "startSeconds": 6.96,
+      "text": "typescript allows you to define types"
+    },
+    {
+      "startSeconds": 9.12,
+      "text": "for your variables and also it allows"
+    },
+    {
+      "startSeconds": 11.84,
+      "text": "you to define your own types"
+    },
+    {
+      "startSeconds": 13.679,
+      "text": "for example i've defined the type some"
+    },
+    {
+      "startSeconds": 15.599,
+      "text": "args here so in javascript we can define"
+    },
+    {
+      "startSeconds": 18.16,
+      "text": "variables and functions like i did here"
+    },
+    {
+      "startSeconds": 21.76,
+      "text": "we also can do it in typescript here i"
+    },
+    {
+      "startSeconds": 23.519,
+      "text": "defined a function and here is a"
+    },
+    {
+      "startSeconds": 25.119,
+      "text": "variable"
+    },
+    {
+      "startSeconds": 25.92,
+      "text": "and in typescript you can also define"
+    },
+    {
+      "startSeconds": 27.84,
+      "text": "types both in typescript and in"
+    },
+    {
+      "startSeconds": 30,
+      "text": "javascript you can"
+    },
+    {
+      "startSeconds": 31.199,
+      "text": "export your variables and functions"
+    },
+    {
+      "startSeconds": 34.559,
+      "text": "using the export keyword export"
+    },
+    {
+      "startSeconds": 38.16,
+      "text": "let some string there and now we will be"
+    },
+    {
+      "startSeconds": 40.719,
+      "text": "able to"
+    },
+    {
+      "startSeconds": 41.36,
+      "text": "import it in another file or we can"
+    },
+    {
+      "startSeconds": 44.16,
+      "text": "export our function"
+    },
+    {
+      "startSeconds": 47.52,
+      "text": "export function sum and now again we can"
+    },
+    {
+      "startSeconds": 50,
+      "text": "import it in another file and use it"
+    },
+    {
+      "startSeconds": 52.079,
+      "text": "there"
+    },
+    {
+      "startSeconds": 52.879,
+      "text": "but in typescript you can also export"
+    },
+    {
+      "startSeconds": 54.879,
+      "text": "types from your files"
+    },
+    {
+      "startSeconds": 57.199,
+      "text": "for example export type some args"
+    },
+    {
+      "startSeconds": 60.48,
+      "text": "and now we can import it in another file"
+    },
+    {
+      "startSeconds": 62.48,
+      "text": "just like we did it with"
+    },
+    {
+      "startSeconds": 64,
+      "text": "variables and functions in javascript"
+    },
+    {
+      "startSeconds": 66.799,
+      "text": "sometimes it makes sense to have a file"
+    },
+    {
+      "startSeconds": 68.56,
+      "text": "that will contain only the type"
+    },
+    {
+      "startSeconds": 70,
+      "text": "definitions for example it will be"
+    },
+    {
+      "startSeconds": 71.76,
+      "text": "types that should be available across"
+    },
+    {
+      "startSeconds": 73.36,
+      "text": "the whole application in this case you"
+    },
+    {
+      "startSeconds": 75.28,
+      "text": "can create a new file with dts"
+    },
+    {
+      "startSeconds": 77.28,
+      "text": "extension new file you can pick any name"
+    },
+    {
+      "startSeconds": 80.4,
+      "text": "for it for example i will call it types"
+    },
+    {
+      "startSeconds": 82.64,
+      "text": "dts we can go to example.ts"
+    },
+    {
+      "startSeconds": 86.24,
+      "text": "copy this type definition and paste it"
+    },
+    {
+      "startSeconds": 89.28,
+      "text": "into typesdts"
+    },
+    {
+      "startSeconds": 91.52,
+      "text": "so typesdts is just a file that contains"
+    },
+    {
+      "startSeconds": 94.88,
+      "text": "only the type definitions for your"
+    },
+    {
+      "startSeconds": 96.479,
+      "text": "project we're exporting the type some rx"
+    },
+    {
+      "startSeconds": 99.52,
+      "text": "from it"
+    },
+    {
+      "startSeconds": 100.24,
+      "text": "and now inside of the example.ts"
+    },
+    {
+      "startSeconds": 103.28,
+      "text": "we can import this file because as you"
+    },
+    {
+      "startSeconds": 105.759,
+      "text": "can see right now we're having an"
+    },
+    {
+      "startSeconds": 107.2,
+      "text": "error we cannot find the name sumarx how"
+    },
+    {
+      "startSeconds": 110.24,
+      "text": "do we fix it"
+    },
+    {
+      "startSeconds": 111.84,
+      "text": "we say import sum"
+    },
+    {
+      "startSeconds": 115.439,
+      "text": "args from types"
+    },
+    {
+      "startSeconds": 119.119,
+      "text": "exactly how we would do it with regular"
+    },
+    {
+      "startSeconds": 121.28,
+      "text": "constants variables"
+    },
+    {
+      "startSeconds": 122.719,
+      "text": "and functions in javascript modules as i"
+    },
+    {
+      "startSeconds": 125.36,
+      "text": "said before"
+    },
+    {
+      "startSeconds": 126,
+      "text": "files with dts extension can only"
+    },
+    {
+      "startSeconds": 128.08,
+      "text": "contain the type definitions"
+    },
+    {
+      "startSeconds": 129.759,
+      "text": "so for example it can have this type"
+    },
+    {
+      "startSeconds": 132.239,
+      "text": "definition for some arcs"
+    },
+    {
+      "startSeconds": 134.319,
+      "text": "but if we try to create a constant here"
+    },
+    {
+      "startSeconds": 137.04,
+      "text": "const"
+    },
+    {
+      "startSeconds": 137.84,
+      "text": "4 equals bar"
+    },
+    {
+      "startSeconds": 140.959,
+      "text": "we will get an error because we can only"
+    },
+    {
+      "startSeconds": 143.599,
+      "text": "contain that"
+    },
+    {
+      "startSeconds": 144.48,
+      "text": "type definitions we cannot have values"
+    },
+    {
+      "startSeconds": 146.64,
+      "text": "there"
+    },
+    {
+      "startSeconds": 147.92,
+      "text": "interesting thing is that you can start"
+    },
+    {
+      "startSeconds": 150,
+      "text": "writing export"
+    },
+    {
+      "startSeconds": 152.08,
+      "text": "function multiply numbers"
+    },
+    {
+      "startSeconds": 155.599,
+      "text": "and so far so good but if you add the"
+    },
+    {
+      "startSeconds": 158,
+      "text": "function body"
+    },
+    {
+      "startSeconds": 159.12,
+      "text": "touchpit will complain that you cannot"
+    },
+    {
+      "startSeconds": 160.879,
+      "text": "define the function implementation in"
+    },
+    {
+      "startSeconds": 162.72,
+      "text": "your type dts file"
+    },
+    {
+      "startSeconds": 164.319,
+      "text": "what you can do you can create a type"
+    },
+    {
+      "startSeconds": 166.319,
+      "text": "for the function which means you can"
+    },
+    {
+      "startSeconds": 167.68,
+      "text": "define"
+    },
+    {
+      "startSeconds": 168.72,
+      "text": "the function name what arguments should"
+    },
+    {
+      "startSeconds": 171.04,
+      "text": "it accept"
+    },
+    {
+      "startSeconds": 171.84,
+      "text": "and what will be the return value in our"
+    },
+    {
+      "startSeconds": 174.879,
+      "text": "case"
+    },
+    {
+      "startSeconds": 175.44,
+      "text": "our function can accept two numbers x"
+    },
+    {
+      "startSeconds": 178.319,
+      "text": "number"
+    },
+    {
+      "startSeconds": 180.08,
+      "text": "and y number and we can say that it also"
+    },
+    {
+      "startSeconds": 183.28,
+      "text": "returns a number"
+    },
+    {
+      "startSeconds": 185.04,
+      "text": "this is valid but if we add an action"
+    },
+    {
+      "startSeconds": 187.92,
+      "text": "actual body"
+    },
+    {
+      "startSeconds": 188.959,
+      "text": "and try to return x multiplied by y"
+    },
+    {
+      "startSeconds": 193.2,
+      "text": "we will have an error so remember dts"
+    },
+    {
+      "startSeconds": 195.599,
+      "text": "files are"
+    },
+    {
+      "startSeconds": 196.239,
+      "text": "only four type definitions if you remove"
+    },
+    {
+      "startSeconds": 198.959,
+      "text": "the body"
+    },
+    {
+      "startSeconds": 199.92,
+      "text": "and leave only the type definition part"
+    },
+    {
+      "startSeconds": 202.4,
+      "text": "we will be fine"
+    },
+    {
+      "startSeconds": 203.28,
+      "text": "usually though you will still write your"
+    },
+    {
+      "startSeconds": 204.879,
+      "text": "type definitions in regular.ts files not"
+    },
+    {
+      "startSeconds": 207.76,
+      "text": "d.ts files and in most cases the dot ts"
+    },
+    {
+      "startSeconds": 211.28,
+      "text": "files are either used to provide the"
+    },
+    {
+      "startSeconds": 213.2,
+      "text": "types for the libraries that don't have"
+    },
+    {
+      "startSeconds": 214.799,
+      "text": "typescript support"
+    },
+    {
+      "startSeconds": 215.84,
+      "text": "or are automatically generated and"
+    },
+    {
+      "startSeconds": 217.68,
+      "text": "shipped with the library to provide that"
+    },
+    {
+      "startSeconds": 219.36,
+      "text": "typescript support to it"
+    },
+    {
+      "startSeconds": 220.72,
+      "text": "for example let's undo our changes"
+    },
+    {
+      "startSeconds": 222.56,
+      "text": "remove the types dts file"
+    },
+    {
+      "startSeconds": 224.959,
+      "text": "delete go back to example.ts"
+    },
+    {
+      "startSeconds": 228.239,
+      "text": "and return it to original state where we"
+    },
+    {
+      "startSeconds": 230.319,
+      "text": "had the type definition for the same"
+    },
+    {
+      "startSeconds": 232.4,
+      "text": "some rx type right in this file now"
+    },
+    {
+      "startSeconds": 234.959,
+      "text": "we'll run tsc"
+    },
+    {
+      "startSeconds": 236.64,
+      "text": "init and it will automatically generate"
+    },
+    {
+      "startSeconds": 238.959,
+      "text": "the tsconfig.json file"
+    },
+    {
+      "startSeconds": 241.12,
+      "text": "with the recommended options let me know"
+    },
+    {
+      "startSeconds": 243.519,
+      "text": "in the comments if you would like to"
+    },
+    {
+      "startSeconds": 244.48,
+      "text": "know more about configuring typescript"
+    },
+    {
+      "startSeconds": 246.159,
+      "text": "for your project"
+    },
+    {
+      "startSeconds": 246.959,
+      "text": "so i will go through this file and"
+    },
+    {
+      "startSeconds": 248.48,
+      "text": "explain what each option does"
+    },
+    {
+      "startSeconds": 250.48,
+      "text": "now we can run tsc to compile our"
+    },
+    {
+      "startSeconds": 252.48,
+      "text": "typescript file to javascript"
+    },
+    {
+      "startSeconds": 254.08,
+      "text": "with the declaration option tsc"
+    },
+    {
+      "startSeconds": 258.359,
+      "text": "example.ts dash declaration"
+    },
+    {
+      "startSeconds": 261.84,
+      "text": "as a result we get two files example.js"
+    },
+    {
+      "startSeconds": 264.8,
+      "text": "that you can use just like regular"
+    },
+    {
+      "startSeconds": 266.4,
+      "text": "javascript module"
+    },
+    {
+      "startSeconds": 267.44,
+      "text": "but we also have an example dts file in"
+    },
+    {
+      "startSeconds": 270.32,
+      "text": "case if we want to use this module"
+    },
+    {
+      "startSeconds": 272.4,
+      "text": "as an external library in some other"
+    },
+    {
+      "startSeconds": 274.4,
+      "text": "project that uses typescript"
+    },
+    {
+      "startSeconds": 276,
+      "text": "also there is a whole group of different"
+    },
+    {
+      "startSeconds": 277.52,
+      "text": "packages that add typescript support to"
+    },
+    {
+      "startSeconds": 279.68,
+      "text": "different javascript libraries"
+    },
+    {
+      "startSeconds": 281.28,
+      "text": "it is called definitely typed if you go"
+    },
+    {
+      "startSeconds": 283.36,
+      "text": "to types folder"
+    },
+    {
+      "startSeconds": 284.56,
+      "text": "and open any package you will see an"
+    },
+    {
+      "startSeconds": 287.24,
+      "text": "index.ts"
+    },
+    {
+      "startSeconds": 288.56,
+      "text": "file and this file will contain the type"
+    },
+    {
+      "startSeconds": 290.4,
+      "text": "definitions for this"
+    },
+    {
+      "startSeconds": 291.759,
+      "text": "library let's see another example if you"
+    },
+    {
+      "startSeconds": 293.84,
+      "text": "open the project that uses typescript"
+    },
+    {
+      "startSeconds": 295.759,
+      "text": "and"
+    },
+    {
+      "startSeconds": 296.24,
+      "text": "it has some types libraries installed"
+    },
+    {
+      "startSeconds": 298.8,
+      "text": "for example here in node modules i have"
+    },
+    {
+      "startSeconds": 300.56,
+      "text": "the"
+    },
+    {
+      "startSeconds": 300.96,
+      "text": "types folder inside of it i have react"
+    },
+    {
+      "startSeconds": 303.44,
+      "text": "so this package"
+    },
+    {
+      "startSeconds": 304.4,
+      "text": "types react contains the type"
+    },
+    {
+      "startSeconds": 306.08,
+      "text": "definitions for react"
+    },
+    {
+      "startSeconds": 308.08,
+      "text": "and inside the width i have index.ts"
+    },
+    {
+      "startSeconds": 311.039,
+      "text": "containing the type definitions"
+    },
+    {
+      "startSeconds": 312.96,
+      "text": "for react and also in package.json it"
+    },
+    {
+      "startSeconds": 315.759,
+      "text": "specifies the"
+    },
+    {
+      "startSeconds": 316.88,
+      "text": "types to be in index.ts file"
+    },
+    {
+      "startSeconds": 320.08,
+      "text": "this way when using react in your"
+    },
+    {
+      "startSeconds": 321.52,
+      "text": "project your typescript compiler will"
+    },
+    {
+      "startSeconds": 323.28,
+      "text": "know what type"
+    },
+    {
+      "startSeconds": 324,
+      "text": "definitions should it use for their"
+    },
+    {
+      "startSeconds": 325.84,
+      "text": "react library some libraries contain the"
+    },
+    {
+      "startSeconds": 328.24,
+      "text": "index.ts along with the javascript code"
+    },
+    {
+      "startSeconds": 331.199,
+      "text": "and some of them provide the typing"
+    },
+    {
+      "startSeconds": 332.72,
+      "text": "separately"
+    },
+    {
+      "startSeconds": 333.44,
+      "text": "in the types package okay i hope it's"
+    },
+    {
+      "startSeconds": 336.08,
+      "text": "clear for you now what do"
+    },
+    {
+      "startSeconds": 337.28,
+      "text": "dts files do why do you need them thank"
+    },
+    {
+      "startSeconds": 340,
+      "text": "you for watching let me know in the"
+    },
+    {
+      "startSeconds": 341.039,
+      "text": "comments what else would you like to"
+    },
+    {
+      "startSeconds": 342.08,
+      "text": "know about typescript"
+    },
+    {
+      "startSeconds": 343.36,
+      "text": "subscribe to my channel and join my"
+    },
+    {
+      "startSeconds": 345.039,
+      "text": "discord server to pick the topics for"
+    },
+    {
+      "startSeconds": 346.639,
+      "text": "the next videos"
+    },
+    {
+      "startSeconds": 347.6,
+      "text": "see you next time"
+    }
+  ]
 }

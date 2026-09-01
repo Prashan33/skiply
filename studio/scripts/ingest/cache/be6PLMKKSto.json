@@ -1,0 +1,650 @@
+{
+  "id": "be6PLMKKSto",
+  "url": "https://www.youtube.com/watch?v=be6PLMKKSto",
+  "fetchedAt": "2026-09-01T04:08:17.504Z",
+  "captionKind": "asr",
+  "chapters": [
+    {
+      "startSeconds": 0,
+      "label": "Intro"
+    },
+    {
+      "startSeconds": 78,
+      "label": "Sharding techniques"
+    },
+    {
+      "startSeconds": 163,
+      "label": "Manual vs Automatic sharding"
+    },
+    {
+      "startSeconds": 267,
+      "label": "Advantages of sharding"
+    },
+    {
+      "startSeconds": 313,
+      "label": "Disadvantages of sharding"
+    }
+  ],
+  "cues": [
+    {
+      "startSeconds": 0.199,
+      "text": "what is database sharding traditionally"
+    },
+    {
+      "startSeconds": 3.639,
+      "text": "data has been stored in an rdbms or"
+    },
+    {
+      "startSeconds": 7.04,
+      "text": "relational database management system"
+    },
+    {
+      "startSeconds": 10.559,
+      "text": "data is stored in tables as rows and"
+    },
+    {
+      "startSeconds": 12.96,
+      "text": "columns for data with 1 to n or endtoend"
+    },
+    {
+      "startSeconds": 16.96,
+      "text": "relationships a process of normalization"
+    },
+    {
+      "startSeconds": 19.4,
+      "text": "would instead store the data in Separate"
+    },
+    {
+      "startSeconds": 21.48,
+      "text": "Tables joined together by Foreign Keys"
+    },
+    {
+      "startSeconds": 24.359,
+      "text": "which ensure that the data in these"
+    },
+    {
+      "startSeconds": 25.96,
+      "text": "tables do not get out of sync with each"
+    },
+    {
+      "startSeconds": 27.8,
+      "text": "other and can be joined to get a"
+    },
+    {
+      "startSeconds": 29.64,
+      "text": "complete complete view of the data"
+    },
+    {
+      "startSeconds": 31.96,
+      "text": "however as data size increases"
+    },
+    {
+      "startSeconds": 34.44,
+      "text": "traditional database systems run into"
+    },
+    {
+      "startSeconds": 36.48,
+      "text": "bottlenecks on CPU memory or dis usage"
+    },
+    {
+      "startSeconds": 40.48,
+      "text": "they will need increasingly high-end and"
+    },
+    {
+      "startSeconds": 42.6,
+      "text": "expensive Hardware in order to maintain"
+    },
+    {
+      "startSeconds": 44.6,
+      "text": "performance even with top Quality"
+    },
+    {
+      "startSeconds": 46.96,
+      "text": "Hardware the data requirements of most"
+    },
+    {
+      "startSeconds": 49.199,
+      "text": "successful modern applications far"
+    },
+    {
+      "startSeconds": 51.559,
+      "text": "exceed the capacity of a traditional"
+    },
+    {
+      "startSeconds": 55.039,
+      "text": "rdbms sometimes the structure of the"
+    },
+    {
+      "startSeconds": 57.52,
+      "text": "data is such that the tables holding"
+    },
+    {
+      "startSeconds": 60.16,
+      "text": "data can be broken up and spread across"
+    },
+    {
+      "startSeconds": 62.199,
+      "text": "multiple servers this process of"
+    },
+    {
+      "startSeconds": 64.28,
+      "text": "breaking up large tables into horizontal"
+    },
+    {
+      "startSeconds": 66.88,
+      "text": "data partitions Each of which contains a"
+    },
+    {
+      "startSeconds": 69.28,
+      "text": "subset of the whole table and putting"
+    },
+    {
+      "startSeconds": 71.52,
+      "text": "each partition in a separate database"
+    },
+    {
+      "startSeconds": 73.799,
+      "text": "server is called sharding each partition"
+    },
+    {
+      "startSeconds": 76.64,
+      "text": "is called A Shard sharding techniques"
+    },
+    {
+      "startSeconds": 79.88,
+      "text": "most times the technique used to"
+    },
+    {
+      "startSeconds": 81.92,
+      "text": "partition data will depend on the"
+    },
+    {
+      "startSeconds": 83.72,
+      "text": "structure of the data itself a few"
+    },
+    {
+      "startSeconds": 86.2,
+      "text": "common sharding techniques are geobase"
+    },
+    {
+      "startSeconds": 88.799,
+      "text": "sharding dat data is partitioned based"
+    },
+    {
+      "startSeconds": 91,
+      "text": "on the user location such as the"
+    },
+    {
+      "startSeconds": 93.04,
+      "text": "continent of origin or a similarly large"
+    },
+    {
+      "startSeconds": 95.799,
+      "text": "area like East us or west us typically a"
+    },
+    {
+      "startSeconds": 99.2,
+      "text": "static location is chosen such as the"
+    },
+    {
+      "startSeconds": 101.2,
+      "text": "user's location when their account was"
+    },
+    {
+      "startSeconds": 102.92,
+      "text": "created this technique allows users to"
+    },
+    {
+      "startSeconds": 105.04,
+      "text": "be routed to the node closest to their"
+    },
+    {
+      "startSeconds": 107,
+      "text": "location thus reducing latency however"
+    },
+    {
+      "startSeconds": 109.84,
+      "text": "there may not be an even distribution of"
+    },
+    {
+      "startSeconds": 111.799,
+      "text": "users in the various geographical areas"
+    },
+    {
+      "startSeconds": 114.439,
+      "text": "range-based charting range-based"
+    },
+    {
+      "startSeconds": 116.799,
+      "text": "charting divides the data based on the"
+    },
+    {
+      "startSeconds": 119.079,
+      "text": "ranges of the key value for example"
+    },
+    {
+      "startSeconds": 121.92,
+      "text": "choosing the first letter of the user's"
+    },
+    {
+      "startSeconds": 124.039,
+      "text": "first name as The Shard key will divide"
+    },
+    {
+      "startSeconds": 126.119,
+      "text": "the data into 26 buckets assuming"
+    },
+    {
+      "startSeconds": 128.84,
+      "text": "English names this makes partition"
+    },
+    {
+      "startSeconds": 131.28,
+      "text": "computation very simple but it can lead"
+    },
+    {
+      "startSeconds": 134.239,
+      "text": "to uneven splits across data"
+    },
+    {
+      "startSeconds": 136.44,
+      "text": "partitions hash based hash based"
+    },
+    {
+      "startSeconds": 139.48,
+      "text": "sharting uses a hashing algorithm to"
+    },
+    {
+      "startSeconds": 142.04,
+      "text": "generate a hash based on the key value"
+    },
+    {
+      "startSeconds": 144.64,
+      "text": "and then uses the hash value to compute"
+    },
+    {
+      "startSeconds": 146.72,
+      "text": "the partition a good hash algorithm will"
+    },
+    {
+      "startSeconds": 149.319,
+      "text": "distribute data evenly across partitions"
+    },
+    {
+      "startSeconds": 151.879,
+      "text": "thus reducing the risk of hotspots"
+    },
+    {
+      "startSeconds": 154.16,
+      "text": "however it is likely to assign related"
+    },
+    {
+      "startSeconds": 156.319,
+      "text": "rows to different partitions so the"
+    },
+    {
+      "startSeconds": 158.2,
+      "text": "server can't enhance performance by"
+    },
+    {
+      "startSeconds": 160.04,
+      "text": "trying to predict and preload future"
+    },
+    {
+      "startSeconds": 162.239,
+      "text": "queries manual versus automatic sharting"
+    },
+    {
+      "startSeconds": 166.2,
+      "text": "some database systems support automatic"
+    },
+    {
+      "startSeconds": 168.44,
+      "text": "sharting the system will manage the data"
+    },
+    {
+      "startSeconds": 170.92,
+      "text": "partitioning automatic sharting will"
+    },
+    {
+      "startSeconds": 173.239,
+      "text": "dynamically repartition the data when it"
+    },
+    {
+      "startSeconds": 175.319,
+      "text": "detects an uneven distribution of the"
+    },
+    {
+      "startSeconds": 177.08,
+      "text": "data or queries among the shards this"
+    },
+    {
+      "startSeconds": 179.84,
+      "text": "this leads to higher performance and"
+    },
+    {
+      "startSeconds": 181.44,
+      "text": "better scalability unfortunately many"
+    },
+    {
+      "startSeconds": 183.92,
+      "text": "monolithic databases do not support"
+    },
+    {
+      "startSeconds": 186.159,
+      "text": "automatic sharting if you need to"
+    },
+    {
+      "startSeconds": 188.28,
+      "text": "continue using these databases but you"
+    },
+    {
+      "startSeconds": 190.2,
+      "text": "have increasing data demands then the"
+    },
+    {
+      "startSeconds": 191.959,
+      "text": "sharding needs to be done at the"
+    },
+    {
+      "startSeconds": 193.76,
+      "text": "application layer however this has some"
+    },
+    {
+      "startSeconds": 196.319,
+      "text": "significant downsides one downside is a"
+    },
+    {
+      "startSeconds": 199.04,
+      "text": "significant increase in development"
+    },
+    {
+      "startSeconds": 201,
+      "text": "complexity the application needs to"
+    },
+    {
+      "startSeconds": 203.04,
+      "text": "choose the appropriate sharding"
+    },
+    {
+      "startSeconds": 204.44,
+      "text": "technique and decide the number of"
+    },
+    {
+      "startSeconds": 205.879,
+      "text": "shards based on the projected data"
+    },
+    {
+      "startSeconds": 207.599,
+      "text": "Trends if those underlying assumptions"
+    },
+    {
+      "startSeconds": 209.799,
+      "text": "change the application has to figure out"
+    },
+    {
+      "startSeconds": 212.08,
+      "text": "how to rebalance the data partitions at"
+    },
+    {
+      "startSeconds": 214.239,
+      "text": "runtime the application has to figure"
+    },
+    {
+      "startSeconds": 215.959,
+      "text": "out which Shard the data resides in and"
+    },
+    {
+      "startSeconds": 218.319,
+      "text": "how to access that Shard another"
+    },
+    {
+      "startSeconds": 220.239,
+      "text": "challenge with manual sharding is it"
+    },
+    {
+      "startSeconds": 223,
+      "text": "sometimes results in an uneven"
+    },
+    {
+      "startSeconds": 224.4,
+      "text": "distribution of data among the shards"
+    },
+    {
+      "startSeconds": 227,
+      "text": "this is especially true as data Trends"
+    },
+    {
+      "startSeconds": 229.08,
+      "text": "differ from what they were when the"
+    },
+    {
+      "startSeconds": 230.599,
+      "text": "sharding technique was chosen hotpots"
+    },
+    {
+      "startSeconds": 232.84,
+      "text": "created due to this uneven distribution"
+    },
+    {
+      "startSeconds": 234.72,
+      "text": "can lead to Performance issues and"
+    },
+    {
+      "startSeconds": 236.4,
+      "text": "server crashes if the number of shards"
+    },
+    {
+      "startSeconds": 238.56,
+      "text": "chosen initially is too low"
+    },
+    {
+      "startSeconds": 240.84,
+      "text": "repartitioning will be required in order"
+    },
+    {
+      "startSeconds": 242.959,
+      "text": "to address Performance regressions as"
+    },
+    {
+      "startSeconds": 244.72,
+      "text": "data increases this can be kind of tough"
+    },
+    {
+      "startSeconds": 247.239,
+      "text": "especially if the system needs to have"
+    },
+    {
+      "startSeconds": 249.4,
+      "text": "no downtime operational processes such"
+    },
+    {
+      "startSeconds": 252.079,
+      "text": "as changes to the database schema also"
+    },
+    {
+      "startSeconds": 254.56,
+      "text": "become rather hard if schema changes are"
+    },
+    {
+      "startSeconds": 257.32,
+      "text": "not Backward Compatible the system will"
+    },
+    {
+      "startSeconds": 259.28,
+      "text": "need to make sure that all shards have"
+    },
+    {
+      "startSeconds": 261.12,
+      "text": "the same schema copy and the data is"
+    },
+    {
+      "startSeconds": 263.44,
+      "text": "migrated from the old schema to the new"
+    },
+    {
+      "startSeconds": 265.24,
+      "text": "one correctly on all shards let's talk"
+    },
+    {
+      "startSeconds": 267.759,
+      "text": "about some advantages of sharding"
+    },
+    {
+      "startSeconds": 270.28,
+      "text": "first sharding allows a system to scale"
+    },
+    {
+      "startSeconds": 272.56,
+      "text": "out as the size of the data increases it"
+    },
+    {
+      "startSeconds": 275.28,
+      "text": "allows the application to deal with a"
+    },
+    {
+      "startSeconds": 277,
+      "text": "larger amount of data then can be done"
+    },
+    {
+      "startSeconds": 278.84,
+      "text": "using a traditional"
+    },
+    {
+      "startSeconds": 281,
+      "text": "rdbms second having a smaller set of"
+    },
+    {
+      "startSeconds": 284.199,
+      "text": "data in each Shard also means that the"
+    },
+    {
+      "startSeconds": 286.479,
+      "text": "indexes on that data are smaller which"
+    },
+    {
+      "startSeconds": 288.68,
+      "text": "results in Faster query performance next"
+    },
+    {
+      "startSeconds": 292.44,
+      "text": "if an unplanned outage takes down A"
+    },
+    {
+      "startSeconds": 294.6,
+      "text": "Shard the majority of the system remains"
+    },
+    {
+      "startSeconds": 296.8,
+      "text": "accessible while that Shard is restored"
+    },
+    {
+      "startSeconds": 299.28,
+      "text": "down time doesn't take out the whole"
+    },
+    {
+      "startSeconds": 301.16,
+      "text": "system finally smaller amounts of data"
+    },
+    {
+      "startSeconds": 304.28,
+      "text": "in each Shard mean that the nodes can"
+    },
+    {
+      "startSeconds": 306.52,
+      "text": "run on commodity hardware and do not"
+    },
+    {
+      "startSeconds": 309.28,
+      "text": "require expensive high-end Hardware to"
+    },
+    {
+      "startSeconds": 311.32,
+      "text": "deliver acceptable performance the"
+    },
+    {
+      "startSeconds": 314,
+      "text": "disadvantages of sharding those also"
+    },
+    {
+      "startSeconds": 316.479,
+      "text": "exist not all data is amenable to"
+    },
+    {
+      "startSeconds": 319.12,
+      "text": "sharding foreign key relationships can"
+    },
+    {
+      "startSeconds": 321.24,
+      "text": "only be maintained Within A Single Shard"
+    },
+    {
+      "startSeconds": 324.16,
+      "text": "manual sharding can be very complex and"
+    },
+    {
+      "startSeconds": 326.52,
+      "text": "can lead to hotpots because each Shard"
+    },
+    {
+      "startSeconds": 328.919,
+      "text": "runs on a separate database server some"
+    },
+    {
+      "startSeconds": 331.16,
+      "text": "types of cross Shard queries such as"
+    },
+    {
+      "startSeconds": 333.199,
+      "text": "table joins are either very expensive or"
+    },
+    {
+      "startSeconds": 335.8,
+      "text": "just not possible once sharding has been"
+    },
+    {
+      "startSeconds": 338.479,
+      "text": "set up it's very hard if not impossible"
+    },
+    {
+      "startSeconds": 341.24,
+      "text": "on some systems to undo sharding or to"
+    },
+    {
+      "startSeconds": 343.52,
+      "text": "change The Shard key each Shard is a"
+    },
+    {
+      "startSeconds": 345.759,
+      "text": "live production database server so you"
+    },
+    {
+      "startSeconds": 347.759,
+      "text": "need to ensure High availability via"
+    },
+    {
+      "startSeconds": 349.919,
+      "text": "replication or other techniques this"
+    },
+    {
+      "startSeconds": 352.16,
+      "text": "increases the operational cost compared"
+    },
+    {
+      "startSeconds": 354.16,
+      "text": "to a single"
+    },
+    {
+      "startSeconds": 355.56,
+      "text": "rdbms and there you have it I hope this"
+    },
+    {
+      "startSeconds": 358.16,
+      "text": "video gave you a better sense of what"
+    },
+    {
+      "startSeconds": 359.88,
+      "text": "sharting is and how it works"
+    }
+  ]
+}

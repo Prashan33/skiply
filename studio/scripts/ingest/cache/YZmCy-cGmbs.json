@@ -1,0 +1,653 @@
+{
+  "id": "YZmCy-cGmbs",
+  "url": "https://www.youtube.com/watch?v=YZmCy-cGmbs",
+  "fetchedAt": "2026-09-01T04:07:22.383Z",
+  "captionKind": "asr",
+  "chapters": [],
+  "cues": [
+    {
+      "startSeconds": 2,
+      "text": "If your model makes up details even with"
+    },
+    {
+      "startSeconds": 4.64,
+      "text": "retrieval, grounding is missing. We'll"
+    },
+    {
+      "startSeconds": 7.52,
+      "text": "force source only answers with citations"
+    },
+    {
+      "startSeconds": 10.88,
+      "text": "so you can audit every claim and [music]"
+    },
+    {
+      "startSeconds": 13.28,
+      "text": "reduce hallucinations. You might be"
+    },
+    {
+      "startSeconds": 15.679,
+      "text": "seeing confident responses that [music]"
+    },
+    {
+      "startSeconds": 17.84,
+      "text": "cannot be traced back to any real text"
+    },
+    {
+      "startSeconds": 20.64,
+      "text": "that breaks trust and costs time chasing"
+    },
+    {
+      "startSeconds": 23.439,
+      "text": "imaginary facts. By the end of this"
+    },
+    {
+      "startSeconds": 26.16,
+      "text": "video, you will understand a simple"
+    },
+    {
+      "startSeconds": 28.24,
+      "text": "auditable pattern in [music] Python that"
+    },
+    {
+      "startSeconds": 30.72,
+      "text": "answers only from sources and flags when"
+    },
+    {
+      "startSeconds": 33.76,
+      "text": "the sources do not cover the question."
+    },
+    {
+      "startSeconds": 36.399,
+      "text": "You will be able to build a tiny"
+    },
+    {
+      "startSeconds": 38.559,
+      "text": "auditable retrieval and citation layer"
+    },
+    {
+      "startSeconds": 41.28,
+      "text": "that prevents unsupported claims."
+    },
+    {
+      "startSeconds": 43.23,
+      "text": "[music] I'm Professor Pi teaching AI"
+    },
+    {
+      "startSeconds": 46,
+      "text": "engineering and LLM systems from basics"
+    },
+    {
+      "startSeconds": 48.48,
+      "text": "to advanced [music] with simple concepts"
+    },
+    {
+      "startSeconds": 50.8,
+      "text": "spruce Python that helps you solve"
+    },
+    {
+      "startSeconds": 53.12,
+      "text": "bigger realworld problems. Most teams"
+    },
+    {
+      "startSeconds": 56,
+      "text": "try to patch hallucinations [music] by"
+    },
+    {
+      "startSeconds": 58,
+      "text": "prompting larger models harder. That"
+    },
+    {
+      "startSeconds": 60.48,
+      "text": "helps a little, but it does not give you"
+    },
+    {
+      "startSeconds": 62.719,
+      "text": "provable evidence. Citation grounding"
+    },
+    {
+      "startSeconds": 65.6,
+      "text": "flips the script. [music] It treats the"
+    },
+    {
+      "startSeconds": 67.92,
+      "text": "model as a renderer and the documents as"
+    },
+    {
+      "startSeconds": 70.96,
+      "text": "the only source of truth. Success looks"
+    },
+    {
+      "startSeconds": 74.08,
+      "text": "like answers [music] that quote exact"
+    },
+    {
+      "startSeconds": 76.32,
+      "text": "sentences and include stable citation"
+    },
+    {
+      "startSeconds": 79.04,
+      "text": "identifiers you can inspect in logs. The"
+    },
+    {
+      "startSeconds": 81.68,
+      "text": "core [music] idea is straightforward."
+    },
+    {
+      "startSeconds": 84,
+      "text": "Break documents into small traceable"
+    },
+    {
+      "startSeconds": 86.46,
+      "text": "[music] pieces. Build a tiny lookup that"
+    },
+    {
+      "startSeconds": 89.2,
+      "text": "maps words to those pieces. Retrieve the"
+    },
+    {
+      "startSeconds": 92.32,
+      "text": "pieces that match a question. Compose an"
+    },
+    {
+      "startSeconds": 95.28,
+      "text": "answer only from quoted [music] pieces"
+    },
+    {
+      "startSeconds": 97.52,
+      "text": "and attach the source IDs. This traits"
+    },
+    {
+      "startSeconds": 100.799,
+      "text": "bold creativity for verifiable accuracy."
+    },
+    {
+      "startSeconds": 104.72,
+      "text": "The trade-off reduces hallucination and"
+    },
+    {
+      "startSeconds": 107.439,
+      "text": "makes audits fast. We will build a toy"
+    },
+    {
+      "startSeconds": 110.32,
+      "text": "pipeline that demonstrates those steps"
+    },
+    {
+      "startSeconds": 112.72,
+      "text": "with a threeline corpus and a handful of"
+    },
+    {
+      "startSeconds": 115.759,
+      "text": "functions. The code is intentionally"
+    },
+    {
+      "startSeconds": 118.24,
+      "text": "minimal so you can map each piece to a"
+    },
+    {
+      "startSeconds": 120.64,
+      "text": "production step. chunking, inverted"
+    },
+    {
+      "startSeconds": 122.96,
+      "text": "index, candidate ranking, quote only"
+    },
+    {
+      "startSeconds": 125.68,
+      "text": "composition and a coverage audit. Now we"
+    },
+    {
+      "startSeconds": 128.56,
+      "text": "start with the chunking and stable ids."
+    },
+    {
+      "startSeconds": 131.52,
+      "text": "This snippet splits tiny docs into"
+    },
+    {
+      "startSeconds": 134.319,
+      "text": "sentence chunks with stable source ids."
+    },
+    {
+      "startSeconds": 138,
+      "text": "We start with [music] three pipe"
+    },
+    {
+      "startSeconds": 139.76,
+      "text": "delimited lines that hold an ID, a"
+    },
+    {
+      "startSeconds": 142.72,
+      "text": "source tag, and the text. The list"
+    },
+    {
+      "startSeconds": 145.52,
+      "text": "comprehension splits [music] each text"
+    },
+    {
+      "startSeconds": 147.68,
+      "text": "into sentences and assigns a chunk ID"
+    },
+    {
+      "startSeconds": 150.8,
+      "text": "like D21 [music]"
+    },
+    {
+      "startSeconds": 152.4,
+      "text": "while preserving the source label. The"
+    },
+    {
+      "startSeconds": 155.04,
+      "text": "variable chunks [music] becomes our"
+    },
+    {
+      "startSeconds": 157.12,
+      "text": "auditable unit storing the sentence text"
+    },
+    {
+      "startSeconds": 160.4,
+      "text": "and where it came from. Having sentence"
+    },
+    {
+      "startSeconds": 163.04,
+      "text": "level atoms means later answers can"
+    },
+    {
+      "startSeconds": 165.84,
+      "text": "quote exact lines and cite their source"
+    },
+    {
+      "startSeconds": 169.04,
+      "text": "IDs without ambiguity. [music]"
+    },
+    {
+      "startSeconds": 171.12,
+      "text": "The printed count confirms we have"
+    },
+    {
+      "startSeconds": 173.519,
+      "text": "granular traceable evidence units to"
+    },
+    {
+      "startSeconds": 175.92,
+      "text": "build on. [music] Next, we make the"
+    },
+    {
+      "startSeconds": 178.239,
+      "text": "lookup that turns words into chunk"
+    },
+    {
+      "startSeconds": 180.72,
+      "text": "pointers. This snippet builds a minimal"
+    },
+    {
+      "startSeconds": 183.92,
+      "text": "inverted index from chunks for fast"
+    },
+    {
+      "startSeconds": 186.56,
+      "text": "lookups. We create index [music] as a"
+    },
+    {
+      "startSeconds": 189.2,
+      "text": "dictionary mapping each lowercase token"
+    },
+    {
+      "startSeconds": 191.84,
+      "text": "to the chunk IDs that contain it. The"
+    },
+    {
+      "startSeconds": 194.48,
+      "text": "set [music] call ensures we add each"
+    },
+    {
+      "startSeconds": 196.879,
+      "text": "chunk ID at most once per token which"
+    },
+    {
+      "startSeconds": 200.159,
+      "text": "keeps [music] postings concise. This"
+    },
+    {
+      "startSeconds": 202.48,
+      "text": "index is enough to power quick retrieval"
+    },
+    {
+      "startSeconds": 205.04,
+      "text": "without loading heavy libraries helping"
+    },
+    {
+      "startSeconds": 207.44,
+      "text": "latency and cost. With this structure,"
+    },
+    {
+      "startSeconds": 210.48,
+      "text": "we can later [music] compute scores by"
+    },
+    {
+      "startSeconds": 212.64,
+      "text": "counting how many query terms hit each"
+    },
+    {
+      "startSeconds": 215.28,
+      "text": "chunk. The printed term count shows the"
+    },
+    {
+      "startSeconds": 217.92,
+      "text": "vocabulary size we can search over. Now"
+    },
+    {
+      "startSeconds": 220.879,
+      "text": "we need a simple ranker that picks the"
+    },
+    {
+      "startSeconds": 223.12,
+      "text": "best chunk candidates for a query. This"
+    },
+    {
+      "startSeconds": 225.84,
+      "text": "snippet ranks chunks for a query and"
+    },
+    {
+      "startSeconds": 228.239,
+      "text": "returns the top candidates. The function"
+    },
+    {
+      "startSeconds": 230.959,
+      "text": "talk lowercases and tokenizes the query."
+    },
+    {
+      "startSeconds": 234.239,
+      "text": "Then we tally how often those terms hit"
+    },
+    {
+      "startSeconds": 236.879,
+      "text": "each chunk using the index. We sort by"
+    },
+    {
+      "startSeconds": 240.239,
+      "text": "descending count and break ties by the"
+    },
+    {
+      "startSeconds": 242.72,
+      "text": "chunk ID for deterministic results. The"
+    },
+    {
+      "startSeconds": 245.84,
+      "text": "variable top contains the best matching"
+    },
+    {
+      "startSeconds": 248.879,
+      "text": "chunk IDs. we should consider quoting."
+    },
+    {
+      "startSeconds": 251.76,
+      "text": "Increasing the slice size returns more"
+    },
+    {
+      "startSeconds": 254.319,
+      "text": "candidates which can raise recall while"
+    },
+    {
+      "startSeconds": 257.199,
+      "text": "adding some latency. The printed IDs"
+    },
+    {
+      "startSeconds": 259.84,
+      "text": "confirm [music] which exact sentences"
+    },
+    {
+      "startSeconds": 262,
+      "text": "the system would site first. Next, we"
+    },
+    {
+      "startSeconds": 264.72,
+      "text": "show how to build an answer that"
+    },
+    {
+      "startSeconds": 266.639,
+      "text": "contains only quoted evidence and stable"
+    },
+    {
+      "startSeconds": 269.208,
+      "text": "[music] citations."
+    },
+    {
+      "startSeconds": 270.88,
+      "text": "This snippet composes an answer using"
+    },
+    {
+      "startSeconds": 273.36,
+      "text": "only verbatim quotes with inline"
+    },
+    {
+      "startSeconds": 275.6,
+      "text": "citations. [music]"
+    },
+    {
+      "startSeconds": 276.8,
+      "text": "We build SID for 01 lookup from a chunk"
+    },
+    {
+      "startSeconds": 279.919,
+      "text": "ID to [music] its text and source. The"
+    },
+    {
+      "startSeconds": 282.4,
+      "text": "list parts grabs the top K chunk IDs and"
+    },
+    {
+      "startSeconds": 285.68,
+      "text": "formats each as a quoted sentence"
+    },
+    {
+      "startSeconds": 288.479,
+      "text": "followed by its source and stable ID."
+    },
+    {
+      "startSeconds": 291.759,
+      "text": "The variable ants is a source answer"
+    },
+    {
+      "startSeconds": 294.753,
+      "text": "[music] with no model generated claims"
+    },
+    {
+      "startSeconds": 297.68,
+      "text": "which slashes hallucinations and [music]"
+    },
+    {
+      "startSeconds": 300,
+      "text": "makes auditing trivial. Increasing K"
+    },
+    {
+      "startSeconds": 303.12,
+      "text": "expands the answer with more evidence at"
+    },
+    {
+      "startSeconds": 305.84,
+      "text": "the cost of length and [music] latency."
+    },
+    {
+      "startSeconds": 308.24,
+      "text": "The printed count shows how many"
+    },
+    {
+      "startSeconds": 310.56,
+      "text": "citations the answer includes. Finally,"
+    },
+    {
+      "startSeconds": 314.08,
+      "text": "we check whether the quoted evidence"
+    },
+    {
+      "startSeconds": 316.24,
+      "text": "actually [music] covers the query terms."
+    },
+    {
+      "startSeconds": 318.88,
+      "text": "This snippet audits support coverage to"
+    },
+    {
+      "startSeconds": 321.36,
+      "text": "prevent unsupported [music] answers. We"
+    },
+    {
+      "startSeconds": 323.919,
+      "text": "form QW as the set of meaningful query"
+    },
+    {
+      "startSeconds": 327.503,
+      "text": "[music] words by removing basic stop"
+    },
+    {
+      "startSeconds": 329.759,
+      "text": "words. then SSW as the tokens present in"
+    },
+    {
+      "startSeconds": 333.36,
+      "text": "the [music] quoted answer. The variable"
+    },
+    {
+      "startSeconds": 335.44,
+      "text": "CV measures how many query terms are"
+    },
+    {
+      "startSeconds": 338.56,
+      "text": "actually [music] evidenced by citations."
+    },
+    {
+      "startSeconds": 341.199,
+      "text": "If CV is below threshold T, we flag the"
+    },
+    {
+      "startSeconds": 345.039,
+      "text": "answer as risk, signaling fallback or"
+    },
+    {
+      "startSeconds": 347.84,
+      "text": "more retrieval. Raising Tightens safety"
+    },
+    {
+      "startSeconds": 351.039,
+      "text": "and may increase retrieval rounds."
+    },
+    {
+      "startSeconds": 353.6,
+      "text": "Lowering T speeds responses but risks"
+    },
+    {
+      "startSeconds": 356.56,
+      "text": "gaps. The printed status indicates"
+    },
+    {
+      "startSeconds": 359.28,
+      "text": "whether the cited answer sufficiently"
+    },
+    {
+      "startSeconds": 361.68,
+      "text": "covers the query. This toy pipeline maps"
+    },
+    {
+      "startSeconds": 364.88,
+      "text": "directly to a small production flow. In"
+    },
+    {
+      "startSeconds": 367.68,
+      "text": "a real system, you would replace the"
+    },
+    {
+      "startSeconds": 369.759,
+      "text": "in-memory index with an ANN or"
+    },
+    {
+      "startSeconds": 372.4,
+      "text": "diskbacked [music] inverted index and"
+    },
+    {
+      "startSeconds": 375.12,
+      "text": "you might store chunk metadata in your"
+    },
+    {
+      "startSeconds": 377.36,
+      "text": "database. The same audit logic applies."
+    },
+    {
+      "startSeconds": 380.639,
+      "text": "Measure the percentage of [music] query"
+    },
+    {
+      "startSeconds": 382.4,
+      "text": "tokens that have direct quoted support"
+    },
+    {
+      "startSeconds": 385.28,
+      "text": "and treat low coverage as a hard signal"
+    },
+    {
+      "startSeconds": 388,
+      "text": "to avoid a free form model answer. Recap"
+    },
+    {
+      "startSeconds": 391.919,
+      "text": "what it is. A pipeline that answers only"
+    },
+    {
+      "startSeconds": 394.96,
+      "text": "from quoted source chunks with stable"
+    },
+    {
+      "startSeconds": 397.759,
+      "text": "IDs. When [music] to use it when you"
+    },
+    {
+      "startSeconds": 400.56,
+      "text": "need auditable non-h hallucinating"
+    },
+    {
+      "startSeconds": 402.88,
+      "text": "answers or when compliance requires"
+    },
+    {
+      "startSeconds": 405.84,
+      "text": "traceable evidence. One caveat, strict"
+    },
+    {
+      "startSeconds": 409.28,
+      "text": "source only answers can reduce [music]"
+    },
+    {
+      "startSeconds": 411.44,
+      "text": "recall and may require more retrieval"
+    },
+    {
+      "startSeconds": 414.319,
+      "text": "rounds or larger corpora to cover"
+    },
+    {
+      "startSeconds": 417.039,
+      "text": "complex queries. Next step, tune the"
+    },
+    {
+      "startSeconds": 420.24,
+      "text": "coverage threshold T in the audit step"
+    },
+    {
+      "startSeconds": 423.199,
+      "text": "to balance safety and recall for your"
+    },
+    {
+      "startSeconds": 426.24,
+      "text": "corpus size and query complexity. If"
+    },
+    {
+      "startSeconds": 429.599,
+      "text": "short practical AI engineering helps,"
+    },
+    {
+      "startSeconds": 432.4,
+      "text": "subscribe and watch the AI engineering"
+    }
+  ]
+}

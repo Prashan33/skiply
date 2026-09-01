@@ -1,0 +1,1162 @@
+{
+  "id": "7_LTU0LA374",
+  "url": "https://www.youtube.com/watch?v=7_LTU0LA374",
+  "fetchedAt": "2026-09-01T04:07:19.696Z",
+  "captionKind": "asr",
+  "chapters": [
+    {
+      "startSeconds": 0,
+      "label": "Introduction"
+    },
+    {
+      "startSeconds": 32,
+      "label": "BLEU Explained with Examples"
+    },
+    {
+      "startSeconds": 129,
+      "label": "ROUGE Explained with Examples"
+    },
+    {
+      "startSeconds": 216,
+      "label": "F1 Score Explained with Examples"
+    },
+    {
+      "startSeconds": 310,
+      "label": "RAG Needs New Metrics"
+    },
+    {
+      "startSeconds": 367,
+      "label": "Context Precision with Examples"
+    },
+    {
+      "startSeconds": 413,
+      "label": "Context Recall with Examples"
+    },
+    {
+      "startSeconds": 454,
+      "label": "Answer Relevance with Examples"
+    },
+    {
+      "startSeconds": 487,
+      "label": "Faithfulness with Examples"
+    },
+    {
+      "startSeconds": 520,
+      "label": "Groundedness with Examples"
+    },
+    {
+      "startSeconds": 560,
+      "label": "LLM-as-a-Judge"
+    },
+    {
+      "startSeconds": 617,
+      "label": "What RAGAS Is and Why It Matters"
+    },
+    {
+      "startSeconds": 685,
+      "label": "Recap"
+    }
+  ],
+  "cues": [
+    {
+      "startSeconds": 0.48,
+      "text": "A rag system produces answers by"
+    },
+    {
+      "startSeconds": 3.12,
+      "text": "combining two steps, retrieval and"
+    },
+    {
+      "startSeconds": 5.6,
+      "text": "generation. The quality of the final"
+    },
+    {
+      "startSeconds": 8.08,
+      "text": "response depends on how relevant the"
+    },
+    {
+      "startSeconds": 10.24,
+      "text": "retrieved information is and how"
+    },
+    {
+      "startSeconds": 12.559,
+      "text": "accurately the model uses that"
+    },
+    {
+      "startSeconds": 14.48,
+      "text": "information. Hello everyone, welcome"
+    },
+    {
+      "startSeconds": 16.72,
+      "text": "back to logical lenses. In this video,"
+    },
+    {
+      "startSeconds": 18.56,
+      "text": "we are going to look at how rag"
+    },
+    {
+      "startSeconds": 20,
+      "text": "evaluation works in a clear and"
+    },
+    {
+      "startSeconds": 21.76,
+      "text": "structured way. We'll go through the key"
+    },
+    {
+      "startSeconds": 23.76,
+      "text": "metrics that measure retrieval quality,"
+    },
+    {
+      "startSeconds": 25.76,
+      "text": "grounding quality, and the final answer."
+    },
+    {
+      "startSeconds": 28.32,
+      "text": "So, let's get started. Let's start with"
+    },
+    {
+      "startSeconds": 30.8,
+      "text": "traditional evaluation matrix. Blue or"
+    },
+    {
+      "startSeconds": 34.559,
+      "text": "bilingual evaluation under study"
+    },
+    {
+      "startSeconds": 36.8,
+      "text": "measures how many engrams in the"
+    },
+    {
+      "startSeconds": 39.12,
+      "text": "generated text also appears in the"
+    },
+    {
+      "startSeconds": 41.52,
+      "text": "reference text. A 1 g is a single word."
+    },
+    {
+      "startSeconds": 44.64,
+      "text": "A 2 g is a pair of words and so on. Blue"
+    },
+    {
+      "startSeconds": 47.84,
+      "text": "checks these overlaps and produces a"
+    },
+    {
+      "startSeconds": 50,
+      "text": "score between zero and one. A higher"
+    },
+    {
+      "startSeconds": 52.8,
+      "text": "score means the generated sentence"
+    },
+    {
+      "startSeconds": 54.879,
+      "text": "closely follows the reference. For"
+    },
+    {
+      "startSeconds": 57.039,
+      "text": "example, take the reference, the sky is"
+    },
+    {
+      "startSeconds": 59.76,
+      "text": "blue today. And the output, the sky"
+    },
+    {
+      "startSeconds": 62.48,
+      "text": "looks blue today. In the output, four"
+    },
+    {
+      "startSeconds": 65.199,
+      "text": "out of the five 1 gs, the sky, blue, and"
+    },
+    {
+      "startSeconds": 70.32,
+      "text": "today match the reference. So the 1 g"
+    },
+    {
+      "startSeconds": 73.439,
+      "text": "precision becomes 4th or 0.8"
+    },
+    {
+      "startSeconds": 79.04,
+      "text": "for the two gs. Two out of the four"
+    },
+    {
+      "startSeconds": 82.159,
+      "text": "pairs, the sky and blue today also match"
+    },
+    {
+      "startSeconds": 86.159,
+      "text": "the reference. So the 2 g precision"
+    },
+    {
+      "startSeconds": 88.64,
+      "text": "becomes almost half. Blue then takes the"
+    },
+    {
+      "startSeconds": 92.4,
+      "text": "geometric mean of these precision and"
+    },
+    {
+      "startSeconds": 94.72,
+      "text": "gives a combined score of about 0.63."
+    },
+    {
+      "startSeconds": 98.479,
+      "text": "Both sentences have the same length. So"
+    },
+    {
+      "startSeconds": 101.119,
+      "text": "the brevity penalty equals. Now brevity"
+    },
+    {
+      "startSeconds": 104.32,
+      "text": "penalty is always between 0 and one. and"
+    },
+    {
+      "startSeconds": 107.439,
+      "text": "it simply reduces the blue score when"
+    },
+    {
+      "startSeconds": 110.079,
+      "text": "the generated sentence is shorter than"
+    },
+    {
+      "startSeconds": 113.119,
+      "text": "the reference. So the final blue score"
+    },
+    {
+      "startSeconds": 115.68,
+      "text": "for this example stays around 0.63."
+    },
+    {
+      "startSeconds": 119.119,
+      "text": "This is why blue became the standard for"
+    },
+    {
+      "startSeconds": 121.2,
+      "text": "machine translation where these short"
+    },
+    {
+      "startSeconds": 123.04,
+      "text": "word patterns are a strong signal of"
+    },
+    {
+      "startSeconds": 125.28,
+      "text": "equality. All right. Next let's discuss"
+    },
+    {
+      "startSeconds": 128.399,
+      "text": "rouge or recall oriented understudy for"
+    },
+    {
+      "startSeconds": 132,
+      "text": "gisting evaluation. It measures how much"
+    },
+    {
+      "startSeconds": 134.879,
+      "text": "of the reference content appears in the"
+    },
+    {
+      "startSeconds": 137.599,
+      "text": "generated output. Instead of focusing on"
+    },
+    {
+      "startSeconds": 140.72,
+      "text": "matching phrases exactly, Rouge focuses"
+    },
+    {
+      "startSeconds": 143.44,
+      "text": "on recall. That is how much of the"
+    },
+    {
+      "startSeconds": 145.92,
+      "text": "important information is captured. This"
+    },
+    {
+      "startSeconds": 148.64,
+      "text": "makes rouge especially useful for"
+    },
+    {
+      "startSeconds": 150.879,
+      "text": "summarization where the phrasing can"
+    },
+    {
+      "startSeconds": 153.28,
+      "text": "change but the core ideas must stay"
+    },
+    {
+      "startSeconds": 155.68,
+      "text": "intact. For example, consider the"
+    },
+    {
+      "startSeconds": 158.08,
+      "text": "reference summary. The company achieved"
+    },
+    {
+      "startSeconds": 160.4,
+      "text": "record profits and the generated"
+    },
+    {
+      "startSeconds": 163.04,
+      "text": "summary. Record profits were reported"
+    },
+    {
+      "startSeconds": 165.2,
+      "text": "this quarter. To calculate rouge one, we"
+    },
+    {
+      "startSeconds": 168.319,
+      "text": "look at 1 g overlap. The keywords record"
+    },
+    {
+      "startSeconds": 171.84,
+      "text": "and profits appear in both. So the"
+    },
+    {
+      "startSeconds": 174.4,
+      "text": "generated summary captures two out of"
+    },
+    {
+      "startSeconds": 176.4,
+      "text": "the three important content words in the"
+    },
+    {
+      "startSeconds": 178.8,
+      "text": "reference. That gives us a rouge one"
+    },
+    {
+      "startSeconds": 181.36,
+      "text": "recall of 2x3 which is around 0.66."
+    },
+    {
+      "startSeconds": 185.04,
+      "text": "For rouge two, we look at two gram"
+    },
+    {
+      "startSeconds": 187.44,
+      "text": "overlap. The reference has the pair"
+    },
+    {
+      "startSeconds": 190.08,
+      "text": "record profits. The generated summary"
+    },
+    {
+      "startSeconds": 192.879,
+      "text": "also contains the same pair. So, rouge"
+    },
+    {
+      "startSeconds": 195.44,
+      "text": "two recall becomes one out of one, which"
+    },
+    {
+      "startSeconds": 197.76,
+      "text": "is one. Since the generated summary"
+    },
+    {
+      "startSeconds": 200.4,
+      "text": "captures the main idea even with"
+    },
+    {
+      "startSeconds": 202.48,
+      "text": "different phrasing, rouge assigns a"
+    },
+    {
+      "startSeconds": 205.12,
+      "text": "strong score. This is why rouge became"
+    },
+    {
+      "startSeconds": 207.28,
+      "text": "the go-to metric for summarization where"
+    },
+    {
+      "startSeconds": 209.92,
+      "text": "meaning matters more than matching"
+    },
+    {
+      "startSeconds": 212.159,
+      "text": "sentences word for word."
+    },
+    {
+      "startSeconds": 215.04,
+      "text": "All right. Now, let's look at F1 score."
+    },
+    {
+      "startSeconds": 217.76,
+      "text": "It measures how many important elements"
+    },
+    {
+      "startSeconds": 220.319,
+      "text": "in the generated answer match the"
+    },
+    {
+      "startSeconds": 222.72,
+      "text": "reference. It works using precision and"
+    },
+    {
+      "startSeconds": 225.36,
+      "text": "recall and then combines them into a"
+    },
+    {
+      "startSeconds": 227.68,
+      "text": "single number. Precision tells us how"
+    },
+    {
+      "startSeconds": 230.239,
+      "text": "many of the predicted items are correct."
+    },
+    {
+      "startSeconds": 233.28,
+      "text": "Recalls tells us how many of the correct"
+    },
+    {
+      "startSeconds": 235.599,
+      "text": "items were captured. F1 is the harmonic"
+    },
+    {
+      "startSeconds": 238.56,
+      "text": "mean of these two giving a balanced"
+    },
+    {
+      "startSeconds": 240.799,
+      "text": "score. This makes F1 useful for tasks"
+    },
+    {
+      "startSeconds": 243.92,
+      "text": "where the correctness of specific pieces"
+    },
+    {
+      "startSeconds": 246,
+      "text": "of information matters more than full"
+    },
+    {
+      "startSeconds": 248.64,
+      "text": "sentence structure like question"
+    },
+    {
+      "startSeconds": 250.56,
+      "text": "answering, extraction and"
+    },
+    {
+      "startSeconds": 252.48,
+      "text": "classification."
+    },
+    {
+      "startSeconds": 254.08,
+      "text": "For example, take the question who"
+    },
+    {
+      "startSeconds": 256,
+      "text": "discovered penicellin. Reference answer"
+    },
+    {
+      "startSeconds": 258.479,
+      "text": "is Alexander Fleming and the generated"
+    },
+    {
+      "startSeconds": 261.44,
+      "text": "answer is Flleaming discovered it in"
+    },
+    {
+      "startSeconds": 263.36,
+      "text": "1928. Here the key element we care about"
+    },
+    {
+      "startSeconds": 266.96,
+      "text": "is the entity Fleming which refers to"
+    },
+    {
+      "startSeconds": 270.08,
+      "text": "the same person as Alexander Fleming."
+    },
+    {
+      "startSeconds": 273.28,
+      "text": "The model predicted one entity Fleming"
+    },
+    {
+      "startSeconds": 275.919,
+      "text": "and it is correct. So the precision is"
+    },
+    {
+      "startSeconds": 278.72,
+      "text": "one and the reference expected one"
+    },
+    {
+      "startSeconds": 281.44,
+      "text": "entity Alexander Fleming which is also"
+    },
+    {
+      "startSeconds": 284.4,
+      "text": "present in the output. So the recall is"
+    },
+    {
+      "startSeconds": 287.12,
+      "text": "also one. Combining these F1 becomes"
+    },
+    {
+      "startSeconds": 290.24,
+      "text": "one. Even though the sentence is phrased"
+    },
+    {
+      "startSeconds": 292.88,
+      "text": "differently, the correct factual element"
+    },
+    {
+      "startSeconds": 295.199,
+      "text": "is present. So the F1 score is perfect."
+    },
+    {
+      "startSeconds": 298.56,
+      "text": "This makes F1 a strong metric for"
+    },
+    {
+      "startSeconds": 300.639,
+      "text": "evaluating tasks where capturing the"
+    },
+    {
+      "startSeconds": 302.96,
+      "text": "right fact or entity is more important"
+    },
+    {
+      "startSeconds": 305.36,
+      "text": "than matching the entire sentences."
+    },
+    {
+      "startSeconds": 309.039,
+      "text": "Okay. So traditional matrix like blue,"
+    },
+    {
+      "startSeconds": 312.16,
+      "text": "rouge and F1 work well when there is a"
+    },
+    {
+      "startSeconds": 314.8,
+      "text": "fixed reference answer and the goal is"
+    },
+    {
+      "startSeconds": 317.28,
+      "text": "to match its wording or important"
+    },
+    {
+      "startSeconds": 319.6,
+      "text": "elements."
+    },
+    {
+      "startSeconds": 320.96,
+      "text": "They are perfect for translation,"
+    },
+    {
+      "startSeconds": 322.88,
+      "text": "summarization and extraction. But a rag"
+    },
+    {
+      "startSeconds": 326.32,
+      "text": "system works differently. It retrieves"
+    },
+    {
+      "startSeconds": 328.88,
+      "text": "information first and then generates an"
+    },
+    {
+      "startSeconds": 331.68,
+      "text": "answer from that information. So the"
+    },
+    {
+      "startSeconds": 333.84,
+      "text": "quality of the final answer depends on"
+    },
+    {
+      "startSeconds": 336.479,
+      "text": "both the retrieval step and the"
+    },
+    {
+      "startSeconds": 338.72,
+      "text": "generation step. Because of this"
+    },
+    {
+      "startSeconds": 341.44,
+      "text": "similarity based matrix are not enough."
+    },
+    {
+      "startSeconds": 344.56,
+      "text": "A rag system needs matrix that directly"
+    },
+    {
+      "startSeconds": 347.28,
+      "text": "evaluate how relevant the retrieved"
+    },
+    {
+      "startSeconds": 350.16,
+      "text": "context is, how well the answer uses"
+    },
+    {
+      "startSeconds": 353.199,
+      "text": "that context and how accurately the"
+    },
+    {
+      "startSeconds": 356.4,
+      "text": "answer responds to the question. This"
+    },
+    {
+      "startSeconds": 359.28,
+      "text": "brings us to the matrix that are used"
+    },
+    {
+      "startSeconds": 361.68,
+      "text": "specifically for evaluating rag systems."
+    },
+    {
+      "startSeconds": 365.6,
+      "text": "So the first matrix here is context"
+    },
+    {
+      "startSeconds": 368.08,
+      "text": "precision. Context precision measures"
+    },
+    {
+      "startSeconds": 370.88,
+      "text": "how much of the retrieved context is"
+    },
+    {
+      "startSeconds": 373.36,
+      "text": "actually relevant to the question. If"
+    },
+    {
+      "startSeconds": 375.919,
+      "text": "the system retrieves five chunks and"
+    },
+    {
+      "startSeconds": 378.24,
+      "text": "only two out of them are useful, the"
+    },
+    {
+      "startSeconds": 381.28,
+      "text": "precision is two out of five. A higher"
+    },
+    {
+      "startSeconds": 384.24,
+      "text": "precision means the retriever brought in"
+    },
+    {
+      "startSeconds": 386.96,
+      "text": "less noise. Example, if the query is who"
+    },
+    {
+      "startSeconds": 390.96,
+      "text": "founded Tesla and the retriever brings"
+    },
+    {
+      "startSeconds": 393.84,
+      "text": "five chunks but only two talk about Elon"
+    },
+    {
+      "startSeconds": 396.88,
+      "text": "Musk and Tesla's founding, then the"
+    },
+    {
+      "startSeconds": 399.36,
+      "text": "context precision is 2 out of five which"
+    },
+    {
+      "startSeconds": 402.56,
+      "text": "is 0.4. It tells us that the retriever"
+    },
+    {
+      "startSeconds": 406,
+      "text": "pulled some relevant information but"
+    },
+    {
+      "startSeconds": 408.639,
+      "text": "also a lot of unrelated content."
+    },
+    {
+      "startSeconds": 412.96,
+      "text": "Next, let's discuss context recall. It"
+    },
+    {
+      "startSeconds": 416.24,
+      "text": "measures how much of the relevant"
+    },
+    {
+      "startSeconds": 418.319,
+      "text": "information the retriever managed to"
+    },
+    {
+      "startSeconds": 421.039,
+      "text": "find. If there are three important"
+    },
+    {
+      "startSeconds": 423.44,
+      "text": "chunks in the database and the retriever"
+    },
+    {
+      "startSeconds": 425.919,
+      "text": "finds two of them, the recall is two out"
+    },
+    {
+      "startSeconds": 429.039,
+      "text": "of three. Example, for the same query,"
+    },
+    {
+      "startSeconds": 432.8,
+      "text": "if there are three chunks that contain"
+    },
+    {
+      "startSeconds": 435.199,
+      "text": "the founding details of Tesla and the"
+    },
+    {
+      "startSeconds": 438.16,
+      "text": "retriever returns two out of them, the"
+    },
+    {
+      "startSeconds": 440.96,
+      "text": "recall is 2x3 which is 0.66."
+    },
+    {
+      "startSeconds": 444.8,
+      "text": "It shows the retriever captured most of"
+    },
+    {
+      "startSeconds": 447.28,
+      "text": "the required information but missed one"
+    },
+    {
+      "startSeconds": 450.08,
+      "text": "useful chunk."
+    },
+    {
+      "startSeconds": 452.4,
+      "text": "All right. Now let's discuss answer"
+    },
+    {
+      "startSeconds": 454.479,
+      "text": "relevance. Answer relevance measures how"
+    },
+    {
+      "startSeconds": 457.759,
+      "text": "directly the generated answer responds"
+    },
+    {
+      "startSeconds": 461.28,
+      "text": "to the user's question. This is usually"
+    },
+    {
+      "startSeconds": 464,
+      "text": "done using embeddings to check how"
+    },
+    {
+      "startSeconds": 466.8,
+      "text": "closely the answer aligns with the"
+    },
+    {
+      "startSeconds": 469.36,
+      "text": "query's meaning. For example, the"
+    },
+    {
+      "startSeconds": 472.4,
+      "text": "question, what is a transformer model?"
+    },
+    {
+      "startSeconds": 475.52,
+      "text": "We get a answer. A transformer is a"
+    },
+    {
+      "startSeconds": 478.319,
+      "text": "neural network architecture based on"
+    },
+    {
+      "startSeconds": 480.879,
+      "text": "attention. Both are semantically close."
+    },
+    {
+      "startSeconds": 484.16,
+      "text": "So, relevance will be high. Next one is"
+    },
+    {
+      "startSeconds": 486.879,
+      "text": "faithfulness. Faithfulness checks"
+    },
+    {
+      "startSeconds": 489.599,
+      "text": "whether the answer is fully supported by"
+    },
+    {
+      "startSeconds": 491.919,
+      "text": "the retrieved context. If a statement in"
+    },
+    {
+      "startSeconds": 494.8,
+      "text": "the answer does not appear in the"
+    },
+    {
+      "startSeconds": 496.639,
+      "text": "retrieved text, faithfulness goes down."
+    },
+    {
+      "startSeconds": 499.84,
+      "text": "For example, if the retrieved context"
+    },
+    {
+      "startSeconds": 502.319,
+      "text": "mentions Tesla's founders and the answer"
+    },
+    {
+      "startSeconds": 506.16,
+      "text": "adds a claim that isn't present in those"
+    },
+    {
+      "startSeconds": 509.28,
+      "text": "chunks, faithfulness drops because the"
+    },
+    {
+      "startSeconds": 512.24,
+      "text": "answer is no longer grounded in the"
+    },
+    {
+      "startSeconds": 514.399,
+      "text": "provided evidence."
+    },
+    {
+      "startSeconds": 516.479,
+      "text": "And the last one which we are going to"
+    },
+    {
+      "startSeconds": 518.24,
+      "text": "discuss here is groundedness."
+    },
+    {
+      "startSeconds": 520.56,
+      "text": "Groundedness measures how well the"
+    },
+    {
+      "startSeconds": 523.279,
+      "text": "answer uses the retrieved context"
+    },
+    {
+      "startSeconds": 526.24,
+      "text": "instead of relying on the model's"
+    },
+    {
+      "startSeconds": 528.32,
+      "text": "internal memory. If the answer copies or"
+    },
+    {
+      "startSeconds": 531.76,
+      "text": "closely paraphrases relevant parts of"
+    },
+    {
+      "startSeconds": 534.32,
+      "text": "retrieved documents, groundedness is"
+    },
+    {
+      "startSeconds": 537.2,
+      "text": "high. For example, if the retrieved"
+    },
+    {
+      "startSeconds": 540.08,
+      "text": "chunk says Fleming discovered"
+    },
+    {
+      "startSeconds": 542.56,
+      "text": "penicelline in 1928 and the answer says"
+    },
+    {
+      "startSeconds": 547.519,
+      "text": "penicelline was discovered by Fleming in"
+    },
+    {
+      "startSeconds": 549.68,
+      "text": "1928."
+    },
+    {
+      "startSeconds": 551.279,
+      "text": "The grounding score is high because the"
+    },
+    {
+      "startSeconds": 553.76,
+      "text": "answer is clearly based on the given"
+    },
+    {
+      "startSeconds": 556,
+      "text": "evidence."
+    },
+    {
+      "startSeconds": 557.92,
+      "text": "These rag evaluation matrix like context"
+    },
+    {
+      "startSeconds": 560.72,
+      "text": "precision, context recall, answer"
+    },
+    {
+      "startSeconds": 563.04,
+      "text": "relevance, faithfulness and groundedness"
+    },
+    {
+      "startSeconds": 565.76,
+      "text": "give a good understanding of how well"
+    },
+    {
+      "startSeconds": 567.92,
+      "text": "the system retrieved information and how"
+    },
+    {
+      "startSeconds": 570.56,
+      "text": "accurately it used that information. But"
+    },
+    {
+      "startSeconds": 573.36,
+      "text": "in practice, calculating these scores"
+    },
+    {
+      "startSeconds": 575.92,
+      "text": "consistently is not always simple. Some"
+    },
+    {
+      "startSeconds": 578.72,
+      "text": "of them can be computed with embeddings,"
+    },
+    {
+      "startSeconds": 580.8,
+      "text": "but others need deeper reasoning. For"
+    },
+    {
+      "startSeconds": 583.12,
+      "text": "example, to check faithfulness, an"
+    },
+    {
+      "startSeconds": 585.04,
+      "text": "evaluator has to read the question. the"
+    },
+    {
+      "startSeconds": 587.519,
+      "text": "retrieved context and the answer"
+    },
+    {
+      "startSeconds": 590,
+      "text": "together and decide whether the answer"
+    },
+    {
+      "startSeconds": 592,
+      "text": "is fully supported. This is where LLM as"
+    },
+    {
+      "startSeconds": 595.04,
+      "text": "a judge becomes useful. A large language"
+    },
+    {
+      "startSeconds": 598.399,
+      "text": "model can act like an evaluator. It"
+    },
+    {
+      "startSeconds": 601.36,
+      "text": "reads everything, the query, the"
+    },
+    {
+      "startSeconds": 603.2,
+      "text": "retrieved chunks and the final answer"
+    },
+    {
+      "startSeconds": 605.519,
+      "text": "and then gives a score for grounding or"
+    },
+    {
+      "startSeconds": 607.92,
+      "text": "relevance. Very similar to how a human"
+    },
+    {
+      "startSeconds": 610.399,
+      "text": "would judge equality. To make all of"
+    },
+    {
+      "startSeconds": 613.2,
+      "text": "this easier and standardize, the"
+    },
+    {
+      "startSeconds": 615.68,
+      "text": "community built Ragas, a dedicated"
+    },
+    {
+      "startSeconds": 618.72,
+      "text": "open-source framework for evaluating rag"
+    },
+    {
+      "startSeconds": 621.6,
+      "text": "systems."
+    },
+    {
+      "startSeconds": 623.279,
+      "text": "Ragas provide a structured way to"
+    },
+    {
+      "startSeconds": 625.839,
+      "text": "compute rag evaluation matrix without"
+    },
+    {
+      "startSeconds": 628.8,
+      "text": "manually building evaluators for each"
+    },
+    {
+      "startSeconds": 631.04,
+      "text": "one. It uses embeddings for semantic"
+    },
+    {
+      "startSeconds": 634.079,
+      "text": "comparisons and it uses LLM as a judge"
+    },
+    {
+      "startSeconds": 637.279,
+      "text": "for evaluations that require deeper"
+    },
+    {
+      "startSeconds": 639.76,
+      "text": "understanding."
+    },
+    {
+      "startSeconds": 641.279,
+      "text": "This helps capture meaning, grounding"
+    },
+    {
+      "startSeconds": 643.839,
+      "text": "and factual alignment even when the"
+    },
+    {
+      "startSeconds": 646.32,
+      "text": "wording varies. Raas provides four main"
+    },
+    {
+      "startSeconds": 649.839,
+      "text": "scores. Faithfulness which is whether"
+    },
+    {
+      "startSeconds": 653.04,
+      "text": "the answer is fully supported by the"
+    },
+    {
+      "startSeconds": 655.76,
+      "text": "retrieved context. Answer relevance"
+    },
+    {
+      "startSeconds": 659.12,
+      "text": "which checks how well the answer"
+    },
+    {
+      "startSeconds": 661.68,
+      "text": "addresses the question. context"
+    },
+    {
+      "startSeconds": 664.399,
+      "text": "precision which checks how much of the"
+    },
+    {
+      "startSeconds": 667.6,
+      "text": "retrieved context is actually relevant"
+    },
+    {
+      "startSeconds": 671.279,
+      "text": "and context recall which tells how much"
+    },
+    {
+      "startSeconds": 674.72,
+      "text": "of the relevant information was"
+    },
+    {
+      "startSeconds": 676.959,
+      "text": "successfully retrieved. These four"
+    },
+    {
+      "startSeconds": 678.959,
+      "text": "matrix together give a clear and"
+    },
+    {
+      "startSeconds": 681.44,
+      "text": "consistent picture of rag system"
+    },
+    {
+      "startSeconds": 684,
+      "text": "quality."
+    },
+    {
+      "startSeconds": 686.079,
+      "text": "Rag system needs evaluation methods that"
+    },
+    {
+      "startSeconds": 688.48,
+      "text": "look beyond surface level text"
+    },
+    {
+      "startSeconds": 690.8,
+      "text": "similarity. Traditional matrix like"
+    },
+    {
+      "startSeconds": 693.36,
+      "text": "blue, rouge and f1 helps us understand"
+    },
+    {
+      "startSeconds": 696.16,
+      "text": "wording, coverage and factual elements."
+    },
+    {
+      "startSeconds": 699.04,
+      "text": "But rag adds another layer through"
+    },
+    {
+      "startSeconds": 701.6,
+      "text": "retrieval and grounding. Matrix such as"
+    },
+    {
+      "startSeconds": 704.24,
+      "text": "context precision, context recall,"
+    },
+    {
+      "startSeconds": 706.88,
+      "text": "answer relevance and faithfulness help"
+    },
+    {
+      "startSeconds": 709.6,
+      "text": "evaluate these two steps clearly and"
+    },
+    {
+      "startSeconds": 712.399,
+      "text": "frameworks like Ragas bring these"
+    },
+    {
+      "startSeconds": 714.56,
+      "text": "evaluation together into a simple"
+    },
+    {
+      "startSeconds": 716.8,
+      "text": "consistent workflow supported by"
+    },
+    {
+      "startSeconds": 719.2,
+      "text": "techniques like embeddings and LLM as a"
+    },
+    {
+      "startSeconds": 721.839,
+      "text": "judge. With these tools, it becomes"
+    },
+    {
+      "startSeconds": 723.92,
+      "text": "straightforward to identify where a rag"
+    },
+    {
+      "startSeconds": 727.2,
+      "text": "system is strong and where it needs"
+    },
+    {
+      "startSeconds": 729.76,
+      "text": "improvement. So that's all on rag"
+    },
+    {
+      "startSeconds": 732.32,
+      "text": "evaluation. Thanks for watching. This is"
+    },
+    {
+      "startSeconds": 734.48,
+      "text": "Logical Lenses. See you in the next one."
+    }
+  ]
+}

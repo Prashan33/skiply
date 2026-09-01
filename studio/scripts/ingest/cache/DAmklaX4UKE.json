@@ -1,0 +1,2094 @@
+{
+  "id": "DAmklaX4UKE",
+  "url": "https://www.youtube.com/watch?v=DAmklaX4UKE",
+  "fetchedAt": "2026-09-01T04:07:25.103Z",
+  "captionKind": "asr",
+  "chapters": [
+    {
+      "startSeconds": 0,
+      "label": "Introduction: The Hallucination Problem"
+    },
+    {
+      "startSeconds": 106,
+      "label": "Why Do LLMs Hallucinate?"
+    },
+    {
+      "startSeconds": 259,
+      "label": "The Core Idea of RAG"
+    },
+    {
+      "startSeconds": 430,
+      "label": "Smarter Chunking and Indexing"
+    },
+    {
+      "startSeconds": 594,
+      "label": "Dense, Sparse & Hybrid Retrieval"
+    },
+    {
+      "startSeconds": 748,
+      "label": "Reranking and Context Curation"
+    },
+    {
+      "startSeconds": 896,
+      "label": "Self-Correcting & Agentic RAG"
+    },
+    {
+      "startSeconds": 1055,
+      "label": "Grounding, Citations & Verification"
+    },
+    {
+      "startSeconds": 1187,
+      "label": "Limitations, Open Challenges & Closing"
+    }
+  ],
+  "cues": [
+    {
+      "startSeconds": 0,
+      "text": "How modern RAG pipelines are solving the"
+    },
+    {
+      "startSeconds": 3.6,
+      "text": "LLM hallucination problem."
+    },
+    {
+      "startSeconds": 7.56,
+      "text": "Introduction."
+    },
+    {
+      "startSeconds": 9.72,
+      "text": "Imagine asking an AI assistant a simple"
+    },
+    {
+      "startSeconds": 12.92,
+      "text": "question about a court case and it"
+    },
+    {
+      "startSeconds": 15.72,
+      "text": "confidently gives you a detailed answer"
+    },
+    {
+      "startSeconds": 18.8,
+      "text": "complete with citations, quotes, and"
+    },
+    {
+      "startSeconds": 21.56,
+      "text": "page numbers. The only problem? None of"
+    },
+    {
+      "startSeconds": 24.88,
+      "text": "it is real. The case doesn't exist. The"
+    },
+    {
+      "startSeconds": 28.12,
+      "text": "quotes were invented. This isn't a"
+    },
+    {
+      "startSeconds": 30.6,
+      "text": "hypothetical. It's happened to lawyers,"
+    },
+    {
+      "startSeconds": 33.52,
+      "text": "students, and businesses around the"
+    },
+    {
+      "startSeconds": 35.68,
+      "text": "world and it has a name, hallucination."
+    },
+    {
+      "startSeconds": 39.68,
+      "text": "For the last few years, hallucination"
+    },
+    {
+      "startSeconds": 42.08,
+      "text": "has been the single biggest obstacle"
+    },
+    {
+      "startSeconds": 44.48,
+      "text": "standing between large language models"
+    },
+    {
+      "startSeconds": 47,
+      "text": "and real-world trust. You can't put a"
+    },
+    {
+      "startSeconds": 49.72,
+      "text": "model into a hospital, a courtroom, or a"
+    },
+    {
+      "startSeconds": 52.36,
+      "text": "financial system if it sometimes just"
+    },
+    {
+      "startSeconds": 55,
+      "text": "makes things up with total confidence."
+    },
+    {
+      "startSeconds": 58.24,
+      "text": "But here's the good news. Over the past"
+    },
+    {
+      "startSeconds": 60.64,
+      "text": "2 years, a technique called retrieval"
+    },
+    {
+      "startSeconds": 63.64,
+      "text": "augmented generation, RAG, has evolved"
+    },
+    {
+      "startSeconds": 67.68,
+      "text": "from a simple trick into a sophisticated"
+    },
+    {
+      "startSeconds": 70.4,
+      "text": "engineering discipline that is"
+    },
+    {
+      "startSeconds": 72.28,
+      "text": "dramatically reducing hallucination"
+    },
+    {
+      "startSeconds": 74.76,
+      "text": "rates. In this video, we're going to go"
+    },
+    {
+      "startSeconds": 77.4,
+      "text": "deep into how modern RAG pipelines"
+    },
+    {
+      "startSeconds": 80.68,
+      "text": "actually work, why they help, where they"
+    },
+    {
+      "startSeconds": 83.76,
+      "text": "still fail, and what the cutting edge"
+    },
+    {
+      "startSeconds": 86.32,
+      "text": "looks like right now."
+    },
+    {
+      "startSeconds": 88.2,
+      "text": "By the end of this video, you'll"
+    },
+    {
+      "startSeconds": 89.88,
+      "text": "understand the full anatomy of a"
+    },
+    {
+      "startSeconds": 91.84,
+      "text": "production-grade RAG system from"
+    },
+    {
+      "startSeconds": 95.28,
+      "text": "chunking and embeddings to hybrid"
+    },
+    {
+      "startSeconds": 97.96,
+      "text": "retrieval, reranking, self-correction"
+    },
+    {
+      "startSeconds": 100.88,
+      "text": "loops, and grounded generation. Let's"
+    },
+    {
+      "startSeconds": 103.92,
+      "text": "get into it."
+    },
+    {
+      "startSeconds": 106.28,
+      "text": "Why do LLMs hallucinate?"
+    },
+    {
+      "startSeconds": 110.12,
+      "text": "Before we can appreciate the solution,"
+    },
+    {
+      "startSeconds": 112.2,
+      "text": "we need to understand the disease. Large"
+    },
+    {
+      "startSeconds": 115.2,
+      "text": "language models are at their core next"
+    },
+    {
+      "startSeconds": 118.52,
+      "text": "token predictors."
+    },
+    {
+      "startSeconds": 120.6,
+      "text": "During training, they read enormous"
+    },
+    {
+      "startSeconds": 122.68,
+      "text": "amounts of text and learn statistical"
+    },
+    {
+      "startSeconds": 125.32,
+      "text": "patterns about which word is likely to"
+    },
+    {
+      "startSeconds": 127.64,
+      "text": "follow another given the context so far."
+    },
+    {
+      "startSeconds": 131.4,
+      "text": "There's no internal database of verified"
+    },
+    {
+      "startSeconds": 134,
+      "text": "facts sitting inside the model. There's"
+    },
+    {
+      "startSeconds": 136.48,
+      "text": "no lookup table. Everything the model"
+    },
+    {
+      "startSeconds": 139.16,
+      "text": "knows is compressed into billions of"
+    },
+    {
+      "startSeconds": 141.959,
+      "text": "numerical weights. And when you ask it a"
+    },
+    {
+      "startSeconds": 144.44,
+      "text": "question, it's essentially performing an"
+    },
+    {
+      "startSeconds": 146.88,
+      "text": "extremely sophisticated form of pattern"
+    },
+    {
+      "startSeconds": 149.84,
+      "text": "completion."
+    },
+    {
+      "startSeconds": 151.4,
+      "text": "This creates three distinct failure"
+    },
+    {
+      "startSeconds": 153.48,
+      "text": "modes."
+    },
+    {
+      "startSeconds": 154.68,
+      "text": "The first is what researchers call"
+    },
+    {
+      "startSeconds": 156.8,
+      "text": "parametric knowledge gaps."
+    },
+    {
+      "startSeconds": 159.44,
+      "text": "If a fact wasn't well represented in"
+    },
+    {
+      "startSeconds": 161.72,
+      "text": "training data, or if it happened after"
+    },
+    {
+      "startSeconds": 164.28,
+      "text": "the model's training cutoff, the model"
+    },
+    {
+      "startSeconds": 166.8,
+      "text": "has no reliable way to know that it"
+    },
+    {
+      "startSeconds": 169.2,
+      "text": "doesn't know. It will often still"
+    },
+    {
+      "startSeconds": 171.48,
+      "text": "generate a fluent, confidence-sounding"
+    },
+    {
+      "startSeconds": 174.16,
+      "text": "answer because fluency is what it was"
+    },
+    {
+      "startSeconds": 176.76,
+      "text": "trained to produce, not necessarily"
+    },
+    {
+      "startSeconds": 179.16,
+      "text": "truthfulness."
+    },
+    {
+      "startSeconds": 181.04,
+      "text": "The second failure mode is what's"
+    },
+    {
+      "startSeconds": 182.72,
+      "text": "sometimes called exposure bias, or more"
+    },
+    {
+      "startSeconds": 186.04,
+      "text": "informally, the model's tendency to"
+    },
+    {
+      "startSeconds": 188.28,
+      "text": "prioritize plausible-sounding"
+    },
+    {
+      "startSeconds": 190.44,
+      "text": "continuations over factually verified"
+    },
+    {
+      "startSeconds": 193.48,
+      "text": "ones."
+    },
+    {
+      "startSeconds": 194.72,
+      "text": "Since training rewards the model for"
+    },
+    {
+      "startSeconds": 196.56,
+      "text": "producing text that resembles its"
+    },
+    {
+      "startSeconds": 198.76,
+      "text": "training distribution, a well-formed but"
+    },
+    {
+      "startSeconds": 201.76,
+      "text": "false sentence can score just as well"
+    },
+    {
+      "startSeconds": 204.28,
+      "text": "internally as a well-formed true one."
+    },
+    {
+      "startSeconds": 207.8,
+      "text": "The third mode is context drift in long"
+    },
+    {
+      "startSeconds": 210.8,
+      "text": "conversations, where the model gradually"
+    },
+    {
+      "startSeconds": 213.48,
+      "text": "loses track of what's actually been"
+    },
+    {
+      "startSeconds": 215.44,
+      "text": "established versus what it's inferring,"
+    },
+    {
+      "startSeconds": 218.56,
+      "text": "and starts blending the two together."
+    },
+    {
+      "startSeconds": 221.6,
+      "text": "Now, here's the key insight that makes"
+    },
+    {
+      "startSeconds": 223.68,
+      "text": "RAG so powerful. A huge portion of"
+    },
+    {
+      "startSeconds": 227.08,
+      "text": "hallucination isn't a reasoning failure."
+    },
+    {
+      "startSeconds": 230.08,
+      "text": "It's a knowledge access failure."
+    },
+    {
+      "startSeconds": 232.8,
+      "text": "The model isn't being irrational. It"
+    },
+    {
+      "startSeconds": 235.56,
+      "text": "simply doesn't have the right facts in"
+    },
+    {
+      "startSeconds": 237.52,
+      "text": "front of it, so it fills the gap using"
+    },
+    {
+      "startSeconds": 240.2,
+      "text": "its general priors. If you could somehow"
+    },
+    {
+      "startSeconds": 243.24,
+      "text": "hand the model the exact right passage"
+    },
+    {
+      "startSeconds": 245.6,
+      "text": "of text right before it answers, a huge"
+    },
+    {
+      "startSeconds": 248.6,
+      "text": "fraction of these hallucinations simply"
+    },
+    {
+      "startSeconds": 250.8,
+      "text": "disappear."
+    },
+    {
+      "startSeconds": 252.2,
+      "text": "That single insight is the entire"
+    },
+    {
+      "startSeconds": 254.44,
+      "text": "foundation of retrieval augmented"
+    },
+    {
+      "startSeconds": 257.04,
+      "text": "generation."
+    },
+    {
+      "startSeconds": 259.519,
+      "text": "The core idea of RAG."
+    },
+    {
+      "startSeconds": 263.4,
+      "text": "At its simplest, RAG works in two"
+    },
+    {
+      "startSeconds": 266.6,
+      "text": "stages: retrieve, then generate. Before"
+    },
+    {
+      "startSeconds": 270.52,
+      "text": "the language model writes a single word"
+    },
+    {
+      "startSeconds": 272.8,
+      "text": "of its answer, a separate retrieval"
+    },
+    {
+      "startSeconds": 275.12,
+      "text": "system searches through an external"
+    },
+    {
+      "startSeconds": 277.4,
+      "text": "knowledge source. This could be a"
+    },
+    {
+      "startSeconds": 279.6,
+      "text": "company's internal documents, a medical"
+    },
+    {
+      "startSeconds": 282.52,
+      "text": "database, Wikipedia, or the live web,"
+    },
+    {
+      "startSeconds": 285.919,
+      "text": "and pulls out the passages most relevant"
+    },
+    {
+      "startSeconds": 288.48,
+      "text": "to the user's question. Those passages"
+    },
+    {
+      "startSeconds": 291.4,
+      "text": "are then inserted into the model's"
+    },
+    {
+      "startSeconds": 293.28,
+      "text": "prompt, essentially saying, \"Here is"
+    },
+    {
+      "startSeconds": 296,
+      "text": "some trustworthy, up-to-date"
+    },
+    {
+      "startSeconds": 297.8,
+      "text": "information. Use this to answer the"
+    },
+    {
+      "startSeconds": 300.2,
+      "text": "question.\""
+    },
+    {
+      "startSeconds": 301.52,
+      "text": "This sounds simple, but the engineering"
+    },
+    {
+      "startSeconds": 303.8,
+      "text": "underneath it is where the real progress"
+    },
+    {
+      "startSeconds": 306.12,
+      "text": "has happened. The first challenge is,"
+    },
+    {
+      "startSeconds": 309.12,
+      "text": "how do you search over millions or"
+    },
+    {
+      "startSeconds": 311.52,
+      "text": "billions of documents fast enough to be"
+    },
+    {
+      "startSeconds": 314.36,
+      "text": "useful? The classic solution is to"
+    },
+    {
+      "startSeconds": 316.96,
+      "text": "convert text into embeddings, long lists"
+    },
+    {
+      "startSeconds": 320.48,
+      "text": "of numbers that represent the meaning of"
+    },
+    {
+      "startSeconds": 322.56,
+      "text": "a piece of text in a high-dimensional"
+    },
+    {
+      "startSeconds": 325,
+      "text": "space. Two pieces of text that mean"
+    },
+    {
+      "startSeconds": 327.96,
+      "text": "similar things end up as vectors that"
+    },
+    {
+      "startSeconds": 330.48,
+      "text": "are close together in that space, even"
+    },
+    {
+      "startSeconds": 333.12,
+      "text": "if they don't share any of the same"
+    },
+    {
+      "startSeconds": 335.08,
+      "text": "words. Once documents are embedded,"
+    },
+    {
+      "startSeconds": 338.28,
+      "text": "they're stored in what's called a vector"
+    },
+    {
+      "startSeconds": 340.48,
+      "text": "database. When a user asks a question,"
+    },
+    {
+      "startSeconds": 344.04,
+      "text": "that question is also converted into an"
+    },
+    {
+      "startSeconds": 346.6,
+      "text": "embedding, and the system searches for"
+    },
+    {
+      "startSeconds": 349.28,
+      "text": "the document vectors that are closest to"
+    },
+    {
+      "startSeconds": 351.64,
+      "text": "the question's vector, typically using a"
+    },
+    {
+      "startSeconds": 354.52,
+      "text": "similarity measure like cosine"
+    },
+    {
+      "startSeconds": 356.84,
+      "text": "similarity."
+    },
+    {
+      "startSeconds": 358.4,
+      "text": "The idea behind that formula is"
+    },
+    {
+      "startSeconds": 360.36,
+      "text": "straightforward, even though the math"
+    },
+    {
+      "startSeconds": 362.68,
+      "text": "looks intimidating."
+    },
+    {
+      "startSeconds": 364.6,
+      "text": "It measures the angle between two"
+    },
+    {
+      "startSeconds": 366.6,
+      "text": "vectors, and vectors pointing in nearly"
+    },
+    {
+      "startSeconds": 369.32,
+      "text": "the same direction get a high similarity"
+    },
+    {
+      "startSeconds": 371.76,
+      "text": "score, regardless of their length."
+    },
+    {
+      "startSeconds": 374.56,
+      "text": "This retrieval step transforms the LLM"
+    },
+    {
+      "startSeconds": 377.84,
+      "text": "from a closed-book exam taker into an"
+    },
+    {
+      "startSeconds": 380.6,
+      "text": "open-book one."
+    },
+    {
+      "startSeconds": 382.32,
+      "text": "Instead of relying purely on memorized,"
+    },
+    {
+      "startSeconds": 384.76,
+      "text": "potentially stale, potentially fuzzy"
+    },
+    {
+      "startSeconds": 387.4,
+      "text": "knowledge, the model gets to read the"
+    },
+    {
+      "startSeconds": 389.72,
+      "text": "relevant material right before"
+    },
+    {
+      "startSeconds": 391.64,
+      "text": "answering,"
+    },
+    {
+      "startSeconds": 392.84,
+      "text": "dramatically increasing the odds that"
+    },
+    {
+      "startSeconds": 394.84,
+      "text": "its answer is grounded in something"
+    },
+    {
+      "startSeconds": 397.16,
+      "text": "real."
+    },
+    {
+      "startSeconds": 398.28,
+      "text": "But, and this is important, early RAG"
+    },
+    {
+      "startSeconds": 401.64,
+      "text": "systems from a few years ago were fairly"
+    },
+    {
+      "startSeconds": 404.4,
+      "text": "naive."
+    },
+    {
+      "startSeconds": 405.76,
+      "text": "They chunked documents into arbitrary"
+    },
+    {
+      "startSeconds": 408.4,
+      "text": "fixed-size blocks, retrieved the top few"
+    },
+    {
+      "startSeconds": 411.64,
+      "text": "matches, and stuffed them into the"
+    },
+    {
+      "startSeconds": 413.88,
+      "text": "prompt. That basic approach helped, but"
+    },
+    {
+      "startSeconds": 417.24,
+      "text": "it still hallucinated plenty because"
+    },
+    {
+      "startSeconds": 419.96,
+      "text": "retrieval itself can fail in subtle"
+    },
+    {
+      "startSeconds": 422.64,
+      "text": "ways."
+    },
+    {
+      "startSeconds": 423.88,
+      "text": "The rest of this video is about how"
+    },
+    {
+      "startSeconds": 425.68,
+      "text": "modern pipelines fix those subtle"
+    },
+    {
+      "startSeconds": 428.16,
+      "text": "failures."
+    },
+    {
+      "startSeconds": 430.4,
+      "text": "Smarter chunking and indexing."
+    },
+    {
+      "startSeconds": 434.44,
+      "text": "One of the most underrated fixes in"
+    },
+    {
+      "startSeconds": 436.8,
+      "text": "modern RAG pipelines is simply getting"
+    },
+    {
+      "startSeconds": 440.24,
+      "text": "smarter about how documents are broken"
+    },
+    {
+      "startSeconds": 442.8,
+      "text": "into pieces, or chunks, before they're"
+    },
+    {
+      "startSeconds": 445.84,
+      "text": "indexed."
+    },
+    {
+      "startSeconds": 447.36,
+      "text": "Early systems just split text every few"
+    },
+    {
+      "startSeconds": 449.88,
+      "text": "hundred words, regardless of whether"
+    },
+    {
+      "startSeconds": 452.08,
+      "text": "that cut a sentence, a table, or an idea"
+    },
+    {
+      "startSeconds": 455.16,
+      "text": "in half."
+    },
+    {
+      "startSeconds": 456.52,
+      "text": "If a chunk boundary lands in the middle"
+    },
+    {
+      "startSeconds": 458.52,
+      "text": "of an important explanation, the"
+    },
+    {
+      "startSeconds": 460.76,
+      "text": "retrieval system might only grab half"
+    },
+    {
+      "startSeconds": 463.2,
+      "text": "the story and the model, trying to be"
+    },
+    {
+      "startSeconds": 465.84,
+      "text": "helpful, fills in the missing half with"
+    },
+    {
+      "startSeconds": 468.52,
+      "text": "a guess."
+    },
+    {
+      "startSeconds": 469.84,
+      "text": "That guess is a hallucination in"
+    },
+    {
+      "startSeconds": 472.04,
+      "text": "disguise."
+    },
+    {
+      "startSeconds": 473.56,
+      "text": "Modern pipelines use what's called"
+    },
+    {
+      "startSeconds": 475.72,
+      "text": "semantic chunking, where the text is"
+    },
+    {
+      "startSeconds": 478.44,
+      "text": "split at natural boundaries, the end of"
+    },
+    {
+      "startSeconds": 481.08,
+      "text": "a paragraph, a section header, or a"
+    },
+    {
+      "startSeconds": 483.76,
+      "text": "shift in topic. Often detected by"
+    },
+    {
+      "startSeconds": 486.4,
+      "text": "measuring how much the meaning changes"
+    },
+    {
+      "startSeconds": 488.76,
+      "text": "from one sentence to the next."
+    },
+    {
+      "startSeconds": 491.64,
+      "text": "Some systems go further with"
+    },
+    {
+      "startSeconds": 493.28,
+      "text": "hierarchical indexing, where you don't"
+    },
+    {
+      "startSeconds": 495.919,
+      "text": "just index small chunks, but also index"
+    },
+    {
+      "startSeconds": 498.8,
+      "text": "summaries of larger sections and"
+    },
+    {
+      "startSeconds": 501.52,
+      "text": "summaries of summaries above that."
+    },
+    {
+      "startSeconds": 504.52,
+      "text": "This lets the retrieval system zoom in"
+    },
+    {
+      "startSeconds": 507.04,
+      "text": "or out, similar to how a human might"
+    },
+    {
+      "startSeconds": 509.64,
+      "text": "first find the right chapter of a book,"
+    },
+    {
+      "startSeconds": 512.159,
+      "text": "then the right paragraph."
+    },
+    {
+      "startSeconds": 514.36,
+      "text": "Another major improvement is"
+    },
+    {
+      "startSeconds": 516.08,
+      "text": "metadata-aware"
+    },
+    {
+      "startSeconds": 517.599,
+      "text": "retrieval."
+    },
+    {
+      "startSeconds": 519.12,
+      "text": "Instead of treating every chunk as"
+    },
+    {
+      "startSeconds": 521.159,
+      "text": "anonymous text, modern systems attach"
+    },
+    {
+      "startSeconds": 523.96,
+      "text": "metadata, the source document, the"
+    },
+    {
+      "startSeconds": 526.88,
+      "text": "publication date, the author, the"
+    },
+    {
+      "startSeconds": 529.16,
+      "text": "section title, and use that metadata to"
+    },
+    {
+      "startSeconds": 532.4,
+      "text": "filter and re-rank results."
+    },
+    {
+      "startSeconds": 535.52,
+      "text": "This matters enormously for avoiding a"
+    },
+    {
+      "startSeconds": 538,
+      "text": "specific type of hallucination,"
+    },
+    {
+      "startSeconds": 540.68,
+      "text": "outdated information being presented as"
+    },
+    {
+      "startSeconds": 543.48,
+      "text": "current."
+    },
+    {
+      "startSeconds": 544.96,
+      "text": "If a system can filter to only documents"
+    },
+    {
+      "startSeconds": 547.92,
+      "text": "published in the last 6 months, it"
+    },
+    {
+      "startSeconds": 550.28,
+      "text": "avoids confidently citing a policy that"
+    },
+    {
+      "startSeconds": 552.88,
+      "text": "was replaced last year."
+    },
+    {
+      "startSeconds": 555.12,
+      "text": "Finally, there's the idea of contextual"
+    },
+    {
+      "startSeconds": 557.64,
+      "text": "chunk embeddings, a technique where,"
+    },
+    {
+      "startSeconds": 560.36,
+      "text": "instead of embedding a chunk in"
+    },
+    {
+      "startSeconds": 561.88,
+      "text": "isolation, the system embeds it together"
+    },
+    {
+      "startSeconds": 564.76,
+      "text": "with a short summary of the whole"
+    },
+    {
+      "startSeconds": 566.88,
+      "text": "document it came from."
+    },
+    {
+      "startSeconds": 569.08,
+      "text": "This solves a subtle but common problem."
+    },
+    {
+      "startSeconds": 572.12,
+      "text": "A chunk that says, \"The interest rate"
+    },
+    {
+      "startSeconds": 574.56,
+      "text": "was reduced by half a percent\" is"
+    },
+    {
+      "startSeconds": 577.08,
+      "text": "meaningless on its own. Reduced from"
+    },
+    {
+      "startSeconds": 579.76,
+      "text": "what? By whom? When?"
+    },
+    {
+      "startSeconds": 582.68,
+      "text": "Contextual embedding bakes in just"
+    },
+    {
+      "startSeconds": 584.84,
+      "text": "enough surrounding information, so the"
+    },
+    {
+      "startSeconds": 587.32,
+      "text": "retrieval system understands what the"
+    },
+    {
+      "startSeconds": 589.36,
+      "text": "chunk is really about, even out of"
+    },
+    {
+      "startSeconds": 592.2,
+      "text": "context."
+    },
+    {
+      "startSeconds": 594.32,
+      "text": "Dense, sparse, and hybrid retrieval."
+    },
+    {
+      "startSeconds": 598.32,
+      "text": "There's a second major axis of"
+    },
+    {
+      "startSeconds": 600.32,
+      "text": "improvement, how the actual matching"
+    },
+    {
+      "startSeconds": 603.08,
+      "text": "between a question and a document"
+    },
+    {
+      "startSeconds": 605.12,
+      "text": "happens."
+    },
+    {
+      "startSeconds": 606.36,
+      "text": "Pure embedding-based search, often"
+    },
+    {
+      "startSeconds": 608.8,
+      "text": "called dense retrieval, is excellent at"
+    },
+    {
+      "startSeconds": 611.88,
+      "text": "understanding meaning and paraphrase."
+    },
+    {
+      "startSeconds": 615.08,
+      "text": "If you ask about a car that runs without"
+    },
+    {
+      "startSeconds": 617.92,
+      "text": "gasoline, it can find documents about"
+    },
+    {
+      "startSeconds": 620.72,
+      "text": "electric vehicles, even though the words"
+    },
+    {
+      "startSeconds": 623.08,
+      "text": "don't overlap. But dense retrieval has a"
+    },
+    {
+      "startSeconds": 626.12,
+      "text": "weakness. It can struggle with very"
+    },
+    {
+      "startSeconds": 628.68,
+      "text": "specific, rare terms, product codes,"
+    },
+    {
+      "startSeconds": 632.08,
+      "text": "legal statute numbers, exact names,"
+    },
+    {
+      "startSeconds": 635.52,
+      "text": "because those specific tokens can get"
+    },
+    {
+      "startSeconds": 637.76,
+      "text": "diluted in a dense vector"
+    },
+    {
+      "startSeconds": 639.839,
+      "text": "representation."
+    },
+    {
+      "startSeconds": 641.56,
+      "text": "That's where sparse retrieval comes back"
+    },
+    {
+      "startSeconds": 643.76,
+      "text": "in."
+    },
+    {
+      "startSeconds": 644.72,
+      "text": "Older algorithms like BM25, which score"
+    },
+    {
+      "startSeconds": 648.04,
+      "text": "documents based on exact keyword overlap"
+    },
+    {
+      "startSeconds": 650.839,
+      "text": "and term frequency, are still extremely"
+    },
+    {
+      "startSeconds": 653.64,
+      "text": "good at pinpointing exact matches."
+    },
+    {
+      "startSeconds": 657.24,
+      "text": "The idea behind these scoring formulas"
+    },
+    {
+      "startSeconds": 659.48,
+      "text": "is that a term which appears frequently"
+    },
+    {
+      "startSeconds": 661.88,
+      "text": "in a specific document, but rarely"
+    },
+    {
+      "startSeconds": 664.44,
+      "text": "across the whole collection, is a strong"
+    },
+    {
+      "startSeconds": 667.12,
+      "text": "signal that this document is highly"
+    },
+    {
+      "startSeconds": 669.48,
+      "text": "relevant to a query containing that"
+    },
+    {
+      "startSeconds": 671.92,
+      "text": "term."
+    },
+    {
+      "startSeconds": 673.2,
+      "text": "Modern RAG pipelines don't choose one or"
+    },
+    {
+      "startSeconds": 676.52,
+      "text": "the other. They combine both in what's"
+    },
+    {
+      "startSeconds": 679.32,
+      "text": "called hybrid retrieval."
+    },
+    {
+      "startSeconds": 681.96,
+      "text": "The system runs a dense semantic search"
+    },
+    {
+      "startSeconds": 684.44,
+      "text": "and a sparse keyword search in parallel,"
+    },
+    {
+      "startSeconds": 687.4,
+      "text": "then merges the two ranked lists using a"
+    },
+    {
+      "startSeconds": 690.04,
+      "text": "fusion method. One popular approach"
+    },
+    {
+      "startSeconds": 692.76,
+      "text": "being reciprocal rank fusion, where each"
+    },
+    {
+      "startSeconds": 696.04,
+      "text": "document gets a score based on how high"
+    },
+    {
+      "startSeconds": 698.52,
+      "text": "it ranked in each individual list, and"
+    },
+    {
+      "startSeconds": 701.56,
+      "text": "documents that rank well in both lists"
+    },
+    {
+      "startSeconds": 704.16,
+      "text": "rise to the top."
+    },
+    {
+      "startSeconds": 706.04,
+      "text": "This hybrid approach captures the best"
+    },
+    {
+      "startSeconds": 708.32,
+      "text": "of both worlds, the conceptual"
+    },
+    {
+      "startSeconds": 710.6,
+      "text": "understanding of dense vectors and the"
+    },
+    {
+      "startSeconds": 713.2,
+      "text": "precision of exact keyword matching."
+    },
+    {
+      "startSeconds": 716.4,
+      "text": "This matters directly for hallucination"
+    },
+    {
+      "startSeconds": 718.88,
+      "text": "because a huge class of factual errors"
+    },
+    {
+      "startSeconds": 721.4,
+      "text": "comes from retrieval simply missing the"
+    },
+    {
+      "startSeconds": 723.6,
+      "text": "right document, not because the"
+    },
+    {
+      "startSeconds": 725.92,
+      "text": "generation model reasoned poorly, but"
+    },
+    {
+      "startSeconds": 728.76,
+      "text": "because the search step never found the"
+    },
+    {
+      "startSeconds": 730.76,
+      "text": "needle in the haystack in the first"
+    },
+    {
+      "startSeconds": 732.76,
+      "text": "place."
+    },
+    {
+      "startSeconds": 733.88,
+      "text": "If the right passage never makes it into"
+    },
+    {
+      "startSeconds": 736,
+      "text": "the prompt, no amount of clever"
+    },
+    {
+      "startSeconds": 738.32,
+      "text": "prompting will save you."
+    },
+    {
+      "startSeconds": 740.68,
+      "text": "Improving retrieval quality is, in a"
+    },
+    {
+      "startSeconds": 743.08,
+      "text": "very real sense, improving truthfulness"
+    },
+    {
+      "startSeconds": 746.16,
+      "text": "at the source."
+    },
+    {
+      "startSeconds": 748.48,
+      "text": "Reranking and context curation."
+    },
+    {
+      "startSeconds": 751.92,
+      "text": "Retrieval gets you a short list of"
+    },
+    {
+      "startSeconds": 753.8,
+      "text": "candidate documents, but not all of them"
+    },
+    {
+      "startSeconds": 756.56,
+      "text": "are equally useful, and cramming too"
+    },
+    {
+      "startSeconds": 759.36,
+      "text": "many into the prompt creates its own"
+    },
+    {
+      "startSeconds": 761.72,
+      "text": "problems."
+    },
+    {
+      "startSeconds": 763.12,
+      "text": "This is where reranking comes in, a"
+    },
+    {
+      "startSeconds": 765.88,
+      "text": "second, more computationally expensive,"
+    },
+    {
+      "startSeconds": 768.44,
+      "text": "but more accurate model that takes the"
+    },
+    {
+      "startSeconds": 771.04,
+      "text": "initial candidates and rescores them by"
+    },
+    {
+      "startSeconds": 773.8,
+      "text": "actually reading the query and each"
+    },
+    {
+      "startSeconds": 776.12,
+      "text": "candidate together, rather than"
+    },
+    {
+      "startSeconds": 778.32,
+      "text": "comparing precomputed vectors."
+    },
+    {
+      "startSeconds": 781.36,
+      "text": "These are often called cross-encoders"
+    },
+    {
+      "startSeconds": 783.92,
+      "text": "because the query and document are"
+    },
+    {
+      "startSeconds": 786.08,
+      "text": "encoded jointly, letting the model"
+    },
+    {
+      "startSeconds": 788.4,
+      "text": "directly compare fine-grained details,"
+    },
+    {
+      "startSeconds": 791.68,
+      "text": "rather than relying on a rough geometric"
+    },
+    {
+      "startSeconds": 794.08,
+      "text": "distance."
+    },
+    {
+      "startSeconds": 795.52,
+      "text": "Why does this matter for hallucination?"
+    },
+    {
+      "startSeconds": 798.32,
+      "text": "Because there's a well-documented"
+    },
+    {
+      "startSeconds": 800.08,
+      "text": "phenomenon called lost in the middle."
+    },
+    {
+      "startSeconds": 803.6,
+      "text": "Research has shown that language models"
+    },
+    {
+      "startSeconds": 805.839,
+      "text": "pay the most attention to information"
+    },
+    {
+      "startSeconds": 807.88,
+      "text": "placed at the very beginning or the very"
+    },
+    {
+      "startSeconds": 810.72,
+      "text": "end of their context window and tend to"
+    },
+    {
+      "startSeconds": 814.2,
+      "text": "under weight information buried in the"
+    },
+    {
+      "startSeconds": 816.32,
+      "text": "middle even when that middle information"
+    },
+    {
+      "startSeconds": 819.12,
+      "text": "is highly relevant."
+    },
+    {
+      "startSeconds": 821.64,
+      "text": "If your retrieval system dumps 10"
+    },
+    {
+      "startSeconds": 823.8,
+      "text": "mediocre passages into the prompt with"
+    },
+    {
+      "startSeconds": 826.36,
+      "text": "the one truly relevant passage buried at"
+    },
+    {
+      "startSeconds": 828.92,
+      "text": "position six the model may effectively"
+    },
+    {
+      "startSeconds": 831.8,
+      "text": "fail to use it and hallucinate an answer"
+    },
+    {
+      "startSeconds": 835,
+      "text": "instead."
+    },
+    {
+      "startSeconds": 836.44,
+      "text": "Modern pipelines address this with"
+    },
+    {
+      "startSeconds": 838.52,
+      "text": "careful context curation, re-ranking to"
+    },
+    {
+      "startSeconds": 841.72,
+      "text": "promote the most relevant passages,"
+    },
+    {
+      "startSeconds": 844.28,
+      "text": "deduplication to remove near identical"
+    },
+    {
+      "startSeconds": 847.28,
+      "text": "redundant chunks, and deliberate"
+    },
+    {
+      "startSeconds": 849.92,
+      "text": "placement strategies that put the most"
+    },
+    {
+      "startSeconds": 851.92,
+      "text": "important information at the positions"
+    },
+    {
+      "startSeconds": 854.24,
+      "text": "the model attends to most."
+    },
+    {
+      "startSeconds": 857,
+      "text": "Some systems also implement a relevance"
+    },
+    {
+      "startSeconds": 859.56,
+      "text": "threshold. If the top retrieved"
+    },
+    {
+      "startSeconds": 861.92,
+      "text": "documents all score below a certain"
+    },
+    {
+      "startSeconds": 864.16,
+      "text": "confidence level the system doesn't"
+    },
+    {
+      "startSeconds": 866.68,
+      "text": "force-feed them to the model at all."
+    },
+    {
+      "startSeconds": 869.52,
+      "text": "Instead, it triggers a fallback response"
+    },
+    {
+      "startSeconds": 871.92,
+      "text": "acknowledging that no sufficiently"
+    },
+    {
+      "startSeconds": 873.76,
+      "text": "relevant information was found."
+    },
+    {
+      "startSeconds": 876.44,
+      "text": "This single design choice, being willing"
+    },
+    {
+      "startSeconds": 878.8,
+      "text": "to say I don't have enough information"
+    },
+    {
+      "startSeconds": 881.88,
+      "text": "is one of the most powerful"
+    },
+    {
+      "startSeconds": 883.52,
+      "text": "hallucination reduction techniques there"
+    },
+    {
+      "startSeconds": 885.92,
+      "text": "is because it directly targets the"
+    },
+    {
+      "startSeconds": 888.56,
+      "text": "model's tendency to always attempt a"
+    },
+    {
+      "startSeconds": 891.28,
+      "text": "fluent answer regardless of whether it"
+    },
+    {
+      "startSeconds": 894,
+      "text": "actually has the goods."
+    },
+    {
+      "startSeconds": 896.92,
+      "text": "Self-correcting and agentic RAG"
+    },
+    {
+      "startSeconds": 900.96,
+      "text": "The most exciting frontier in RAG right"
+    },
+    {
+      "startSeconds": 903.839,
+      "text": "now isn't just about retrieving better."
+    },
+    {
+      "startSeconds": 907,
+      "text": "It's about giving the system the ability"
+    },
+    {
+      "startSeconds": 909.2,
+      "text": "to critique and correct itself before"
+    },
+    {
+      "startSeconds": 912.24,
+      "text": "the answer ever reaches the user."
+    },
+    {
+      "startSeconds": 915.2,
+      "text": "This family of techniques is often"
+    },
+    {
+      "startSeconds": 917.12,
+      "text": "called self-RAG or corrective RAG and it"
+    },
+    {
+      "startSeconds": 921.96,
+      "text": "works a bit like giving the model an"
+    },
+    {
+      "startSeconds": 923.8,
+      "text": "internal editor."
+    },
+    {
+      "startSeconds": 925.84,
+      "text": "Here's how it works conceptually."
+    },
+    {
+      "startSeconds": 928.36,
+      "text": "After the initial retrieval, instead of"
+    },
+    {
+      "startSeconds": 930.76,
+      "text": "immediately generating a final answer,"
+    },
+    {
+      "startSeconds": 933.72,
+      "text": "the system generates a draft answer"
+    },
+    {
+      "startSeconds": 936.16,
+      "text": "along with an internal judgment. Does"
+    },
+    {
+      "startSeconds": 938.92,
+      "text": "this retrieved context actually support"
+    },
+    {
+      "startSeconds": 941.24,
+      "text": "this claim?"
+    },
+    {
+      "startSeconds": 942.64,
+      "text": "If the system detects that a retrieved"
+    },
+    {
+      "startSeconds": 944.64,
+      "text": "passage is irrelevant or that its own"
+    },
+    {
+      "startSeconds": 947.52,
+      "text": "draft answer includes a claim not backed"
+    },
+    {
+      "startSeconds": 950.16,
+      "text": "by any passage, it doesn't just ship"
+    },
+    {
+      "startSeconds": 952.92,
+      "text": "that answer."
+    },
+    {
+      "startSeconds": 954.32,
+      "text": "It can trigger one of several corrective"
+    },
+    {
+      "startSeconds": 956.56,
+      "text": "actions. Retrieve again with a"
+    },
+    {
+      "startSeconds": 958.96,
+      "text": "reformulated query."
+    },
+    {
+      "startSeconds": 961.16,
+      "text": "Search a different knowledge source"
+    },
+    {
+      "startSeconds": 962.76,
+      "text": "entirely, including in some"
+    },
+    {
+      "startSeconds": 965.32,
+      "text": "architectures, falling back to a live"
+    },
+    {
+      "startSeconds": 967.8,
+      "text": "web search if the internal database"
+    },
+    {
+      "startSeconds": 970.04,
+      "text": "comes up empty. Or simply strip out the"
+    },
+    {
+      "startSeconds": 973.08,
+      "text": "unsupported claim before finalizing the"
+    },
+    {
+      "startSeconds": 975.76,
+      "text": "response."
+    },
+    {
+      "startSeconds": 977.24,
+      "text": "This turns RAG from a single-pass"
+    },
+    {
+      "startSeconds": 979.8,
+      "text": "pipeline into an iterative loop,"
+    },
+    {
+      "startSeconds": 982.4,
+      "text": "sometimes visualized as retrieve,"
+    },
+    {
+      "startSeconds": 984.88,
+      "text": "generate, critique, and if necessary,"
+    },
+    {
+      "startSeconds": 988.08,
+      "text": "retrieve again."
+    },
+    {
+      "startSeconds": 990.12,
+      "text": "Some of the most advanced systems now"
+    },
+    {
+      "startSeconds": 992.12,
+      "text": "use what's called a gentic RAG, where"
+    },
+    {
+      "startSeconds": 995.6,
+      "text": "the language model itself acts as an"
+    },
+    {
+      "startSeconds": 998.04,
+      "text": "orchestrator, deciding in real time"
+    },
+    {
+      "startSeconds": 1000.8,
+      "text": "which knowledge sources to query, how"
+    },
+    {
+      "startSeconds": 1003.12,
+      "text": "many retrieval rounds are needed, and"
+    },
+    {
+      "startSeconds": 1005.44,
+      "text": "when it has gathered sufficient evidence"
+    },
+    {
+      "startSeconds": 1007.4,
+      "text": "to answer confidently."
+    },
+    {
+      "startSeconds": 1009.64,
+      "text": "This is a meaningful shift. Instead of a"
+    },
+    {
+      "startSeconds": 1012.56,
+      "text": "fixed pipeline designer deciding in"
+    },
+    {
+      "startSeconds": 1014.88,
+      "text": "advance exactly how retrieval will"
+    },
+    {
+      "startSeconds": 1017.44,
+      "text": "happen, the model plans its own"
+    },
+    {
+      "startSeconds": 1019.8,
+      "text": "investigation, much like a researcher"
+    },
+    {
+      "startSeconds": 1022.4,
+      "text": "deciding to check just one more source"
+    },
+    {
+      "startSeconds": 1025.12,
+      "text": "before writing a conclusion."
+    },
+    {
+      "startSeconds": 1027.6,
+      "text": "The hallucination reduction impact here"
+    },
+    {
+      "startSeconds": 1029.839,
+      "text": "is significant because it adds a"
+    },
+    {
+      "startSeconds": 1032.4,
+      "text": "verification layer that specifically"
+    },
+    {
+      "startSeconds": 1035.079,
+      "text": "targets the moment where hallucination"
+    },
+    {
+      "startSeconds": 1037.439,
+      "text": "is born. The instant the model is about"
+    },
+    {
+      "startSeconds": 1040.28,
+      "text": "to state something it isn't actually"
+    },
+    {
+      "startSeconds": 1042.48,
+      "text": "sure about."
+    },
+    {
+      "startSeconds": 1044,
+      "text": "Instead of that uncertainty silently"
+    },
+    {
+      "startSeconds": 1046.28,
+      "text": "becoming a confident sounding sentence,"
+    },
+    {
+      "startSeconds": 1049.2,
+      "text": "the system has a built-in checkpoint"
+    },
+    {
+      "startSeconds": 1051.32,
+      "text": "asking, \"Is this actually grounded?\""
+    },
+    {
+      "startSeconds": 1055.72,
+      "text": "Grounding, citations, and verification"
+    },
+    {
+      "startSeconds": 1058.48,
+      "text": "layers."
+    },
+    {
+      "startSeconds": 1059.88,
+      "text": "The final piece of the puzzle is making"
+    },
+    {
+      "startSeconds": 1062.16,
+      "text": "the model's reasoning visible and"
+    },
+    {
+      "startSeconds": 1064.48,
+      "text": "checkable rather than a black box."
+    },
+    {
+      "startSeconds": 1067.8,
+      "text": "Modern RAG systems increasingly require"
+    },
+    {
+      "startSeconds": 1070.92,
+      "text": "the model to attribute every factual"
+    },
+    {
+      "startSeconds": 1073.32,
+      "text": "claim to a specific retrieved passage,"
+    },
+    {
+      "startSeconds": 1076.8,
+      "text": "essentially forcing inline citations as"
+    },
+    {
+      "startSeconds": 1080.12,
+      "text": "part of the generation process itself,"
+    },
+    {
+      "startSeconds": 1082.76,
+      "text": "not bolted on afterward."
+    },
+    {
+      "startSeconds": 1085.4,
+      "text": "This has a subtle but powerful side"
+    },
+    {
+      "startSeconds": 1087.64,
+      "text": "effect. A model that has to point to"
+    },
+    {
+      "startSeconds": 1090.08,
+      "text": "exactly which passage supports a"
+    },
+    {
+      "startSeconds": 1092.2,
+      "text": "sentence is far less likely to write an"
+    },
+    {
+      "startSeconds": 1095.16,
+      "text": "unsupported sentence in the first place"
+    },
+    {
+      "startSeconds": 1098.28,
+      "text": "because the citation requirement acts as"
+    },
+    {
+      "startSeconds": 1100.6,
+      "text": "a constant built-in self-check during"
+    },
+    {
+      "startSeconds": 1103.88,
+      "text": "generation."
+    },
+    {
+      "startSeconds": 1105.48,
+      "text": "On top of that, many production systems"
+    },
+    {
+      "startSeconds": 1108.28,
+      "text": "now add a dedicated post-generation"
+    },
+    {
+      "startSeconds": 1111.04,
+      "text": "verification step. After the answer is"
+    },
+    {
+      "startSeconds": 1114.12,
+      "text": "drafted, a separate checking pass,"
+    },
+    {
+      "startSeconds": 1116.92,
+      "text": "sometimes another LLM call, sometimes a"
+    },
+    {
+      "startSeconds": 1119.96,
+      "text": "specialized classifier, compares each"
+    },
+    {
+      "startSeconds": 1122.88,
+      "text": "sentence in the answer against the"
+    },
+    {
+      "startSeconds": 1124.96,
+      "text": "retrieved passages and flags any"
+    },
+    {
+      "startSeconds": 1127.6,
+      "text": "statement that isn't actually supported."
+    },
+    {
+      "startSeconds": 1130.76,
+      "text": "Think of it as a fact-checking desk that"
+    },
+    {
+      "startSeconds": 1133.4,
+      "text": "reviews the article before it's"
+    },
+    {
+      "startSeconds": 1135.2,
+      "text": "published."
+    },
+    {
+      "startSeconds": 1136.52,
+      "text": "If unsupported claims are found, the"
+    },
+    {
+      "startSeconds": 1138.96,
+      "text": "system can either delete them, rephrase"
+    },
+    {
+      "startSeconds": 1141.36,
+      "text": "them as explicitly uncertain, or trigger"
+    },
+    {
+      "startSeconds": 1144.4,
+      "text": "another retrieval round."
+    },
+    {
+      "startSeconds": 1146.6,
+      "text": "Together, these grounding techniques"
+    },
+    {
+      "startSeconds": 1148.6,
+      "text": "close the loop. Retrieval finds the"
+    },
+    {
+      "startSeconds": 1151.24,
+      "text": "facts, chunking and hybrid search make"
+    },
+    {
+      "startSeconds": 1154.32,
+      "text": "sure the right facts are found,"
+    },
+    {
+      "startSeconds": 1156.24,
+      "text": "re-ranking makes sure they're"
+    },
+    {
+      "startSeconds": 1157.68,
+      "text": "prioritized correctly. Agentic"
+    },
+    {
+      "startSeconds": 1160.68,
+      "text": "self-correction catches gaps in"
+    },
+    {
+      "startSeconds": 1162.88,
+      "text": "real-time and citation-based"
+    },
+    {
+      "startSeconds": 1165.4,
+      "text": "verification acts as the final safety"
+    },
+    {
+      "startSeconds": 1168.16,
+      "text": "net before the answer reaches the user."
+    },
+    {
+      "startSeconds": 1171.48,
+      "text": "No single layer is perfect on its own,"
+    },
+    {
+      "startSeconds": 1174.72,
+      "text": "but stacked together, they've moved RAG"
+    },
+    {
+      "startSeconds": 1177.52,
+      "text": "systems from helpful but unreliable to"
+    },
+    {
+      "startSeconds": 1181,
+      "text": "something increasingly close to"
+    },
+    {
+      "startSeconds": 1182.92,
+      "text": "genuinely trustworthy for high-stakes"
+    },
+    {
+      "startSeconds": 1185.44,
+      "text": "use cases."
+    },
+    {
+      "startSeconds": 1187.68,
+      "text": "Limitations, open challenges, and"
+    },
+    {
+      "startSeconds": 1190.48,
+      "text": "closing."
+    },
+    {
+      "startSeconds": 1192.16,
+      "text": "Now, it's worth being honest. RAG is not"
+    },
+    {
+      "startSeconds": 1195.84,
+      "text": "a silver bullet. Retrieval can still"
+    },
+    {
+      "startSeconds": 1198.32,
+      "text": "fail if the underlying knowledge base is"
+    },
+    {
+      "startSeconds": 1200.8,
+      "text": "incomplete, biased, or itself contains"
+    },
+    {
+      "startSeconds": 1203.88,
+      "text": "errors. Garbage in, garbage out still"
+    },
+    {
+      "startSeconds": 1207.2,
+      "text": "applies."
+    },
+    {
+      "startSeconds": 1208.52,
+      "text": "Multi-hop questions, where the answer"
+    },
+    {
+      "startSeconds": 1211.12,
+      "text": "combines facts from several different"
+    },
+    {
+      "startSeconds": 1213.28,
+      "text": "documents in a chain of reasoning,"
+    },
+    {
+      "startSeconds": 1215.68,
+      "text": "remain genuinely difficult because a"
+    },
+    {
+      "startSeconds": 1218.4,
+      "text": "single retrieval pass might miss one"
+    },
+    {
+      "startSeconds": 1220.84,
+      "text": "crucial link in that chain."
+    },
+    {
+      "startSeconds": 1223.4,
+      "text": "And there's an ongoing tension between"
+    },
+    {
+      "startSeconds": 1225.6,
+      "text": "adding more verification layers and"
+    },
+    {
+      "startSeconds": 1228.48,
+      "text": "keeping response times fast enough for a"
+    },
+    {
+      "startSeconds": 1230.92,
+      "text": "good user experience. Every extra check"
+    },
+    {
+      "startSeconds": 1234.44,
+      "text": "adds latency."
+    },
+    {
+      "startSeconds": 1236.28,
+      "text": "But the trajectory is unmistakable. What"
+    },
+    {
+      "startSeconds": 1239.24,
+      "text": "started as just paste some search"
+    },
+    {
+      "startSeconds": 1241.76,
+      "text": "results into the prompt has evolved into"
+    },
+    {
+      "startSeconds": 1244.12,
+      "text": "a genuinely sophisticated discipline"
+    },
+    {
+      "startSeconds": 1246.92,
+      "text": "combining information retrieval,"
+    },
+    {
+      "startSeconds": 1249.08,
+      "text": "self-critique, and structured"
+    },
+    {
+      "startSeconds": 1251.16,
+      "text": "verification."
+    },
+    {
+      "startSeconds": 1252.8,
+      "text": "The systems we've walked through today,"
+    },
+    {
+      "startSeconds": 1255.16,
+      "text": "semantic chunking, hybrid dense sparse"
+    },
+    {
+      "startSeconds": 1258.04,
+      "text": "search, cross-encoder re-ranking,"
+    },
+    {
+      "startSeconds": 1261.12,
+      "text": "self-correcting agentic loops, and"
+    },
+    {
+      "startSeconds": 1263.84,
+      "text": "citation-based grounding represent the"
+    },
+    {
+      "startSeconds": 1266.44,
+      "text": "current state of the art in making"
+    },
+    {
+      "startSeconds": 1268.6,
+      "text": "language models not just fluent, but"
+    },
+    {
+      "startSeconds": 1271.24,
+      "text": "actually trustworthy."
+    },
+    {
+      "startSeconds": 1273.2,
+      "text": "If you found this breakdown useful,"
+    },
+    {
+      "startSeconds": 1275.36,
+      "text": "consider subscribing for more deep dives"
+    },
+    {
+      "startSeconds": 1278.08,
+      "text": "into how modern AI systems really work"
+    },
+    {
+      "startSeconds": 1280.88,
+      "text": "under the hood."
+    },
+    {
+      "startSeconds": 1282.36,
+      "text": "And let me know in the comments, have"
+    },
+    {
+      "startSeconds": 1284.4,
+      "text": "you run into an AI hallucination in the"
+    },
+    {
+      "startSeconds": 1286.64,
+      "text": "wild? I'd love to hear your story."
+    },
+    {
+      "startSeconds": 1289.6,
+      "text": "Thanks for watching and I'll see you in"
+    },
+    {
+      "startSeconds": 1291.36,
+      "text": "the next one."
+    }
+  ]
+}

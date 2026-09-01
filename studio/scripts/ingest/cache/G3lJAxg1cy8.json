@@ -1,0 +1,510 @@
+{
+  "id": "G3lJAxg1cy8",
+  "url": "https://www.youtube.com/watch?v=G3lJAxg1cy8",
+  "fetchedAt": "2026-09-01T04:08:42.551Z",
+  "captionKind": "asr",
+  "chapters": [
+    {
+      "startSeconds": 0,
+      "label": "intro"
+    },
+    {
+      "startSeconds": 106,
+      "label": "INNER JOIN"
+    },
+    {
+      "startSeconds": 228,
+      "label": "LEFT JOIN"
+    },
+    {
+      "startSeconds": 260,
+      "label": "RIGHT JOIN"
+    },
+    {
+      "startSeconds": 285,
+      "label": "conclusion"
+    }
+  ],
+  "cues": [
+    {
+      "startSeconds": 0,
+      "text": "hey everybody welcome back again in"
+    },
+    {
+      "startSeconds": 2.22,
+      "text": "today's video I'm going to be explaining"
+    },
+    {
+      "startSeconds": 3.72,
+      "text": "joins in MySQL a join is a clause that"
+    },
+    {
+      "startSeconds": 7.14,
+      "text": "is used to combine rows from two or more"
+    },
+    {
+      "startSeconds": 9.66,
+      "text": "tables based on a related column between"
+    },
+    {
+      "startSeconds": 12.059,
+      "text": "them such as a foreign key here's an"
+    },
+    {
+      "startSeconds": 14.759,
+      "text": "example I have two tables a table of"
+    },
+    {
+      "startSeconds": 17.34,
+      "text": "transactions and a table of customers"
+    },
+    {
+      "startSeconds": 19.32,
+      "text": "think of these two tables as a Venn"
+    },
+    {
+      "startSeconds": 21.539,
+      "text": "diagram transactions will be the table"
+    },
+    {
+      "startSeconds": 23.58,
+      "text": "on the left customers will be the table"
+    },
+    {
+      "startSeconds": 25.859,
+      "text": "on the right whatever data they have in"
+    },
+    {
+      "startSeconds": 27.9,
+      "text": "common is the middle part of our Venn"
+    },
+    {
+      "startSeconds": 30,
+      "text": "diagram for my demonstration to make"
+    },
+    {
+      "startSeconds": 31.98,
+      "text": "more sense I will need to add a few"
+    },
+    {
+      "startSeconds": 33.719,
+      "text": "extra rows feel free to pause the video"
+    },
+    {
+      "startSeconds": 35.88,
+      "text": "if you need to catch up I will insert"
+    },
+    {
+      "startSeconds": 38.219,
+      "text": "into transactions a new row the amount"
+    },
+    {
+      "startSeconds": 41.04,
+      "text": "is one dollar the customer ID is null so"
+    },
+    {
+      "startSeconds": 44.34,
+      "text": "not all transactions can have a customer"
+    },
+    {
+      "startSeconds": 46.62,
+      "text": "ID that foreign key here's a scenario"
+    },
+    {
+      "startSeconds": 49.44,
+      "text": "suppose that somebody comes in pays for"
+    },
+    {
+      "startSeconds": 52.26,
+      "text": "a soda with cash well we wouldn't have a"
+    },
+    {
+      "startSeconds": 54.719,
+      "text": "customer ID right if a customer instead"
+    },
+    {
+      "startSeconds": 57,
+      "text": "paid with a credit card we could track"
+    },
+    {
+      "startSeconds": 58.86,
+      "text": "who that customer was there may be a"
+    },
+    {
+      "startSeconds": 61.379,
+      "text": "customer ID who initiated that credit"
+    },
+    {
+      "startSeconds": 63.059,
+      "text": "card charge I'm going to insert this row"
+    },
+    {
+      "startSeconds": 67.32,
+      "text": "and here's our new transactions table"
+    },
+    {
+      "startSeconds": 70.38,
+      "text": "not all rows have a customer ID"
+    },
+    {
+      "startSeconds": 73.439,
+      "text": "then let's add one more customer"
+    },
+    {
+      "startSeconds": 76.14,
+      "text": "insert into customers first name last"
+    },
+    {
+      "startSeconds": 79.68,
+      "text": "name will be poppy Puff"
+    },
+    {
+      "startSeconds": 83.82,
+      "text": "let's select all of our customers now"
+    },
+    {
+      "startSeconds": 86.4,
+      "text": "not all transactions have a customer ID"
+    },
+    {
+      "startSeconds": 89.1,
+      "text": "and not all customers have ever"
+    },
+    {
+      "startSeconds": 91.799,
+      "text": "initiated a transaction they could be"
+    },
+    {
+      "startSeconds": 94.259,
+      "text": "registered as a customer but they have"
+    },
+    {
+      "startSeconds": 96.299,
+      "text": "never actually bought anything yet using"
+    },
+    {
+      "startSeconds": 98.82,
+      "text": "joins let's take a look at what data"
+    },
+    {
+      "startSeconds": 100.979,
+      "text": "these two tables have in common we'll"
+    },
+    {
+      "startSeconds": 103.02,
+      "text": "discuss inner joins left joins and right"
+    },
+    {
+      "startSeconds": 105.54,
+      "text": "joins let's begin with an inner join to"
+    },
+    {
+      "startSeconds": 109.2,
+      "text": "create an inner join between these two"
+    },
+    {
+      "startSeconds": 110.759,
+      "text": "tables"
+    },
+    {
+      "startSeconds": 111.84,
+      "text": "you would type select all from which"
+    },
+    {
+      "startSeconds": 115.799,
+      "text": "table would you like to be on the left"
+    },
+    {
+      "startSeconds": 117.36,
+      "text": "think of that Venn diagram our"
+    },
+    {
+      "startSeconds": 119.88,
+      "text": "transactions table will be on the left"
+    },
+    {
+      "startSeconds": 122.579,
+      "text": "from transactions inner join"
+    },
+    {
+      "startSeconds": 126.54,
+      "text": "whatever table you would like to be on"
+    },
+    {
+      "startSeconds": 128.28,
+      "text": "the right in this case customers"
+    },
+    {
+      "startSeconds": 131.64,
+      "text": "on we're going to join these two tables"
+    },
+    {
+      "startSeconds": 135,
+      "text": "together by the foreign key from"
+    },
+    {
+      "startSeconds": 136.98,
+      "text": "transactions we'll take"
+    },
+    {
+      "startSeconds": 140.239,
+      "text": "transactions.the name of the foreign key"
+    },
+    {
+      "startSeconds": 142.56,
+      "text": "column which was customer ID"
+    },
+    {
+      "startSeconds": 146.239,
+      "text": "equals the table on the right dot the"
+    },
+    {
+      "startSeconds": 150.06,
+      "text": "name of the primary key column which was"
+    },
+    {
+      "startSeconds": 152.7,
+      "text": "customer ID"
+    },
+    {
+      "startSeconds": 154.56,
+      "text": "then we will execute the statement and"
+    },
+    {
+      "startSeconds": 156.84,
+      "text": "here's our new table"
+    },
+    {
+      "startSeconds": 158.7,
+      "text": "we have created an inner join from these"
+    },
+    {
+      "startSeconds": 161.34,
+      "text": "two tables based solely on what they"
+    },
+    {
+      "startSeconds": 163.86,
+      "text": "have in common if you remember we don't"
+    },
+    {
+      "startSeconds": 166.379,
+      "text": "have that Row for that transaction for"
+    },
+    {
+      "startSeconds": 168.3,
+      "text": "one dollar that doesn't have a customer"
+    },
+    {
+      "startSeconds": 170.04,
+      "text": "ID as well as our customer poppy puff"
+    },
+    {
+      "startSeconds": 172.8,
+      "text": "there's no role for her in this table"
+    },
+    {
+      "startSeconds": 174.54,
+      "text": "what we're telling MySQL is to select"
+    },
+    {
+      "startSeconds": 177.3,
+      "text": "all rows from these two tables that have"
+    },
+    {
+      "startSeconds": 180.36,
+      "text": "matching customer ideas so that's why"
+    },
+    {
+      "startSeconds": 183.18,
+      "text": "some data was excluded one thing you"
+    },
+    {
+      "startSeconds": 185.819,
+      "text": "could do with a join this applies to"
+    },
+    {
+      "startSeconds": 187.98,
+      "text": "left joins and right joins as well you"
+    },
+    {
+      "startSeconds": 190.56,
+      "text": "don't necessarily need to display every"
+    },
+    {
+      "startSeconds": 192.84,
+      "text": "single column from both tables you can"
+    },
+    {
+      "startSeconds": 195.36,
+      "text": "select specific columns"
+    },
+    {
+      "startSeconds": 197.819,
+      "text": "let's select our transaction ID the"
+    },
+    {
+      "startSeconds": 202.14,
+      "text": "amount"
+    },
+    {
+      "startSeconds": 203.159,
+      "text": "the first name"
+    },
+    {
+      "startSeconds": 205.08,
+      "text": "then the last name"
+    },
+    {
+      "startSeconds": 208.86,
+      "text": "this would make it a lot easier to find"
+    },
+    {
+      "startSeconds": 211.44,
+      "text": "the first and last name of who initiated"
+    },
+    {
+      "startSeconds": 214.019,
+      "text": "a transaction at a given time we know"
+    },
+    {
+      "startSeconds": 216.659,
+      "text": "who bought which order so that is an"
+    },
+    {
+      "startSeconds": 219,
+      "text": "inner join join together any matching"
+    },
+    {
+      "startSeconds": 221.64,
+      "text": "rows based on some Link in this case"
+    },
+    {
+      "startSeconds": 224.34,
+      "text": "we're joining these two tables together"
+    },
+    {
+      "startSeconds": 225.959,
+      "text": "by their customer ID"
+    },
+    {
+      "startSeconds": 228.36,
+      "text": "now with the left join we are going to"
+    },
+    {
+      "startSeconds": 231,
+      "text": "display everything from the table on the"
+    },
+    {
+      "startSeconds": 233.34,
+      "text": "left but let's select all"
+    },
+    {
+      "startSeconds": 236.4,
+      "text": "with the left join we will display"
+    },
+    {
+      "startSeconds": 238.62,
+      "text": "everything from the table on the left"
+    },
+    {
+      "startSeconds": 240.54,
+      "text": "our transactions however if there is a"
+    },
+    {
+      "startSeconds": 243.54,
+      "text": "matching customer ID pull in any"
+    },
+    {
+      "startSeconds": 246.18,
+      "text": "relevant data from the table on the"
+    },
+    {
+      "startSeconds": 248.159,
+      "text": "right even though there's no customer ID"
+    },
+    {
+      "startSeconds": 250.319,
+      "text": "with this latest row we're still going"
+    },
+    {
+      "startSeconds": 252.84,
+      "text": "to display it with a left join but"
+    },
+    {
+      "startSeconds": 255.06,
+      "text": "there's no data to pull in from the"
+    },
+    {
+      "startSeconds": 256.919,
+      "text": "right table because there's no"
+    },
+    {
+      "startSeconds": 258.239,
+      "text": "registered customer ID"
+    },
+    {
+      "startSeconds": 260.28,
+      "text": "with the right join"
+    },
+    {
+      "startSeconds": 262.139,
+      "text": "we will display the entire table on the"
+    },
+    {
+      "startSeconds": 264.66,
+      "text": "right if there's any matches we will"
+    },
+    {
+      "startSeconds": 267.12,
+      "text": "pull in any matching rows from the left"
+    },
+    {
+      "startSeconds": 269.16,
+      "text": "we are displaying all of our customers"
+    },
+    {
+      "startSeconds": 271.86,
+      "text": "if any of these customers ever initiated"
+    },
+    {
+      "startSeconds": 274.44,
+      "text": "a transaction we will include the data"
+    },
+    {
+      "startSeconds": 277.199,
+      "text": "from those transactions we still have"
+    },
+    {
+      "startSeconds": 279.3,
+      "text": "poppy puff in our table but she has no"
+    },
+    {
+      "startSeconds": 282.18,
+      "text": "relevant transactions she never"
+    },
+    {
+      "startSeconds": 284.04,
+      "text": "initiated one so yeah everybody those"
+    },
+    {
+      "startSeconds": 286.68,
+      "text": "are joins a join is used to combine rows"
+    },
+    {
+      "startSeconds": 289.919,
+      "text": "from two or more tables based on a"
+    },
+    {
+      "startSeconds": 292.32,
+      "text": "related column between them such as a"
+    },
+    {
+      "startSeconds": 294.84,
+      "text": "foreign key like customer ID and that is"
+    },
+    {
+      "startSeconds": 297.66,
+      "text": "a quick introduction to joins in MySQL"
+    }
+  ]
+}

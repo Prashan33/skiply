@@ -1,0 +1,2062 @@
+{
+  "id": "SnSH8Ht3MIc",
+  "url": "https://www.youtube.com/watch?v=SnSH8Ht3MIc",
+  "fetchedAt": "2026-09-01T04:09:25.147Z",
+  "captionKind": "asr",
+  "chapters": [
+    {
+      "startSeconds": 0,
+      "label": "What is Docker?"
+    },
+    {
+      "startSeconds": 27,
+      "label": "What is a Container?"
+    },
+    {
+      "startSeconds": 60,
+      "label": "What is an Image?"
+    },
+    {
+      "startSeconds": 78,
+      "label": "What are we doing Today?"
+    },
+    {
+      "startSeconds": 107,
+      "label": "It all starts with a Dockerfile - FROM"
+    },
+    {
+      "startSeconds": 200,
+      "label": "Environment Variables - ENV"
+    },
+    {
+      "startSeconds": 231,
+      "label": "COPY Command"
+    },
+    {
+      "startSeconds": 260,
+      "label": "Source files"
+    },
+    {
+      "startSeconds": 357,
+      "label": "COPY command destination"
+    },
+    {
+      "startSeconds": 399,
+      "label": "EXPOSE (You don't need this)"
+    },
+    {
+      "startSeconds": 437,
+      "label": "CMD Entry point"
+    },
+    {
+      "startSeconds": 493,
+      "label": "How to Build a Docker image"
+    },
+    {
+      "startSeconds": 556,
+      "label": "Building image with a tag"
+    },
+    {
+      "startSeconds": 587,
+      "label": "How create a container"
+    },
+    {
+      "startSeconds": 647,
+      "label": "See our container running"
+    },
+    {
+      "startSeconds": 683,
+      "label": "Stopping and starting containers"
+    },
+    {
+      "startSeconds": 730,
+      "label": "Cleaning up containers and images"
+    },
+    {
+      "startSeconds": 753,
+      "label": "Dockerignore files (how to ignore files)"
+    },
+    {
+      "startSeconds": 831,
+      "label": "Docker exec into a container"
+    },
+    {
+      "startSeconds": 923,
+      "label": "Add file to dockerignore file"
+    },
+    {
+      "startSeconds": 1010,
+      "label": "Other base images"
+    },
+    {
+      "startSeconds": 1072,
+      "label": "Stream Highlight - \"Traefik is a series of tubes\""
+    }
+  ],
+  "cues": [
+    {
+      "startSeconds": 0,
+      "text": "you may have noticed that we spin up all"
+    },
+    {
+      "startSeconds": 1.92,
+      "text": "kinds of containers on my channel they"
+    },
+    {
+      "startSeconds": 3.679,
+      "text": "range from containers for media"
+    },
+    {
+      "startSeconds": 5.2,
+      "text": "consumption containers for creating"
+    },
+    {
+      "startSeconds": 6.96,
+      "text": "content containers for monitoring"
+    },
+    {
+      "startSeconds": 9.04,
+      "text": "containers for logging and metrics"
+    },
+    {
+      "startSeconds": 11.36,
+      "text": "containers for home automation"
+    },
+    {
+      "startSeconds": 12.96,
+      "text": "containers for custom code and even"
+    },
+    {
+      "startSeconds": 15.44,
+      "text": "containers for gaming and while all"
+    },
+    {
+      "startSeconds": 17.119,
+      "text": "these containers are really awesome it"
+    },
+    {
+      "startSeconds": 18.8,
+      "text": "gives us a ton of utility i realized"
+    },
+    {
+      "startSeconds": 21.039,
+      "text": "that i might have skipped over a very"
+    },
+    {
+      "startSeconds": 22.56,
+      "text": "important and essential part of"
+    },
+    {
+      "startSeconds": 24.56,
+      "text": "containers and that's creating our own"
+    },
+    {
+      "startSeconds": 27.039,
+      "text": "container you might be asking what is a"
+    },
+    {
+      "startSeconds": 29.199,
+      "text": "container a container's a standard unit"
+    },
+    {
+      "startSeconds": 31.439,
+      "text": "of software that packages up code and"
+    },
+    {
+      "startSeconds": 33.36,
+      "text": "all of its dependencies so that"
+    },
+    {
+      "startSeconds": 35.12,
+      "text": "applications run quickly and reliably"
+    },
+    {
+      "startSeconds": 37.68,
+      "text": "from one environment to another that"
+    },
+    {
+      "startSeconds": 39.52,
+      "text": "helps prevent the works on my machine"
+    },
+    {
+      "startSeconds": 41.68,
+      "text": "symptoms you sometimes hear in software"
+    },
+    {
+      "startSeconds": 43.44,
+      "text": "development but it's even more than just"
+    },
+    {
+      "startSeconds": 45.76,
+      "text": "working a docker container image is a"
+    },
+    {
+      "startSeconds": 47.92,
+      "text": "lightweight standalone executable"
+    },
+    {
+      "startSeconds": 50,
+      "text": "package of software that includes"
+    },
+    {
+      "startSeconds": 51.76,
+      "text": "everything needed to run an application"
+    },
+    {
+      "startSeconds": 53.84,
+      "text": "code runtime system tools libraries and"
+    },
+    {
+      "startSeconds": 57.039,
+      "text": "settings think of it like software that"
+    },
+    {
+      "startSeconds": 58.8,
+      "text": "has batteries included and so once you"
+    },
+    {
+      "startSeconds": 60.879,
+      "text": "bundle all of that up it's called an"
+    },
+    {
+      "startSeconds": 62.879,
+      "text": "image and these images become containers"
+    },
+    {
+      "startSeconds": 65.519,
+      "text": "when they run and this image can be"
+    },
+    {
+      "startSeconds": 67.2,
+      "text": "lifted and shifted to windows mac or"
+    },
+    {
+      "startSeconds": 69.68,
+      "text": "linux and it will run the same"
+    },
+    {
+      "startSeconds": 71.28,
+      "text": "regardless of infrastructure and that's"
+    },
+    {
+      "startSeconds": 73.28,
+      "text": "what makes images so powerful not only"
+    },
+    {
+      "startSeconds": 75.92,
+      "text": "during development but also during"
+    },
+    {
+      "startSeconds": 77.92,
+      "text": "runtime so that aside i mentioned we"
+    },
+    {
+      "startSeconds": 80.479,
+      "text": "want to build our own docker images"
+    },
+    {
+      "startSeconds": 82.24,
+      "text": "we're going to create an image that's a"
+    },
+    {
+      "startSeconds": 83.52,
+      "text": "little more useful than the typical"
+    },
+    {
+      "startSeconds": 85.119,
+      "text": "hello world tutorials you see out there"
+    },
+    {
+      "startSeconds": 86.96,
+      "text": "for docker it's going to be a tiny web"
+    },
+    {
+      "startSeconds": 89.68,
+      "text": "server to serve out a web page through"
+    },
+    {
+      "startSeconds": 91.52,
+      "text": "nginx we're going to make sure we can"
+    },
+    {
+      "startSeconds": 93.119,
+      "text": "build it run it and test it on our own"
+    },
+    {
+      "startSeconds": 95.28,
+      "text": "machine and then we'll touch briefly on"
+    },
+    {
+      "startSeconds": 96.72,
+      "text": "how we can automate this making it"
+    },
+    {
+      "startSeconds": 98.4,
+      "text": "repeatable on other machines and we're"
+    },
+    {
+      "startSeconds": 100.4,
+      "text": "going to do all of this in a couple of"
+    },
+    {
+      "startSeconds": 101.84,
+      "text": "minutes and after that we'll have a"
+    },
+    {
+      "startSeconds": 103.759,
+      "text": "custom docker image that we can spin up"
+    },
+    {
+      "startSeconds": 105.52,
+      "text": "and self-host in our own environment so"
+    },
+    {
+      "startSeconds": 107.84,
+      "text": "it all starts out with a dockerfile now"
+    },
+    {
+      "startSeconds": 109.92,
+      "text": "at first glance this isn't anything"
+    },
+    {
+      "startSeconds": 111.84,
+      "text": "special if you look at it it's just a"
+    },
+    {
+      "startSeconds": 113.68,
+      "text": "file named dockerfile but that's really"
+    },
+    {
+      "startSeconds": 116.159,
+      "text": "all it takes to start your first docker"
+    },
+    {
+      "startSeconds": 117.759,
+      "text": "image in the first line we're going to"
+    },
+    {
+      "startSeconds": 119.28,
+      "text": "type from from specifies what base image"
+    },
+    {
+      "startSeconds": 122,
+      "text": "we'll be using to build our own image"
+    },
+    {
+      "startSeconds": 123.84,
+      "text": "almost every single image for docker is"
+    },
+    {
+      "startSeconds": 125.84,
+      "text": "based on another image and most of them"
+    },
+    {
+      "startSeconds": 128.56,
+      "text": "are linux you can specify an image like"
+    },
+    {
+      "startSeconds": 130.72,
+      "text": "ubuntu and this will give you a good"
+    },
+    {
+      "startSeconds": 132.48,
+      "text": "starting point with all the dependencies"
+    },
+    {
+      "startSeconds": 134.48,
+      "text": "from ubuntu to build your image but if"
+    },
+    {
+      "startSeconds": 136.239,
+      "text": "we're building a web server we don't"
+    },
+    {
+      "startSeconds": 137.599,
+      "text": "want to base it off of ubuntu we want to"
+    },
+    {
+      "startSeconds": 139.36,
+      "text": "base it off something much much smaller"
+    },
+    {
+      "startSeconds": 142.16,
+      "text": "and as i mentioned we want to do that"
+    },
+    {
+      "startSeconds": 143.84,
+      "text": "off of nginx so if we set nginx now our"
+    },
+    {
+      "startSeconds": 146.4,
+      "text": "base image is from nginx and this is"
+    },
+    {
+      "startSeconds": 148.959,
+      "text": "actually coming from docker hub and in"
+    },
+    {
+      "startSeconds": 151.12,
+      "text": "docker hub you can see many different"
+    },
+    {
+      "startSeconds": 153.12,
+      "text": "tags for this image we have version tags"
+    },
+    {
+      "startSeconds": 155.519,
+      "text": "we have unversion tags and then we have"
+    },
+    {
+      "startSeconds": 157.84,
+      "text": "some that include some additional"
+    },
+    {
+      "startSeconds": 159.2,
+      "text": "dependencies like perl or we have some"
+    },
+    {
+      "startSeconds": 161.84,
+      "text": "that are based off an entirely different"
+    },
+    {
+      "startSeconds": 164.08,
+      "text": "base image altogether like alpine and we"
+    },
+    {
+      "startSeconds": 166.16,
+      "text": "can pin this to any of the tags we just"
+    },
+    {
+      "startSeconds": 167.92,
+      "text": "saw so if we want to get the latest"
+    },
+    {
+      "startSeconds": 169.8,
+      "text": "1.10.1 this will give us the latest"
+    },
+    {
+      "startSeconds": 172.16,
+      "text": "nginx image but this image although"
+    },
+    {
+      "startSeconds": 174.56,
+      "text": "small is a little bit bigger than the"
+    },
+    {
+      "startSeconds": 176.56,
+      "text": "alpine one i think the base nginx image"
+    },
+    {
+      "startSeconds": 178.8,
+      "text": "is around 50 megabytes but we wanted"
+    },
+    {
+      "startSeconds": 180.64,
+      "text": "this to be tiny so we're actually going"
+    },
+    {
+      "startSeconds": 182.64,
+      "text": "to choose the alpine version and this is"
+    },
+    {
+      "startSeconds": 185.36,
+      "text": "super tiny it's like 19 megabytes and if"
+    },
+    {
+      "startSeconds": 187.519,
+      "text": "you're not familiar with alpine linux"
+    },
+    {
+      "startSeconds": 189.28,
+      "text": "it's a super tiny linux distribution i"
+    },
+    {
+      "startSeconds": 191.68,
+      "text": "think it's only like five megabytes so"
+    },
+    {
+      "startSeconds": 193.28,
+      "text": "super tiny and a lot of image"
+    },
+    {
+      "startSeconds": 194.72,
+      "text": "maintainers base their images off of"
+    },
+    {
+      "startSeconds": 196.8,
+      "text": "alpine because it's so darn small so"
+    },
+    {
+      "startSeconds": 199.68,
+      "text": "we're gonna go with alpine next up are"
+    },
+    {
+      "startSeconds": 201.68,
+      "text": "environment variables and they use the"
+    },
+    {
+      "startSeconds": 203.28,
+      "text": "keyword env you can see we get some"
+    },
+    {
+      "startSeconds": 205.44,
+      "text": "intellisense here and you can see it's"
+    },
+    {
+      "startSeconds": 207.44,
+      "text": "just a key value pair so if we wanted to"
+    },
+    {
+      "startSeconds": 209.68,
+      "text": "set an environment variable of foo"
+    },
+    {
+      "startSeconds": 211.68,
+      "text": "equals bar we could or bar equals bats"
+    },
+    {
+      "startSeconds": 215.2,
+      "text": "we could do that too now we're not going"
+    },
+    {
+      "startSeconds": 216.799,
+      "text": "to use any environment variables if we"
+    },
+    {
+      "startSeconds": 218.4,
+      "text": "do need them we'll pass them in when we"
+    },
+    {
+      "startSeconds": 220.48,
+      "text": "create our container rather than specify"
+    },
+    {
+      "startSeconds": 222.879,
+      "text": "them here but if you're inheriting from"
+    },
+    {
+      "startSeconds": 225.04,
+      "text": "an image that requires some variables to"
+    },
+    {
+      "startSeconds": 227.2,
+      "text": "be passed in you could do it here too"
+    },
+    {
+      "startSeconds": 229.519,
+      "text": "but we don't need them for this so the"
+    },
+    {
+      "startSeconds": 231.519,
+      "text": "next command we're going to use and you"
+    },
+    {
+      "startSeconds": 232.959,
+      "text": "see often is the copy command and you"
+    },
+    {
+      "startSeconds": 235.519,
+      "text": "can see the copy command takes two"
+    },
+    {
+      "startSeconds": 237.28,
+      "text": "parameters it takes a source and a"
+    },
+    {
+      "startSeconds": 239.439,
+      "text": "destination now what are we going to"
+    },
+    {
+      "startSeconds": 241.2,
+      "text": "copy and where are we going to copy it"
+    },
+    {
+      "startSeconds": 243.2,
+      "text": "to so the copy command can actually copy"
+    },
+    {
+      "startSeconds": 245.599,
+      "text": "files from the host machine so this"
+    },
+    {
+      "startSeconds": 248.239,
+      "text": "machine that we're on"
+    },
+    {
+      "startSeconds": 249.84,
+      "text": "into our actual image so for us that"
+    },
+    {
+      "startSeconds": 252.64,
+      "text": "means copying in our website or some"
+    },
+    {
+      "startSeconds": 255.2,
+      "text": "static pages for this to serve up so we"
+    },
+    {
+      "startSeconds": 258.16,
+      "text": "haven't created those yet so let's"
+    },
+    {
+      "startSeconds": 259.68,
+      "text": "create them real quick so first let's"
+    },
+    {
+      "startSeconds": 261.44,
+      "text": "create a source folder and in this"
+    },
+    {
+      "startSeconds": 263.12,
+      "text": "source folder let's create a new folder"
+    },
+    {
+      "startSeconds": 264.88,
+      "text": "called html and in here let's create an"
+    },
+    {
+      "startSeconds": 267.96,
+      "text": "index.html in this index.html let's copy"
+    },
+    {
+      "startSeconds": 272.08,
+      "text": "some html so this is a real simple web"
+    },
+    {
+      "startSeconds": 274.96,
+      "text": "page html tags body tag h1 tag saying"
+    },
+    {
+      "startSeconds": 278.96,
+      "text": "hello h1 tag again saying it works on my"
+    },
+    {
+      "startSeconds": 281.84,
+      "text": "machine and then a p or paragraph sing"
+    },
+    {
+      "startSeconds": 284.56,
+      "text": "and it works on every machine then we"
+    },
+    {
+      "startSeconds": 286.32,
+      "text": "close out the body then we close out"
+    },
+    {
+      "startSeconds": 288.08,
+      "text": "html let's format this this there we go"
+    },
+    {
+      "startSeconds": 290.8,
+      "text": "and then let's also add a couple of"
+    },
+    {
+      "startSeconds": 292.479,
+      "text": "images a wave"
+    },
+    {
+      "startSeconds": 294.24,
+      "text": "and a whale so let's include these in"
+    },
+    {
+      "startSeconds": 296.479,
+      "text": "our web page"
+    },
+    {
+      "startSeconds": 298,
+      "text": "so img"
+    },
+    {
+      "startSeconds": 299.44,
+      "text": "source"
+    },
+    {
+      "startSeconds": 300.479,
+      "text": "equals wave close out copy this guy"
+    },
+    {
+      "startSeconds": 304.4,
+      "text": "instead of wave"
+    },
+    {
+      "startSeconds": 306.24,
+      "text": "do whale"
+    },
+    {
+      "startSeconds": 308.56,
+      "text": "okay so now we should have a simple web"
+    },
+    {
+      "startSeconds": 310.8,
+      "text": "page but let's test it really quick okay"
+    },
+    {
+      "startSeconds": 312.96,
+      "text": "just did a file open on the index.html"
+    },
+    {
+      "startSeconds": 315.52,
+      "text": "with the browser and it works it's not"
+    },
+    {
+      "startSeconds": 317.6,
+      "text": "winning any awards but it does work"
+    },
+    {
+      "startSeconds": 320.08,
+      "text": "please don't judge my web dev skills"
+    },
+    {
+      "startSeconds": 322.24,
+      "text": "based on this page i promise i can do a"
+    },
+    {
+      "startSeconds": 324.56,
+      "text": "little bit better than this and who"
+    },
+    {
+      "startSeconds": 326.16,
+      "text": "knows by the time you see this i might"
+    },
+    {
+      "startSeconds": 327.919,
+      "text": "update it and style it a little bit"
+    },
+    {
+      "startSeconds": 329.36,
+      "text": "better oh which is a good reminder if"
+    },
+    {
+      "startSeconds": 331.919,
+      "text": "you're looking for the documentation you"
+    },
+    {
+      "startSeconds": 333.36,
+      "text": "can find it in the description below"
+    },
+    {
+      "startSeconds": 335.039,
+      "text": "there should be a link in there to my"
+    },
+    {
+      "startSeconds": 336.479,
+      "text": "documentation site which also includes a"
+    },
+    {
+      "startSeconds": 338.88,
+      "text": "link to all the source files for this"
+    },
+    {
+      "startSeconds": 341.199,
+      "text": "repo and more so as i was saying maybe"
+    },
+    {
+      "startSeconds": 343.68,
+      "text": "i'll style that a little bit more before"
+    },
+    {
+      "startSeconds": 345.44,
+      "text": "you see this anyways so now that we have"
+    },
+    {
+      "startSeconds": 348.08,
+      "text": "our web page we can go back to the"
+    },
+    {
+      "startSeconds": 349.759,
+      "text": "docker file because we were talking"
+    },
+    {
+      "startSeconds": 351.28,
+      "text": "about the copy command little side quest"
+    },
+    {
+      "startSeconds": 353.6,
+      "text": "there creating a web page but the copy"
+    },
+    {
+      "startSeconds": 355.68,
+      "text": "command takes a source and a destination"
+    },
+    {
+      "startSeconds": 358.56,
+      "text": "so the source is all of src"
+    },
+    {
+      "startSeconds": 361.56,
+      "text": "source.html and the destination where is"
+    },
+    {
+      "startSeconds": 364.639,
+      "text": "the destination so the destination is"
+    },
+    {
+      "startSeconds": 366.8,
+      "text": "going to be slash user slash share slash"
+    },
+    {
+      "startSeconds": 369.199,
+      "text": "nginx slash html now how did i know that"
+    },
+    {
+      "startSeconds": 372.319,
+      "text": "well i've used enginex a few times"
+    },
+    {
+      "startSeconds": 374.56,
+      "text": "before but this is where nginx keeps its"
+    },
+    {
+      "startSeconds": 376.96,
+      "text": "default site that it's going to serve"
+    },
+    {
+      "startSeconds": 378.56,
+      "text": "out notice i'm mentioning nginx so this"
+    },
+    {
+      "startSeconds": 381.68,
+      "text": "is copying it inside of this image where"
+    },
+    {
+      "startSeconds": 384.72,
+      "text": "nginx lives in a location that's going"
+    },
+    {
+      "startSeconds": 387.199,
+      "text": "to serve out these files automatically"
+    },
+    {
+      "startSeconds": 388.96,
+      "text": "and a quick and easy way to do that is"
+    },
+    {
+      "startSeconds": 390.56,
+      "text": "to copy it to here okay so far inherent"
+    },
+    {
+      "startSeconds": 393.36,
+      "text": "from the base image engine x that's"
+    },
+    {
+      "startSeconds": 395.44,
+      "text": "based on alpine we're gonna copy in our"
+    },
+    {
+      "startSeconds": 397.759,
+      "text": "web page our source files and next"
+    },
+    {
+      "startSeconds": 400.479,
+      "text": "we're gonna expose some ports now we"
+    },
+    {
+      "startSeconds": 402.8,
+      "text": "don't really need to do this but let me"
+    },
+    {
+      "startSeconds": 405.039,
+      "text": "show you how this works now we can"
+    },
+    {
+      "startSeconds": 407.12,
+      "text": "actually expose a port of 80. and we can"
+    },
+    {
+      "startSeconds": 409.919,
+      "text": "specify whether it's tcp"
+    },
+    {
+      "startSeconds": 412.8,
+      "text": "or udp and if you don't specify at all"
+    },
+    {
+      "startSeconds": 415.68,
+      "text": "it's tcp but really we don't need to do"
+    },
+    {
+      "startSeconds": 418.08,
+      "text": "this at all because when someone uses"
+    },
+    {
+      "startSeconds": 420.24,
+      "text": "this image and they create a container"
+    },
+    {
+      "startSeconds": 422.16,
+      "text": "from it they can specify any port they"
+    },
+    {
+      "startSeconds": 424.4,
+      "text": "want so really this is documentation"
+    },
+    {
+      "startSeconds": 426.479,
+      "text": "telling the person who uses this which"
+    },
+    {
+      "startSeconds": 428.639,
+      "text": "port they should use nginx with the"
+    },
+    {
+      "startSeconds": 430.96,
+      "text": "default configuration is set to use port"
+    },
+    {
+      "startSeconds": 433.36,
+      "text": "80. so this is documentation really and"
+    },
+    {
+      "startSeconds": 436.479,
+      "text": "really we can just comment it out next"
+    },
+    {
+      "startSeconds": 438.8,
+      "text": "we'll need to define a command use for"
+    },
+    {
+      "startSeconds": 440.72,
+      "text": "the entry point and the keyword we use"
+    },
+    {
+      "startSeconds": 442.639,
+      "text": "for that is cmd you can see we're"
+    },
+    {
+      "startSeconds": 444.56,
+      "text": "getting some hints here so we should"
+    },
+    {
+      "startSeconds": 446,
+      "text": "specify an executable the executable is"
+    },
+    {
+      "startSeconds": 448.639,
+      "text": "nginx but we also want to pass some"
+    },
+    {
+      "startSeconds": 451.039,
+      "text": "arguments to it now i know we need to"
+    },
+    {
+      "startSeconds": 452.96,
+      "text": "pass a g and turn daemon off but we"
+    },
+    {
+      "startSeconds": 455.84,
+      "text": "don't pass it in like this"
+    },
+    {
+      "startSeconds": 459.68,
+      "text": "we actually need to pass an array of"
+    },
+    {
+      "startSeconds": 462,
+      "text": "parameters so this looks kind of funny"
+    },
+    {
+      "startSeconds": 464.639,
+      "text": "but we would do it like this so this is"
+    },
+    {
+      "startSeconds": 466.8,
+      "text": "saying when this container starts up run"
+    },
+    {
+      "startSeconds": 468.96,
+      "text": "nginx dash g and daemon off and if we"
+    },
+    {
+      "startSeconds": 472.24,
+      "text": "wanted to run nginx in debug mode we"
+    },
+    {
+      "startSeconds": 474.56,
+      "text": "would run nginx dash debug"
+    },
+    {
+      "startSeconds": 477.599,
+      "text": "with the same parameters but we don't"
+    },
+    {
+      "startSeconds": 479.84,
+      "text": "want to run it in debug mode this is the"
+    },
+    {
+      "startSeconds": 481.759,
+      "text": "same command that the nginx image passes"
+    },
+    {
+      "startSeconds": 484.639,
+      "text": "in when it starts up by default so you"
+    },
+    {
+      "startSeconds": 487.36,
+      "text": "can leave this specified"
+    },
+    {
+      "startSeconds": 489.44,
+      "text": "or we can remove it and let's clean up"
+    },
+    {
+      "startSeconds": 492.319,
+      "text": "some of our contents so now we have a"
+    },
+    {
+      "startSeconds": 495.44,
+      "text": "really really simple image but how do we"
+    },
+    {
+      "startSeconds": 498.24,
+      "text": "build it how do we spin it up it's"
+    },
+    {
+      "startSeconds": 501.199,
+      "text": "really simple but first you need to make"
+    },
+    {
+      "startSeconds": 502.96,
+      "text": "sure you have docker installed and you"
+    },
+    {
+      "startSeconds": 504.4,
+      "text": "can check by running docker info if you"
+    },
+    {
+      "startSeconds": 506.879,
+      "text": "see this come back with some information"
+    },
+    {
+      "startSeconds": 508.96,
+      "text": "and not an error means you have it"
+    },
+    {
+      "startSeconds": 510.639,
+      "text": "installed so to build our container we"
+    },
+    {
+      "startSeconds": 512.64,
+      "text": "need to make sure we're in the folder"
+    },
+    {
+      "startSeconds": 514.399,
+      "text": "where our docker file is and if i cat it"
+    },
+    {
+      "startSeconds": 516.959,
+      "text": "out you can see the contents from nginx"
+    },
+    {
+      "startSeconds": 519.919,
+      "text": "copy some files we should be able to"
+    },
+    {
+      "startSeconds": 521.919,
+      "text": "just run docker"
+    },
+    {
+      "startSeconds": 523.44,
+      "text": "build"
+    },
+    {
+      "startSeconds": 524.56,
+      "text": "dot so this is saying docker engine run"
+    },
+    {
+      "startSeconds": 527.92,
+      "text": "build and basically look for a docker"
+    },
+    {
+      "startSeconds": 530.48,
+      "text": "file in the relative path which is here"
+    },
+    {
+      "startSeconds": 533.12,
+      "text": "the current path so if we run this"
+    },
+    {
+      "startSeconds": 534.88,
+      "text": "command we see it's starting to build we"
+    },
+    {
+      "startSeconds": 537.2,
+      "text": "see it loading the nginx image so it's"
+    },
+    {
+      "startSeconds": 539.92,
+      "text": "pulling the nginx image down extracting"
+    },
+    {
+      "startSeconds": 542.959,
+      "text": "building and it looks like it's built so"
+    },
+    {
+      "startSeconds": 545.12,
+      "text": "to check this image that was just built"
+    },
+    {
+      "startSeconds": 547.04,
+      "text": "we should be able to run docker images"
+    },
+    {
+      "startSeconds": 549.2,
+      "text": "and see our image here we can see we"
+    },
+    {
+      "startSeconds": 551.36,
+      "text": "have an image id which is the one we"
+    },
+    {
+      "startSeconds": 553.519,
+      "text": "just built and it doesn't have a tag if"
+    },
+    {
+      "startSeconds": 556.64,
+      "text": "we wanted to build one with the tag we"
+    },
+    {
+      "startSeconds": 558.959,
+      "text": "would run docker build dash t"
+    },
+    {
+      "startSeconds": 561.279,
+      "text": "name your image hello dash internet and"
+    },
+    {
+      "startSeconds": 564.24,
+      "text": "then a path to the docker file which is"
+    },
+    {
+      "startSeconds": 566.8,
+      "text": "this current directory"
+    },
+    {
+      "startSeconds": 568.64,
+      "text": "so we've run this again it'll build the"
+    },
+    {
+      "startSeconds": 570.8,
+      "text": "container really quick and if we run"
+    },
+    {
+      "startSeconds": 572.72,
+      "text": "docker images again we can now see our"
+    },
+    {
+      "startSeconds": 575.6,
+      "text": "tagged image so the name is hello"
+    },
+    {
+      "startSeconds": 577.6,
+      "text": "internet the tag is latest image id and"
+    },
+    {
+      "startSeconds": 580.64,
+      "text": "about a minute ago so great we have an"
+    },
+    {
+      "startSeconds": 582.8,
+      "text": "image but we don't have a container yet"
+    },
+    {
+      "startSeconds": 585.04,
+      "text": "so how do we create a container remember"
+    },
+    {
+      "startSeconds": 587.2,
+      "text": "i said an image becomes a container when"
+    },
+    {
+      "startSeconds": 589.92,
+      "text": "we actually execute it so we execute it"
+    },
+    {
+      "startSeconds": 592.24,
+      "text": "by running docker run dash d or daemon"
+    },
+    {
+      "startSeconds": 596,
+      "text": "dash p to expose some ports and then the"
+    },
+    {
+      "startSeconds": 598.72,
+      "text": "ports we want to expose this is why i"
+    },
+    {
+      "startSeconds": 600.56,
+      "text": "said when we're building our image it"
+    },
+    {
+      "startSeconds": 602.32,
+      "text": "really doesn't matter if you expose"
+    },
+    {
+      "startSeconds": 603.92,
+      "text": "those ports within the actual image"
+    },
+    {
+      "startSeconds": 606.32,
+      "text": "because we're going to expose them here"
+    },
+    {
+      "startSeconds": 608,
+      "text": "in our container and then last we"
+    },
+    {
+      "startSeconds": 610,
+      "text": "actually need our image id which is"
+    },
+    {
+      "startSeconds": 612,
+      "text": "right here so this is saying daca run as"
+    },
+    {
+      "startSeconds": 614.8,
+      "text": "a daemon expose port 80 on the inside"
+    },
+    {
+      "startSeconds": 617.6,
+      "text": "to the port of 80 on the outside and use"
+    },
+    {
+      "startSeconds": 620.16,
+      "text": "this image id so if we run that we get"
+    },
+    {
+      "startSeconds": 622.8,
+      "text": "this long id back and our container"
+    },
+    {
+      "startSeconds": 625.2,
+      "text": "should be running but how do we know if"
+    },
+    {
+      "startSeconds": 627.519,
+      "text": "it's running well we should be able to"
+    },
+    {
+      "startSeconds": 629.04,
+      "text": "run a docker ps and see it running here"
+    },
+    {
+      "startSeconds": 632.079,
+      "text": "and we do so we're seeing this container"
+    },
+    {
+      "startSeconds": 634.24,
+      "text": "that has a name of brave carver and it's"
+    },
+    {
+      "startSeconds": 637.279,
+      "text": "running created 11 seconds ago and it's"
+    },
+    {
+      "startSeconds": 639.6,
+      "text": "been up for 10 seconds and you can see"
+    },
+    {
+      "startSeconds": 641.519,
+      "text": "on my machine or all ips 480 is mapped"
+    },
+    {
+      "startSeconds": 645.04,
+      "text": "to 80 tcp this is a good sign so we"
+    },
+    {
+      "startSeconds": 648.079,
+      "text": "should be able to go to localhost 8080"
+    },
+    {
+      "startSeconds": 650.48,
+      "text": "and see our webpage"
+    },
+    {
+      "startSeconds": 652.32,
+      "text": "and here it is"
+    },
+    {
+      "startSeconds": 653.839,
+      "text": "that is awesome so we have a docker"
+    },
+    {
+      "startSeconds": 656.079,
+      "text": "container running that was based on the"
+    },
+    {
+      "startSeconds": 658.32,
+      "text": "image we created which was based off of"
+    },
+    {
+      "startSeconds": 660.64,
+      "text": "nginx we created some html and some"
+    },
+    {
+      "startSeconds": 663.44,
+      "text": "images and put it inside of that"
+    },
+    {
+      "startSeconds": 665.839,
+      "text": "container image now we've run it on port"
+    },
+    {
+      "startSeconds": 668.079,
+      "text": "8080 and we see it serving our files so"
+    },
+    {
+      "startSeconds": 671.2,
+      "text": "this now will work on any machine that"
+    },
+    {
+      "startSeconds": 673.44,
+      "text": "supports docker or container d as long"
+    },
+    {
+      "startSeconds": 675.839,
+      "text": "as it's running a container engine we"
+    },
+    {
+      "startSeconds": 677.839,
+      "text": "could run this on windows mac or linux"
+    },
+    {
+      "startSeconds": 679.839,
+      "text": "and it'll execute and run just the same"
+    },
+    {
+      "startSeconds": 681.92,
+      "text": "so that's awesome but how do we actually"
+    },
+    {
+      "startSeconds": 684.24,
+      "text": "stop it now"
+    },
+    {
+      "startSeconds": 686,
+      "text": "you can see it's still running and it's"
+    },
+    {
+      "startSeconds": 687.68,
+      "text": "going to run indefinitely so to stop it"
+    },
+    {
+      "startSeconds": 690.399,
+      "text": "we just run docker stop and then the"
+    },
+    {
+      "startSeconds": 692.959,
+      "text": "image name or id finds brave carver and"
+    },
+    {
+      "startSeconds": 696.399,
+      "text": "say stop"
+    },
+    {
+      "startSeconds": 697.6,
+      "text": "and that just stopped the container so"
+    },
+    {
+      "startSeconds": 699.279,
+      "text": "if we run docker ps"
+    },
+    {
+      "startSeconds": 701.279,
+      "text": "we don't see it anymore but it's"
+    },
+    {
+      "startSeconds": 703.12,
+      "text": "actually there stopped we didn't remove"
+    },
+    {
+      "startSeconds": 705.279,
+      "text": "it so if we run docker ps dash a we can"
+    },
+    {
+      "startSeconds": 708.72,
+      "text": "see this container is here and it's"
+    },
+    {
+      "startSeconds": 710.959,
+      "text": "exited and it was stopped two minutes"
+    },
+    {
+      "startSeconds": 713.2,
+      "text": "ago so we want to run this again we"
+    },
+    {
+      "startSeconds": 714.88,
+      "text": "don't need to create another image we"
+    },
+    {
+      "startSeconds": 717.12,
+      "text": "can just run docker start"
+    },
+    {
+      "startSeconds": 719.68,
+      "text": "and this image name brave carver"
+    },
+    {
+      "startSeconds": 722.56,
+      "text": "start it back up if we were on docker ps"
+    },
+    {
+      "startSeconds": 725.279,
+      "text": "we see it's running"
+    },
+    {
+      "startSeconds": 727.04,
+      "text": "and if we refresh again it's running"
+    },
+    {
+      "startSeconds": 729.04,
+      "text": "again so let's actually stop this let's"
+    },
+    {
+      "startSeconds": 731.92,
+      "text": "actually remove this container so this"
+    },
+    {
+      "startSeconds": 734.639,
+      "text": "docker rm and the container name"
+    },
+    {
+      "startSeconds": 737.44,
+      "text": "that removes the container but if we"
+    },
+    {
+      "startSeconds": 739.44,
+      "text": "look we still see we have the image"
+    },
+    {
+      "startSeconds": 741.6,
+      "text": "there so if we run docker images that's"
+    },
+    {
+      "startSeconds": 744.16,
+      "text": "still there to remove an image we just"
+    },
+    {
+      "startSeconds": 746.16,
+      "text": "run docker rmi"
+    },
+    {
+      "startSeconds": 748.32,
+      "text": "and then the image name or id"
+    },
+    {
+      "startSeconds": 750.639,
+      "text": "and now that deleted the image off of"
+    },
+    {
+      "startSeconds": 752.48,
+      "text": "our machine another thing worth"
+    },
+    {
+      "startSeconds": 753.839,
+      "text": "mentioning is a docker ignore file a"
+    },
+    {
+      "startSeconds": 756.16,
+      "text": "docker ignore file is a simple file that"
+    },
+    {
+      "startSeconds": 758.72,
+      "text": "tells docker to ignore files when it"
+    },
+    {
+      "startSeconds": 761.279,
+      "text": "builds your container image"
+    },
+    {
+      "startSeconds": 763.12,
+      "text": "similar to a git ignore file so if we"
+    },
+    {
+      "startSeconds": 765.12,
+      "text": "create a new file and call it dot docker"
+    },
+    {
+      "startSeconds": 767.92,
+      "text": "ignore"
+    },
+    {
+      "startSeconds": 769.36,
+      "text": "we get an icon meaning we created the"
+    },
+    {
+      "startSeconds": 771.12,
+      "text": "right thing and then we can specify"
+    },
+    {
+      "startSeconds": 773.6,
+      "text": "files to ignore now in ignore files you"
+    },
+    {
+      "startSeconds": 776.079,
+      "text": "usually see some of the usual suspects"
+    },
+    {
+      "startSeconds": 778.639,
+      "text": "artifacts of builds or errors or things"
+    },
+    {
+      "startSeconds": 781.6,
+      "text": "while you're debugging that you actually"
+    },
+    {
+      "startSeconds": 783.2,
+      "text": "don't want to put inside of your"
+    },
+    {
+      "startSeconds": 784.56,
+      "text": "container but as you can see we don't"
+    },
+    {
+      "startSeconds": 786.639,
+      "text": "have any of these files here so it"
+    },
+    {
+      "startSeconds": 788.399,
+      "text": "really doesn't help us but let's say for"
+    },
+    {
+      "startSeconds": 790.56,
+      "text": "instance in here we had a password"
+    },
+    {
+      "startSeconds": 793.6,
+      "text": "dot text file and in here we had some"
+    },
+    {
+      "startSeconds": 796.399,
+      "text": "secret password"
+    },
+    {
+      "startSeconds": 800.079,
+      "text": "if we have this password file in here i"
+    },
+    {
+      "startSeconds": 802.72,
+      "text": "know this is a contrived example but"
+    },
+    {
+      "startSeconds": 804.8,
+      "text": "bear with me if we have this password"
+    },
+    {
+      "startSeconds": 807.2,
+      "text": "file inside of here and we run the"
+    },
+    {
+      "startSeconds": 809.68,
+      "text": "docker build the docker build is"
+    },
+    {
+      "startSeconds": 811.839,
+      "text": "actually going to copy everything from"
+    },
+    {
+      "startSeconds": 813.519,
+      "text": "source"
+    },
+    {
+      "startSeconds": 814.56,
+      "text": "html which includes this password text"
+    },
+    {
+      "startSeconds": 817.6,
+      "text": "and put it inside of our image so that"
+    },
+    {
+      "startSeconds": 819.839,
+      "text": "means that file will live inside of the"
+    },
+    {
+      "startSeconds": 822.16,
+      "text": "image and anyone who spins this"
+    },
+    {
+      "startSeconds": 824.16,
+      "text": "container up can actually see that file"
+    },
+    {
+      "startSeconds": 826.48,
+      "text": "let's do that really quick"
+    },
+    {
+      "startSeconds": 829.12,
+      "text": "so let's build that image again really"
+    },
+    {
+      "startSeconds": 830.88,
+      "text": "quick and then let's run that image and"
+    },
+    {
+      "startSeconds": 833.519,
+      "text": "turn it into a container we see it's"
+    },
+    {
+      "startSeconds": 835.6,
+      "text": "running now let's exact into this"
+    },
+    {
+      "startSeconds": 838.48,
+      "text": "container and take a look around so exec"
+    },
+    {
+      "startSeconds": 841.199,
+      "text": "is a special command that you can do to"
+    },
+    {
+      "startSeconds": 842.959,
+      "text": "actually execute inside of a container"
+    },
+    {
+      "startSeconds": 845.68,
+      "text": "while it's running so you can inspect"
+    },
+    {
+      "startSeconds": 848.079,
+      "text": "things debug things or run things or"
+    },
+    {
+      "startSeconds": 849.76,
+      "text": "really do whatever you want but we're"
+    },
+    {
+      "startSeconds": 851.279,
+      "text": "going to exec into this container and"
+    },
+    {
+      "startSeconds": 853.519,
+      "text": "see our password file in there so we're"
+    },
+    {
+      "startSeconds": 855.92,
+      "text": "going to run a docker exec"
+    },
+    {
+      "startSeconds": 858.24,
+      "text": "it and then the id of the image that's"
+    },
+    {
+      "startSeconds": 861.519,
+      "text": "running right here and then slash bin"
+    },
+    {
+      "startSeconds": 864,
+      "text": "slash sh"
+    },
+    {
+      "startSeconds": 865.6,
+      "text": "so what this is saying is docker exact"
+    },
+    {
+      "startSeconds": 868.399,
+      "text": "in interactive mode into this container"
+    },
+    {
+      "startSeconds": 871.44,
+      "text": "that's running and when you get there"
+    },
+    {
+      "startSeconds": 873.519,
+      "text": "execute slash bin slash sh now sometimes"
+    },
+    {
+      "startSeconds": 876.399,
+      "text": "you'll see people executing bash when"
+    },
+    {
+      "startSeconds": 878,
+      "text": "the execution but alpine doesn't have"
+    },
+    {
+      "startSeconds": 879.839,
+      "text": "bash so we have to execute this slash"
+    },
+    {
+      "startSeconds": 881.68,
+      "text": "bin sh and this pretty much works"
+    },
+    {
+      "startSeconds": 884.399,
+      "text": "on most containers and so if we execute"
+    },
+    {
+      "startSeconds": 887.12,
+      "text": "into here now we see a terminal so we're"
+    },
+    {
+      "startSeconds": 889.199,
+      "text": "actually inside of this container"
+    },
+    {
+      "startSeconds": 891.279,
+      "text": "so where did we put our files if we look"
+    },
+    {
+      "startSeconds": 893.6,
+      "text": "in our docker file we said it's in slash"
+    },
+    {
+      "startSeconds": 895.92,
+      "text": "user slash share slash nginx slash html"
+    },
+    {
+      "startSeconds": 899.36,
+      "text": "cd slash user slash share slash nginx"
+    },
+    {
+      "startSeconds": 903.519,
+      "text": "slash html and if we list out we can see"
+    },
+    {
+      "startSeconds": 906.959,
+      "text": "our password dot text here if we count"
+    },
+    {
+      "startSeconds": 909.44,
+      "text": "it out we could see our secret password"
+    },
+    {
+      "startSeconds": 911.519,
+      "text": "here so like i said not ideal and not"
+    },
+    {
+      "startSeconds": 914.399,
+      "text": "optimal to include additional files"
+    },
+    {
+      "startSeconds": 916.72,
+      "text": "within your image so let's exit out of"
+    },
+    {
+      "startSeconds": 919.12,
+      "text": "here let's stop this container let's"
+    },
+    {
+      "startSeconds": 922.24,
+      "text": "actually remove this container and let's"
+    },
+    {
+      "startSeconds": 924.8,
+      "text": "rebuild this with a docker ignore file"
+    },
+    {
+      "startSeconds": 927.12,
+      "text": "with the password text file inside of"
+    },
+    {
+      "startSeconds": 928.959,
+      "text": "there and so let's add that password"
+    },
+    {
+      "startSeconds": 931.04,
+      "text": "text to our docker ignore file you might"
+    },
+    {
+      "startSeconds": 933.519,
+      "text": "think we just add password.txt here and"
+    },
+    {
+      "startSeconds": 936.079,
+      "text": "we're covered we're actually not because"
+    },
+    {
+      "startSeconds": 938.639,
+      "text": "docker ignore files are relative to the"
+    },
+    {
+      "startSeconds": 941.68,
+      "text": "file that you want to ignore so since"
+    },
+    {
+      "startSeconds": 944,
+      "text": "this password.txt file is inside a"
+    },
+    {
+      "startSeconds": 946.88,
+      "text": "source html it won't get ignored so we"
+    },
+    {
+      "startSeconds": 950.639,
+      "text": "can fix that by simply"
+    },
+    {
+      "startSeconds": 953.199,
+      "text": "adding starstar"
+    },
+    {
+      "startSeconds": 955.199,
+      "text": "so this is the glob pattern basically"
+    },
+    {
+      "startSeconds": 956.959,
+      "text": "saying ignorepassword.txt"
+    },
+    {
+      "startSeconds": 959.519,
+      "text": "anywhere in the path as you add files to"
+    },
+    {
+      "startSeconds": 962.16,
+      "text": "it so that's a little trick i just"
+    },
+    {
+      "startSeconds": 963.839,
+      "text": "picked up now let's build this container"
+    },
+    {
+      "startSeconds": 966.16,
+      "text": "using this docker ignore file with the"
+    },
+    {
+      "startSeconds": 968.959,
+      "text": "ignore for this password.txt file so"
+    },
+    {
+      "startSeconds": 971.68,
+      "text": "docker build dot then we get our id here"
+    },
+    {
+      "startSeconds": 974.399,
+      "text": "then we want to run this image with this"
+    },
+    {
+      "startSeconds": 976.56,
+      "text": "id turning it into a container now we"
+    },
+    {
+      "startSeconds": 978.8,
+      "text": "have the container id then we want to"
+    },
+    {
+      "startSeconds": 981.04,
+      "text": "exact into that container id again and"
+    },
+    {
+      "startSeconds": 983.44,
+      "text": "then we want to change directory to"
+    },
+    {
+      "startSeconds": 985.36,
+      "text": "where all of our files are and if we do"
+    },
+    {
+      "startSeconds": 987.44,
+      "text": "an ls we see that we don't have a"
+    },
+    {
+      "startSeconds": 989.36,
+      "text": "password.txt file so i know this again"
+    },
+    {
+      "startSeconds": 992.16,
+      "text": "is a contrived example and you would"
+    },
+    {
+      "startSeconds": 993.92,
+      "text": "never include a password you never know"
+    },
+    {
+      "startSeconds": 996.32,
+      "text": "inside of your image but it's really"
+    },
+    {
+      "startSeconds": 998.399,
+      "text": "just an example of how to use a docker"
+    },
+    {
+      "startSeconds": 1000.24,
+      "text": "ignore file because they're really"
+    },
+    {
+      "startSeconds": 1001.36,
+      "text": "powerful and they should be used"
+    },
+    {
+      "startSeconds": 1002.959,
+      "text": "otherwise you can add a ton of bloat to"
+    },
+    {
+      "startSeconds": 1004.88,
+      "text": "your container without knowing it and we"
+    },
+    {
+      "startSeconds": 1007.199,
+      "text": "want to keep these container images"
+    },
+    {
+      "startSeconds": 1009.04,
+      "text": "really small and just because we built"
+    },
+    {
+      "startSeconds": 1010.8,
+      "text": "this image on top of nginx it doesn't"
+    },
+    {
+      "startSeconds": 1013.04,
+      "text": "have to be nginx"
+    },
+    {
+      "startSeconds": 1014.88,
+      "text": "it could be python it could be go it can"
+    },
+    {
+      "startSeconds": 1017.12,
+      "text": "be node or it could even be net or it"
+    },
+    {
+      "startSeconds": 1020.56,
+      "text": "could even be something full featured"
+    },
+    {
+      "startSeconds": 1022.72,
+      "text": "like plex really there's no limit to"
+    },
+    {
+      "startSeconds": 1025.36,
+      "text": "where you start so i hope that gives you"
+    },
+    {
+      "startSeconds": 1027.199,
+      "text": "an idea of just how easy and how"
+    },
+    {
+      "startSeconds": 1029.039,
+      "text": "powerful creating your own custom docker"
+    },
+    {
+      "startSeconds": 1031.12,
+      "text": "images can be we started out with"
+    },
+    {
+      "startSeconds": 1032.88,
+      "text": "nothing created a docker file leaned"
+    },
+    {
+      "startSeconds": 1035.36,
+      "text": "into a base image created a web page"
+    },
+    {
+      "startSeconds": 1037.919,
+      "text": "built our own custom docker container"
+    },
+    {
+      "startSeconds": 1039.919,
+      "text": "from that and then created a container"
+    },
+    {
+      "startSeconds": 1042.16,
+      "text": "running on our very own machine"
+    },
+    {
+      "startSeconds": 1044.48,
+      "text": "serving up a super not so fancy web page"
+    },
+    {
+      "startSeconds": 1047.76,
+      "text": "we built ourselves and if you're"
+    },
+    {
+      "startSeconds": 1049.039,
+      "text": "interested in how to build these"
+    },
+    {
+      "startSeconds": 1050.4,
+      "text": "container images during ci i'll add some"
+    },
+    {
+      "startSeconds": 1052.96,
+      "text": "examples to my repo that's in my"
+    },
+    {
+      "startSeconds": 1054.88,
+      "text": "documentation and in the future we'll be"
+    },
+    {
+      "startSeconds": 1056.88,
+      "text": "covering how to push these images to our"
+    },
+    {
+      "startSeconds": 1059.12,
+      "text": "very own self-hosted container registry"
+    },
+    {
+      "startSeconds": 1062,
+      "text": "so be sure you're subscribed to see how"
+    },
+    {
+      "startSeconds": 1063.6,
+      "text": "that turns out so what do you think"
+    },
+    {
+      "startSeconds": 1065.36,
+      "text": "about building your own docker images"
+    },
+    {
+      "startSeconds": 1067.6,
+      "text": "was it as hard as you thought it was"
+    },
+    {
+      "startSeconds": 1069.36,
+      "text": "going to be let me know in the comments"
+    },
+    {
+      "startSeconds": 1071.6,
+      "text": "section below and remember if you found"
+    },
+    {
+      "startSeconds": 1073.919,
+      "text": "anything in this video helpful"
+    },
+    {
+      "startSeconds": 1075.76,
+      "text": "don't forget to like and subscribe"
+    },
+    {
+      "startSeconds": 1078.16,
+      "text": "thanks for watching yeah it's it's a"
+    },
+    {
+      "startSeconds": 1080.24,
+      "text": "it's a ton of fun"
+    },
+    {
+      "startSeconds": 1082.16,
+      "text": "well until it's not anymore traffic is"
+    },
+    {
+      "startSeconds": 1084.559,
+      "text": "it's kind of tough because it's a"
+    },
+    {
+      "startSeconds": 1086.08,
+      "text": "different paradigm uh and it's a lot of"
+    },
+    {
+      "startSeconds": 1088.32,
+      "text": "yaml and it's a lot of it's a series of"
+    },
+    {
+      "startSeconds": 1090.96,
+      "text": "tubes that you gotta all connect and"
+    },
+    {
+      "startSeconds": 1092.32,
+      "text": "then when they connect you have"
+    },
+    {
+      "startSeconds": 1094.799,
+      "text": "tls and things work great when they"
+    },
+    {
+      "startSeconds": 1096.559,
+      "text": "don't there's a lot of hunting and"
+    },
+    {
+      "startSeconds": 1098.4,
+      "text": "packing so"
+    }
+  ]
+}

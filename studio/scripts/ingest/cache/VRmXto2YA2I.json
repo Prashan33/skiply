@@ -1,0 +1,1262 @@
+{
+  "id": "VRmXto2YA2I",
+  "url": "https://www.youtube.com/watch?v=VRmXto2YA2I",
+  "fetchedAt": "2026-09-01T04:07:44.466Z",
+  "captionKind": "asr",
+  "chapters": [
+    {
+      "startSeconds": 0,
+      "label": "Intro"
+    },
+    {
+      "startSeconds": 15,
+      "label": "Read in Dataset"
+    },
+    {
+      "startSeconds": 80,
+      "label": "First Group By"
+    },
+    {
+      "startSeconds": 188,
+      "label": "Popular Aggregate Functions"
+    },
+    {
+      "startSeconds": 338,
+      "label": "agg Function"
+    },
+    {
+      "startSeconds": 452,
+      "label": "Group By on Multiple Columns"
+    }
+  ],
+  "cues": [
+    {
+      "startSeconds": 0,
+      "text": "Hello everybody. Today we're going to be"
+    },
+    {
+      "startSeconds": 1.44,
+      "text": "taking a look at the group by function"
+    },
+    {
+      "startSeconds": 3.2,
+      "text": "and aggregating within pandas. Group by"
+    },
+    {
+      "startSeconds": 5.92,
+      "text": "is going to group together the values in"
+    },
+    {
+      "startSeconds": 8.24,
+      "text": "a column and display them all on the"
+    },
+    {
+      "startSeconds": 10.04,
+      "text": "same row. And this allows you to perform"
+    },
+    {
+      "startSeconds": 12.56,
+      "text": "aggregate functions on those groupings."
+    },
+    {
+      "startSeconds": 15.04,
+      "text": "So let's start reading in our data and"
+    },
+    {
+      "startSeconds": 16.72,
+      "text": "take a look. So we're going to do import"
+    },
+    {
+      "startSeconds": 19.04,
+      "text": "pandas as pd."
+    },
+    {
+      "startSeconds": 21.92,
+      "text": "And then we're going to say our data"
+    },
+    {
+      "startSeconds": 23.08,
+      "text": "frame is equal to and we'll say"
+    },
+    {
+      "startSeconds": 25.2,
+      "text": "pd.read_csv."
+    },
+    {
+      "startSeconds": 29.2,
+      "text": "Do open parenthesis r and our file path."
+    },
+    {
+      "startSeconds": 32.88,
+      "text": "And we're going to be looking at the"
+    },
+    {
+      "startSeconds": 33.92,
+      "text": "flavors.csv right here."
+    },
+    {
+      "startSeconds": 36.84,
+      "text": "So right here we have our flavor of ice"
+    },
+    {
+      "startSeconds": 39.16,
+      "text": "cream. We have our base flavor whether"
+    },
+    {
+      "startSeconds": 41.12,
+      "text": "it was vanilla or chocolate. Whether I"
+    },
+    {
+      "startSeconds": 43.4,
+      "text": "liked it or not, the flavor rating,"
+    },
+    {
+      "startSeconds": 45.76,
+      "text": "texture rating and it's overall or it's"
+    },
+    {
+      "startSeconds": 47.64,
+      "text": "total rating. Now these are all my own"
+    },
+    {
+      "startSeconds": 49.48,
+      "text": "personal scores. So you know, I've spent"
+    },
+    {
+      "startSeconds": 51.92,
+      "text": "years researching this. So these are all"
+    },
+    {
+      "startSeconds": 53.56,
+      "text": "very accurate. But this should be a low"
+    },
+    {
+      "startSeconds": 55.48,
+      "text": "stress environment to learn group by and"
+    },
+    {
+      "startSeconds": 57.72,
+      "text": "the aggregate functions. So the first"
+    },
+    {
+      "startSeconds": 59.8,
+      "text": "thing that we can do is look at our"
+    },
+    {
+      "startSeconds": 61.76,
+      "text": "group by. Now you can't group by well"
+    },
+    {
+      "startSeconds": 64.4,
+      "text": "you can. You can group by flavor but as"
+    },
+    {
+      "startSeconds": 67.28,
+      "text": "you can see these are all unique values."
+    },
+    {
+      "startSeconds": 69.52,
+      "text": "What we need is something that has"
+    },
+    {
+      "startSeconds": 71.24,
+      "text": "duplicate values or or similar values on"
+    },
+    {
+      "startSeconds": 74.24,
+      "text": "different rows that will group together."
+    },
+    {
+      "startSeconds": 76.48,
+      "text": "So this base flavor is actually a"
+    },
+    {
+      "startSeconds": 78.08,
+      "text": "perfect one to group it on and we'll do"
+    },
+    {
+      "startSeconds": 80.24,
+      "text": "that by saying df. group by"
+    },
+    {
+      "startSeconds": 84.88,
+      "text": "Do an open parenthesis and we'll just"
+    },
+    {
+      "startSeconds": 86.2,
+      "text": "specify base flavor."
+    },
+    {
+      "startSeconds": 89.64,
+      "text": "And this will then group together those"
+    },
+    {
+      "startSeconds": 91.32,
+      "text": "values and I need to make sure I can"
+    },
+    {
+      "startSeconds": 93.28,
+      "text": "spell properly."
+    },
+    {
+      "startSeconds": 94.8,
+      "text": "This will group those flavors together."
+    },
+    {
+      "startSeconds": 96.84,
+      "text": "So let's run this."
+    },
+    {
+      "startSeconds": 98.52,
+      "text": "And as you can see it actually is its"
+    },
+    {
+      "startSeconds": 100.44,
+      "text": "own object. So it has a group by data"
+    },
+    {
+      "startSeconds": 103.16,
+      "text": "frame group by object."
+    },
+    {
+      "startSeconds": 105.48,
+      "text": "So now that we've grouped them, let's"
+    },
+    {
+      "startSeconds": 107.16,
+      "text": "give it a variable. So we'll say"
+    },
+    {
+      "startSeconds": 109.2,
+      "text": "group_by_frame."
+    },
+    {
+      "startSeconds": 113.16,
+      "text": "Let's set it's equal to. Let's copy"
+    },
+    {
+      "startSeconds": 115.12,
+      "text": "this."
+    },
+    {
+      "startSeconds": 116.2,
+      "text": "We'll run it. And now what we need to do"
+    },
+    {
+      "startSeconds": 119.24,
+      "text": "is run our aggregations in order to get"
+    },
+    {
+      "startSeconds": 121.72,
+      "text": "an output. So, we're going to say {dot}"
+    },
+    {
+      "startSeconds": 124.28,
+      "text": "mean."
+    },
+    {
+      "startSeconds": 125.76,
+      "text": "And that's all we're going to put just"
+    },
+    {
+      "startSeconds": 127.52,
+      "text": "for now. Just to get an output that we"
+    },
+    {
+      "startSeconds": 129.32,
+      "text": "can take a look off and then we'll build"
+    },
+    {
+      "startSeconds": 130.72,
+      "text": "from there. So, let's go ahead and run"
+    },
+    {
+      "startSeconds": 132.72,
+      "text": "this."
+    },
+    {
+      "startSeconds": 134.24,
+      "text": "And right here, we have our base flavor,"
+    },
+    {
+      "startSeconds": 137.12,
+      "text": "which is now saying is the index of"
+    },
+    {
+      "startSeconds": 139.24,
+      "text": "chocolate or vanilla, and then it's"
+    },
+    {
+      "startSeconds": 141.08,
+      "text": "taking the mean or the average of all"
+    },
+    {
+      "startSeconds": 143.64,
+      "text": "the columns that have integers. Notice"
+    },
+    {
+      "startSeconds": 145.76,
+      "text": "that it did not take the liked column,"
+    },
+    {
+      "startSeconds": 147.8,
+      "text": "and it did not take the flavor column,"
+    },
+    {
+      "startSeconds": 149.8,
+      "text": "cuz those are strings and they cannot"
+    },
+    {
+      "startSeconds": 151.4,
+      "text": "aggregate those. And we'll take a look"
+    },
+    {
+      "startSeconds": 152.72,
+      "text": "at that later. But, it took all the"
+    },
+    {
+      "startSeconds": 154.92,
+      "text": "values that have integers, and then it"
+    },
+    {
+      "startSeconds": 156.88,
+      "text": "gave us the average of those ratings."
+    },
+    {
+      "startSeconds": 159.16,
+      "text": "Really quickly, I wanted to give a huge"
+    },
+    {
+      "startSeconds": 160.68,
+      "text": "shout out to the sponsor of this entire"
+    },
+    {
+      "startSeconds": 162.12,
+      "text": "Panda series, and that is Udemy. Udemy"
+    },
+    {
+      "startSeconds": 164.48,
+      "text": "has some of the best courses at the best"
+    },
+    {
+      "startSeconds": 166.16,
+      "text": "prices, and it is no exception when it"
+    },
+    {
+      "startSeconds": 167.92,
+      "text": "comes to Pandas courses. If you want to"
+    },
+    {
+      "startSeconds": 169.8,
+      "text": "master Pandas, this is the course that I"
+    },
+    {
+      "startSeconds": 171.44,
+      "text": "would recommend. It's going to teach you"
+    },
+    {
+      "startSeconds": 172.64,
+      "text": "just about everything you need to know"
+    },
+    {
+      "startSeconds": 174.44,
+      "text": "about Pandas. So, huge shout out to"
+    },
+    {
+      "startSeconds": 175.959,
+      "text": "Udemy for sponsoring this Panda series,"
+    },
+    {
+      "startSeconds": 177.8,
+      "text": "and let's get back to the video. So,"
+    },
+    {
+      "startSeconds": 179.12,
+      "text": "right off the bat, as averages, with"
+    },
+    {
+      "startSeconds": 181.44,
+      "text": "chocolate, I have a much higher rating"
+    },
+    {
+      "startSeconds": 183.36,
+      "text": "overall than the ones with vanilla"
+    },
+    {
+      "startSeconds": 185.08,
+      "text": "bases. Now, we can actually combine all"
+    },
+    {
+      "startSeconds": 187.64,
+      "text": "of this together into one line, and we"
+    },
+    {
+      "startSeconds": 189.92,
+      "text": "could do something like this. So, we'll"
+    },
+    {
+      "startSeconds": 191.519,
+      "text": "say"
+    },
+    {
+      "startSeconds": 194,
+      "text": "df.groupby"
+    },
+    {
+      "startSeconds": 196.2,
+      "text": "and we'll say {dot} mean just like this."
+    },
+    {
+      "startSeconds": 199.44,
+      "text": "And this will actually run it. Before,"
+    },
+    {
+      "startSeconds": 201.32,
+      "text": "we didn't have any aggregating function"
+    },
+    {
+      "startSeconds": 202.959,
+      "text": "on there, so it didn't run. But, now"
+    },
+    {
+      "startSeconds": 204.76,
+      "text": "that we combine it all into one, it will"
+    },
+    {
+      "startSeconds": 206.88,
+      "text": "run properly."
+    },
+    {
+      "startSeconds": 208.2,
+      "text": "Now, there are a lot of different"
+    },
+    {
+      "startSeconds": 209.519,
+      "text": "aggregate functions, but I'm going to"
+    },
+    {
+      "startSeconds": 211.2,
+      "text": "show you some of the most popular ones"
+    },
+    {
+      "startSeconds": 212.8,
+      "text": "and the most common ones that you will"
+    },
+    {
+      "startSeconds": 214.12,
+      "text": "see."
+    },
+    {
+      "startSeconds": 215.12,
+      "text": "So, let's copy this right here."
+    },
+    {
+      "startSeconds": 217.16,
+      "text": "So, we can do {dot}"
+    },
+    {
+      "startSeconds": 219.72,
+      "text": "count."
+    },
+    {
+      "startSeconds": 220.959,
+      "text": "And when we run this, we can look at the"
+    },
+    {
+      "startSeconds": 222.6,
+      "text": "count. And this will show us the actual"
+    },
+    {
+      "startSeconds": 224.28,
+      "text": "count of the rows that were aggregated."
+    },
+    {
+      "startSeconds": 226.68,
+      "text": "So, for chocolate, we had three, so it's"
+    },
+    {
+      "startSeconds": 228.64,
+      "text": "going to be three all the way across."
+    },
+    {
+      "startSeconds": 230,
+      "text": "And for vanilla, we had six. So, we're"
+    },
+    {
+      "startSeconds": 232.04,
+      "text": "looking at a higher count of vanilla,"
+    },
+    {
+      "startSeconds": 234.8,
+      "text": "which if you're comparing it to this"
+    },
+    {
+      "startSeconds": 236.72,
+      "text": "mean up here, that could be a big skew"
+    },
+    {
+      "startSeconds": 239.56,
+      "text": "towards the chocolate because if you"
+    },
+    {
+      "startSeconds": 240.8,
+      "text": "have one or two good chocolates, it"
+    },
+    {
+      "startSeconds": 242.96,
+      "text": "could really pull the numbers up."
+    },
+    {
+      "startSeconds": 244.08,
+      "text": "Whereas, if you had two good vanillas,"
+    },
+    {
+      "startSeconds": 246.16,
+      "text": "but the all the other ones were bad, it"
+    },
+    {
+      "startSeconds": 247.84,
+      "text": "pulls that average down. So, knowing the"
+    },
+    {
+      "startSeconds": 249.88,
+      "text": "count of something is really good."
+    },
+    {
+      "startSeconds": 252.88,
+      "text": "Let's take a look at the next one. And"
+    },
+    {
+      "startSeconds": 255.36,
+      "text": "we can do min and max, and I'll just run"
+    },
+    {
+      "startSeconds": 257.28,
+      "text": "these really quickly. We can do min. And"
+    },
+    {
+      "startSeconds": 259.72,
+      "text": "when we run this, the first thing that"
+    },
+    {
+      "startSeconds": 261.48,
+      "text": "you should notice is that it now has a"
+    },
+    {
+      "startSeconds": 263.56,
+      "text": "flavor and a liked column. And that's"
+    },
+    {
+      "startSeconds": 266.24,
+      "text": "because min and max will actually look"
+    },
+    {
+      "startSeconds": 267.72,
+      "text": "at the first letter in the string or the"
+    },
+    {
+      "startSeconds": 269.72,
+      "text": "first set of letters if there are you"
+    },
+    {
+      "startSeconds": 271.8,
+      "text": "know, chocolate something. It'll look at"
+    },
+    {
+      "startSeconds": 274.24,
+      "text": "the first and then it'll actually"
+    },
+    {
+      "startSeconds": 275.76,
+      "text": "populate it. So, chocolate with the ch"
+    },
+    {
+      "startSeconds": 278.56,
+      "text": "chocolate is the very first or the"
+    },
+    {
+      "startSeconds": 281.48,
+      "text": "minimum value for that string. And for a"
+    },
+    {
+      "startSeconds": 284.6,
+      "text": "cake batter, that is the minimum value"
+    },
+    {
+      "startSeconds": 286.96,
+      "text": "in vanilla as well. Now, with the liked,"
+    },
+    {
+      "startSeconds": 289.32,
+      "text": "it's interesting because apparently I"
+    },
+    {
+      "startSeconds": 290.84,
+      "text": "liked all the chocolate ones. I'm going"
+    },
+    {
+      "startSeconds": 292.36,
+      "text": "to go take a look. So, chocolate I"
+    },
+    {
+      "startSeconds": 294.32,
+      "text": "liked, chocolate I liked, chocolate I"
+    },
+    {
+      "startSeconds": 295.84,
+      "text": "liked. So, there is no no option in this"
+    },
+    {
+      "startSeconds": 298.36,
+      "text": "liked column. So, yes was the only"
+    },
+    {
+      "startSeconds": 300.24,
+      "text": "option. And now let's look at max. Oops."
+    },
+    {
+      "startSeconds": 304.08,
+      "text": "And it should do the exact opposite,"
+    },
+    {
+      "startSeconds": 305.84,
+      "text": "which is going to take the highest value"
+    },
+    {
+      "startSeconds": 307.56,
+      "text": "even if it's a string. So, rocky road,"
+    },
+    {
+      "startSeconds": 309.64,
+      "text": "the letter r comes later in the"
+    },
+    {
+      "startSeconds": 311.32,
+      "text": "alphabet. So, that's what it's looking"
+    },
+    {
+      "startSeconds": 313.24,
+      "text": "at. And so does vanilla. And then we"
+    },
+    {
+      "startSeconds": 315.28,
+      "text": "have yes as well. And then of course,"
+    },
+    {
+      "startSeconds": 317.56,
+      "text": "right here"
+    },
+    {
+      "startSeconds": 318.919,
+      "text": "it's taking the max value. So, before we"
+    },
+    {
+      "startSeconds": 321.16,
+      "text": "were looking at min, I just focused on"
+    },
+    {
+      "startSeconds": 322.72,
+      "text": "those, but it still does the exact same"
+    },
+    {
+      "startSeconds": 324.8,
+      "text": "thing to these integer columns as well."
+    },
+    {
+      "startSeconds": 328.12,
+      "text": "So, for the max value for vanilla, it"
+    },
+    {
+      "startSeconds": 330.96,
+      "text": "was mint chocolate chip. That was our"
+    },
+    {
+      "startSeconds": 332.24,
+      "text": "base. So, I had a rating of 10 for this"
+    },
+    {
+      "startSeconds": 335.08,
+      "text": "vanilla row or grouping. And then we can"
+    },
+    {
+      "startSeconds": 338.12,
+      "text": "also look at the sum."
+    },
+    {
+      "startSeconds": 341.12,
+      "text": "And there are all the sums for these."
+    },
+    {
+      "startSeconds": 343.44,
+      "text": "And again, it only does integer because"
+    },
+    {
+      "startSeconds": 344.76,
+      "text": "we can't add the strings. Here are the"
+    },
+    {
+      "startSeconds": 347.04,
+      "text": "sum or the total values for all of them."
+    },
+    {
+      "startSeconds": 349.68,
+      "text": "And for the total values, since we had,"
+    },
+    {
+      "startSeconds": 351.44,
+      "text": "you know, six rows that we're grouping"
+    },
+    {
+      "startSeconds": 353.36,
+      "text": "into this vanilla, we now have a lot or"
+    },
+    {
+      "startSeconds": 356.4,
+      "text": "a much higher score for vanilla. Now,"
+    },
+    {
+      "startSeconds": 358.52,
+      "text": "that's a really simple way to do your"
+    },
+    {
+      "startSeconds": 360.2,
+      "text": "aggregations, but there is actually an"
+    },
+    {
+      "startSeconds": 362.04,
+      "text": "aggregation function. And let's take a"
+    },
+    {
+      "startSeconds": 364.8,
+      "text": "look at this cuz this is a little bit"
+    },
+    {
+      "startSeconds": 366.8,
+      "text": "more complex, although when I write it"
+    },
+    {
+      "startSeconds": 369.32,
+      "text": "out or show you, hopefully it makes a"
+    },
+    {
+      "startSeconds": 370.88,
+      "text": "lot of sense."
+    },
+    {
+      "startSeconds": 372.24,
+      "text": "We can do dot agg. So, this is our"
+    },
+    {
+      "startSeconds": 375.04,
+      "text": "aggregate function. And what we need to"
+    },
+    {
+      "startSeconds": 376.48,
+      "text": "pass into our aggregate function is"
+    },
+    {
+      "startSeconds": 378.76,
+      "text": "actually a dictionary."
+    },
+    {
+      "startSeconds": 380.8,
+      "text": "So, let's do an open parentheses, and"
+    },
+    {
+      "startSeconds": 382.56,
+      "text": "we're going to do a squiggly bracket."
+    },
+    {
+      "startSeconds": 384.88,
+      "text": "And then we need to specify what we're"
+    },
+    {
+      "startSeconds": 386.84,
+      "text": "going to be aggregating on or what"
+    },
+    {
+      "startSeconds": 388.08,
+      "text": "column. So, let's do this flavor rating."
+    },
+    {
+      "startSeconds": 391.08,
+      "text": "Let's copy this."
+    },
+    {
+      "startSeconds": 392.96,
+      "text": "We'll do flavor rating, and I need to"
+    },
+    {
+      "startSeconds": 394.48,
+      "text": "put that as a string."
+    },
+    {
+      "startSeconds": 396.56,
+      "text": "And then we'll do a colon, and now we"
+    },
+    {
+      "startSeconds": 399.2,
+      "text": "can specify what aggregate functions we"
+    },
+    {
+      "startSeconds": 401.28,
+      "text": "want. So, we've done sum, count, mean,"
+    },
+    {
+      "startSeconds": 404.36,
+      "text": "min, max, all of those. And we can"
+    },
+    {
+      "startSeconds": 406.56,
+      "text": "actually put all of those into here and"
+    },
+    {
+      "startSeconds": 408.4,
+      "text": "perform all of those aggregations on"
+    },
+    {
+      "startSeconds": 410.28,
+      "text": "just one column. So, let's make a list."
+    },
+    {
+      "startSeconds": 414.08,
+      "text": "And then let's say mean,"
+    },
+    {
+      "startSeconds": 417.08,
+      "text": "max,"
+    },
+    {
+      "startSeconds": 419.12,
+      "text": "count, and uh what's another one? Sum."
+    },
+    {
+      "startSeconds": 423.48,
+      "text": "So, let's do all four of those only on"
+    },
+    {
+      "startSeconds": 426.32,
+      "text": "this flavor rating column."
+    },
+    {
+      "startSeconds": 429.04,
+      "text": "And when we run this, we have our base"
+    },
+    {
+      "startSeconds": 431.12,
+      "text": "flavor right here, chocolate and"
+    },
+    {
+      "startSeconds": 432.44,
+      "text": "vanilla. But now we don't have multiple"
+    },
+    {
+      "startSeconds": 434.84,
+      "text": "columns, we have one column with"
+    },
+    {
+      "startSeconds": 437.56,
+      "text": "multiple columns of our aggregations."
+    },
+    {
+      "startSeconds": 440.52,
+      "text": "And it is possible to pass in multiple"
+    },
+    {
+      "startSeconds": 442.96,
+      "text": "columns like that. So, we'll do"
+    },
+    {
+      "startSeconds": 445.44,
+      "text": "texture rating."
+    },
+    {
+      "startSeconds": 447.48,
+      "text": "And we'll just come right here and do a"
+    },
+    {
+      "startSeconds": 448.84,
+      "text": "comma."
+    },
+    {
+      "startSeconds": 450,
+      "text": "Then we'll say uh uh texture rating."
+    },
+    {
+      "startSeconds": 454.16,
+      "text": "And then a colon."
+    },
+    {
+      "startSeconds": 456.8,
+      "text": "I don't know why I spelled it out when I"
+    },
+    {
+      "startSeconds": 458.8,
+      "text": "copied it, but I did. And And we'll do"
+    },
+    {
+      "startSeconds": 460.919,
+      "text": "the exact same ones. And now when we run"
+    },
+    {
+      "startSeconds": 463.28,
+      "text": "it, we're getting the exact same"
+    },
+    {
+      "startSeconds": 465.12,
+      "text": "columns, mean, max, count, and sum for"
+    },
+    {
+      "startSeconds": 467.6,
+      "text": "flavor rating, then mean, max, count,"
+    },
+    {
+      "startSeconds": 469.68,
+      "text": "and sum for our texture rating. Now, so"
+    },
+    {
+      "startSeconds": 472.12,
+      "text": "far we've only grouped on one column,"
+    },
+    {
+      "startSeconds": 474.96,
+      "text": "but we can actually group on multiple"
+    },
+    {
+      "startSeconds": 477.32,
+      "text": "columns. Let's go back up here to our"
+    },
+    {
+      "startSeconds": 479.24,
+      "text": "data."
+    },
+    {
+      "startSeconds": 480.28,
+      "text": "And I should have just copied this down"
+    },
+    {
+      "startSeconds": 481.64,
+      "text": "here. Let's go back down and just look"
+    },
+    {
+      "startSeconds": 484.12,
+      "text": "at this."
+    },
+    {
+      "startSeconds": 485.56,
+      "text": "So, really we only grouped it on this"
+    },
+    {
+      "startSeconds": 487.44,
+      "text": "base flavor. But, you can do multiple"
+    },
+    {
+      "startSeconds": 490.48,
+      "text": "groupings or group by multiple columns."
+    },
+    {
+      "startSeconds": 493,
+      "text": "So, let's do our base flavor, which we"
+    },
+    {
+      "startSeconds": 494.84,
+      "text": "did already, as well as the liked"
+    },
+    {
+      "startSeconds": 497.48,
+      "text": "column."
+    },
+    {
+      "startSeconds": 498.52,
+      "text": "So, we're going to say df.groupby"
+    },
+    {
+      "startSeconds": 502.36,
+      "text": "then we'll do an open parentheses. And"
+    },
+    {
+      "startSeconds": 504.48,
+      "text": "then instead of just passing through one"
+    },
+    {
+      "startSeconds": 506.52,
+      "text": "string, we're going to do a list"
+    },
+    {
+      "startSeconds": 509.32,
+      "text": "and we'll say base"
+    },
+    {
+      "startSeconds": 511.48,
+      "text": "flavor"
+    },
+    {
+      "startSeconds": 513.2,
+      "text": "oops"
+    },
+    {
+      "startSeconds": 514.24,
+      "text": "comma and then we'll do liked."
+    },
+    {
+      "startSeconds": 517.159,
+      "text": "So, now when it groups this, it should"
+    },
+    {
+      "startSeconds": 519.96,
+      "text": "put two groupings. And let's run this"
+    },
+    {
+      "startSeconds": 521.96,
+      "text": "and just see."
+    },
+    {
+      "startSeconds": 523.28,
+      "text": "Oops, I got to say let's just do {dot}"
+    },
+    {
+      "startSeconds": 525,
+      "text": "mean."
+    },
+    {
+      "startSeconds": 527.44,
+      "text": "So, now we have our chocolate and a"
+    },
+    {
+      "startSeconds": 530.28,
+      "text": "vanilla. And remember, chocolate only"
+    },
+    {
+      "startSeconds": 532.48,
+      "text": "had yes, so that's the only one that"
+    },
+    {
+      "startSeconds": 534.36,
+      "text": "it's going to group on, but vanilla had"
+    },
+    {
+      "startSeconds": 536.8,
+      "text": "a no and a yes. So, if we look at the"
+    },
+    {
+      "startSeconds": 539.4,
+      "text": "vanilla, we have our base flavor"
+    },
+    {
+      "startSeconds": 541.32,
+      "text": "vanilla, and then within liked, we have"
+    },
+    {
+      "startSeconds": 543.8,
+      "text": "no and a yes. Which can show us that"
+    },
+    {
+      "startSeconds": 546.64,
+      "text": "within our vanilla, when we group on"
+    },
+    {
+      "startSeconds": 548.04,
+      "text": "these, our no's were really low, but our"
+    },
+    {
+      "startSeconds": 550.72,
+      "text": "yes's were really high. We actually had"
+    },
+    {
+      "startSeconds": 552.76,
+      "text": "a pretty similar rating or very close to"
+    },
+    {
+      "startSeconds": 554.839,
+      "text": "the same rating as the ones we really"
+    },
+    {
+      "startSeconds": 556.52,
+      "text": "liked in chocolate. And just like we did"
+    },
+    {
+      "startSeconds": 558.8,
+      "text": "above, we can take this {dot} agg"
+    },
+    {
+      "startSeconds": 562.32,
+      "text": "and I'm going to copy this"
+    },
+    {
+      "startSeconds": 564.12,
+      "text": "and it'll perform it on each of those"
+    },
+    {
+      "startSeconds": 565.839,
+      "text": "rows. Let me close that."
+    },
+    {
+      "startSeconds": 568.2,
+      "text": "And what did I do wrong?"
+    },
+    {
+      "startSeconds": 570,
+      "text": "Oh, I need this squiggly bracket."
+    },
+    {
+      "startSeconds": 572.92,
+      "text": "And it'll show us each of those, so the"
+    },
+    {
+      "startSeconds": 575.32,
+      "text": "mean, max, count, and sum for all of the"
+    },
+    {
+      "startSeconds": 578.12,
+      "text": "chocolate and vanilla, as well as the"
+    },
+    {
+      "startSeconds": 580.04,
+      "text": "groupings of light, yes, and no. Now,"
+    },
+    {
+      "startSeconds": 582.72,
+      "text": "after we've looked at all that, and"
+    },
+    {
+      "startSeconds": 584,
+      "text": "that's how I usually do it, there is one"
+    },
+    {
+      "startSeconds": 587.12,
+      "text": "uh shortcut function that can give you"
+    },
+    {
+      "startSeconds": 588.8,
+      "text": "some of these things just really"
+    },
+    {
+      "startSeconds": 590.28,
+      "text": "quickly. And so, let's go back up here"
+    },
+    {
+      "startSeconds": 593.28,
+      "text": "and take this."
+    },
+    {
+      "startSeconds": 594.88,
+      "text": "It's just called describe. Um and if"
+    },
+    {
+      "startSeconds": 596.8,
+      "text": "you've ever done it, it's just going to"
+    },
+    {
+      "startSeconds": 598.12,
+      "text": "give you some high-level overview of"
+    },
+    {
+      "startSeconds": 600.48,
+      "text": "some of those different aggregations."
+    },
+    {
+      "startSeconds": 602.2,
+      "text": "So, let's run this. And it's going to"
+    },
+    {
+      "startSeconds": 604.28,
+      "text": "give us our chocolate and vanilla. And"
+    },
+    {
+      "startSeconds": 606.32,
+      "text": "within each column, it's going to give"
+    },
+    {
+      "startSeconds": 608.08,
+      "text": "us our count, our mean, our standard"
+    },
+    {
+      "startSeconds": 610.68,
+      "text": "deviation, I believe is what that is,"
+    },
+    {
+      "startSeconds": 612.56,
+      "text": "our minimum, 25%, 50, 75, and 100, which"
+    },
+    {
+      "startSeconds": 616.04,
+      "text": "is our max, then our count and our mean."
+    },
+    {
+      "startSeconds": 618.36,
+      "text": "So, a lot of those aggregate functions,"
+    },
+    {
+      "startSeconds": 620.84,
+      "text": "but the describe is, you know, a very"
+    },
+    {
+      "startSeconds": 623.12,
+      "text": "generalized um function. We can't get as"
+    },
+    {
+      "startSeconds": 626.08,
+      "text": "specific as we were with the previous"
+    },
+    {
+      "startSeconds": 628.28,
+      "text": "ones that we were looking at, but I just"
+    },
+    {
+      "startSeconds": 629.88,
+      "text": "wanted to throw this out there in case"
+    },
+    {
+      "startSeconds": 631.2,
+      "text": "this is something that you'd be"
+    },
+    {
+      "startSeconds": 632.08,
+      "text": "interested in, because it, you know,"
+    },
+    {
+      "startSeconds": 633.48,
+      "text": "technically is showing a lot of those"
+    },
+    {
+      "startSeconds": 635.68,
+      "text": "aggregate functions just, you know, all"
+    },
+    {
+      "startSeconds": 637.88,
+      "text": "at one time. So, that is our group by"
+    },
+    {
+      "startSeconds": 639.839,
+      "text": "and aggregate functions within Pandas. I"
+    },
+    {
+      "startSeconds": 641.68,
+      "text": "hope that that was helpful. I hope that"
+    },
+    {
+      "startSeconds": 643,
+      "text": "you understood, you know, everything"
+    },
+    {
+      "startSeconds": 644.28,
+      "text": "that we were working on. If you like"
+    },
+    {
+      "startSeconds": 646.04,
+      "text": "this video, be sure to like and"
+    },
+    {
+      "startSeconds": 647.48,
+      "text": "subscribe, and check out all my other"
+    },
+    {
+      "startSeconds": 648.839,
+      "text": "videos on Python, as well as Pandas. And"
+    },
+    {
+      "startSeconds": 651.16,
+      "text": "I will see you in the next video."
+    }
+  ]
+}

@@ -1,0 +1,3586 @@
+{
+  "id": "gMeTK6zzaO4",
+  "url": "https://www.youtube.com/watch?v=gMeTK6zzaO4",
+  "fetchedAt": "2026-09-01T04:06:41.566Z",
+  "captionKind": "asr",
+  "chapters": [
+    {
+      "startSeconds": 0,
+      "label": "What is Tool/Function Calling?"
+    },
+    {
+      "startSeconds": 189,
+      "label": "Defining Custom Tools"
+    },
+    {
+      "startSeconds": 351,
+      "label": "LLM Tool Response"
+    },
+    {
+      "startSeconds": 500,
+      "label": "Executing Tools"
+    },
+    {
+      "startSeconds": 779,
+      "label": "Additional Tool Behavior"
+    },
+    {
+      "startSeconds": 885,
+      "label": "Advanced Tools with Pydantic Schemas"
+    },
+    {
+      "startSeconds": 1073,
+      "label": "Executing Advanced Tools"
+    },
+    {
+      "startSeconds": 1198,
+      "label": "Universal Tools and Functions"
+    },
+    {
+      "startSeconds": 1257,
+      "label": "Defining Models & Tools w/LangChain"
+    },
+    {
+      "startSeconds": 1362,
+      "label": "Binding Tools w/LangChain"
+    },
+    {
+      "startSeconds": 1467,
+      "label": "Executing Tools w/LangChain"
+    },
+    {
+      "startSeconds": 1616,
+      "label": "Tools & LLMs as Agents"
+    },
+    {
+      "startSeconds": 1660,
+      "label": "Tool Calling Agent"
+    },
+    {
+      "startSeconds": 1753,
+      "label": "ReAct Agent"
+    },
+    {
+      "startSeconds": 1847,
+      "label": "Outro"
+    }
+  ],
+  "cues": [
+    {
+      "startSeconds": 0.12,
+      "text": "hello everybody Adam LK here and today"
+    },
+    {
+      "startSeconds": 2.12,
+      "text": "we're going to be diving into tool and"
+    },
+    {
+      "startSeconds": 3.56,
+      "text": "function calling with language models"
+    },
+    {
+      "startSeconds": 5.4,
+      "text": "now what tool and function calling is is"
+    },
+    {
+      "startSeconds": 7.2,
+      "text": "it's essentially the ability to reliably"
+    },
+    {
+      "startSeconds": 9.32,
+      "text": "connect language models to external"
+    },
+    {
+      "startSeconds": 10.92,
+      "text": "tools functions or apis you've likely"
+    },
+    {
+      "startSeconds": 14.44,
+      "text": "seen and used some form of function"
+    },
+    {
+      "startSeconds": 16.16,
+      "text": "calling when using something like chat"
+    },
+    {
+      "startSeconds": 17.6,
+      "text": "GPT which has the ability to write"
+    },
+    {
+      "startSeconds": 20.16,
+      "text": "python code and then can use the"
+    },
+    {
+      "startSeconds": 21.76,
+      "text": "function of actually executing the"
+    },
+    {
+      "startSeconds": 23.16,
+      "text": "python code to show something like a"
+    },
+    {
+      "startSeconds": 24.72,
+      "text": "graph or it can use the tool of"
+    },
+    {
+      "startSeconds": 27.32,
+      "text": "searching the web and then execute that"
+    },
+    {
+      "startSeconds": 29.519,
+      "text": "function to get realtime data or even"
+    },
+    {
+      "startSeconds": 32,
+      "text": "when you ask it to generate an image"
+    },
+    {
+      "startSeconds": 33.8,
+      "text": "it's not actually the language model"
+    },
+    {
+      "startSeconds": 35.079,
+      "text": "that's generating the image but it uses"
+    },
+    {
+      "startSeconds": 36.719,
+      "text": "the function of do the image generator"
+    },
+    {
+      "startSeconds": 39.76,
+      "text": "with a prompt that it makes to actually"
+    },
+    {
+      "startSeconds": 42.16,
+      "text": "generate this image and so being able to"
+    },
+    {
+      "startSeconds": 43.96,
+      "text": "connect language models with existing"
+    },
+    {
+      "startSeconds": 46.16,
+      "text": "and custom functions like the ones that"
+    },
+    {
+      "startSeconds": 48.199,
+      "text": "we just saw really gives them the"
+    },
+    {
+      "startSeconds": 50.32,
+      "text": "ability to do way more than just"
+    },
+    {
+      "startSeconds": 52.199,
+      "text": "generate text and so at the heart of it"
+    },
+    {
+      "startSeconds": 54.239,
+      "text": "function calling is the ability for"
+    },
+    {
+      "startSeconds": 55.879,
+      "text": "language models to reason through when"
+    },
+    {
+      "startSeconds": 57.879,
+      "text": "they need to actually use some sort of"
+    },
+    {
+      "startSeconds": 60.039,
+      "text": "of external tool and then what it can do"
+    },
+    {
+      "startSeconds": 62,
+      "text": "is it can generate some form of"
+    },
+    {
+      "startSeconds": 63.64,
+      "text": "structured response that's parsible in a"
+    },
+    {
+      "startSeconds": 65.799,
+      "text": "way that we can grab the arguments for"
+    },
+    {
+      "startSeconds": 67.52,
+      "text": "that tool and then be able to execute"
+    },
+    {
+      "startSeconds": 69.4,
+      "text": "them ourselves in more digestible words"
+    },
+    {
+      "startSeconds": 71.56,
+      "text": "though it's essentially just going to"
+    },
+    {
+      "startSeconds": 73.52,
+      "text": "let the language model know that it has"
+    },
+    {
+      "startSeconds": 75.24,
+      "text": "some sort of functions available to it"
+    },
+    {
+      "startSeconds": 77.159,
+      "text": "some examples might be like I send an"
+    },
+    {
+      "startSeconds": 78.92,
+      "text": "email or get current weather and then"
+    },
+    {
+      "startSeconds": 81.04,
+      "text": "it'll also know what the input Arguments"
+    },
+    {
+      "startSeconds": 83.68,
+      "text": "for these functions are so for example"
+    },
+    {
+      "startSeconds": 85.72,
+      "text": "like get current weather takes the"
+    },
+    {
+      "startSeconds": 87.079,
+      "text": "location as a string and then it takes a"
+    },
+    {
+      "startSeconds": 89.159,
+      "text": "unit for the tempure temperature as"
+    },
+    {
+      "startSeconds": 90.36,
+      "text": "either Celsius or Fahrenheit and then if"
+    },
+    {
+      "startSeconds": 92.6,
+      "text": "you were to ask to language model"
+    },
+    {
+      "startSeconds": 93.84,
+      "text": "something like what is the weather in"
+    },
+    {
+      "startSeconds": 96,
+      "text": "San Francisco it would then generate"
+    },
+    {
+      "startSeconds": 98.24,
+      "text": "some sort of response that's parsible"
+    },
+    {
+      "startSeconds": 100.399,
+      "text": "that tells you to call the get current"
+    },
+    {
+      "startSeconds": 102.64,
+      "text": "weather function along with the location"
+    },
+    {
+      "startSeconds": 104.96,
+      "text": "as San Francisco and the unit as maybe"
+    },
+    {
+      "startSeconds": 107.32,
+      "text": "Fahrenheit and this functionality is"
+    },
+    {
+      "startSeconds": 108.759,
+      "text": "super useful as some of the common use"
+    },
+    {
+      "startSeconds": 110.439,
+      "text": "cases outlined by open AI here is the"
+    },
+    {
+      "startSeconds": 112.52,
+      "text": "ability to use function calling for"
+    },
+    {
+      "startSeconds": 113.92,
+      "text": "something like creating assistance that"
+    },
+    {
+      "startSeconds": 115.32,
+      "text": "answer questions by calling external"
+    },
+    {
+      "startSeconds": 117.28,
+      "text": "apis converting natural language into"
+    },
+    {
+      "startSeconds": 120.119,
+      "text": "API calls or even extracting structured"
+    },
+    {
+      "startSeconds": 123,
+      "text": "data from text and so to briefly just go"
+    },
+    {
+      "startSeconds": 125.039,
+      "text": "over the basic sequence of function"
+    },
+    {
+      "startSeconds": 126.92,
+      "text": "calling before we show this all in"
+    },
+    {
+      "startSeconds": 128.44,
+      "text": "action and defining our own it"
+    },
+    {
+      "startSeconds": 130.119,
+      "text": "essentially follows this flow you're"
+    },
+    {
+      "startSeconds": 131.76,
+      "text": "going to call the model with the user"
+    },
+    {
+      "startSeconds": 133.36,
+      "text": "query and some sort of user question and"
+    },
+    {
+      "startSeconds": 135.8,
+      "text": "then the model is also going to have a"
+    },
+    {
+      "startSeconds": 137.08,
+      "text": "set of functions defined and its"
+    },
+    {
+      "startSeconds": 138.519,
+      "text": "functions parameter this is how it's"
+    },
+    {
+      "startSeconds": 140.28,
+      "text": "going to know what functions it has"
+    },
+    {
+      "startSeconds": 141.84,
+      "text": "available and also the different"
+    },
+    {
+      "startSeconds": 143.8,
+      "text": "arguments to those functions the model"
+    },
+    {
+      "startSeconds": 145.92,
+      "text": "itself then can choose to call one or"
+    },
+    {
+      "startSeconds": 147.76,
+      "text": "more functions and if it does its"
+    },
+    {
+      "startSeconds": 150.12,
+      "text": "response then will be a Json output and"
+    },
+    {
+      "startSeconds": 153.04,
+      "text": "the Json output will specify what"
+    },
+    {
+      "startSeconds": 154.8,
+      "text": "function it wants to call and then all"
+    },
+    {
+      "startSeconds": 156.48,
+      "text": "of the arguments that it wants to call"
+    },
+    {
+      "startSeconds": 157.879,
+      "text": "the function too and then what we have"
+    },
+    {
+      "startSeconds": 159.76,
+      "text": "to do then is parse that Json into code"
+    },
+    {
+      "startSeconds": 162.48,
+      "text": "and then call the functions with the"
+    },
+    {
+      "startSeconds": 163.8,
+      "text": "provided arguments and then we append"
+    },
+    {
+      "startSeconds": 166.4,
+      "text": "all of that context back to the messages"
+    },
+    {
+      "startSeconds": 169.319,
+      "text": "and call the model again giving it all"
+    },
+    {
+      "startSeconds": 171.28,
+      "text": "that and letting the model summarize the"
+    },
+    {
+      "startSeconds": 172.76,
+      "text": "results back to the user so really well"
+    },
+    {
+      "startSeconds": 174.44,
+      "text": "the name implies that the model is kind"
+    },
+    {
+      "startSeconds": 176,
+      "text": "of Performing some action it's really"
+    },
+    {
+      "startSeconds": 177.92,
+      "text": "not the case the model itself is is"
+    },
+    {
+      "startSeconds": 180.28,
+      "text": "deciding to use some sort of function"
+    },
+    {
+      "startSeconds": 182.64,
+      "text": "and then coming up with the arguments to"
+    },
+    {
+      "startSeconds": 184.4,
+      "text": "that function or tool it's not actually"
+    },
+    {
+      "startSeconds": 186.44,
+      "text": "running the tool that's up to us to"
+    },
+    {
+      "startSeconds": 188.4,
+      "text": "parse and do ourselves so with the"
+    },
+    {
+      "startSeconds": 190.159,
+      "text": "introduction and background out of the"
+    },
+    {
+      "startSeconds": 191.4,
+      "text": "way let's actually take a look at how"
+    },
+    {
+      "startSeconds": 192.92,
+      "text": "some of these functions look and how to"
+    },
+    {
+      "startSeconds": 194.76,
+      "text": "use them with language models and to do"
+    },
+    {
+      "startSeconds": 197.08,
+      "text": "this we're going to be using the example"
+    },
+    {
+      "startSeconds": 199.2,
+      "text": "of open AIS tools and then eventually"
+    },
+    {
+      "startSeconds": 201.959,
+      "text": "later on down the line we're going to"
+    },
+    {
+      "startSeconds": 203.08,
+      "text": "show how you can use Lang chain to make"
+    },
+    {
+      "startSeconds": 204.84,
+      "text": "your own custom Universal tools for any"
+    },
+    {
+      "startSeconds": 206.959,
+      "text": "sort of model but the format that the"
+    },
+    {
+      "startSeconds": 208.4,
+      "text": "model is actually going to be looking"
+    },
+    {
+      "startSeconds": 209.799,
+      "text": "for to know what tools are available to"
+    },
+    {
+      "startSeconds": 211.72,
+      "text": "it is actually going to look a little"
+    },
+    {
+      "startSeconds": 213.36,
+      "text": "bit like this this Json schema and for"
+    },
+    {
+      "startSeconds": 216.48,
+      "text": "this example we're going to be looking"
+    },
+    {
+      "startSeconds": 217.84,
+      "text": "at a tool that will be getting the"
+    },
+    {
+      "startSeconds": 219.36,
+      "text": "exchange rate and within this schema"
+    },
+    {
+      "startSeconds": 221.519,
+      "text": "we're going to have the type which is a"
+    },
+    {
+      "startSeconds": 222.959,
+      "text": "function and then within the function it"
+    },
+    {
+      "startSeconds": 225.08,
+      "text": "takes in a name so that's going to be"
+    },
+    {
+      "startSeconds": 226.799,
+      "text": "get exchange rate and then a description"
+    },
+    {
+      "startSeconds": 229.2,
+      "text": "and the description is really important"
+    },
+    {
+      "startSeconds": 230.72,
+      "text": "because this is what the model is going"
+    },
+    {
+      "startSeconds": 232.159,
+      "text": "to know kind of when to use or what the"
+    },
+    {
+      "startSeconds": 235.239,
+      "text": "function is actually useful for so for"
+    },
+    {
+      "startSeconds": 237.439,
+      "text": "getting the exchange rate we put in get"
+    },
+    {
+      "startSeconds": 239.079,
+      "text": "the current exchange rate of a base"
+    },
+    {
+      "startSeconds": 240.599,
+      "text": "currency and a Target currency so that"
+    },
+    {
+      "startSeconds": 243.2,
+      "text": "when you do actually interact with a"
+    },
+    {
+      "startSeconds": 245.04,
+      "text": "model that has this tool available it"
+    },
+    {
+      "startSeconds": 247.2,
+      "text": "will know that it can use this tool to"
+    },
+    {
+      "startSeconds": 249.079,
+      "text": "find the current exchange rate and then"
+    },
+    {
+      "startSeconds": 251.04,
+      "text": "within that we have to specify the"
+    },
+    {
+      "startSeconds": 252.959,
+      "text": "different parameters or the different"
+    },
+    {
+      "startSeconds": 254.4,
+      "text": "function arguments that are in here and"
+    },
+    {
+      "startSeconds": 256.479,
+      "text": "for that we have base currency Target"
+    },
+    {
+      "startSeconds": 258.6,
+      "text": "currency and date within all of these"
+    },
+    {
+      "startSeconds": 260.919,
+      "text": "you have to specify a type so for base"
+    },
+    {
+      "startSeconds": 262.88,
+      "text": "currency and Target currency that's just"
+    },
+    {
+      "startSeconds": 264.6,
+      "text": "going to be a string and then also"
+    },
+    {
+      "startSeconds": 266.84,
+      "text": "another description because this is what"
+    },
+    {
+      "startSeconds": 269.039,
+      "text": "the models going to look at to know what"
+    },
+    {
+      "startSeconds": 270.96,
+      "text": "to put in as these actual arguments so"
+    },
+    {
+      "startSeconds": 274.199,
+      "text": "for base currency that's obviously going"
+    },
+    {
+      "startSeconds": 276,
+      "text": "to be the base currency for exchange"
+    },
+    {
+      "startSeconds": 278,
+      "text": "rate calculation and then some examples"
+    },
+    {
+      "startSeconds": 280.12,
+      "text": "of what that might look like Target"
+    },
+    {
+      "startSeconds": 281.759,
+      "text": "currency is going to be the target"
+    },
+    {
+      "startSeconds": 283.44,
+      "text": "currency for exchange rate calculations"
+    },
+    {
+      "startSeconds": 286,
+      "text": "and then what that might look like and"
+    },
+    {
+      "startSeconds": 287.639,
+      "text": "then here on date I also have it as a"
+    },
+    {
+      "startSeconds": 289.16,
+      "text": "type string and then the description"
+    },
+    {
+      "startSeconds": 291.08,
+      "text": "being a specific day to reference in"
+    },
+    {
+      "startSeconds": 293.68,
+      "text": "year month date format you can also pass"
+    },
+    {
+      "startSeconds": 296.199,
+      "text": "in this required parameter here to tell"
+    },
+    {
+      "startSeconds": 299.039,
+      "text": "the model that it's it's required when"
+    },
+    {
+      "startSeconds": 300.6,
+      "text": "calling this function to put in a base"
+    },
+    {
+      "startSeconds": 302.52,
+      "text": "currency and a Target currency however"
+    },
+    {
+      "startSeconds": 304.919,
+      "text": "it's not necessarily required to put in"
+    },
+    {
+      "startSeconds": 306.52,
+      "text": "a date in this example the schema that"
+    },
+    {
+      "startSeconds": 308.28,
+      "text": "we're passing to the language model"
+    },
+    {
+      "startSeconds": 310.039,
+      "text": "would then kind of line up to an actual"
+    },
+    {
+      "startSeconds": 312.479,
+      "text": "function here that we have defined which"
+    },
+    {
+      "startSeconds": 314.44,
+      "text": "is this git exchange rate function which"
+    },
+    {
+      "startSeconds": 316.88,
+      "text": "takes in the base currency as a string"
+    },
+    {
+      "startSeconds": 318.56,
+      "text": "the target currency as a string and the"
+    },
+    {
+      "startSeconds": 320.24,
+      "text": "date as a string but has a default to"
+    },
+    {
+      "startSeconds": 321.84,
+      "text": "latest and then it returns a float and"
+    },
+    {
+      "startSeconds": 324.199,
+      "text": "so then this is what we're actually"
+    },
+    {
+      "startSeconds": 325.639,
+      "text": "going to be executing once we get the"
+    },
+    {
+      "startSeconds": 327.479,
+      "text": "inputed arguments from the language"
+    },
+    {
+      "startSeconds": 329.16,
+      "text": "model and as a quick second example"
+    },
+    {
+      "startSeconds": 330.759,
+      "text": "before we show what that execution"
+    },
+    {
+      "startSeconds": 332.16,
+      "text": "actually looks like I have a second tool"
+    },
+    {
+      "startSeconds": 334,
+      "text": "defined here that's going to search the"
+    },
+    {
+      "startSeconds": 335.6,
+      "text": "internet and that of course takes in the"
+    },
+    {
+      "startSeconds": 337.28,
+      "text": "name of search internet the description"
+    },
+    {
+      "startSeconds": 339.199,
+      "text": "is get internet search results for"
+    },
+    {
+      "startSeconds": 340.72,
+      "text": "real-time information and then the"
+    },
+    {
+      "startSeconds": 342.56,
+      "text": "properties are just going to be one"
+    },
+    {
+      "startSeconds": 344.12,
+      "text": "search query that's a string and takes"
+    },
+    {
+      "startSeconds": 346,
+      "text": "the description of the query to search"
+    },
+    {
+      "startSeconds": 347.8,
+      "text": "the web for which is of course the one"
+    },
+    {
+      "startSeconds": 350.12,
+      "text": "required argument there so to get a tool"
+    },
+    {
+      "startSeconds": 352.24,
+      "text": "response we'll be using the openai"
+    },
+    {
+      "startSeconds": 354.24,
+      "text": "direct API just so that we can call this"
+    },
+    {
+      "startSeconds": 357,
+      "text": "and we're going to pass in the model as"
+    },
+    {
+      "startSeconds": 358.28,
+      "text": "GPT 40 we're going to pass in our"
+    },
+    {
+      "startSeconds": 360.36,
+      "text": "messages which is going to contain our"
+    },
+    {
+      "startSeconds": 361.84,
+      "text": "prompt of how much is a dollar worth in"
+    },
+    {
+      "startSeconds": 363.68,
+      "text": "Japan and then we can put in the tools"
+    },
+    {
+      "startSeconds": 366.4,
+      "text": "as a list so I have these first tools"
+    },
+    {
+      "startSeconds": 368.8,
+      "text": "here defined up above within a list in"
+    },
+    {
+      "startSeconds": 371.84,
+      "text": "and of itself and then that goes in"
+    },
+    {
+      "startSeconds": 373.919,
+      "text": "there and then you can also pass in a"
+    },
+    {
+      "startSeconds": 375.52,
+      "text": "tool Choice which we'll expand on a"
+    },
+    {
+      "startSeconds": 377.039,
+      "text": "little bit later but let us see what is"
+    },
+    {
+      "startSeconds": 380,
+      "text": "actually output from the model when we"
+    },
+    {
+      "startSeconds": 381.919,
+      "text": "ask how much is a dollar worth in Japan"
+    },
+    {
+      "startSeconds": 384.28,
+      "text": "so that'll run for just a second and"
+    },
+    {
+      "startSeconds": 386.28,
+      "text": "then if we print out the responses"
+    },
+    {
+      "startSeconds": 387.88,
+      "text": "nicely it looks a little bit like this"
+    },
+    {
+      "startSeconds": 389.68,
+      "text": "so the full response is up here but"
+    },
+    {
+      "startSeconds": 391.479,
+      "text": "breaking it down a little bit with just"
+    },
+    {
+      "startSeconds": 393.08,
+      "text": "this quick parsing function that I've"
+    },
+    {
+      "startSeconds": 394.599,
+      "text": "got here you can see that the chat"
+    },
+    {
+      "startSeconds": 396.16,
+      "text": "completion message looks a little bit"
+    },
+    {
+      "startSeconds": 397.88,
+      "text": "like this and it actually didn't return"
+    },
+    {
+      "startSeconds": 399.88,
+      "text": "any text whatsoever but it did return"
+    },
+    {
+      "startSeconds": 402.319,
+      "text": "one tool call and so we can see that the"
+    },
+    {
+      "startSeconds": 404.599,
+      "text": "tool call was to call git exchange rate"
+    },
+    {
+      "startSeconds": 407.039,
+      "text": "and then it responded with its arguments"
+    },
+    {
+      "startSeconds": 408.639,
+      "text": "of Base currency of USD and Target"
+    },
+    {
+      "startSeconds": 410.96,
+      "text": "currency of JPY and so this is perfectly"
+    },
+    {
+      "startSeconds": 413.56,
+      "text": "in line with our defined schema for this"
+    },
+    {
+      "startSeconds": 415.24,
+      "text": "tool that takes in the base currency the"
+    },
+    {
+      "startSeconds": 417.16,
+      "text": "target currency as a string and then"
+    },
+    {
+      "startSeconds": 419.28,
+      "text": "once it kind of in this format so it was"
+    },
+    {
+      "startSeconds": 421.8,
+      "text": "able to understand that that it had that"
+    },
+    {
+      "startSeconds": 424,
+      "text": "tool available to it and so then when I"
+    },
+    {
+      "startSeconds": 426.16,
+      "text": "asked for how much the dollar worth it"
+    },
+    {
+      "startSeconds": 428.639,
+      "text": "called that tool and then these are the"
+    },
+    {
+      "startSeconds": 430.199,
+      "text": "arguments that it wants to pass into it"
+    },
+    {
+      "startSeconds": 432,
+      "text": "so to give our model a little bit of a"
+    },
+    {
+      "startSeconds": 433.36,
+      "text": "more complex Challenge and see if we can"
+    },
+    {
+      "startSeconds": 435.16,
+      "text": "use multiple tool calls at once I'm"
+    },
+    {
+      "startSeconds": 437.08,
+      "text": "going to now ask how much is the dollar"
+    },
+    {
+      "startSeconds": 438.479,
+      "text": "worth in Japan how about Poland and"
+    },
+    {
+      "startSeconds": 440.36,
+      "text": "what's the current news in Argentina My"
+    },
+    {
+      "startSeconds": 442.319,
+      "text": "Hope here is that it will call our git"
+    },
+    {
+      "startSeconds": 444.199,
+      "text": "exchange rate twice and then our search"
+    },
+    {
+      "startSeconds": 446.16,
+      "text": "internet function once so let's give"
+    },
+    {
+      "startSeconds": 448.96,
+      "text": "that a whirl and then print it"
+    },
+    {
+      "startSeconds": 453.56,
+      "text": "out and great yeah we can see that it"
+    },
+    {
+      "startSeconds": 456.36,
+      "text": "returned a lot more now and it didn't"
+    },
+    {
+      "startSeconds": 458.639,
+      "text": "return any message as is on par with"
+    },
+    {
+      "startSeconds": 461.199,
+      "text": "what we just saw but we did see that we"
+    },
+    {
+      "startSeconds": 463.44,
+      "text": "have three tool calls two to get"
+    },
+    {
+      "startSeconds": 465.96,
+      "text": "exchange rate one with USD and JPY one"
+    },
+    {
+      "startSeconds": 468.96,
+      "text": "with USD and pln and then one search"
+    },
+    {
+      "startSeconds": 471.52,
+      "text": "internet query with the search query"
+    },
+    {
+      "startSeconds": 473.919,
+      "text": "here and then it wants to search for"
+    },
+    {
+      "startSeconds": 475.68,
+      "text": "current news in Argentina so now we've"
+    },
+    {
+      "startSeconds": 477.44,
+      "text": "seen that this is working out well the"
+    },
+    {
+      "startSeconds": 478.919,
+      "text": "model understands that it has the two"
+    },
+    {
+      "startSeconds": 480.84,
+      "text": "available functions to it and then it"
+    },
+    {
+      "startSeconds": 482.759,
+      "text": "also has enough reasoning capabilities"
+    },
+    {
+      "startSeconds": 484.68,
+      "text": "to know when it actually wants to use"
+    },
+    {
+      "startSeconds": 486.599,
+      "text": "these and so when it wants to use these"
+    },
+    {
+      "startSeconds": 488.56,
+      "text": "it returns a tool call and then the"
+    },
+    {
+      "startSeconds": 490.599,
+      "text": "arguments for that tool in this"
+    },
+    {
+      "startSeconds": 493,
+      "text": "dictionary or Json format The Next Step"
+    },
+    {
+      "startSeconds": 495.68,
+      "text": "then is of course executing these"
+    },
+    {
+      "startSeconds": 497.72,
+      "text": "functions and then returning the context"
+    },
+    {
+      "startSeconds": 499.599,
+      "text": "back to the language model which as we"
+    },
+    {
+      "startSeconds": 501.44,
+      "text": "saw a little bit earlier I have these"
+    },
+    {
+      "startSeconds": 503.52,
+      "text": "functions clearly defined as actual"
+    },
+    {
+      "startSeconds": 505.159,
+      "text": "functions that will return actual"
+    },
+    {
+      "startSeconds": 506.759,
+      "text": "results down here we have the G exchange"
+    },
+    {
+      "startSeconds": 509.199,
+      "text": "rate which I showed earlier and then a"
+    },
+    {
+      "startSeconds": 511.4,
+      "text": "search results which uses the duck ducko"
+    },
+    {
+      "startSeconds": 513.719,
+      "text": "search API to just take in a string text"
+    },
+    {
+      "startSeconds": 516.919,
+      "text": "and then return some Snippets from the"
+    },
+    {
+      "startSeconds": 518.839,
+      "text": "web using duck ducko so now that we have"
+    },
+    {
+      "startSeconds": 520.8,
+      "text": "the functions defined and then we also"
+    },
+    {
+      "startSeconds": 522.24,
+      "text": "have a model that knows that it has the"
+    },
+    {
+      "startSeconds": 523.959,
+      "text": "tools with the correct corresponding"
+    },
+    {
+      "startSeconds": 526.24,
+      "text": "schemas that match the inputs to the"
+    },
+    {
+      "startSeconds": 528.24,
+      "text": "functions and can generate the arguments"
+    },
+    {
+      "startSeconds": 529.959,
+      "text": "for them what we need to do then is put"
+    },
+    {
+      "startSeconds": 531.959,
+      "text": "it all together and so to do this it's"
+    },
+    {
+      "startSeconds": 533.48,
+      "text": "going to be a bit of a multi-step"
+    },
+    {
+      "startSeconds": 534.92,
+      "text": "process we're first going to get our"
+    },
+    {
+      "startSeconds": 536.8,
+      "text": "initial response by passing in our user"
+    },
+    {
+      "startSeconds": 538.6,
+      "text": "message which is just our original"
+    },
+    {
+      "startSeconds": 540.079,
+      "text": "prompt which might be something like you"
+    },
+    {
+      "startSeconds": 541.88,
+      "text": "know how much is the dollar worth in"
+    },
+    {
+      "startSeconds": 543.6,
+      "text": "Japan right now and then we're going to"
+    },
+    {
+      "startSeconds": 545.44,
+      "text": "get our first response back from the"
+    },
+    {
+      "startSeconds": 547,
+      "text": "model and the model similar to what we"
+    },
+    {
+      "startSeconds": 548.64,
+      "text": "showed up above will have all of the"
+    },
+    {
+      "startSeconds": 550.6,
+      "text": "tools that we just defined available to"
+    },
+    {
+      "startSeconds": 552.92,
+      "text": "us and so we're likely then going to get"
+    },
+    {
+      "startSeconds": 555.56,
+      "text": "a full response that looks a little bit"
+    },
+    {
+      "startSeconds": 557.16,
+      "text": "like this that may contain one or more"
+    },
+    {
+      "startSeconds": 559.399,
+      "text": "tool call and from the tool call we know"
+    },
+    {
+      "startSeconds": 561.72,
+      "text": "what the function name is and the"
+    },
+    {
+      "startSeconds": 563.399,
+      "text": "arguments so what we're going to do is"
+    },
+    {
+      "startSeconds": 565.68,
+      "text": "actually look at all of the tool calls"
+    },
+    {
+      "startSeconds": 567.839,
+      "text": "extract the tool call name extract the"
+    },
+    {
+      "startSeconds": 570,
+      "text": "tool called arguments and then what"
+    },
+    {
+      "startSeconds": 571.76,
+      "text": "we're going to do is call that function"
+    },
+    {
+      "startSeconds": 574,
+      "text": "with the arguments that we parsed from"
+    },
+    {
+      "startSeconds": 576.68,
+      "text": "the response of the language model and"
+    },
+    {
+      "startSeconds": 578.64,
+      "text": "once we get the output from whatever"
+    },
+    {
+      "startSeconds": 580.16,
+      "text": "function was called what we want to do"
+    },
+    {
+      "startSeconds": 582.04,
+      "text": "is send it right back into the language"
+    },
+    {
+      "startSeconds": 584.12,
+      "text": "model to get our final answer with the"
+    },
+    {
+      "startSeconds": 586.279,
+      "text": "context from that called function and to"
+    },
+    {
+      "startSeconds": 588.44,
+      "text": "do that we have to put in a specific"
+    },
+    {
+      "startSeconds": 590.32,
+      "text": "tool message which if you're familiar"
+    },
+    {
+      "startSeconds": 592.24,
+      "text": "with the way that open AI handles things"
+    },
+    {
+      "startSeconds": 594.519,
+      "text": "like assistant versus user messages the"
+    },
+    {
+      "startSeconds": 597.2,
+      "text": "tool message is what it uses to specify"
+    },
+    {
+      "startSeconds": 599.68,
+      "text": "what tool call actually returned what"
+    },
+    {
+      "startSeconds": 602.32,
+      "text": "and so it'll take in a tool call ID the"
+    },
+    {
+      "startSeconds": 604.76,
+      "text": "role which is of course going to be the"
+    },
+    {
+      "startSeconds": 606.279,
+      "text": "tool the name of the function and then"
+    },
+    {
+      "startSeconds": 608.399,
+      "text": "the content which is the function"
+    },
+    {
+      "startSeconds": 609.88,
+      "text": "response and so then what we're going to"
+    },
+    {
+      "startSeconds": 611.64,
+      "text": "do is we're going to append any and all"
+    },
+    {
+      "startSeconds": 613.88,
+      "text": "tool messages to our total messages"
+    },
+    {
+      "startSeconds": 617.32,
+      "text": "which at this point our messages will"
+    },
+    {
+      "startSeconds": 619.079,
+      "text": "have the original user message the AI"
+    },
+    {
+      "startSeconds": 621.68,
+      "text": "assistant response here which will"
+    },
+    {
+      "startSeconds": 624.24,
+      "text": "likely have all of the tool calls in"
+    },
+    {
+      "startSeconds": 625.959,
+      "text": "there and then it'll now have the tool"
+    },
+    {
+      "startSeconds": 628.04,
+      "text": "output messages with all of the outputs"
+    },
+    {
+      "startSeconds": 630.44,
+      "text": "from those tools and then what we do is"
+    },
+    {
+      "startSeconds": 632.44,
+      "text": "we pass in all of those messages all at"
+    },
+    {
+      "startSeconds": 634.8,
+      "text": "once to get our second response which is"
+    },
+    {
+      "startSeconds": 636.839,
+      "text": "just going back into GPT 40 here with"
+    },
+    {
+      "startSeconds": 639.639,
+      "text": "all of those messages to get our quote"
+    },
+    {
+      "startSeconds": 642.079,
+      "text": "unquote second response that has all of"
+    },
+    {
+      "startSeconds": 644.279,
+      "text": "the context from the called tools this"
+    },
+    {
+      "startSeconds": 646.279,
+      "text": "is a lot easier to understand in action"
+    },
+    {
+      "startSeconds": 648.04,
+      "text": "so let's actually run it with how much"
+    },
+    {
+      "startSeconds": 649.48,
+      "text": "is the dollar worth in Japan right now"
+    },
+    {
+      "startSeconds": 651.72,
+      "text": "and we'll see that the initial message"
+    },
+    {
+      "startSeconds": 653.12,
+      "text": "was of course the user saying how much"
+    },
+    {
+      "startSeconds": 654.88,
+      "text": "is the dollar worth in Japan right now"
+    },
+    {
+      "startSeconds": 656.68,
+      "text": "we see that the response message is this"
+    },
+    {
+      "startSeconds": 658.639,
+      "text": "and we see that contains a tool call and"
+    },
+    {
+      "startSeconds": 661.04,
+      "text": "the tool call ID is right here and then"
+    },
+    {
+      "startSeconds": 663.2,
+      "text": "it wants to run the base currency of USD"
+    },
+    {
+      "startSeconds": 666.519,
+      "text": "and the target currency of JPY through"
+    },
+    {
+      "startSeconds": 668.72,
+      "text": "the git exchange rate function we then"
+    },
+    {
+      "startSeconds": 671.12,
+      "text": "execute that function here with this"
+    },
+    {
+      "startSeconds": 673.079,
+      "text": "line the function response gives us 158"
+    },
+    {
+      "startSeconds": 676.399,
+      "text": "we append the tool call and its output"
+    },
+    {
+      "startSeconds": 678.2,
+      "text": "to all the messages pass it all back in"
+    },
+    {
+      "startSeconds": 680.56,
+      "text": "for that second response and so then our"
+    },
+    {
+      "startSeconds": 682.88,
+      "text": "quote unquote second response which in"
+    },
+    {
+      "startSeconds": 686,
+      "text": "other words would be the first response"
+    },
+    {
+      "startSeconds": 687.76,
+      "text": "to our original question would be as of"
+    },
+    {
+      "startSeconds": 690,
+      "text": "the most recent data one USD is"
+    },
+    {
+      "startSeconds": 692,
+      "text": "equivalent to approximately 158.523"
+    },
+    {
+      "startSeconds": 719.68,
+      "text": "return this just like before our first"
+    },
+    {
+      "startSeconds": 721.92,
+      "text": "message is going to be our prompt and"
+    },
+    {
+      "startSeconds": 723.399,
+      "text": "then the response from the language"
+    },
+    {
+      "startSeconds": 724.76,
+      "text": "model are going to be all of these tool"
+    },
+    {
+      "startSeconds": 726.399,
+      "text": "calls which it's going to do three in"
+    },
+    {
+      "startSeconds": 728.36,
+      "text": "particular it's going to call get"
+    },
+    {
+      "startSeconds": 730.04,
+      "text": "exchange rate with USD to JPY get"
+    },
+    {
+      "startSeconds": 732.72,
+      "text": "exchange rate with USD to pln and then"
+    },
+    {
+      "startSeconds": 735.36,
+      "text": "it's also going to call search internet"
+    },
+    {
+      "startSeconds": 737.279,
+      "text": "with current news in Argentina so we can"
+    },
+    {
+      "startSeconds": 740.279,
+      "text": "see that all of these function calls"
+    },
+    {
+      "startSeconds": 742.92,
+      "text": "came in as tool calls and then we called"
+    },
+    {
+      "startSeconds": 745.56,
+      "text": "all of them and got the responses here"
+    },
+    {
+      "startSeconds": 748.68,
+      "text": "and then here here and then all of this"
+    },
+    {
+      "startSeconds": 750.56,
+      "text": "stuff here and then we appended all of"
+    },
+    {
+      "startSeconds": 752.68,
+      "text": "the tool calls with their respective IDs"
+    },
+    {
+      "startSeconds": 755,
+      "text": "and then the outputs back into all of"
+    },
+    {
+      "startSeconds": 758.36,
+      "text": "our messages and then the lm's final"
+    },
+    {
+      "startSeconds": 760.959,
+      "text": "response was then our exchange rates of"
+    },
+    {
+      "startSeconds": 763.48,
+      "text": "USD to JPY USD to pln and then some"
+    },
+    {
+      "startSeconds": 766.519,
+      "text": "current news in Argentina so even with"
+    },
+    {
+      "startSeconds": 769.48,
+      "text": "more advanced function calls you can see"
+    },
+    {
+      "startSeconds": 771.519,
+      "text": "that it's actually able to call multiple"
+    },
+    {
+      "startSeconds": 773.76,
+      "text": "things at once which we then execute and"
+    },
+    {
+      "startSeconds": 775.6,
+      "text": "then use as context to get our final"
+    },
+    {
+      "startSeconds": 777.76,
+      "text": "response back to the user couple things"
+    },
+    {
+      "startSeconds": 779.839,
+      "text": "to note here is that we're passing in"
+    },
+    {
+      "startSeconds": 781.6,
+      "text": "this tool Choice option which we have"
+    },
+    {
+      "startSeconds": 783.72,
+      "text": "defaulted to Auto and then also the"
+    },
+    {
+      "startSeconds": 786.399,
+      "text": "model is calling a bunch of functions at"
+    },
+    {
+      "startSeconds": 788.519,
+      "text": "once so you can actually specify a few"
+    },
+    {
+      "startSeconds": 790.6,
+      "text": "of these things and it takes a few"
+    },
+    {
+      "startSeconds": 792.12,
+      "text": "different arguments which I have laid"
+    },
+    {
+      "startSeconds": 794,
+      "text": "out here so the default behavior for"
+    },
+    {
+      "startSeconds": 796.519,
+      "text": "function calling is set to Auto and this"
+    },
+    {
+      "startSeconds": 798.56,
+      "text": "lets the model decide whether to call a"
+    },
+    {
+      "startSeconds": 800.32,
+      "text": "function and if so which functions to"
+    },
+    {
+      "startSeconds": 802.56,
+      "text": "call however there's three main ways"
+    },
+    {
+      "startSeconds": 804.76,
+      "text": "that you can actually customize the"
+    },
+    {
+      "startSeconds": 805.959,
+      "text": "default Behavior depending on your use"
+    },
+    {
+      "startSeconds": 807.6,
+      "text": "case you can force a model to to always"
+    },
+    {
+      "startSeconds": 809.639,
+      "text": "call one or more function if you set"
+    },
+    {
+      "startSeconds": 811.92,
+      "text": "tool choice to required then the model"
+    },
+    {
+      "startSeconds": 814.399,
+      "text": "will select any function to call at"
+    },
+    {
+      "startSeconds": 816.76,
+      "text": "least once you can also Force the model"
+    },
+    {
+      "startSeconds": 818.8,
+      "text": "to call one specific function if you"
+    },
+    {
+      "startSeconds": 821.279,
+      "text": "pass in tool Choice and then this"
+    },
+    {
+      "startSeconds": 822.76,
+      "text": "dictionary here of the type with the"
+    },
+    {
+      "startSeconds": 824.68,
+      "text": "name and then you can also disable"
+    },
+    {
+      "startSeconds": 826.519,
+      "text": "function calling and force the model to"
+    },
+    {
+      "startSeconds": 828.199,
+      "text": "only generate user facing messages with"
+    },
+    {
+      "startSeconds": 830.279,
+      "text": "tool choice of none and so these options"
+    },
+    {
+      "startSeconds": 832.279,
+      "text": "give you a little bit of the flexibility"
+    },
+    {
+      "startSeconds": 834.079,
+      "text": "to say when you want a function to be"
+    },
+    {
+      "startSeconds": 835.72,
+      "text": "called if you need a function to be"
+    },
+    {
+      "startSeconds": 837.32,
+      "text": "called what function to be called or if"
+    },
+    {
+      "startSeconds": 838.839,
+      "text": "you want functions to be called at all"
+    },
+    {
+      "startSeconds": 840.839,
+      "text": "one of the other things is that there"
+    },
+    {
+      "startSeconds": 842.199,
+      "text": "also exists the option for parallel"
+    },
+    {
+      "startSeconds": 844.56,
+      "text": "function calling and so what parallel"
+    },
+    {
+      "startSeconds": 846.759,
+      "text": "function calling is is essentially"
+    },
+    {
+      "startSeconds": 848.8,
+      "text": "what's been happening up here it it'll"
+    },
+    {
+      "startSeconds": 850.759,
+      "text": "pass out multiple tool calls and then we"
+    },
+    {
+      "startSeconds": 853.399,
+      "text": "can parse all of them and run all of"
+    },
+    {
+      "startSeconds": 855.519,
+      "text": "these tools in parallel and so if you"
+    },
+    {
+      "startSeconds": 858.279,
+      "text": "have this on it'll do multiple function"
+    },
+    {
+      "startSeconds": 860.32,
+      "text": "calls together in batches but if you"
+    },
+    {
+      "startSeconds": 862.16,
+      "text": "turn it off what it'll do is it'll"
+    },
+    {
+      "startSeconds": 864.399,
+      "text": "actually only call one function at a"
+    },
+    {
+      "startSeconds": 866.279,
+      "text": "time so you won't get these three all at"
+    },
+    {
+      "startSeconds": 869.48,
+      "text": "once that could be multiple tools if you"
+    },
+    {
+      "startSeconds": 871.6,
+      "text": "just want something to be going on once"
+    },
+    {
+      "startSeconds": 873.88,
+      "text": "but with these two optional parameters"
+    },
+    {
+      "startSeconds": 876,
+      "text": "you can really specify exactly how many"
+    },
+    {
+      "startSeconds": 878.279,
+      "text": "tools you want to be called what tools"
+    },
+    {
+      "startSeconds": 879.639,
+      "text": "to be called and when so super useful"
+    },
+    {
+      "startSeconds": 881.839,
+      "text": "for getting more granular into your"
+    },
+    {
+      "startSeconds": 883.8,
+      "text": "specific use case with function calling"
+    },
+    {
+      "startSeconds": 885.639,
+      "text": "great so now that we have a general"
+    },
+    {
+      "startSeconds": 887.32,
+      "text": "understanding of what functions are how"
+    },
+    {
+      "startSeconds": 889.16,
+      "text": "to set up some pretty simple ones and"
+    },
+    {
+      "startSeconds": 891.079,
+      "text": "then looking at actually executing them"
+    },
+    {
+      "startSeconds": 893.32,
+      "text": "and getting your full response back from"
+    },
+    {
+      "startSeconds": 895.199,
+      "text": "the language model let's look at a bit"
+    },
+    {
+      "startSeconds": 897.079,
+      "text": "more Advanced Techniques and ways to set"
+    },
+    {
+      "startSeconds": 899.36,
+      "text": "up functions and so for more advanced"
+    },
+    {
+      "startSeconds": 901.88,
+      "text": "functions what we can actually use are"
+    },
+    {
+      "startSeconds": 904.44,
+      "text": "pantic Json schemas to simplify things a"
+    },
+    {
+      "startSeconds": 906.8,
+      "text": "little bit because what you don't want"
+    },
+    {
+      "startSeconds": 908.399,
+      "text": "to really be doing is getting lost in"
+    },
+    {
+      "startSeconds": 911.04,
+      "text": "all of the indents and the wonderful"
+    },
+    {
+      "startSeconds": 914.36,
+      "text": "Json that's happening up here so a"
+    },
+    {
+      "startSeconds": 916.8,
+      "text": "really easy way to generate the"
+    },
+    {
+      "startSeconds": 919.48,
+      "text": "parameters for a model is by actually"
+    },
+    {
+      "startSeconds": 921.44,
+      "text": "using a pantic base model class and so"
+    },
+    {
+      "startSeconds": 923.639,
+      "text": "using pantic and being able to take"
+    },
+    {
+      "startSeconds": 925.199,
+      "text": "advantage of things like python typing"
+    },
+    {
+      "startSeconds": 927.32,
+      "text": "can let you set out some very"
+    },
+    {
+      "startSeconds": 929.319,
+      "text": "complicated and involved function"
+    },
+    {
+      "startSeconds": 932,
+      "text": "parameters for my example here of a more"
+    },
+    {
+      "startSeconds": 934.199,
+      "text": "advanced function I have one that covers"
+    },
+    {
+      "startSeconds": 936.279,
+      "text": "sending an entire email campaign and so"
+    },
+    {
+      "startSeconds": 938.92,
+      "text": "this will take in recipients a subject"
+    },
+    {
+      "startSeconds": 940.959,
+      "text": "body text any attachments different"
+    },
+    {
+      "startSeconds": 943.04,
+      "text": "personalization a send time the priority"
+    },
+    {
+      "startSeconds": 945.48,
+      "text": "for it different tracking options and a"
+    },
+    {
+      "startSeconds": 947.16,
+      "text": "campaign ID and then using the typings"
+    },
+    {
+      "startSeconds": 950.079,
+      "text": "and using this pantic class of the base"
+    },
+    {
+      "startSeconds": 952.24,
+      "text": "model what I'm able to do is actually"
+    },
+    {
+      "startSeconds": 954.6,
+      "text": "Define my parameters and how I want them"
+    },
+    {
+      "startSeconds": 957.079,
+      "text": "to be treated all nicely here in an"
+    },
+    {
+      "startSeconds": 959.279,
+      "text": "organized manner for example I can say"
+    },
+    {
+      "startSeconds": 961.399,
+      "text": "that for recipients I want it to be a"
+    },
+    {
+      "startSeconds": 963.279,
+      "text": "list of strings for something like"
+    },
+    {
+      "startSeconds": 965.319,
+      "text": "attachments I want it to be an optional"
+    },
+    {
+      "startSeconds": 966.959,
+      "text": "list of HTTP URLs for things like"
+    },
+    {
+      "startSeconds": 969.88,
+      "text": "personalization that might even be an"
+    },
+    {
+      "startSeconds": 971.72,
+      "text": "optional dictionary that's a string that"
+    },
+    {
+      "startSeconds": 974.839,
+      "text": "has dictionaries of strings in there or"
+    },
+    {
+      "startSeconds": 977.839,
+      "text": "something like you know tracking which"
+    },
+    {
+      "startSeconds": 979.72,
+      "text": "might be an optional dictionary that has"
+    },
+    {
+      "startSeconds": 981.519,
+      "text": "a string and Boolean values so you can"
+    },
+    {
+      "startSeconds": 984.12,
+      "text": "see now where using um pantic and"
+    },
+    {
+      "startSeconds": 987.079,
+      "text": "different typing hints you can actually"
+    },
+    {
+      "startSeconds": 989.079,
+      "text": "set up a lot more complicated flows"
+    },
+    {
+      "startSeconds": 991.199,
+      "text": "without having to do all of the fancy"
+    },
+    {
+      "startSeconds": 993.6,
+      "text": "Json schema writing yourself and then"
+    },
+    {
+      "startSeconds": 995.6,
+      "text": "with all of these we can pass in our"
+    },
+    {
+      "startSeconds": 996.92,
+      "text": "descriptions so that the language model"
+    },
+    {
+      "startSeconds": 998.519,
+      "text": "will know what it should put there if"
+    },
+    {
+      "startSeconds": 1000.56,
+      "text": "it's looking at putting something in"
+    },
+    {
+      "startSeconds": 1002,
+      "text": "here so for example like our subject it"
+    },
+    {
+      "startSeconds": 1004.36,
+      "text": "might be string specifying the email"
+    },
+    {
+      "startSeconds": 1006,
+      "text": "subject line or for personalization it"
+    },
+    {
+      "startSeconds": 1008.319,
+      "text": "might be dictionary for personalizing"
+    },
+    {
+      "startSeconds": 1009.959,
+      "text": "email content with a little bit about"
+    },
+    {
+      "startSeconds": 1012.279,
+      "text": "what the key and value is and some"
+    },
+    {
+      "startSeconds": 1014,
+      "text": "examples there or something like"
+    },
+    {
+      "startSeconds": 1016.24,
+      "text": "priority we might have it as an"
+    },
+    {
+      "startSeconds": 1018.16,
+      "text": "enumerator set they can only choose from"
+    },
+    {
+      "startSeconds": 1020.68,
+      "text": "different things here these three"
+    },
+    {
+      "startSeconds": 1022.16,
+      "text": "options of low normal or high and you"
+    },
+    {
+      "startSeconds": 1024.4,
+      "text": "can pass in all of this super nice"
+    },
+    {
+      "startSeconds": 1026.199,
+      "text": "advanced stuff and set it up a little"
+    },
+    {
+      "startSeconds": 1027.959,
+      "text": "bit easier than actually writing out all"
+    },
+    {
+      "startSeconds": 1029.559,
+      "text": "of the plane ja on yourself putting the"
+    },
+    {
+      "startSeconds": 1031.28,
+      "text": "tool together in a way that open AI can"
+    },
+    {
+      "startSeconds": 1033.72,
+      "text": "actually ingest it then is as simple as"
+    },
+    {
+      "startSeconds": 1035.919,
+      "text": "just passing in the type the function"
+    },
+    {
+      "startSeconds": 1037.64,
+      "text": "name and description and then in the"
+    },
+    {
+      "startSeconds": 1039.28,
+      "text": "parameters you can use then your schema"
+    },
+    {
+      "startSeconds": 1042.079,
+      "text": "here the do schema method from our"
+    },
+    {
+      "startSeconds": 1044.4,
+      "text": "pantic base model class and so what that"
+    },
+    {
+      "startSeconds": 1047,
+      "text": "will then look like is all of this"
+    },
+    {
+      "startSeconds": 1049.84,
+      "text": "lovely customization that has all of the"
+    },
+    {
+      "startSeconds": 1052.679,
+      "text": "different parameters with every single"
+    },
+    {
+      "startSeconds": 1055.679,
+      "text": "typing thing and optional and required"
+    },
+    {
+      "startSeconds": 1059.6,
+      "text": "stuff all here nice and lovely and this"
+    },
+    {
+      "startSeconds": 1062.12,
+      "text": "ability to use the pantic base models"
+    },
+    {
+      "startSeconds": 1064.28,
+      "text": "really just makes it a lot easier to"
+    },
+    {
+      "startSeconds": 1065.88,
+      "text": "Define these more advanced more in-depth"
+    },
+    {
+      "startSeconds": 1068.48,
+      "text": "and more granular functions like this"
+    },
+    {
+      "startSeconds": 1070.32,
+      "text": "that aren't just going to be taking in"
+    },
+    {
+      "startSeconds": 1071.6,
+      "text": "you know one or two string values so"
+    },
+    {
+      "startSeconds": 1073.28,
+      "text": "let's actually try this out in action"
+    },
+    {
+      "startSeconds": 1075.12,
+      "text": "and my prompt here is going to be can"
+    },
+    {
+      "startSeconds": 1076.32,
+      "text": "you send an email to adaml youtube.com"
+    },
+    {
+      "startSeconds": 1079.2,
+      "text": "Sam ultman open.com and Elon Musk"
+    },
+    {
+      "startSeconds": 1081.88,
+      "text": "twitter.com about the cool YouTube"
+    },
+    {
+      "startSeconds": 1083.6,
+      "text": "channel youtube.com/ adaml for July 20th"
+    },
+    {
+      "startSeconds": 1087.52,
+      "text": "at 8: a.m. Pacific this is a high"
+    },
+    {
+      "startSeconds": 1089.799,
+      "text": "priority and include just click tracking"
+    },
+    {
+      "startSeconds": 1092.2,
+      "text": "with name personalization campaign is"
+    },
+    {
+      "startSeconds": 1094.36,
+      "text": "going to be campaign 13 also have my"
+    },
+    {
+      "startSeconds": 1096.559,
+      "text": "LinkedIn as the attachment here and sign"
+    },
+    {
+      "startSeconds": 1098.52,
+      "text": "off your response with Adam l in the"
+    },
+    {
+      "startSeconds": 1100.32,
+      "text": "body and so passing that all off to the"
+    },
+    {
+      "startSeconds": 1104.12,
+      "text": "language model we can see what we get so"
+    },
+    {
+      "startSeconds": 1107,
+      "text": "we can see that we indeed get a"
+    },
+    {
+      "startSeconds": 1109.28,
+      "text": "completion that has a function call and"
+    },
+    {
+      "startSeconds": 1111.44,
+      "text": "it wants to call the send email campaign"
+    },
+    {
+      "startSeconds": 1113.72,
+      "text": "function it gave me a list of the"
+    },
+    {
+      "startSeconds": 1115.799,
+      "text": "recipients a string of the subject it's"
+    },
+    {
+      "startSeconds": 1118.32,
+      "text": "giving me some body text here it has"
+    },
+    {
+      "startSeconds": 1120.679,
+      "text": "some attachments as a list of HTTP URLs"
+    },
+    {
+      "startSeconds": 1123.4,
+      "text": "it's personalization is then going to be"
+    },
+    {
+      "startSeconds": 1126.039,
+      "text": "by the email for first name here in a"
+    },
+    {
+      "startSeconds": 1129.36,
+      "text": "lovely dictionary form it's giving me a"
+    },
+    {
+      "startSeconds": 1131.679,
+      "text": "send time in the specific date time"
+    },
+    {
+      "startSeconds": 1134.2,
+      "text": "format give me my priority as high and"
+    },
+    {
+      "startSeconds": 1136.52,
+      "text": "the tracking as the specific dictionary"
+    },
+    {
+      "startSeconds": 1138.48,
+      "text": "here and also my campaign ID so you can"
+    },
+    {
+      "startSeconds": 1140.96,
+      "text": "see that even with these super super"
+    },
+    {
+      "startSeconds": 1143.28,
+      "text": "Advanced functions the language models"
+    },
+    {
+      "startSeconds": 1145.28,
+      "text": "are pretty good at knowing when to use"
+    },
+    {
+      "startSeconds": 1146.88,
+      "text": "them and then actually inputting in the"
+    },
+    {
+      "startSeconds": 1148.799,
+      "text": "arguments so just to give a little bit"
+    },
+    {
+      "startSeconds": 1151.52,
+      "text": "of exam of an example of what this might"
+    },
+    {
+      "startSeconds": 1153.88,
+      "text": "look like in the final State I have this"
+    },
+    {
+      "startSeconds": 1156.36,
+      "text": "function here that will simulate sending"
+    },
+    {
+      "startSeconds": 1159.44,
+      "text": "off an email campaign with all of this"
+    },
+    {
+      "startSeconds": 1161.799,
+      "text": "stuff so with that simulation ran you"
+    },
+    {
+      "startSeconds": 1164.08,
+      "text": "can see that my email campaign campaign"
+    },
+    {
+      "startSeconds": 1166.28,
+      "text": "13 with was sent out with a high"
+    },
+    {
+      "startSeconds": 1168.76,
+      "text": "priority it was sent out to adaml"
+    },
+    {
+      "startSeconds": 1171.64,
+      "text": "youtube.com with this subject and then"
+    },
+    {
+      "startSeconds": 1173.799,
+      "text": "all of this nice personalization went"
+    },
+    {
+      "startSeconds": 1175.64,
+      "text": "into it and then it had the body text it"
+    },
+    {
+      "startSeconds": 1179.4,
+      "text": "had the attachments here my scheduled"
+    },
+    {
+      "startSeconds": 1181.52,
+      "text": "send time is correct for 8: a.m. and"
+    },
+    {
+      "startSeconds": 1184.24,
+      "text": "then it had the tracking as just for"
+    },
+    {
+      "startSeconds": 1186.48,
+      "text": "clicks and it being true great so"
+    },
+    {
+      "startSeconds": 1188.679,
+      "text": "hopefully that got you thinking about"
+    },
+    {
+      "startSeconds": 1190.36,
+      "text": "some of the cool ways that you can"
+    },
+    {
+      "startSeconds": 1191.919,
+      "text": "actually Implement and use more advanced"
+    },
+    {
+      "startSeconds": 1194.52,
+      "text": "functions and the advanced function"
+    },
+    {
+      "startSeconds": 1196.32,
+      "text": "calling capabilities of these models so"
+    },
+    {
+      "startSeconds": 1198.76,
+      "text": "now that we've gone over how you can set"
+    },
+    {
+      "startSeconds": 1200.4,
+      "text": "up your own functions use them and"
+    },
+    {
+      "startSeconds": 1202.4,
+      "text": "execute them with open AI models you're"
+    },
+    {
+      "startSeconds": 1205,
+      "text": "probably wondering does it look the same"
+    },
+    {
+      "startSeconds": 1207.12,
+      "text": "for other models and other capabilities"
+    },
+    {
+      "startSeconds": 1209.799,
+      "text": "and the answer there is generally no"
+    },
+    {
+      "startSeconds": 1212.44,
+      "text": "while open ai's tool calling"
+    },
+    {
+      "startSeconds": 1214.08,
+      "text": "functionality is tuned so that it takes"
+    },
+    {
+      "startSeconds": 1216.08,
+      "text": "in kind of a Json schema like this"
+    },
+    {
+      "startSeconds": 1218.48,
+      "text": "something like anthropic is actually"
+    },
+    {
+      "startSeconds": 1220.36,
+      "text": "going to be this list here with"
+    },
+    {
+      "startSeconds": 1222.72,
+      "text": "different things like this so there's no"
+    },
+    {
+      "startSeconds": 1225.24,
+      "text": "one really standardized format for"
+    },
+    {
+      "startSeconds": 1228,
+      "text": "function calling a second issue too is"
+    },
+    {
+      "startSeconds": 1230.24,
+      "text": "that being able to understand and use"
+    },
+    {
+      "startSeconds": 1232.52,
+      "text": "function calling is a fine-tuned ability"
+    },
+    {
+      "startSeconds": 1234.559,
+      "text": "in these larger models so not every"
+    },
+    {
+      "startSeconds": 1236.4,
+      "text": "model even has the ability to do this"
+    },
+    {
+      "startSeconds": 1239.08,
+      "text": "however there are a lot of models that"
+    },
+    {
+      "startSeconds": 1240.48,
+      "text": "are currently available from open AI"
+    },
+    {
+      "startSeconds": 1242.32,
+      "text": "from anthropic from Google and then some"
+    },
+    {
+      "startSeconds": 1244.4,
+      "text": "other companies here as well that have"
+    },
+    {
+      "startSeconds": 1246.72,
+      "text": "this ability and so the easiest way to"
+    },
+    {
+      "startSeconds": 1249.2,
+      "text": "kind of Define your own tools and then"
+    },
+    {
+      "startSeconds": 1250.679,
+      "text": "be able to plug and play with different"
+    },
+    {
+      "startSeconds": 1252.28,
+      "text": "models that have function calling"
+    },
+    {
+      "startSeconds": 1253.6,
+      "text": "abilities is actually using linkchain"
+    },
+    {
+      "startSeconds": 1255.52,
+      "text": "standardized framework as they give you"
+    },
+    {
+      "startSeconds": 1257.679,
+      "text": "a standardized way way of setting up an"
+    },
+    {
+      "startSeconds": 1259.84,
+      "text": "llm and defining a tool and then they"
+    },
+    {
+      "startSeconds": 1262.159,
+      "text": "handle all of the different formatting"
+    },
+    {
+      "startSeconds": 1264.32,
+      "text": "things in the back end that will make it"
+    },
+    {
+      "startSeconds": 1266.24,
+      "text": "compatible with the different llms this"
+    },
+    {
+      "startSeconds": 1268.799,
+      "text": "makes it really easy to just plug and"
+    },
+    {
+      "startSeconds": 1270.4,
+      "text": "play with different llms and different"
+    },
+    {
+      "startSeconds": 1272.159,
+      "text": "tools across different providers making"
+    },
+    {
+      "startSeconds": 1274.84,
+      "text": "it super easy so to show what that looks"
+    },
+    {
+      "startSeconds": 1277,
+      "text": "like let's actually set it up in link"
+    },
+    {
+      "startSeconds": 1278.48,
+      "text": "chain and of course we're going to"
+    },
+    {
+      "startSeconds": 1279.919,
+      "text": "instantiate an llm and for this example"
+    },
+    {
+      "startSeconds": 1282.679,
+      "text": "I didn't want to use open AI since"
+    },
+    {
+      "startSeconds": 1284.24,
+      "text": "that's all that we used before so we're"
+    },
+    {
+      "startSeconds": 1286.2,
+      "text": "going to be using clae 35 Sonet there's"
+    },
+    {
+      "startSeconds": 1288.159,
+      "text": "then three really straightforward ways"
+    },
+    {
+      "startSeconds": 1289.88,
+      "text": "of actually defining your tools with"
+    },
+    {
+      "startSeconds": 1291.4,
+      "text": "laying chain you can either use the tool"
+    },
+    {
+      "startSeconds": 1293.4,
+      "text": "decorator which is just at tool over an"
+    },
+    {
+      "startSeconds": 1296,
+      "text": "existing function and then what I did"
+    },
+    {
+      "startSeconds": 1298.48,
+      "text": "also is you have to put in a bit of a"
+    },
+    {
+      "startSeconds": 1300.84,
+      "text": "descriptor here and then this is of"
+    },
+    {
+      "startSeconds": 1302.24,
+      "text": "course going to be the tool description"
+    },
+    {
+      "startSeconds": 1303.84,
+      "text": "that gets passed and then it's also"
+    },
+    {
+      "startSeconds": 1305.76,
+      "text": "helpful to put in the different typing"
+    },
+    {
+      "startSeconds": 1307.919,
+      "text": "here in your actual input to your"
+    },
+    {
+      "startSeconds": 1309.96,
+      "text": "function but just attaching the tool"
+    },
+    {
+      "startSeconds": 1312.039,
+      "text": "decorator to an existing function on top"
+    },
+    {
+      "startSeconds": 1314.48,
+      "text": "of it we'll turn it into an invocable"
+    },
+    {
+      "startSeconds": 1316.679,
+      "text": "tool meaning then that if we use the"
+    },
+    {
+      "startSeconds": 1318.799,
+      "text": "object that Lang chain will then make"
+    },
+    {
+      "startSeconds": 1320.24,
+      "text": "for us with this git exchange rate and"
+    },
+    {
+      "startSeconds": 1322.24,
+      "text": "use the invoke method with the expected"
+    },
+    {
+      "startSeconds": 1324.36,
+      "text": "parameters here you can actually just"
+    },
+    {
+      "startSeconds": 1326.2,
+      "text": "run this with the arguments and then get"
+    },
+    {
+      "startSeconds": 1329,
+      "text": "your desired output plain and simple"
+    },
+    {
+      "startSeconds": 1331.08,
+      "text": "like that they similarly support pantic"
+    },
+    {
+      "startSeconds": 1333.36,
+      "text": "base models similar to what we did with"
+    },
+    {
+      "startSeconds": 1335.2,
+      "text": "the marketing email campaign so I have a"
+    },
+    {
+      "startSeconds": 1337,
+      "text": "shortened version here as an example and"
+    },
+    {
+      "startSeconds": 1339.12,
+      "text": "then they also have a bunch of different"
+    },
+    {
+      "startSeconds": 1340.72,
+      "text": "tool Integrations so instead of using"
+    },
+    {
+      "startSeconds": 1343.559,
+      "text": "the duck duck goo API directly what we"
+    },
+    {
+      "startSeconds": 1346.32,
+      "text": "can do is actually use their Lang chain"
+    },
+    {
+      "startSeconds": 1348.2,
+      "text": "community tools of duck duug go search"
+    },
+    {
+      "startSeconds": 1350.159,
+      "text": "results and then in just one or two"
+    },
+    {
+      "startSeconds": 1352.12,
+      "text": "lines actually set up that tool with"
+    },
+    {
+      "startSeconds": 1354.44,
+      "text": "just a quick function like this which"
+    },
+    {
+      "startSeconds": 1356.64,
+      "text": "similar to our exchange rate function"
+    },
+    {
+      "startSeconds": 1358.279,
+      "text": "can also be invocable like this and we"
+    },
+    {
+      "startSeconds": 1360.88,
+      "text": "can get those Snippets there and then to"
+    },
+    {
+      "startSeconds": 1362.559,
+      "text": "pass the tools in along with the"
+    },
+    {
+      "startSeconds": 1364.279,
+      "text": "language model object that we put they"
+    },
+    {
+      "startSeconds": 1366.24,
+      "text": "just have this very simple bind tools"
+    },
+    {
+      "startSeconds": 1368.32,
+      "text": "method where if you take your list of"
+    },
+    {
+      "startSeconds": 1370.44,
+      "text": "the tools that we have here and then"
+    },
+    {
+      "startSeconds": 1372.2,
+      "text": "pass in your llm which we have up here"
+    },
+    {
+      "startSeconds": 1374.679,
+      "text": "as CLA 35 Sonet and then have bind tools"
+    },
+    {
+      "startSeconds": 1378.76,
+      "text": "with the tools list that will then give"
+    },
+    {
+      "startSeconds": 1380.919,
+      "text": "you another object where the llm"
+    },
+    {
+      "startSeconds": 1383.48,
+      "text": "actually then knows that it has all of"
+    },
+    {
+      "startSeconds": 1385.279,
+      "text": "these tools available to it and so this"
+    },
+    {
+      "startSeconds": 1387.52,
+      "text": "is different from actually having to"
+    },
+    {
+      "startSeconds": 1388.88,
+      "text": "pass in the tools as a list every single"
+    },
+    {
+      "startSeconds": 1390.799,
+      "text": "time we invoke it like what we were"
+    },
+    {
+      "startSeconds": 1392.24,
+      "text": "using with the open AI API and once"
+    },
+    {
+      "startSeconds": 1394.159,
+      "text": "we've bound the tools to the llm it's"
+    },
+    {
+      "startSeconds": 1396.08,
+      "text": "now ready to be used so what we can do"
+    },
+    {
+      "startSeconds": 1398.64,
+      "text": "is then just invoke the llm object with"
+    },
+    {
+      "startSeconds": 1401.2,
+      "text": "something like when was linkchain"
+    },
+    {
+      "startSeconds": 1402.76,
+      "text": "founded and how much is a dollar worth"
+    },
+    {
+      "startSeconds": 1404.559,
+      "text": "in Japan right now and then the output"
+    },
+    {
+      "startSeconds": 1406.799,
+      "text": "that we'll actually get is so anthropic"
+    },
+    {
+      "startSeconds": 1409.08,
+      "text": "if we head back over here will actually"
+    },
+    {
+      "startSeconds": 1411.4,
+      "text": "output some form of text where it's"
+    },
+    {
+      "startSeconds": 1413.919,
+      "text": "thinking a little bit of what it should"
+    },
+    {
+      "startSeconds": 1415.799,
+      "text": "do so it put out to answer your"
+    },
+    {
+      "startSeconds": 1417.4,
+      "text": "questions I'll need to use two different"
+    },
+    {
+      "startSeconds": 1418.919,
+      "text": "tools one for search and one for"
+    },
+    {
+      "startSeconds": 1420.679,
+      "text": "currency exchange rate and it knows that"
+    },
+    {
+      "startSeconds": 1422.52,
+      "text": "it has the search and the currency"
+    },
+    {
+      "startSeconds": 1424.279,
+      "text": "exchange rate and then we get back these"
+    },
+    {
+      "startSeconds": 1426.88,
+      "text": "tool calls and the tool calls are for"
+    },
+    {
+      "startSeconds": 1429.159,
+      "text": "duck Dugo results Json with the"
+    },
+    {
+      "startSeconds": 1431.4,
+      "text": "arguments of the query here and then the"
+    },
+    {
+      "startSeconds": 1433.44,
+      "text": "other one is get exchange rates with the"
+    },
+    {
+      "startSeconds": 1435.52,
+      "text": "arguments of the base currency and"
+    },
+    {
+      "startSeconds": 1437.48,
+      "text": "Target currency so almost exactly"
+    },
+    {
+      "startSeconds": 1440.279,
+      "text": "similar to what we were seeing with open"
+    },
+    {
+      "startSeconds": 1442.08,
+      "text": "AI but now this is just using Lang chain"
+    },
+    {
+      "startSeconds": 1444.679,
+      "text": "in a standardized format and the great"
+    },
+    {
+      "startSeconds": 1446.32,
+      "text": "part about having the tools actually in"
+    },
+    {
+      "startSeconds": 1448.279,
+      "text": "a format where we can directly execute"
+    },
+    {
+      "startSeconds": 1450.36,
+      "text": "them with the invoke method is that it"
+    },
+    {
+      "startSeconds": 1452.159,
+      "text": "makes it super super easy to then take"
+    },
+    {
+      "startSeconds": 1454.799,
+      "text": "all these tool calls pass them back into"
+    },
+    {
+      "startSeconds": 1457.44,
+      "text": "our tools and then do the full circle of"
+    },
+    {
+      "startSeconds": 1459.919,
+      "text": "what we did with actually passing in the"
+    },
+    {
+      "startSeconds": 1461.88,
+      "text": "user query executing the tools and then"
+    },
+    {
+      "startSeconds": 1464.52,
+      "text": "having the AI respond with the executed"
+    },
+    {
+      "startSeconds": 1466.44,
+      "text": "tool context doing that with Lang chain"
+    },
+    {
+      "startSeconds": 1468.48,
+      "text": "a little bit like this we're going to be"
+    },
+    {
+      "startSeconds": 1470,
+      "text": "taking our initial prompt converting it"
+    },
+    {
+      "startSeconds": 1471.919,
+      "text": "into a human message with the human"
+    },
+    {
+      "startSeconds": 1473.96,
+      "text": "message function here and then passing"
+    },
+    {
+      "startSeconds": 1475.84,
+      "text": "that into our llm with tools to get the"
+    },
+    {
+      "startSeconds": 1478.6,
+      "text": "original llm response back and so the"
+    },
+    {
+      "startSeconds": 1481.48,
+      "text": "llm here is going to give us our tool"
+    },
+    {
+      "startSeconds": 1483.559,
+      "text": "calls and then what we can do is just go"
+    },
+    {
+      "startSeconds": 1486.44,
+      "text": "through all of the tool calls select"
+    },
+    {
+      "startSeconds": 1488.559,
+      "text": "which one we want and then we can just"
+    },
+    {
+      "startSeconds": 1490.799,
+      "text": "directly invoke them with the tool call"
+    },
+    {
+      "startSeconds": 1493.08,
+      "text": "arguments that the llm provided we're"
+    },
+    {
+      "startSeconds": 1495.52,
+      "text": "then able to use the tool message"
+    },
+    {
+      "startSeconds": 1497.84,
+      "text": "function to just properly format the"
+    },
+    {
+      "startSeconds": 1500.08,
+      "text": "tool output back into the proper"
+    },
+    {
+      "startSeconds": 1503.559,
+      "text": "formatting for the full conversation"
+    },
+    {
+      "startSeconds": 1505.919,
+      "text": "that we're keeping track of and then of"
+    },
+    {
+      "startSeconds": 1507.72,
+      "text": "course this full conversation with the"
+    },
+    {
+      "startSeconds": 1510.279,
+      "text": "humans prompt the ai's tool calls and"
+    },
+    {
+      "startSeconds": 1512.72,
+      "text": "then the results of all of the AI tool"
+    },
+    {
+      "startSeconds": 1514.679,
+      "text": "calls us tool messages will be passed in"
+    },
+    {
+      "startSeconds": 1516.559,
+      "text": "to get our final message but before we"
+    },
+    {
+      "startSeconds": 1518.6,
+      "text": "get the final message we can see that"
+    },
+    {
+      "startSeconds": 1520.84,
+      "text": "this has my original prompt we then see"
+    },
+    {
+      "startSeconds": 1523.159,
+      "text": "that the AI says to answer your"
+    },
+    {
+      "startSeconds": 1524.76,
+      "text": "questions I'll need to use two different"
+    },
+    {
+      "startSeconds": 1526,
+      "text": "tools one to search for information and"
+    },
+    {
+      "startSeconds": 1528,
+      "text": "one to to check the currency rate let me"
+    },
+    {
+      "startSeconds": 1529.96,
+      "text": "do that and then it has a few inputs"
+    },
+    {
+      "startSeconds": 1533.88,
+      "text": "here so it wants to use duck duck goo"
+    },
+    {
+      "startSeconds": 1536.52,
+      "text": "for when was l chain founded and then it"
+    },
+    {
+      "startSeconds": 1538.64,
+      "text": "wants to use the git exchange rate for"
+    },
+    {
+      "startSeconds": 1542.039,
+      "text": "the base currency of USD and the target"
+    },
+    {
+      "startSeconds": 1543.96,
+      "text": "currency of JPY and then we can see that"
+    },
+    {
+      "startSeconds": 1547.679,
+      "text": "we actually have all of the tool"
+    },
+    {
+      "startSeconds": 1549.2,
+      "text": "messages here now because we are able to"
+    },
+    {
+      "startSeconds": 1551.559,
+      "text": "directly invoke them we have the first"
+    },
+    {
+      "startSeconds": 1553.919,
+      "text": "tool message from Duck Duck Go search"
+    },
+    {
+      "startSeconds": 1555.88,
+      "text": "that responded with all of that and then"
+    },
+    {
+      "startSeconds": 1557.6,
+      "text": "we have the second tool output which is"
+    },
+    {
+      "startSeconds": 1560.76,
+      "text": "from the exchange rate tool that has"
+    },
+    {
+      "startSeconds": 1563.559,
+      "text": "this content here and then passing all"
+    },
+    {
+      "startSeconds": 1565.88,
+      "text": "of this right back into the language"
+    },
+    {
+      "startSeconds": 1568.399,
+      "text": "model we'll then get our final response"
+    },
+    {
+      "startSeconds": 1571.039,
+      "text": "which looks a little bit like this now"
+    },
+    {
+      "startSeconds": 1573.64,
+      "text": "let me answer your questions based on"
+    },
+    {
+      "startSeconds": 1575,
+      "text": "the information I've gathered when was"
+    },
+    {
+      "startSeconds": 1576.559,
+      "text": "it founded this is all this how much is"
+    },
+    {
+      "startSeconds": 1579.12,
+      "text": "the dollar worth right now and $1 is"
+    },
+    {
+      "startSeconds": 1582.279,
+      "text": "8.51 ETC then a little bit of a summary"
+    },
+    {
+      "startSeconds": 1585.159,
+      "text": "of those so this is really the exact"
+    },
+    {
+      "startSeconds": 1587.279,
+      "text": "same thing that we did with all of the"
+    },
+    {
+      "startSeconds": 1589.72,
+      "text": "open aai functions with parsing out the"
+    },
+    {
+      "startSeconds": 1592.36,
+      "text": "arguments from them and parsing out"
+    },
+    {
+      "startSeconds": 1593.76,
+      "text": "which function to call at what time and"
+    },
+    {
+      "startSeconds": 1596.12,
+      "text": "then attaching that all in the right"
+    },
+    {
+      "startSeconds": 1598.279,
+      "text": "messages to then pass all back and to"
+    },
+    {
+      "startSeconds": 1600.96,
+      "text": "get our final response with the tool"
+    },
+    {
+      "startSeconds": 1602.96,
+      "text": "calls but now done with Lang chain which"
+    },
+    {
+      "startSeconds": 1604.96,
+      "text": "will then allow you to of course plug-"
+    },
+    {
+      "startSeconds": 1607.2,
+      "text": "Inplay different llms and it'll cover"
+    },
+    {
+      "startSeconds": 1609.799,
+      "text": "all of the formatting and expedite a lot"
+    },
+    {
+      "startSeconds": 1612.279,
+      "text": "of the executing of the tools for you as"
+    },
+    {
+      "startSeconds": 1614.32,
+      "text": "well with their standardized framework"
+    },
+    {
+      "startSeconds": 1616.36,
+      "text": "so to round out our discussion of tools"
+    },
+    {
+      "startSeconds": 1618.2,
+      "text": "to and function calls I wanted to talk"
+    },
+    {
+      "startSeconds": 1619.88,
+      "text": "of course about one of the main use"
+    },
+    {
+      "startSeconds": 1621.76,
+      "text": "cases that I'm seeing for tools and for"
+    },
+    {
+      "startSeconds": 1624.159,
+      "text": "functions and that is of course for"
+    },
+    {
+      "startSeconds": 1625.88,
+      "text": "creating agentic systems which the brief"
+    },
+    {
+      "startSeconds": 1628.279,
+      "text": "overview of what this kind of llm agent"
+    },
+    {
+      "startSeconds": 1630.88,
+      "text": "idea is is taking in a user request some"
+    },
+    {
+      "startSeconds": 1633.88,
+      "text": "sort of llm will then have access to a"
+    },
+    {
+      "startSeconds": 1636.039,
+      "text": "memory or of course the prior list of"
+    },
+    {
+      "startSeconds": 1638.32,
+      "text": "messages some form of tools and some"
+    },
+    {
+      "startSeconds": 1640.76,
+      "text": "sort of Chain of Thought reasoning or"
+    },
+    {
+      "startSeconds": 1643.36,
+      "text": "planning module to better approach the"
+    },
+    {
+      "startSeconds": 1645.52,
+      "text": "user's request we've gone over all sorts"
+    },
+    {
+      "startSeconds": 1647.64,
+      "text": "of different kinds of agents and setting"
+    },
+    {
+      "startSeconds": 1649.399,
+      "text": "up our own agents on this channel so"
+    },
+    {
+      "startSeconds": 1651.6,
+      "text": "I'll link to some videos right now and"
+    },
+    {
+      "startSeconds": 1653.36,
+      "text": "also in the description below but"
+    },
+    {
+      "startSeconds": 1655.44,
+      "text": "linkchain actually has a few automated"
+    },
+    {
+      "startSeconds": 1657.399,
+      "text": "ways of putting together some of these"
+    },
+    {
+      "startSeconds": 1659.159,
+      "text": "agents and the first more simpler ones"
+    },
+    {
+      "startSeconds": 1661.64,
+      "text": "will actually just handle all of what we"
+    },
+    {
+      "startSeconds": 1663.44,
+      "text": "were doing before with setting up"
+    },
+    {
+      "startSeconds": 1665.84,
+      "text": "invoking the tools and then attaching"
+    },
+    {
+      "startSeconds": 1667.76,
+      "text": "all of that to our memory and putting it"
+    },
+    {
+      "startSeconds": 1669.519,
+      "text": "together to get our final output all in"
+    },
+    {
+      "startSeconds": 1671.64,
+      "text": "a few different lines of code here so"
+    },
+    {
+      "startSeconds": 1673.96,
+      "text": "this will allow you to also very easily"
+    },
+    {
+      "startSeconds": 1676.72,
+      "text": "set up your flows with your different"
+    },
+    {
+      "startSeconds": 1678.36,
+      "text": "Tools in your model providers and then"
+    },
+    {
+      "startSeconds": 1680.48,
+      "text": "create kind of this workflow of actually"
+    },
+    {
+      "startSeconds": 1683.88,
+      "text": "taking in the input message invoking the"
+    },
+    {
+      "startSeconds": 1686.039,
+      "text": "tools and then getting your output"
+    },
+    {
+      "startSeconds": 1687.559,
+      "text": "message without having to go through all"
+    },
+    {
+      "startSeconds": 1690.24,
+      "text": "of those steps the most simple form of"
+    },
+    {
+      "startSeconds": 1692.039,
+      "text": "this is just going to be their create"
+    },
+    {
+      "startSeconds": 1693.6,
+      "text": "tool calling agent function that they"
+    },
+    {
+      "startSeconds": 1695.519,
+      "text": "have here that takes in a prompt an llm"
+    },
+    {
+      "startSeconds": 1697.96,
+      "text": "and different tools which you put into"
+    },
+    {
+      "startSeconds": 1699.88,
+      "text": "an agent and then you can wrap it all up"
+    },
+    {
+      "startSeconds": 1701.72,
+      "text": "into a nice executor that actually"
+    },
+    {
+      "startSeconds": 1703.559,
+      "text": "executes everything and this is just"
+    },
+    {
+      "startSeconds": 1706,
+      "text": "going to essentially do everything that"
+    },
+    {
+      "startSeconds": 1707.679,
+      "text": "we were doing in just a few lines so if"
+    },
+    {
+      "startSeconds": 1710.159,
+      "text": "we put this together and then actually"
+    },
+    {
+      "startSeconds": 1713.48,
+      "text": "run the query of when was langra Cloud"
+    },
+    {
+      "startSeconds": 1716.08,
+      "text": "released and how much is a dollar worth"
+    },
+    {
+      "startSeconds": 1717.72,
+      "text": "in Japan right now you can see that"
+    },
+    {
+      "startSeconds": 1720.36,
+      "text": "it'll actually automate doing all of"
+    },
+    {
+      "startSeconds": 1722.679,
+      "text": "these different steps so it'll invoke"
+    },
+    {
+      "startSeconds": 1724.64,
+      "text": "duck ducko it'll invoke get exchange"
+    },
+    {
+      "startSeconds": 1727.559,
+      "text": "rate and then it'll handle passing all"
+    },
+    {
+      "startSeconds": 1729.559,
+      "text": "of that back into the language model"
+    },
+    {
+      "startSeconds": 1731.36,
+      "text": "which will get our final output text"
+    },
+    {
+      "startSeconds": 1733.24,
+      "text": "here which I've printed a little bit"
+    },
+    {
+      "startSeconds": 1734.96,
+      "text": "nicer here so that just packages up all"
+    },
+    {
+      "startSeconds": 1738.76,
+      "text": "of what we were doing with the"
+    },
+    {
+      "startSeconds": 1740.519,
+      "text": "intermediary steps of appending the"
+    },
+    {
+      "startSeconds": 1742.72,
+      "text": "different tool messages executing the"
+    },
+    {
+      "startSeconds": 1744.559,
+      "text": "different tools figuring all that stuff"
+    },
+    {
+      "startSeconds": 1746.72,
+      "text": "out into one nice line so that you can"
+    },
+    {
+      "startSeconds": 1749.519,
+      "text": "actually just put this together and run"
+    },
+    {
+      "startSeconds": 1751.679,
+      "text": "it with your queries right off the bat"
+    },
+    {
+      "startSeconds": 1753.36,
+      "text": "and then you can start to get a little"
+    },
+    {
+      "startSeconds": 1754.48,
+      "text": "bit more advanced with their create"
+    },
+    {
+      "startSeconds": 1756.64,
+      "text": "react agent which is based on this paper"
+    },
+    {
+      "startSeconds": 1758.76,
+      "text": "here react synergizing reasoning and"
+    },
+    {
+      "startSeconds": 1760.6,
+      "text": "acting and language models which is one"
+    },
+    {
+      "startSeconds": 1762.36,
+      "text": "of my favorite ones to show simple"
+    },
+    {
+      "startSeconds": 1764.32,
+      "text": "demonstrations of and it follows a"
+    },
+    {
+      "startSeconds": 1766.44,
+      "text": "different prompt of asking questions"
+    },
+    {
+      "startSeconds": 1768.6,
+      "text": "making the llm go through different"
+    },
+    {
+      "startSeconds": 1770.32,
+      "text": "thoughts and then having the llm"
+    },
+    {
+      "startSeconds": 1772.279,
+      "text": "actually take actions and then doing"
+    },
+    {
+      "startSeconds": 1774.039,
+      "text": "different observations on those actions"
+    },
+    {
+      "startSeconds": 1776.279,
+      "text": "and then repeating until it's happy with"
+    },
+    {
+      "startSeconds": 1778.12,
+      "text": "the final result that it's put so we can"
+    },
+    {
+      "startSeconds": 1780.799,
+      "text": "actually put that together very easily"
+    },
+    {
+      "startSeconds": 1782.6,
+      "text": "by grabbing their preset react prompt"
+    },
+    {
+      "startSeconds": 1784.76,
+      "text": "making a react agent with just create"
+    },
+    {
+      "startSeconds": 1786.559,
+      "text": "react agent and then packaging it all up"
+    },
+    {
+      "startSeconds": 1788.559,
+      "text": "into an agent executor here and so if we"
+    },
+    {
+      "startSeconds": 1791.399,
+      "text": "run the same thing we can then see that"
+    },
+    {
+      "startSeconds": 1793.88,
+      "text": "it enters into this agent executor chain"
+    },
+    {
+      "startSeconds": 1796,
+      "text": "we can see a little bit more of this"
+    },
+    {
+      "startSeconds": 1797.2,
+      "text": "reasoning to answer this question I'll"
+    },
+    {
+      "startSeconds": 1798.679,
+      "text": "need to search for information about"
+    },
+    {
+      "startSeconds": 1800.399,
+      "text": "oops about Lang graph cloud and Lang"
+    },
+    {
+      "startSeconds": 1803.12,
+      "text": "chain and then it'll take that action"
+    },
+    {
+      "startSeconds": 1806.039,
+      "text": "and it says I don't have specific"
+    },
+    {
+      "startSeconds": 1807.399,
+      "text": "information about Lang Chain's founding"
+    },
+    {
+      "startSeconds": 1809.08,
+      "text": "date yet let's break this down and then"
+    },
+    {
+      "startSeconds": 1811.279,
+      "text": "let's search for Lang Chain's founding"
+    },
+    {
+      "startSeconds": 1813.2,
+      "text": "date so it even went a little bit"
+    },
+    {
+      "startSeconds": 1814.6,
+      "text": "further than that and so it was able to"
+    },
+    {
+      "startSeconds": 1818,
+      "text": "give me Lang graph Cloud Lang chains"
+    },
+    {
+      "startSeconds": 1820.08,
+      "text": "founding date and then give me a nice"
+    },
+    {
+      "startSeconds": 1822.12,
+      "text": "final answer there all in this sort of"
+    },
+    {
+      "startSeconds": 1824.159,
+      "text": "reasoning action and observation flow so"
+    },
+    {
+      "startSeconds": 1826.44,
+      "text": "you can really see the power of"
+    },
+    {
+      "startSeconds": 1828.64,
+      "text": "combining the ability for a language"
+    },
+    {
+      "startSeconds": 1830.519,
+      "text": "model and its Advanced reasoning"
+    },
+    {
+      "startSeconds": 1832.519,
+      "text": "together with external tools like web"
+    },
+    {
+      "startSeconds": 1834.88,
+      "text": "search or like sending an email or"
+    },
+    {
+      "startSeconds": 1836.76,
+      "text": "something like that alt together into"
+    },
+    {
+      "startSeconds": 1839.08,
+      "text": "really more advanced flows which can be"
+    },
+    {
+      "startSeconds": 1841.64,
+      "text": "really impactful to whatever use case"
+    },
+    {
+      "startSeconds": 1843.76,
+      "text": "you're handling and to whatever data"
+    },
+    {
+      "startSeconds": 1845.279,
+      "text": "you're managing as an end user that"
+    },
+    {
+      "startSeconds": 1847.48,
+      "text": "being said after going through all this"
+    },
+    {
+      "startSeconds": 1849.08,
+      "text": "you should have a pretty good"
+    },
+    {
+      "startSeconds": 1850.24,
+      "text": "understanding of what llm tool and"
+    },
+    {
+      "startSeconds": 1852.159,
+      "text": "function calling is how to set up your"
+    },
+    {
+      "startSeconds": 1854.12,
+      "text": "own tools how to set up Advanced tools"
+    },
+    {
+      "startSeconds": 1856.32,
+      "text": "and where some of those tools and"
+    },
+    {
+      "startSeconds": 1857.96,
+      "text": "function calling capabilities are"
+    },
+    {
+      "startSeconds": 1859.519,
+      "text": "starting to be used today so if you have"
+    },
+    {
+      "startSeconds": 1861.799,
+      "text": "any questions please leave comments in"
+    },
+    {
+      "startSeconds": 1863.559,
+      "text": "the comment section below if you liked"
+    },
+    {
+      "startSeconds": 1865.36,
+      "text": "what you were seeing consider dropping a"
+    },
+    {
+      "startSeconds": 1866.76,
+      "text": "like and if you want to support the"
+    },
+    {
+      "startSeconds": 1867.799,
+      "text": "channel and see more like this make sure"
+    },
+    {
+      "startSeconds": 1869.519,
+      "text": "to hit that subscribe button thank you"
+    },
+    {
+      "startSeconds": 1871.519,
+      "text": "and I hope you learn something"
+    },
+    {
+      "startSeconds": 1872.76,
+      "text": "interesting today"
+    }
+  ]
+}

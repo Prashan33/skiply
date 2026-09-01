@@ -1,0 +1,1566 @@
+{
+  "id": "njm1nZlrR68",
+  "url": "https://www.youtube.com/watch?v=njm1nZlrR68",
+  "fetchedAt": "2026-09-01T04:10:30.844Z",
+  "captionKind": "asr",
+  "chapters": [
+    {
+      "startSeconds": 0,
+      "label": "Introduction: What is SCA?"
+    },
+    {
+      "startSeconds": 36,
+      "label": "How Software Composition Analysis Works"
+    },
+    {
+      "startSeconds": 165,
+      "label": "Real-World Example: Log4j Vulnerability"
+    },
+    {
+      "startSeconds": 240,
+      "label": "Understanding SBOMs (Software Bill of Materials)"
+    },
+    {
+      "startSeconds": 345,
+      "label": "How Vulnerabilities Are Tracked (CVEs Explained)"
+    },
+    {
+      "startSeconds": 405,
+      "label": "Demo: Scanning with Trivy"
+    },
+    {
+      "startSeconds": 570,
+      "label": "False Positives and Reachability"
+    },
+    {
+      "startSeconds": 630,
+      "label": "Aikido Security Demo & Fixing Vulnerabilities"
+    }
+  ],
+  "cues": [
+    {
+      "startSeconds": 0.08,
+      "text": "So, what is software composition"
+    },
+    {
+      "startSeconds": 3.04,
+      "text": "analysis or SCA? Well, in security, this"
+    },
+    {
+      "startSeconds": 6,
+      "text": "is a tool that helps keep your supply"
+    },
+    {
+      "startSeconds": 8.16,
+      "text": "chain safe. In this video, we're going"
+    },
+    {
+      "startSeconds": 10.16,
+      "text": "to dive into exactly what it is. We're"
+    },
+    {
+      "startSeconds": 11.84,
+      "text": "going to look at the different types of"
+    },
+    {
+      "startSeconds": 13.2,
+      "text": "tooling that is available and where it"
+    },
+    {
+      "startSeconds": 15.36,
+      "text": "fits into your development life cycle."
+    },
+    {
+      "startSeconds": 17.92,
+      "text": "My name is McKenzie and you are watching"
+    },
+    {
+      "startSeconds": 20,
+      "text": "Tool Time by Aikido Security."
+    },
+    {
+      "startSeconds": 35.6,
+      "text": "SCA or software composition analysis can"
+    },
+    {
+      "startSeconds": 38.16,
+      "text": "go by a couple of names. Open source"
+    },
+    {
+      "startSeconds": 39.76,
+      "text": "dependency scanning, dependency"
+    },
+    {
+      "startSeconds": 41.28,
+      "text": "scanning, supply chain security"
+    },
+    {
+      "startSeconds": 42.879,
+      "text": "scanning, all these different types of"
+    },
+    {
+      "startSeconds": 44.8,
+      "text": "areas, but essentially they're all the"
+    },
+    {
+      "startSeconds": 46.719,
+      "text": "same thing. What an SCA tool does is it"
+    },
+    {
+      "startSeconds": 50.079,
+      "text": "looks at your application and all of the"
+    },
+    {
+      "startSeconds": 52.399,
+      "text": "dependencies, the open source"
+    },
+    {
+      "startSeconds": 54,
+      "text": "dependencies that make your application"
+    },
+    {
+      "startSeconds": 56.239,
+      "text": "tick and scans them for vulnerabilities."
+    },
+    {
+      "startSeconds": 59.12,
+      "text": "Now, you may or may not know this, but"
+    },
+    {
+      "startSeconds": 60.879,
+      "text": "around about 70 to 90% of all of the"
+    },
+    {
+      "startSeconds": 64.32,
+      "text": "code that makes your application run"
+    },
+    {
+      "startSeconds": 66.479,
+      "text": "comes from open-source dependencies. So,"
+    },
+    {
+      "startSeconds": 69.2,
+      "text": "if you're watching this on YouTube,"
+    },
+    {
+      "startSeconds": 71.04,
+      "text": "presumably around about 70 to 90% of"
+    },
+    {
+      "startSeconds": 74.32,
+      "text": "what makes YouTube YouTube comes from"
+    },
+    {
+      "startSeconds": 77.2,
+      "text": "open-source packages. Now, this is great"
+    },
+    {
+      "startSeconds": 80.08,
+      "text": "for a number of reasons. It's great"
+    },
+    {
+      "startSeconds": 82.24,
+      "text": "because we can move quickly. It's why"
+    },
+    {
+      "startSeconds": 84.24,
+      "text": "we're able to keep pushing the"
+    },
+    {
+      "startSeconds": 85.6,
+      "text": "boundaries of what we can do in"
+    },
+    {
+      "startSeconds": 87.439,
+      "text": "applications. We don't need to reinvent"
+    },
+    {
+      "startSeconds": 89.68,
+      "text": "the wheel every time we do it. But it"
+    },
+    {
+      "startSeconds": 92.159,
+      "text": "does come at a risk. And that is that"
+    },
+    {
+      "startSeconds": 94.32,
+      "text": "that big chunk of our application that"
+    },
+    {
+      "startSeconds": 97.28,
+      "text": "we don't control can also have security"
+    },
+    {
+      "startSeconds": 100.159,
+      "text": "vulnerabilities. And because we don't"
+    },
+    {
+      "startSeconds": 101.759,
+      "text": "control it, we have limited ability to"
+    },
+    {
+      "startSeconds": 103.92,
+      "text": "be able to resolve them. Now, at first,"
+    },
+    {
+      "startSeconds": 106.479,
+      "text": "thinking about open source dependencies"
+    },
+    {
+      "startSeconds": 108.32,
+      "text": "feels easy because there's a whole bunch"
+    },
+    {
+      "startSeconds": 110.399,
+      "text": "of dependencies that you know about"
+    },
+    {
+      "startSeconds": 112.32,
+      "text": "because you introduced them. But there's"
+    },
+    {
+      "startSeconds": 114.399,
+      "text": "a challenge. Just like your application"
+    },
+    {
+      "startSeconds": 116.32,
+      "text": "runs on open source software, so does"
+    },
+    {
+      "startSeconds": 118.64,
+      "text": "open source software run on open source"
+    },
+    {
+      "startSeconds": 120.56,
+      "text": "software. So we end up with this Russian"
+    },
+    {
+      "startSeconds": 122.479,
+      "text": "nesting doll situation. Well, we may"
+    },
+    {
+      "startSeconds": 124.159,
+      "text": "introduce one packet, but that might"
+    },
+    {
+      "startSeconds": 126.32,
+      "text": "introduce several other packages that"
+    },
+    {
+      "startSeconds": 128.479,
+      "text": "live inside it, which may introduce"
+    },
+    {
+      "startSeconds": 130.399,
+      "text": "other packages, so on and so forth. So"
+    },
+    {
+      "startSeconds": 132.56,
+      "text": "if we think about it back to YouTube, if"
+    },
+    {
+      "startSeconds": 134.72,
+      "text": "we wanted to create a video streaming"
+    },
+    {
+      "startSeconds": 136.8,
+      "text": "service, then we would probably take"
+    },
+    {
+      "startSeconds": 138.72,
+      "text": "some open source packages to help us"
+    },
+    {
+      "startSeconds": 140.959,
+      "text": "play videos on our website. But inside"
+    },
+    {
+      "startSeconds": 143.28,
+      "text": "those, there may be packages that enable"
+    },
+    {
+      "startSeconds": 146.239,
+      "text": "audio streaming and video streaming. And"
+    },
+    {
+      "startSeconds": 148.48,
+      "text": "then inside those there may be a whole"
+    },
+    {
+      "startSeconds": 150.239,
+      "text": "bunch of different packages that do"
+    },
+    {
+      "startSeconds": 152.56,
+      "text": "various different jobs of that like data"
+    },
+    {
+      "startSeconds": 154.879,
+      "text": "streaming or dealing with loads. Now why"
+    },
+    {
+      "startSeconds": 157.2,
+      "text": "this all matters is if one of these"
+    },
+    {
+      "startSeconds": 160.4,
+      "text": "dependencies ends up having a"
+    },
+    {
+      "startSeconds": 162.16,
+      "text": "vulnerability within it, it can have a"
+    },
+    {
+      "startSeconds": 164.72,
+      "text": "flow on effect. I'll give you a concrete"
+    },
+    {
+      "startSeconds": 166.64,
+      "text": "example. There's a package called log"
+    },
+    {
+      "startSeconds": 168.959,
+      "text": "4j. It's a logging application for Java."
+    },
+    {
+      "startSeconds": 171.84,
+      "text": "In 2021, it was discovered that there"
+    },
+    {
+      "startSeconds": 174.48,
+      "text": "was a critical remote code execution"
+    },
+    {
+      "startSeconds": 177.2,
+      "text": "vulnerability inside log forj. Well, log"
+    },
+    {
+      "startSeconds": 180.319,
+      "text": "forj is something that we would call a"
+    },
+    {
+      "startSeconds": 182.319,
+      "text": "foundational project. What that means is"
+    },
+    {
+      "startSeconds": 184.319,
+      "text": "it's pretty much in everything because"
+    },
+    {
+      "startSeconds": 186.239,
+      "text": "it was in everything. Once this"
+    },
+    {
+      "startSeconds": 187.84,
+      "text": "vulnerability became public, then nearly"
+    },
+    {
+      "startSeconds": 190.319,
+      "text": "the entire internet was vulnerable to"
+    },
+    {
+      "startSeconds": 192.72,
+      "text": "remote code execution through this. Now,"
+    },
+    {
+      "startSeconds": 196.159,
+      "text": "you may have the question of why is it"
+    },
+    {
+      "startSeconds": 198.239,
+      "text": "the entire internet and not just Java"
+    },
+    {
+      "startSeconds": 200.239,
+      "text": "applications? Well, that's because we"
+    },
+    {
+      "startSeconds": 201.92,
+      "text": "layer things on top of each other. Even"
+    },
+    {
+      "startSeconds": 203.36,
+      "text": "if we have an application in Python or"
+    },
+    {
+      "startSeconds": 205.92,
+      "text": "JavaScript, it probably sits on"
+    },
+    {
+      "startSeconds": 207.84,
+      "text": "foundations of cloud architecture, of"
+    },
+    {
+      "startSeconds": 210.319,
+      "text": "infrastructure that uses various"
+    },
+    {
+      "startSeconds": 212.239,
+      "text": "different languages. So, the whole"
+    },
+    {
+      "startSeconds": 214.56,
+      "text": "supply chain can be very complicated and"
+    },
+    {
+      "startSeconds": 217.12,
+      "text": "very convoluted. To help us make sense"
+    },
+    {
+      "startSeconds": 219.599,
+      "text": "of all of this, SCA tools will first"
+    },
+    {
+      "startSeconds": 223.04,
+      "text": "identify all of the packages that we"
+    },
+    {
+      "startSeconds": 225.12,
+      "text": "have in our application and then check"
+    },
+    {
+      "startSeconds": 227.28,
+      "text": "to see if there's any known issues or"
+    },
+    {
+      "startSeconds": 229.12,
+      "text": "vulnerabilities within it. A good SEA"
+    },
+    {
+      "startSeconds": 231.519,
+      "text": "tool will look at frontier dependencies,"
+    },
+    {
+      "startSeconds": 232.959,
+      "text": "but also transitive dependencies as"
+    },
+    {
+      "startSeconds": 234.64,
+      "text": "well. I'm going to take just a very"
+    },
+    {
+      "startSeconds": 236.56,
+      "text": "quick side quest here because there's"
+    },
+    {
+      "startSeconds": 238.959,
+      "text": "something else called an esbomb. Now,"
+    },
+    {
+      "startSeconds": 241.2,
+      "text": "ESBOMs are very closely related to SEA,"
+    },
+    {
+      "startSeconds": 243.84,
+      "text": "so I don't want to do an entire video"
+    },
+    {
+      "startSeconds": 245.36,
+      "text": "about it, but an ESBOM stands for"
+    },
+    {
+      "startSeconds": 246.879,
+      "text": "software bill of materials. And"
+    },
+    {
+      "startSeconds": 248.799,
+      "text": "essentially what this is is a document"
+    },
+    {
+      "startSeconds": 251.76,
+      "text": "that you can share with people that"
+    },
+    {
+      "startSeconds": 253.84,
+      "text": "looks at all of the open source packages"
+    },
+    {
+      "startSeconds": 255.68,
+      "text": "inside your application and the versions"
+    },
+    {
+      "startSeconds": 258.16,
+      "text": "that they have. This is important"
+    },
+    {
+      "startSeconds": 259.919,
+      "text": "because sometimes for compliance, you"
+    },
+    {
+      "startSeconds": 261.68,
+      "text": "need to provide this to certain parties"
+    },
+    {
+      "startSeconds": 264.479,
+      "text": "when they're choosing to use your your"
+    },
+    {
+      "startSeconds": 266.24,
+      "text": "your application. And I'm specifically"
+    },
+    {
+      "startSeconds": 268.4,
+      "text": "looking at legislation that involves"
+    },
+    {
+      "startSeconds": 270.479,
+      "text": "government contracts. So while we"
+    },
+    {
+      "startSeconds": 272.08,
+      "text": "sometimes have different tools for"
+    },
+    {
+      "startSeconds": 273.68,
+      "text": "sbombs, generally speaking, an SCA tool"
+    },
+    {
+      "startSeconds": 276.72,
+      "text": "will come with a component that can"
+    },
+    {
+      "startSeconds": 278.16,
+      "text": "generate this software bill of material."
+    },
+    {
+      "startSeconds": 280.08,
+      "text": "All right, side quest done. Back to back"
+    },
+    {
+      "startSeconds": 282.96,
+      "text": "to understanding SCA. Let's first start"
+    },
+    {
+      "startSeconds": 285.44,
+      "text": "by exploring how we can see what"
+    },
+    {
+      "startSeconds": 286.96,
+      "text": "dependencies we have in our application."
+    },
+    {
+      "startSeconds": 288.56,
+      "text": "Well, there's a couple of files. If"
+    },
+    {
+      "startSeconds": 289.759,
+      "text": "you're dealing in JavaScript or Node,"
+    },
+    {
+      "startSeconds": 291.36,
+      "text": "you're going to have a package.json"
+    },
+    {
+      "startSeconds": 293.04,
+      "text": "file. This is what we have our frontier"
+    },
+    {
+      "startSeconds": 295.12,
+      "text": "dependencies, direct dependencies. And"
+    },
+    {
+      "startSeconds": 296.72,
+      "text": "then we also have a package-lock.json"
+    },
+    {
+      "startSeconds": 299.52,
+      "text": "file. And this will have kind of"
+    },
+    {
+      "startSeconds": 301.28,
+      "text": "transitive dependencies in them. If you"
+    },
+    {
+      "startSeconds": 302.88,
+      "text": "look at the difference, the package.json"
+    },
+    {
+      "startSeconds": 304.8,
+      "text": "file may only be kind of several lines"
+    },
+    {
+      "startSeconds": 307.44,
+      "text": "long. Whereas the package lock.json file"
+    },
+    {
+      "startSeconds": 309.84,
+      "text": "may be thousands of lines of long"
+    },
+    {
+      "startSeconds": 312.16,
+      "text": "because it has thousands of packages."
+    },
+    {
+      "startSeconds": 314.24,
+      "text": "This is built automatically. We don't"
+    },
+    {
+      "startSeconds": 316.56,
+      "text": "create these like with all the"
+    },
+    {
+      "startSeconds": 318.16,
+      "text": "dependencies we have in them. Now"
+    },
+    {
+      "startSeconds": 319.44,
+      "text": "depending on what language you use,"
+    },
+    {
+      "startSeconds": 320.88,
+      "text": "these files will be different. In"
+    },
+    {
+      "startSeconds": 322.16,
+      "text": "Python, it's requirements.ext. You also"
+    },
+    {
+      "startSeconds": 323.919,
+      "text": "might have a pip lock file. we're"
+    },
+    {
+      "startSeconds": 325.6,
+      "text": "dealing in Ruby, you have a gems file"
+    },
+    {
+      "startSeconds": 327.36,
+      "text": "and a gems lock file and there's various"
+    },
+    {
+      "startSeconds": 329.759,
+      "text": "different types of files that we deal"
+    },
+    {
+      "startSeconds": 331.52,
+      "text": "with. You can kind of dive into what it"
+    },
+    {
+      "startSeconds": 333.52,
+      "text": "is that you're programming in and what"
+    },
+    {
+      "startSeconds": 335.44,
+      "text": "files you have for you there. But"
+    },
+    {
+      "startSeconds": 338.16,
+      "text": "essentially, this is can be the first"
+    },
+    {
+      "startSeconds": 339.52,
+      "text": "way that we can have a look inside of"
+    },
+    {
+      "startSeconds": 341.52,
+      "text": "our applications. Now, to understand the"
+    },
+    {
+      "startSeconds": 343.68,
+      "text": "security part, I'm sorry, we have to do"
+    },
+    {
+      "startSeconds": 345.199,
+      "text": "another side quest. We're doing a side"
+    },
+    {
+      "startSeconds": 347.199,
+      "text": "quest. It calls something called CVE"
+    },
+    {
+      "startSeconds": 349.759,
+      "text": "Commer vulnerabilities and exposure. And"
+    },
+    {
+      "startSeconds": 352,
+      "text": "what happens in security is when we"
+    },
+    {
+      "startSeconds": 354.4,
+      "text": "discover that there is a vulnerability"
+    },
+    {
+      "startSeconds": 355.84,
+      "text": "inside an open- source package or a"
+    },
+    {
+      "startSeconds": 358.479,
+      "text": "popular software version, we create a"
+    },
+    {
+      "startSeconds": 361.28,
+      "text": "CVE number. So I talked about log forj"
+    },
+    {
+      "startSeconds": 364.88,
+      "text": "already. This is the CVE number for log"
+    },
+    {
+      "startSeconds": 367.12,
+      "text": "forj. And what this saying is in"
+    },
+    {
+      "startSeconds": 370.16,
+      "text": "specific versions of log forj, we have"
+    },
+    {
+      "startSeconds": 373.039,
+      "text": "this critical vulnerability. Now, what"
+    },
+    {
+      "startSeconds": 375.6,
+      "text": "is useful about this is that we can"
+    },
+    {
+      "startSeconds": 377.52,
+      "text": "check databases with all of these CVE"
+    },
+    {
+      "startSeconds": 379.84,
+      "text": "numbers in there and we can check does"
+    },
+    {
+      "startSeconds": 382.88,
+      "text": "our project contain a dependency that"
+    },
+    {
+      "startSeconds": 386,
+      "text": "matches this CVE number or match the the"
+    },
+    {
+      "startSeconds": 390.319,
+      "text": "the version in the CVE number. So,"
+    },
+    {
+      "startSeconds": 392.96,
+      "text": "there's a couple of big databases."
+    },
+    {
+      "startSeconds": 394.479,
+      "text": "There's the NVD, the National"
+    },
+    {
+      "startSeconds": 396.24,
+      "text": "Vulnerability Database. There's the MIT"
+    },
+    {
+      "startSeconds": 398,
+      "text": "CVE database and there's the GitHub"
+    },
+    {
+      "startSeconds": 399.6,
+      "text": "advisory database. And there's a few"
+    },
+    {
+      "startSeconds": 400.96,
+      "text": "more as well. Does this application"
+    },
+    {
+      "startSeconds": 403.6,
+      "text": "contain a vulnerable version? So, let's"
+    },
+    {
+      "startSeconds": 405.919,
+      "text": "have a look at that. I want to start by"
+    },
+    {
+      "startSeconds": 407.759,
+      "text": "using a great open-source SCA tool"
+    },
+    {
+      "startSeconds": 410.639,
+      "text": "called Trivy. And what we're going to do"
+    },
+    {
+      "startSeconds": 412.479,
+      "text": "is we have this dummy project here, and"
+    },
+    {
+      "startSeconds": 414.4,
+      "text": "we're just going to run Trivy, run a"
+    },
+    {
+      "startSeconds": 416.4,
+      "text": "scan of Trivy. And Trivy is going to"
+    },
+    {
+      "startSeconds": 417.68,
+      "text": "look at our our dependencies. It's going"
+    },
+    {
+      "startSeconds": 419.84,
+      "text": "to look at the databases, and it's going"
+    },
+    {
+      "startSeconds": 421.36,
+      "text": "to tell us if we have a match. And"
+    },
+    {
+      "startSeconds": 423.199,
+      "text": "obviously, as you can see here, we have"
+    },
+    {
+      "startSeconds": 426.24,
+      "text": "lots and lots of matches. Now, we can"
+    },
+    {
+      "startSeconds": 428.88,
+      "text": "export this in a JSON file if we want."
+    },
+    {
+      "startSeconds": 430.88,
+      "text": "we can put it in some kind of viewer."
+    },
+    {
+      "startSeconds": 433.44,
+      "text": "Maybe we can sort it between what are"
+    },
+    {
+      "startSeconds": 435.28,
+      "text": "the most critical vulnerabilities and we"
+    },
+    {
+      "startSeconds": 436.96,
+      "text": "can start going through it. So now that"
+    },
+    {
+      "startSeconds": 438.72,
+      "text": "we have our results from Trivia, what do"
+    },
+    {
+      "startSeconds": 440.72,
+      "text": "we actually do? How do we solve these?"
+    },
+    {
+      "startSeconds": 442.24,
+      "text": "Well, solving them is also simple. At"
+    },
+    {
+      "startSeconds": 444.72,
+      "text": "least so it seems on the surface. All we"
+    },
+    {
+      "startSeconds": 447.28,
+      "text": "do is we upgrade from a vulnerable"
+    },
+    {
+      "startSeconds": 449.039,
+      "text": "version to a nonvulnerable version."
+    },
+    {
+      "startSeconds": 452.479,
+      "text": "Where this becomes not so simple is that"
+    },
+    {
+      "startSeconds": 455.599,
+      "text": "when upgrading breaks our application."
+    },
+    {
+      "startSeconds": 458.24,
+      "text": "Now, as you can see in this case, we"
+    },
+    {
+      "startSeconds": 460.24,
+      "text": "have hundreds of these vulnerabilities."
+    },
+    {
+      "startSeconds": 461.919,
+      "text": "If we upgrade all of these, we're going"
+    },
+    {
+      "startSeconds": 463.599,
+      "text": "to spend months quite literally trying"
+    },
+    {
+      "startSeconds": 465.599,
+      "text": "to resolve all the issues that this"
+    },
+    {
+      "startSeconds": 468.24,
+      "text": "creates because it may break the"
+    },
+    {
+      "startSeconds": 470.479,
+      "text": "functionality and it also could break"
+    },
+    {
+      "startSeconds": 472.8,
+      "text": "the functionality of the dependencies"
+    },
+    {
+      "startSeconds": 474.96,
+      "text": "that it relies on. So, there can be very"
+    },
+    {
+      "startSeconds": 478.16,
+      "text": "very complicated to actually try and fix"
+    },
+    {
+      "startSeconds": 480.16,
+      "text": "them. Now, that's not always true."
+    },
+    {
+      "startSeconds": 481.52,
+      "text": "Sometimes you can just upgrade and it"
+    },
+    {
+      "startSeconds": 482.96,
+      "text": "works and it's perfect. In that case,"
+    },
+    {
+      "startSeconds": 485.36,
+      "text": "it's what we say that there's no"
+    },
+    {
+      "startSeconds": 486.72,
+      "text": "breaking changes. In all other cases, we"
+    },
+    {
+      "startSeconds": 488.8,
+      "text": "say that there's breaking changes, which"
+    },
+    {
+      "startSeconds": 490.319,
+      "text": "means we can't easily upgrade them. So,"
+    },
+    {
+      "startSeconds": 492.24,
+      "text": "what do we do in that situation? Well,"
+    },
+    {
+      "startSeconds": 494.4,
+      "text": "we're going to come back to that side"
+    },
+    {
+      "startSeconds": 495.759,
+      "text": "quest later, but for now, let's just"
+    },
+    {
+      "startSeconds": 499.12,
+      "text": "talk about the results that we have."
+    },
+    {
+      "startSeconds": 501.12,
+      "text": "Most of these are actually false"
+    },
+    {
+      "startSeconds": 502.8,
+      "text": "positives. How on earth are these false"
+    },
+    {
+      "startSeconds": 505.199,
+      "text": "positives? Well, it comes back to what"
+    },
+    {
+      "startSeconds": 507.44,
+      "text": "we call reachability. The first example"
+    },
+    {
+      "startSeconds": 509.919,
+      "text": "that I want to give you is what we call"
+    },
+    {
+      "startSeconds": 511.52,
+      "text": "a dev dependency. And a dev dependency"
+    },
+    {
+      "startSeconds": 513.599,
+      "text": "is basically a dependency that's not"
+    },
+    {
+      "startSeconds": 515.519,
+      "text": "being used in the production of our"
+    },
+    {
+      "startSeconds": 517.12,
+      "text": "application, but usually being used in"
+    },
+    {
+      "startSeconds": 519.279,
+      "text": "the build process and not in the runtime"
+    },
+    {
+      "startSeconds": 521.44,
+      "text": "process. But that means there's nothing"
+    },
+    {
+      "startSeconds": 523.2,
+      "text": "there for an attacker to exploit. The"
+    },
+    {
+      "startSeconds": 525.519,
+      "text": "other reason why we get false positives"
+    },
+    {
+      "startSeconds": 527.279,
+      "text": "are because the packages aren't what we"
+    },
+    {
+      "startSeconds": 529.6,
+      "text": "call reachable. And usually this relates"
+    },
+    {
+      "startSeconds": 531.92,
+      "text": "to how the package is introduced into"
+    },
+    {
+      "startSeconds": 534.16,
+      "text": "our application. So usually there's"
+    },
+    {
+      "startSeconds": 536.16,
+      "text": "something called a package tree or a"
+    },
+    {
+      "startSeconds": 538.08,
+      "text": "called tree. And what we can do is we"
+    },
+    {
+      "startSeconds": 539.92,
+      "text": "can see that this dependency has"
+    },
+    {
+      "startSeconds": 542.16,
+      "text": "introduced this dependency blah blah"
+    },
+    {
+      "startSeconds": 544.32,
+      "text": "blah and we get all the way down to here"
+    },
+    {
+      "startSeconds": 546.88,
+      "text": "throughout that tree. It may be that"
+    },
+    {
+      "startSeconds": 548.72,
+      "text": "this ends dependency that is vulnerable"
+    },
+    {
+      "startSeconds": 551.2,
+      "text": "can be reached or it can't be but we"
+    },
+    {
+      "startSeconds": 553.12,
+      "text": "can't figure that out without doing"
+    },
+    {
+      "startSeconds": 554.32,
+      "text": "investigation. One particular way that"
+    },
+    {
+      "startSeconds": 556.64,
+      "text": "this may be true is if the package that"
+    },
+    {
+      "startSeconds": 559.44,
+      "text": "we're talking about has a vulnerability"
+    },
+    {
+      "startSeconds": 561.36,
+      "text": "but it's a certain function. I I'll give"
+    },
+    {
+      "startSeconds": 563.44,
+      "text": "you example in node projects. This is a"
+    },
+    {
+      "startSeconds": 565.92,
+      "text": "very popular package called Y18N. Now,"
+    },
+    {
+      "startSeconds": 568.8,
+      "text": "this is just a barebones initialization"
+    },
+    {
+      "startSeconds": 570.72,
+      "text": "library, but it has tens of millions of"
+    },
+    {
+      "startSeconds": 573.12,
+      "text": "weekly downloads. This is a foundational"
+    },
+    {
+      "startSeconds": 575.12,
+      "text": "project. It's probably in most node"
+    },
+    {
+      "startSeconds": 577.68,
+      "text": "applications. Now, there's known"
+    },
+    {
+      "startSeconds": 579.92,
+      "text": "vulnerabilities in this. One of the"
+    },
+    {
+      "startSeconds": 581.44,
+      "text": "known vulnerabilities that we have here"
+    },
+    {
+      "startSeconds": 583.76,
+      "text": "is a prototype pollution vulnerability"
+    },
+    {
+      "startSeconds": 585.68,
+      "text": "that scores 98 out of 100. This is about"
+    },
+    {
+      "startSeconds": 588,
+      "text": "as critical as you can get. So,"
+    },
+    {
+      "startSeconds": 590.64,
+      "text": "obviously, Logic would say that we don't"
+    },
+    {
+      "startSeconds": 593.04,
+      "text": "want this in our project. However, maybe"
+    },
+    {
+      "startSeconds": 596,
+      "text": "it's doing something really important."
+    },
+    {
+      "startSeconds": 597.68,
+      "text": "Maybe a whole bunch of other stuff"
+    },
+    {
+      "startSeconds": 598.88,
+      "text": "depends on it, which in this case is"
+    },
+    {
+      "startSeconds": 600.399,
+      "text": "true. Now, there's a certain function"
+    },
+    {
+      "startSeconds": 602.56,
+      "text": "that allows this prototype vulnerability"
+    },
+    {
+      "startSeconds": 604.56,
+      "text": "to happen. That function is called set"
+    },
+    {
+      "startSeconds": 606.32,
+      "text": "local. So, let's say the scenario that"
+    },
+    {
+      "startSeconds": 608.399,
+      "text": "our application is using this and it's a"
+    },
+    {
+      "startSeconds": 610.08,
+      "text": "transitive dependency. So, it's"
+    },
+    {
+      "startSeconds": 611.36,
+      "text": "downstream."
+    },
+    {
+      "startSeconds": 612.959,
+      "text": "What we may discover is that at no point"
+    },
+    {
+      "startSeconds": 615.68,
+      "text": "is the function set local used or called"
+    },
+    {
+      "startSeconds": 618.72,
+      "text": "by any other dependencies or our"
+    },
+    {
+      "startSeconds": 621.12,
+      "text": "application. Now that means that what"
+    },
+    {
+      "startSeconds": 624.16,
+      "text": "makes this vulnerable isn't true for our"
+    },
+    {
+      "startSeconds": 628.24,
+      "text": "application. So we could ignore it. But"
+    },
+    {
+      "startSeconds": 630.64,
+      "text": "again, how do we find this out? Well, we"
+    },
+    {
+      "startSeconds": 632.48,
+      "text": "have to do a lot of deep diving into how"
+    },
+    {
+      "startSeconds": 635.279,
+      "text": "our application works to find it. But"
+    },
+    {
+      "startSeconds": 637.2,
+      "text": "let's bring up Aikido Security and have"
+    },
+    {
+      "startSeconds": 639.92,
+      "text": "a look at some of this. So the the first"
+    },
+    {
+      "startSeconds": 642.48,
+      "text": "thing that I want to point to is that"
+    },
+    {
+      "startSeconds": 644.64,
+      "text": "call tree. In my dashboard, I've"
+    },
+    {
+      "startSeconds": 646.399,
+      "text": "narrowed down the results to just SCA."
+    },
+    {
+      "startSeconds": 649.04,
+      "text": "And so here we can see all the"
+    },
+    {
+      "startSeconds": 650.399,
+      "text": "dependencies that we have. But at the"
+    },
+    {
+      "startSeconds": 652.24,
+      "text": "top corner we have auto ignored. So you"
+    },
+    {
+      "startSeconds": 654.399,
+      "text": "can see that here. And then we can click"
+    },
+    {
+      "startSeconds": 655.92,
+      "text": "on the reason why this is ignored. And"
+    },
+    {
+      "startSeconds": 657.92,
+      "text": "we can see that there's various here."
+    },
+    {
+      "startSeconds": 659.36,
+      "text": "Dependency is not used in production."
+    },
+    {
+      "startSeconds": 661.44,
+      "text": "Affected function is not used. So like"
+    },
+    {
+      "startSeconds": 664.16,
+      "text": "all there's all of these different"
+    },
+    {
+      "startSeconds": 665.44,
+      "text": "various reasons of why we could ignore"
+    },
+    {
+      "startSeconds": 667.44,
+      "text": "it. So this actually gets rid of around"
+    },
+    {
+      "startSeconds": 669.519,
+      "text": "about 80% of all of the results that we"
+    },
+    {
+      "startSeconds": 671.839,
+      "text": "have. Sometimes more, sometimes less."
+    },
+    {
+      "startSeconds": 673.44,
+      "text": "None of this is magic. It's going to"
+    },
+    {
+      "startSeconds": 674.64,
+      "text": "depend on your application, right? But"
+    },
+    {
+      "startSeconds": 677.44,
+      "text": "if we click on some of this dependency"
+    },
+    {
+      "startSeconds": 679.04,
+      "text": "not in use, what we can do is we can"
+    },
+    {
+      "startSeconds": 680.959,
+      "text": "click on here it says reach re uh"
+    },
+    {
+      "startSeconds": 683.279,
+      "text": "reachability analysis and we can"
+    },
+    {
+      "startSeconds": 684.56,
+      "text": "actually see that call tree that I was"
+    },
+    {
+      "startSeconds": 686.16,
+      "text": "talking about. Sometimes that call tree"
+    },
+    {
+      "startSeconds": 687.92,
+      "text": "is is small. This is the this is the"
+    },
+    {
+      "startSeconds": 690.48,
+      "text": "package that we're that we introduced."
+    },
+    {
+      "startSeconds": 692.399,
+      "text": "These are the other packages that were"
+    },
+    {
+      "startSeconds": 693.76,
+      "text": "introduced because of that. Sometimes"
+    },
+    {
+      "startSeconds": 695.36,
+      "text": "it's ginormous like in this case you can"
+    },
+    {
+      "startSeconds": 697.6,
+      "text": "see there's this massive call tree that"
+    },
+    {
+      "startSeconds": 699.6,
+      "text": "we have. But the point is is that it's"
+    },
+    {
+      "startSeconds": 702.959,
+      "text": "understanding how everything is used and"
+    },
+    {
+      "startSeconds": 706.32,
+      "text": "therefore is able to understand the"
+    },
+    {
+      "startSeconds": 708.88,
+      "text": "process of how our application is using"
+    },
+    {
+      "startSeconds": 710.72,
+      "text": "it. And this is why it's able to get rid"
+    },
+    {
+      "startSeconds": 712.24,
+      "text": "of a lot of those alerts because it"
+    },
+    {
+      "startSeconds": 713.92,
+      "text": "understands that this may be behind a"
+    },
+    {
+      "startSeconds": 715.6,
+      "text": "dev tool that this isn't actually in"
+    },
+    {
+      "startSeconds": 717.76,
+      "text": "production or that it can even"
+    },
+    {
+      "startSeconds": 719.44,
+      "text": "understand if we click here the affected"
+    },
+    {
+      "startSeconds": 721.12,
+      "text": "function is not as use. I'll go to the"
+    },
+    {
+      "startSeconds": 722.8,
+      "text": "example that I used before of Y18N. We"
+    },
+    {
+      "startSeconds": 725.44,
+      "text": "can look at this. We can see yep the"
+    },
+    {
+      "startSeconds": 727.2,
+      "text": "function that's vulnerable is set local."
+    },
+    {
+      "startSeconds": 729.279,
+      "text": "we're not using that. So, doesn't matter"
+    },
+    {
+      "startSeconds": 731.76,
+      "text": "about the call tree that we're using. Uh"
+    },
+    {
+      "startSeconds": 734.24,
+      "text": "we're not actually using that. And of"
+    },
+    {
+      "startSeconds": 735.68,
+      "text": "course, it checks that in all of the uh"
+    },
+    {
+      "startSeconds": 737.839,
+      "text": "the packages that we have. The other"
+    },
+    {
+      "startSeconds": 739.6,
+      "text": "area that's really important is that if"
+    },
+    {
+      "startSeconds": 741.279,
+      "text": "we go back to"
+    },
+    {
+      "startSeconds": 743.519,
+      "text": "uh our results, we can see here under"
+    },
+    {
+      "startSeconds": 747.2,
+      "text": "the fix. Now, the fix is giving us say,"
+    },
+    {
+      "startSeconds": 749.12,
+      "text": "hey, we need to upgrade to this latest"
+    },
+    {
+      "startSeconds": 750.56,
+      "text": "version to fix this. Right? That's very"
+    },
+    {
+      "startSeconds": 752.88,
+      "text": "cool. But we can see here this little"
+    },
+    {
+      "startSeconds": 754.88,
+      "text": "kind of caution symbol. What this says"
+    },
+    {
+      "startSeconds": 757.44,
+      "text": "is this letting us know that there's a"
+    },
+    {
+      "startSeconds": 758.88,
+      "text": "breaking change. That means that if we"
+    },
+    {
+      "startSeconds": 761.12,
+      "text": "upgrade to the version that we need to"
+    },
+    {
+      "startSeconds": 763.279,
+      "text": "to get rid of the vulnerability, it's"
+    },
+    {
+      "startSeconds": 764.48,
+      "text": "going to break our application. Now,"
+    },
+    {
+      "startSeconds": 766.24,
+      "text": "this is really important because we can"
+    },
+    {
+      "startSeconds": 767.519,
+      "text": "actually see all of the all of the"
+    },
+    {
+      "startSeconds": 769.36,
+      "text": "packages that don't have that and then"
+    },
+    {
+      "startSeconds": 770.8,
+      "text": "upgrade it. So, we can immediately get"
+    },
+    {
+      "startSeconds": 773.36,
+      "text": "very quickly ahead and then we only need"
+    },
+    {
+      "startSeconds": 775.68,
+      "text": "to focus on the few that actually have"
+    },
+    {
+      "startSeconds": 777.36,
+      "text": "breaking changes. And the final thing"
+    },
+    {
+      "startSeconds": 779.6,
+      "text": "that modern SCA tools will all typically"
+    },
+    {
+      "startSeconds": 782.48,
+      "text": "have is something called autofix. And"
+    },
+    {
+      "startSeconds": 784.48,
+      "text": "this is essentially creating the code"
+    },
+    {
+      "startSeconds": 786.639,
+      "text": "for you to upgrade the dependencies. So"
+    },
+    {
+      "startSeconds": 789.519,
+      "text": "autofix is kind of great and this is"
+    },
+    {
+      "startSeconds": 791.2,
+      "text": "when you need the additional context of"
+    },
+    {
+      "startSeconds": 793.519,
+      "text": "what's going to break uh and areas like"
+    },
+    {
+      "startSeconds": 795.76,
+      "text": "that because now you can just"
+    },
+    {
+      "startSeconds": 797.04,
+      "text": "automatically upgrade everything that's"
+    },
+    {
+      "startSeconds": 798.8,
+      "text": "not going to break within a couple of"
+    },
+    {
+      "startSeconds": 800.8,
+      "text": "clicks of the button and you can go on"
+    },
+    {
+      "startSeconds": 802.88,
+      "text": "about your way. So I hope now you"
+    },
+    {
+      "startSeconds": 804.88,
+      "text": "understand SCA tools and how they all"
+    },
+    {
+      "startSeconds": 806.959,
+      "text": "work together and you've you've seen a"
+    },
+    {
+      "startSeconds": 808.8,
+      "text": "couple of different tools uh in action."
+    },
+    {
+      "startSeconds": 811.04,
+      "text": "We bring out a different tool video"
+    },
+    {
+      "startSeconds": 813.04,
+      "text": "every single week. So, if you want to"
+    },
+    {
+      "startSeconds": 814.32,
+      "text": "learn more about different types of"
+    },
+    {
+      "startSeconds": 815.839,
+      "text": "security tooling, then make sure you"
+    },
+    {
+      "startSeconds": 817.12,
+      "text": "subscribe to the channel and stay tuned"
+    },
+    {
+      "startSeconds": 818.8,
+      "text": "for next week's video where we're going"
+    },
+    {
+      "startSeconds": 820.32,
+      "text": "to be talking about secrets detection."
+    }
+  ]
+}
